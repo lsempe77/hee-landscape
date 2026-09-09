@@ -5,7 +5,7 @@ project:
 website:
   title: "HEE Research Landscape — Expert Review"
   description: "Health Economic Evaluation evidence map: 38,199 studies across 168 countries. Organized thematically for expert feedback."
-  site-url: "https://lsempe77.github.io/hee-landscape/"
+  site-url: "https://sempe.dev/hee-landscape/"
   repo-url: "https://github.com/lsempe77/hee-landscape"
   repo-actions: [edit, issue]
   favicon: figures/favicon.ico
