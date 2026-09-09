@@ -5,8 +5,8 @@ project:
     - .nojekyll
 
 website:
-  title: "HEE Research Landscape — Expert Review"
-  description: "Health Economic Evaluation evidence map: 38,199 studies across 168 countries. Organized thematically for expert feedback."
+  title: "HEE Research Landscape"
+  description: "Health Economic Evaluation evidence map: 38,199 studies across 168 countries."
   site-url: "https://sempe.dev/hee-landscape/"
   repo-url: "https://github.com/lsempe77/hee-landscape"
   repo-actions: [edit, issue]
@@ -61,137 +61,6 @@ format:
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Franklin+Gothic+Demi+Cond:wght@400;600&family=Franklin+Gothic+Book:wght@400;600&display=swap" rel="stylesheet">
-          <!-- Supabase client -->
-          <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    include-after-body:
-      - text: |
-          <script>
-          // Supabase configuration
-          const SUPABASE_URL = 'https://raeedjyedxueafjbogow.supabase.co';
-          const SUPABASE_ANON_KEY = 'sb_publishable_TIUvNK3aREYF8MNQJ6AtcQ_VAJq6jEV';
-          const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-          
-          // User name persistence
-          function getUserName() {
-            return localStorage.getItem('hee-review-name') || '';
-          }
-          function setUserName(name) {
-            localStorage.setItem('hee-review-name', name.trim());
-          }
-          
-          // Load reviews for a figure
-          async function loadReviews(figureId, container) {
-            const { data, error } = await supabase
-              .from('hee_review')
-              .select('*')
-              .eq('figure_id', figureId)
-              .order('created_at', { ascending: false });
-            
-            if (error) {
-              container.innerHTML = '<div class="review-loading">Failed to load reviews</div>';
-              return;
-            }
-            
-            renderReviews(data, container);
-          }
-          
-          function renderReviews(reviews, container) {
-            if (!reviews || reviews.length === 0) {
-              container.innerHTML = '<div class="review-loading">No reviews yet — be the first!</div>';
-              return;
-            }
-            
-            let html = '<div class="review-list">';
-            reviews.forEach(r => {
-              const voteClass = r.vote || 'none';
-              const voteLabel = r.vote ? r.vote.charAt(0).toUpperCase() + r.vote.slice(1) : '—';
-              const time = new Date(r.created_at).toLocaleString();
-              html += `
-                <div class="review-item">
-                  <div class="review-item-header">
-                    <span class="review-user">${escapeHtml(r.user_name)}</span>
-                    <span class="review-vote ${voteClass}">${escapeHtml(voteLabel)}</span>
-                    <span class="review-time">${time}</span>
-                  </div>
-                  ${r.comment ? `<div class="review-comment-text">${escapeHtml(r.comment)}</div>` : ''}
-                </div>
-              `;
-            });
-            html += '</div>';
-            container.innerHTML = html;
-          }
-          
-          function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-          }
-          
-          // Submit review
-          async function submitReview(figureId, userName, vote, comment, container, submitBtn) {
-            if (!userName.trim()) {
-              alert('Please enter your name');
-              return;
-            }
-            
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Submitting...';
-            
-            const { error } = await supabase
-              .from('hee_review')
-              .insert({
-                figure_id: figureId,
-                user_name: userName.trim(),
-                vote: vote,
-                comment: comment.trim() || null
-              });
-            
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit';
-            
-            if (error) {
-              alert('Error: ' + error.message);
-            } else {
-              setUserName(userName);
-              container.querySelector('.review-name').value = '';
-              container.querySelector('.review-comment').value = '';
-              container.querySelectorAll('.review-vote-btn').forEach(b => b.classList.remove('selected'));
-              loadReviews(figureId, container.nextElementSibling);
-            }
-          }
-          
-          // Initialize all review widgets
-          document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.review-widget').forEach(function(widget) {
-              const figureId = widget.dataset.figureId;
-              const listContainer = widget.nextElementSibling;
-              
-              // Load existing reviews
-              loadReviews(figureId, listContainer);
-              
-              // Prefill name
-              const nameInput = widget.querySelector('.review-name');
-              nameInput.value = getUserName();
-              
-              // Vote button handling
-              widget.querySelectorAll('.review-vote-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                  widget.querySelectorAll('.review-vote-btn').forEach(b => b.classList.remove('selected'));
-                  this.classList.add('selected');
-                });
-              });
-              
-              // Submit handling
-              const submitBtn = widget.querySelector('.review-submit');
-              submitBtn.addEventListener('click', function() {
-                const userName = nameInput.value;
-                const vote = widget.querySelector('.review-vote-btn.selected')?.dataset.vote;
-                const comment = widget.querySelector('.review-comment').value;
-                submitReview(figureId, userName, vote, comment, widget, submitBtn);
-              });
-            });
-          });
-          </script>
     css: styles.css
 
 execute:

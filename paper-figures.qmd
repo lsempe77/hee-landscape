@@ -18,20 +18,6 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
     <span class="figure-script">R/fig-prisma.R (to build)</span>
   </div>
   <div class="figure-description">Standard PRISMA: 115,405 records → 44,941 extracted → 38,199 eligible full evaluations.</div>
-  <div class="review-widget" data-figure-id="paper01">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -43,20 +29,6 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
   </div>
   <div class="figure-description">Funnel: all records → extracted → eligible → full eval → model-based → QALY → decision-framing. Faceted by income.</div>
   <div class="figure-finding">Each rung narrows; LMIC survives at higher rates through early rungs but drops at decision-framing. The cascade argument in one figure.</div>
-  <div class="review-widget" data-figure-id="paper02">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -68,20 +40,6 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
   </div>
   <div class="figure-description">Dot strip: studies per 10M population × income group (4-level). Within-group spread vs between-group gap.</div>
   <div class="figure-finding">Within-group spread (50–141×) dwarfs between-group (12.9×). Some LMICs outperform many HICs. The "indistinguishable" claim was an income-miscoding artefact (fixed).</div>
-  <div class="review-widget" data-figure-id="paper03">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -93,20 +51,6 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
   </div>
   <div class="figure-description">Slope: disease mix by income × era (2010–2017 vs 2018–2026). Communicable → NCD shift vs burden shares.</div>
   <div class="figure-finding">LMIC research shifted communicable→NCD past burden shares; **injuries stayed ~1% vs 11% burden**. The transition bypassed injuries.</div>
-  <div class="review-widget" data-figure-id="paper04">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -118,20 +62,6 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
   </div>
   <div class="figure-description">Heat map: MeSH C-tree disease share × income group (4-level). What diseases dominate where?</div>
   <div class="figure-finding">Infectious dominates LIC/LMIC; NCDs dominate UMIC/HIC. The disease-income gradient is the baseline for all gap analysis.</div>
-  <div class="review-widget" data-figure-id="paper05">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -143,20 +73,6 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
   </div>
   <div class="figure-description">Point + CI: local author share × income group. Extracted geography only.</div>
   <div class="figure-finding">Local authorship drops sharply with income: HIC ~85%, LIC ~30%. **28% of LIC studies have NO local author.** Parachute research quantified.</div>
-  <div class="review-widget" data-figure-id="paper06">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -168,20 +84,6 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
   </div>
   <div class="figure-description">Cumulative studies vs cumulative population (Lorenz-style). Coverage is broad but shallow.</div>
   <div class="figure-finding">Top 20% of countries (by population) hold ~80% of studies. Broad geographic coverage, but shallow depth.</div>
-  <div class="review-widget" data-figure-id="paper07">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -191,22 +93,8 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
     <span class="figure-badge badge-paper">Paper Core</span>
     <span class="figure-script">R/fig-burden-mismatch.R</span>
   </div>
-  <div class="figure-description">Log–log scatter: studies ÷ DALYs × income. The 18× gap. GBD 2021 all-cause DALYs.</div>
-  <div class="figure-finding">**18× gap** in evidence per DALY (HIC vs LIC median). Within-group spread dwarfs between-group. The central GBD finding for the paper.</div>
-  <div class="review-widget" data-figure-id="paper08">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
+  <div class="figure-description">Log–log scatter: studies ÷ DALYs × income. The 22× gap. GBD 2023 all-cause DALYs.</div>
+  <div class="figure-finding">**22× gap** in evidence per DALY (HIC vs LIC median). Within-group spread dwarfs between-group. The central GBD finding for the paper.</div>
 </div>
 
 <div class="figure-card">
@@ -217,20 +105,6 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
   </div>
   <div class="figure-description">Coefficient / odds-ratio forest: what predicts generic metric use? (income + design + model + disease + year). Shared figure for 6.1–6.3.</div>
   <div class="figure-finding">To build: logistic regression of `uses_qaly` ~ income + design_basis + model_based + disease + year. Strongest Lancet figure — turns descriptive gaps into structural drivers.</div>
-  <div class="review-widget" data-figure-id="paper09">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -241,20 +115,6 @@ The tight, ~10 journal figures for the paper submission. Greyscale-safe, descrip
   </div>
   <div class="figure-description">Heat map: econ_eval_type × outcome family. CUA without QALY = mismatch (~9.5% of CUAs). Extraction noise floor (different model calls).</div>
   <div class="figure-finding">Methods don't always match their definitional outcome requirements. The noise floor for any method–outcome claim.</div>
-  <div class="review-widget" data-figure-id="paper10">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 ---

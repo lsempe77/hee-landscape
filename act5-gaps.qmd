@@ -17,20 +17,6 @@ title: "Act V — Gaps vs Burden (The GBD Climax)"
   </div>
   <div class="figure-description">Log–log scatter: studies ÷ DALYs × income. The 18× gap between high- and low-income medians.</div>
   <div class="figure-finding"><strong>18× gap</strong> in evidence per DALY (HIC median vs LIC median). Within-group spread 50–141× dwarfs between-group 12.9×. The central GBD finding.</div>
-  <div class="review-widget" data-figure-id="C21">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -42,20 +28,6 @@ title: "Act V — Gaps vs Burden (The GBD Climax)"
   </div>
   <div class="figure-description">Dumbbell plot: research ÷ burden ratio, LMIC vs HIC, by GBD Level-2 cause.</div>
   <div class="figure-finding">**Maternal-neonatal**: 3.6× burden share in HIC vs 0.37× in LMIC. **Injuries**: 0.21× in LMIC. Cardiovascular, neurological also starkly mismatched. The disease-level gap map.</div>
-  <div class="review-widget" data-figure-id="C22">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -67,20 +39,6 @@ title: "Act V — Gaps vs Burden (The GBD Climax)"
   </div>
   <div class="figure-description">Ranked deficit bars: studies vs burden-expected. Where is the MOST missing evidence in absolute terms?</div>
   <div class="figure-finding">India +4,847 studies short; Nigeria +1,205; Indonesia +920; Pakistan +780; Bangladesh +620. Absolute deficits concentrate in populous LMICs.</div>
-  <div class="review-widget" data-figure-id="C23">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -92,20 +50,6 @@ title: "Act V — Gaps vs Burden (The GBD Climax)"
   </div>
   <div class="figure-description">Burden × evidence plane + burden-proportional diagonal, bubble size = population. Which settings have high burden AND low research AND low income?</div>
   <div class="figure-finding">Editorial closer: bottom-right quadrant = high burden, low evidence, large population, low income. Nigeria, DRC, Ethiopia, Tanzania, Uganda cluster here.</div>
-  <div class="review-widget" data-figure-id="C24">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -117,20 +61,6 @@ title: "Act V — Gaps vs Burden (The GBD Climax)"
   </div>
   <div class="figure-description">Lorenz curve of LMIC evidence vs LMIC burden. Is the gap only rich-vs-poor, or steep among the poor too?</div>
   <div class="figure-finding"><strong>Least-served half of LMIC burden holds 16% of evidence; top 5 = 55%. Gini = 0.50.</strong> Inequality WITHIN LMICs is extreme — not just HIC vs LIC.</div>
-  <div class="review-widget" data-figure-id="C30">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -142,20 +72,6 @@ title: "Act V — Gaps vs Burden (The GBD Climax)"
   </div>
   <div class="figure-description">LMIC research disease-mix (3 transition classes) over 2010–2026 vs 2021 burden. Research shifted communicable→NCD past burden shares; injuries stuck.</div>
   <div class="figure-finding">Communicable 68%→28%, NCDs 31%→70% (2010→2025). **Injuries ~1% throughout vs 11% burden** — the transition bypassed injuries entirely.</div>
-  <div class="review-widget" data-figure-id="C29">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -167,20 +83,6 @@ title: "Act V — Gaps vs Burden (The GBD Climax)"
   </div>
   <div class="figure-description">Econ-eval-type composition over time (2010–2025). Cost-utility 45%→54%, cost-effectiveness 34%→25%.</div>
   <div class="figure-finding">Field increasingly adopts cost-utility (QALY) methods; cost-effectiveness declining. Method shift mirrors metric shift in C11/T2.</div>
-  <div class="review-widget" data-figure-id="T4">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 ---

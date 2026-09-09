@@ -1,5 +1,5 @@
 ---
-title: "HEE Research Landscape — Expert Review"
+title: "HEE Research Landscape"
 ---
 
 {{< include _hero.html >}}
@@ -35,7 +35,6 @@ This site presents the **complete figure catalogue** from the Health Economic Ev
 
 | Action | How |
 |--------|-----|
-| **Vote** | Click 👍 / 👎 on any figure — your votes are stored locally in your browser |
 | **Comment** | Highlight any text and click the **hypothes.is** icon (top-right) to annotate |
 | **View full-size** | Click any figure to open in lightbox |
 | **See the code** | Each figure shows its generating script (`R/fig-*.R`) |

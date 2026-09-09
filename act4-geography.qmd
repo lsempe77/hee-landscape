@@ -17,20 +17,6 @@ title: "Act IV — Geography & Authorship"
   </div>
   <div class="figure-description">Berrang-Ford style dot map: country counts, bubbles by income, Robinson projection. Where is the evidence on a map?</div>
   <div class="figure-finding">Evidence concentrated in North America, Western Europe, East Asia. Africa and South Asia visible but sparse. Dot size = study count, colour = income.</div>
-  <div class="review-widget" data-figure-id="C15">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -42,20 +28,6 @@ title: "Act IV — Geography & Authorship"
   </div>
   <div class="figure-description">Studies per capita × income, dot strip. Is the gap between income groups, or within them?</div>
   <div class="figure-finding">Both: between-group gap is large (17.8× median), but within-group spread (50–141×) dwarfs between-group spread. Some LMICs outperform many HICs.</div>
-  <div class="review-widget" data-figure-id="C16">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -67,20 +39,6 @@ title: "Act IV — Geography & Authorship"
   </div>
   <div class="figure-description">Two-rank slope chart (log axis): who leads by count vs by output per person.</div>
   <div class="figure-finding">USA/UK/China lead by volume; small wealthy countries (Netherlands, Sweden, Switzerland) lead per-capita. Different leaders for different metrics.</div>
-  <div class="review-widget" data-figure-id="C17">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -92,20 +50,6 @@ title: "Act IV — Geography & Authorship"
   </div>
   <div class="figure-description">Stacked bars: local only / local+foreign / foreign only, by income group of country studied. Extracted geography only.</div>
   <div class="figure-finding"><strong>28% of low-income country studies have NO local author.</strong> Foreign-only dominates LIC; HIC research is mostly local. Parachute research visible in the data.</div>
-  <div class="review-widget" data-figure-id="C18">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -117,20 +61,6 @@ title: "Act IV — Geography & Authorship"
   </div>
   <div class="figure-description">Chord diagram: cross-income co-authorship of 32,731 eligible studies. Self-loops (within-group) excluded from ribbons.</div>
   <div class="figure-finding"><strong>High-income teams are the hub.</strong> 24,162 wholly HIC studies vs 37 wholly LIC. Every income group connects mainly through HIC. Cross-income collaboration is HIC-mediated.</div>
-  <div class="review-widget" data-figure-id="C19">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -142,20 +72,6 @@ title: "Act IV — Geography & Authorship"
   </div>
   <div class="figure-description">LMIC share of annual single-country output vs their burden share (2010–2025). Is research attention shifting toward need?</div>
   <div class="figure-finding">Rose **16% → 36%** (2010→2025) — real progress, yet still far below **83% LMIC burden share** (dashed line). Shaded band = distance to burden-proportional reference.</div>
-  <div class="review-widget" data-figure-id="T1">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -167,20 +83,6 @@ title: "Act IV — Geography & Authorship"
   </div>
   <div class="figure-description">QALY use by income group over time. The metric gap over time.</div>
   <div class="figure-finding">LMIC **15% → 49%** vs HIC **51% → 59%** (2010→2025). Gap narrowed ~10pp but persists. LMIC catching up on comparable metric adoption.</div>
-  <div class="review-widget" data-figure-id="T2">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -192,20 +94,6 @@ title: "Act IV — Geography & Authorship"
   </div>
   <div class="figure-description">Cumulative % of each income group's countries with ≥1 evaluation. Country universe denominators per income group.</div>
   <div class="figure-finding">HIC covered early; LIC reached last (**28% → 96%**). Geographic reach expanding but uneven — LIC coverage only recently approaching saturation.</div>
-  <div class="review-widget" data-figure-id="T3">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 ---

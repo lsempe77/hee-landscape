@@ -19,20 +19,6 @@ Built for a funder (Wellcome) asking: **"Where does the next pound buy the most 
   </div>
   <div class="figure-description">Each cell = disease group's share of research ÷ share of burden within that income level. Red = under-researched (opportunity), blue = over. Grey cells <15 studies = gap can't even be measured.</div>
   <div class="figure-finding"><strong>Deep red cells — injuries, maternal-neonatal, cardiovascular in lower-income settings — are where research is most absent relative to burden.</strong> Low-income cells too thin to measure. The "WHERE × WHAT" decision tool.</div>
-  <div class="review-widget" data-figure-id="F1">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -44,20 +30,6 @@ Built for a funder (Wellcome) asking: **"Where does the next pound buy the most 
   </div>
   <div class="figure-description">Burden × intensity scatter + ranked deficit bar. The shortlist for investment.</div>
   <div class="figure-finding"><strong>India +4,847 studies short</strong>, Nigeria +1,205, Indonesia +920, Pakistan +780, Bangladesh +620. Ranked absolute deficits — the actionable shortlist.</div>
-  <div class="review-widget" data-figure-id="F2">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -69,20 +41,6 @@ Built for a funder (Wellcome) asking: **"Where does the next pound buy the most 
   </div>
   <div class="figure-description">Burden × local-authorship share. High-burden, <75%-local set = fund people, not just studies.</div>
   <div class="figure-finding">**DR Congo, Ukraine, Ethiopia, Tanzania, Uganda** — high burden, low local authorship. Fund capacity (researchers, institutions), not just individual studies.</div>
-  <div class="review-widget" data-figure-id="F3">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -94,20 +52,6 @@ Built for a funder (Wellcome) asking: **"Where does the next pound buy the most 
   </div>
   <div class="figure-description">LMIC research-to-burden ratio: era-1 (2010–2017) → era-2 (2018–2026). Arrows right = closing gap; stuck left = funding additional.</div>
   <div class="figure-finding"><strong>Injuries, cardiovascular, neurological, maternal</strong> — stuck below burden share and NOT closing (injuries/maternal worsening). These are where funding is most additional. Infectious diseases closing on their own.</div>
-  <div class="review-widget" data-figure-id="F4">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -119,20 +63,6 @@ Built for a funder (Wellcome) asking: **"Where does the next pound buy the most 
   </div>
   <div class="figure-description">Top funders by studies, split by income. Who pays? Be additional.</div>
   <div class="figure-finding">**Most big funders are HIC-focused**; Gates dominates LMIC; Wellcome has a real LMIC share. ~28% coverage — know the base. Fund where others aren't.</div>
-  <div class="review-widget" data-figure-id="F5">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 ---

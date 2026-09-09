@@ -17,20 +17,6 @@ title: "Act III — Methods & Quality"
   </div>
   <div class="figure-description">14 outcome families, direct-labelled bar. What kinds of benefit are counted?</div>
   <div class="figure-finding">QALYs, survival/mortality, and clinical events dominate. "Unspecified benefit" catch-all reveals reporting quality gaps.</div>
-  <div class="review-widget" data-figure-id="C10">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -42,20 +28,6 @@ title: "Act III — Methods & Quality"
   </div>
   <div class="figure-description">QALY vs DALY use by income group, grouped bars. The metric flips by income.</div>
   <div class="figure-finding"><strong>QALYs for rich, DALYs for poor — cross-income comparability is broken.</strong> HIC: ~55% QALY, ~5% DALY. LMIC: ~35% QALY, ~25% DALY. No common currency across the income divide.</div>
-  <div class="review-widget" data-figure-id="C11">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -67,20 +39,6 @@ title: "Act III — Methods & Quality"
   </div>
   <div class="figure-description">`model_based` × year × income. Is the field drifting to modelled (vs measured) evidence?</div>
   <div class="figure-finding">Model-based share rising across all income groups; LMIC model-dependency higher than HIC at every time point. Field increasingly relies on decision models, not trial-based evidence.</div>
-  <div class="review-widget" data-figure-id="C12">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -92,20 +50,6 @@ title: "Act III — Methods & Quality"
   </div>
   <div class="figure-description">Alluvial diagram: `design_basis` → `econ_eval_type` → outcome family. How evidence flows from design to method to benefit.</div>
   <div class="figure-finding">RCTs flow heavily to cost-utility/QALY; observational designs spread across types; model-based studies dominate cost-utility pathway.</div>
-  <div class="review-widget" data-figure-id="C13">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -117,20 +61,6 @@ title: "Act III — Methods & Quality"
   </div>
   <div class="figure-description">Grouped bar (4 elements × All/HIC/LMIC): ICER, threshold, uncertainty (PSA), perspective. Abstract-only proxy — "not reported ≠ not done".</div>
   <div class="figure-finding"><strong>Most abstracts report NONE of these.</strong> ICER 39%, threshold 22%, PSA 28%, perspective 31%. **LMIC reports them slightly MORE often than HIC, not less.** Honest stand-in for blocked reference-case audit.</div>
-  <div class="review-widget" data-figure-id="C14">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -142,20 +72,6 @@ title: "Act III — Methods & Quality"
   </div>
   <div class="figure-description">Share of abstracts foregrounding each decision-analytic element by year (2010–2025). Temporal companion to C14.</div>
   <div class="figure-finding">All four rose: threshold most (12%→29%), ICER (25%→48%), PSA (15%→38%), perspective (18%→42%). Reporting improving but majority still foregrounds none.</div>
-  <div class="review-widget" data-figure-id="T5">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -167,20 +83,6 @@ title: "Act III — Methods & Quality"
   </div>
   <div class="figure-description">Heat map: econ_eval_type × outcome family. Do methods report the outcome their definition requires? (CUA without QALY = mismatch).</div>
   <div class="figure-finding">~9.5% of CUAs report no QALY outcome. Mismatch reveals extraction noise floor (different model calls for type vs outcomes).</div>
-  <div class="review-widget" data-figure-id="3.5">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 ---

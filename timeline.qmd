@@ -19,20 +19,6 @@ Comparative time-series on the `year` dimension (2010–2025; 2026 partial, drop
   </div>
   <div class="figure-description">LMIC share of annual single-country output vs their burden share (2010–2025).</div>
   <div class="figure-finding">**Rose 16% → 36%** (2010→2025) — real progress, yet still far below **83% LMIC burden share** (dashed line). Shaded band = distance to reference.</div>
-  <div class="review-widget" data-figure-id="T1">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -44,20 +30,6 @@ Comparative time-series on the `year` dimension (2010–2025; 2026 partial, drop
   </div>
   <div class="figure-description">QALY use by income group over time. The metric gap over time.</div>
   <div class="figure-finding">LMIC **15% → 49%** vs HIC **51% → 59%** (2010→2025). **Gap narrowed ~10pp but persists** — LMIC catching up on comparable metric adoption.</div>
-  <div class="review-widget" data-figure-id="T2">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -69,20 +41,6 @@ Comparative time-series on the `year` dimension (2010–2025; 2026 partial, drop
   </div>
   <div class="figure-description">Cumulative % of each income group's countries with ≥1 evaluation. Country universe denominators per income group.</div>
   <div class="figure-finding">HIC covered early; LIC reached last (**28% → 96%**). Geographic reach expanding but uneven — LIC coverage only recently approaching saturation.</div>
-  <div class="review-widget" data-figure-id="T3">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -94,20 +52,6 @@ Comparative time-series on the `year` dimension (2010–2025; 2026 partial, drop
   </div>
   <div class="figure-description">Econ-eval-type composition over time (2010–2025). Stacked streamgraph.</div>
   <div class="figure-finding">**Cost-utility 45% → 54%**, cost-effectiveness **34% → 25%**. Field increasingly adopts CUA (QALY) methods; CEA declining. Mirrors C11/T2 metric shift.</div>
-  <div class="review-widget" data-figure-id="T4">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -119,20 +63,6 @@ Comparative time-series on the `year` dimension (2010–2025; 2026 partial, drop
   </div>
   <div class="figure-description">Share of abstracts foregrounding each decision-analytic element by year. Abstract-only proxy (screening corpus, 100%).</div>
   <div class="figure-finding">All four rose: **threshold most (12%→29%)**, ICER (25%→48%), PSA (15%→38%), perspective (18%→42%). Reporting improving but majority still foregrounds none.</div>
-  <div class="review-widget" data-figure-id="T5">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 ---

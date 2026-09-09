@@ -4,7 +4,7 @@ title: "Map Atlas (M1–M9)"
 
 # Map Atlas (M1–M9)
 
-A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Bank population, GBD 2021 burden, extracted geography, Robinson projection — discipline set by 2026-09-07 audit).
+A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Bank population, GBD 2023 burden, extracted geography, Robinson projection — discipline set by 2026-09-07 audit).
 
 > **Discipline notes:** Share maps (M4–M8) show only countries with ≥5 studies (grey below); M1–M3 include every country with a GBD burden row so blanks are visible; M2's dark-purple corner = high-on-both (big countries), not missing data; M9 shades absolute counts (log) — disease *contrast* is the point.
 
@@ -19,20 +19,6 @@ A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Ba
   </div>
   <div class="figure-description">Studies per 100,000 DALYs per country, diverging around global median. Map form of Figure 7.</div>
   <div class="figure-finding">Blue = more research per burden than typical; red = less. Grey = no eligible study or no GBD row. **20 countries carry burden but have zero studies.**</div>
-  <div class="review-widget" data-figure-id="M1">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -44,20 +30,6 @@ A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Ba
   </div>
   <div class="figure-description">Bivariate choropleth: high-burden/low-evidence lights up. Two-dimensional gap map.</div>
   <div class="figure-finding">Dark purple = high burden + high evidence (big countries); red = high burden + low evidence (the gap); blue = low burden + high evidence. Visualizes the joint distribution.</div>
-  <div class="review-widget" data-figure-id="M2">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -69,20 +41,6 @@ A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Ba
   </div>
   <div class="figure-description">0 / 1–5 / 6–20 / 21+ studies. **20 countries with burden but zero eligible studies.**</div>
   <div class="figure-finding">The starkest map: countries with real disease burden but zero economic evaluations. Immediate priority list for evidence generation.</div>
-  <div class="review-widget" data-figure-id="M3">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -94,20 +52,6 @@ A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Ba
   </div>
   <div class="figure-description">Share of studies with a local author. Parachute research visible on the map. Countries with ≥5 studies only.</div>
   <div class="figure-finding">Low local-authorship share = parachute research. Maps the C18 finding geographically.</div>
-  <div class="review-widget" data-figure-id="M4">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -119,20 +63,6 @@ A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Ba
   </div>
   <div class="figure-description">Model-based share by country. LMIC lean on models. Countries with ≥5 studies only.</div>
   <div class="figure-finding">LMIC countries show higher model-dependency — consistent with C12/T4. Model-based evidence dominates where primary data is scarce.</div>
-  <div class="review-widget" data-figure-id="M5">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -144,20 +74,6 @@ A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Ba
   </div>
   <div class="figure-description">OA share by country. Countries with ≥5 studies only.</div>
   <div class="figure-finding">Geographic view of C25: LMIC countries tend to have higher OA shares. Reachability mirrors evidence production patterns.</div>
-  <div class="review-widget" data-figure-id="M6">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -169,20 +85,6 @@ A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Ba
   </div>
   <div class="figure-description">Share of studies since 2018 by country. Countries with ≥5 studies only.</div>
   <div class="figure-finding">Recent growth concentrated in specific regions — shows where the field is expanding geographically.</div>
-  <div class="review-widget" data-figure-id="M7">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -194,20 +96,6 @@ A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Ba
   </div>
   <div class="figure-description">Cost-utility North / cost-effectiveness South. Countries with ≥5 studies only.</div>
   <div class="figure-finding">Geographic manifestation of C11/C8: HIC = CUA (QALY), LMIC = CEA (natural units). The metric divide is spatial.</div>
-  <div class="review-widget" data-figure-id="M8">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -219,20 +107,6 @@ A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Ba
   </div>
   <div class="figure-description">11 small-multiple maps, one per GBD Level-1 cause group. Shades absolute study counts (log). Disease *contrast* is the point, not absolute peak.</div>
   <div class="figure-finding">Infectious diseases light up Africa/South Asia; NCDs light up HIC regions; injuries diffuse. The spatial disease signature of HEE research.</div>
-  <div class="review-widget" data-figure-id="M9">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 ---

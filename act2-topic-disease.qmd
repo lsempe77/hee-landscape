@@ -17,20 +17,6 @@ title: "Act II — Topic & Disease"
   </div>
   <div class="figure-description">OpenAlex subfields grouped by field — circular bar (rounded form). The Act II hero showing what research areas dominate.</div>
   <div class="figure-finding">Clinical medicine, biology, and pharmacology dominate; economics and policy are smaller slices.</div>
-  <div class="review-widget" data-figure-id="C5">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -42,20 +28,6 @@ title: "Act II — Topic & Disease"
   </div>
   <div class="figure-description">MeSH C-tree circular bar, coloured by LMIC/HIC lean. Shows which disease areas dominate and whether they skew rich or poor.</div>
   <div class="figure-finding">Infectious diseases lean LMIC; neoplasms, cardiovascular, musculoskeletal lean HIC. The lean is visible in the colour gradient.</div>
-  <div class="review-widget" data-figure-id="C6">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -67,20 +39,6 @@ title: "Act II — Topic & Disease"
   </div>
   <div class="figure-description">Heat map: for each GBD disease group, the mix of economic-evaluation types. Rows with ≥300 studies.</div>
   <div class="figure-finding">Cancers and chronic conditions lean cost-utility (QALYs); injuries and maternal-neonatal care lean cost-effectiveness (natural units).</div>
-  <div class="review-widget" data-figure-id="C8">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -92,20 +50,6 @@ title: "Act II — Topic & Disease"
   </div>
   <div class="figure-description">Emergent topic map (embeddings → UMAP → HDBSCAN) coloured by each theme's LMIC share. Protocol Appendix K.</div>
   <div class="figure-finding">Theme-space segregates: LMIC themes = malaria 91%, TB 66%, HIV 57%, maternal 57%; HIC themes = obesity 3%, dementia 6%, arthroplasty 10%.</div>
-  <div class="review-widget" data-figure-id="C31">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -117,20 +61,6 @@ title: "Act II — Topic & Disease"
   </div>
   <div class="figure-description">Horizontal bar: 15 most- + 15 least-LMIC themes, coloured by share, faceted. Lancet-friendly league table of C31.</div>
   <div class="figure-finding">The two ends don't overlap: LMIC themes 33–91%, HIC themes 3–13%. Research about poor and rich countries sits in completely different thematic spaces.</div>
-  <div class="review-widget" data-figure-id="C32">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 <div class="figure-card">
@@ -142,20 +72,6 @@ title: "Act II — Topic & Disease"
   </div>
   <div class="figure-description">LMIC research disease-mix (3 transition classes) over 2010–2026 vs 2021 burden. Communicable → NCD shift tracked against burden shares.</div>
   <div class="figure-finding">Research shifted communicable 68%→28% to NCDs 31%→70% (2010→2025), crossing burden shares. **Injuries stayed ~1% throughout vs 11% burden.**</div>
-  <div class="review-widget" data-figure-id="C29">
-  <input type="text" class="review-name" placeholder="Your name" />
-  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
-    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
-    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
-    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
-    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
-    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
-    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
-  </div>
-  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
-  <button class="review-submit">Submit Review</button>
-</div>
-<div class="review-list"></div>
 </div>
 
 ---
