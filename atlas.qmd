@@ -1,0 +1,256 @@
+---
+title: "Map Atlas (M1–M9)"
+---
+
+# Map Atlas (M1–M9)
+
+A cartographic collection sharing `R/map-base.R` (eligible-only counts, World Bank population, GBD 2021 burden, extracted geography, Robinson projection — discipline set by 2026-09-07 audit).
+
+> **Discipline notes:** Share maps (M4–M8) show only countries with ≥5 studies (grey below); M1–M3 include every country with a GBD burden row so blanks are visible; M2's dark-purple corner = high-on-both (big countries), not missing data; M9 shades absolute counts (log) — disease *contrast* is the point.
+
+---
+
+<div class="figure-card">
+  <img src="../figures/fig_map_burden.png" alt="M1 Research intensity vs burden">
+  <div class="figure-title">M1 — Research Intensity vs Burden</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-atlas">Atlas</span>
+    <span class="figure-script">R/fig-map-burden.R</span>
+  </div>
+  <div class="figure-description">Studies per 100,000 DALYs per country, diverging around global median. Map form of Figure 7.</div>
+  <div class="figure-finding">Blue = more research per burden than typical; red = less. Grey = no eligible study or no GBD row. **20 countries carry burden but have zero studies.**</div>
+  <div class="review-widget" data-figure-id="M1">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_map_bivariate.png" alt="M2 Bivariate burden x evidence">
+  <div class="figure-title">M2 — Burden × Evidence Bivariate</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-atlas">Atlas</span>
+    <span class="figure-script">R/fig-map-bivariate.R</span>
+  </div>
+  <div class="figure-description">Bivariate choropleth: high-burden/low-evidence lights up. Two-dimensional gap map.</div>
+  <div class="figure-finding">Dark purple = high burden + high evidence (big countries); red = high burden + low evidence (the gap); blue = low burden + high evidence. Visualizes the joint distribution.</div>
+  <div class="review-widget" data-figure-id="M2">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_map_deserts.png" alt="M3 Evidence deserts">
+  <div class="figure-title">M3 — Evidence Deserts</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-atlas">Atlas</span>
+    <span class="figure-script">R/fig-map-deserts.R</span>
+  </div>
+  <div class="figure-description">0 / 1–5 / 6–20 / 21+ studies. **20 countries with burden but zero eligible studies.**</div>
+  <div class="figure-finding">The starkest map: countries with real disease burden but zero economic evaluations. Immediate priority list for evidence generation.</div>
+  <div class="review-widget" data-figure-id="M3">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_map_authorship.png" alt="M4 Who studies whom">
+  <div class="figure-title">M4 — Who Studies Whom (Local Authorship Share)</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-atlas">Atlas</span>
+    <span class="figure-script">R/fig-map-authorship.R</span>
+  </div>
+  <div class="figure-description">Share of studies with a local author. Parachute research visible on the map. Countries with ≥5 studies only.</div>
+  <div class="figure-finding">Low local-authorship share = parachute research. Maps the C18 finding geographically.</div>
+  <div class="review-widget" data-figure-id="M4">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_map_model.png" alt="M5 Model-based vs measured">
+  <div class="figure-title">M5 — Model-Based vs Measured</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-atlas">Atlas</span>
+    <span class="figure-script">R/fig-map-model.R</span>
+  </div>
+  <div class="figure-description">Model-based share by country. LMIC lean on models. Countries with ≥5 studies only.</div>
+  <div class="figure-finding">LMIC countries show higher model-dependency — consistent with C12/T4. Model-based evidence dominates where primary data is scarce.</div>
+  <div class="review-widget" data-figure-id="M5">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_map_openaccess.png" alt="M6 Open access by country">
+  <div class="figure-title">M6 — Open Access by Country</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-atlas">Atlas</span>
+    <span class="figure-script">R/fig-map-openaccess.R</span>
+  </div>
+  <div class="figure-description">OA share by country. Countries with ≥5 studies only.</div>
+  <div class="figure-finding">Geographic view of C25: LMIC countries tend to have higher OA shares. Reachability mirrors evidence production patterns.</div>
+  <div class="review-widget" data-figure-id="M6">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_map_growth.png" alt="M7 Where evidence is youngest">
+  <div class="figure-title">M7 — Where Evidence Is Youngest</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-atlas">Atlas</span>
+    <span class="figure-script">R/fig-map-growth.R</span>
+  </div>
+  <div class="figure-description">Share of studies since 2018 by country. Countries with ≥5 studies only.</div>
+  <div class="figure-finding">Recent growth concentrated in specific regions — shows where the field is expanding geographically.</div>
+  <div class="review-widget" data-figure-id="M7">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_map_method.png" alt="M8 Dominant evaluation method">
+  <div class="figure-title">M8 — Dominant Evaluation Method</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-atlas">Atlas</span>
+    <span class="figure-script">R/fig-map-method.R</span>
+  </div>
+  <div class="figure-description">Cost-utility North / cost-effectiveness South. Countries with ≥5 studies only.</div>
+  <div class="figure-finding">Geographic manifestation of C11/C8: HIC = CUA (QALY), LMIC = CEA (natural units). The metric divide is spatial.</div>
+  <div class="review-widget" data-figure-id="M8">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_map_disease.png" alt="M9 Disease atlas">
+  <div class="figure-title">M9 — Disease Atlas (11 Small Multiples)</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-atlas">Atlas</span>
+    <span class="figure-script">R/fig-map-disease.R</span>
+  </div>
+  <div class="figure-description">11 small-multiple maps, one per GBD Level-1 cause group. Shades absolute study counts (log). Disease *contrast* is the point, not absolute peak.</div>
+  <div class="figure-finding">Infectious diseases light up Africa/South Asia; NCDs light up HIC regions; injuries diffuse. The spatial disease signature of HEE research.</div>
+  <div class="review-widget" data-figure-id="M9">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+---
+
+## Atlas Summary
+
+| Map | Focus | Key Insight |
+|-----|-------|-------------|
+| **M1** | Intensity vs burden | 20 countries: burden but zero studies |
+| **M2** | Bivariate gap | High-burden/low-evidence = red (the gap) |
+| **M3** | Deserts | Categorical: 0, 1–5, 6–20, 21+ |
+| **M4** | Local authorship | Parachute research geography |
+| **M5** | Model-dependency | LMIC lean on models |
+| **M6** | Open access | LMIC research more open |
+| **M7** | Recency | Where growth is happening |
+| **M8** | Dominant method | CUA North / CEA South |
+| **M9** | Disease atlas | 11 small multiples, disease contrast |
+
+---
+
+**Previous:** [← Timelines](timeline.qmd)  •  **Next:** [Lancet Paper Figures →](paper-figures.qmd)

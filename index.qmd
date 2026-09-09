@@ -1,0 +1,151 @@
+---
+title: "HEE Research Landscape — Expert Review"
+---
+
+{{< include _hero.html >}}
+
+## The Project in Numbers
+
+::: {.row}
+::: {.col-md-3}
+**38,199**  
+eligible full economic evaluations
+:::
+::: {.col-md-3}
+**168**  
+countries with evidence
+:::
+::: {.col-md-3}
+**2,845**  
+journals publishing HEE
+:::
+::: {.col-md-3}
+**2010–2025**  
+publication window (2026 partial)
+:::
+:::
+
+---
+
+## How to Use This Site
+
+This site presents the **complete figure catalogue** from the Health Economic Evaluation (HEE) evidence mapping project, organized thematically into **six narrative acts** (following the Companion register structure) plus the **Funder Decision Pack**, **Timeline set**, **Map Atlas**, and **Lancet Paper Figures**.
+
+### For Each Figure You Can:
+
+| Action | How |
+|--------|-----|
+| **Vote** | Click 👍 / 👎 on any figure — your votes are stored locally in your browser |
+| **Comment** | Highlight any text and click the **hypothes.is** icon (top-right) to annotate |
+| **View full-size** | Click any figure to open in lightbox |
+| **See the code** | Each figure shows its generating script (`R/fig-*.R`) |
+
+### Thematic Organization
+
+| Act | Theme | Figures | Focus |
+|-----|-------|---------|-------|
+| **Act I** | Field Shape | 4 | How much research, growth, evaluation types |
+| **Act II** | Topic & Disease | 6 | What is studied, disease areas, interventions |
+| **Act III** | Methods & Quality | 7 | Evaluation types, model vs measurement, decision-usefulness |
+| **Act IV** | Geography & Authorship | 8 | Where evidence is, who produces it, collaboration |
+| **Act V** | Gaps vs Burden | 8 | Evidence per DALY, disease mismatches, deficits, inequality |
+| **Act VI** | Bibliometrics | 4 | Open access, journals, funders, language |
+| **Funder Pack** | Decision-ready | 5 | Opportunity matrix, scorecard, capacity, trajectory, funder landscape |
+| **Timelines** | Change over time | 5 | Equity, QALY, reach, methods, decision-framing trends |
+| **Map Atlas** | Cartographic | 9 | Burden-intensity, bivariate, deserts, authorship, methods, disease |
+| **Paper Figures** | Lancet core | 8 | The 6+2 figures for the journal submission |
+
+---
+
+## Quick Links to Key Findings
+
+> **🎯 Start here if you have 5 minutes:**
+> - [C11 Metric Currency](#act3) — *QALYs for rich, DALYs for poor (cross-income comparability broken)*
+> - [C21 Burden Mismatch](#act5) — *18× gap in evidence per DALY between high- and low-income*
+> - [F1 Opportunity Matrix](#funder) — *Where the next pound buys most missing evidence*
+> - [C14 Decision-Framing](#act3) — *Most abstracts report none of ICER/threshold/PSA/perspective*
+> - [C29 Transition](#act5) — *Injuries research stuck at ~1% vs 11% burden*
+
+---
+
+## Data Quality Notes
+
+All figures reflect **audited, corrected data** as of **2026-09-08**:
+
+- ✅ Income classification: World Bank API (fixed 30% Natural Earth error rate)
+- ✅ Population: World Bank 2025 (fixed up to 93% underestimation for fast-growing countries)
+- ✅ CUA/CEA harmonisation: QALY/DALY outcomes → Cost-utility (per extraction rule)
+- ✅ DOI de-duplication: 200 duplicate DOIs removed
+- ⚠️ Geography: **Extracted-only** for income figures (affiliation proxy is income-biased — see [DATA_QUALITY_AUDIT.md](../DATA_QUALITY_AUDIT.md))
+- ⚠️ MeSH coverage: 63% C-tree, 57% E-tree, 62% N-tree (harvest 2020–2026 only; 2010–2019 harvest running)
+
+---
+
+## Navigation
+
+Use the **top navigation bar** to jump to any act, or start with the **Overview** cards below:
+
+::: {.row}
+::: {.col-md-4}
+### [Act I: Field Shape](act1-field-shape.qmd)
+*How much research exists and what kind?*
+- Corpus hero board (C1)
+- Growth streamgraph (C2)
+- Cumulative growth (C3)
+- Evaluation-type composition (C4)
+:::
+::: {.col-md-4}
+### [Act II: Topic & Disease](act2-topic-disease.qmd)
+*What does the field actually study?*
+- Topic landscape (C5)
+- Disease landscape (C6)
+- Disease × method (C8)
+- Topic map by income (C31)
+- Theme rank by income (C32)
+- Transition over time (C29)
+:::
+::: {.col-md-4}
+### [Act III: Methods & Quality](act3-methods-quality.qmd)
+*What gets measured, and how well?*
+- Outcome families (C10)
+- Metric currency QALY/DALY (C11)
+- Model vs measurement over time (C12)
+- Evidence flow alluvial (C13)
+- Decision-framing in abstracts (C14)
+- Decision-framing over time (T5)
+:::
+::: {.col-md-4}
+### [Act IV: Geography & Authorship](act4-geography.qmd)
+*Where is it about, and who leads it?*
+- Global dot map (C15)
+- Density within/between income (C16)
+- Top producers (C17)
+- Authorship pattern (C18)
+- Collaboration chord (C19)
+- Equity over time (T1)
+- QALY convergence (T2)
+- Reach over time (T3)
+:::
+::: {.col-md-4}
+### [Act V: Gaps vs Burden](act5-gaps.qmd)
+*The map's whole point — research vs need*
+- Burden mismatch scatter (C21)
+- Disease mismatch (C22)
+- Absolute deficits (C23)
+- High burden / low research (C24)
+- Within-LMIC inequality (C30)
+- Epidemiological transition (C29)
+- Method streamgraph (T4)
+:::
+::: {.col-md-4}
+### [Act VI: Bibliometrics](act6-bibliometrics.qmd)
+*How evidence is packaged & reached*
+- Open access over time (C25)
+- Journal concentration (C27)
+- Funder landscape (C28)
+- Language (C26 — null finding)
+:::
+::: {.col-md-4}
+### [Funder Pack](funder-pack.qmd) · [Timelines](timeline.qmd) · [Atlas](atlas.qmd) · [Paper](paper-figures.qmd)
+:::
+:::

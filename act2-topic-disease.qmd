@@ -1,0 +1,178 @@
+---
+title: "Act II — Topic & Disease"
+---
+
+# Act II: Topic & Disease
+
+*What does the field actually study?*  Variables: OpenAlex cluster + primary_topic (88%); MeSH C-tree (63%), E-tree (57%), N-tree (62%). **Harvested subset** — declare base.
+
+---
+
+<div class="figure-card">
+  <img src="../figures/fig_topic_landscape.png" alt="C5 Topic landscape">
+  <div class="figure-title">C5 — Topic Landscape (Circular Bar)</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-hero">★★★ Hero</span>
+    <span class="figure-script">R/fig-companion-topic.R</span>
+  </div>
+  <div class="figure-description">OpenAlex subfields grouped by field — circular bar (rounded form). The Act II hero showing what research areas dominate.</div>
+  <div class="figure-finding">Clinical medicine, biology, and pharmacology dominate; economics and policy are smaller slices.</div>
+  <div class="review-widget" data-figure-id="C5">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_disease_circular.png" alt="C6 Disease landscape">
+  <div class="figure-title">C6 — Disease Landscape (Share + Income Lean)</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-hero">★★★ Hero</span>
+    <span class="figure-script">R/fig-companion-disease.R</span>
+  </div>
+  <div class="figure-description">MeSH C-tree circular bar, coloured by LMIC/HIC lean. Shows which disease areas dominate and whether they skew rich or poor.</div>
+  <div class="figure-finding">Infectious diseases lean LMIC; neoplasms, cardiovascular, musculoskeletal lean HIC. The lean is visible in the colour gradient.</div>
+  <div class="review-widget" data-figure-id="C6">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_disease_method.png" alt="C8 Disease x evaluation method">
+  <div class="figure-title">C8 — Disease × Evaluation Method</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-solid">★★ Solid</span>
+    <span class="figure-script">R/fig-companion-disease-method.R</span>
+  </div>
+  <div class="figure-description">Heat map: for each GBD disease group, the mix of economic-evaluation types. Rows with ≥300 studies.</div>
+  <div class="figure-finding">Cancers and chronic conditions lean cost-utility (QALYs); injuries and maternal-neonatal care lean cost-effectiveness (natural units).</div>
+  <div class="review-widget" data-figure-id="C8">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_topicmap_income.png" alt="C31 Thematic landscape by income">
+  <div class="figure-title">C31 — Thematic Landscape by Income (UMAP)</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-hero">★★★ Hero</span>
+    <span class="figure-script">05-topic-model.py + R/fig-companion-topicmap-income.R</span>
+  </div>
+  <div class="figure-description">Emergent topic map (embeddings → UMAP → HDBSCAN) coloured by each theme's LMIC share. Protocol Appendix K.</div>
+  <div class="figure-finding">Theme-space segregates: LMIC themes = malaria 91%, TB 66%, HIV 57%, maternal 57%; HIC themes = obesity 3%, dementia 6%, arthroplasty 10%.</div>
+  <div class="review-widget" data-figure-id="C31">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_theme_rank.png" alt="C32 Emergent themes ranked by income">
+  <div class="figure-title">C32 — Emergent Themes Ranked by Income</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-hero">★★★ Hero</span>
+    <span class="figure-script">R/fig-companion-theme-rank.R</span>
+  </div>
+  <div class="figure-description">Horizontal bar: 15 most- + 15 least-LMIC themes, coloured by share, faceted. Lancet-friendly league table of C31.</div>
+  <div class="figure-finding">The two ends don't overlap: LMIC themes 33–91%, HIC themes 3–13%. Research about poor and rich countries sits in completely different thematic spaces.</div>
+  <div class="review-widget" data-figure-id="C32">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_transition.png" alt="C29 Epidemiological transition">
+  <div class="figure-title">C29 — Epidemiological Transition Shift</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-hero">★★★ Hero</span>
+    <span class="figure-script">R/fig-companion-transition.R</span>
+  </div>
+  <div class="figure-description">LMIC research disease-mix (3 transition classes) over 2010–2026 vs 2021 burden. Communicable → NCD shift tracked against burden shares.</div>
+  <div class="figure-finding">Research shifted communicable 68%→28% to NCDs 31%→70% (2010→2025), crossing burden shares. **Injuries stayed ~1% throughout vs 11% burden.**</div>
+  <div class="review-widget" data-figure-id="C29">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+---
+
+## Act II Summary
+
+| Figure | Status | Strength | Key Message |
+|--------|--------|----------|-------------|
+| **C5** | ✅ Built | ★★★ Hero | OpenAlex topic circular bar |
+| **C6** | ✅ Built | ★★★ Hero | Disease C-tree + income lean |
+| **C7** | ❌ Dropped | — | E-tree swamped by "investigative techniques" (86%) |
+| **C8** | ✅ Built | ★★ Solid | Disease × method heat map |
+| **C9** | 🛠️ Buildable | ★ Thin | N-tree health-care arrangement |
+| **C31** | ✅ Built | ★★★ Hero | UMAP topic map coloured by LMIC share |
+| **C32** | ✅ Built | ★★★ Hero | League table of LMIC/HIC themes |
+| **C29** | ✅ Built | ★★★ Hero | Transition: injuries stuck at 1% vs 11% burden |
+
+---
+
+**Previous:** [← Act I: Field Shape](act1-field-shape.qmd)  •  **Next:** [Act III: Methods & Quality →](act3-methods-quality.qmd)

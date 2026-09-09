@@ -1,0 +1,124 @@
+---
+title: "Act I — The Shape of a Field"
+---
+
+# Act I: The Shape of a Field
+
+*How much research is there, and what kind?*  Variables: `year`, `econ_eval_type`, `full_eval_status`.
+
+---
+
+<div class="figure-card">
+  <img src="../figures/fig_statboard.png" alt="C1 Corpus hero board">
+  <div class="figure-title">C1 — Corpus Hero Board</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-hero">★★★ Hero</span>
+    <span class="figure-script">R/fig-companion-statboard.R</span>
+  </div>
+  <div class="figure-description">Eight stat tiles summarizing the entire corpus in one glance: 38,199 evaluations · 168 countries · 2,845 journals · 94% full evaluation · 46% QALY · 56% model-based · 68% single-country.</div>
+  <div class="figure-finding">Opener figure — sets the scale for everything that follows.</div>
+  <div class="review-widget" data-figure-id="C1">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_growth.png" alt="C2 Growth streamgraph">
+  <div class="figure-title">C2 — The Growth Streamgraph</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-hero">★★★ Hero</span>
+    <span class="figure-script">R/fig-companion-growth.R</span>
+  </div>
+  <div class="figure-description">Stacked streamgraph of evaluation types by year (2010–2025), with 2026 flagged as partial. Shows the field's expansion and shifting composition.</div>
+  <div class="figure-finding">Cost-utility grew from ~40% to ~55% share; cost-effectiveness declined from ~35% to ~25%. The field is growing AND shifting toward preference-weighted metrics.</div>
+  <div class="review-widget" data-figure-id="C2">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_growth.png" alt="C3 Cumulative growth">
+  <div class="figure-title">C3 — Cumulative Growth vs Early Rate</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-solid">★★ Solid</span>
+    <span class="figure-script">R/fig-companion-growth.R</span>
+  </div>
+  <div class="figure-description">Cumulative publication line with early-rate reference line and half-since-2020 marker. Tests whether growth is accelerating.</div>
+  <div class="figure-finding">More than half of all HEE studies published since 2020 — growth is accelerating, not just continuing.</div>
+  <div class="review-widget" data-figure-id="C3">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_forest.png" alt="C4 Evaluation-type composition">
+  <div class="figure-title">C4 — Evaluation-Type Composition (Radial)</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-thin">★ Thin / Decorative</span>
+    <span class="figure-script">🛠️ To build</span>
+  </div>
+  <div class="figure-description">Radial bar / donut showing CUA 43% · CEA 29% · CCA 17% · CBA 5% · others. Folds into C2 streamgraph; kept for quick reference.</div>
+  <div class="figure-finding">Thin figure — the streamgraph C2 carries this information with temporal dimension.</div>
+  <div class="review-widget" data-figure-id="C4">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+---
+
+## Act I Summary
+
+| Figure | Status | Strength | Key Message |
+|--------|--------|----------|-------------|
+| **C1** | ✅ Built | ★★ (Opener) | 38K studies, 168 countries, 94% full eval |
+| **C2** | ✅ Built | ★★★ Hero | Field growing + shifting to cost-utility |
+| **C3** | ✅ Built | ★★ Solid | >50% of all studies since 2020 |
+| **C4** | 🛠️ Buildable | ★ Thin | Radial version of C2's final frame |
+
+---
+
+**Next:** [Act II: Topic & Disease →](act2-topic-disease.qmd)

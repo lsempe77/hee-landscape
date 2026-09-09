@@ -1,0 +1,152 @@
+---
+title: "Timelines (T1–T5)"
+---
+
+# Timeline Set (T1–T5)
+
+Comparative time-series on the `year` dimension (2010–2025; 2026 partial, dropped). Each standalone, companion finish.
+
+> **Discipline notes:** Income-comparative ones (T1, T2) use single-country **extracted** geography with known income. T3 uses `country_universe` denominators per income group. T5 is abstract-only proxy (screening corpus, 100%), "not reported ≠ not done".
+
+---
+
+<div class="figure-card">
+  <img src="../figures/fig_equity_time.png" alt="T1 Equity over time">
+  <div class="figure-title">T1 — Equity Over Time</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-timeline">Timeline</span>
+    <span class="figure-script">R/fig-companion-equity-time.R</span>
+  </div>
+  <div class="figure-description">LMIC share of annual single-country output vs their burden share (2010–2025).</div>
+  <div class="figure-finding">**Rose 16% → 36%** (2010→2025) — real progress, yet still far below **83% LMIC burden share** (dashed line). Shaded band = distance to reference.</div>
+  <div class="review-widget" data-figure-id="T1">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_qaly_time.png" alt="T2 QALY convergence">
+  <div class="figure-title">T2 — QALY-Metric Convergence by Income</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-timeline">Timeline</span>
+    <span class="figure-script">R/fig-companion-qaly-time.R</span>
+  </div>
+  <div class="figure-description">QALY use by income group over time. The metric gap over time.</div>
+  <div class="figure-finding">LMIC **15% → 49%** vs HIC **51% → 59%** (2010→2025). **Gap narrowed ~10pp but persists** — LMIC catching up on comparable metric adoption.</div>
+  <div class="review-widget" data-figure-id="T2">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_reach_time.png" alt="T3 Reach over time">
+  <div class="figure-title">T3 — Reach Over Time</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-timeline">Timeline</span>
+    <span class="figure-script">R/fig-companion-reach-time.R</span>
+  </div>
+  <div class="figure-description">Cumulative % of each income group's countries with ≥1 evaluation. Country universe denominators per income group.</div>
+  <div class="figure-finding">HIC covered early; LIC reached last (**28% → 96%**). Geographic reach expanding but uneven — LIC coverage only recently approaching saturation.</div>
+  <div class="review-widget" data-figure-id="T3">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_method_stream.png" alt="T4 Method streamgraph">
+  <div class="figure-title">T4 — Method Streamgraph</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-timeline">Timeline</span>
+    <span class="figure-script">R/fig-companion-method-stream.R</span>
+  </div>
+  <div class="figure-description">Econ-eval-type composition over time (2010–2025). Stacked streamgraph.</div>
+  <div class="figure-finding">**Cost-utility 45% → 54%**, cost-effectiveness **34% → 25%**. Field increasingly adopts CUA (QALY) methods; CEA declining. Mirrors C11/T2 metric shift.</div>
+  <div class="review-widget" data-figure-id="T4">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+<div class="figure-card">
+  <img src="../figures/fig_decision_time.png" alt="T5 Decision-usefulness over time">
+  <div class="figure-title">T5 — Decision-Usefulness Over Time</div>
+  <div class="figure-meta">
+    <span class="figure-badge badge-timeline">Timeline</span>
+    <span class="figure-script">R/fig-companion-decision-time.R</span>
+  </div>
+  <div class="figure-description">Share of abstracts foregrounding each decision-analytic element by year. Abstract-only proxy (screening corpus, 100%).</div>
+  <div class="figure-finding">All four rose: **threshold most (12%→29%)**, ICER (25%→48%), PSA (15%→38%), perspective (18%→42%). Reporting improving but majority still foregrounds none.</div>
+  <div class="review-widget" data-figure-id="T5">
+  <input type="text" class="review-name" placeholder="Your name" />
+  <div style="display:flex; gap:0.5rem; margin:0.5rem 0; flex-wrap:wrap;">
+    <button class="review-vote-btn vote-btn" data-vote="essential">Essential</button>
+    <button class="review-vote-btn vote-btn" data-vote="useful">Useful</button>
+    <button class="review-vote-btn vote-btn" data-vote="nice">Nice to have</button>
+    <button class="review-vote-btn vote-btn" data-vote="skip">Skip</button>
+    <button class="review-vote-btn vote-btn" data-vote="up">👍 Up</button>
+    <button class="review-vote-btn vote-btn" data-vote="down">👎 Down</button>
+  </div>
+  <textarea class="review-comment" placeholder="Optional comment..."></textarea>
+  <button class="review-submit">Submit Review</button>
+</div>
+<div class="review-list"></div>
+</div>
+
+---
+
+## Timeline Summary
+
+| Figure | Trend | Key Finding |
+|--------|-------|-------------|
+| **T1** | ↗ Rising | LMIC share 16→36% vs 83% burden — progress but large gap |
+| **T2** | ↗ Converging | QALY gap narrowed ~10pp (15→49% vs 51→59%) |
+| **T3** | ↗ Saturating | LIC country reach 28→96% (last to saturate) |
+| **T4** | ↗ Shifting | CUA 45→54%, CEA 34→25% — method shift to CUA |
+| **T5** | ↗ Improving | All 4 decision elements rising; threshold most (12→29%) |
+
+---
+
+**Previous:** [← Funder Decision Pack](funder-pack.qmd)  •  **Next:** [Map Atlas →](atlas.qmd)
