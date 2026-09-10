@@ -3,214 +3,341 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HEE evidence map</title>
-<meta name="description" content="Maps the global evidence base of health economic evaluations: 38,199 eligible full evaluations published 2010-2026 across 168 countries, with an interactive explorer.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #faf9f6;
-    --ink: #10243e;
-    --gold: #b08d3e;
-    --hairline: #e7e3da;
-    --muted: #5c6672;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
-    font-size: 16px;
-    line-height: 1.55;
-  }
-  h1, h2, h3 { font-family: "Newsreader", Georgia, serif; font-weight: 600; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-  header {
-    background: linear-gradient(135deg, #10243e 0%, #1b3a5c 70%, #24486f 100%);
-    color: #f5f2ea;
-    padding: 44px 0 40px;
-  }
-  header .kicker {
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--gold);
-    margin-bottom: 10px;
-  }
-  header h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.12; }
-  header p.hero {
-    margin-top: 16px;
-    max-width: 760px;
-    font-size: 17px;
-    color: #d8dce2;
-  }
-  header p.hero strong { color: #fff; font-weight: 600; }
-
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 12px;
-    margin: -26px auto 0;
-    position: relative;
-  }
-  .stat {
-    background: #fff;
-    border: 1px solid var(--hairline);
-    border-radius: 12px;
-    padding: 14px 16px;
-    box-shadow: 0 2px 10px rgba(16, 36, 62, 0.06);
-  }
-  .stat .n {
-    font-family: "Newsreader", Georgia, serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--ink);
-    line-height: 1.1;
-  }
-  .stat .l { font-size: 12px; color: var(--muted); margin-top: 4px; }
-
-  .cta-band { text-align: center; padding: 46px 0 8px; }
-  .cta {
-    display: inline-block;
-    background: var(--ink);
-    color: #fff;
-    font-weight: 600;
-    font-size: 17px;
-    padding: 15px 34px;
-    border-radius: 999px;
-    text-decoration: none;
-    box-shadow: 0 4px 16px rgba(16, 36, 62, 0.25);
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
-  }
-  .cta:hover { transform: translateY(-1px); box-shadow: 0 6px 22px rgba(16, 36, 62, 0.32); }
-  .cta-note { font-size: 13px; color: var(--muted); margin-top: 12px; max-width: 560px; margin-left: auto; margin-right: auto; }
-
-  section.teasers { padding: 40px 0 10px; }
-  section.teasers h2 { font-size: 26px; margin-bottom: 6px; }
-  section.teasers .sub { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 18px;
-  }
-  a.figcard {
-    display: block;
-    background: #fff;
-    border: 1px solid var(--hairline);
-    border-radius: 14px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 2px 10px rgba(16, 36, 62, 0.05);
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
-  }
-  a.figcard:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(16, 36, 62, 0.12); }
-  a.figcard img { width: 100%; height: 190px; object-fit: cover; object-position: top; display: block; background: #f1efe9; }
-  a.figcard .body { padding: 14px 16px 16px; }
-  a.figcard h3 { font-size: 17px; margin-bottom: 4px; }
-  a.figcard p { font-size: 13px; color: var(--muted); }
-  a.figcard .open { font-size: 12px; font-weight: 600; color: var(--gold); margin-top: 8px; display: block; }
-
-  footer {
-    margin-top: 48px;
-    border-top: 1px solid var(--hairline);
-    padding: 22px 0 30px;
-    font-size: 13px;
-    color: var(--muted);
-    text-align: center;
-  }
-</style>
+<title>HEE evidence map — interactive</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <div class="kicker">Health economic evaluations &middot; 2010&ndash;2026</div>
-    <h1>HEE evidence map</h1>
-    <p class="hero">This project maps the global evidence base of <strong>health economic evaluations</strong> &mdash; studies comparing two or more ways of delivering care on their costs and consequences. From <strong>44,941</strong> records extracted from the harvested literature, <strong>38,199 eligible full evaluations</strong> published 2010&ndash;2026 are charted here: where they were done, what they studied, how they were built, and whose burden they ignore.</p>
+<nav class="navbar">
+  <a class="navbar-brand" href="#">HEE evidence map</a>
+  <div class="navbar-nav">
+    <button class="nav-link active" data-tab="overview">Overview</button>
+    <button class="nav-link" data-tab="gallery">Gallery</button>
+    <button class="nav-link" data-tab="explorer">Explorer</button>
+    <button class="nav-link" data-tab="country">Country profile</button>
+    <button class="nav-link" data-tab="methods">Methods</button>
   </div>
-</header>
+  <span class="navbar-text" id="nav-built"></span>
+</nav>
 
-<div class="wrap">
-  <!-- Stat tiles: refresh from app_data.rds meta on data rebuild
-       (n_studies, years, n_countries_named, n_journals, pct_qaly, pct_model, pct_single) -->
-  <div class="stats">
-    <div class="stat"><div class="n">38,199</div><div class="l">Eligible full evaluations</div></div>
-    <div class="stat"><div class="n">2010&ndash;2026</div><div class="l">Years covered</div></div>
-    <div class="stat"><div class="n">168</div><div class="l">Countries studied</div></div>
-    <div class="stat"><div class="n">3,720</div><div class="l">Journals (harvested set)</div></div>
-    <div class="stat"><div class="n">46%</div><div class="l">Use QALYs</div></div>
-    <div class="stat"><div class="n">56%</div><div class="l">Model-based</div></div>
-    <div class="stat"><div class="n">68%</div><div class="l">Single-country</div></div>
-  </div>
+<main>
 
-  <div class="cta-band">
-    <a class="cta" href="app/index.html">Launch the interactive app &rarr;</a>
-    <p class="cta-note">First launch downloads the R runtime and packages (~110&nbsp;MB, once per browser) &mdash; subsequent visits load in seconds.</p>
-  </div>
+  <!-- ============ OVERVIEW ============ -->
+  <section class="tab-pane active" id="pane-overview">
+    <div class="card"><div class="card-body">
+      <h2 class="hero-title">Where health-economic evidence exists — and where it is missing</h2>
+      <p class="hero-text">
+        This app maps the global evidence base of health economic evaluations — studies that
+        compare two or more ways of delivering care on both costs and consequences.
+        <strong id="ov-n-extracted"></strong> evaluations published
+        <span id="ov-year-lo"></span>–<span id="ov-year-hi"></span> were extracted;
+        <strong id="ov-n-studies"></strong>
+        full economic evaluations are eligible for analysis. The
+        <em>Gallery</em> presents the full figure catalogue by theme, the
+        <em>Explorer</em> crosses any variables in the corpus, the
+        <em>Country profile</em> opens a single setting, and
+        <em>Methods</em> explains how the map is built.
+      </p>
+      <h2 class="glance-title">The evidence base at a glance</h2>
+      <div class="grid-4" id="ov-tiles"></div>
+    </div></div>
+    <div class="grid-3" id="ov-hero-imgs"></div>
+  </section>
 
-  <section class="teasers">
-    <h2>Highlights from the gallery</h2>
-    <p class="sub">Click any figure to open it full size. The interactive app adds filters, trends, maps and per-country profiles.</p>
-    <div class="grid">
-      <a class="figcard" href="figures/fig_dotmap.webp">
-        <img src="figures/fig_dotmap.webp" alt="Global proportional-symbol map of study counts" loading="lazy">
-        <div class="body">
-          <h3>Global proportional-symbol map</h3>
-          <p>Where the evidence sits: bubbles by country study count, coloured by income group.</p>
-          <span class="open">Open full size &rarr;</span>
-        </div>
-      </a>
-      <a class="figcard" href="figures/fig_burden.webp">
-        <img src="figures/fig_burden.webp" alt="Studies per 100k DALYs versus total burden" loading="lazy">
-        <div class="body">
-          <h3>Evidence per unit of burden</h3>
-          <p>Studies per 100k DALYs vs total burden: an 18&times; gap between the best- and worst-served countries.</p>
-          <span class="open">Open full size &rarr;</span>
-        </div>
-      </a>
-      <a class="figcard" href="figures/fig_transition.webp">
-        <img src="figures/fig_transition.webp" alt="Epidemiological transition of research" loading="lazy">
-        <div class="body">
-          <h3>Epidemiological transition of research</h3>
-          <p>LMIC research shifted communicable &rarr; NCD past the burden shares; injuries stayed at ~1% of research vs 11% of burden.</p>
-          <span class="open">Open full size &rarr;</span>
-        </div>
-      </a>
-      <a class="figcard" href="figures/fig_growth.webp">
-        <img src="figures/fig_growth.webp" alt="Cumulative growth of the evidence base" loading="lazy">
-        <div class="body">
-          <h3>Cumulative growth</h3>
-          <p>The field keeps doubling: half of everything published since 2010 appeared after 2020 (2026 flagged partial).</p>
-          <span class="open">Open full size &rarr;</span>
-        </div>
-      </a>
-      <a class="figcard" href="figures/fig_inequality.webp">
-        <img src="figures/fig_inequality.webp" alt="Lorenz curve of evidence within LMICs" loading="lazy">
-        <div class="body">
-          <h3>Within-LMIC inequality</h3>
-          <p>Lorenz curve: the least-served half of LMIC burden holds 16% of the evidence; top 5 countries hold 55%; Gini 0.50.</p>
-          <span class="open">Open full size &rarr;</span>
-        </div>
-      </a>
-      <a class="figcard" href="figures/fig_map_bivariate.webp">
-        <img src="figures/fig_map_bivariate.webp" alt="Bivariate map of burden and evidence" loading="lazy">
-        <div class="body">
-          <h3>Burden &times; evidence bivariate</h3>
-          <p>The high-burden/low-evidence corner lights up; dark purple is high on both (big countries), not missing data.</p>
-          <span class="open">Open full size &rarr;</span>
-        </div>
-      </a>
+  <!-- ============ GALLERY ============ -->
+  <section class="tab-pane" id="pane-gallery">
+    <div class="theme-wrap">
+      <div id="gal-index">
+        <div class="section-index" id="gal-section-index"></div>
+      </div>
+      <div id="gal-section" style="display:none">
+        <button class="back-link" id="gal-back">&larr; All sections</button>
+        <h2 class="hero-title" id="gal-sec-title"></h2>
+        <p class="theme-blurb" id="gal-sec-blurb"></p>
+        <div class="fig-grid" id="gal-sec-grid"></div>
+      </div>
     </div>
   </section>
+
+  <!-- ============ EXPLORER ============ -->
+  <section class="tab-pane" id="pane-explorer">
+    <div class="explorer-layout">
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Filter the corpus</h2>
+
+        <div class="control-group">
+          <label class="control-label" for="x-years">Publication years</label>
+          <div class="slider-wrap"><div id="x-years"></div></div>
+          <div class="slider-readout" id="x-years-readout"></div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="x-income">Income group</label>
+          <select id="x-income" multiple placeholder="All groups"></select>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-region">UN region</label>
+          <select id="x-region" multiple placeholder="All regions"></select>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-disease">Disease area</label>
+          <select id="x-disease" multiple placeholder="All areas"></select>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-evaltype">Evaluation type</label>
+          <select id="x-evaltype" multiple placeholder="All types"></select>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-design">Design basis</label>
+          <select id="x-design" multiple placeholder="All designs"></select>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Approach</label>
+          <div class="radio-inline" id="x-model"></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">QALY use</label>
+          <div class="radio-inline" id="x-qaly"></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Open access</label>
+          <div class="radio-inline" id="x-oa"></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-scope">Geographic scope</label>
+          <select id="x-scope" class="form-select"></select>
+        </div>
+
+        <button class="btn-outline-secondary" id="x-reset">Reset filters</button>
+        <hr>
+        <p class="text-muted">
+          Every filter combines. Open-access status is known for 93% of the corpus; “Unknown”
+          records are excluded when a side is chosen. Country panels count a multi-country
+          study once per country it is about.
+        </p>
+      </aside>
+
+      <div class="explorer-main">
+        <div class="grid-4">
+          <div class="value-box bg-primary"><div class="value-box-title">Studies in view</div><div class="value-box-value" id="v-studies">—</div></div>
+          <div class="value-box bg-info"><div class="value-box-title">Countries in view</div><div class="value-box-value" id="v-countries">—</div></div>
+          <div class="value-box bg-secondary"><div class="value-box-title">Model-based</div><div class="value-box-value" id="v-model">—</div></div>
+          <div class="value-box bg-success"><div class="value-box-title">Uses a QALY</div><div class="value-box-value" id="v-qaly">—</div></div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">Studies over time</div>
+            <div class="card-body">
+              <div class="chart-toolbar">
+                <div class="tb-field"><label for="x-trend-by">Colour by</label><select id="x-trend-by" class="form-select"></select></div>
+              </div>
+              <div id="x-trend" class="plot" style="height:320px"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Map — intensity by country</div>
+            <div class="card-body">
+              <div class="chart-toolbar">
+                <div class="tb-field"><label for="x-map-metric">Metric</label><select id="x-map-metric" class="form-select"></select></div>
+              </div>
+              <div id="x-map" class="plot" style="height:320px"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Composition of the filtered corpus</div>
+            <div class="card-body">
+              <div class="chart-toolbar">
+                <div class="tb-field wide"><label for="x-comp-var">Variable</label><select id="x-comp-var" class="form-select"></select></div>
+                <div class="tb-field wide"><label for="x-comp-stack">Group by</label><select id="x-comp-stack" class="form-select"></select></div>
+                <div class="tb-field"><label for="x-comp-mode">Measure</label><select id="x-comp-mode" class="form-select"></select></div>
+              </div>
+              <div id="x-comp" class="plot" style="height:340px"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Countries — any two variables</div>
+            <div class="card-body">
+              <div class="chart-toolbar">
+                <div class="tb-field wide"><label for="x-scatter-x">X axis</label><select id="x-scatter-x" class="form-select"></select></div>
+                <div class="tb-field wide"><label for="x-scatter-y">Y axis</label><select id="x-scatter-y" class="form-select"></select></div>
+              </div>
+              <div id="x-scatter" class="plot" style="height:340px"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Top countries in this view</div>
+          <div class="card-body">
+            <div class="table-wrap"><table class="dataTable" id="x-table"></table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTRY PROFILE ============ -->
+  <section class="tab-pane" id="pane-country">
+    <div class="explorer-layout">
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Country</h2>
+        <div class="control-group">
+          <select id="c-picker" placeholder="Pick a country…"></select>
+        </div>
+        <dl class="fact-list" id="c-facts"></dl>
+      </aside>
+      <div class="explorer-main">
+        <div class="grid-4">
+          <div class="value-box bg-primary"><div class="value-box-title">Eligible studies</div><div class="value-box-value" id="c-n">—</div></div>
+          <div class="value-box bg-info"><div class="value-box-title">Per 100k DALYs</div><div class="value-box-value" id="c-daly">—</div></div>
+          <div class="value-box bg-secondary"><div class="value-box-title">Per US$1bn spending</div><div class="value-box-value" id="c-spend">—</div></div>
+          <div class="value-box bg-success"><div class="value-box-title">Per million people</div><div class="value-box-value" id="c-percap">—</div></div>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">Output over time — country vs income-group mean</div>
+            <div class="card-body"><div id="c-trend" class="plot" style="height:320px"></div></div>
+          </div>
+          <div class="card">
+            <div class="card-header">Disease mix — country vs income group</div>
+            <div class="card-body"><div id="c-mix" class="plot" style="height:320px"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METHODS ============ -->
+  <section class="tab-pane" id="pane-methods">
+    <div class="methods-wrap">
+
+      <div class="card">
+        <div class="card-header">What counts as an eligible study</div>
+        <div class="card-body">
+          <p>The map covers <strong>full economic evaluations</strong> of health-care delivery
+             published from 1 January 2010 onward: studies that compare two or more ways of
+             delivering care on <strong>both costs and consequences</strong>. The unit of
+             analysis is the study; the analysis is descriptive and, where it compares research
+             against disease burden, ecological.</p>
+          <p>Title/abstract screening was machine-learning based, with a measured sensitivity
+             of 0.962 against a human reference set. Partial evaluations (cost-minimisation,
+             budget-impact, cost-of-illness) and records unclear at extraction are excluded, so
+             the analysis population is full evaluations by construction. Studies whose
+             consequence is a non-clinical metric (e.g. diagnostic accuracy, utilisation) are
+             kept and flagged.</p>
+          <table class="methods-table">
+            <thead><tr><th>Selection funnel</th><th>Records</th></tr></thead>
+            <tbody>
+              <tr><td>Identified</td><td>1,154,050</td></tr>
+              <tr><td>Screened at title/abstract</td><td>1,119,811</td></tr>
+              <tr><td>Confident includes</td><td>45,588</td></tr>
+              <tr><td>Extracted</td><td>44,941</td></tr>
+              <tr><td>Excluded — partial evaluations</td><td>−3,388</td></tr>
+              <tr><td>Excluded — unclear at extraction</td><td>−2,819</td></tr>
+              <tr><td>Excluded — duplicate DOIs</td><td>−535</td></tr>
+              <tr><td><strong>Analysis population</strong></td><td><strong>38,199</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Data sources</div>
+        <div class="card-body">
+          <table class="methods-table">
+            <thead><tr><th>Input</th><th>Source</th></tr></thead>
+            <tbody>
+              <tr><td>Study metadata &amp; bibliometrics</td>
+                  <td>CrossRef + OpenAlex + PubMed + NLM MeSH harvest (~93% coverage
+                      of the eligible population)</td></tr>
+              <tr><td>Income groups</td><td>World Bank API classification</td></tr>
+              <tr><td>Population</td>
+                  <td>World Bank SP.POP.TOTL (latest observation, mostly 2025)</td></tr>
+              <tr><td>Disease burden</td>
+                  <td>IHME GBD 2023 DALYs (country totals + 22 Level-2 causes)</td></tr>
+              <tr><td>Health spending</td>
+                  <td>IHME Health Spending 1995–2022 (total health expenditure per
+                      capita, PPP 2022; national total = per-capita × latest
+                      population)</td></tr>
+              <tr><td>Disease coding</td>
+                  <td>MeSH C-tree any-topic headings mapped to 11 groups, crosswalked
+                      to GBD Level-2 causes</td></tr>
+              <tr><td>Research topics</td>
+                  <td>OpenAlex topic taxonomy plus an emergent theme model (abstract
+                      embeddings → UMAP → HDBSCAN)</td></tr>
+            </tbody>
+          </table>
+          <p class="methods-note">Reference data are fetched from dated sources, never
+            bundled snapshots.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Rules that keep the numbers honest</div>
+        <div class="card-body">
+          <p><strong>Extracted geography only.</strong> The author-affiliation proxy is accurate
+            where it applies, but its availability is income-biased — merging it would inflate
+            the headline burden gap from 17.8× to 25.8×, so it is excluded from every income
+            figure.</p>
+          <p><strong>Multi-country studies count once per country</strong> in the country panels,
+            and every figure declares whether its denominator is studies or study–country
+            pairs.</p>
+          <p><strong>Countries without a World Bank income group are visibly absent,</strong>
+            never zero-filled as “0 studies”.</p>
+          <p><strong>Burden proportionality is a reference point, not a normative target:</strong>
+            research allocation also reflects tractability, intervention cost and the stock
+            of existing evidence.</p>
+          <p><strong>Abstract decision-signals measure what abstracts report, not what studies
+            did</strong> — “not reported” is not “not done”.</p>
+          <p><strong>MeSH uses any-topic headings:</strong> major-topic marking jumps at the 2020
+            harvest boundary and would manufacture a trend.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Limitations</div>
+        <div class="card-body">
+          <p>The corpus is effectively English-only (99.8%). Geography is missing for ~33% of
+            studies; country-level figures cover the placeable subset. Harvest coverage is
+            partial (47–93% depending on field) and declared per figure. Comparisons of
+            research to burden are ecological. Extraction fields disagree for 8.3% of studies,
+            handled by conservative disqualification. The 50,661 records unsure at
+            title/abstract are held out of the population pending a handling policy.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div class="modal-backdrop" id="fig-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="fig-modal-title"></h3>
+        <button class="modal-close" id="fig-modal-close">Close</button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-fig" id="fig-modal-img" src="" alt="">
+        <p class="fig-caption" id="fig-modal-caption" style="margin-top:.6rem"></p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<footer>
-  <div class="wrap">Sources: GBD 2023 (IHME) &middot; IHME Health Spending 1995&ndash;2022 &middot; World Bank &middot; OpenAlex/CrossRef/PubMed harvest</div>
+<footer class="site-footer">
+  Sources: GBD 2023 (IHME) · IHME Health Spending 1995–2022 · World Bank · OpenAlex/CrossRef/PubMed harvest
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js"></script>
+<script type="module" src="app.js"></script>
 
 </body>
 </html>
