@@ -344,6 +344,110 @@ export function tableRows(db, flt, k = 25) {
   }));
 }
 
+const SIGNAL_METRICS = ["Model-based", "Uses QALY", "Reports ICER",
+  "Reports threshold", "Open access"];
+
+const cmpStr = (a, b) => a < b ? -1 : a > b ? 1 : 0;
+
+function profileSets(db, iso3) {
+  const ci = db.countries.findIndex(r => r.iso3 === iso3);
+  if (ci < 0) return null;
+  const income = db.countries[ci].income;
+  const g = db.geo;
+  const cs = new Set(), ps = new Set();
+  for (let i = 0; i < g.s.length; i++) {
+    const c = g.c[i], s = g.s[i];
+    if (c === ci) cs.add(s);
+    if (db.incomeOf[c] === income) ps.add(s);
+  }
+  return { ci, income, cs, ps };
+}
+
+function methodsMixSets(db, cs, ps) {
+  const lv = db.levels.econ_eval_type;
+  const col = db.studies.econ_eval_type;
+  const cn = new Map(), pn = new Map();
+  for (const s of cs) { const t = lv[col[s]]; cn.set(t, (cn.get(t) || 0) + 1); }
+  for (const s of ps) { const t = lv[col[s]]; pn.set(t, (pn.get(t) || 0) + 1); }
+  const nc = cs.size, np = ps.size;
+  const rows = [...new Set([...cn.keys(), ...pn.keys()])].map(t => ({
+    type: t,
+    country_share: nc > 0 ? 100 * (cn.get(t) || 0) / nc : null,
+    peer_share: np > 0 ? 100 * (pn.get(t) || 0) / np : null
+  }));
+  const y_order = rows.slice()
+    .sort((a, b) => ((b.peer_share == null ? 0 : b.peer_share) -
+                     (a.peer_share == null ? 0 : a.peer_share)) || cmpStr(a.type, b.type))
+    .map(r => r.type);
+  rows.sort((a, b) => y_order.indexOf(a.type) - y_order.indexOf(b.type));
+  return { rows, y_order };
+}
+
+export function methodsMix(db, iso3) {
+  const sets = profileSets(db, iso3);
+  return sets ? methodsMixSets(db, sets.cs, sets.ps) : null;
+}
+
+function signalCounts(db, set) {
+  const st = db.studies;
+  const mCode = db.codeOf.model_label.get("Model-based");
+  const qCode = db.codeOf.qaly_label.get("Uses QALY");
+  const oaCode = db.codeOf.oa_label.get("Open access");
+  const unkCode = db.codeOf.oa_label.get("Unknown");
+  let m = 0, q = 0, ic = 0, th = 0, oaKnown = 0, oa = 0;
+  for (const s of set) {
+    if (st.model_label[s] === mCode) m++;
+    if (st.qaly_label[s] === qCode) q++;
+    if (st.has_icer[s] === 1) ic++;
+    if (st.has_threshold[s] === 1) th++;
+    const o = st.oa_label[s];
+    if (o !== unkCode) { oaKnown++; if (o === oaCode) oa++; }
+  }
+  return { n: set.size, m, q, ic, th, oaKnown, oa };
+}
+
+function signalsSets(db, cs, ps) {
+  const c = signalCounts(db, cs), p = signalCounts(db, ps);
+  const whole = (k, cc) => cc.n > 0 ? 100 * cc[k] / cc.n : null;
+  const oaPct = cc => cc.oaKnown > 0 ? 100 * cc.oa / cc.oaKnown : null;
+  const val = (metric, cc) => {
+    if (metric === "Model-based") return whole("m", cc);
+    if (metric === "Uses QALY") return whole("q", cc);
+    if (metric === "Reports ICER") return whole("ic", cc);
+    if (metric === "Reports threshold") return whole("th", cc);
+    return oaPct(cc);
+  };
+  const rows = SIGNAL_METRICS.map(metric => ({
+    metric, country_pct: val(metric, c), peer_pct: val(metric, p)
+  }));
+  return { rows, country_oa_n: c.oaKnown, peer_oa_n: p.oaKnown };
+}
+
+export function signals(db, iso3) {
+  const sets = profileSets(db, iso3);
+  return sets ? signalsSets(db, sets.cs, sets.ps) : null;
+}
+
+export function benchmark(db, iso3) {
+  const ci = db.countries.findIndex(r => r.iso3 === iso3);
+  if (ci < 0) return null;
+  const income = db.countries[ci].income;
+  const rows = [];
+  for (const r of db.countries) {
+    if (r.income !== income) continue;
+    const dalys = num(r.dalys), per100k = num(r.per100k_dalys);
+    if (dalys == null || per100k == null || dalys <= 0 || per100k <= 0) continue;
+    rows.push({ iso3: r.iso3, country: r.country, studies: r.studies, dalys, per100k });
+  }
+  rows.sort((a, b) => cmpStr(a.iso3, b.iso3));
+  const v = rows.map(r => r.per100k).sort((a, b) => a - b);
+  const mid = v.length >> 1;
+  const median_per100k = !v.length ? null
+    : (v.length % 2 ? v[mid] : (v[mid - 1] + v[mid]) / 2);
+  const selected = rows.some(r => r.iso3 === iso3) ? iso3 : null;
+  return { rows, median_per100k, n_points: rows.length, selected };
+}
+
 export function countryProfile(db, iso3) {
   const ci = db.countries.findIndex(r => r.iso3 === iso3);
   if (ci < 0) return null;
@@ -398,6 +502,10 @@ export function countryProfile(db, iso3) {
     return out;
   };
 
+  const mm = methodsMixSets(db, mineSet, peerSet);
+  const sg = signalsSets(db, mineSet, peerSet);
+  const bm = benchmark(db, iso3);
+
   return {
     iso3: r.iso3,
     income: r.income,
@@ -409,7 +517,16 @@ export function countryProfile(db, iso3) {
     medians,
     n_peer,
     c_trend: { country: sortedYearObj(cTrendCountry), peer: peerTrend },
-    c_mix: { country: shares(mixC, totC), peer: shares(mixP, totP) }
+    c_mix: { country: shares(mixC, totC), peer: shares(mixP, totP) },
+    c_methods: Object.assign(
+      Object.fromEntries(mm.rows.map(x => [x.type,
+        { country_share: x.country_share, peer_share: x.peer_share }])),
+      { y_order: mm.y_order }),
+    c_signals: Object.assign(
+      Object.fromEntries(sg.rows.map(x => [x.metric,
+        { country_pct: x.country_pct, peer_pct: x.peer_pct }])),
+      { country_oa_n: sg.country_oa_n, peer_oa_n: sg.peer_oa_n }),
+    c_benchmark: { median_per100k: bm.median_per100k, n_points: bm.n_points, rows: bm.rows }
   };
 }
 
@@ -745,7 +862,7 @@ if (typeof document !== "undefined") {
       }
     }
     if (name === "country" && window.Plotly) {
-      for (const id of ["c-trend", "c-mix"]) {
+      for (const id of ["c-trend", "c-mix", "c-methods", "c-signals", "c-benchmark"]) {
         if ($(id).data) window.Plotly.Plots.resize($(id));
       }
     }
@@ -1293,6 +1410,114 @@ if (typeof document !== "undefined") {
       plot_bgcolor: "rgba(0,0,0,0)",
       paper_bgcolor: "rgba(0,0,0,0)"
     }, PLOTLY_CFG);
+
+    // Evaluation-method mix (§11.2). y_order = peer-share desc (ties alphabetical
+    // asc). ggplot renders factor level 1 at the BOTTOM ("no display reversal"), so
+    // the top-ranked type sits at the bottom of the chart. Plotly's categoryarray
+    // also places its FIRST entry at the BOTTOM of a horizontal-bar y axis, so
+    // categoryarray = y_order AS-IS reproduces the ggplot display exactly: reading
+    // the chart top→bottom the types appear in REVERSE y_order (peer share ascending).
+    const meth = prof.c_methods;
+    const yOrder = meth.y_order;
+    const methVal = (side, t) => meth[t] && meth[t][side] != null ? meth[t][side] : null;
+    window.Plotly.react("c-methods", [
+      {
+        type: "bar", orientation: "h", name: "country",
+        y: yOrder, x: yOrder.map(t => methVal("country_share", t)),
+        marker: { color: ACCENT },
+        hovertemplate: "%{y}: %{x:.1f}%<extra>country</extra>"
+      },
+      {
+        type: "bar", orientation: "h", name: "income group",
+        y: yOrder, x: yOrder.map(t => methVal("peer_share", t)),
+        marker: { color: GREY },
+        hovertemplate: "%{y}: %{x:.1f}%<extra>income group</extra>"
+      }
+    ], {
+      barmode: "group",
+      font: BASE_FONT,
+      margin: { t: 10, b: 70, l: 170, r: 20 },
+      legend: hLegend(-0.22),
+      xaxis: { title: "share of studies (%)", gridcolor: "#eeebe3" },
+      yaxis: { categoryorder: "array", categoryarray: yOrder, automargin: true },
+      plot_bgcolor: "rgba(0,0,0,0)",
+      paper_bgcolor: "rgba(0,0,0,0)"
+    }, PLOTLY_CFG);
+
+    // Approach & reporting (§11.3). Fixed metric order Model-based → Open access;
+    // ggplot uses levels = rev(metrics) so Model-based renders ON TOP and Open
+    // access at the bottom. Plotly categoryarray first entry = bottom, so the
+    // category array is the listed order reversed. A null pct (empty OA-known
+    // subset) leaves that series' bar omitted.
+    const sig = prof.c_signals;
+    const sigCats = SIGNAL_METRICS.slice().reverse();
+    const sigVal = (side, m) => sig[m] && sig[m][side] != null ? sig[m][side] : null;
+    window.Plotly.react("c-signals", [
+      {
+        type: "bar", orientation: "h", name: "country",
+        y: sigCats, x: sigCats.map(m => sigVal("country_pct", m)),
+        marker: { color: ACCENT },
+        hovertemplate: "%{y}: %{x:.1f}%<extra>country</extra>"
+      },
+      {
+        type: "bar", orientation: "h", name: "income group",
+        y: sigCats, x: sigCats.map(m => sigVal("peer_pct", m)),
+        marker: { color: GREY },
+        hovertemplate: "%{y}: %{x:.1f}%<extra>income group</extra>"
+      }
+    ], {
+      barmode: "group",
+      font: BASE_FONT,
+      margin: { t: 10, b: 70, l: 170, r: 20 },
+      legend: hLegend(-0.22),
+      xaxis: { title: "% of studies", gridcolor: "#eeebe3" },
+      yaxis: { categoryorder: "array", categoryarray: sigCats, automargin: true },
+      plot_bgcolor: "rgba(0,0,0,0)",
+      paper_bgcolor: "rgba(0,0,0,0)"
+    }, PLOTLY_CFG);
+
+    // Peer benchmark (§11.4): log10×log10 scatter of the filtered income-group
+    // rows; peers grey-blue, selected country gold, dashed type-7 median line with
+    // a muted annotation. Rows without usable burden are visibly absent.
+    const bm = prof.c_benchmark;
+    const hoverOf = x => x.country + " — " + fmtNum(x.studies) + " studies — " +
+      rRound(x.per100k, 2) + " per 100k DALYs";
+    const bmPeers = bm.rows.filter(x => x.iso3 !== prof.iso3);
+    const bmSel = bm.rows.filter(x => x.iso3 === prof.iso3);
+    const bmLayout = {
+      font: BASE_FONT,
+      margin: { t: 20, b: 60, l: 70, r: 20 },
+      xaxis: { type: "log", title: "Total disease burden (DALYs, 2023, log)", gridcolor: "#eeebe3" },
+      yaxis: { type: "log", title: "Studies per 100k DALYs (log)", gridcolor: "#eeebe3" },
+      plot_bgcolor: "rgba(0,0,0,0)",
+      paper_bgcolor: "rgba(0,0,0,0)"
+    };
+    if (bm.median_per100k != null) {
+      bmLayout.shapes = [{
+        type: "line", xref: "paper", x0: 0, x1: 1,
+        yref: "y", y0: bm.median_per100k, y1: bm.median_per100k,
+        line: { color: "#6b7280", width: 1, dash: "dash" }
+      }];
+      bmLayout.annotations = [{
+        text: "income-group median", xref: "paper", x: 0.99, xanchor: "right",
+        yref: "y", y: bm.median_per100k, yanchor: "bottom", showarrow: false,
+        font: { size: 10, color: "#6b7280" }
+      }];
+    }
+    window.Plotly.react("c-benchmark", [
+      {
+        type: "scatter", mode: "markers", name: "income group", showlegend: false,
+        x: bmPeers.map(x => x.dalys), y: bmPeers.map(x => x.per100k),
+        text: bmPeers.map(hoverOf), hoverinfo: "text",
+        marker: { color: "#9aa7b5", size: 9, opacity: 0.8 }
+      },
+      {
+        type: "scatter", mode: "markers", name: "country", showlegend: false,
+        x: bmSel.map(x => x.dalys), y: bmSel.map(x => x.per100k),
+        text: bmSel.map(hoverOf), hoverinfo: "text",
+        marker: { color: "#b08d3e", size: 14 }
+      }
+    ], bmLayout, PLOTLY_CFG);
   }
 
   async function boot() {
