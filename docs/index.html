@@ -4,8 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HEE evidence map — interactive</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css">
+<!-- The Google Fonts stylesheet (Inter/Newsreader) is loaded via @import in
+     styles.css and deliberately carries NO SRI: the fonts.googleapis.com CSS
+     response varies by user agent (woff2 vs ttf rules), so a fixed integrity
+     hash would break legitimate clients. The jsdelivr assets below are pinned
+     versions with SHA-384 integrity hashes verified by double fetch. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,18 +33,9 @@
   <section class="tab-pane active" id="pane-overview">
     <div class="card"><div class="card-body">
       <h2 class="hero-title">Where health-economic evidence exists — and where it is missing</h2>
-      <p class="hero-text">
-        This app maps the global evidence base of health economic evaluations — studies that
-        compare two or more ways of delivering care on both costs and consequences.
-        <strong id="ov-n-extracted"></strong> evaluations published
-        <span id="ov-year-lo"></span>–<span id="ov-year-hi"></span> were extracted;
-        <strong id="ov-n-studies"></strong>
-        full economic evaluations are eligible for analysis. The
-        <em>Gallery</em> presents the full figure catalogue by theme, the
-        <em>Explorer</em> crosses any variables in the corpus, the
-        <em>Country profile</em> opens a single setting, and
-        <em>Methods</em> explains how the map is built.
-      </p>
+      <!-- Hero paragraph rendered by app.js from content.json `hero` segments
+           (DATA_CONTRACT.md §15.2) — no hardcoded copy. -->
+      <p class="hero-text" id="ov-hero"></p>
       <h2 class="glance-title">The evidence base at a glance</h2>
       <div class="grid-4" id="ov-tiles"></div>
     </div></div>
@@ -225,6 +221,7 @@
 
   <!-- ============ METHODS ============ -->
   <section class="tab-pane" id="pane-methods">
+    <!-- SYNC: Methods prose is mirrored in shiny/app.R — edit both (see WEBAPP.md) -->
     <div class="methods-wrap">
 
       <div class="card">
@@ -241,18 +238,11 @@
              the analysis population is full evaluations by construction. Studies whose
              consequence is a non-clinical metric (e.g. diagnostic accuracy, utilisation) are
              kept and flagged.</p>
+          <!-- Funnel rows rendered by app.js from content.json `funnel`
+               (DATA_CONTRACT.md §15.4) — skeleton only, no hardcoded rows. -->
           <table class="methods-table">
             <thead><tr><th>Selection funnel</th><th>Records</th></tr></thead>
-            <tbody>
-              <tr><td>Identified</td><td>1,154,050</td></tr>
-              <tr><td>Screened at title/abstract</td><td>1,119,811</td></tr>
-              <tr><td>Confident includes</td><td>45,588</td></tr>
-              <tr><td>Extracted</td><td>44,941</td></tr>
-              <tr><td>Excluded — partial evaluations</td><td>−3,388</td></tr>
-              <tr><td>Excluded — unclear at extraction</td><td>−2,819</td></tr>
-              <tr><td>Excluded — duplicate DOIs</td><td>−535</td></tr>
-              <tr><td><strong>Analysis population</strong></td><td><strong>38,199</strong></td></tr>
-            </tbody>
+            <tbody id="methods-funnel"></tbody>
           </table>
         </div>
       </div>
@@ -346,10 +336,10 @@
   Sources: GBD 2023 (IHME) · IHME Health Spending 1995–2022 · World Bank · OpenAlex/CrossRef/PubMed harvest
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js"></script>
-<script type="module" src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
+<script type="module" src="app.js?v=2026-09-10"></script>
 
 </body>
 </html>

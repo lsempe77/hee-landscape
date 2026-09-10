@@ -344,7 +344,7 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 .sidebar hr { border: none; border-top: 1px solid var(--hee-line); margin: 1rem 0; }
 .sidebar .text-muted { color: var(--hee-muted); font-size: .78rem; line-height: 1.5; }
 
-.form-select, .form-control {
+.form-select {
   width: 100%;
   border-radius: 9px;
   border: 1px solid var(--hee-line);
@@ -354,7 +354,7 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   color: var(--hee-ink);
   padding: .38rem .6rem;
 }
-.form-select:focus, .form-control:focus {
+.form-select:focus {
   border-color: var(--hee-accent);
   box-shadow: 0 0 0 .18rem rgba(31, 95, 168, .14);
   outline: none;

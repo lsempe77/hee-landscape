@@ -1,16 +1,62 @@
+// Cache-busting build token. Locally the literal "2026-09-10" is a harmless
+// query string; at publish time webapp/publish-stamp.mjs rewrites every
+// occurrence in index.html and app.js to the bundle build value.
+const BUILD = "2026-09-10";
+
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
 
+// HTML-escapes a string for HTML sinks. Plotly renders hover `text` and
+// hovertemplate output as HTML, so every data-derived string concatenated into
+// hover text must pass through esc() first.
+export function esc(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+// R-compatible round(x, digits) — half-to-even resolved on the EXACT binary
+// value of the double, matching R >= 4.0.0 (DATA_CONTRACT.md §12). x is
+// decomposed exactly into sign * m * 2^e from its IEEE-754 bits; |x| * 10^d is
+// kept as the exact BigInt rational num/den; the half-to-even integer
+// q = round(num/den) is computed with no floating-point error at all; the
+// result is the correctly-rounded double q / 10^d.
+// Proofs (verified against R 4.4.1): round(2.675, 2) = 2.67 (the stored double
+// is BELOW the midpoint), round(0.125, 2) = 0.12 (exact in binary, tie -> even),
+// round(0.135, 2) = 0.14 (the stored double is ABOVE the midpoint).
 export function rRound(x, digits = 0) {
   if (x == null || !isFinite(x)) return x;
-  const m = Math.pow(10, digits);
-  const v = x * m;
-  const fl = Math.floor(v);
-  const frac = v - fl;
-  let r;
-  if (Math.abs(frac - 0.5) < 1e-9) r = (fl % 2 === 0) ? fl : fl + 1;
-  else r = Math.round(v);
-  return r / m;
+  if (x === 0) return x;
+  const d = Math.trunc(digits);
+
+  const dv = new DataView(new ArrayBuffer(8));
+  dv.setFloat64(0, x);
+  const hi = dv.getUint32(0), lo = dv.getUint32(4);
+  const negative = (hi >>> 31) === 1;
+  const biasedExp = (hi >>> 20) & 0x7ff;
+  const frac = (BigInt(hi & 0xfffff) << 32n) | BigInt(lo >>> 0);
+  let m, e;
+  if (biasedExp === 0) {
+    m = frac; e = -1074;                                  // subnormal
+  } else {
+    m = (1n << 52n) | frac; e = biasedExp - 1023 - 52;    // normal: |x| = m * 2^e
+  }
+
+  // num/den = |x| * 10^d, exact
+  let num = m, den = 1n;
+  if (d >= 0) num *= 10n ** BigInt(d); else den *= 10n ** BigInt(-d);
+  if (e >= 0) num *= 2n ** BigInt(e); else den *= 2n ** BigInt(-e);
+
+  // half-to-even quotient
+  let q = num / den;
+  const twice = (num % den) * 2n;
+  if (twice > den || (twice === den && q % 2n === 1n)) q += 1n;
+  if (negative) q = -q;
+
+  return Number(q) / Math.pow(10, d);
 }
 
 export function fmtNum(x) {
@@ -33,7 +79,28 @@ function sortedYearObj(map) {
   return out;
 }
 
-export function loadData({ dict, studies, geo, disease, countries }) {
+// Builds the ordered label→column registries (DATA_CONTRACT.md §15.6) from
+// content.json. Map preserves insertion order, so selector/legend order is the
+// content.json array order. Replaces the previously hardcoded TREND_VARS /
+// COMP_VARS / STACK_VARS / MAP_METRICS / SCAT_X / SCAT_Y / SIGNAL_METRICS.
+export function buildRegistries(content) {
+  if (!content || !content.registries) {
+    throw new Error("buildRegistries: content.json with .registries is required");
+  }
+  const r = content.registries;
+  const toMap = arr => new Map(arr.map(o => [o.label, o.column]));
+  return {
+    TREND_VARS: toMap(r.trend_vars),
+    COMP_VARS: toMap(r.comp_vars),
+    STACK_VARS: toMap(r.stack_vars),
+    MAP_METRICS: toMap(r.map_metrics),
+    SCAT_X: toMap(r.scat_x),
+    SCAT_Y: toMap(r.scat_y),
+    SIGNAL_METRICS: r.signal_metrics.slice()
+  };
+}
+
+export function loadData({ dict, studies, geo, disease, countries, content }) {
   const levels = dict.levels;
   const codeOf = {};
   for (const col of CODED_COLS) {
@@ -47,6 +114,8 @@ export function loadData({ dict, studies, geo, disease, countries }) {
   for (let i = 0; i < disease.s.length; i++) diseaseSets[disease.g[i]].add(disease.s[i]);
   return {
     dict, levels, studies, geo, disease, countries,
+    content,
+    registries: buildRegistries(content),
     nStudies: studies.id.length,
     codeOf,
     palInc,
@@ -344,9 +413,6 @@ export function tableRows(db, flt, k = 25) {
   }));
 }
 
-const SIGNAL_METRICS = ["Model-based", "Uses QALY", "Reports ICER",
-  "Reports threshold", "Open access"];
-
 const cmpStr = (a, b) => a < b ? -1 : a > b ? 1 : 0;
 
 function profileSets(db, iso3) {
@@ -417,7 +483,7 @@ function signalsSets(db, cs, ps) {
     if (metric === "Reports threshold") return whole("th", cc);
     return oaPct(cc);
   };
-  const rows = SIGNAL_METRICS.map(metric => ({
+  const rows = db.registries.SIGNAL_METRICS.map(metric => ({
     metric, country_pct: val(metric, c), peer_pct: val(metric, p)
   }));
   return { rows, country_oa_n: c.oaKnown, peer_oa_n: p.oaKnown };
@@ -545,251 +611,18 @@ export function countryFacts(db, iso3) {
   return pairs;
 }
 
-export const TREND_VARS = {
-  "Income group": "income",
-  "UN region": "un_region",
-  "Evaluation type": "econ_eval_type",
-  "Design basis": "design_basis",
-  "Model vs measured": "model_label",
-  "Uses QALY": "qaly_label",
-  "Open access": "oa_label",
-  "Geographic scope": "geo_scope",
-  "Nothing (total)": "none"
-};
-export const COMP_VARS = {
-  "Evaluation type": "econ_eval_type",
-  "Design basis": "design_basis",
-  "Model vs measured": "model_label",
-  "Uses QALY": "qaly_label",
-  "Open access": "oa_label",
-  "Geographic scope": "geo_scope",
-  "Era": "era",
-  "Topic domain": "topic_domain",
-  "Disease group": "grp",
-  "Reports an ICER": "icer_label",
-  "Reports a threshold": "thresh_label"
-};
-export const STACK_VARS = {
-  "None": "",
-  "Era": "era",
-  "Model vs measured": "model_label",
-  "Uses QALY": "qaly_label",
-  "Geographic scope": "geo_scope"
-};
-export const MAP_METRICS = {
-  "Studies": "studies",
-  "Studies per 100k DALYs": "per100k",
-  "Studies per US$1bn spending": "per_bn",
-  "Studies per million people": "per_million"
-};
-export const SCAT_X = {
-  "Total DALYs (GBD 2023)": "dalys",
-  "Population": "pop",
-  "Health spending, PPP US$bn (2022)": "total_spend_bn"
-};
-export const SCAT_Y = {
-  "Studies": "studies",
-  "Studies per 100k DALYs": "per100k",
-  "Studies per US$1bn spending": "per_bn",
-  "Studies per million people": "per_million"
-};
+// Registry constants (TREND_VARS / COMP_VARS / STACK_VARS / MAP_METRICS /
+// SCAT_X / SCAT_Y / SIGNAL_METRICS) now come from content.json registries —
+// see buildRegistries() and db.registries (DATA_CONTRACT.md §9, §15.6).
 
 const OA_COLORS = { "Open access": "#1baf7a", "Not open": "#eb6834", "Unknown": "#adb5bd" };
 const ACCENT = "#1f5fa8";
 const GREY = "#adb5bd";
 
-export function galleryRegistry(meta) {
-  const fmt = fmtNum;
-  return [
-    {
-      title: "Size & growth",
-      blurb: `How much research is there, and what kind? ${fmt(meta.n_extracted)} health economic evaluations were
-              extracted (${meta.years[0]}–${meta.years[1]}); ${fmt(meta.n_studies)} are eligible for analysis. These panels carry the headline:
-              the growth of the corpus, and how its evaluation-method mix has shifted.`,
-      figs: [
-        { file: "fig_growth.webp", title: "Cumulative growth",
-          caption: "The field keeps doubling: half of everything published since 2010 appeared after 2020 (2026 flagged partial)." },
-        { file: "fig_method_stream.webp", title: "Evaluation-method composition over time",
-          caption: "Cost-utility rose from 45% to 54% of annual output while cost-effectiveness fell from 34% to 25%." }
-      ]
-    },
-    {
-      title: "Topics & diseases",
-      blurb: `Topic, disease and intervention — the subject of the evidence. OpenAlex topics cover
-              88% of the corpus; MeSH disease groups cover 63% (harvested subset, base declared on
-              each figure). The emergent-theme maps come from abstract embeddings, not MeSH.`,
-      figs: [
-        { file: "fig_topic_landscape.webp", title: "Topic landscape",
-          caption: "OpenAlex subfields grouped by field — the research areas of the field in one circular view." },
-        { file: "fig_disease_circular.webp", title: "Disease landscape",
-          caption: "MeSH disease groups: share of studies, coloured by LMIC/HIC lean." },
-        { file: "fig_disease_method.webp", title: "Disease × evaluation method",
-          caption: "How each disease area is evaluated — cost-utility vs cost-effectiveness heat map." },
-        { file: "fig_transition.webp", title: "Epidemiological transition of research",
-          caption: "LMIC research shifted communicable → NCD past the burden shares; injuries stayed at ~1% of research vs 11% of burden." },
-        { file: "fig_topicmap_income.webp", title: "Thematic landscape by income",
-          caption: "Embedding topic map (UMAP + HDBSCAN) coloured by each theme's LMIC share: theme space segregates — malaria 91% LMIC vs dementia 6%." },
-        { file: "fig_topicmap.webp", title: "Thematic landscape",
-          caption: "The plain theme-space map of the corpus, before income colouring." },
-        { file: "fig_theme_rank.webp", title: "Emergent themes ranked by income",
-          caption: "The 15 most- and 15 least-LMIC themes: the two ends never overlap (33–91% vs 3–13% LMIC)." }
-      ]
-    },
-    {
-      title: "Methods & decision-usefulness",
-      blurb: `What gets measured, and how well — the decision-usefulness core. How evidence flows
-              from design to method to outcome, which comparable metric is used where, and whether
-              abstracts foreground the elements a decision-maker needs.`,
-      figs: [
-        { file: "fig_alluvial.webp", title: "Source → analysis → outcome",
-          caption: "Alluvial of design basis → evaluation type → outcome family: how evidence flows through the field." },
-        { file: "fig_metric.webp", title: "The comparable-metric currency",
-          caption: "QALYs for rich settings, DALYs for poor: cross-income comparability is broken at the metric level." },
-        { file: "fig_model_time.webp", title: "Model vs measurement over 17 years",
-          caption: "The drift toward model-based (vs directly measured) evaluations, by income group." },
-        { file: "fig_decision.webp", title: "Decision-framing in abstracts",
-          caption: "ICER 39%, threshold 22%: few abstracts foreground decision elements — and LMIC studies report them slightly more than HIC, not less." },
-        { file: "fig_forest.webp", title: "What predicts decision-usefulness",
-          caption: "Adjusted odds ratios: income, design basis, disease and year predict generic-metric use. Observational, never causal." }
-      ]
-    },
-    {
-      title: "Geography & authorship",
-      blurb: `Where the research is about, and who leads it. Income-comparative figures use
-              extracted geography only (the affiliation proxy is income-biased in availability).`,
-      figs: [
-        { file: "fig_dotmap.webp", title: "Global proportional-symbol map",
-          caption: "Where the evidence sits: bubbles by country study count, coloured by income group (Berrang-Ford style, Robinson)." },
-        { file: "fig_worldmap.webp", title: "World map of output",
-          caption: "The global distribution of eligible evaluations by country." },
-        { file: "fig_top_producers.webp", title: "Top producers: volume vs per-capita",
-          caption: "Two-rank slope — who leads by count vs by output per person." },
-        { file: "fig_authorship_pattern.webp", title: "Who leads research about each setting",
-          caption: "Local / mixed / foreign authorship stacked by income: research about poor countries is often led from abroad." },
-        { file: "fig_collab_chord.webp", title: "Collaboration structure",
-          caption: "Income × income co-authorship chord: how the collaboration network runs between groups." }
-      ]
-    },
-    {
-      title: "Gaps vs disease burden",
-      blurb: `The map's whole point: research vs the burden of disease (GBD 2023 DALYs, country
-              totals and 22 Level-2 causes) and vs health spending (IHME, PPP 2022).`,
-      figs: [
-        { file: "fig_burden.webp", title: "Evidence per unit of burden",
-          caption: "Studies per 100k DALYs vs total burden: an 18× gap between the best- and worst-served countries." },
-        { file: "fig_spending.webp", title: "Evidence per dollar of spending",
-          caption: "Studies per US$1bn of health spending (PPP 2022 × latest World Bank population, mostly 2025)." },
-        { file: "fig_burden_disease_companion.webp", title: "Research share vs burden share, by disease",
-          caption: "Maternal-neonatal research runs at 3.6× its burden share in HIC vs 0.37× in LMIC; injuries 0.21× in LMIC." },
-        { file: "fig_burden_disease.webp", title: "Burden-weighted disease mismatch (journal finish)",
-          caption: "The same mismatch in Lancet register: study share vs DALY share by income." },
-        { file: "fig_deficit.webp", title: "Largest absolute evidence deficits",
-          caption: "Studies vs burden-expected: India +4,847 short, Nigeria +1,205, Indonesia +920 …" },
-        { file: "fig_injustice.webp", title: "High burden, low research",
-          caption: "The burden × evidence plane with a burden-proportional diagonal; size = population. The editorial closer." },
-        { file: "fig_inequality.webp", title: "Within-LMIC inequality",
-          caption: "Lorenz curve: the least-served half of LMIC burden holds 16% of the evidence; top 5 countries hold 55%; Gini 0.50." }
-      ]
-    },
-    {
-      title: "Open access & funding",
-      blurb: `How the evidence is packaged and reached. Open-access status covers 93% of the
-              eligible corpus (post DOI-supplement harvest); the funder field covers ~28% and is a
-              floor, not a census.`,
-      figs: [
-        { file: "fig_openaccess.webp", title: "Open access over time",
-          caption: "46% → 80% (2010–24); LMIC research is more open than HIC research." },
-        { file: "fig_funder_funders.webp", title: "Who funds it",
-          caption: "Top funders by studies, split by income focus: most big funders are HIC-focused; Gates dominates LMIC; Wellcome has a real LMIC share." }
-      ]
-    },
-    {
-      title: "Country maps",
-      blurb: `The cartographic collection: eligible-only counts, World Bank population, GBD 2023
-              burden, extracted geography, Robinson projection. Share maps show only countries
-              with ≥5 studies (grey below).`,
-      figs: [
-        { file: "fig_map_burden.webp", title: "Research intensity vs burden",
-          caption: "Studies per 100k DALYs, diverging scale — the map form of the burden mismatch figure." },
-        { file: "fig_map_bivariate.webp", title: "Burden × evidence bivariate",
-          caption: "The high-burden/low-evidence corner lights up; dark purple is high on both (big countries), not missing data." },
-        { file: "fig_map_deserts.webp", title: "Evidence deserts",
-          caption: "0 / 1–5 / 6–20 / 21+ studies: 20 countries carry a burden but have no evaluation at all." },
-        { file: "fig_map_authorship.webp", title: "Who studies whom",
-          caption: "Share of studies with a local author — parachute research, mapped." },
-        { file: "fig_map_model.webp", title: "Model-based vs measured",
-          caption: "The LMIC lean on modelled evidence, by country." },
-        { file: "fig_map_openaccess.webp", title: "Open access by country",
-          caption: "Share of output that is open access (93% base)." },
-        { file: "fig_map_growth.webp", title: "Where the evidence is youngest",
-          caption: "Share of studies published since 2018." },
-        { file: "fig_map_method.webp", title: "Dominant evaluation method",
-          caption: "Cost-utility North / cost-effectiveness South." },
-        { file: "fig_map_disease.webp", title: "Disease atlas",
-          caption: "Eleven small-multiple maps, one per GBD disease group; log counts, so the disease contrast is the point." }
-      ]
-    },
-    {
-      title: "Trends over time",
-      blurb: `Comparative time-series on the year dimension (2010–2025; 2026 partial, dropped).
-              Income-comparative panels use single-country extracted geography with a known
-              income group.`,
-      figs: [
-        { file: "fig_equity_time.webp", title: "Equity over time",
-          caption: "LMIC share of annual output rose 16% → 36% — still far below their 83% burden share." },
-        { file: "fig_qaly_time.webp", title: "QALY-metric convergence",
-          caption: "LMIC QALY use 15% → 49% vs HIC 51% → 59%: the gap narrowed, ~10pp remains." },
-        { file: "fig_reach_time.webp", title: "Reach over time",
-          caption: "Cumulative share of each income group's countries with ≥1 evaluation: high-income covered early, low-income reached last (28% → 96%)." },
-        { file: "fig_method_stream.webp", title: "Method streamgraph",
-          caption: "Evaluation-type composition: cost-utility 45% → 54%, cost-effectiveness 34% → 25%." },
-        { file: "fig_decision_time.webp", title: "Decision-usefulness over time",
-          caption: "All four abstract signals rose; threshold most (12% → 29%) — still a minority." }
-      ]
-    },
-    {
-      title: "Priority-setting for funders",
-      blurb: `Built for a funder asking where the next pound buys the most missing evidence.
-              Ranked by gap, never by cost-to-close: there is no cost or research-funding-amount
-              data. Proportionality to burden is a reference point, not a target.`,
-      figs: [
-        { file: "fig_funder_opportunity.webp", title: "Opportunity matrix",
-          caption: "Disease × income research-to-burden ratio: injuries, maternal, cardiovascular and neurological in lower-income settings are the reddest." },
-        { file: "fig_funder_scorecard.webp", title: "Priority scorecard",
-          caption: "Burden × intensity scatter plus the ranked deficit bar — the shortlist." },
-        { file: "fig_funder_capacity.webp", title: "Capacity-building quadrant",
-          caption: "Burden × local-authorship share: the high-burden, <75%-local set — fund people, not just studies." },
-        { file: "fig_funder_trajectory.webp", title: "Self-correcting vs stuck",
-          caption: "LMIC research-to-burden ratio, era-1 → era-2 arrows: injuries and maternal are stuck below burden and worsening." },
-        { file: "fig_funder_funders.webp", title: "Funder landscape",
-          caption: "Top funders by studies, split by income (~28% coverage — a floor, not a census)." }
-      ]
-    },
-    {
-      title: "Journal figures",
-      blurb: `The tight journal set: each figure carries one finding, greyscale-safe, legends
-              present, uncertainty shown.`,
-      figs: [
-        { file: "paper01.webp", title: "PRISMA flow",
-          caption: "Study selection: 44,941 extracted → 38,199 eligible evaluations." },
-        { file: "paper02.webp", title: "Decision-relevance cascade",
-          caption: "Studies meeting each successive criterion for decision-relevance." },
-        { file: "paper03.webp", title: "Density within & between income groups",
-          caption: "Studies per 10 million people by country, faceted by income; area = population." },
-        { file: "paper04.webp", title: "Disease composition by era and income",
-          caption: "The epidemiological transition of the research, journal finish." },
-        { file: "paper05.webp", title: "Disease × income heat map",
-          caption: "Which diseases dominate the evidence in each income group." },
-        { file: "paper06.webp", title: "In-country authorship",
-          caption: "Is the evidence produced in the countries it is about? Point + CI by income." },
-        { file: "paper07.webp", title: "Evidence vs disease burden",
-          caption: "Studies per 100k DALYs vs burden, by income — the 18× gap." },
-        { file: "paper08.webp", title: "Research attention vs burden, by disease",
-          caption: "Study share vs DALY share across the 11 disease groups." }
-      ]
-    }
-  ];
-}
+// The gallery registry (section titles, blurbs, figure files/titles/captions,
+// incl. the interpolated paper01 PRISMA caption) now ships in content.json
+// (DATA_CONTRACT.md §15.1) and is consumed as db.content.gallery — the
+// hardcoded galleryRegistry() duplicate was removed.
 
 if (typeof document !== "undefined") {
 
@@ -815,6 +648,13 @@ if (typeof document !== "undefined") {
     };
   }
 
+  // TRUST BOUNDARY: el()'s `html` argument goes through innerHTML and must
+  // ONLY receive developer-authored literals. Data-derived strings (anything
+  // from data/*.json, user-influenced values, exception messages) must be set
+  // with textContent, or escaped with esc() before being embedded in an HTML
+  // string (Plotly hover text). content.json strings are developer-authored
+  // (generated by our R build from R/app-content.R) and would be acceptable
+  // here, but are rendered via textContent anyway.
   function el(tag, cls, html) {
     const e = document.createElement(tag);
     if (cls) e.className = cls;
@@ -823,7 +663,7 @@ if (typeof document !== "undefined") {
   }
 
   function fillSelect(sel, labels, selected) {
-    sel.innerHTML = "";
+    sel.textContent = "";
     for (const lab of labels) {
       const o = document.createElement("option");
       o.value = lab;
@@ -870,28 +710,36 @@ if (typeof document !== "undefined") {
 
   function renderOverview() {
     const m = db.dict.meta;
-    $("ov-n-extracted").textContent = fmtNum(m.n_extracted);
-    $("ov-n-studies").textContent = fmtNum(m.n_studies);
-    $("ov-year-lo").textContent = m.years[0];
-    $("ov-year-hi").textContent = m.years[1];
     $("nav-built").textContent = "bundle " + m.built;
 
-    const tiles = [
-      { title: "Eligible full evaluations", value: fmtNum(m.n_studies), theme: "primary" },
-      { title: "Years covered", value: m.years[0] + "–" + m.years[1], theme: "secondary" },
-      { title: "Countries studied", value: fmtNum(m.n_countries_named), sub: "named in extracted geography", theme: "info" },
-      { title: "Journals", value: fmtNum(m.n_journals), sub: "of the harvested set", theme: "secondary" },
-      { title: "Use QALYs", value: rRound(m.pct_qaly) + "%", theme: "success" },
-      { title: "Model-based", value: rRound(m.pct_model) + "%", theme: "info" },
-      { title: "Single-country studies", value: rRound(m.pct_single) + "%", theme: "secondary" }
-    ];
+    // Hero paragraph: ordered segments from content.json (§15.2). Each segment
+    // becomes a <span>/<strong>/<em> filled via textContent — no innerHTML.
+    // HTML whitespace collapsing turns the source newlines/indent into spaces.
+    const hero = $("ov-hero");
+    hero.textContent = "";
+    for (const seg of db.content.hero) {
+      const node = document.createElement(seg.strong ? "strong" : seg.em ? "em" : "span");
+      node.textContent = seg.text;
+      hero.appendChild(node);
+    }
+
+    // Glance tiles: final formatted strings from content.json (§15.3);
+    // sub === null means no footer line.
     const wrap = $("ov-tiles");
-    wrap.innerHTML = "";
-    for (const t of tiles) {
+    wrap.textContent = "";
+    for (const t of db.content.glance_tiles) {
       const box = el("div", "value-box bg-" + t.theme);
-      box.appendChild(el("div", "value-box-title", t.title));
-      box.appendChild(el("div", "value-box-value", t.value));
-      if (t.sub) box.appendChild(el("div", "value-box-sub", t.sub));
+      const title = el("div", "value-box-title");
+      title.textContent = t.label;
+      const value = el("div", "value-box-value");
+      value.textContent = t.value;
+      box.appendChild(title);
+      box.appendChild(value);
+      if (t.sub != null) {
+        const sub = el("div", "value-box-sub");
+        sub.textContent = t.sub;
+        box.appendChild(sub);
+      }
       wrap.appendChild(box);
     }
 
@@ -901,7 +749,7 @@ if (typeof document !== "undefined") {
       { file: "fig_transition.webp", alt: "Epidemiological transition" }
     ];
     const hw = $("ov-hero-imgs");
-    hw.innerHTML = "";
+    hw.textContent = "";
     for (const h of heroes) {
       const card = el("div", "card");
       const body = el("div", "card-body p-0");
@@ -918,11 +766,15 @@ if (typeof document !== "undefined") {
 
   function renderGalleryIndex() {
     const idx = $("gal-section-index");
-    idx.innerHTML = "";
+    idx.textContent = "";
     GALLERY.forEach((sec, i) => {
       const card = el("button", "section-card");
-      card.appendChild(el("div", "sec-title", sec.title));
-      card.appendChild(el("div", "sec-count", sec.figs.length + " figures"));
+      const title = el("div", "sec-title");
+      title.textContent = sec.title;
+      const count = el("div", "sec-count");
+      count.textContent = sec.figs.length + " figures";
+      card.appendChild(title);
+      card.appendChild(count);
       card.addEventListener("click", () => showSection(i));
       idx.appendChild(card);
     });
@@ -935,7 +787,7 @@ if (typeof document !== "undefined") {
     $("gal-sec-title").textContent = sec.title;
     $("gal-sec-blurb").textContent = sec.blurb.replace(/\s+/g, " ").trim();
     const grid = $("gal-sec-grid");
-    grid.innerHTML = "";
+    grid.textContent = "";
     for (const f of sec.figs) {
       const card = el("div", "fig-card");
       const img = el("img");
@@ -945,12 +797,39 @@ if (typeof document !== "undefined") {
       img.addEventListener("click", () => openModal(f.file));
       card.appendChild(img);
       const body = el("div", "fig-body");
-      body.appendChild(el("div", "fig-title", f.title));
-      body.appendChild(el("div", "fig-caption", f.caption.replace(/\s+/g, " ").trim()));
+      const ft = el("div", "fig-title");
+      ft.textContent = f.title;
+      const fc = el("div", "fig-caption");
+      fc.textContent = f.caption.replace(/\s+/g, " ").trim();
+      body.appendChild(ft);
+      body.appendChild(fc);
       card.appendChild(body);
       grid.appendChild(card);
     }
     window.scrollTo(0, 0);
+  }
+
+  // Methods selection funnel: rows from content.json (§15.4). `records`
+  // strings arrive final-formatted (incl. Unicode minus U+2212); the strong
+  // flag renders label and records in <strong> elements (textContent only).
+  function renderFunnel() {
+    const tb = $("methods-funnel");
+    tb.textContent = "";
+    for (const row of db.content.funnel) {
+      const tr = document.createElement("tr");
+      for (const text of [row.label, row.records]) {
+        const td = document.createElement("td");
+        if (row.strong) {
+          const s = document.createElement("strong");
+          s.textContent = text;
+          td.appendChild(s);
+        } else {
+          td.textContent = text;
+        }
+        tr.appendChild(td);
+      }
+      tb.appendChild(tr);
+    }
   }
 
   function hideSection() {
@@ -960,7 +839,7 @@ if (typeof document !== "undefined") {
 
   function makeRadios(containerId, name, choices) {
     const c = $(containerId);
-    c.innerHTML = "";
+    c.textContent = "";
     choices.forEach((ch, i) => {
       const lab = el("label");
       const inp = el("input");
@@ -1056,20 +935,21 @@ if (typeof document !== "undefined") {
       refreshExplorer();
     });
 
-    fillSelect($("x-trend-by"), Object.keys(TREND_VARS), ["Income group"]);
-    fillSelect($("x-map-metric"), Object.keys(MAP_METRICS), ["Studies"]);
-    fillSelect($("x-comp-var"), Object.keys(COMP_VARS), ["Evaluation type"]);
-    fillSelect($("x-comp-stack"), Object.keys(STACK_VARS), ["None"]);
+    const REG = db.registries;
+    fillSelect($("x-trend-by"), [...REG.TREND_VARS.keys()], ["Income group"]);
+    fillSelect($("x-map-metric"), [...REG.MAP_METRICS.keys()], ["Studies"]);
+    fillSelect($("x-comp-var"), [...REG.COMP_VARS.keys()], ["Evaluation type"]);
+    fillSelect($("x-comp-stack"), [...REG.STACK_VARS.keys()], ["None"]);
     const compMode = $("x-comp-mode");
-    compMode.innerHTML = "";
+    compMode.textContent = "";
     for (const [lab, val] of [["Count", "n"], ["Share (%)", "pct"]]) {
       const o = document.createElement("option");
       o.value = val;
       o.textContent = lab;
       compMode.appendChild(o);
     }
-    fillSelect($("x-scatter-x"), Object.keys(SCAT_X), ["Total DALYs (GBD 2023)"]);
-    fillSelect($("x-scatter-y"), Object.keys(SCAT_Y), ["Studies per 100k DALYs"]);
+    fillSelect($("x-scatter-x"), [...REG.SCAT_X.keys()], ["Total DALYs (GBD 2023)"]);
+    fillSelect($("x-scatter-y"), [...REG.SCAT_Y.keys()], ["Studies per 100k DALYs"]);
 
     $("x-trend-by").addEventListener("change", renderTrend);
     $("x-map-metric").addEventListener("change", renderMap);
@@ -1104,7 +984,7 @@ if (typeof document !== "undefined") {
 
   function renderTrend() {
     const label = $("x-trend-by").value;
-    const v = TREND_VARS[label];
+    const v = db.registries.TREND_VARS.get(label);
     const ser = trendSeries(db, state.result, v);
     const years = Object.keys(ser).map(Number);
     let traces;
@@ -1139,7 +1019,9 @@ if (typeof document !== "undefined") {
         name: cat,
         connectgaps: false,
         line: { width: 2.4, color: colorMap ? colorMap[cat] : undefined },
-        hovertemplate: "%{x} · " + cat + ": %{y} studies<extra></extra>"
+        // cat comes from dict levels (developer-curated); escaped anyway —
+        // Plotly renders hovertemplate output as HTML.
+        hovertemplate: "%{x} · " + esc(cat) + ": %{y} studies<extra></extra>"
       }));
     }
     window.Plotly.react("x-trend", traces, {
@@ -1155,14 +1037,16 @@ if (typeof document !== "undefined") {
 
   function renderMap() {
     const label = $("x-map-metric").value;
-    const m = MAP_METRICS[label];
+    const m = db.registries.MAP_METRICS.get(label);
     const rows = state.result.byCountry;
     const isCounts = m === "studies";
     const z = rows.map(r => isCounts ? Math.log10(r.studies + 1) : r[m]);
+    // Plotly renders hover text as HTML — country names are data-derived and
+    // must be escaped before concatenation.
     const text = rows.map(r => isCounts
-      ? r.country + "<br>" + fmtNum(r.studies) + " studies"
-      : r.country + "<br>" + fmtNum(r.studies) + " studies<br>" +
-        (r[m] == null ? "NA" : rRound(r[m], 2)) + " " + label.toLowerCase());
+      ? esc(r.country) + "<br>" + fmtNum(r.studies) + " studies"
+      : esc(r.country) + "<br>" + fmtNum(r.studies) + " studies<br>" +
+        (r[m] == null ? "NA" : rRound(r[m], 2)) + " " + esc(label.toLowerCase()));
     const colorscale = isCounts
       ? [[0, "#f1f3f5"], [0.0001, "#c6dbef"], [0.5, "#2a78d6"], [1, "#08306b"]]
       : [[0, "#f7fbff"], [0.5, "#6baed6"], [1, "#08306b"]];
@@ -1197,8 +1081,8 @@ if (typeof document !== "undefined") {
 
   function renderComp() {
     const label = $("x-comp-var").value;
-    const xv = COMP_VARS[label];
-    const sv = STACK_VARS[$("x-comp-stack").value];
+    const xv = db.registries.COMP_VARS.get(label);
+    const sv = db.registries.STACK_VARS.get($("x-comp-stack").value);
     const mode = $("x-comp-mode").value;
     const res = compCounts(db, state.result, xv, sv, mode);
     const note = xv === "grp" ? " · a study can sit in several disease groups" : "";
@@ -1237,7 +1121,9 @@ if (typeof document !== "undefined") {
         name: k,
         y: res.catOrder,
         x: res.catOrder.map(c => res.values[c][k] != null ? res.values[c][k] : 0),
-        hovertemplate: "%{y} · " + k + ": %{x}<extra></extra>"
+        // k comes from dict levels (developer-curated); escaped anyway —
+        // Plotly renders hovertemplate output as HTML.
+        hovertemplate: "%{y} · " + esc(k) + ": %{x}<extra></extra>"
       }));
       layout = {
         barmode: "stack",
@@ -1267,8 +1153,8 @@ if (typeof document !== "undefined") {
   function renderScatter() {
     const xLabel = $("x-scatter-x").value;
     const yLabel = $("x-scatter-y").value;
-    const xv = SCAT_X[xLabel];
-    const yv = SCAT_Y[yLabel];
+    const xv = db.registries.SCAT_X.get(xLabel);
+    const yv = db.registries.SCAT_Y.get(yLabel);
     const pts = scatterPoints(db, state.result, xv, yv);
     const traces = db.incLv.map(inc => {
       const rows = pts.filter(r => r.income === inc);
@@ -1277,7 +1163,8 @@ if (typeof document !== "undefined") {
         name: inc,
         x: rows.map(r => r[xv]),
         y: rows.map(r => r[yv]),
-        text: rows.map(r => r.country + "<br>" + fmtNum(r.studies) + " studies"),
+        // country names are data-derived; Plotly renders hover text as HTML.
+        text: rows.map(r => esc(r.country) + "<br>" + fmtNum(r.studies) + " studies"),
         hoverinfo: "text",
         marker: { color: db.palInc[inc], size: 8, opacity: 0.8 }
       };
@@ -1297,20 +1184,33 @@ if (typeof document !== "undefined") {
     const rows = tableRows(db, state.result, 25);
     const cols = ["Country", "Income", "Region", "Studies", "Per 100k DALYs", "Per US$1bn", "Per million"];
     const numCols = new Set(["Studies", "Per 100k DALYs", "Per US$1bn", "Per million"]);
-    let html = "<thead><tr>";
-    for (const c of cols) html += `<th${numCols.has(c) ? ' class="num"' : ""}>${c}</th>`;
-    html += "</tr></thead><tbody>";
+    // Country/Income/Region cells are data-derived strings: build the table
+    // with createElement + textContent — never innerHTML string concat.
+    const tbl = $("x-table");
+    tbl.textContent = "";
+    const thead = document.createElement("thead");
+    const htr = document.createElement("tr");
+    for (const c of cols) {
+      const th = document.createElement("th");
+      if (numCols.has(c)) th.className = "num";
+      th.textContent = c;
+      htr.appendChild(th);
+    }
+    thead.appendChild(htr);
+    tbl.appendChild(thead);
+    const tbody = document.createElement("tbody");
     for (const r of rows) {
-      html += "<tr>";
+      const tr = document.createElement("tr");
       for (const c of cols) {
         const v = r[c];
-        const cell = v == null ? "" : (numCols.has(c) && c !== "Studies" ? v : (c === "Studies" ? fmtNum(v) : v));
-        html += `<td${numCols.has(c) ? ' class="num"' : ""}>${cell}</td>`;
+        const td = document.createElement("td");
+        if (numCols.has(c)) td.className = "num";
+        td.textContent = v == null ? "" : (c === "Studies" ? fmtNum(v) : String(v));
+        tr.appendChild(td);
       }
-      html += "</tr>";
+      tbody.appendChild(tr);
     }
-    html += "</tbody>";
-    $("x-table").innerHTML = html;
+    tbl.appendChild(tbody);
   }
 
   function setupCountryPane() {
@@ -1339,10 +1239,16 @@ if (typeof document !== "undefined") {
     if (!prof) return;
 
     const facts = $("c-facts");
-    facts.innerHTML = "";
+    facts.textContent = "";
+    // Fact keys/values are data-derived (country names, region names,
+    // formatted numbers) — textContent only, never el()'s innerHTML path.
     for (const [k, v] of countryFacts(db, iso3)) {
-      facts.appendChild(el("dt", null, k));
-      facts.appendChild(el("dd", null, String(v)));
+      const dt = el("dt");
+      dt.textContent = k;
+      const dd = el("dd");
+      dd.textContent = String(v);
+      facts.appendChild(dt);
+      facts.appendChild(dd);
     }
 
     $("c-n").textContent = fmtNum(prof.c_n);
@@ -1450,7 +1356,7 @@ if (typeof document !== "undefined") {
     // category array is the listed order reversed. A null pct (empty OA-known
     // subset) leaves that series' bar omitted.
     const sig = prof.c_signals;
-    const sigCats = SIGNAL_METRICS.slice().reverse();
+    const sigCats = db.registries.SIGNAL_METRICS.slice().reverse();
     const sigVal = (side, m) => sig[m] && sig[m][side] != null ? sig[m][side] : null;
     window.Plotly.react("c-signals", [
       {
@@ -1480,7 +1386,8 @@ if (typeof document !== "undefined") {
     // rows; peers grey-blue, selected country gold, dashed type-7 median line with
     // a muted annotation. Rows without usable burden are visibly absent.
     const bm = prof.c_benchmark;
-    const hoverOf = x => x.country + " — " + fmtNum(x.studies) + " studies — " +
+    // country names are data-derived; Plotly renders hover text as HTML.
+    const hoverOf = x => esc(x.country) + " — " + fmtNum(x.studies) + " studies — " +
       rRound(x.per100k, 2) + " per 100k DALYs";
     const bmPeers = bm.rows.filter(x => x.iso3 !== prof.iso3);
     const bmSel = bm.rows.filter(x => x.iso3 === prof.iso3);
@@ -1530,32 +1437,40 @@ if (typeof document !== "undefined") {
     $("gal-back").addEventListener("click", hideSection);
 
     const get = async name => {
-      const r = await fetch("data/" + name + ".json");
+      // ?v=BUILD cache-buster; BUILD is stamped at publish time (see top).
+      const r = await fetch("data/" + name + ".json?v=" + BUILD);
       if (!r.ok) throw new Error("failed to load data/" + name + ".json: " + r.status);
       return r.json();
     };
-    const [dict, studies, geo, disease, countries] = await Promise.all(
-      ["dict", "studies", "geo", "disease", "countries"].map(get));
-    db = loadData({ dict, studies, geo, disease, countries });
+    const [dict, studies, geo, disease, countries, content] = await Promise.all(
+      ["dict", "studies", "geo", "disease", "countries", "content"].map(get));
+    db = loadData({ dict, studies, geo, disease, countries, content });
 
-    GALLERY = galleryRegistry(db.dict.meta);
+    // Gallery sections, figure entries and the interpolated paper01 PRISMA
+    // caption all come from content.json (§15.1) — nothing hardcoded.
+    GALLERY = db.content.gallery;
     FIG_INDEX = {};
     for (const sec of GALLERY) for (const f of sec.figs) FIG_INDEX[f.file] = f;
 
     renderOverview();
     renderGalleryIndex();
+    renderFunnel();
     setupExplorerControls();
     refreshExplorer();
     setupCountryPane();
   }
 
+  // err.message can embed data-derived text (URLs, server responses) —
+  // textContent only, never el()'s innerHTML path.
+  function showBootError(err) {
+    const box = el("div", "loading-wrap");
+    box.textContent = "Failed to start: " + err.message;
+    document.querySelector("main").prepend(box);
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => boot().catch(err => {
-      document.querySelector("main").prepend(el("div", "loading-wrap", "Failed to start: " + err.message));
-    }));
+    document.addEventListener("DOMContentLoaded", () => boot().catch(showBootError));
   } else {
-    boot().catch(err => {
-      document.querySelector("main").prepend(el("div", "loading-wrap", "Failed to start: " + err.message));
-    });
+    boot().catch(showBootError);
   }
 }
