@@ -10,7 +10,7 @@ the site source is `projects/hee/analysis/webapp/site/`. JS data semantics:
 `webapp/DATA_CONTRACT.md` in the same repo.
 
 Rebuild & republish (from `projects/hee/analysis`):
-`R/09-build-shiny-data.R` → `R/10-build-webapp-data.R` →
+`R/09-build-content-bundle.R` → `R/10-build-webapp-data.R` →
 `node webapp/test/run-tests.mjs` (all assertions must pass) → copy
 `webapp/site/*` into `docs/` (keep `docs/.nojekyll`) → commit → push `main`.
 
