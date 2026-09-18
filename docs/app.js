@@ -648,6 +648,17 @@ export function landscapePoints(db) {
   return pts;
 }
 
+// Picker options for the landscape tab: every country with at least one study,
+// name-ascending. Exported so the harness can assert the option set without a
+// DOM. The tab stays unfiltered: this chooses which country's panels are shown,
+// not which studies are counted.
+export function landscapeCountries(db) {
+  return db.countries
+    .filter(r => r.studies > 0)
+    .map(r => ({ iso3: r.iso3, country: r.country, studies: r.studies }))
+    .sort((a, b) => a.country.localeCompare(b.country));
+}
+
 // Country mixes and the disease-group × evaluation-type cross grid (§16.6).
 // CS(c) = distinct geo.s with geo.c === c (equals countries[c].studies).
 // cell(gi, ei) = | CS ∩ dSet(gi) ∩ eSet(ei) |, keyed by the string gi + "|" + ei
@@ -756,6 +767,10 @@ if (typeof document !== "undefined") {
   // index object read by the bound-once heatmap click handler (§16.6).
   const drillCache = {};
   let landCrossIndex = null;
+  // TomSelect instance for the landscape country picker. Selecting a country
+  // drives the same showCountryMix() as a bubble click; it never touches
+  // Explorer state.
+  let landSelect = null;
   const state = {
     filt: null,
     result: null,
@@ -1574,6 +1589,20 @@ if (typeof document !== "undefined") {
     }
   }
 
+  function setupLandscapePicker() {
+    const sel = $("land-country");
+    for (const r of landscapeCountries(db)) {
+      const o = document.createElement("option");
+      o.value = r.iso3;
+      o.textContent = r.country;
+      sel.appendChild(o);
+    }
+    landSelect = new window.TomSelect(sel, {
+      placeholder: "Pick a country…",
+      onChange: val => { if (val) showCountryMix(val); }
+    });
+  }
+
   function renderLandscape() {
     renderLandscapeScatter();
     // Seed the mix panels with the most-studied country so the tab never
@@ -1706,6 +1735,8 @@ if (typeof document !== "undefined") {
     renderMixBar("land-disease-mix", mix.diseaseMix, "disease-group rows");
     renderCrossHeatmap(mix);
     landCrossIndex = { iso3, cross: mix.cross };
+    // Keep the picker in step when a bubble click selected the country.
+    if (landSelect && landSelect.getValue() !== iso3) landSelect.setValue(iso3, true);
   }
 
   async function openStudiesModal(iso3, diseaseLabel, evalLabel, indices) {
@@ -1795,6 +1826,7 @@ if (typeof document !== "undefined") {
     setupExplorerControls();
     refreshExplorer();
     setupCountryPane();
+    setupLandscapePicker();
     renderLandscape();
   }
 

@@ -553,3 +553,16 @@ table.dataTable thead th.num { text-align: right; }
 
 /* ---- loading splash ---- */
 .loading-wrap { padding: 4rem 1rem; text-align: center; color: var(--hee-muted); font-size: .95rem; }
+
+/* ---- country landscape: country picker ---- */
+.land-picker { margin-top: .9rem; max-width: 340px; }
+.land-picker .control-label {
+  display: block;
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--hee-ink-soft);
+  margin: 0 0 .35rem;
+}
+.land-picker .ts-wrapper { width: 100%; }
