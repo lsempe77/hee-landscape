@@ -844,9 +844,16 @@ if (typeof document !== "undefined") {
         if ($(id).data) window.Plotly.Plots.resize($(id));
       }
     }
-    if (name === "landscape" && window.Plotly) {
-      for (const id of ["land-scatter", "land-eval-mix", "land-disease-mix", "land-cross-heatmap"]) {
-        if ($(id).data) window.Plotly.Plots.resize($(id));
+    if (name === "landscape") {
+      // Build the picker on first activation, while the pane is visible.
+      // TomSelect measures the control when it is constructed; building it
+      // while #pane-landscape is display:none yields a zero-width dropdown
+      // that never opens.
+      if (!landSelect) setupLandscapePicker();
+      if (window.Plotly) {
+        for (const id of ["land-scatter", "land-eval-mix", "land-disease-mix", "land-cross-heatmap"]) {
+          if ($(id).data) window.Plotly.Plots.resize($(id));
+        }
       }
     }
   }
@@ -1599,8 +1606,11 @@ if (typeof document !== "undefined") {
     }
     landSelect = new window.TomSelect(sel, {
       placeholder: "Pick a country…",
+      // Render the list in <body> so card/tab overflow cannot clip it.
+      dropdownParent: "body",
       onChange: val => { if (val) showCountryMix(val); }
     });
+    if (landCrossIndex) landSelect.setValue(landCrossIndex.iso3, true);
   }
 
   function renderLandscape() {
@@ -1826,7 +1836,6 @@ if (typeof document !== "undefined") {
     setupExplorerControls();
     refreshExplorer();
     setupCountryPane();
-    setupLandscapePicker();
     renderLandscape();
   }
 
