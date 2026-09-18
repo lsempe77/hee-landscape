@@ -305,6 +305,38 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 .modal-body { padding: 1.1rem 1.3rem 1.3rem; }
 .modal-fig { width: 100%; display: block; }
 
+/* ---- country landscape study drill modal ---- */
+.study-modal-dialog { width: min(820px, 96vw); }
+.study-count {
+  font-size: .85rem;
+  color: var(--hee-muted);
+  margin: 0 0 .7rem;
+}
+.study-list { max-height: 62vh; overflow-y: auto; }
+.study-item {
+  border-top: 1px solid var(--hee-line);
+  padding: .85rem 0;
+}
+.study-item:first-child { border-top: none; padding-top: 0; }
+.study-title {
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--hee-ink);
+}
+.study-meta {
+  font-size: .76rem;
+  color: var(--hee-gold);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: .2rem 0 .35rem;
+}
+.study-abstract { font-size: .88rem; color: var(--hee-ink-soft); line-height: 1.55; }
+.study-abstract-missing { color: var(--hee-muted); font-style: italic; }
+.study-note { color: var(--hee-muted); font-size: .78rem; }
+.study-loading { color: var(--hee-muted); }
+
 /* ---- explorer ---- */
 .explorer-layout { display: flex; gap: 1.3rem; align-items: flex-start; }
 .sidebar {

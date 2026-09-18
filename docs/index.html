@@ -21,6 +21,7 @@
     <button class="nav-link active" data-tab="overview">Overview</button>
     <button class="nav-link" data-tab="gallery">Gallery</button>
     <button class="nav-link" data-tab="explorer">Explorer</button>
+    <button class="nav-link" data-tab="landscape">Country landscape</button>
     <button class="nav-link" data-tab="country">Country profile</button>
     <button class="nav-link" data-tab="methods">Methods</button>
   </div>
@@ -172,6 +173,44 @@
             <div class="table-wrap"><table class="dataTable" id="x-table"></table></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTRY LANDSCAPE ============ -->
+  <section class="tab-pane" id="pane-landscape">
+    <div class="card"><div class="card-body">
+      <h2 class="hero-title">Country landscape</h2>
+      <p class="hero-text">This tab is <strong>unfiltered</strong>: it always shows the whole
+        corpus and does not read or change the Explorer filters. Click a bubble to select a
+        country and fill the two mix panels and the disease-group × evaluation-type grid below.
+        Click a heatmap cell to read the studies behind it.</p>
+    </div></div>
+
+    <div class="card">
+      <div class="card-header">Disease burden × health spending × income group</div>
+      <div class="card-body"><div id="land-scatter" class="plot" style="height:440px"></div></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header">Evaluation-type mix — <span id="land-eval-mix-title"></span></div>
+        <div class="card-body"><div id="land-eval-mix" class="plot" style="height:340px"></div></div>
+      </div>
+      <div class="card">
+        <div class="card-header">Disease-group mix — <span id="land-disease-mix-title"></span></div>
+        <div class="card-body"><div id="land-disease-mix" class="plot" style="height:340px"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Disease group × evaluation type — <span id="land-cross-title"></span></div>
+      <div class="card-body">
+        <div id="land-cross-heatmap" class="plot" style="height:420px"></div>
+        <p class="fig-caption">Each cell is a share of its disease-group row, so a row with any
+          studies sums to 100% across the evaluation types. A study can sit in several disease
+          groups, so rows can overlap and their totals exceed the country’s study count.
+          Click a cell to open the studies behind it.</p>
       </div>
     </div>
   </section>
@@ -335,6 +374,21 @@
   </div>
 </div>
 
+<div class="modal-backdrop" id="study-modal">
+  <div class="modal-dialog study-modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="study-modal-title"></h3>
+        <button class="modal-close" id="study-modal-close">Close</button>
+      </div>
+      <div class="modal-body">
+        <p class="study-count" id="study-modal-count"></p>
+        <div class="study-list" id="study-modal-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer class="site-footer">
   Sources: GBD 2023 (IHME) · IHME Health Spending 1995–2022 · World Bank · OpenAlex/CrossRef/PubMed harvest
 </footer>
@@ -342,7 +396,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-09-17"></script>
+<script type="module" src="app.js?v=2026-09-18"></script>
 
 </body>
 </html>
