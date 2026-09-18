@@ -555,6 +555,10 @@ table.dataTable thead th.num { text-align: right; }
 .loading-wrap { padding: 4rem 1rem; text-align: center; color: var(--hee-muted); font-size: .95rem; }
 
 /* ---- country landscape: country picker ---- */
+/* .card clips its content (overflow:hidden) so a TomSelect list inside one is cut
+   off at the card edge. The intro card holds the only in-card picker, so let it
+   overflow and stack above the cards below it. */
+#land-intro-card { position: relative; z-index: 5; overflow: visible; }
 .land-picker { margin-top: .9rem; max-width: 340px; }
 .land-picker .control-label {
   display: block;
@@ -566,3 +570,5 @@ table.dataTable thead th.num { text-align: right; }
   margin: 0 0 .35rem;
 }
 .land-picker .ts-wrapper { width: 100%; }
+/* Keep the options list above card shadows and headers, below the modals (z 2000). */
+.ts-dropdown { z-index: 1500; }
