@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-07">
+<link rel="stylesheet" href="styles.css?v=2026-10-08">
 </head>
 <body>
 
@@ -30,7 +30,7 @@
 
 <!-- v2 preview banner (2026-10-07): this build is published beside the live site at /v2/;
      the link is relative so it resolves to the parent (published) site. -->
-<div class="preview-banner" role="note">Preview: rebuilt on the revised dataset (41,661 studies,
+<div class="preview-banner" role="note">Preview: rebuilt on the revised dataset (41,657 studies,
   October 2026). The published version is at <a href="../">../</a></div>
 
 <main>
@@ -285,7 +285,7 @@
              of 0.959 on the human-labelled reference set used to develop the screening prompt (93/97; 95% CI 0.899–0.984) and 0.86 on an independent blinded sample of 1,000 records (32 of 37 eligible studies with an abstract; 95% CI 0.72–0.94). Records the model voted include but flagged unsure advanced to data extraction; records with no abstract were excluded. Partial evaluations (cost-minimisation,
              budget-impact, cost-of-illness), records unclear at extraction (including full evaluations that report no consequence) and studies whose
              consequence is not clinical are excluded, so
-             the analysis population is full evaluations by construction; duplicate DOIs and titles are removed. Reviews synthesising published economic evaluations are retained by extraction design (framework v6.8 codes them as literature/registry synthesis); 1,706 of the 41,661 (4.1%) are title-flagged reviews, 67% of which name no single country, so country-level panels draw mostly on articles.</p>
+             the analysis population is full evaluations by construction; duplicate DOIs and titles are removed. Reviews synthesising published economic evaluations are retained by extraction design (framework v6.8 codes them as literature/registry synthesis); 1,706 of the 41,657 (4.1%) are title-flagged reviews, 67% of which name no single country, so country-level panels draw mostly on articles.</p>
           <!-- Funnel rows rendered by app.js from content.json `funnel`
                (DATA_CONTRACT.md §15.4) — skeleton only, no hardcoded rows. -->
           <table class="methods-table">
@@ -323,9 +323,7 @@
           </table>
           <p>Intervention type and care setting were extracted by a single-pass language model
              (validated against a keyword lexicon, the emergent-topic clusters and a second model
-             lineage; no human validation available) for the 38,199 studies of the previous build
-             only. The studies added in this revision are not yet labelled, so the intervention-type
-             figures are held back from this build.</p>
+             lineage; no human validation available) for every eligible study (one parse failure).</p>
           <p class="methods-note">Reference data are fetched from dated sources, never
             bundled snapshots.</p>
         </div>
@@ -410,7 +408,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-07"></script>
+<script type="module" src="app.js?v=2026-10-08"></script>
 
 </body>
 </html>
