@@ -1,7 +1,7 @@
-// Cache-busting build token. Locally the literal "2026-09-18" is a harmless
+// Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-09-18";
+const BUILD = "2026-10-09";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -110,6 +110,7 @@ export function loadData({ dict, studies, geo, disease, countries, content }) {
   const palInc = {};
   if (Array.isArray(pal)) dict.meta.inc_lv.forEach((lv, i) => { palInc[lv] = pal[i]; });
   else Object.assign(palInc, pal);
+  Object.assign(palInc, LANDSCAPE_INCOME_COLORS);
   const diseaseSets = dict.disease_grps.map(() => new Set());
   for (let i = 0; i < disease.s.length; i++) diseaseSets[disease.g[i]].add(disease.s[i]);
   return {
@@ -748,6 +749,40 @@ export function drillRecords(db, iso3, indices) {
 const OA_COLORS = { "Open access": "#1baf7a", "Not open": "#eb6834", "Unknown": "#adb5bd" };
 const ACCENT = "#1f5fa8";
 const GREY = "#adb5bd";
+// Softer income colours, shared by every income-coloured chart.
+const LANDSCAPE_INCOME_COLORS = {
+  "Low income": "#c96a4a",
+  "Lower middle income": "#d2a84a",
+  "Upper middle income": "#3b9b84",
+  "High income": "#356fa8"
+};
+// Country profile: light-to-strong ramps for the country bars, grey-blue for peers.
+const PROFILE_BLUE = ["#c9ddef", "#9fc4df", "#70a7cf", "#4288bb", "#1f659f"];
+const PROFILE_TEAL = ["#d8ebe4", "#add6c7", "#79bda6", "#48a087", "#217b68"];
+const PROFILE_LAVENDER = ["#e5ddec", "#cab9da", "#ad91c4", "#8c69aa", "#6d4d8e"];
+const PROFILE_PEER = ["#edf1f4", "#dfe6eb", "#ced9e1", "#bdcbd5", "#aabcc8"];
+// Default series colours for interactive charts (same family as the figures).
+const SOFT_COLORWAY = ["#1764C0", "#2F9B92", "#63B0BC", "#93A3D0", "#D2B06B", "#88B7A8",
+  "#B79BCB", "#7E94B1", "#C98F7A", "#9FB7C8"];
+// Light-to-strong blue-teal ramp used for single-series bars and maps.
+const SOFT_RAMP = ["#dcecf3", "#bddbe7", "#8fc7cf", "#5eb2ba", "#2f8f9d", "#1f5fa8"];
+
+function rampColor(t) {
+  const stops = SOFT_RAMP.map(h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16)));
+  const x = Math.min(1, Math.max(0, t)) * (stops.length - 1);
+  const i = Math.min(stops.length - 2, Math.floor(x));
+  const f = x - i;
+  const c = stops[i].map((v, k) => Math.round(v + (stops[i + 1][k] - v) * f));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+
+// n colours spread evenly along a ramp (bar i of n gets colours[k]).
+function spreadPalette(colors, n) {
+  return Array.from({ length: n }, (_, i) => colors[Math.min(
+    colors.length - 1,
+    Math.round(i * (colors.length - 1) / Math.max(1, n - 1))
+  )]);
+}
 
 // The gallery registry (section titles, blurbs, figure files/titles/captions,
 // incl. the interpolated paper01 PRISMA caption) now ships in content.json
@@ -811,6 +846,16 @@ if (typeof document !== "undefined") {
     }
   }
 
+  let figureZoom = 1;
+
+  function setFigureZoom(nextZoom) {
+    figureZoom = Math.min(3, Math.max(0.5, nextZoom));
+    $("fig-modal-img").style.width = (figureZoom * 100) + "%";
+    $("fig-zoom-reset").textContent = Math.round(figureZoom * 100) + "%";
+    $("fig-zoom-out").disabled = figureZoom <= 0.5;
+    $("fig-zoom-in").disabled = figureZoom >= 3;
+  }
+
   function openModal(file) {
     const f = FIG_INDEX[file];
     if (!f) return;
@@ -819,20 +864,50 @@ if (typeof document !== "undefined") {
     img.src = "figures/" + f.file;
     img.alt = f.title;
     $("fig-modal-caption").textContent = f.caption;
+    setFigureZoom(1);
+    $("fig-zoom-viewport").scrollTo(0, 0);
     $("fig-modal").classList.add("open");
   }
 
   function closeModal() {
     $("fig-modal").classList.remove("open");
     $("fig-modal-img").src = "";
+    setFigureZoom(1);
+  }
+
+  function closeThematicMenu() {
+    $("thematic-nav").classList.remove("open");
+    $("thematic-toggle").setAttribute("aria-expanded", "false");
+    $("thematic-menu").hidden = true;
+  }
+
+  // The "Countries" nav tab holds two panes (Country landscape / Country
+  // profile) switched by the sub-tabs at the top of each pane.
+  function showCountryView(view) {
+    const pane = view === "profile" ? "country" : "landscape";
+    for (const button of document.querySelectorAll("[data-country-view]")) {
+      const active = button.dataset.countryView === view;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-selected", String(active));
+    }
+    switchTab(pane);
   }
 
   function switchTab(name) {
+    if (name === "countries") {
+      showCountryView("landscape");
+      return;
+    }
+    if (name !== "gallery") closeThematicMenu();
+    const navName = (name === "landscape" || name === "country") ? "countries" : name;
     for (const b of document.querySelectorAll(".navbar .nav-link")) {
-      b.classList.toggle("active", b.dataset.tab === name);
+      b.classList.toggle("active", b.dataset.tab === navName);
     }
     for (const p of document.querySelectorAll(".tab-pane")) {
       p.classList.toggle("active", p.id === "pane-" + name);
+    }
+    if (name === "overview" && window.Plotly && $("ov-trend").data) {
+      window.Plotly.Plots.resize($("ov-trend"));
     }
     if (name === "explorer" && state.result) {
       for (const id of ["x-trend", "x-map", "x-comp", "x-scatter"]) {
@@ -858,9 +933,50 @@ if (typeof document !== "undefined") {
     }
   }
 
+  function sectionIndex(title) {
+    return GALLERY.findIndex(sec => sec.title === title);
+  }
+
+  // Opens a Thematic analysis section from the Overview; its back link
+  // returns to the Overview.
+  function openOverviewTheme(title) {
+    const i = sectionIndex(title);
+    if (i < 0) return;
+    switchTab("gallery");
+    showSection(i, "overview");
+  }
+
+  // Where each Overview "at a glance" tile leads (keyed by content.json label).
+  const TILE_ACTIONS = {
+    "Eligible full evaluations": () => openOverviewTheme("Size & growth"),
+    "Years covered": () => showOverviewTrend("cumulative"),
+    "Countries studied": () => openOverviewTheme("Geography & authorship"),
+    "Journals": () => openOverviewTheme("Open access & funding"),
+    "Use QALYs": () => openOverviewTheme("Methods & metrics"),
+    "Model-based": () => openOverviewTheme("Methods & metrics"),
+    "Single-country studies": () => openOverviewTheme("Geography & authorship")
+  };
+
+  function makeOverviewCardInteractive(box, label) {
+    const action = TILE_ACTIONS[label];
+    if (!action) return;
+    box.classList.add("overview-nav-card");
+    box.tabIndex = 0;
+    box.setAttribute("role", "link");
+    box.setAttribute("aria-label", label + ": open related analysis");
+    box.addEventListener("click", action);
+    box.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        action();
+      }
+    });
+  }
+
   function renderOverview() {
     const m = db.dict.meta;
-    $("nav-built").textContent = "bundle " + m.built;
+    const built = $("nav-built");
+    if (built) built.textContent = "bundle " + m.built;
 
     // Hero paragraph: ordered segments from content.json (§15.2). Each segment
     // becomes a <span>/<strong>/<em> filled via textContent — no innerHTML.
@@ -878,7 +994,7 @@ if (typeof document !== "undefined") {
     const wrap = $("ov-tiles");
     wrap.textContent = "";
     for (const t of db.content.glance_tiles) {
-      const box = el("div", "value-box bg-" + t.theme);
+      const box = el("div", "value-box");
       const title = el("div", "value-box-title");
       title.textContent = t.label;
       const value = el("div", "value-box-value");
@@ -890,9 +1006,12 @@ if (typeof document !== "undefined") {
         sub.textContent = t.sub;
         box.appendChild(sub);
       }
+      makeOverviewCardInteractive(box, t.label);
       wrap.appendChild(box);
     }
 
+    // Overview figure cards: header = the figure's content.json title, with a
+    // "More on …" link to the Thematic analysis section that holds it.
     const heroes = [
       { file: "fig_dotmap.webp", alt: "Global dot map" },
       { file: "fig_burden.webp", alt: "Evidence vs burden" },
@@ -900,44 +1019,154 @@ if (typeof document !== "undefined") {
     ];
     const hw = $("ov-hero-imgs");
     hw.textContent = "";
-    for (const h of heroes) {
-      const card = el("div", "card");
-      const body = el("div", "card-body p-0");
-      const img = el("img", "hero-img");
+    heroes.forEach((h, i) => {
+      const f = FIG_INDEX[h.file];
+      const card = el("div", "card overview-analysis-card");
+      // An odd last card spans the full row.
+      if (heroes.length % 2 === 1 && i === heroes.length - 1) {
+        card.classList.add("overview-analysis-card-wide");
+      }
+      const head = el("div", "card-header overview-card-head");
+      const name = el("span");
+      name.textContent = f ? f.title : h.alt;
+      head.appendChild(name);
+      if (f && f.sectionTitle) {
+        const link = el("button", "card-header-link");
+        link.type = "button";
+        link.textContent = "More on " + f.sectionTitle.toLowerCase() + " →";
+        link.addEventListener("click", () => openOverviewTheme(f.sectionTitle));
+        head.appendChild(link);
+      }
+      const body = el("div", "card-body overview-analysis-body");
+      const btn = el("button", "overview-figure-button");
+      btn.type = "button";
+      btn.setAttribute("aria-label", "Open figure: " + (f ? f.title : h.alt));
+      const img = el("img", "overview-analysis-figure");
       img.src = "figures/" + h.file;
       img.alt = h.alt;
       img.loading = "lazy";
-      img.addEventListener("click", () => openModal(h.file));
-      body.appendChild(img);
+      btn.appendChild(img);
+      btn.addEventListener("click", () => openModal(h.file));
+      body.appendChild(btn);
+      card.appendChild(head);
       card.appendChild(body);
       hw.appendChild(card);
-    }
-  }
-
-  function renderGalleryIndex() {
-    const idx = $("gal-section-index");
-    idx.textContent = "";
-    GALLERY.forEach((sec, i) => {
-      const card = el("button", "section-card");
-      const title = el("div", "sec-title");
-      title.textContent = sec.title;
-      const count = el("div", "sec-count");
-      count.textContent = sec.figs.length + " figures";
-      card.appendChild(title);
-      card.appendChild(count);
-      card.addEventListener("click", () => showSection(i));
-      idx.appendChild(card);
     });
   }
 
-  function showSection(i) {
+  // Overview publication trend for the unfiltered corpus, with a
+  // "Per year | Cumulative" switch.
+  let overviewTrendMode = "annual";
+
+  function showOverviewTrend(mode) {
+    switchTab("overview");
+    setOverviewTrendMode(mode);
+    document.querySelector(".overview-trend-card").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function setOverviewTrendMode(mode) {
+    overviewTrendMode = mode;
+    for (const b of document.querySelectorAll("[data-trend-mode]")) {
+      const on = b.dataset.trendMode === mode;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-pressed", String(on));
+    }
+    renderOverviewTrend();
+  }
+
+  function renderOverviewTrend() {
+    const ser = trendSeries(db, applyFilters(db, {}), "none");
+    const years = Object.keys(ser).map(Number).sort((a, b) => a - b);
+    const annual = years.map(y => ser[y]);
+    const cumulative = overviewTrendMode === "cumulative";
+    let running = 0;
+    const y = cumulative ? annual.map(n => (running += n)) : annual;
+    // Light-to-strong blue across the years for the markers.
+    const lerp = (a, b, t) => Math.round(a + (b - a) * t);
+    const span = Math.max(1, years[years.length - 1] - years[0]);
+    const markerColors = years.map(yr => {
+      const t = (yr - years[0]) / span;
+      return `rgb(${lerp(126, 26, t)},${lerp(166, 78, t)},${lerp(212, 138, t)})`;
+    });
+    window.Plotly.react("ov-trend", [{
+      x: years, y,
+      mode: "lines+markers", type: "scatter", showlegend: false,
+      line: { color: ACCENT, width: 3, shape: "spline", smoothing: 0.45 },
+      marker: { color: markerColors, size: 7, line: { color: "white", width: 1 } },
+      fill: "tozeroy", fillcolor: "rgba(31,95,168,.12)",
+      hovertemplate: (cumulative ? "By %{x}" : "%{x}") + ": %{y:,} studies<extra></extra>"
+    }], {
+      font: BASE_FONT,
+      margin: { t: 10, b: 40, l: 60, r: 20 },
+      xaxis: { showgrid: false, range: [years[0] - 0.4, years[years.length - 1] + 0.4], dtick: 2 },
+      yaxis: { title: cumulative ? "cumulative studies" : "studies", tickformat: ",d",
+               gridcolor: "#eeebe3", zeroline: false, rangemode: "tozero" },
+      plot_bgcolor: "rgba(0,0,0,0)",
+      paper_bgcolor: "rgba(0,0,0,0)"
+    }, PLOTLY_CFG);
+  }
+
+  // Thematic analysis index: one card per content.json gallery section, plus
+  // the matching entries in the navbar dropdown.
+  function renderGalleryIndex() {
+    const idx = $("gal-section-index");
+    const menu = $("thematic-menu");
+    idx.textContent = "";
+    menu.textContent = "";
+    GALLERY.forEach((sec, i) => {
+      const card = el("button", "thematic-card");
+      card.type = "button";
+      const img = el("img", "thematic-card-image");
+      img.src = "figures/" + sec.figs[0].file;
+      img.alt = "";
+      img.loading = "lazy";
+      const body = el("div", "thematic-card-body");
+      const title = el("h2", "thematic-card-title");
+      title.textContent = sec.title;
+      const count = el("div", "thematic-card-count");
+      count.textContent = sec.figs.length + " figures";
+      const description = el("p", "thematic-card-description");
+      const fullBlurb = sec.blurb.replace(/\s+/g, " ").trim();
+      description.textContent = fullBlurb.length > 155 ? fullBlurb.slice(0, 152) + "..." : fullBlurb;
+      const arrow = el("span", "thematic-card-arrow");
+      arrow.textContent = "→";
+      arrow.setAttribute("aria-hidden", "true");
+      body.append(title, count, description, arrow);
+      card.append(img, body);
+      card.addEventListener("click", () => showSection(i));
+      idx.appendChild(card);
+
+      const item = el("button", "nav-theme-link");
+      item.type = "button";
+      item.setAttribute("role", "menuitem");
+      item.textContent = sec.title;
+      item.addEventListener("click", () => {
+        closeThematicMenu();
+        switchTab("gallery");
+        showSection(i);
+      });
+      menu.appendChild(item);
+    });
+  }
+
+  // Where the section's back link leads: null = theme index, "overview" =
+  // back to the Overview.
+  let sectionReturnTo = null;
+
+  // Figures drawn at least this many pixels wide span two grid columns.
+  const WIDE_FIGURE_MIN_PX = 2300;
+
+  function showSection(i, returnTo = null) {
     const sec = GALLERY[i];
+    sectionReturnTo = returnTo;
+    $("gal-back").innerHTML = returnTo === "overview" ? "&larr; Back to Overview" : "&larr; All themes";
     $("gal-index").style.display = "none";
     $("gal-section").style.display = "block";
     $("gal-sec-title").textContent = sec.title;
     $("gal-sec-blurb").textContent = sec.blurb.replace(/\s+/g, " ").trim();
     const grid = $("gal-sec-grid");
     grid.textContent = "";
+    grid.classList.toggle("fig-grid-single", sec.figs.length === 1);
     for (const f of sec.figs) {
       const card = el("div", "fig-card");
       const img = el("img");
@@ -945,6 +1174,9 @@ if (typeof document !== "undefined") {
       img.alt = f.title;
       img.loading = "lazy";
       img.addEventListener("click", () => openModal(f.file));
+      img.addEventListener("load", () => {
+        card.classList.toggle("fig-card-wide", img.naturalWidth >= WIDE_FIGURE_MIN_PX);
+      }, { once: true });
       card.appendChild(img);
       const body = el("div", "fig-body");
       const ft = el("div", "fig-title");
@@ -959,32 +1191,22 @@ if (typeof document !== "undefined") {
     window.scrollTo(0, 0);
   }
 
-  // Methods selection funnel: rows from content.json (§15.4). `records`
-  // strings arrive final-formatted (incl. Unicode minus U+2212); the strong
-  // flag renders label and records in <strong> elements (textContent only).
-  function renderFunnel() {
-    const tb = $("methods-funnel");
-    tb.textContent = "";
-    for (const row of db.content.funnel) {
-      const tr = document.createElement("tr");
-      for (const text of [row.label, row.records]) {
-        const td = document.createElement("td");
-        if (row.strong) {
-          const s = document.createElement("strong");
-          s.textContent = text;
-          td.appendChild(s);
-        } else {
-          td.textContent = text;
-        }
-        tr.appendChild(td);
-      }
-      tb.appendChild(tr);
-    }
-  }
-
   function hideSection() {
     $("gal-section").style.display = "none";
     $("gal-index").style.display = "block";
+    sectionReturnTo = null;
+    $("gal-back").innerHTML = "&larr; All themes";
+  }
+
+  function goBackFromSection() {
+    const toOverview = sectionReturnTo === "overview";
+    hideSection();
+    if (toOverview) {
+      switchTab("overview");
+      $("ov-tiles").scrollIntoView({ block: "center" });
+    } else {
+      window.scrollTo(0, 0);
+    }
   }
 
   function makeRadios(containerId, name, choices) {
@@ -1198,8 +1420,8 @@ if (typeof document !== "undefined") {
       : esc(r.country) + "<br>" + fmtNum(r.studies) + " studies<br>" +
         (r[m] == null ? "NA" : rRound(r[m], 2)) + " " + esc(label.toLowerCase()));
     const colorscale = isCounts
-      ? [[0, "#f1f3f5"], [0.0001, "#c6dbef"], [0.5, "#2a78d6"], [1, "#08306b"]]
-      : [[0, "#f7fbff"], [0.5, "#6baed6"], [1, "#08306b"]];
+      ? [[0, "#f1f3f5"], [0.0001, SOFT_RAMP[0]]].concat(SOFT_RAMP.slice(1).map((c, i) => [(i + 1) / (SOFT_RAMP.length - 1), c]))
+      : SOFT_RAMP.map((c, i) => [i / (SOFT_RAMP.length - 1), c]);
     const colorbar = isCounts
       ? {
           title: "studies<br>(log)",
@@ -1245,11 +1467,12 @@ if (typeof document !== "undefined") {
     if (res.type === "simple") {
       const desc = res.rows;
       const bottomUp = desc.slice().reverse();
+      const maxV = Math.max(1, ...desc.map(r => r.v));
       traces = [{
         type: "bar", orientation: "h",
         y: desc.map(r => r.x),
         x: desc.map(r => r.v),
-        marker: { color: ACCENT },
+        marker: { color: desc.map(r => rampColor(0.15 + 0.85 * Math.sqrt(r.v / maxV))) },
         hovertemplate: "%{y}: %{x}<extra></extra>"
       }];
       layout = {
@@ -1316,7 +1539,7 @@ if (typeof document !== "undefined") {
         // country names are data-derived; Plotly renders hover text as HTML.
         text: rows.map(r => esc(r.country) + "<br>" + fmtNum(r.studies) + " studies"),
         hoverinfo: "text",
-        marker: { color: db.palInc[inc], size: 8, opacity: 0.8 }
+        marker: { color: db.palInc[inc], size: 8, opacity: 0.75, line: { color: "white", width: 0.5 } }
       };
     });
     window.Plotly.react("x-scatter", traces, {
@@ -1415,13 +1638,13 @@ if (typeof document !== "undefined") {
       {
         x: cYears, y: cYears.map(y => ct.country[y]),
         mode: "lines", type: "scatter", name: "country",
-        line: { color: ACCENT, width: 3 },
+        line: { color: "#1f659f", width: 3 },
         hovertemplate: "%{x}: %{y} studies<extra>country</extra>"
       },
       {
         x: pYears, y: pYears.map(y => ct.peer[y]),
         mode: "lines", type: "scatter", name: "income-group mean",
-        line: { color: GREY, width: 3 },
+        line: { color: "#88a6b8", width: 2.5, dash: "dash" },
         hovertemplate: "%{x}: %{y:.2f} per country<extra>income-group mean</extra>"
       }
     ], {
@@ -1447,13 +1670,13 @@ if (typeof document !== "undefined") {
       {
         type: "bar", orientation: "h", name: "country",
         y: grps, x: grps.map(g => mix.country[g] != null ? mix.country[g] : null),
-        marker: { color: ACCENT },
+        marker: { color: spreadPalette(PROFILE_BLUE, grps.length) },
         hovertemplate: "%{y}: %{x:.1f}%<extra>country</extra>"
       },
       {
         type: "bar", orientation: "h", name: "income group",
         y: grps, x: grps.map(g => mix.peer[g] != null ? mix.peer[g] : null),
-        marker: { color: GREY },
+        marker: { color: spreadPalette(PROFILE_PEER, grps.length) },
         hovertemplate: "%{y}: %{x:.1f}%<extra>income group</extra>"
       }
     ], {
@@ -1480,13 +1703,13 @@ if (typeof document !== "undefined") {
       {
         type: "bar", orientation: "h", name: "country",
         y: yOrder, x: yOrder.map(t => methVal("country_share", t)),
-        marker: { color: ACCENT },
+        marker: { color: spreadPalette(PROFILE_TEAL, yOrder.length) },
         hovertemplate: "%{y}: %{x:.1f}%<extra>country</extra>"
       },
       {
         type: "bar", orientation: "h", name: "income group",
         y: yOrder, x: yOrder.map(t => methVal("peer_share", t)),
-        marker: { color: GREY },
+        marker: { color: spreadPalette(PROFILE_PEER, yOrder.length) },
         hovertemplate: "%{y}: %{x:.1f}%<extra>income group</extra>"
       }
     ], {
@@ -1512,13 +1735,13 @@ if (typeof document !== "undefined") {
       {
         type: "bar", orientation: "h", name: "country",
         y: sigCats, x: sigCats.map(m => sigVal("country_pct", m)),
-        marker: { color: ACCENT },
+        marker: { color: spreadPalette(PROFILE_LAVENDER, sigCats.length) },
         hovertemplate: "%{y}: %{x:.1f}%<extra>country</extra>"
       },
       {
         type: "bar", orientation: "h", name: "income group",
         y: sigCats, x: sigCats.map(m => sigVal("peer_pct", m)),
-        marker: { color: GREY },
+        marker: { color: spreadPalette(PROFILE_PEER, sigCats.length) },
         hovertemplate: "%{y}: %{x:.1f}%<extra>income group</extra>"
       }
     ], {
@@ -1553,12 +1776,12 @@ if (typeof document !== "undefined") {
       bmLayout.shapes = [{
         type: "line", xref: "paper", x0: 0, x1: 1,
         yref: "y", y0: bm.median_per100k, y1: bm.median_per100k,
-        line: { color: "#6b7280", width: 1, dash: "dash" }
+        line: { color: "#b08d3e", width: 1.25, dash: "dash" }
       }];
       bmLayout.annotations = [{
         text: "income-group median", xref: "paper", x: 0.99, xanchor: "right",
         yref: "y", y: bm.median_per100k, yanchor: "bottom", showarrow: false,
-        font: { size: 10, color: "#6b7280" }
+        font: { size: 10, color: "#8f702d" }
       }];
     }
     window.Plotly.react("c-benchmark", [
@@ -1566,13 +1789,13 @@ if (typeof document !== "undefined") {
         type: "scatter", mode: "markers", name: "income group", showlegend: false,
         x: bmPeers.map(x => x.dalys), y: bmPeers.map(x => x.per100k),
         text: bmPeers.map(hoverOf), hoverinfo: "text",
-        marker: { color: "#9aa7b5", size: 9, opacity: 0.8 }
+        marker: { color: "#9fb7c8", size: 9, opacity: 0.72, line: { color: "white", width: 0.5 } }
       },
       {
         type: "scatter", mode: "markers", name: "country", showlegend: false,
         x: bmSel.map(x => x.dalys), y: bmSel.map(x => x.per100k),
         text: bmSel.map(hoverOf), hoverinfo: "text",
-        marker: { color: "#b08d3e", size: 14 }
+        marker: { color: "#2f9b92", size: 15, line: { color: "#ffffff", width: 1.2 } }
       }
     ], bmLayout, PLOTLY_CFG);
   }
@@ -1645,9 +1868,9 @@ if (typeof document !== "undefined") {
         }),
         hoverinfo: "text",
         marker: {
-          color: db.palInc[inc], opacity: 0.82,
+          color: db.palInc[inc], opacity: 0.78,
           size: rows.map(p => 6 + 30 * Math.sqrt(p.studies / maxS)),
-          line: { color: "#ffffff", width: 0.6 }
+          line: { color: "rgba(255,255,255,.9)", width: 0.8 }
         }
       };
     });
@@ -1671,14 +1894,18 @@ if (typeof document !== "undefined") {
     }
   }
 
-  function renderMixBar(id, rows, xTitle) {
+  function renderMixBar(id, rows, xTitle, colors) {
     const desc = rows.slice();
     const bottomUp = desc.slice().reverse();
     window.Plotly.react(id, [{
       type: "bar", orientation: "h",
       y: desc.map(r => r.label),
       x: desc.map(r => r.count),
-      marker: { color: ACCENT },
+      // Largest bar strongest: the ramp runs light→strong bottom-up.
+      marker: {
+        color: spreadPalette(colors, desc.length).reverse(),
+        line: { color: "rgba(255,255,255,.75)", width: 0.5 }
+      },
       hovertemplate: "%{y}: %{x}<extra></extra>"
     }], {
       font: BASE_FONT,
@@ -1710,7 +1937,13 @@ if (typeof document !== "undefined") {
       customdata: keys,
       text,
       hovertemplate: "%{y} × %{x}<br>%{text}<extra></extra>",
-      colorscale: [[0, "#f7fbff"], [0.5, "#6baed6"], [1, "#08306b"]],
+      colorscale: [
+        [0, "#f5f3ee"],
+        [0.25, "#d7e8e5"],
+        [0.55, "#78b7ad"],
+        [0.78, "#347f86"],
+        [1, "#163b5c"]
+      ],
       zmin: 0, zmax: 100,
       colorbar: { title: "row<br>share (%)", thickness: 12, len: 0.8 },
       xgap: 2, ygap: 2
@@ -1741,8 +1974,10 @@ if (typeof document !== "undefined") {
     $("land-eval-mix-title").textContent = mix.country + " — " + fmtNum(mix.n_studies) + " studies";
     $("land-disease-mix-title").textContent = mix.country;
     $("land-cross-title").textContent = mix.country;
-    renderMixBar("land-eval-mix", mix.evalMix, "studies");
-    renderMixBar("land-disease-mix", mix.diseaseMix, "disease-group rows");
+    renderMixBar("land-eval-mix", mix.evalMix, "studies",
+      ["#c9ddef", "#a8c8e3", "#7faed3", "#568fc0", "#356fa8", "#1f5fa8"]);
+    renderMixBar("land-disease-mix", mix.diseaseMix, "disease-group rows",
+      ["#d8ebe4", "#b5d9ca", "#86c2ad", "#55a88f", "#2f8b73", "#176b58"]);
     renderCrossHeatmap(mix);
     landCrossIndex = { iso3, cross: mix.cross };
     // Keep the picker in step when a bubble click selected the country.
@@ -1803,16 +2038,41 @@ if (typeof document !== "undefined") {
 
   async function boot() {
     for (const b of document.querySelectorAll(".navbar .nav-link")) {
+      if (b.id === "thematic-toggle") continue;
       b.addEventListener("click", () => switchTab(b.dataset.tab));
     }
+    for (const button of document.querySelectorAll("[data-country-view]")) {
+      button.addEventListener("click", () => showCountryView(button.dataset.countryView));
+    }
+    // "Thematic analysis" opens the theme index and toggles its dropdown menu.
+    $("thematic-toggle").addEventListener("click", e => {
+      e.stopPropagation();
+      const shouldOpen = !$("thematic-nav").classList.contains("open");
+      if (!$("pane-gallery").classList.contains("active")) {
+        switchTab("gallery");
+        hideSection();
+      }
+      $("thematic-nav").classList.toggle("open", shouldOpen);
+      $("thematic-toggle").setAttribute("aria-expanded", String(shouldOpen));
+      $("thematic-menu").hidden = !shouldOpen;
+    });
+    document.addEventListener("click", e => {
+      if (!$("thematic-nav").contains(e.target)) closeThematicMenu();
+    });
     $("fig-modal-close").addEventListener("click", closeModal);
     $("fig-modal").addEventListener("click", e => { if (e.target === $("fig-modal")) closeModal(); });
+    $("fig-zoom-out").addEventListener("click", () => setFigureZoom(figureZoom - 0.25));
+    $("fig-zoom-reset").addEventListener("click", () => setFigureZoom(1));
+    $("fig-zoom-in").addEventListener("click", () => setFigureZoom(figureZoom + 0.25));
     $("study-modal-close").addEventListener("click", closeStudyModal);
     $("study-modal").addEventListener("click", e => { if (e.target === $("study-modal")) closeStudyModal(); });
     document.addEventListener("keydown", e => {
-      if (e.key === "Escape") { closeModal(); closeStudyModal(); }
+      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeThematicMenu(); }
     });
-    $("gal-back").addEventListener("click", hideSection);
+    $("gal-back").addEventListener("click", goBackFromSection);
+    for (const b of document.querySelectorAll("[data-trend-mode]")) {
+      b.addEventListener("click", () => setOverviewTrendMode(b.dataset.trendMode));
+    }
 
     const get = async name => {
       // ?v=BUILD cache-buster; BUILD is stamped at publish time (see top).
@@ -1828,11 +2088,20 @@ if (typeof document !== "undefined") {
     // caption all come from content.json (§15.1) — nothing hardcoded.
     GALLERY = db.content.gallery;
     FIG_INDEX = {};
-    for (const sec of GALLERY) for (const f of sec.figs) FIG_INDEX[f.file] = f;
+    for (const sec of GALLERY) {
+      for (const f of sec.figs) FIG_INDEX[f.file] = { ...f, sectionTitle: sec.title };
+    }
+
+    if (window.Plotly && !window.Plotly.__softColorway) {
+      const react = window.Plotly.react;
+      window.Plotly.react = (gd, data, layout = {}, cfg) =>
+        react.call(window.Plotly, gd, data, Object.assign({ colorway: SOFT_COLORWAY }, layout), cfg);
+      window.Plotly.__softColorway = true;
+    }
 
     renderOverview();
+    renderOverviewTrend();
     renderGalleryIndex();
-    renderFunnel();
     setupExplorerControls();
     refreshExplorer();
     setupCountryPane();
