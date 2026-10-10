@@ -3,8 +3,8 @@
 Public static site for the health economic evaluation evidence map: pure HTML/JS
 (no server, no WebR), served from `docs/` via GitHub Pages at
 <https://sempe.dev/hee-landscape/>.
-The revised build previously previewed in `docs/v2/` is now promoted to the
-main site; `docs/v2/` remains available as a duplicate preview.
+The v3 design is now promoted to the main site; `docs/v2/` remains available
+as the earlier preview.
 
 The full build/test/publish runbook, decision log and known gotchas live in
 **`WEBAPP.md`** in the HSF analysis repo (`projects/hee/analysis/WEBAPP.md`);
