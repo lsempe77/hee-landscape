@@ -803,6 +803,21 @@ if (typeof document !== "undefined") {
   let db = null;
   let GALLERY = [];
   let FIG_INDEX = {};
+  // Interactive figures: self-contained HTML pages built by scripts/ (here
+  // scripts/build_glance_regions.py), added on top of content.json's gallery
+  // so the upstream content build stays untouched. Shown in an iframe.
+  const EXTRA_FIGURES = [{
+    section: "Maps & regional charts",
+    index: 0,
+    fig: {
+      file: "fig_glance_regions.html",
+      html: true,
+      title: "(Un)equal weight at a glance: research intensity and evaluations by region",
+      caption: "Draft infographic built from the map's data by World Bank region: research per unit of " +
+        "disease burden, headline figures, and each region's disease focus, QALY use and country " +
+        "coverage over time. \"xx\" marks values not yet available; click any ? for details."
+    }
+  }];
   // Country landscape state: lazy drill shards cached per ISO3, and the fresh
   // index object read by the bound-once heatmap click handler (§16.6).
   const drillCache = {};
@@ -1469,7 +1484,7 @@ if (typeof document !== "undefined") {
       const card = el("button", "thematic-card");
       card.type = "button";
       const img = el("img", "thematic-card-image");
-      img.src = "figures/" + sec.figs[0].file;
+      img.src = "figures/" + (sec.figs.find(f => !f.html) || sec.figs[0]).file;
       img.alt = "";
       img.loading = "lazy";
       const body = el("div", "thematic-card-body");
@@ -1520,6 +1535,10 @@ if (typeof document !== "undefined") {
     grid.textContent = "";
     grid.classList.toggle("fig-grid-single", sec.figs.length === 1);
     for (const f of sec.figs) {
+      if (f.html) {
+        grid.appendChild(htmlFigureCard(f));
+        continue;
+      }
       const card = el("div", "fig-card");
       const img = el("img");
       img.src = "figures/" + f.file;
@@ -1541,6 +1560,39 @@ if (typeof document !== "undefined") {
       grid.appendChild(card);
     }
     window.scrollTo(0, 0);
+  }
+
+  // Card for an interactive HTML figure: the page in an iframe sized to its
+  // content (same origin, so its height can be read), plus a full-page link.
+  function htmlFigureCard(f) {
+    const card = el("div", "fig-card fig-card-html");
+    const frame = el("iframe");
+    frame.src = "figures/" + f.file + "?v=" + BUILD;
+    frame.title = f.title;
+    frame.loading = "lazy";
+    const fit = () => {
+      const doc = frame.contentDocument;
+      if (doc && doc.documentElement) frame.style.height = doc.documentElement.scrollHeight + "px";
+    };
+    frame.addEventListener("load", () => {
+      fit();
+      const doc = frame.contentDocument;
+      if (doc && doc.body && window.ResizeObserver) new ResizeObserver(fit).observe(doc.body);
+    });
+    card.appendChild(frame);
+    const body = el("div", "fig-body");
+    const ft = el("div", "fig-title");
+    ft.textContent = f.title;
+    const fc = el("div", "fig-caption");
+    fc.textContent = f.caption;
+    const open = el("a", "fig-open-link");
+    open.href = "figures/" + f.file;
+    open.target = "_blank";
+    open.rel = "noopener";
+    open.textContent = "Open full page ↗";
+    body.append(ft, fc, open);
+    card.appendChild(body);
+    return card;
   }
 
   function hideSection() {
@@ -2501,7 +2553,11 @@ if (typeof document !== "undefined") {
 
     // Gallery sections, figure entries and the interpolated paper01 PRISMA
     // caption all come from content.json (§15.1) — nothing hardcoded.
-    GALLERY = db.content.gallery;
+    GALLERY = db.content.gallery.map(sec => ({ ...sec, figs: sec.figs.slice() }));
+    for (const x of EXTRA_FIGURES) {
+      const sec = GALLERY.find(s => s.title === x.section);
+      if (sec) sec.figs.splice(x.index, 0, x.fig);
+    }
     FIG_INDEX = {};
     for (const sec of GALLERY) {
       for (const f of sec.figs) FIG_INDEX[f.file] = { ...f, sectionTitle: sec.title };
