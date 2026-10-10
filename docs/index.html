@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-09">
+<link rel="stylesheet" href="styles.css?v=2026-10-10-cards">
 </head>
 <body>
 
@@ -348,6 +348,22 @@
   </div>
 </div>
 
+<div class="modal-backdrop" id="oa-help-modal">
+  <div class="modal-dialog info-modal-dialog" role="dialog" aria-modal="true"
+       aria-labelledby="oa-help-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="oa-help-title">Available open access</h3>
+        <button class="modal-close" id="oa-help-close" type="button">Close</button>
+      </div>
+      <div class="modal-body info-modal-body">
+        <p>A study counts as <strong>open access</strong> when its full text can be read online free of charge, either on the publisher's website or in an open repository, without a subscription or paywall.</p>
+        <p>Open-access status comes from <strong>OpenAlex</strong>, looked up using each study's DOI. Studies whose status could not be found were left out, so the percentage is the share of studies <em>with a known open-access status</em> that are open access, not the share of all studies in the map.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer class="site-footer">
   Sources: GBD 2023 (IHME) · IHME Health Spending 1995–2022 · World Bank · OpenAlex/CrossRef/PubMed harvest
 </footer>
@@ -355,7 +371,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-09"></script>
+<script type="module" src="app.js?v=2026-10-10-cards"></script>
 
 </body>
 </html>

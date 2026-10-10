@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-09";
+const BUILD = "2026-10-10-cards";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -946,20 +946,178 @@ if (typeof document !== "undefined") {
     showSection(i, "overview");
   }
 
-  // Where each Overview "at a glance" tile leads (keyed by content.json label).
+  // Overview "at a glance" tiles, including composite cards built from study data.
+  const ACCESS_CARD = "__publication_access";
+  const METRICS_CARD = "__outcome_metrics";
+  const GEO_SCOPE_CARD = "__geo_scope";
+  const FUNDERS_CARD = "__funders";
+  const OVERVIEW_TILE_ORDER = [
+    "Eligible full evaluations", "Years covered", ACCESS_CARD,
+    "Journals", "Countries studied", GEO_SCOPE_CARD,
+    METRICS_CARD, "Model-based", FUNDERS_CARD
+  ];
+  const WIDE_TILES = new Set([METRICS_CARD, FUNDERS_CARD]);
+  const NARROW_TILES = new Set(["Model-based"]);
+  const OVERVIEW_TILE_COPY = {
+    "Eligible full evaluations": { label: "Full health economic evaluations captured in the map" },
+    "Years covered": { label: "Publication years covered" },
+    "Countries studied": { label: "Countries covered by studies", sub: "Across the global evidence base" },
+    "Journals": { sub: "Among studies with journal details available" }
+  };
+  const PLACEHOLDER_PCT = "XX%";
+
   const TILE_ACTIONS = {
     "Eligible full evaluations": () => openOverviewTheme("Size & growth"),
     "Years covered": () => showOverviewTrend("cumulative"),
+    [ACCESS_CARD]: () => openOverviewTheme("Open access & funding"),
     "Countries studied": () => openOverviewTheme("Geography & authorship"),
     "Journals": () => openOverviewTheme("Open access & funding"),
-    "Use QALYs": () => openOverviewTheme("Methods & metrics"),
+    [GEO_SCOPE_CARD]: () => openOverviewTheme("Geography & authorship"),
+    [METRICS_CARD]: () => openOverviewTheme("Methods & metrics"),
     "Model-based": () => openOverviewTheme("Methods & metrics"),
-    "Single-country studies": () => openOverviewTheme("Geography & authorship")
+    [FUNDERS_CARD]: () => openOverviewTheme("Open access & funding")
   };
 
-  function makeOverviewCardInteractive(box, label) {
-    const action = TILE_ACTIONS[label];
+  function countLevel(col, label) {
+    const code = db.codeOf[col] ? db.codeOf[col].get(label) : db.levels[col].indexOf(label);
+    let count = 0;
+    for (const value of db.studies[col]) if (value === code) count++;
+    return count;
+  }
+
+  function fmtPct(value) {
+    return value == null ? PLACEHOLDER_PCT : value.toFixed(1) + "%";
+  }
+
+  function placeholderize(node, text) {
+    node.textContent = text;
+    if (text === PLACEHOLDER_PCT) {
+      node.classList.add("tile-placeholder");
+      node.title = "Placeholder: not yet available in the web data";
+    }
+  }
+
+  function publicationAccessCard() {
+    const box = el("div", "value-box publication-access-card");
+    const title = el("div", "value-box-title");
+    title.textContent = "Publication access";
+    const openCount = countLevel("oa_label", "Open access");
+    const knownCount = openCount + countLevel("oa_label", "Not open");
+    const metrics = el("div", "publication-access-metrics");
+
+    for (const [label, valueText, note] of [
+      ["DOI or URL available", PLACEHOLDER_PCT, "Of all studies"],
+      ["Available open access", fmtPct(knownCount ? 100 * openCount / knownCount : null),
+        "Of " + fmtNum(knownCount) + " studies with a known open-access status"]
+    ]) {
+      const metric = el("div", "publication-access-metric");
+      const metricLabel = el("span", "publication-access-label");
+      metricLabel.textContent = label;
+      if (label === "Available open access") {
+        const help = el("button", "metric-help-button");
+        help.type = "button";
+        help.textContent = "?";
+        help.title = "What does open access mean?";
+        help.setAttribute("aria-label", "Explain what open access means");
+        help.addEventListener("click", event => {
+          event.stopPropagation();
+          $("oa-help-modal").classList.add("open");
+        });
+        help.addEventListener("keydown", event => event.stopPropagation());
+        metricLabel.appendChild(help);
+      }
+      const value = el("strong");
+      placeholderize(value, valueText);
+      const metricNote = el("small");
+      metricNote.textContent = note;
+      metric.append(metricLabel, value, metricNote);
+      metrics.appendChild(metric);
+    }
+    box.append(title, metrics);
+    return box;
+  }
+
+  function geoScopeCard() {
+    const box = el("div", "value-box geo-scope-card");
+    const title = el("div", "value-box-title");
+    title.textContent = "Geographic scope of studies";
+    const total = Math.max(1, db.nStudies);
+    const pctOf = count => 100 * count / total;
+    const singlePct = pctOf(countLevel("geo_scope", "Single country"));
+    const otherPct = 100 - singlePct;
+    const multiPct = pctOf(countLevel("geo_scope", "Multi-country") +
+      countLevel("geo_scope", "Region/global"));
+    const nonePct = pctOf(countLevel("geo_scope", "No country stated"));
+
+    const bar = el("div", "geo-scope-bar");
+    const single = el("div", "geo-scope-segment geo-scope-single");
+    single.style.width = singlePct + "%";
+    single.textContent = Math.round(singlePct) + "%";
+    const other = el("div", "geo-scope-segment geo-scope-other");
+    other.style.width = otherPct + "%";
+    other.textContent = Math.round(otherPct) + "%";
+    bar.append(single, other);
+
+    const labels = el("div", "geo-scope-labels");
+    for (const [heading, text] of [
+      ["Single-country", "One country examined"],
+      ["Other geographic scope", multiPct.toFixed(1) +
+        "% multi-country or regional/global; " + nonePct.toFixed(1) + "% no country stated"]
+    ]) {
+      const item = el("div");
+      const strong = el("strong");
+      strong.textContent = heading;
+      const span = el("span");
+      span.textContent = text;
+      item.append(strong, span);
+      labels.appendChild(item);
+    }
+    box.append(title, bar, labels);
+    return box;
+  }
+
+  function barRowsCard(cls, titleText, rows, noteText) {
+    const box = el("div", "value-box metrics-overview-card " + cls);
+    const title = el("div", "value-box-title");
+    title.textContent = titleText;
+    const chart = el("div", "metrics-overview-chart");
+    for (const [label, pct] of rows) {
+      const row = el("div", "metrics-overview-row");
+      const labelEl = el("span", "metrics-overview-label");
+      labelEl.textContent = label;
+      const track = el("div", "metrics-overview-track");
+      const fill = el("span", "metrics-overview-fill");
+      fill.style.width = (pct == null ? 0 : pct) + "%";
+      track.appendChild(fill);
+      const value = el("strong");
+      placeholderize(value, fmtPct(pct));
+      row.append(labelEl, track, value);
+      chart.appendChild(row);
+    }
+    const note = el("div", "metrics-overview-note");
+    note.textContent = noteText;
+    box.append(title, chart, note);
+    return box;
+  }
+
+  function outcomeMetricsCard() {
+    const qalyPct = 100 * countLevel("qaly_label", "Uses QALY") / Math.max(1, db.nStudies);
+    return barRowsCard("", "Outcome metrics used in studies",
+      [["QALYs", qalyPct], ["DALYs", null], ["Other metrics", null]],
+      "Share of all studies. A study may report more than one metric.");
+  }
+
+  function fundersCard() {
+    return barRowsCard("funding-overview-card", "Who funds the evidence?",
+      [["Government and multilateral", null], ["Academic and non-profit", null],
+        ["Private companies", null], ["Unclassified", null]],
+      "Among XX studies reporting a funder. Categories may overlap.");
+  }
+
+  function makeOverviewCardInteractive(box, key) {
+    const action = TILE_ACTIONS[key];
     if (!action) return;
+    const label = box.querySelector(".value-box-title").textContent;
     box.classList.add("overview-nav-card");
     box.tabIndex = 0;
     box.setAttribute("role", "link");
@@ -989,24 +1147,37 @@ if (typeof document !== "undefined") {
       hero.appendChild(node);
     }
 
-    // Glance tiles: final formatted strings from content.json (§15.3);
-    // sub === null means no footer line.
+    // Simple values come from content.json; composite cards are calculated
+    // from study data where available and explicitly marked where unavailable.
     const wrap = $("ov-tiles");
     wrap.textContent = "";
-    for (const t of db.content.glance_tiles) {
-      const box = el("div", "value-box");
-      const title = el("div", "value-box-title");
-      title.textContent = t.label;
-      const value = el("div", "value-box-value");
-      value.textContent = t.value;
-      box.appendChild(title);
-      box.appendChild(value);
-      if (t.sub != null) {
-        const sub = el("div", "value-box-sub");
-        sub.textContent = t.sub;
-        box.appendChild(sub);
+    const tileByLabel = new Map(db.content.glance_tiles.map(tile => [tile.label, tile]));
+    for (const key of OVERVIEW_TILE_ORDER) {
+      let box;
+      if (key === ACCESS_CARD) box = publicationAccessCard();
+      else if (key === METRICS_CARD) box = outcomeMetricsCard();
+      else if (key === GEO_SCOPE_CARD) box = geoScopeCard();
+      else if (key === FUNDERS_CARD) box = fundersCard();
+      else {
+        const tile = tileByLabel.get(key);
+        if (!tile) continue;
+        const copy = OVERVIEW_TILE_COPY[key] || {};
+        box = el("div", "value-box");
+        const title = el("div", "value-box-title");
+        title.textContent = copy.label || tile.label;
+        const value = el("div", "value-box-value");
+        value.textContent = tile.value;
+        box.append(title, value);
+        const subText = "sub" in copy ? copy.sub : tile.sub;
+        if (subText != null) {
+          const sub = el("div", "value-box-sub");
+          sub.textContent = subText;
+          box.appendChild(sub);
+        }
       }
-      makeOverviewCardInteractive(box, t.label);
+      if (WIDE_TILES.has(key)) box.classList.add("tile-wide");
+      if (NARROW_TILES.has(key)) box.classList.add("tile-narrow");
+      makeOverviewCardInteractive(box, key);
       wrap.appendChild(box);
     }
 
@@ -2061,13 +2232,18 @@ if (typeof document !== "undefined") {
     });
     $("fig-modal-close").addEventListener("click", closeModal);
     $("fig-modal").addEventListener("click", e => { if (e.target === $("fig-modal")) closeModal(); });
+    const closeOaHelp = () => $("oa-help-modal").classList.remove("open");
+    $("oa-help-close").addEventListener("click", closeOaHelp);
+    $("oa-help-modal").addEventListener("click", e => {
+      if (e.target === $("oa-help-modal")) closeOaHelp();
+    });
     $("fig-zoom-out").addEventListener("click", () => setFigureZoom(figureZoom - 0.25));
     $("fig-zoom-reset").addEventListener("click", () => setFigureZoom(1));
     $("fig-zoom-in").addEventListener("click", () => setFigureZoom(figureZoom + 0.25));
     $("study-modal-close").addEventListener("click", closeStudyModal);
     $("study-modal").addEventListener("click", e => { if (e.target === $("study-modal")) closeStudyModal(); });
     document.addEventListener("keydown", e => {
-      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeThematicMenu(); }
+      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeOaHelp(); closeThematicMenu(); }
     });
     $("gal-back").addEventListener("click", goBackFromSection);
     for (const b of document.querySelectorAll("[data-trend-mode]")) {
