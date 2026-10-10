@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-10-cards";
+const BUILD = "2026-10-10-trends";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -1190,13 +1190,9 @@ if (typeof document !== "undefined") {
     ];
     const hw = $("ov-hero-imgs");
     hw.textContent = "";
-    heroes.forEach((h, i) => {
+    heroes.forEach(h => {
       const f = FIG_INDEX[h.file];
       const card = el("div", "card overview-analysis-card");
-      // An odd last card spans the full row.
-      if (heroes.length % 2 === 1 && i === heroes.length - 1) {
-        card.classList.add("overview-analysis-card-wide");
-      }
       const head = el("div", "card-header overview-card-head");
       const name = el("span");
       name.textContent = f ? f.title : h.alt;
@@ -1252,6 +1248,22 @@ if (typeof document !== "undefined") {
     const cumulative = overviewTrendMode === "cumulative";
     let running = 0;
     const y = cumulative ? annual.map(n => (running += n)) : annual;
+    const cum = [];
+    running = 0;
+    for (const n of annual) cum.push(running += n);
+    const total = cum[cum.length - 1];
+    let halfIdx = 0;
+    for (let i = 0; i < years.length; i++) {
+      if (total - (i > 0 ? cum[i - 1] : 0) >= total / 2) halfIdx = i;
+    }
+    const earlyN = Math.min(3, annual.length);
+    const earlyRate = annual.slice(0, earlyN).reduce((a, b) => a + b, 0) / earlyN;
+    const fullIdx = years.map((year, i) => i).filter(i => years[i] !== 2026);
+    const lastFull = fullIdx[fullIdx.length - 1];
+    const ref = fullIdx.map(i => earlyRate * (i + 1));
+    const growth = total / Math.max(1, cum[0]);
+    const vsRef = cum[lastFull] / ref[ref.length - 1];
+    const earlySpan = years[0] + "–" + String(years[earlyN - 1]).slice(2);
     // Light-to-strong blue across the years for the markers.
     const lerp = (a, b, t) => Math.round(a + (b - a) * t);
     const span = Math.max(1, years[years.length - 1] - years[0]);
@@ -1259,16 +1271,91 @@ if (typeof document !== "undefined") {
       const t = (yr - years[0]) / span;
       return `rgb(${lerp(126, 26, t)},${lerp(166, 78, t)},${lerp(212, 138, t)})`;
     });
-    window.Plotly.react("ov-trend", [{
+    const traces = [{
       x: years, y,
       mode: "lines+markers", type: "scatter", showlegend: false,
       line: { color: ACCENT, width: 3, shape: "spline", smoothing: 0.45 },
       marker: { color: markerColors, size: 7, line: { color: "white", width: 1 } },
       fill: "tozeroy", fillcolor: "rgba(31,95,168,.12)",
       hovertemplate: (cumulative ? "By %{x}" : "%{x}") + ": %{y:,} studies<extra></extra>"
-    }], {
+    }];
+    const partialIndex = years.indexOf(2026);
+    const narrowTrend = $("ov-trend").clientWidth < 520;
+    const annotations = [];
+    if (partialIndex >= 0) {
+      traces.push({
+        x: [2026], y: [y[partialIndex]],
+        mode: "markers", type: "scatter", showlegend: false, cliponaxis: false,
+        marker: { symbol: "triangle-up", color: "#b08d3e", size: 13, line: { color: "white", width: 1 } },
+        hovertemplate: (cumulative ? "By 2026" : "2026") +
+          ": %{y:,} studies<br>Partial year: searches were run in mid-2026<extra></extra>"
+      });
+      annotations.push({
+        x: 2026, y: y[partialIndex], xref: "x", yref: "y",
+        text: "<b>2026: partial year</b><br>searches run mid-2026",
+        showarrow: true, arrowhead: 0, arrowwidth: 1.2, arrowcolor: "#c9a85f",
+        ax: narrowTrend ? -16 : 22, ay: narrowTrend ? -36 : 0,
+        xanchor: narrowTrend ? "right" : "left", align: narrowTrend ? "right" : "left",
+        font: { color: "#6f5420", size: 12.5 },
+        bgcolor: "#fbf5e6", bordercolor: "#dcc48f", borderwidth: 1, borderpad: 5
+      });
+    }
+    const chips = $("ov-trend-chips");
+    chips.textContent = "";
+    chips.hidden = !cumulative;
+    const shapes = [];
+    if (cumulative) {
+      for (const [value, text] of [
+        [growth.toFixed(1) + "×", "growth in cumulative studies since " + years[0]],
+        [String(years[halfIdx]), "half of all " + fmtNum(total) + " studies were published in " +
+          years[halfIdx] + " or later"],
+        [vsRef.toFixed(1) + "×", "more studies by " + years[lastFull] +
+          " than if output had stayed at its " + earlySpan + " rate"]
+      ]) {
+        const chip = el("div", "trend-chip");
+        const valueNode = el("strong");
+        valueNode.textContent = value;
+        const textNode = el("span");
+        textNode.textContent = text;
+        chip.append(valueNode, textNode);
+        chips.appendChild(chip);
+      }
+      traces.unshift({
+        x: fullIdx.map(i => years[i]), y: ref,
+        mode: "lines", type: "scatter", showlegend: false,
+        line: { color: "#8a93a0", width: 1.6, dash: "dash" },
+        hovertemplate: "If output had stayed at the " + earlySpan + " rate: %{y:,.0f}<extra></extra>"
+      });
+      const refLabelIdx = Math.round(ref.length * 0.62);
+      annotations.push({
+        x: years[fullIdx[refLabelIdx]], y: ref[refLabelIdx], xref: "x", yref: "y",
+        text: "if output had stayed at its " + earlySpan + " rate",
+        showarrow: false, yanchor: "bottom", yshift: 4, font: { color: "#6b7280", size: 11.5 }
+      }, {
+        x: years[halfIdx], y: cum[halfIdx], xref: "x", yref: "y",
+        text: "<b>Half of all studies</b><br>published " + years[halfIdx] + " or later",
+        showarrow: true, arrowhead: 0, arrowwidth: 1.2, arrowcolor: "#1f5fa8",
+        ax: -95, ay: -38, align: "left",
+        font: { color: "#1a4e8a", size: 12 },
+        bgcolor: "#f0f6fc", bordercolor: "#b9d0ea", borderwidth: 1, borderpad: 5
+      });
+      shapes.push({
+        type: "line", xref: "x", yref: "y", x0: years[halfIdx], x1: years[halfIdx],
+        y0: 0, y1: cum[halfIdx], line: { color: "#1f5fa8", width: 1, dash: "dot" }
+      });
+      $("ov-trend-note").textContent = "Running total of studies by publication year. Dashed line: " +
+        "where the total would be if yearly output had stayed at its " + earlySpan + " average. " +
+        "2026 is a partial year (searches were run in mid-2026).";
+    } else {
+      $("ov-trend-note").textContent = "Annual studies by publication year. 2026 is a partial year: " +
+        "the literature searches were run in mid-2026, so only studies published before then are included.";
+    }
+    window.Plotly.react("ov-trend", traces, {
       font: BASE_FONT,
-      margin: { t: 10, b: 40, l: 60, r: 20 },
+      margin: { t: 10, b: 40, l: narrowTrend ? 48 : 60,
+               r: partialIndex >= 0 && !narrowTrend ? 175 : 20 },
+      annotations,
+      shapes,
       xaxis: { showgrid: false, range: [years[0] - 0.4, years[years.length - 1] + 0.4], dtick: 2 },
       yaxis: { title: cumulative ? "cumulative studies" : "studies", tickformat: ",d",
                gridcolor: "#eeebe3", zeroline: false, rangemode: "tozero" },
