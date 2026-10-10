@@ -30,6 +30,24 @@ REGION_TAG_POS = {
     "NAC": (-100, 45), "LCN": (-62, -12), "ECS": (62, 56), "MEA": (30, 24),
     "SSF": (20, -6), "SAS": (78, 22), "EAS": (110, 32),
 }
+# Shape-only additions for the card silhouettes: World Bank members missing
+# from the map's country data, so the outlines have no holes. Not counted.
+SILHOUETTE_EXTRA = {
+    "EAS": ["FJI", "BRN", "SLB", "VUT"],
+    "ECS": ["KAZ", "ISL", "LUX", "MNE"],
+    "LCN": ["CUB", "GUY", "SUR", "BLZ", "BHS"],
+    "MEA": ["ISR", "PSE", "MLT"],
+    "NAC": [],
+    "SAS": ["BTN"],
+    "SSF": ["CPV", "COM"],
+}
+# Fixed (lon, lat) windows for the silhouettes; fitting to the countries
+# misbehaves where Russia and the Pacific cross the 180° meridian.
+SILHOUETTE_VIEW = {
+    "EAS": ((70, 180), (-48, 55)), "ECS": ((-25, 180), (34, 78)), "LCN": ((-118, -34), (-56, 33)),
+    "MEA": ((-18, 63), (11, 40)), "NAC": ((-170, -52), (18, 72)), "SAS": ((60, 93), (5, 39)),
+    "SSF": ((-26, 58), (-35, 26)),
+}
 # 14 harmonised disease groups -> GBD level-1 cause groups.
 DISEASE_CATEGORY = {
     "Infectious": "Communicable", "Maternal & neonatal": "Communicable",
@@ -44,10 +62,9 @@ PLOTLY_SRI = "sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEuln
 
 # Explanations behind the "?" buttons.
 NOTES = {
-    "countries": "169 is the number of countries named by at least one study across the whole period (2010 to the latest data). "
-                 "It is not available for a shorter period from the web data. Other figures on the site count 177 or 187 "
-                 "under different definitions (World Bank countries; countries and territories), so this definition still needs confirming.",
-    "countries_range": "The count of countries and territories is only available for the full period in the web data, not for a shorter period.",
+    "countries": "Countries in the map's country data named by at least one study in the period. Studies also name some countries "
+                 "and territories outside that list (for example Kazakhstan, Israel and Cuba), so the full number named is higher; "
+                 "it is being checked and is not available from the map's data.",
     "model": "Share of studies with a clear label that are model-based (decision-analytic model) rather than measured in patients. "
              "Studies whose approach is unclear (about 4%) are left out of the base, as on the site's Overview.",
     "utility": "Share of studies that report QALYs. The web data codes QALY use only; other utility-based measures (e.g. DALYs) are not coded per study.",
@@ -257,8 +274,8 @@ def render(v):
     period = f"{start}–{end}"
     kpis = [
         (fmt_int(v["n_studies"]), f"health economic evaluations, {period}", None),
-        (fmt_int(v["meta"]["n_countries_named"]) if v["full_range"] else "xx",
-         "countries and territories with at least one", "countries" if v["full_range"] else "countries_range"),
+        (fmt_int(sum(1 for i in v["per_country"] if v["per_country"][i] > 0)),
+         "countries profiled in the map with at least one", "countries"),
         (pct(v["qaly_all"]), "report a utility measure such as the QALY", "utility"),
         (pct(v["model_all"]), "are model-based", "model"),
         (pct(v["oa_known"]), "are open access", "open_access"),
@@ -277,6 +294,7 @@ def render(v):
         qaly = r["qaly"]
         cards.append(f"""
       <div class="card" style="--accent:{_accent(r['pos'])}">
+        <div class="sil" id="sil-{r['code']}" aria-hidden="true"></div>
         <h3>{html.escape(r['name'])}</h3>
         <div class="tagline"><span class="tag">{r['code']}</span> n = {fmt_int(r['n'])}</div>
         <div class="row row-scale">
@@ -296,6 +314,8 @@ def render(v):
         "rows": v["map_rows"], "zmin": v["zmin"], "zmax": v["zmax"], "median": v["median"],
         "colours": MAP_COLOURS,
         "tags": [{"code": c, "lon": REGION_TAG_POS[c][0], "lat": REGION_TAG_POS[c][1]} for c in REGION_ORDER],
+        "silhouettes": {c: {"isos": sorted(v["reg_countries"][c]) + SILHOUETTE_EXTRA[c],
+                            "lon": SILHOUETTE_VIEW[c][0], "lat": SILHOUETTE_VIEW[c][1]} for c in REGION_ORDER},
     }
     built = v["meta"]["built"]
     return TEMPLATE.format(
@@ -353,7 +373,8 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 .lab strong {{ display:block; color:var(--ink); font:800 15px/1.1 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; text-transform:uppercase; margin-bottom:4px; }}
 .lab .key {{ display:flex; align-items:center; gap:5px; }}
 .lab .key i {{ width:9px; height:9px; border-radius:2px; display:inline-block; }}
-.wrap {{ --rows: 40px 24px 58px 150px 140px 92px 104px; }}
+.wrap {{ --rows: 62px 40px 24px 58px 150px 140px 92px 104px; }}
+.sil {{ height:58px; }}
 .card {{ display:grid; grid-template-rows:var(--rows); background:var(--card); border-radius:10px; border-top:5px solid var(--accent); padding:12px 10px; min-width:0; }}
 .card h3 {{ font:800 14px/1.15 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; text-transform:uppercase; text-align:center; margin:0; align-self:center; }}
 .tag {{ background:var(--ink); color:#fff; font-size:10px; font-weight:700; padding:2px 5px; border-radius:3px; }}
@@ -397,7 +418,7 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
   <div class="sec"><b>B</b><h2>Profile of evaluations by region</h2><span>Each card matches the black region tag on the map</span></div>
   <div class="regions">
     <div class="labels">
-      <div></div><div></div>
+      <div></div><div></div><div></div>
       <div class="lab">Marker shows where each region falls on the map's colour scale {q_intensity}</div>
       <div class="lab"><strong>Disease focus {q_disease}</strong>Share of disease-coded evaluations. 1 dot = 1%
         <span class="key"><i style="background:#3f8f80"></i>Communicable</span>
@@ -453,6 +474,18 @@ const MAP = {map_json};
            lataxis: {{ range: [-58, 85] }} }}
   }}, {{ responsive: true, displayModeBar: false }});
 }})();
+// Region silhouettes above each card: the region's countries filled black
+// in a fixed window (same country outlines as the main map).
+for (const [code, sil] of Object.entries(MAP.silhouettes)) {{
+  window.Plotly.newPlot("sil-" + code, [{{
+    type: "choropleth", locations: sil.isos, z: sil.isos.map(() => 1), showscale: false, hoverinfo: "skip",
+    colorscale: [[0, "#1d1d1d"], [1, "#1d1d1d"]], marker: {{ line: {{ color: "#1d1d1d", width: 0.4 }} }}
+  }}], {{
+    margin: {{ t: 0, b: 0, l: 0, r: 0 }}, paper_bgcolor: "rgba(0,0,0,0)",
+    geo: {{ visible: false, projection: {{ type: "mercator" }}, bgcolor: "rgba(0,0,0,0)",
+           lonaxis: {{ range: sil.lon }}, lataxis: {{ range: sil.lat }} }}
+  }}, {{ staticPlot: true, responsive: true }});
+}}
 // "?" notes: click to open, click elsewhere or Esc to close.
 (function () {{
   const pop = document.getElementById("pop");

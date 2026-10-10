@@ -1048,7 +1048,14 @@ if (typeof document !== "undefined") {
   const OVERVIEW_TILE_COPY = {
     "Eligible full evaluations": { label: "Full health economic evaluations captured in the map" },
     "Years covered": { label: "Publication years covered" },
-    "Countries studied": { label: "Countries covered by studies", sub: "Across the global evidence base" },
+    // 153 = countries in the map's country data named by at least one study.
+    // Replaces content.json's 169 ("named in extracted geography"), which the
+    // study data cannot reproduce and other figures contradict (177, 187).
+    "Countries studied": {
+      label: "Countries profiled in the map",
+      sub: "Countries with at least one study",
+      value: () => fmtNum(db.countries.filter(r => r.studies > 0).length)
+    },
     "Journals": { sub: "Among studies with journal details available" }
   };
   const PLACEHOLDER_PCT = "XX%";
@@ -1275,7 +1282,7 @@ if (typeof document !== "undefined") {
         const title = el("div", "value-box-title");
         title.textContent = copy.label || tile.label;
         const value = el("div", "value-box-value");
-        value.textContent = tile.value;
+        value.textContent = copy.value ? copy.value() : tile.value;
         box.append(title, value);
         const subText = "sub" in copy ? copy.sub : tile.sub;
         if (subText != null) {
@@ -2518,6 +2525,15 @@ if (typeof document !== "undefined") {
     $("oa-help-modal").addEventListener("click", e => {
       if (e.target === $("oa-help-modal")) closeOaHelp();
     });
+    // "?" on the Explorer's "Countries in view" tile: which countries it counts.
+    const closeCountriesViewHelp = () => $("countries-view-help-modal").classList.remove("open");
+    for (const b of document.querySelectorAll(".countries-view-help-button")) {
+      b.addEventListener("click", () => $("countries-view-help-modal").classList.add("open"));
+    }
+    $("countries-view-help-close").addEventListener("click", closeCountriesViewHelp);
+    $("countries-view-help-modal").addEventListener("click", e => {
+      if (e.target === $("countries-view-help-modal")) closeCountriesViewHelp();
+    });
     // "?" beside the country pickers: which countries the country views cover.
     const closeCountryHelp = () => $("country-help-modal").classList.remove("open");
     for (const b of document.querySelectorAll(".country-help-button")) {
@@ -2534,7 +2550,7 @@ if (typeof document !== "undefined") {
     $("study-modal-close").addEventListener("click", closeStudyModal);
     $("study-modal").addEventListener("click", e => { if (e.target === $("study-modal")) closeStudyModal(); });
     document.addEventListener("keydown", e => {
-      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeOaHelp(); closeCountryHelp(); closeThematicMenu(); }
+      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeOaHelp(); closeCountryHelp(); closeCountriesViewHelp(); closeThematicMenu(); }
     });
     $("gal-back").addEventListener("click", goBackFromSection);
     for (const b of document.querySelectorAll("[data-trend-mode]")) {
