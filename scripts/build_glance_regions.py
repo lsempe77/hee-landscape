@@ -62,12 +62,10 @@ PLOTLY_SRI = "sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEuln
 
 # Explanations behind the "?" buttons.
 NOTES = {
-    "countries": "Countries in the map's country data named by at least one study in the period. Studies also name some countries "
-                 "and territories outside that list (for example Kazakhstan, Israel and Cuba), so the full number named is higher; "
-                 "it is being checked and is not available from the map's data.",
+    "countries": "Countries in the map's country data named by at least one study in the period.",
     "model": "Share of studies with a clear label that are model-based (decision-analytic model) rather than measured in patients. "
              "Studies whose approach is unclear (about 4%) are left out of the base, as on the site's Overview.",
-    "utility": "Share of studies that report QALYs. The web data codes QALY use only; other utility-based measures (e.g. DALYs) are not coded per study.",
+    "utility": "Share of studies that report QALYs.",
     "open_access": "Share of studies with a known open-access status (from OpenAlex, matched by DOI). Studies whose status could not be found are left out of the base.",
     "lmic": "Share of studies naming at least one country that name at least one low- or middle-income country (World Bank income groups). Studies naming no country are left out of the base.",
     "intensity": "Studies naming at least one country in the region, divided by the region's total disease burden (GBD 2023 all-cause DALYs, summed over its countries), per 100,000 DALYs. "
@@ -84,12 +82,10 @@ NOTES = {
                     "or the study-level research themes from the topic model (which name diseases such as malaria, HIV and dementia). "
                     "Until then, the top three of the 14 broad groups could be shown instead.",
     "utility_region": "Share of the region's studies that report QALYs. The red line is the share across all studies.",
-    "trend": "Cumulative share of the region's countries (the 155 countries in the map's country data; mostly countries of at least "
-             "1 million people, but not exactly, e.g. Kazakhstan, Israel and Cuba are missing; the list is being checked) "
+    "trend": "Cumulative share of the region's countries (the 155 countries in the map's country data) "
              "named by at least one study, or by two or more, by each year. The grey line is the same for all regions combined. "
              "The final, partial year of data is left out.",
     "search_dates": "Search dates are not in the web data; they need to come from the review protocol.",
-    "authors": "Author and institution details for the citation still need to be decided.",
 }
 
 
@@ -325,7 +321,7 @@ def render(v):
         plotly_src=PLOTLY_SRC, plotly_sri=PLOTLY_SRI,
         q_intensity=help_btn("intensity"), q_disease=help_btn("disease"),
         q_top=help_btn("top_diseases"), q_utility=help_btn("utility_region"),
-        q_trend=help_btn("trend"), q_search=help_btn("search_dates"), q_authors=help_btn("authors"),
+        q_trend=help_btn("trend"), q_search=help_btn("search_dates"),
         n_countries=len(v["countries"]), trend_end=v["trend_end"],
     )
 
@@ -406,7 +402,7 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 </head>
 <body>
 <div class="wrap">
-  <div class="eyebrow"><span>HEE evidence map · {q_authors} [Series / journal]</span><span class="badge">Draft · data as of {built}</span></div>
+  <div class="eyebrow"><span>HEE evidence map</span><span class="badge">Draft · data as of {built}</span></div>
   <h1>(Un)equal weight: Health economic research output compared to disease burden</h1>
   <p class="lede">Research intensity is concentrated in high-income countries, where systems are more likely to be in place to evaluate evidence and use it to inform benefit decisions.</p>
 
@@ -437,7 +433,6 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
       <p>Regions: World Bank (EAS East Asia &amp; Pacific, ECS Europe &amp; Central Asia, LCN Latin America &amp; Caribbean, MEA Middle East &amp; North Africa, NAC North America, SAS South Asia, SSF Sub-Saharan Africa). Map and trend lines cover the {n_countries} countries in the map's country data; trends run to {trend_end}.</p>
       <p>Burden: GBD 2023 all-cause DALYs. Utility measure: QALY reported. Disease groups: 14 harmonised groups from MeSH, grouped into GBD level-1 causes. Map: Robinson projection; grey = no eligible evaluation or no country data.</p>
     </div>
-    <div style="text-align:right;white-space:nowrap">[Authors / institution]<br>[Source · Year · DOI]</div>
   </div>
 </div>
 <div id="pop" role="dialog"></div>
