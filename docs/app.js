@@ -2526,15 +2526,6 @@ if (typeof document !== "undefined") {
     $("oa-help-modal").addEventListener("click", e => {
       if (e.target === $("oa-help-modal")) closeOaHelp();
     });
-    // "?" on the Explorer's "Countries in view" tile: which countries it counts.
-    const closeCountriesViewHelp = () => $("countries-view-help-modal").classList.remove("open");
-    for (const b of document.querySelectorAll(".countries-view-help-button")) {
-      b.addEventListener("click", () => $("countries-view-help-modal").classList.add("open"));
-    }
-    $("countries-view-help-close").addEventListener("click", closeCountriesViewHelp);
-    $("countries-view-help-modal").addEventListener("click", e => {
-      if (e.target === $("countries-view-help-modal")) closeCountriesViewHelp();
-    });
     // "?" beside the country pickers: which countries the country views cover.
     const closeCountryHelp = () => $("country-help-modal").classList.remove("open");
     for (const b of document.querySelectorAll(".country-help-button")) {
@@ -2551,7 +2542,7 @@ if (typeof document !== "undefined") {
     $("study-modal-close").addEventListener("click", closeStudyModal);
     $("study-modal").addEventListener("click", e => { if (e.target === $("study-modal")) closeStudyModal(); });
     document.addEventListener("keydown", e => {
-      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeOaHelp(); closeCountryHelp(); closeCountriesViewHelp(); closeThematicMenu(); }
+      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeOaHelp(); closeCountryHelp(); closeThematicMenu(); }
     });
     $("gal-back").addEventListener("click", goBackFromSection);
     for (const b of document.querySelectorAll("[data-trend-mode]")) {

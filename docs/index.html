@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-11-countries153">
+<link rel="stylesheet" href="styles.css?v=2026-10-11-cvhelp-off">
 </head>
 <body>
 
@@ -154,7 +154,7 @@
       <div class="explorer-main">
         <div class="grid-4 summary-tiles" id="x-tiles">
           <div class="value-box bg-primary"><div class="value-box-title">Studies in view</div><div class="value-box-value" id="v-studies">—</div></div>
-          <div class="value-box bg-info"><div class="value-box-title picker-label-row">Countries in view <button class="metric-help-button countries-view-help-button" type="button" title="Which countries are counted?" aria-label="Explain which countries are counted">?</button></div><div class="value-box-value" id="v-countries">—</div></div>
+          <div class="value-box bg-info"><div class="value-box-title">Countries in view</div><div class="value-box-value" id="v-countries">—</div></div>
           <div class="value-box bg-secondary"><div class="value-box-title">Model-based</div><div class="value-box-value" id="v-model">—</div></div>
           <div class="value-box bg-success"><div class="value-box-title">Uses a QALY</div><div class="value-box-value" id="v-qaly">—</div></div>
         </div>
@@ -356,22 +356,6 @@
   </div>
 </div>
 
-<div class="modal-backdrop" id="countries-view-help-modal">
-  <div class="modal-dialog info-modal-dialog" role="dialog" aria-modal="true"
-       aria-labelledby="countries-view-help-title">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="countries-view-help-title">Which countries are counted?</h3>
-        <button class="modal-close" id="countries-view-help-close" type="button">Close</button>
-      </div>
-      <div class="modal-body info-modal-body">
-        <p><strong>Countries in view</strong> counts the countries named by at least one of the studies you are looking at, out of the <strong>155 countries in the map's country data</strong>. With no filters set, that is <strong>153</strong>: Mauritius and Eritrea are named by no study.</p>
-        <p>Studies also name some countries that are not in the map's country data (for example Kazakhstan, Israel and Cuba). Those studies still count in <strong>Studies in view</strong>, but the countries themselves cannot be counted, mapped or filtered here. The full number of countries named by studies is being checked.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="modal-backdrop" id="country-help-modal">
   <div class="modal-dialog info-modal-dialog" role="dialog" aria-modal="true"
        aria-labelledby="country-help-title">
@@ -415,7 +399,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-11-countries153"></script>
+<script type="module" src="app.js?v=2026-10-11-cvhelp-off"></script>
 
 </body>
 </html>
