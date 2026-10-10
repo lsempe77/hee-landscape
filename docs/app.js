@@ -1003,10 +1003,14 @@ if (typeof document !== "undefined") {
     title.textContent = "Publication access";
     const openCount = countLevel("oa_label", "Open access");
     const knownCount = openCount + countLevel("oa_label", "Not open");
+    // No DOI/URL field in the web data: a known OA status means OpenAlex matched
+    // the study's DOI, so this is a lower bound on DOI availability.
+    const totalCount = db.studies.oa_label.length;
     const metrics = el("div", "publication-access-metrics");
 
     for (const [label, valueText, note] of [
-      ["DOI or URL available", PLACEHOLDER_PCT, "Of all studies"],
+      ["DOI found in OpenAlex", fmtPct(totalCount ? 100 * knownCount / totalCount : null),
+        "Of all " + fmtNum(totalCount) + " studies"],
       ["Available open access", fmtPct(knownCount ? 100 * openCount / knownCount : null),
         "Of " + fmtNum(knownCount) + " studies with a known open-access status"]
     ]) {
@@ -1103,15 +1107,25 @@ if (typeof document !== "undefined") {
   function outcomeMetricsCard() {
     const qalyPct = 100 * countLevel("qaly_label", "Uses QALY") / Math.max(1, db.nStudies);
     return barRowsCard("", "Outcome metrics used in studies",
-      [["QALYs", qalyPct], ["DALYs", null], ["Other metrics", null]],
-      "Share of all studies. A study may report more than one metric.");
+      [["QALYs", qalyPct]],
+      "Share of all studies.");
   }
 
+  // The web data has no funder field; the ~27% coverage is the figure quoted in
+  // the funder figure captions (content.json), so it is shown as text, not computed.
   function fundersCard() {
-    return barRowsCard("funding-overview-card", "Who funds the evidence?",
-      [["Government and multilateral", null], ["Academic and non-profit", null],
-        ["Private companies", null], ["Unclassified", null]],
-      "Among XX studies reporting a funder. Categories may overlap.");
+    const box = el("div", "value-box funders-card");
+    const title = el("div", "value-box-title");
+    title.textContent = "Who funds the evidence?";
+    const value = el("div", "value-box-value");
+    value.textContent = "~27%";
+    const sub = el("div", "value-box-sub");
+    sub.textContent = "of the " + fmtNum(db.nStudies) +
+      " studies name at least one funder, so funder analysis is a floor, not a census.";
+    const more = el("span", "funders-card-link");
+    more.textContent = "See funder analysis →";
+    box.append(title, value, sub, more);
+    return box;
   }
 
   function makeOverviewCardInteractive(box, key) {
@@ -1135,6 +1149,14 @@ if (typeof document !== "undefined") {
     const m = db.dict.meta;
     const built = $("nav-built");
     if (built) built.textContent = "bundle " + m.built;
+
+    // Footer: study count and data build date ("2026-10-08" -> "8 October 2026").
+    $("footer-n").textContent = fmtNum(db.nStudies);
+    const [yy, mm, dd] = String(m.built).split("-").map(Number);
+    if (yy && mm && dd) {
+      $("footer-date").textContent = new Date(Date.UTC(yy, mm - 1, dd))
+        .toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+    }
 
     // Hero paragraph: ordered segments from content.json (§15.2). Each segment
     // becomes a <span>/<strong>/<em> filled via textContent — no innerHTML.
@@ -1855,6 +1877,8 @@ if (typeof document !== "undefined") {
     }
     new window.TomSelect(sel, {
       placeholder: "Pick a country…",
+      // Tom Select lists only 50 options by default; show every country.
+      maxOptions: null,
       onChange: val => {
         if (!val) return;
         state.country = val;
@@ -2087,6 +2111,8 @@ if (typeof document !== "undefined") {
     }
     landSelect = new window.TomSelect(sel, {
       placeholder: "Pick a country…",
+      // Tom Select lists only 50 options by default; show every country.
+      maxOptions: null,
       // Render the list in <body> so card/tab overflow cannot clip it.
       dropdownParent: "body",
       onChange: val => { if (val) showCountryMix(val); }
