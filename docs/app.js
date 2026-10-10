@@ -852,6 +852,7 @@ if (typeof document !== "undefined") {
   }
 
   let figureZoom = 1;
+  let modalFigure = null;
 
   function setFigureZoom(nextZoom) {
     figureZoom = Math.min(3, Math.max(0.5, nextZoom));
@@ -864,6 +865,7 @@ if (typeof document !== "undefined") {
   function openModal(file) {
     const f = FIG_INDEX[file];
     if (!f) return;
+    modalFigure = f;
     $("fig-modal-title").textContent = f.title;
     const img = $("fig-modal-img");
     img.src = "figures/" + f.file;
@@ -872,6 +874,71 @@ if (typeof document !== "undefined") {
     setFigureZoom(1);
     $("fig-zoom-viewport").scrollTo(0, 0);
     $("fig-modal").classList.add("open");
+  }
+
+  // Citation printed under a downloaded figure; the date is the day of download.
+  function figureCitation(f) {
+    const year = String(db.dict.meta.built).slice(0, 4);
+    const url = window.location.href.split("#")[0];
+    const today = new Date().toLocaleDateString("en-GB",
+      { day: "numeric", month: "long", year: "numeric" });
+    return "Source: 3ie (" + year + "). Health Economic Evaluation (HEE) Evidence Map: " +
+      f.title + ". " + url + ". Downloaded " + today + ".";
+  }
+
+  function wrapCanvasText(ctx, text, maxWidth) {
+    const lines = [];
+    let line = "";
+    for (const word of text.split(" ")) {
+      const next = line ? line + " " + word : word;
+      if (line && ctx.measureText(next).width > maxWidth) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = next;
+      }
+    }
+    if (line) lines.push(line);
+    return lines;
+  }
+
+  // Draws the figure at full resolution onto a canvas with the citation in a
+  // strip underneath, then saves it as PNG (figures are same-origin, so the
+  // canvas is not tainted).
+  async function downloadFigure() {
+    const f = modalFigure;
+    if (!f) return;
+    const img = new Image();
+    img.src = "figures/" + f.file;
+    try { await img.decode(); } catch (e) { return; }
+    const w = img.naturalWidth, h = img.naturalHeight;
+    const fontSize = Math.max(14, Math.round(w * 0.011));
+    const pad = Math.round(fontSize * 1.4);
+    const lineHeight = Math.round(fontSize * 1.45);
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    const font = fontSize + "px Inter, 'Segoe UI', Arial, sans-serif";
+    ctx.font = font;
+    const lines = wrapCanvasText(ctx, figureCitation(f), w - 2 * pad);
+    canvas.width = w;
+    canvas.height = h + 2 * pad + lines.length * lineHeight;
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, w, h);
+    ctx.font = font;
+    ctx.fillStyle = "#5b6472";
+    ctx.textBaseline = "top";
+    lines.forEach((l, i) => ctx.fillText(l, pad, h + pad + i * lineHeight));
+    canvas.toBlob(blob => {
+      if (!blob) return;
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = f.file.replace(/\.[^.]+$/, "") + ".png";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    }, "image/png");
   }
 
   function closeModal() {
@@ -2408,6 +2475,7 @@ if (typeof document !== "undefined") {
     $("fig-zoom-out").addEventListener("click", () => setFigureZoom(figureZoom - 0.25));
     $("fig-zoom-reset").addEventListener("click", () => setFigureZoom(1));
     $("fig-zoom-in").addEventListener("click", () => setFigureZoom(figureZoom + 0.25));
+    $("fig-download").addEventListener("click", downloadFigure);
     $("study-modal-close").addEventListener("click", closeStudyModal);
     $("study-modal").addEventListener("click", e => { if (e.target === $("study-modal")) closeStudyModal(); });
     document.addEventListener("keydown", e => {
