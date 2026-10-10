@@ -1048,9 +1048,10 @@ if (typeof document !== "undefined") {
   const OVERVIEW_TILE_COPY = {
     "Eligible full evaluations": { label: "Full health economic evaluations captured in the map" },
     "Years covered": { label: "Publication years covered" },
-    // 153 = countries in the map's country data named by at least one study.
-    // Replaces content.json's 169 ("named in extracted geography"), which the
-    // study data cannot reproduce and other figures contradict (177, 187).
+    // Countries in the map's country data named by at least one study (153),
+    // counted from the data. The upstream build's 169 ("named in extracted
+    // geography") could not be reproduced and was replaced in content.json and
+    // dict.json; it needs fixing in the pipeline too.
     "Countries studied": {
       label: "Countries profiled in the map",
       sub: "Countries with at least one study",
