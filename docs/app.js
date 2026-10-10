@@ -1940,11 +1940,14 @@ if (typeof document !== "undefined") {
 
   function setupCountryPane() {
     const sel = $("c-picker");
-    for (const r of db.countries) {
+    // Countries A–Z; the profile opens on the first one alphabetically.
+    const sorted = db.countries.slice().sort((a, b) => a.country.localeCompare(b.country));
+    state.country = sorted[0].iso3;
+    for (const r of sorted) {
       const o = document.createElement("option");
       o.value = r.iso3;
       o.textContent = r.country;
-      if (r.iso3 === "IND") o.selected = true;
+      if (r.iso3 === state.country) o.selected = true;
       sel.appendChild(o);
     }
     new window.TomSelect(sel, {
