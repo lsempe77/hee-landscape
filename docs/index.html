@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-10-funders">
+<link rel="stylesheet" href="styles.css?v=2026-10-10-countryhelp">
 </head>
 <body>
 
@@ -220,12 +220,16 @@
     <div class="card" id="land-intro-card"><div class="card-body">
       <h2 class="hero-title">Country landscape</h2>
       <p class="hero-text">This tab is <strong>unfiltered</strong>: it always shows the whole
-        corpus and does not read or change the Explorer filters. Click a bubble to select a
+        corpus and does not read or change the Explorer filters. The panels below open on
+        <strong>all countries</strong> combined (every study that names a country). Click a bubble to select a
         country and fill the two mix panels and the disease-group × evaluation-type grid below.
         Click a heatmap cell to read the studies behind it. You can also search for a country
         with the picker below.</p>
       <div class="control-group land-picker">
-        <label class="control-label" for="land-country">Pick a country</label>
+        <div class="picker-label-row">
+          <label class="control-label" for="land-country">Pick a country</label>
+          <button class="metric-help-button country-help-button" type="button" title="Which countries are included?" aria-label="Explain which countries are included">?</button>
+        </div>
         <select id="land-country" placeholder="Pick a country…"></select>
       </div>
     </div></div>
@@ -266,7 +270,7 @@
     </div>
     <div class="explorer-layout">
       <aside class="sidebar">
-        <h2 class="sidebar-title">Country</h2>
+        <h2 class="sidebar-title picker-label-row">Country <button class="metric-help-button country-help-button" type="button" title="Which countries are included?" aria-label="Explain which countries are included">?</button></h2>
         <div class="control-group">
           <select id="c-picker" placeholder="Pick a country…"></select>
         </div>
@@ -350,6 +354,22 @@
   </div>
 </div>
 
+<div class="modal-backdrop" id="country-help-modal">
+  <div class="modal-dialog info-modal-dialog" role="dialog" aria-modal="true"
+       aria-labelledby="country-help-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="country-help-title">Which countries are included?</h3>
+        <button class="modal-close" id="country-help-close" type="button">Close</button>
+      </div>
+      <div class="modal-body info-modal-body">
+        <p>The country views cover the <strong>155 sovereign countries with at least 1 million people</strong>, where disease-burden (GBD 2023) and health-spending data are available. 153 of them have at least one study; Mauritius and Eritrea have none.</p>
+        <p>Studies name <strong>169 countries</strong> in total. The other 16, mostly microstates, count towards the Overview total but are not profiled here because burden and spending data are not available for them.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal-backdrop" id="oa-help-modal">
   <div class="modal-dialog info-modal-dialog" role="dialog" aria-modal="true"
        aria-labelledby="oa-help-title">
@@ -376,7 +396,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-10-pickers"></script>
+<script type="module" src="app.js?v=2026-10-10-allcountries"></script>
 
 </body>
 </html>

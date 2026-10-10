@@ -665,12 +665,17 @@ export function landscapeCountries(db) {
 // cell(gi, ei) = | CS ∩ dSet(gi) ∩ eSet(ei) |, keyed by the string gi + "|" + ei
 // with both 0-based integer codes. Mix rows sort count-descending, ties
 // alphabetical; the cross grid follows those row/column orders.
+// ALL_COUNTRIES pools every study that names at least one country (a study
+// naming several countries counts once), as a global baseline.
+export const ALL_COUNTRIES = "__ALL__";
+
 export function countryMixes(db, iso3) {
-  const ci = db.countries.findIndex(r => r.iso3 === iso3);
-  if (ci < 0) return null;
+  const all = iso3 === ALL_COUNTRIES;
+  const ci = all ? -1 : db.countries.findIndex(r => r.iso3 === iso3);
+  if (!all && ci < 0) return null;
   const g = db.geo;
   const cs = new Set();
-  for (let i = 0; i < g.s.length; i++) if (g.c[i] === ci) cs.add(g.s[i]);
+  for (let i = 0; i < g.s.length; i++) if (all || g.c[i] === ci) cs.add(g.s[i]);
 
   const lv = db.levels.econ_eval_type;
   const evalCounts = new Map();
@@ -712,7 +717,7 @@ export function countryMixes(db, iso3) {
     }
   }
 
-  const r = db.countries[ci];
+  const r = all ? { country: "All countries", income: null } : db.countries[ci];
   return {
     iso3, country: r.country, income: r.income,
     n_studies: cs.size,
@@ -2103,6 +2108,10 @@ if (typeof document !== "undefined") {
 
   function setupLandscapePicker() {
     const sel = $("land-country");
+    const allOpt = document.createElement("option");
+    allOpt.value = ALL_COUNTRIES;
+    allOpt.textContent = "All countries";
+    sel.appendChild(allOpt);
     for (const r of landscapeCountries(db)) {
       const o = document.createElement("option");
       o.value = r.iso3;
@@ -2122,13 +2131,9 @@ if (typeof document !== "undefined") {
 
   function renderLandscape() {
     renderLandscapeScatter();
-    // Seed the mix panels with the most-studied country so the tab never
-    // opens empty (§2.6).
-    let seed = null, best = -1;
-    for (const r of db.countries) {
-      if (r.studies > best) { best = r.studies; seed = r.iso3; }
-    }
-    if (seed) showCountryMix(seed);
+    // Open on all countries combined, a global baseline to compare each
+    // country against, so the tab never opens empty (§2.6).
+    showCountryMix(ALL_COUNTRIES);
   }
 
   function renderLandscapeScatter() {
@@ -2268,12 +2273,34 @@ if (typeof document !== "undefined") {
     if (landSelect && landSelect.getValue() !== iso3) landSelect.setValue(iso3, true);
   }
 
+  // Study texts live in per-country shards; for "All countries" each study is
+  // read from the shard of the first country it names.
+  let studyFirstIso = null;
+  function firstIsoOf(s) {
+    if (!studyFirstIso) {
+      studyFirstIso = new Map();
+      const g = db.geo;
+      for (let i = 0; i < g.s.length; i++) {
+        if (!studyFirstIso.has(g.s[i])) studyFirstIso.set(g.s[i], db.countries[g.c[i]].iso3);
+      }
+    }
+    return studyFirstIso.get(s);
+  }
+
+  // Cap on "All countries" lists so a cell click never fetches every shard.
+  const ALL_COUNTRIES_LIST_CAP = 100;
+
   async function openStudiesModal(iso3, diseaseLabel, evalLabel, indices) {
-    const rec = db.countries.find(r => r.iso3 === iso3);
+    const all = iso3 === ALL_COUNTRIES;
+    const rec = all ? null : db.countries.find(r => r.iso3 === iso3);
     $("study-modal-title").textContent =
-      (rec ? rec.country : iso3) + " — " + diseaseLabel + " × " + evalLabel;
+      (all ? "All countries" : rec ? rec.country : iso3) + " — " + diseaseLabel + " × " + evalLabel;
+    const shown = all ? indices.slice(0, ALL_COUNTRIES_LIST_CAP) : indices;
     $("study-modal-count").textContent =
-      fmtNum(indices.length) + (indices.length === 1 ? " study" : " studies");
+      fmtNum(indices.length) + (indices.length === 1 ? " study" : " studies") +
+      (shown.length < indices.length
+        ? " · showing the first " + fmtNum(shown.length) + "; pick a country to see all"
+        : "");
     const list = $("study-modal-list");
     list.textContent = "";
     const loading = el("div", "study-item study-loading");
@@ -2281,15 +2308,34 @@ if (typeof document !== "undefined") {
     list.appendChild(loading);
     $("study-modal").classList.add("open");
 
-    const payload = await loadDrill(iso3);
+    let records;
+    if (all) {
+      const byIso = new Map();
+      for (const s of shown) {
+        const k = firstIsoOf(s);
+        if (!byIso.has(k)) byIso.set(k, []);
+        byIso.get(k).push(s);
+      }
+      const isos = [...byIso.keys()];
+      await Promise.all(isos.map(loadDrill));
+      const found = new Map();
+      for (const k of isos) {
+        for (const r of drillRecords(db, k, byIso.get(k))) found.set(r.s, r);
+      }
+      records = shown.map(s => found.get(s) ||
+        { s, title: null, abstract: null, truncated: false, missing: true });
+    } else {
+      const payload = await loadDrill(iso3);
+      records = payload ? drillRecords(db, iso3, indices) : null;
+    }
     list.textContent = "";
-    if (!payload) {
+    if (!records) {
       const miss = el("div", "study-item");
       miss.textContent = "Study texts are not available for this country.";
       list.appendChild(miss);
       return;
     }
-    for (const r of drillRecords(db, iso3, indices)) {
+    for (const r of records) {
       const item = el("div", "study-item");
       const title = el("div", "study-title");
       title.textContent = r.title != null ? r.title : "Title unavailable";
@@ -2350,13 +2396,22 @@ if (typeof document !== "undefined") {
     $("oa-help-modal").addEventListener("click", e => {
       if (e.target === $("oa-help-modal")) closeOaHelp();
     });
+    // "?" beside the country pickers: which countries the country views cover.
+    const closeCountryHelp = () => $("country-help-modal").classList.remove("open");
+    for (const b of document.querySelectorAll(".country-help-button")) {
+      b.addEventListener("click", () => $("country-help-modal").classList.add("open"));
+    }
+    $("country-help-close").addEventListener("click", closeCountryHelp);
+    $("country-help-modal").addEventListener("click", e => {
+      if (e.target === $("country-help-modal")) closeCountryHelp();
+    });
     $("fig-zoom-out").addEventListener("click", () => setFigureZoom(figureZoom - 0.25));
     $("fig-zoom-reset").addEventListener("click", () => setFigureZoom(1));
     $("fig-zoom-in").addEventListener("click", () => setFigureZoom(figureZoom + 0.25));
     $("study-modal-close").addEventListener("click", closeStudyModal);
     $("study-modal").addEventListener("click", e => { if (e.target === $("study-modal")) closeStudyModal(); });
     document.addEventListener("keydown", e => {
-      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeOaHelp(); closeThematicMenu(); }
+      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeOaHelp(); closeCountryHelp(); closeThematicMenu(); }
     });
     $("gal-back").addEventListener("click", goBackFromSection);
     for (const b of document.querySelectorAll("[data-trend-mode]")) {

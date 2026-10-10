@@ -1228,6 +1228,11 @@ table.dataTable thead th.num { text-align: right; }
    overflow and stack above the cards below it. */
 #land-intro-card { position: relative; z-index: 5; overflow: visible; }
 .land-picker { margin-top: .9rem; max-width: 340px; }
+/* Picker label with the "?" country-coverage button beside it. */
+.picker-label-row { display: flex; align-items: center; gap: .4rem; }
+.picker-label-row .control-label,
+.land-picker .picker-label-row .control-label { margin-bottom: 0; }
+.land-picker .picker-label-row { margin-bottom: .35rem; }
 .land-picker .control-label {
   display: block;
   font-size: .78rem;
