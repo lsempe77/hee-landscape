@@ -11,88 +11,48 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-09l">
+<link rel="stylesheet" href="styles.css?v=2026-10-08">
 </head>
 <body>
 
 <nav class="navbar">
-  <!-- Site title hidden: the map is embedded in a larger shared platform.
   <a class="navbar-brand" href="#">HEE evidence map</a>
-  -->
   <div class="navbar-nav">
     <button class="nav-link active" data-tab="overview">Overview</button>
-    <div class="nav-dropdown" id="thematic-nav">
-      <button class="nav-link nav-dropdown-toggle" id="thematic-toggle" data-tab="gallery"
-              aria-expanded="false" aria-controls="thematic-menu">
-        Thematic analysis <span class="nav-chevron" aria-hidden="true"></span>
-      </button>
-      <div class="nav-dropdown-menu" id="thematic-menu" role="menu" hidden></div>
-    </div>
+    <button class="nav-link" data-tab="gallery">Gallery</button>
     <button class="nav-link" data-tab="explorer">Explorer</button>
-    <button class="nav-link" data-tab="countries">Countries</button>
-    <!-- Methods tab removed: methods are provided by the shared platform. -->
+    <button class="nav-link" data-tab="landscape">Country landscape</button>
+    <button class="nav-link" data-tab="country">Country profile</button>
+    <button class="nav-link" data-tab="methods">Methods</button>
   </div>
-  <!-- "bundle" build stamp hidden: provided by the shared platform.
   <span class="navbar-text" id="nav-built"></span>
-  -->
 </nav>
-
-<!-- v2 preview banner (2026-10-07): this build is published beside the live site at /v2/;
-     the link is relative so it resolves to the parent (published) site. -->
-<div class="preview-banner" role="note">Preview: rebuilt on the revised dataset (41,657 studies,
-  October 2026). The published version is at <a href="../">../</a></div>
 
 <main>
 
   <!-- ============ OVERVIEW ============ -->
   <section class="tab-pane active" id="pane-overview">
-    <div class="overview-intro">
+    <div class="card"><div class="card-body">
       <h2 class="hero-title">Where health-economic evidence exists — and where it is missing</h2>
       <!-- Hero paragraph rendered by app.js from content.json `hero` segments
            (DATA_CONTRACT.md §15.2) — no hardcoded copy. -->
       <p class="hero-text" id="ov-hero"></p>
-      <div class="glance-head">
-        <h2 class="glance-title">The evidence base at a glance</h2>
-        <span class="glance-hint"><span class="glance-hint-icon" aria-hidden="true">&#8599;</span>Click a card to open its analysis</span>
-      </div>
-      <div id="ov-tiles"></div>
-    </div>
-    <div class="card overview-trend-card">
-      <div class="card-header overview-trend-header">
-        <span>Publication trends</span>
-        <div class="trend-toggle" role="group" aria-label="Chart view">
-          <button class="trend-toggle-btn active" type="button" data-trend-mode="annual" aria-pressed="true">Per year</button>
-          <button class="trend-toggle-btn" type="button" data-trend-mode="cumulative" aria-pressed="false">Cumulative</button>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="trend-chips" id="ov-trend-chips" hidden></div>
-        <div id="ov-trend" class="plot overview-trend-plot"></div>
-        <p class="overview-trend-note" id="ov-trend-note"></p>
-      </div>
-    </div>
-    <!-- Figure cards built by app.js; titles and "More on …" links come from content.json. -->
-    <div class="overview-analysis-grid" id="ov-hero-imgs"></div>
+      <h2 class="glance-title">The evidence base at a glance</h2>
+      <div class="grid-4" id="ov-tiles"></div>
+    </div></div>
+    <div class="grid-3" id="ov-hero-imgs"></div>
   </section>
 
-  <!-- ============ THEMATIC ANALYSIS ============ -->
+  <!-- ============ GALLERY ============ -->
   <section class="tab-pane" id="pane-gallery">
     <div class="theme-wrap">
       <div id="gal-index">
-        <header class="thematic-hero">
-          <img class="thematic-hero-map" src="figures/fig_worldmap.webp" alt="" aria-hidden="true">
-          <div class="thematic-hero-copy">
-            <div class="thematic-eyebrow">Thematic analysis</div>
-            <h1>Explore key patterns in the health economic evaluation evidence base.</h1>
-          </div>
-        </header>
-        <div class="thematic-grid" id="gal-section-index"></div>
+        <div class="section-index" id="gal-section-index"></div>
       </div>
       <div id="gal-section" style="display:none">
-        <button class="back-link" id="gal-back">&larr; All themes</button>
+        <button class="back-link" id="gal-back">&larr; All sections</button>
         <h2 class="hero-title" id="gal-sec-title"></h2>
         <p class="theme-blurb" id="gal-sec-blurb"></p>
-        <div id="gal-sec-extra"></div>
         <div class="fig-grid" id="gal-sec-grid"></div>
       </div>
     </div>
@@ -158,7 +118,7 @@
       </aside>
 
       <div class="explorer-main">
-        <div class="grid-4 summary-tiles" id="x-tiles">
+        <div class="grid-4">
           <div class="value-box bg-primary"><div class="value-box-title">Studies in view</div><div class="value-box-value" id="v-studies">—</div></div>
           <div class="value-box bg-info"><div class="value-box-title">Countries in view</div><div class="value-box-value" id="v-countries">—</div></div>
           <div class="value-box bg-secondary"><div class="value-box-title">Model-based</div><div class="value-box-value" id="v-model">—</div></div>
@@ -219,10 +179,6 @@
 
   <!-- ============ COUNTRY LANDSCAPE ============ -->
   <section class="tab-pane" id="pane-landscape">
-    <div class="country-view-tabs" role="tablist" aria-label="Country views">
-      <button class="country-view-tab active" type="button" data-country-view="landscape" role="tab" aria-selected="true">Country landscape</button>
-      <button class="country-view-tab" type="button" data-country-view="profile" role="tab" aria-selected="false">Country profile</button>
-    </div>
     <div class="card" id="land-intro-card"><div class="card-body">
       <h2 class="hero-title">Country landscape</h2>
       <p class="hero-text">This tab is <strong>unfiltered</strong>: it always shows the whole
@@ -266,10 +222,6 @@
 
   <!-- ============ COUNTRY PROFILE ============ -->
   <section class="tab-pane" id="pane-country">
-    <div class="country-view-tabs" role="tablist" aria-label="Country views">
-      <button class="country-view-tab" type="button" data-country-view="landscape" role="tab" aria-selected="false">Country landscape</button>
-      <button class="country-view-tab active" type="button" data-country-view="profile" role="tab" aria-selected="true">Country profile</button>
-    </div>
     <div class="explorer-layout">
       <aside class="sidebar">
         <h2 class="sidebar-title">Country</h2>
@@ -279,7 +231,7 @@
         <dl class="fact-list" id="c-facts"></dl>
       </aside>
       <div class="explorer-main">
-        <div class="grid-4 summary-tiles" id="c-tiles">
+        <div class="grid-4">
           <div class="value-box bg-primary"><div class="value-box-title">Eligible studies</div><div class="value-box-value" id="c-n">—</div></div>
           <div class="value-box bg-info"><div class="value-box-title">Per 100k DALYs</div><div class="value-box-value" id="c-daly">—</div></div>
           <div class="value-box bg-secondary"><div class="value-box-title">Per US$1bn spending</div><div class="value-box-value" id="c-spend">—</div></div>
@@ -311,6 +263,106 @@
     </div>
   </section>
 
+  <!-- ============ METHODS ============ -->
+  <section class="tab-pane" id="pane-methods">
+    <!-- SYNC: Methods prose is authored here (single source of truth; see WEBAPP.md) -->
+    <div class="methods-wrap">
+
+      <div class="card">
+        <div class="card-header">What counts as an eligible study</div>
+        <div class="card-body">
+          <p>The map covers <strong>full economic evaluations</strong> of health-care delivery
+             published from 1 January 2010 onward: studies that compare two or more ways of
+             delivering care on <strong>both costs and consequences</strong>. The unit of
+             analysis is the study; the analysis is descriptive and, where it compares research
+             against disease burden, ecological.</p>
+          <p>Title/abstract screening was machine-learning based, with a measured sensitivity
+             of 0.959 on the human-labelled reference set used to develop the screening prompt (93/97; 95% CI 0.899–0.984) and 0.86 on an independent blinded sample of 1,000 records (32 of 37 eligible studies with an abstract; 95% CI 0.72–0.94). Records the model voted include but flagged unsure advanced to data extraction; records with no abstract were excluded. Partial evaluations (cost-minimisation,
+             budget-impact, cost-of-illness), records unclear at extraction (including full evaluations that report no consequence) and studies whose
+             consequence is not clinical are excluded, so
+             the analysis population is full evaluations by construction; duplicate DOIs and titles are removed. Reviews synthesising published economic evaluations are retained by extraction design (framework v6.8 codes them as literature/registry synthesis); 1,706 of the 41,657 (4.1%) are title-flagged reviews, 67% of which name no single country, so country-level panels draw mostly on articles.</p>
+          <!-- Funnel rows rendered by app.js from content.json `funnel`
+               (DATA_CONTRACT.md §15.4) — skeleton only, no hardcoded rows. -->
+          <table class="methods-table">
+            <thead><tr><th>Selection funnel</th><th>Records</th></tr></thead>
+            <tbody id="methods-funnel"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Data sources</div>
+        <div class="card-body">
+          <table class="methods-table">
+            <thead><tr><th>Input</th><th>Source</th></tr></thead>
+            <tbody>
+              <tr><td>Study metadata &amp; bibliometrics</td>
+                  <td>CrossRef + OpenAlex + PubMed + NLM MeSH harvest (field coverage
+                      ~87% of the eligible population for journal, topic and open-access status)</td></tr>
+              <tr><td>Income groups</td><td>World Bank API classification (Taiwan, absent from the API, is coded high income by a recorded override)</td></tr>
+              <tr><td>Population</td>
+                  <td>World Bank SP.POP.TOTL (latest observation, mostly 2025)</td></tr>
+              <tr><td>Disease burden</td>
+                  <td>IHME GBD 2023 DALYs (country totals + 22 Level-2 causes)</td></tr>
+              <tr><td>Health spending</td>
+                  <td>IHME Health Spending 1995–2022 (total health expenditure per
+                      capita, PPP 2022; national total = per-capita × latest
+                      population)</td></tr>
+              <tr><td>Disease coding</td>
+                  <td>MeSH C-tree any-topic headings (2026 vocabulary, incl. the C12.050.703 pregnancy-complications branch and F03) mapped to 14 groups, crosswalked
+                      to GBD Level-2 causes (eye and ear-nose-throat headings form Sense organ; stomatognathic, blood and urogenital headings that sit in no other mapped branch form Other NCD; kidney conditions join Metabolic &amp; nutritional)</td></tr>
+              <tr><td>Research topics</td>
+                  <td>OpenAlex topic taxonomy plus an emergent theme model (abstract
+                      embeddings → UMAP → HDBSCAN)</td></tr>
+            </tbody>
+          </table>
+          <p>Intervention type and care setting were extracted by a single-pass language model
+             (validated against a keyword lexicon, the emergent-topic clusters and a second model
+             lineage; no human validation available) for every eligible study (one parse failure).</p>
+          <p class="methods-note">Reference data are fetched from dated sources, never
+            bundled snapshots.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Rules that keep the numbers honest</div>
+        <div class="card-body">
+          <p><strong>Extracted geography only.</strong> The author-affiliation proxy is accurate
+            where it applies, but its availability is income-biased — on an earlier build, merging it
+            inflated the headline burden gap from 17.8× to 25.8×, so it is excluded from every income
+            figure.</p>
+          <p><strong>Multi-country studies count once per country</strong> in the country panels
+            (studies naming more than 15 countries are treated as multi-country and kept off the
+            country map), and every figure declares whether its denominator is studies or
+            study–country pairs.</p>
+          <p><strong>Countries without a World Bank income group are visibly absent,</strong>
+            never zero-filled as “0 studies”.</p>
+          <p><strong>Burden proportionality is a reference point, not a normative target:</strong>
+            research allocation also reflects tractability, intervention cost and the stock
+            of existing evidence.</p>
+          <p><strong>Abstract decision-signals measure what abstracts report, not what studies
+            did</strong> — “not reported” is not “not done”.</p>
+          <p><strong>MeSH uses any-topic headings:</strong> major-topic marking jumps at the 2020
+            harvest boundary and would manufacture a trend.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Limitations</div>
+        <div class="card-body">
+          <p>The corpus is effectively English-only (99.8%). Geography is missing for ~33% of
+            studies; country-level figures cover the placeable subset. Harvest coverage is
+            partial (from ~27% for funders to ~87% for journal and open-access status) and declared per figure. Comparisons of
+            research to burden are ecological. The screening sensitivity on the independent
+            blinded sample (0.86) is below the 0.95 the protocol targeted, and the extraction
+            step that decides full-evaluation status over-includes (9–12% in a human-coded
+            check). The 52,273 records voted include but flagged unsure at title/abstract were
+            advanced to extraction, whose eligibility check reads the abstract rather than the full text.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 </main>
 
@@ -319,39 +371,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title" id="fig-modal-title"></h3>
-        <div class="figure-modal-actions">
-          <div class="figure-zoom-controls" aria-label="Figure zoom controls">
-            <button class="figure-zoom-button" id="fig-zoom-out" type="button"
-                    title="Zoom out" aria-label="Zoom out">−</button>
-            <button class="figure-zoom-level" id="fig-zoom-reset" type="button"
-                    title="Reset zoom" aria-label="Reset zoom">100%</button>
-            <button class="figure-zoom-button" id="fig-zoom-in" type="button"
-                    title="Zoom in" aria-label="Zoom in">+</button>
-          </div>
-          <button class="modal-close" id="fig-modal-close">Close</button>
-        </div>
+        <button class="modal-close" id="fig-modal-close">Close</button>
       </div>
       <div class="modal-body">
-        <div class="figure-zoom-viewport" id="fig-zoom-viewport">
-          <img class="modal-fig" id="fig-modal-img" src="" alt="">
-        </div>
+        <img class="modal-fig" id="fig-modal-img" src="" alt="">
         <p class="fig-caption" id="fig-modal-caption" style="margin-top:.6rem"></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal-backdrop" id="oa-help-modal">
-  <div class="modal-dialog info-modal-dialog" role="dialog" aria-modal="true"
-       aria-labelledby="oa-help-title">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="oa-help-title">Available open access</h3>
-        <button class="modal-close" id="oa-help-close" type="button">Close</button>
-      </div>
-      <div class="modal-body info-modal-body">
-        <p>A study counts as <strong>open access</strong> when its full text can be read online free of charge, either on the publisher's website or in an open repository, without a subscription or paywall.</p>
-        <p>Open-access status comes from <strong>OpenAlex</strong>, looked up using each study's DOI. Studies whose status could not be found were left out, so the percentage is the share of studies <em>with a known open-access status</em> that are open access, not the share of all studies in the map.</p>
       </div>
     </div>
   </div>
@@ -373,16 +397,13 @@
 </div>
 
 <footer class="site-footer">
-  <!-- Record count and date filled by app.js from dict.json meta. -->
-  <strong>About the data:</strong> This release analyses <span id="footer-n">xx</span> records dated
-  <span id="footer-date">xx</span>. Classification is LLM-assisted with human oversight and verification.
-  See <a href="https://sawalee-3ie.github.io/health-financing-platform/#methods-title" target="_blank" rel="noopener">methods and scope</a> for details.
+  Sources: GBD 2023 (IHME) · IHME Health Spending 1995–2022 · World Bank · OpenAlex/CrossRef/PubMed harvest
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-09l"></script>
+<script type="module" src="app.js?v=2026-10-08"></script>
 
 </body>
 </html>
