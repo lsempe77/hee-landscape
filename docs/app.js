@@ -824,8 +824,39 @@ if (typeof document !== "undefined") {
   // duplicates the Overview's Publication trends; its QALY/DALY chart (also in
   // Trends over time) moves to Methods & metrics only.
   const HIDDEN_SECTIONS = new Set(["Size & growth"]);
+  // Renamed sections (applied before the moves below, which use the new
+  // names). Authorship figures join open access; funding figures get one
+  // section, placed straight after it.
+  const SECTION_RENAMES = {
+    "Geography & authorship": {
+      title: "Geography",
+      blurb: "Where the research is about. Income-comparative figures use extracted geography only " +
+        "(the affiliation proxy is income-biased in availability)."
+    },
+    "Open access & funding": {
+      title: "Authorship & access",
+      blurb: "Who leads the research, and how readers can reach it. Authorship figures use harvested " +
+        "affiliations and declare their denominator, including the income-group local-authorship estimate " +
+        "with its confidence intervals. Open-access status covers 87% of the included studies " +
+        "(post DOI-supplement harvest)."
+    },
+    "Priority-setting for funders": {
+      title: "Research funding",
+      blurb: "Who funds the evidence, and where the next pound buys the most missing evidence. The funder " +
+        "field covers ~27% of studies and is a floor, not a census. Gaps are ranked by size, never by " +
+        "cost-to-close: there is no cost or research-funding-amount data. Proportionality to burden is a " +
+        "reference point, not a target."
+    }
+  };
+  const SECTION_AFTER = { "Research funding": "Authorship & access" };
+  // after: file to follow in the target section; first: true puts it first.
   const MOVED_FIGURES = [
-    { file: "fig_method_stream.webp", to: "Methods & metrics", after: "fig_metric.webp" }
+    { file: "fig_method_stream.webp", to: "Methods & metrics", after: "fig_metric.webp" },
+    { file: "fig_authorship_pattern.webp", to: "Authorship & access", first: true },
+    { file: "fig_forest.webp", to: "Authorship & access", after: "fig_authorship_pattern.webp" },
+    { file: "paper06.webp", to: "Authorship & access", after: "fig_forest.webp" },
+    { file: "fig_collab_chord.webp", to: "Authorship & access", after: "paper06.webp" },
+    { file: "fig_funder_funders.webp", to: "Research funding", first: true }
   ];
   // Country landscape state: lazy drill shards cached per ISO3, and the fresh
   // index object read by the bound-once heatmap click handler (§16.6).
@@ -1073,13 +1104,13 @@ if (typeof document !== "undefined") {
   const TILE_ACTIONS = {
     "Eligible full evaluations": () => showOverviewTrend("annual"),
     "Years covered": () => showOverviewTrend("cumulative"),
-    [ACCESS_CARD]: () => openOverviewTheme("Open access & funding"),
-    "Countries studied": () => openOverviewTheme("Geography & authorship"),
-    "Journals": () => openOverviewTheme("Open access & funding"),
-    [GEO_SCOPE_CARD]: () => openOverviewTheme("Geography & authorship"),
+    [ACCESS_CARD]: () => openOverviewTheme("Authorship & access"),
+    "Countries studied": () => openOverviewTheme("Geography"),
+    "Journals": () => openOverviewTheme("Authorship & access"),
+    [GEO_SCOPE_CARD]: () => openOverviewTheme("Geography"),
     [METRICS_CARD]: () => openOverviewTheme("Methods & metrics"),
     "Model-based": () => openOverviewTheme("Methods & metrics"),
-    [FUNDERS_CARD]: () => openOverviewTheme("Open access & funding")
+    [FUNDERS_CARD]: () => openOverviewTheme("Research funding")
   };
 
   function countLevel(col, label) {
@@ -1782,6 +1813,7 @@ if (typeof document !== "undefined") {
       refreshExplorer();
     });
 
+    $("x-download").addEventListener("click", downloadFilteredStudies);
     $("x-reset").addEventListener("click", () => {
       slider.noUiSlider.set(db.years);
       for (const k of ["income", "region", "disease", "evaltype", "design"]) state.ts[k].clear();
@@ -1830,6 +1862,87 @@ if (typeof document !== "undefined") {
     renderComp();
     renderScatter();
     renderTable();
+  }
+
+  // Explorer "Download filtered studies (CSV)": one row per study in view,
+  // with its coded fields, every country and disease group it names, and its
+  // title. Titles live in the per-country text shards, so only studies naming
+  // a country have one; the shards needed are fetched on demand.
+  async function downloadFilteredStudies() {
+    const button = $("x-download");
+    const status = $("x-download-status");
+    const { studies, mask } = state.result;
+    if (!studies.length) {
+      status.textContent = "No studies match the current filters.";
+      return;
+    }
+    button.disabled = true;
+    status.textContent = "Preparing " + fmtNum(studies.length) + " studies…";
+    try {
+      const countriesOf = new Map();
+      const g = db.geo;
+      for (let i = 0; i < g.s.length; i++) {
+        const s = g.s[i];
+        if (!mask[s]) continue;
+        if (!countriesOf.has(s)) countriesOf.set(s, []);
+        countriesOf.get(s).push(db.countries[g.c[i]]);
+      }
+      const diseasesOf = new Map();
+      const d = db.disease;
+      for (let i = 0; i < d.s.length; i++) {
+        const s = d.s[i];
+        if (!mask[s]) continue;
+        if (!diseasesOf.has(s)) diseasesOf.set(s, []);
+        diseasesOf.get(s).push(db.disease_grps[d.g[i]]);
+      }
+      const isos = new Set(studies.map(firstIsoOf).filter(Boolean));
+      status.textContent = "Loading study titles from " + fmtNum(isos.size) + " country files…";
+      const shards = await Promise.all([...isos].map(loadDrill));
+      const titleOf = new Map();
+      for (const p of shards) {
+        if (!p) continue;
+        p.s.forEach((s, i) => { if (mask[s] && !titleOf.has(s)) titleOf.set(s, p.t[i]); });
+      }
+
+      const st = db.studies;
+      const label = (col, s) => db.levels[col][st[col][s]] ?? "";
+      const yesNo = v => v === 1 ? "Yes" : v === 0 ? "No" : "";
+      const header = ["map_id", "year", "title", "countries", "income_groups", "disease_groups",
+        "evaluation_type", "design_basis", "approach", "qaly", "open_access", "geographic_scope",
+        "topic_domain", "abstract_reports_icer", "abstract_reports_threshold"];
+      const rows = [header];
+      for (const s of studies) {
+        const cs = countriesOf.get(s) || [];
+        rows.push([
+          st.id[s], st.year[s], titleOf.get(s) || "",
+          cs.map(c => c.country).join("; "),
+          [...new Set(cs.map(c => c.income))].join("; "),
+          (diseasesOf.get(s) || []).join("; "),
+          label("econ_eval_type", s), label("design_basis", s), label("model_label", s),
+          label("qaly_label", s), label("oa_label", s), label("geo_scope", s), label("topic_domain", s),
+          yesNo(st.has_icer[s]), yesNo(st.has_threshold[s])
+        ]);
+      }
+      const cell = v => {
+        const t = String(v ?? "");
+        return /[",\r\n]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t;
+      };
+      // UTF-8 BOM so Excel reads accented titles correctly.
+      const csv = "﻿" + rows.map(r => r.map(cell).join(",")).join("\r\n") + "\r\n";
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+      a.download = "hee_studies_" + fmtNum(studies.length).replace(/,/g, "") + "_" + db.dict.meta.built + ".csv";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      status.textContent = "Downloaded " + fmtNum(studies.length) + " studies. Titles are included for the " +
+        fmtNum(titleOf.size) + " that name a country.";
+    } catch (e) {
+      status.textContent = "Download failed; please try again.";
+    } finally {
+      button.disabled = false;
+    }
   }
 
   function renderValueBoxes() {
@@ -2644,16 +2757,22 @@ if (typeof document !== "undefined") {
 
     // Gallery sections, figure entries and the interpolated paper01 PRISMA
     // caption all come from content.json (§15.1) — nothing hardcoded.
-    GALLERY = db.content.gallery.map(sec => ({ ...sec, figs: sec.figs.slice() }));
+    GALLERY = db.content.gallery.map(sec => ({ ...sec, ...SECTION_RENAMES[sec.title], figs: sec.figs.slice() }));
     for (const m of MOVED_FIGURES) {
       const fig = GALLERY.flatMap(s => s.figs).find(f => f.file === m.file);
       const sec = GALLERY.find(s => s.title === m.to);
       if (!fig || !sec) continue;
       for (const s of GALLERY) s.figs = s.figs.filter(f => f.file !== m.file);
-      const after = sec.figs.findIndex(f => f.file === m.after);
-      sec.figs.splice(after < 0 ? sec.figs.length : after + 1, 0, fig);
+      const after = m.first ? -1 : sec.figs.findIndex(f => f.file === m.after);
+      sec.figs.splice(after < 0 && !m.first ? sec.figs.length : after + 1, 0, fig);
     }
     GALLERY = GALLERY.filter(sec => !HIDDEN_SECTIONS.has(sec.title));
+    for (const [title, prev] of Object.entries(SECTION_AFTER)) {
+      const i = GALLERY.findIndex(s => s.title === title);
+      if (i < 0 || GALLERY.findIndex(s => s.title === prev) < 0) continue;
+      const [sec] = GALLERY.splice(i, 1);
+      GALLERY.splice(GALLERY.findIndex(s => s.title === prev) + 1, 0, sec);
+    }
     for (const x of EXTRA_FIGURES) {
       const sec = GALLERY.find(s => s.title === x.section);
       if (sec) sec.figs.splice(x.index, 0, x.fig);

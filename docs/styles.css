@@ -1110,6 +1110,9 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   margin-top: .5rem;
 }
 .btn-outline-secondary:hover { background: #ece8df; }
+.btn-outline-secondary:disabled { opacity: .6; cursor: progress; }
+.download-status { margin: .35rem 0 0; font-size: .74rem; color: var(--hee-muted); }
+.download-status:empty { display: none; }
 
 .chart-toolbar { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: .6rem; align-items: flex-end; }
 .chart-toolbar .tb-field { display: flex; flex-direction: column; gap: .25rem; }
