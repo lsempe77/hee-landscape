@@ -207,6 +207,35 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 .overview-analysis-card { border-radius: 8px; }
 .overview-trend-card { margin-bottom: 1rem; }
 .overview-trend-plot { height: 260px; }
+.overview-trend-note {
+  margin: -.35rem .2rem .1rem;
+  color: var(--hee-muted);
+  font-size: .76rem;
+}
+.trend-chips {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .7rem;
+  margin: 0 0 .6rem;
+}
+.trend-chips[hidden] { display: none; }
+.trend-chip {
+  display: flex;
+  align-items: baseline;
+  gap: .55rem;
+  padding: .55rem .8rem;
+  border: 1px solid #d6e3f1;
+  border-left: 4px solid var(--hee-accent);
+  border-radius: 8px;
+  background: #f5f9fd;
+}
+.trend-chip strong {
+  color: #1a4e8a;
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.trend-chip span { color: var(--hee-ink-soft); font-size: .78rem; line-height: 1.3; }
 .overview-card-head {
   display: flex;
   flex-wrap: wrap;
@@ -264,7 +293,7 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   margin: 0;
 }
 .overview-analysis-body {
-  height: 360px;
+  height: 260px;
   min-height: 0;
   display: flex;
   flex: 1;
@@ -294,14 +323,14 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   height: 100%;
   object-fit: contain;
 }
-/* Three side by side down to tablet width; shorter figure boxes as the cards narrow. */
-@media (max-width: 1050px) {
-  .overview-analysis-grid { gap: .7rem; }
-  .overview-analysis-body { height: 260px; padding: .5rem; }
+@media (max-width: 900px) {
+  .overview-analysis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .overview-analysis-body { height: min(36vw, 320px); }
 }
-@media (max-width: 720px) {
+@media (max-width: 760px) { .trend-chips { grid-template-columns: 1fr; } }
+@media (max-width: 620px) {
   .overview-analysis-grid { grid-template-columns: 1fr; }
-  .overview-analysis-body { height: min(68vw, 520px); }
+  .overview-analysis-body { height: min(68vw, 420px); }
 }
 
 /* ---- value boxes ---- */
@@ -389,7 +418,7 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   color: #fff;
   font-size: .7rem;
 }
-/* Rows of three tiles; the last row is wide + narrow + wide (18 + 12 + 18). */
+/* Three columns per row; the last row is wide + narrow + wide. */
 #ov-tiles {
   display: grid;
   grid-template-columns: repeat(48, minmax(0, 1fr));
@@ -433,7 +462,10 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 .funding-overview-card .metrics-overview-row { grid-template-columns: minmax(9.2rem, 1.25fr) minmax(5rem, 2fr) 3.2rem; }
 .funding-overview-card .metrics-overview-track { background: #e4dfea; }
 .funding-overview-card .metrics-overview-fill { background: linear-gradient(90deg, #a590b5, #705a84); }
-/* "Geographic scope of studies" card: split bar plus two labels. */
+/* "Who funds the evidence?" card: link-style prompt to the funder figures. */
+.funders-card-link { display: inline-block; margin-top: .45rem; color: var(--tile-accent); font-size: .78rem; font-weight: 650; }
+#ov-tiles .funders-card:hover .funders-card-link { text-decoration: underline; }
+/* "Geographic scope of studies": split bar plus two labels. */
 .geo-scope-bar {
   display: flex;
   width: 100%;
@@ -467,7 +499,6 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 .geo-scope-labels span { display: block; }
 .geo-scope-labels strong { margin-bottom: .15rem; color: var(--hee-ink); }
 @media (max-width: 700px) { .geo-scope-labels { grid-template-columns: 1fr; } }
-/* Percentages not yet in the web data. */
 .tile-placeholder { color: var(--hee-muted) !important; font-style: italic; }
 /* "Publication access" card: two metrics side by side. */
 .publication-access-metrics {
@@ -490,6 +521,7 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   font-size: .7rem;
   font-weight: 650;
 }
+.publication-access-label { display: flex; align-items: flex-start; gap: .35rem; }
 .publication-access-metric strong {
   color: var(--hee-ink);
   font-size: 1.55rem;
@@ -500,7 +532,28 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   color: var(--hee-muted);
   font-size: .64rem;
 }
-/* "Outcome metrics used" card: one bar per metric. */
+.metric-help-button {
+  display: inline-flex;
+  flex: 0 0 18px;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--tile-accent, var(--hee-accent));
+  font: 700 .66rem/1 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+}
+.metric-help-button:hover { background: color-mix(in srgb, var(--tile-accent, var(--hee-accent)) 10%, white); }
+.metric-help-button:focus-visible { outline: 2px solid var(--tile-accent, var(--hee-accent)); outline-offset: 2px; }
+.info-modal-dialog { width: min(720px, 96vw); }
+.info-modal-body { color: var(--hee-ink-soft); line-height: 1.65; }
+.info-modal-body p { margin: 0 0 1rem; }
+.info-modal-body p:last-child { margin-bottom: 0; }
+/* Outcome and funding overview cards use compact horizontal bars. */
 #ov-tiles .value-box.metrics-overview-card { display: flex; flex-direction: column; }
 .metrics-overview-chart { display: grid; gap: .32rem; }
 .metrics-overview-row {
@@ -806,6 +859,11 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   border-bottom: 1px solid var(--hee-line);
 }
 .fig-body { padding: .85rem 1.05rem 1rem; }
+/* Interactive HTML figure: full grid width, no hover lift (it is clicked inside). */
+.fig-card.fig-card-html { grid-column: 1 / -1; }
+.fig-card.fig-card-html:hover { transform: none; box-shadow: 0 1px 3px rgba(16, 36, 62, .05); }
+.fig-card-html iframe { display: block; width: 100%; height: 1900px; border: 0; background: #f7f3ec; border-bottom: 1px solid var(--hee-line); }
+.fig-open-link { display: inline-block; margin-top: .45rem; color: var(--hee-accent); font-size: .82rem; font-weight: 600; }
 .fig-title {
   font-family: 'Newsreader', Georgia, serif;
   font-weight: 600;
@@ -878,6 +936,19 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   align-items: center;
 }
 .figure-modal-actions { gap: .75rem; }
+.figure-download-button {
+  height: 1.9rem;
+  padding: 0 .85rem;
+  border: 1px solid var(--hee-accent);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--hee-accent);
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.figure-download-button:hover { background: color-mix(in srgb, var(--hee-accent) 8%, white); }
+.figure-download-button:focus-visible { outline: 2px solid var(--hee-accent); outline-offset: 2px; }
 .figure-zoom-controls {
   gap: .2rem;
   padding: .18rem;
@@ -1163,6 +1234,8 @@ table.dataTable thead th.num { text-align: right; }
   text-align: left;
   padding: 1.1rem 1rem 1.6rem;
 }
+.site-footer a { color: var(--hee-accent); font-weight: 600; }
+.site-footer strong { color: var(--hee-ink-soft); }
 
 /* ---- loading splash ---- */
 .loading-wrap { padding: 4rem 1rem; text-align: center; color: var(--hee-muted); font-size: .95rem; }
@@ -1173,6 +1246,11 @@ table.dataTable thead th.num { text-align: right; }
    overflow and stack above the cards below it. */
 #land-intro-card { position: relative; z-index: 5; overflow: visible; }
 .land-picker { margin-top: .9rem; max-width: 340px; }
+/* Picker label with the "?" country-coverage button beside it. */
+.picker-label-row { display: flex; align-items: center; gap: .4rem; }
+.picker-label-row .control-label,
+.land-picker .picker-label-row .control-label { margin-bottom: 0; }
+.land-picker .picker-label-row { margin-bottom: .35rem; }
 .land-picker .control-label {
   display: block;
   font-size: .78rem;
@@ -1185,77 +1263,3 @@ table.dataTable thead th.num { text-align: right; }
 .land-picker .ts-wrapper { width: 100%; }
 /* Keep the options list above card shadows and headers, below the modals (z 2000). */
 .ts-dropdown { z-index: 1500; }
-/* Footnote under the Overview publication-trends chart. */
-.overview-trend-note {
-  margin: -.35rem .2rem .1rem;
-  color: var(--hee-muted);
-  font-size: .76rem;
-}
-/* Key-message chips above the Overview trend, shown only in the Cumulative view. */
-.trend-chips {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .7rem;
-  margin: 0 0 .6rem;
-}
-.trend-chips[hidden] { display: none; }
-.trend-chip {
-  display: flex;
-  align-items: baseline;
-  gap: .55rem;
-  padding: .55rem .8rem;
-  border: 1px solid #d6e3f1;
-  border-left: 4px solid var(--hee-accent);
-  border-radius: 8px;
-  background: #f5f9fd;
-}
-.trend-chip strong { color: #1a4e8a; font-size: 1.3rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.trend-chip span { color: var(--hee-ink-soft); font-size: .78rem; line-height: 1.3; }
-@media (max-width: 760px) { .trend-chips { grid-template-columns: 1fr; } }
-.site-footer a { color: var(--hee-accent); font-weight: 600; }
-.site-footer strong { color: var(--hee-ink-soft); }
-/* "?" help button on Overview tiles, and the pop-up it opens. */
-.publication-access-label { display: flex; align-items: flex-start; gap: .35rem; }
-.metric-help-button {
-  display: inline-flex;
-  flex: 0 0 18px;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  padding: 0;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--tile-accent, var(--hee-accent));
-  font: 700 .66rem/1 'Inter', system-ui, sans-serif;
-  cursor: pointer;
-}
-.metric-help-button:hover { background: color-mix(in srgb, var(--tile-accent, var(--hee-accent)) 10%, white); }
-.metric-help-button:focus-visible { outline: 2px solid var(--tile-accent, var(--hee-accent)); outline-offset: 2px; }
-.info-modal-dialog { width: min(720px, 96vw); }
-.info-modal-body { color: var(--hee-ink-soft); line-height: 1.65; }
-.info-modal-body p { margin: 0 0 1rem; }
-.info-modal-body p:last-child { margin-bottom: 0; }
-/* Group view in Thematic analysis: its sections as two large theme cards. */
-.fig-grid.group-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (max-width: 760px) { .fig-grid.group-grid { grid-template-columns: 1fr; } }
-/* Plain-language method note at the top of a Thematic analysis section. */
-#gal-sec-extra:empty { display: none; }
-#gal-sec-extra { max-width: 1180px; margin: .4rem 0 1.4rem; }
-.method-note {
-  padding: .7rem 1rem;
-  border: 1px solid var(--hee-line);
-  border-left: 4px solid var(--hee-accent);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--hee-ink-soft);
-  font-size: .88rem;
-  line-height: 1.5;
-}
-.method-note summary {
-  color: var(--hee-accent);
-  font-weight: 600;
-  cursor: pointer;
-}
-.method-note p { margin: .6rem 0 0; }

@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-09l">
+<link rel="stylesheet" href="styles.css?v=2026-10-11-cvhelp-off">
 </head>
 <body>
 
@@ -36,11 +36,6 @@
   <span class="navbar-text" id="nav-built"></span>
   -->
 </nav>
-
-<!-- v2 preview banner (2026-10-07): this build is published beside the live site at /v2/;
-     the link is relative so it resolves to the parent (published) site. -->
-<div class="preview-banner" role="note">Preview: rebuilt on the revised dataset (41,657 studies,
-  October 2026). The published version is at <a href="../">../</a></div>
 
 <main>
 
@@ -92,7 +87,6 @@
         <button class="back-link" id="gal-back">&larr; All themes</button>
         <h2 class="hero-title" id="gal-sec-title"></h2>
         <p class="theme-blurb" id="gal-sec-blurb"></p>
-        <div id="gal-sec-extra"></div>
         <div class="fig-grid" id="gal-sec-grid"></div>
       </div>
     </div>
@@ -102,7 +96,7 @@
   <section class="tab-pane" id="pane-explorer">
     <div class="explorer-layout">
       <aside class="sidebar">
-        <h2 class="sidebar-title">Filter the corpus</h2>
+        <h2 class="sidebar-title">Filter the studies</h2>
 
         <div class="control-group">
           <label class="control-label" for="x-years">Publication years</label>
@@ -151,7 +145,7 @@
         <button class="btn-outline-secondary" id="x-reset">Reset filters</button>
         <hr>
         <p class="text-muted">
-          Every filter combines. Open-access status is known for 93% of the corpus; “Unknown”
+          Every filter combines. Open-access status is known for 87% of studies; “Unknown”
           records are excluded when a side is chosen. Country panels count a multi-country
           study once per country it is about.
         </p>
@@ -185,7 +179,7 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-header">Composition of the filtered corpus</div>
+            <div class="card-header">Composition of the filtered studies</div>
             <div class="card-body">
               <div class="chart-toolbar">
                 <div class="tb-field wide"><label for="x-comp-var">Variable</label><select id="x-comp-var" class="form-select"></select></div>
@@ -225,13 +219,17 @@
     </div>
     <div class="card" id="land-intro-card"><div class="card-body">
       <h2 class="hero-title">Country landscape</h2>
-      <p class="hero-text">This tab is <strong>unfiltered</strong>: it always shows the whole
-        corpus and does not read or change the Explorer filters. Click a bubble to select a
-        country and fill the two mix panels and the disease-group × evaluation-type grid below.
-        Click a heatmap cell to read the studies behind it. You can also search for a country
-        with the picker below.</p>
+      <p class="hero-text">This tab always shows <strong>all studies</strong>. Filters set in the
+        Explorer don't apply here, and nothing you do here changes them. The charts below start
+        with <strong>all countries</strong> combined (every study that names a country). To look
+        at one country, click its bubble or search for it with the picker below. The two mix
+        charts and the disease group × evaluation type grid will then show that country. Click
+        any cell in the grid to see the studies behind it.</p>
       <div class="control-group land-picker">
-        <label class="control-label" for="land-country">Pick a country</label>
+        <div class="picker-label-row">
+          <label class="control-label" for="land-country">Pick a country</label>
+          <button class="metric-help-button country-help-button" type="button" title="Which countries are included?" aria-label="Explain which countries are included">?</button>
+        </div>
         <select id="land-country" placeholder="Pick a country…"></select>
       </div>
     </div></div>
@@ -272,7 +270,7 @@
     </div>
     <div class="explorer-layout">
       <aside class="sidebar">
-        <h2 class="sidebar-title">Country</h2>
+        <h2 class="sidebar-title picker-label-row">Country <button class="metric-help-button country-help-button" type="button" title="Which countries are included?" aria-label="Explain which countries are included">?</button></h2>
         <div class="control-group">
           <select id="c-picker" placeholder="Pick a country…"></select>
         </div>
@@ -328,6 +326,8 @@
             <button class="figure-zoom-button" id="fig-zoom-in" type="button"
                     title="Zoom in" aria-label="Zoom in">+</button>
           </div>
+          <button class="figure-download-button" id="fig-download" type="button"
+                  title="Download this figure with its citation">&#x2913; Download</button>
           <button class="modal-close" id="fig-modal-close">Close</button>
         </div>
       </div>
@@ -336,6 +336,36 @@
           <img class="modal-fig" id="fig-modal-img" src="" alt="">
         </div>
         <p class="fig-caption" id="fig-modal-caption" style="margin-top:.6rem"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="study-modal">
+  <div class="modal-dialog study-modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="study-modal-title"></h3>
+        <button class="modal-close" id="study-modal-close">Close</button>
+      </div>
+      <div class="modal-body">
+        <p class="study-count" id="study-modal-count"></p>
+        <div class="study-list" id="study-modal-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="country-help-modal">
+  <div class="modal-dialog info-modal-dialog" role="dialog" aria-modal="true"
+       aria-labelledby="country-help-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="country-help-title">Which countries are included?</h3>
+        <button class="modal-close" id="country-help-close" type="button">Close</button>
+      </div>
+      <div class="modal-body info-modal-body">
+        <p>The country views cover the <strong>155 countries in the map's country data</strong>, which holds their disease-burden (GBD 2023) and health-spending figures. 153 of them have at least one study; Mauritius and Eritrea have none.</p>
       </div>
     </div>
   </div>
@@ -357,21 +387,6 @@
   </div>
 </div>
 
-<div class="modal-backdrop" id="study-modal">
-  <div class="modal-dialog study-modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="study-modal-title"></h3>
-        <button class="modal-close" id="study-modal-close">Close</button>
-      </div>
-      <div class="modal-body">
-        <p class="study-count" id="study-modal-count"></p>
-        <div class="study-list" id="study-modal-list"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <footer class="site-footer">
   <!-- Record count and date filled by app.js from dict.json meta. -->
   <strong>About the data:</strong> This release analyses <span id="footer-n">xx</span> records dated
@@ -382,7 +397,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-09l"></script>
+<script type="module" src="app.js?v=2026-10-11-cvhelp-off"></script>
 
 </body>
 </html>

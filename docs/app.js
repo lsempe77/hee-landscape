@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-09l";
+const BUILD = "2026-10-10-trends";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -665,12 +665,17 @@ export function landscapeCountries(db) {
 // cell(gi, ei) = | CS ∩ dSet(gi) ∩ eSet(ei) |, keyed by the string gi + "|" + ei
 // with both 0-based integer codes. Mix rows sort count-descending, ties
 // alphabetical; the cross grid follows those row/column orders.
+// ALL_COUNTRIES pools every study that names at least one country (a study
+// naming several countries counts once), as a global baseline.
+export const ALL_COUNTRIES = "__ALL__";
+
 export function countryMixes(db, iso3) {
-  const ci = db.countries.findIndex(r => r.iso3 === iso3);
-  if (ci < 0) return null;
+  const all = iso3 === ALL_COUNTRIES;
+  const ci = all ? -1 : db.countries.findIndex(r => r.iso3 === iso3);
+  if (!all && ci < 0) return null;
   const g = db.geo;
   const cs = new Set();
-  for (let i = 0; i < g.s.length; i++) if (g.c[i] === ci) cs.add(g.s[i]);
+  for (let i = 0; i < g.s.length; i++) if (all || g.c[i] === ci) cs.add(g.s[i]);
 
   const lv = db.levels.econ_eval_type;
   const evalCounts = new Map();
@@ -712,7 +717,7 @@ export function countryMixes(db, iso3) {
     }
   }
 
-  const r = db.countries[ci];
+  const r = all ? { country: "All countries", income: null } : db.countries[ci];
   return {
     iso3, country: r.country, income: r.income,
     n_studies: cs.size,
@@ -776,33 +781,6 @@ function rampColor(t) {
   return `rgb(${c[0]},${c[1]},${c[2]})`;
 }
 
-// Cumulative-growth summary, same definitions as fig_growth: the half-way
-// year is the latest year from which half of ALL studies (2026 included) were
-// published; the reference continues the 2010–2012 average annual output and
-// runs to the last complete year (the partial year is left off).
-export function growthStats(years, annual, partialYear = 2026) {
-  const cum = [];
-  let running = 0;
-  for (const n of annual) cum.push(running += n);
-  const total = cum[cum.length - 1];
-  let halfIdx = 0;
-  for (let i = 0; i < years.length; i++) {
-    if (total - (i > 0 ? cum[i - 1] : 0) >= total / 2) halfIdx = i;
-  }
-  const earlyN = Math.min(3, annual.length);
-  const earlyRate = annual.slice(0, earlyN).reduce((a, b) => a + b, 0) / earlyN;
-  const fullIdx = years.map((y, i) => i).filter(i => years[i] !== partialYear);
-  const lastFull = fullIdx[fullIdx.length - 1];
-  const ref = fullIdx.map(i => earlyRate * (i + 1));
-  return {
-    cum, total, halfIdx, halfYear: years[halfIdx],
-    refYears: fullIdx.map(i => years[i]), ref, lastFull,
-    growth: total / Math.max(1, cum[0]),
-    vsRef: cum[lastFull] / ref[ref.length - 1],
-    earlySpan: years[0] + "–" + String(years[earlyN - 1]).slice(2)
-  };
-}
-
 // n colours spread evenly along a ramp (bar i of n gets colours[k]).
 function spreadPalette(colors, n) {
   return Array.from({ length: n }, (_, i) => colors[Math.min(
@@ -816,97 +794,6 @@ function spreadPalette(colors, n) {
 // (DATA_CONTRACT.md §15.1) and is consumed as db.content.gallery — the
 // hardcoded galleryRegistry() duplicate was removed.
 
-// Thematic analysis sections, regrouped from content.json gallery sections
-// (content.json is unchanged): some sections are split into new ones by figure
-// file, some figures move to another section, and the new sections are shown
-// under group cards (SECTION_GROUPS). Every figure stays visible somewhere.
-export function buildGallery(content) {
-  const SECTION_SPLITS = {
-    "Topics & diseases": [{
-      title: "Topic clusters",
-      blurb: "What studies are about, found from the text of their abstracts rather than from " +
-        "predefined categories, alongside the kinds of intervention they evaluate in different " +
-        "income settings.",
-      files: ["fig_intervention_map.webp", "fig_theme_rank.webp", "fig_intervention_mix.webp"]
-    }, {
-      title: "Disease focus",
-      blurb: "Which disease areas health economic evaluations address, how this differs between " +
-        "richer and poorer countries, and how research about LMICs is shifting between disease areas.",
-      files: ["fig_disease_circular.webp", "fig_transition.webp", "paper04.webp", "paper05.webp"]
-    }],
-    // Geography & authorship + Maps & regional charts are regrouped as
-    // Geographic coverage / Research ownership & collaboration, with the
-    // burden map and open-access map moved to their topic sections
-    // (SECTION_APPENDS). Shown under the Geography and Authorship & access groups.
-    "Geography & authorship": [{
-      title: "Geographic coverage",
-      blurb: "Where economic evaluations are about: which countries studies name, how that compares " +
-        "with population, where the evidence is growing fastest, and how often it rests on decision " +
-        "models in each region. Country counts use the geography extracted from each study.",
-      files: ["fig_dotmap.webp", "fig_worldmap.webp", "paper03.webp", "fig_map_growth.webp", "fig_map_model.webp"]
-    }, {
-      title: "Research ownership & collaboration",
-      blurb: "Who leads research about each setting: whether studies include an author based in the " +
-        "country studied, how this differs by income group and region, and how authors collaborate " +
-        "across income groups. Authorship figures use harvested affiliations and declare their denominator.",
-      files: ["fig_authorship_pattern.webp", "fig_forest.webp", "paper06.webp", "fig_map_authorship.webp",
-        "fig_collab_chord.webp"]
-    }],
-    "Maps & regional charts": [],
-    // Open access stays under Authorship & access; every funder figure
-    // (incl. the former Priority-setting for funders section) moves to one
-    // standalone Research funding section.
-    "Open access & funding": [{
-      title: "Open access",
-      blurb: "How much of the evidence is free to read, how this has changed over time, and how it " +
-        "differs by country. Open-access status is known for 87% of studies.",
-      files: ["fig_openaccess.webp", "fig_map_openaccess.webp"]
-    }, {
-      title: "Research funding",
-      blurb: "Who funds health economic evaluations, and where new funding could fill the largest " +
-        "evidence gaps relative to need. Funders are named in only about 27% of studies, so funder " +
-        "counts are a floor, not a census; gaps are ranked by size, not by cost to close.",
-      files: ["fig_funder_funders.webp", "fig_funder_opportunity.webp", "fig_funder_scorecard.webp",
-        "fig_funder_capacity.webp", "fig_funder_trajectory.webp"]
-    }],
-    "Priority-setting for funders": []
-  };
-  // Figures moved to the end of an existing section.
-  const SECTION_APPENDS = {
-    "Gaps vs disease burden": ["fig_map_burden.webp"]
-  };
-  // A split part may take a figure from any section, so look figures up globally.
-  const figOf = new Map();
-  for (const sec of content.gallery) for (const f of sec.figs) if (!figOf.has(f.file)) figOf.set(f.file, f);
-  const placed = new Set([
-    ...Object.values(SECTION_SPLITS).flat().flatMap(p => p.files),
-    ...Object.values(SECTION_APPENDS).flat()
-  ]);
-  const GALLERY = [];
-  for (const sec of content.gallery) {
-    const parts = SECTION_SPLITS[sec.title];
-    if (!parts) {
-      const own = new Set(sec.figs.map(f => f.file));
-      const extra = (SECTION_APPENDS[sec.title] || [])
-        .filter(file => !own.has(file)).map(file => figOf.get(file)).filter(Boolean);
-      GALLERY.push({ ...sec, figs: sec.figs.concat(extra) });
-      continue;
-    }
-    for (const p of parts) {
-      const figs = p.files.map(file => figOf.get(file)).filter(Boolean);
-      if (figs.length) GALLERY.push({ title: p.title, blurb: p.blurb, figs });
-    }
-    // A figure of a split section that no rule places stays visible: in the
-    // section's last part, or in the original section if it has no parts.
-    const rest = sec.figs.filter(f => !placed.has(f.file));
-    if (rest.length) {
-      if (parts.length) GALLERY[GALLERY.length - 1].figs.push(...rest);
-      else GALLERY.push({ ...sec, figs: rest });
-    }
-  }
-  return GALLERY;
-}
-
 if (typeof document !== "undefined") {
 
   const $ = id => document.getElementById(id);
@@ -916,6 +803,21 @@ if (typeof document !== "undefined") {
   let db = null;
   let GALLERY = [];
   let FIG_INDEX = {};
+  // Interactive figures: self-contained HTML pages built by scripts/ (here
+  // scripts/build_glance_regions.py), added on top of content.json's gallery
+  // so the upstream content build stays untouched. Shown in an iframe.
+  const EXTRA_FIGURES = [{
+    section: "Maps & regional charts",
+    index: 0,
+    fig: {
+      file: "fig_glance_regions.html",
+      html: true,
+      title: "(Un)equal weight at a glance: research intensity and evaluations by region",
+      caption: "Draft infographic built from the map's data by World Bank region: research per unit of " +
+        "disease burden, headline figures, and each region's disease focus, QALY use and country " +
+        "coverage over time. \"xx\" marks values not yet available; click any ? for details."
+    }
+  }];
   // Country landscape state: lazy drill shards cached per ISO3, and the fresh
   // index object read by the bound-once heatmap click handler (§16.6).
   const drillCache = {};
@@ -965,6 +867,7 @@ if (typeof document !== "undefined") {
   }
 
   let figureZoom = 1;
+  let modalFigure = null;
 
   function setFigureZoom(nextZoom) {
     figureZoom = Math.min(3, Math.max(0.5, nextZoom));
@@ -977,6 +880,7 @@ if (typeof document !== "undefined") {
   function openModal(file) {
     const f = FIG_INDEX[file];
     if (!f) return;
+    modalFigure = f;
     $("fig-modal-title").textContent = f.title;
     const img = $("fig-modal-img");
     img.src = "figures/" + f.file;
@@ -985,6 +889,71 @@ if (typeof document !== "undefined") {
     setFigureZoom(1);
     $("fig-zoom-viewport").scrollTo(0, 0);
     $("fig-modal").classList.add("open");
+  }
+
+  // Citation printed under a downloaded figure; the date is the day of download.
+  function figureCitation(f) {
+    const year = String(db.dict.meta.built).slice(0, 4);
+    const url = window.location.href.split("#")[0];
+    const today = new Date().toLocaleDateString("en-GB",
+      { day: "numeric", month: "long", year: "numeric" });
+    return "Source: 3ie (" + year + "). Health Economic Evaluation (HEE) Evidence Map: " +
+      f.title + ". " + url + ". Downloaded " + today + ".";
+  }
+
+  function wrapCanvasText(ctx, text, maxWidth) {
+    const lines = [];
+    let line = "";
+    for (const word of text.split(" ")) {
+      const next = line ? line + " " + word : word;
+      if (line && ctx.measureText(next).width > maxWidth) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = next;
+      }
+    }
+    if (line) lines.push(line);
+    return lines;
+  }
+
+  // Draws the figure at full resolution onto a canvas with the citation in a
+  // strip underneath, then saves it as PNG (figures are same-origin, so the
+  // canvas is not tainted).
+  async function downloadFigure() {
+    const f = modalFigure;
+    if (!f) return;
+    const img = new Image();
+    img.src = "figures/" + f.file;
+    try { await img.decode(); } catch (e) { return; }
+    const w = img.naturalWidth, h = img.naturalHeight;
+    const fontSize = Math.max(14, Math.round(w * 0.011));
+    const pad = Math.round(fontSize * 1.4);
+    const lineHeight = Math.round(fontSize * 1.45);
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    const font = fontSize + "px Inter, 'Segoe UI', Arial, sans-serif";
+    ctx.font = font;
+    const lines = wrapCanvasText(ctx, figureCitation(f), w - 2 * pad);
+    canvas.width = w;
+    canvas.height = h + 2 * pad + lines.length * lineHeight;
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, w, h);
+    ctx.font = font;
+    ctx.fillStyle = "#5b6472";
+    ctx.textBaseline = "top";
+    lines.forEach((l, i) => ctx.fillText(l, pad, h + pad + i * lineHeight));
+    canvas.toBlob(blob => {
+      if (!blob) return;
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = f.file.replace(/\.[^.]+$/, "") + ".png";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    }, "image/png");
   }
 
   function closeModal() {
@@ -1064,8 +1033,7 @@ if (typeof document !== "undefined") {
     showSection(i, "overview");
   }
 
-  // Overview "at a glance" tiles. Keys are content.json glance_tiles labels,
-  // plus the two composite cards built in this file.
+  // Overview "at a glance" tiles, including composite cards built from study data.
   const ACCESS_CARD = "__publication_access";
   const METRICS_CARD = "__outcome_metrics";
   const GEO_SCOPE_CARD = "__geo_scope";
@@ -1075,41 +1043,45 @@ if (typeof document !== "undefined") {
     "Journals", "Countries studied", GEO_SCOPE_CARD,
     METRICS_CARD, "Model-based", FUNDERS_CARD
   ];
-  // Last row: two wide cards with a narrow Model-based card between them.
   const WIDE_TILES = new Set([METRICS_CARD, FUNDERS_CARD]);
   const NARROW_TILES = new Set(["Model-based"]);
-  // Overview wording; values still come from content.json.
   const OVERVIEW_TILE_COPY = {
     "Eligible full evaluations": { label: "Full health economic evaluations captured in the map" },
     "Years covered": { label: "Publication years covered" },
-    "Countries studied": { label: "Countries covered by studies", sub: "Across the global evidence base" },
+    // Countries in the map's country data named by at least one study (153),
+    // counted from the data. The upstream build's 169 ("named in extracted
+    // geography") could not be reproduced and was replaced in content.json and
+    // dict.json; it needs fixing in the pipeline too.
+    "Countries studied": {
+      label: "Countries profiled in the map",
+      sub: "Countries with at least one study",
+      value: () => fmtNum(db.countries.filter(r => r.studies > 0).length)
+    },
     "Journals": { sub: "Among studies with journal details available" }
   };
-  // Shown where the web data does not carry the figure yet.
   const PLACEHOLDER_PCT = "XX%";
 
-  // Where each tile leads.
   const TILE_ACTIONS = {
     "Eligible full evaluations": () => openOverviewTheme("Size & growth"),
     "Years covered": () => showOverviewTrend("cumulative"),
-    [ACCESS_CARD]: () => openOverviewTheme("Open access"),
-    "Countries studied": () => openOverviewTheme("Geographic coverage"),
-    "Journals": () => openOverviewTheme("Open access"),
-    [GEO_SCOPE_CARD]: () => openOverviewTheme("Geographic coverage"),
+    [ACCESS_CARD]: () => openOverviewTheme("Open access & funding"),
+    "Countries studied": () => openOverviewTheme("Geography & authorship"),
+    "Journals": () => openOverviewTheme("Open access & funding"),
+    [GEO_SCOPE_CARD]: () => openOverviewTheme("Geography & authorship"),
     [METRICS_CARD]: () => openOverviewTheme("Methods & metrics"),
     "Model-based": () => openOverviewTheme("Methods & metrics"),
-    [FUNDERS_CARD]: () => openOverviewTheme("Research funding")
+    [FUNDERS_CARD]: () => openOverviewTheme("Open access & funding")
   };
 
   function countLevel(col, label) {
     const code = db.codeOf[col] ? db.codeOf[col].get(label) : db.levels[col].indexOf(label);
-    let n = 0;
-    for (const v of db.studies[col]) if (v === code) n++;
-    return n;
+    let count = 0;
+    for (const value of db.studies[col]) if (value === code) count++;
+    return count;
   }
 
-  function fmtPct(x) {
-    return x == null ? PLACEHOLDER_PCT : x.toFixed(1) + "%";
+  function fmtPct(value) {
+    return value == null ? PLACEHOLDER_PCT : value.toFixed(1) + "%";
   }
 
   function placeholderize(node, text) {
@@ -1120,19 +1092,22 @@ if (typeof document !== "undefined") {
     }
   }
 
-  // "Publication access": DOI/URL availability (placeholder: not in the web
-  // data) and the open-access share of studies with a known OA status.
   function publicationAccessCard() {
     const box = el("div", "value-box publication-access-card");
     const title = el("div", "value-box-title");
     title.textContent = "Publication access";
-    const openN = countLevel("oa_label", "Open access");
-    const knownN = openN + countLevel("oa_label", "Not open");
+    const openCount = countLevel("oa_label", "Open access");
+    const knownCount = openCount + countLevel("oa_label", "Not open");
+    // No DOI/URL field in the web data: a known OA status means OpenAlex matched
+    // the study's DOI, so this is a lower bound on DOI availability.
+    const totalCount = db.studies.oa_label.length;
     const metrics = el("div", "publication-access-metrics");
+
     for (const [label, valueText, note] of [
-      ["DOI or URL available", PLACEHOLDER_PCT, "Of all studies"],
-      ["Available open access", fmtPct(knownN ? 100 * openN / knownN : null),
-       "Of " + fmtNum(knownN) + " studies with a known open-access status"]
+      ["DOI found in OpenAlex", fmtPct(totalCount ? 100 * knownCount / totalCount : null),
+        "Of all " + fmtNum(totalCount) + " studies"],
+      ["Available open access", fmtPct(knownCount ? 100 * openCount / knownCount : null),
+        "Of " + fmtNum(knownCount) + " studies with a known open-access status"]
     ]) {
       const metric = el("div", "publication-access-metric");
       const metricLabel = el("span", "publication-access-label");
@@ -1143,7 +1118,6 @@ if (typeof document !== "undefined") {
         help.textContent = "?";
         help.title = "What does open access mean?";
         help.setAttribute("aria-label", "Explain what open access means");
-        // Stop the click reaching the card, which would open its section.
         help.addEventListener("click", event => {
           event.stopPropagation();
           $("oa-help-modal").classList.add("open");
@@ -1151,28 +1125,27 @@ if (typeof document !== "undefined") {
         help.addEventListener("keydown", event => event.stopPropagation());
         metricLabel.appendChild(help);
       }
-      const metricValue = el("strong");
-      placeholderize(metricValue, valueText);
+      const value = el("strong");
+      placeholderize(value, valueText);
       const metricNote = el("small");
       metricNote.textContent = note;
-      metric.append(metricLabel, metricValue, metricNote);
+      metric.append(metricLabel, value, metricNote);
       metrics.appendChild(metric);
     }
     box.append(title, metrics);
     return box;
   }
 
-  // "Geographic scope of studies": single-country share against everything
-  // else (multi-country, region/global, no country stated), from geo_scope.
   function geoScopeCard() {
     const box = el("div", "value-box geo-scope-card");
     const title = el("div", "value-box-title");
     title.textContent = "Geographic scope of studies";
     const total = Math.max(1, db.nStudies);
-    const pctOf = n => 100 * n / total;
+    const pctOf = count => 100 * count / total;
     const singlePct = pctOf(countLevel("geo_scope", "Single country"));
     const otherPct = 100 - singlePct;
-    const multiPct = pctOf(countLevel("geo_scope", "Multi-country") + countLevel("geo_scope", "Region/global"));
+    const multiPct = pctOf(countLevel("geo_scope", "Multi-country") +
+      countLevel("geo_scope", "Region/global"));
     const nonePct = pctOf(countLevel("geo_scope", "No country stated"));
 
     const bar = el("div", "geo-scope-bar");
@@ -1185,14 +1158,14 @@ if (typeof document !== "undefined") {
     bar.append(single, other);
 
     const labels = el("div", "geo-scope-labels");
-    for (const [head, text] of [
+    for (const [heading, text] of [
       ["Single-country", "One country examined"],
-      ["Other geographic scope", multiPct.toFixed(1) + "% multi-country or regional/global; " +
-        nonePct.toFixed(1) + "% no country stated"]
+      ["Other geographic scope", multiPct.toFixed(1) +
+        "% multi-country or regional/global; " + nonePct.toFixed(1) + "% no country stated"]
     ]) {
       const item = el("div");
       const strong = el("strong");
-      strong.textContent = head;
+      strong.textContent = heading;
       const span = el("span");
       span.textContent = text;
       item.append(strong, span);
@@ -1202,8 +1175,6 @@ if (typeof document !== "undefined") {
     return box;
   }
 
-  // Horizontal-bar card shared by "Outcome metrics used" and "Who funds the
-  // evidence?"; a null pct renders the placeholder and an empty track.
   function barRowsCard(cls, titleText, rows, noteText) {
     const box = el("div", "value-box metrics-overview-card " + cls);
     const title = el("div", "value-box-title");
@@ -1228,21 +1199,28 @@ if (typeof document !== "undefined") {
     return box;
   }
 
-  // QALY share from the data; DALYs and other metrics are placeholders until
-  // the web data carries them.
   function outcomeMetricsCard() {
     const qalyPct = 100 * countLevel("qaly_label", "Uses QALY") / Math.max(1, db.nStudies);
     return barRowsCard("", "Outcome metrics used in studies",
-      [["QALYs", qalyPct], ["DALYs", null], ["Other metrics", null]],
-      "Share of all studies. A study may report more than one metric.");
+      [["QALYs", qalyPct]],
+      "Share of all studies.");
   }
 
-  // Funder types are not in the web data yet: every share is a placeholder.
+  // The web data has no funder field; the ~27% coverage is the figure quoted in
+  // the funder figure captions (content.json), so it is shown as text, not computed.
   function fundersCard() {
-    return barRowsCard("funding-overview-card", "Who funds the evidence?",
-      [["Government and multilateral", null], ["Academic and non-profit", null],
-       ["Private companies", null], ["Unclassified", null]],
-      "Among XX studies reporting a funder. Categories may overlap.");
+    const box = el("div", "value-box funders-card");
+    const title = el("div", "value-box-title");
+    title.textContent = "Who funds the evidence?";
+    const value = el("div", "value-box-value");
+    value.textContent = "~27%";
+    const sub = el("div", "value-box-sub");
+    sub.textContent = "of the " + fmtNum(db.nStudies) +
+      " studies name at least one funder, so funder analysis is a floor, not a census.";
+    const more = el("span", "funders-card-link");
+    more.textContent = "See funder analysis →";
+    box.append(title, value, sub, more);
+    return box;
   }
 
   function makeOverviewCardInteractive(box, key) {
@@ -1286,12 +1264,11 @@ if (typeof document !== "undefined") {
       hero.appendChild(node);
     }
 
-    // Glance tiles: values from content.json (§15.3), shown with the Overview
-    // wording in OVERVIEW_TILE_COPY and in OVERVIEW_TILE_ORDER; the two
-    // composite cards (publication access, outcome metrics) are built here.
+    // Simple values come from content.json; composite cards are calculated
+    // from study data where available and explicitly marked where unavailable.
     const wrap = $("ov-tiles");
     wrap.textContent = "";
-    const tileByLabel = new Map(db.content.glance_tiles.map(t => [t.label, t]));
+    const tileByLabel = new Map(db.content.glance_tiles.map(tile => [tile.label, tile]));
     for (const key of OVERVIEW_TILE_ORDER) {
       let box;
       if (key === ACCESS_CARD) box = publicationAccessCard();
@@ -1299,17 +1276,16 @@ if (typeof document !== "undefined") {
       else if (key === GEO_SCOPE_CARD) box = geoScopeCard();
       else if (key === FUNDERS_CARD) box = fundersCard();
       else {
-        const t = tileByLabel.get(key);
-        if (!t) continue;
+        const tile = tileByLabel.get(key);
+        if (!tile) continue;
         const copy = OVERVIEW_TILE_COPY[key] || {};
         box = el("div", "value-box");
         const title = el("div", "value-box-title");
-        title.textContent = copy.label || t.label;
+        title.textContent = copy.label || tile.label;
         const value = el("div", "value-box-value");
-        value.textContent = t.value;
-        box.appendChild(title);
-        box.appendChild(value);
-        const subText = "sub" in copy ? copy.sub : t.sub;
+        value.textContent = copy.value ? copy.value() : tile.value;
+        box.append(title, value);
+        const subText = "sub" in copy ? copy.sub : tile.sub;
         if (subText != null) {
           const sub = el("div", "value-box-sub");
           sub.textContent = subText;
@@ -1331,7 +1307,7 @@ if (typeof document !== "undefined") {
     ];
     const hw = $("ov-hero-imgs");
     hw.textContent = "";
-    for (const h of heroes) {
+    heroes.forEach(h => {
       const f = FIG_INDEX[h.file];
       const card = el("div", "card overview-analysis-card");
       const head = el("div", "card-header overview-card-head");
@@ -1359,7 +1335,7 @@ if (typeof document !== "undefined") {
       card.appendChild(head);
       card.appendChild(body);
       hw.appendChild(card);
-    }
+    });
   }
 
   // Overview publication trend for the unfiltered corpus, with a
@@ -1389,6 +1365,22 @@ if (typeof document !== "undefined") {
     const cumulative = overviewTrendMode === "cumulative";
     let running = 0;
     const y = cumulative ? annual.map(n => (running += n)) : annual;
+    const cum = [];
+    running = 0;
+    for (const n of annual) cum.push(running += n);
+    const total = cum[cum.length - 1];
+    let halfIdx = 0;
+    for (let i = 0; i < years.length; i++) {
+      if (total - (i > 0 ? cum[i - 1] : 0) >= total / 2) halfIdx = i;
+    }
+    const earlyN = Math.min(3, annual.length);
+    const earlyRate = annual.slice(0, earlyN).reduce((a, b) => a + b, 0) / earlyN;
+    const fullIdx = years.map((year, i) => i).filter(i => years[i] !== 2026);
+    const lastFull = fullIdx[fullIdx.length - 1];
+    const ref = fullIdx.map(i => earlyRate * (i + 1));
+    const growth = total / Math.max(1, cum[0]);
+    const vsRef = cum[lastFull] / ref[ref.length - 1];
+    const earlySpan = years[0] + "–" + String(years[earlyN - 1]).slice(2);
     // Light-to-strong blue across the years for the markers.
     const lerp = (a, b, t) => Math.round(a + (b - a) * t);
     const span = Math.max(1, years[years.length - 1] - years[0]);
@@ -1402,14 +1394,10 @@ if (typeof document !== "undefined") {
       line: { color: ACCENT, width: 3, shape: "spline", smoothing: 0.45 },
       marker: { color: markerColors, size: 7, line: { color: "white", width: 1 } },
       fill: "tozeroy", fillcolor: "rgba(31,95,168,.12)",
-      fillgradient: {
-        type: "horizontal",
-        colorscale: [[0, "rgba(31,95,168,.04)"], [1, "rgba(31,95,168,.22)"]]
-      },
       hovertemplate: (cumulative ? "By %{x}" : "%{x}") + ": %{y:,} studies<extra></extra>"
     }];
-    // 2026 is a partial year: gold triangle plus a callout to its right.
     const partialIndex = years.indexOf(2026);
+    const narrowTrend = $("ov-trend").clientWidth < 520;
     const annotations = [];
     if (partialIndex >= 0) {
       traces.push({
@@ -1423,7 +1411,8 @@ if (typeof document !== "undefined") {
         x: 2026, y: y[partialIndex], xref: "x", yref: "y",
         text: "<b>2026: partial year</b><br>searches run mid-2026",
         showarrow: true, arrowhead: 0, arrowwidth: 1.2, arrowcolor: "#c9a85f",
-        ax: 22, ay: 0, xanchor: "left", align: "left",
+        ax: narrowTrend ? -16 : 22, ay: narrowTrend ? -36 : 0,
+        xanchor: narrowTrend ? "right" : "left", align: narrowTrend ? "right" : "left",
         font: { color: "#6f5420", size: 12.5 },
         bgcolor: "#fbf5e6", bordercolor: "#dcc48f", borderwidth: 1, borderpad: 5
       });
@@ -1433,48 +1422,46 @@ if (typeof document !== "undefined") {
     chips.hidden = !cumulative;
     const shapes = [];
     if (cumulative) {
-      const g = growthStats(years, annual);
       for (const [value, text] of [
-        [g.growth.toFixed(1) + "×", "growth in cumulative studies since " + years[0]],
-        [String(g.halfYear), "half of all " + fmtNum(g.total) + " studies were published in " +
-          g.halfYear + " or later"],
-        [g.vsRef.toFixed(1) + "×", "more studies by " + years[g.lastFull] +
-          " than if output had stayed at its " + g.earlySpan + " rate"]
+        [growth.toFixed(1) + "×", "growth in cumulative studies since " + years[0]],
+        [String(years[halfIdx]), "half of all " + fmtNum(total) + " studies were published in " +
+          years[halfIdx] + " or later"],
+        [vsRef.toFixed(1) + "×", "more studies by " + years[lastFull] +
+          " than if output had stayed at its " + earlySpan + " rate"]
       ]) {
         const chip = el("div", "trend-chip");
-        const v = el("strong");
-        v.textContent = value;
-        const t = el("span");
-        t.textContent = text;
-        chip.append(v, t);
+        const valueNode = el("strong");
+        valueNode.textContent = value;
+        const textNode = el("span");
+        textNode.textContent = text;
+        chip.append(valueNode, textNode);
         chips.appendChild(chip);
       }
-      // Dashed reference drawn under the main line.
       traces.unshift({
-        x: g.refYears, y: g.ref,
+        x: fullIdx.map(i => years[i]), y: ref,
         mode: "lines", type: "scatter", showlegend: false,
         line: { color: "#8a93a0", width: 1.6, dash: "dash" },
-        hovertemplate: "If output had stayed at the " + g.earlySpan + " rate: %{y:,.0f}<extra></extra>"
+        hovertemplate: "If output had stayed at the " + earlySpan + " rate: %{y:,.0f}<extra></extra>"
       });
-      const refLabelIdx = Math.round(g.ref.length * 0.62);
+      const refLabelIdx = Math.round(ref.length * 0.62);
       annotations.push({
-        x: g.refYears[refLabelIdx], y: g.ref[refLabelIdx], xref: "x", yref: "y",
-        text: "if output had stayed at its " + g.earlySpan + " rate",
+        x: years[fullIdx[refLabelIdx]], y: ref[refLabelIdx], xref: "x", yref: "y",
+        text: "if output had stayed at its " + earlySpan + " rate",
         showarrow: false, yanchor: "bottom", yshift: 4, font: { color: "#6b7280", size: 11.5 }
       }, {
-        x: g.halfYear, y: g.cum[g.halfIdx], xref: "x", yref: "y",
-        text: "<b>Half of all studies</b><br>published " + g.halfYear + " or later",
+        x: years[halfIdx], y: cum[halfIdx], xref: "x", yref: "y",
+        text: "<b>Half of all studies</b><br>published " + years[halfIdx] + " or later",
         showarrow: true, arrowhead: 0, arrowwidth: 1.2, arrowcolor: "#1f5fa8",
         ax: -95, ay: -38, align: "left",
         font: { color: "#1a4e8a", size: 12 },
         bgcolor: "#f0f6fc", bordercolor: "#b9d0ea", borderwidth: 1, borderpad: 5
       });
       shapes.push({
-        type: "line", xref: "x", yref: "y", x0: g.halfYear, x1: g.halfYear, y0: 0, y1: g.cum[g.halfIdx],
-        line: { color: "#1f5fa8", width: 1, dash: "dot" }
+        type: "line", xref: "x", yref: "y", x0: years[halfIdx], x1: years[halfIdx],
+        y0: 0, y1: cum[halfIdx], line: { color: "#1f5fa8", width: 1, dash: "dot" }
       });
       $("ov-trend-note").textContent = "Running total of studies by publication year. Dashed line: " +
-        "where the total would be if yearly output had stayed at its " + g.earlySpan + " average. " +
+        "where the total would be if yearly output had stayed at its " + earlySpan + " average. " +
         "2026 is a partial year (searches were run in mid-2026).";
     } else {
       $("ov-trend-note").textContent = "Annual studies by publication year. 2026 is a partial year: " +
@@ -1482,10 +1469,11 @@ if (typeof document !== "undefined") {
     }
     window.Plotly.react("ov-trend", traces, {
       font: BASE_FONT,
-      margin: { t: 10, b: 40, l: 60, r: partialIndex >= 0 ? 175 : 20 },
+      margin: { t: 10, b: 40, l: narrowTrend ? 48 : 60,
+               r: partialIndex >= 0 && !narrowTrend ? 175 : 20 },
       annotations,
       shapes,
-      xaxis: { showgrid: false, range: [years[0] - 0.4, years[years.length - 1] + 0.3], dtick: 2 },
+      xaxis: { showgrid: false, range: [years[0] - 0.4, years[years.length - 1] + 0.4], dtick: 2 },
       yaxis: { title: cumulative ? "cumulative studies" : "studies", tickformat: ",d",
                gridcolor: "#eeebe3", zeroline: false, rangemode: "tozero" },
       plot_bgcolor: "rgba(0,0,0,0)",
@@ -1493,147 +1481,51 @@ if (typeof document !== "undefined") {
     }, PLOTLY_CFG);
   }
 
-  // Sections shown together under one card on the Thematic analysis index.
-  // Members are section titles in GALLERY (see SECTION_SPLITS in boot()).
-  const SECTION_GROUPS = [{
-    title: "Topic clustering & disease focus",
-    blurb: "The subjects studies deal with: topics found in the wording of their abstracts, " +
-      "and the diseases they address.",
-    members: ["Topic clusters", "Disease focus"]
-  }, {
-    title: "Geography",
-    blurb: "Where health economic evidence is concentrated, and whether it is distributed in " +
-      "proportion to the burden of disease.",
-    members: ["Geographic coverage", "Gaps vs disease burden"]
-  }, {
-    title: "Authorship & access",
-    blurb: "Who writes economic evaluations about different settings, how authors collaborate " +
-      "across income groups, and how much of their work is freely available.",
-    members: ["Research ownership & collaboration", "Open access"]
-  }];
-
-  function groupOf(sectionTitle) {
-    return SECTION_GROUPS.find(g => g.members.includes(sectionTitle)) || null;
-  }
-
-  // A theme card (image, title, count, short description) for the index or a group view.
-  function thematicCard(titleText, blurb, imageFile, countText, onClick) {
-    const card = el("button", "thematic-card");
-    card.type = "button";
-    const img = el("img", "thematic-card-image");
-    img.src = "figures/" + imageFile;
-    img.alt = "";
-    img.loading = "lazy";
-    const body = el("div", "thematic-card-body");
-    const title = el("h2", "thematic-card-title");
-    title.textContent = titleText;
-    const count = el("div", "thematic-card-count");
-    count.textContent = countText;
-    const description = el("p", "thematic-card-description");
-    const fullBlurb = blurb.replace(/\s+/g, " ").trim();
-    description.textContent = fullBlurb.length > 155 ? fullBlurb.slice(0, 152) + "..." : fullBlurb;
-    const arrow = el("span", "thematic-card-arrow");
-    arrow.textContent = "→";
-    arrow.setAttribute("aria-hidden", "true");
-    body.append(title, count, description, arrow);
-    card.append(img, body);
-    card.addEventListener("click", onClick);
-    return card;
-  }
-
-  function navThemeLink(text, onClick) {
-    const item = el("button", "nav-theme-link");
-    item.type = "button";
-    item.setAttribute("role", "menuitem");
-    item.textContent = text;
-    item.addEventListener("click", () => {
-      closeThematicMenu();
-      switchTab("gallery");
-      onClick();
-    });
-    return item;
-  }
-
-  // Thematic analysis index: one card per gallery section, except grouped
-  // sections, which share one card (at the first member's position); the
-  // navbar dropdown lists the same entries.
+  // Thematic analysis index: one card per content.json gallery section, plus
+  // the matching entries in the navbar dropdown.
   function renderGalleryIndex() {
     const idx = $("gal-section-index");
     const menu = $("thematic-menu");
     idx.textContent = "";
     menu.textContent = "";
-    const shownGroups = new Set();
     GALLERY.forEach((sec, i) => {
-      const group = groupOf(sec.title);
-      if (group) {
-        if (shownGroups.has(group)) return;
-        shownGroups.add(group);
-        const members = group.members.map(t => GALLERY.find(x => x.title === t)).filter(Boolean);
-        const nFigs = members.reduce((n, m) => n + m.figs.length, 0);
-        idx.appendChild(thematicCard(group.title, group.blurb, sec.figs[0].file,
-          nFigs + " figures in " + members.length + " sections", () => showGroup(group)));
-        menu.appendChild(navThemeLink(group.title, () => showGroup(group)));
-        return;
-      }
-      idx.appendChild(thematicCard(sec.title, sec.blurb, sec.figs[0].file,
-        sec.figs.length + " figures", () => showSection(i)));
-      menu.appendChild(navThemeLink(sec.title, () => showSection(i)));
+      const card = el("button", "thematic-card");
+      card.type = "button";
+      const img = el("img", "thematic-card-image");
+      img.src = "figures/" + (sec.figs.find(f => !f.html) || sec.figs[0]).file;
+      img.alt = "";
+      img.loading = "lazy";
+      const body = el("div", "thematic-card-body");
+      const title = el("h2", "thematic-card-title");
+      title.textContent = sec.title;
+      const count = el("div", "thematic-card-count");
+      count.textContent = sec.figs.length + " figures";
+      const description = el("p", "thematic-card-description");
+      const fullBlurb = sec.blurb.replace(/\s+/g, " ").trim();
+      description.textContent = fullBlurb.length > 155 ? fullBlurb.slice(0, 152) + "..." : fullBlurb;
+      const arrow = el("span", "thematic-card-arrow");
+      arrow.textContent = "→";
+      arrow.setAttribute("aria-hidden", "true");
+      body.append(title, count, description, arrow);
+      card.append(img, body);
+      card.addEventListener("click", () => showSection(i));
+      idx.appendChild(card);
+
+      const item = el("button", "nav-theme-link");
+      item.type = "button";
+      item.setAttribute("role", "menuitem");
+      item.textContent = sec.title;
+      item.addEventListener("click", () => {
+        closeThematicMenu();
+        switchTab("gallery");
+        showSection(i);
+      });
+      menu.appendChild(item);
     });
   }
 
-  // Group view: the group's sections as theme cards.
-  function showGroup(group, returnTo = null) {
-    sectionReturnTo = returnTo;
-    $("gal-back").innerHTML = returnTo === "overview" ? "&larr; Back to Overview" : "&larr; All themes";
-    $("gal-index").style.display = "none";
-    $("gal-section").style.display = "block";
-    $("gal-sec-title").textContent = group.title;
-    $("gal-sec-blurb").textContent = group.blurb.replace(/\s+/g, " ").trim();
-    $("gal-sec-extra").textContent = "";
-    const grid = $("gal-sec-grid");
-    grid.textContent = "";
-    grid.classList.remove("fig-grid-single");
-    grid.classList.add("group-grid");
-    for (const title of group.members) {
-      const i = GALLERY.findIndex(x => x.title === title);
-      if (i < 0) continue;
-      const sec = GALLERY[i];
-      grid.appendChild(thematicCard(sec.title, sec.blurb, sec.figs[0].file, sec.figs.length + " figures",
-        () => showSection(i, { group })));
-    }
-    window.scrollTo(0, 0);
-  }
-
-  // Plain-language "how this was done" notes shown at the top of a section.
-  // Facts come from the figure captions and the methods text.
-  const SECTION_METHOD_NOTES = {
-    "Topic clusters": {
-      summary: "How these topics were identified",
-      paragraphs: [
-        "<strong>Topic clusters</strong> were found from the studies themselves, not from a list of "
-          + "categories decided in advance. A language model turned each study's abstract into a numerical "
-          + "summary of its meaning, and studies with similar summaries were grouped together automatically "
-          + "into 73 themes. The themes therefore describe what studies are about rather than official categories.",
-        "<strong>Intervention types</strong> (for example vaccines, pharmaceuticals, devices or surgery) come "
-          + "from a separate step: a language model recorded each study's main type of intervention. This was "
-          + "checked against a keyword list, the topic clusters and a second model, but not by human reviewers."
-      ]
-    },
-    "Disease focus": {
-      summary: "How disease areas were identified",
-      paragraphs: [
-        "Disease areas come from <strong>Medical Subject Headings (MeSH)</strong>: the standard subject "
-          + "terms that indexers at the US National Library of Medicine attach to articles in PubMed. Each "
-          + "study's MeSH terms were matched to 14 broad disease groups, such as infectious diseases, "
-          + "cancers and cardiovascular disease.",
-        "Only studies with MeSH disease terms can be classified this way: 22,744 of the 41,657 studies "
-          + "(about 55%). These figures therefore describe a subset of the evidence, not all studies in the map."
-      ]
-    }
-  };
-
   // Where the section's back link leads: null = theme index, "overview" =
-  // back to the Overview, { group } = back to that group's view.
+  // back to the Overview.
   let sectionReturnTo = null;
 
   // Figures drawn at least this many pixels wide span two grid columns.
@@ -1641,33 +1533,20 @@ if (typeof document !== "undefined") {
 
   function showSection(i, returnTo = null) {
     const sec = GALLERY[i];
-    // A grouped section opened from elsewhere still leads back to its group.
-    if (returnTo == null && groupOf(sec.title)) returnTo = { group: groupOf(sec.title) };
     sectionReturnTo = returnTo;
-    $("gal-back").innerHTML = returnTo === "overview" ? "&larr; Back to Overview"
-      : returnTo && returnTo.group ? "&larr; " + returnTo.group.title
-      : "&larr; All themes";
+    $("gal-back").innerHTML = returnTo === "overview" ? "&larr; Back to Overview" : "&larr; All themes";
     $("gal-index").style.display = "none";
     $("gal-section").style.display = "block";
     $("gal-sec-title").textContent = sec.title;
     $("gal-sec-blurb").textContent = sec.blurb.replace(/\s+/g, " ").trim();
-    const extra = $("gal-sec-extra");
-    extra.textContent = "";
-    const methodNote = SECTION_METHOD_NOTES[sec.title];
-    if (methodNote) {
-      const box = el("details", "method-note");
-      const summary = el("summary");
-      summary.textContent = methodNote.summary;
-      box.appendChild(summary);
-      // Paragraphs are developer-authored literals above (see el()'s trust note).
-      for (const html of methodNote.paragraphs) box.appendChild(el("p", null, html));
-      extra.appendChild(box);
-    }
     const grid = $("gal-sec-grid");
     grid.textContent = "";
-    grid.classList.remove("group-grid");
     grid.classList.toggle("fig-grid-single", sec.figs.length === 1);
     for (const f of sec.figs) {
+      if (f.html) {
+        grid.appendChild(htmlFigureCard(f));
+        continue;
+      }
       const card = el("div", "fig-card");
       const img = el("img");
       img.src = "figures/" + f.file;
@@ -1691,6 +1570,39 @@ if (typeof document !== "undefined") {
     window.scrollTo(0, 0);
   }
 
+  // Card for an interactive HTML figure: the page in an iframe sized to its
+  // content (same origin, so its height can be read), plus a full-page link.
+  function htmlFigureCard(f) {
+    const card = el("div", "fig-card fig-card-html");
+    const frame = el("iframe");
+    frame.src = "figures/" + f.file + "?v=" + BUILD;
+    frame.title = f.title;
+    frame.loading = "lazy";
+    const fit = () => {
+      const doc = frame.contentDocument;
+      if (doc && doc.documentElement) frame.style.height = doc.documentElement.scrollHeight + "px";
+    };
+    frame.addEventListener("load", () => {
+      fit();
+      const doc = frame.contentDocument;
+      if (doc && doc.body && window.ResizeObserver) new ResizeObserver(fit).observe(doc.body);
+    });
+    card.appendChild(frame);
+    const body = el("div", "fig-body");
+    const ft = el("div", "fig-title");
+    ft.textContent = f.title;
+    const fc = el("div", "fig-caption");
+    fc.textContent = f.caption;
+    const open = el("a", "fig-open-link");
+    open.href = "figures/" + f.file;
+    open.target = "_blank";
+    open.rel = "noopener";
+    open.textContent = "Open full page ↗";
+    body.append(ft, fc, open);
+    card.appendChild(body);
+    return card;
+  }
+
   function hideSection() {
     $("gal-section").style.display = "none";
     $("gal-index").style.display = "block";
@@ -1700,11 +1612,6 @@ if (typeof document !== "undefined") {
 
   function goBackFromSection() {
     const toOverview = sectionReturnTo === "overview";
-    const toGroup = sectionReturnTo && sectionReturnTo.group;
-    if (toGroup) {
-      showGroup(toGroup);
-      return;
-    }
     hideSection();
     if (toOverview) {
       switchTab("overview");
@@ -2093,15 +2000,20 @@ if (typeof document !== "undefined") {
 
   function setupCountryPane() {
     const sel = $("c-picker");
-    for (const r of db.countries) {
+    // Countries A–Z; the profile opens on the first one alphabetically.
+    const sorted = db.countries.slice().sort((a, b) => a.country.localeCompare(b.country));
+    state.country = sorted[0].iso3;
+    for (const r of sorted) {
       const o = document.createElement("option");
       o.value = r.iso3;
       o.textContent = r.country;
-      if (r.iso3 === "IND") o.selected = true;
+      if (r.iso3 === state.country) o.selected = true;
       sel.appendChild(o);
     }
     new window.TomSelect(sel, {
       placeholder: "Pick a country…",
+      // Tom Select lists only 50 options by default; show every country.
+      maxOptions: null,
       onChange: val => {
         if (!val) return;
         state.country = val;
@@ -2326,6 +2238,10 @@ if (typeof document !== "undefined") {
 
   function setupLandscapePicker() {
     const sel = $("land-country");
+    const allOpt = document.createElement("option");
+    allOpt.value = ALL_COUNTRIES;
+    allOpt.textContent = "All countries";
+    sel.appendChild(allOpt);
     for (const r of landscapeCountries(db)) {
       const o = document.createElement("option");
       o.value = r.iso3;
@@ -2334,6 +2250,8 @@ if (typeof document !== "undefined") {
     }
     landSelect = new window.TomSelect(sel, {
       placeholder: "Pick a country…",
+      // Tom Select lists only 50 options by default; show every country.
+      maxOptions: null,
       // Render the list in <body> so card/tab overflow cannot clip it.
       dropdownParent: "body",
       onChange: val => { if (val) showCountryMix(val); }
@@ -2343,13 +2261,9 @@ if (typeof document !== "undefined") {
 
   function renderLandscape() {
     renderLandscapeScatter();
-    // Seed the mix panels with the most-studied country so the tab never
-    // opens empty (§2.6).
-    let seed = null, best = -1;
-    for (const r of db.countries) {
-      if (r.studies > best) { best = r.studies; seed = r.iso3; }
-    }
-    if (seed) showCountryMix(seed);
+    // Open on all countries combined, a global baseline to compare each
+    // country against, so the tab never opens empty (§2.6).
+    showCountryMix(ALL_COUNTRIES);
   }
 
   function renderLandscapeScatter() {
@@ -2489,12 +2403,34 @@ if (typeof document !== "undefined") {
     if (landSelect && landSelect.getValue() !== iso3) landSelect.setValue(iso3, true);
   }
 
+  // Study texts live in per-country shards; for "All countries" each study is
+  // read from the shard of the first country it names.
+  let studyFirstIso = null;
+  function firstIsoOf(s) {
+    if (!studyFirstIso) {
+      studyFirstIso = new Map();
+      const g = db.geo;
+      for (let i = 0; i < g.s.length; i++) {
+        if (!studyFirstIso.has(g.s[i])) studyFirstIso.set(g.s[i], db.countries[g.c[i]].iso3);
+      }
+    }
+    return studyFirstIso.get(s);
+  }
+
+  // Cap on "All countries" lists so a cell click never fetches every shard.
+  const ALL_COUNTRIES_LIST_CAP = 100;
+
   async function openStudiesModal(iso3, diseaseLabel, evalLabel, indices) {
-    const rec = db.countries.find(r => r.iso3 === iso3);
+    const all = iso3 === ALL_COUNTRIES;
+    const rec = all ? null : db.countries.find(r => r.iso3 === iso3);
     $("study-modal-title").textContent =
-      (rec ? rec.country : iso3) + " — " + diseaseLabel + " × " + evalLabel;
+      (all ? "All countries" : rec ? rec.country : iso3) + " — " + diseaseLabel + " × " + evalLabel;
+    const shown = all ? indices.slice(0, ALL_COUNTRIES_LIST_CAP) : indices;
     $("study-modal-count").textContent =
-      fmtNum(indices.length) + (indices.length === 1 ? " study" : " studies");
+      fmtNum(indices.length) + (indices.length === 1 ? " study" : " studies") +
+      (shown.length < indices.length
+        ? " · showing the first " + fmtNum(shown.length) + "; pick a country to see all"
+        : "");
     const list = $("study-modal-list");
     list.textContent = "";
     const loading = el("div", "study-item study-loading");
@@ -2502,15 +2438,34 @@ if (typeof document !== "undefined") {
     list.appendChild(loading);
     $("study-modal").classList.add("open");
 
-    const payload = await loadDrill(iso3);
+    let records;
+    if (all) {
+      const byIso = new Map();
+      for (const s of shown) {
+        const k = firstIsoOf(s);
+        if (!byIso.has(k)) byIso.set(k, []);
+        byIso.get(k).push(s);
+      }
+      const isos = [...byIso.keys()];
+      await Promise.all(isos.map(loadDrill));
+      const found = new Map();
+      for (const k of isos) {
+        for (const r of drillRecords(db, k, byIso.get(k))) found.set(r.s, r);
+      }
+      records = shown.map(s => found.get(s) ||
+        { s, title: null, abstract: null, truncated: false, missing: true });
+    } else {
+      const payload = await loadDrill(iso3);
+      records = payload ? drillRecords(db, iso3, indices) : null;
+    }
     list.textContent = "";
-    if (!payload) {
+    if (!records) {
       const miss = el("div", "study-item");
       miss.textContent = "Study texts are not available for this country.";
       list.appendChild(miss);
       return;
     }
-    for (const r of drillRecords(db, iso3, indices)) {
+    for (const r of records) {
       const item = el("div", "study-item");
       const title = el("div", "study-title");
       title.textContent = r.title != null ? r.title : "Title unavailable";
@@ -2566,16 +2521,28 @@ if (typeof document !== "undefined") {
     });
     $("fig-modal-close").addEventListener("click", closeModal);
     $("fig-modal").addEventListener("click", e => { if (e.target === $("fig-modal")) closeModal(); });
+    const closeOaHelp = () => $("oa-help-modal").classList.remove("open");
+    $("oa-help-close").addEventListener("click", closeOaHelp);
+    $("oa-help-modal").addEventListener("click", e => {
+      if (e.target === $("oa-help-modal")) closeOaHelp();
+    });
+    // "?" beside the country pickers: which countries the country views cover.
+    const closeCountryHelp = () => $("country-help-modal").classList.remove("open");
+    for (const b of document.querySelectorAll(".country-help-button")) {
+      b.addEventListener("click", () => $("country-help-modal").classList.add("open"));
+    }
+    $("country-help-close").addEventListener("click", closeCountryHelp);
+    $("country-help-modal").addEventListener("click", e => {
+      if (e.target === $("country-help-modal")) closeCountryHelp();
+    });
     $("fig-zoom-out").addEventListener("click", () => setFigureZoom(figureZoom - 0.25));
     $("fig-zoom-reset").addEventListener("click", () => setFigureZoom(1));
     $("fig-zoom-in").addEventListener("click", () => setFigureZoom(figureZoom + 0.25));
+    $("fig-download").addEventListener("click", downloadFigure);
     $("study-modal-close").addEventListener("click", closeStudyModal);
     $("study-modal").addEventListener("click", e => { if (e.target === $("study-modal")) closeStudyModal(); });
-    const closeOaHelp = () => $("oa-help-modal").classList.remove("open");
-    $("oa-help-close").addEventListener("click", closeOaHelp);
-    $("oa-help-modal").addEventListener("click", e => { if (e.target === $("oa-help-modal")) closeOaHelp(); });
     document.addEventListener("keydown", e => {
-      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeThematicMenu(); closeOaHelp(); }
+      if (e.key === "Escape") { closeModal(); closeStudyModal(); closeOaHelp(); closeCountryHelp(); closeThematicMenu(); }
     });
     $("gal-back").addEventListener("click", goBackFromSection);
     for (const b of document.querySelectorAll("[data-trend-mode]")) {
@@ -2593,8 +2560,12 @@ if (typeof document !== "undefined") {
     db = loadData({ dict, studies, geo, disease, countries, content });
 
     // Gallery sections, figure entries and the interpolated paper01 PRISMA
-    // caption come from content.json (§15.1), regrouped by buildGallery().
-    GALLERY = buildGallery(db.content);
+    // caption all come from content.json (§15.1) — nothing hardcoded.
+    GALLERY = db.content.gallery.map(sec => ({ ...sec, figs: sec.figs.slice() }));
+    for (const x of EXTRA_FIGURES) {
+      const sec = GALLERY.find(s => s.title === x.section);
+      if (sec) sec.figs.splice(x.index, 0, x.fig);
+    }
     FIG_INDEX = {};
     for (const sec of GALLERY) {
       for (const f of sec.figs) FIG_INDEX[f.file] = { ...f, sectionTitle: sec.title };
