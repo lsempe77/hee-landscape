@@ -1053,8 +1053,8 @@ if (typeof document !== "undefined") {
     // geography") could not be reproduced and was replaced in content.json and
     // dict.json; it needs fixing in the pipeline too.
     "Countries studied": {
-      label: "Countries profiled in the map",
-      sub: "Countries with at least one study",
+      label: "Countries covered by studies",
+      sub: "Across the global evidence base",
       value: () => fmtNum(db.countries.filter(r => r.studies > 0).length)
     },
     "Journals": { sub: "Among studies with journal details available" }
@@ -1098,14 +1098,18 @@ if (typeof document !== "undefined") {
     title.textContent = "Publication access";
     const openCount = countLevel("oa_label", "Open access");
     const knownCount = openCount + countLevel("oa_label", "Not open");
-    // No DOI/URL field in the web data: a known OA status means OpenAlex matched
-    // the study's DOI, so this is a lower bound on DOI availability.
+    // The web data has no DOI field: 36,385 included studies have a `doi` in the
+    // v2 team export (hee_analysis_master.csv, 2026-10-11); it has no URL field.
+    // Update with the export. Fallback: a known OA status means OpenAlex matched
+    // the study's DOI, a lower bound on DOI availability.
+    const DOI_COUNT = 36385;
     const totalCount = db.studies.oa_label.length;
+    const doiCount = totalCount === 41657 ? DOI_COUNT : knownCount;
     const metrics = el("div", "publication-access-metrics");
 
     for (const [label, valueText, note] of [
-      ["DOI found in OpenAlex", fmtPct(totalCount ? 100 * knownCount / totalCount : null),
-        "Of all " + fmtNum(totalCount) + " studies"],
+      ["DOI or URL available", fmtPct(totalCount ? 100 * doiCount / totalCount : null),
+        "Of all studies"],
       ["Available open access", fmtPct(knownCount ? 100 * openCount / knownCount : null),
         "Of " + fmtNum(knownCount) + " studies with a known open-access status"]
     ]) {
@@ -1206,21 +1210,25 @@ if (typeof document !== "undefined") {
       "Share of all studies.");
   }
 
-  // The web data has no funder field; the ~27% coverage is the figure quoted in
-  // the funder figure captions (content.json), so it is shown as text, not computed.
+  // The web data has no funder field. Counts are from the v2 team export
+  // (hee_analysis_master.csv `funders`, 2026-10-11): included studies naming at
+  // least one funder ("None"/"self-funded" entries dropped), and how many name
+  // a funder of each type. Types follow OECD Frascati sectors: university
+  // hospitals sit with universities; other public hospitals and health services
+  // with government. A study can name funders of several types, so the shares
+  // overlap. Update with the export.
+  const FUNDER_STUDIES = 11150;
+  const FUNDER_TYPE_COUNTS = [
+    ["Government and multilateral", 6895],
+    ["Academic and non-profit", 3506],
+    ["Private companies", 2652],
+    ["Unclassified", 292]
+  ];
+
   function fundersCard() {
-    const box = el("div", "value-box funders-card");
-    const title = el("div", "value-box-title");
-    title.textContent = "Who funds the evidence?";
-    const value = el("div", "value-box-value");
-    value.textContent = "~27%";
-    const sub = el("div", "value-box-sub");
-    sub.textContent = "of the " + fmtNum(db.nStudies) +
-      " studies name at least one funder, so funder analysis is a floor, not a census.";
-    const more = el("span", "funders-card-link");
-    more.textContent = "See funder analysis →";
-    box.append(title, value, sub, more);
-    return box;
+    return barRowsCard("funding-overview-card", "Who funds the evidence?",
+      FUNDER_TYPE_COUNTS.map(([label, n]) => [label, 100 * n / FUNDER_STUDIES]),
+      "Among " + fmtNum(FUNDER_STUDIES) + " studies reporting a funder. Categories may overlap.");
   }
 
   function makeOverviewCardInteractive(box, key) {
