@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-10-trends";
+const BUILD = "2026-10-11-ris-links";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -62,6 +62,24 @@ export function rRound(x, digits = 0) {
 export function fmtNum(x) {
   if (x == null) return "";
   return Number(x).toLocaleString("en-US");
+}
+
+// Publication links and availability come from the same study-level fields.
+export function publicationUrl(studies, index) {
+  const candidate = studies.url?.[index];
+  if (candidate) {
+    try {
+      const parsed = new URL(candidate);
+      if (parsed.protocol === "https:" || parsed.protocol === "http:") return parsed.href;
+    } catch { /* Invalid URLs are not rendered as links. */ }
+  }
+  const doi = studies.doi?.[index];
+  return /^10\.\d{4,9}\/\S+$/i.test(doi || "") ? "https://doi.org/" + doi : null;
+}
+
+export function publicationAccessCounts(studies) {
+  if (!Array.isArray(studies.doi) || !Array.isArray(studies.url)) return null;
+  return studies.id.reduce((count, _, index) => count + (publicationUrl(studies, index) ? 1 : 0), 0);
 }
 
 function num(v) {
@@ -1138,17 +1156,12 @@ if (typeof document !== "undefined") {
     title.textContent = "Publication access";
     const openCount = countLevel("oa_label", "Open access");
     const knownCount = openCount + countLevel("oa_label", "Not open");
-    // The web data has no DOI field: 36,385 included studies have a `doi` in the
-    // v2 team export (hee_analysis_master.csv, 2026-10-11); it has no URL field.
-    // Update with the export. Fallback: a known OA status means OpenAlex matched
-    // the study's DOI, a lower bound on DOI availability.
-    const DOI_COUNT = 36385;
-    const totalCount = db.studies.oa_label.length;
-    const doiCount = totalCount === 41657 ? DOI_COUNT : knownCount;
+    const totalCount = db.studies.id.length;
+    const linkCount = publicationAccessCounts(db.studies);
     const metrics = el("div", "publication-access-metrics");
 
     for (const [label, valueText, note] of [
-      ["DOI or URL available", fmtPct(totalCount ? 100 * doiCount / totalCount : null),
+      ["DOI or URL available", fmtPct(totalCount && linkCount != null ? 100 * linkCount / totalCount : null),
         "Of all studies"],
       ["Available open access", fmtPct(knownCount ? 100 * openCount / knownCount : null),
         "Of " + fmtNum(knownCount) + " studies with a known open-access status"]
@@ -1909,7 +1922,8 @@ if (typeof document !== "undefined") {
       const yesNo = v => v === 1 ? "Yes" : v === 0 ? "No" : "";
       const header = ["map_id", "year", "title", "countries", "income_groups", "disease_groups",
         "evaluation_type", "design_basis", "approach", "qaly", "open_access", "geographic_scope",
-        "topic_domain", "abstract_reports_icer", "abstract_reports_threshold"];
+        "topic_domain", "abstract_reports_icer", "abstract_reports_threshold",
+        "record_id", "doi", "url", "url_source", "doi_source", "publication_link"];
       const rows = [header];
       for (const s of studies) {
         const cs = countriesOf.get(s) || [];
@@ -1920,7 +1934,9 @@ if (typeof document !== "undefined") {
           (diseasesOf.get(s) || []).join("; "),
           label("econ_eval_type", s), label("design_basis", s), label("model_label", s),
           label("qaly_label", s), label("oa_label", s), label("geo_scope", s), label("topic_domain", s),
-          yesNo(st.has_icer[s]), yesNo(st.has_threshold[s])
+          yesNo(st.has_icer[s]), yesNo(st.has_threshold[s]),
+          st.record_id?.[s] || "", st.doi?.[s] || "", st.url?.[s] || "",
+          st.url_source?.[s] || "", st.doi_source?.[s] || "", publicationUrl(st, s) || ""
         ]);
       }
       const cell = v => {
@@ -2677,6 +2693,15 @@ if (typeof document !== "undefined") {
       }
       item.appendChild(title);
       item.appendChild(meta);
+      const publicationLink = publicationUrl(db.studies, r.s);
+      if (publicationLink) {
+        const link = el("a", "study-publication-link");
+        link.href = publicationLink;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = "View publication";
+        item.appendChild(link);
+      }
       item.appendChild(abs);
       list.appendChild(item);
     }

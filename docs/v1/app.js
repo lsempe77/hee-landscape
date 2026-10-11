@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-09-18" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-09-18";
+const BUILD = "2026-10-11-ris-links";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -62,6 +62,24 @@ export function rRound(x, digits = 0) {
 export function fmtNum(x) {
   if (x == null) return "";
   return Number(x).toLocaleString("en-US");
+}
+
+// Publication links and availability come from the same study-level fields.
+export function publicationUrl(studies, index) {
+  const candidate = studies.url?.[index];
+  if (candidate) {
+    try {
+      const parsed = new URL(candidate);
+      if (parsed.protocol === "https:" || parsed.protocol === "http:") return parsed.href;
+    } catch { /* Invalid URLs are not rendered as links. */ }
+  }
+  const doi = studies.doi?.[index];
+  return /^10\.\d{4,9}\/\S+$/i.test(doi || "") ? "https://doi.org/" + doi : null;
+}
+
+export function publicationAccessCounts(studies) {
+  if (!Array.isArray(studies.doi) || !Array.isArray(studies.url)) return null;
+  return studies.id.reduce((count, _, index) => count + (publicationUrl(studies, index) ? 1 : 0), 0);
 }
 
 function num(v) {
@@ -1791,6 +1809,15 @@ if (typeof document !== "undefined") {
       }
       item.appendChild(title);
       item.appendChild(meta);
+      const publicationLink = publicationUrl(db.studies, r.s);
+      if (publicationLink) {
+        const link = el("a", "study-publication-link");
+        link.href = publicationLink;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = "View publication";
+        item.appendChild(link);
+      }
       item.appendChild(abs);
       list.appendChild(item);
     }

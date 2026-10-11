@@ -572,3 +572,5 @@ table.dataTable thead th.num { text-align: right; }
 .land-picker .ts-wrapper { width: 100%; }
 /* Keep the options list above card shadows and headers, below the modals (z 2000). */
 .ts-dropdown { z-index: 1500; }
+
+.study-publication-link { display: inline-block; margin: 0 0 .4rem; font-size: .8rem; text-decoration: underline; }
