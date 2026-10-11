@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-11-ris-links";
+const BUILD = "2026-10-11-overview-funders";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -1425,7 +1425,8 @@ if (typeof document !== "undefined") {
     const heroes = [
       { file: "fig_dotmap.webp", alt: "Global dot map" },
       { file: "fig_burden.webp", alt: "Evidence vs burden" },
-      { file: "fig_transition.webp", alt: "Epidemiological transition" }
+      { file: "fig_transition.webp", alt: "Epidemiological transition" },
+      { file: "fig_funder_funders.webp", alt: "Top funders by evaluations and country income group" }
     ];
     const hw = $("ov-hero-imgs");
     hw.textContent = "";
