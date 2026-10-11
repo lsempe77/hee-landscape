@@ -1,0 +1,61 @@
+cluster,topic_label,disease,category
+0,cataract / eye / surgery,Cataract & eye disease,Non-communicable
+1,dental / tooth / children,Dental & oral health,Non-communicable
+2,thyroid / nodules / papillary,Thyroid cancer & nodules,Non-communicable
+3,multiple sclerosis / sclerosis / interferon,Multiple sclerosis,Non-communicable
+4,valve / aortic valve / aortic,Aortic valve disease,Non-communicable
+5,tuberculosis / screening / latent,Tuberculosis,Communicable
+6,hcv / hepatitis / hbv,Viral hepatitis,Communicable
+7,hpv / vaccination / hpv vaccination,HPV,Communicable
+8,hiv / prep / art,HIV,Communicable
+9,prostate / prostate cancer / cancer,Prostate cancer,Non-communicable
+11,dementia / alzheimer / alzheimer disease,Dementia,Non-communicable
+12,psoriasis / rheumatoid / rheumatoid arthritis,Psoriasis & rheumatoid arthritis,Non-communicable
+13,ivf / live birth / pregnancy,Infertility,Non-communicable
+14,multiple myeloma / myeloma / aml,Myeloma & leukaemia,Non-communicable
+15,rituximab / lymphoma / relapsed refractory,Lymphoma,Non-communicable
+16,pneumococcal / vaccine / vaccination,Pneumococcal disease,Communicable
+17,malaria / dengue / control,Malaria & dengue,Communicable
+21,iron / transfusion / anemia,Anaemia,Non-communicable
+23,maternal / women / neonatal,Maternal & newborn health,Communicable
+24,wound / dressing / dressings,Chronic wounds,Non-communicable
+26,vaccination / influenza / vaccine,Influenza,Communicable
+27,covid- / optimal control / vaccination,COVID-19,Communicable
+28,appendectomy / laparoscopic / hospital,Appendicitis,Non-communicable
+29,ckd / dialysis / kidney,Chronic kidney disease,Non-communicable
+30,colonoscopy / crc / screening,Colorectal cancer,Non-communicable
+31,eradication / gastric cancer / gastric,Gastric cancer & H. pylori,Non-communicable
+32,alcohol / opioid / overdose,Alcohol & drug use,Non-communicable
+33,depression / mental / trial,Depression & mental disorders,Non-communicable
+34,asthma / ics / exacerbations,Asthma,Non-communicable
+35,copd / exacerbations / chronic obstructive,COPD,Non-communicable
+36,atrial / ablation / fibrillation,Atrial fibrillation,Non-communicable
+37,warfarin / rivaroxaban / atrial,Atrial fibrillation,Non-communicable
+38,vte / rivaroxaban / venous thromboembolism,Venous thromboembolism,Non-communicable
+39,infliximab / crohn / crohn disease,Inflammatory bowel disease,Non-communicable
+40,incontinence / urinary incontinence / sling,Urinary incontinence,Non-communicable
+41,stones / stone / stent,Kidney stones,Non-communicable
+42,tax / obesity / ssb,Obesity,Non-communicable
+43,aaa / aneurysm / aneurysms,Aortic aneurysm,Non-communicable
+44,stroke / thrombectomy / ischemic stroke,Stroke,Non-communicable
+45,nsclc / chemotherapy / lung cancer,Lung cancer,Non-communicable
+46,nsclc / erlotinib / egfr,Lung cancer,Non-communicable
+47,lumbar / fusion / surgery,Back pain & spine disorders,Non-communicable
+48,breast / mammography / screening,Breast cancer,Non-communicable
+49,cholecystectomy / laparoscopic cholecystectomy / laparoscopic,Gallstone disease,Non-communicable
+50,breast cancer / breast / trastuzumab,Breast cancer,Non-communicable
+51,coronary / pci / clopidogrel,Coronary heart disease,Non-communicable
+53,pain / acupuncture / low pain,Back pain & spine disorders,Non-communicable
+55,sorafenib / hcc / hepatocellular carcinoma,Liver cancer,Non-communicable
+56,mcrc / cetuximab / metastatic colorectal,Colorectal cancer,Non-communicable
+58,knee / arthroplasty / tka,Osteoarthritis,Non-communicable
+59,heart failure / heart / cardiac rehabilitation,Heart failure,Non-communicable
+61,antibiotic / antimicrobial / hospital,Bacterial infections,Communicable
+62,fractures / fixation / fracture,Fractures,Injuries
+63,osteoporosis / fracture / fractures,Osteoporosis,Non-communicable
+65,dapagliflozin / valsartan / heart failure,Heart failure,Non-communicable
+68,hysterectomy / endometrial / laparoscopic,Uterine conditions,Non-communicable
+69,hypertension / blood pressure / pressure,Hypertension,Non-communicable
+70,statin / statins / ldl-c,High cholesterol,Non-communicable
+71,diabetes / type diabetes / glucose,Diabetes,Non-communicable
+72,insulin / metformin / type diabetes,Diabetes,Non-communicable

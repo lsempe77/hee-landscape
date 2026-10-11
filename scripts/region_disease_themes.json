@@ -1,0 +1,167 @@
+{
+ "source": "data/raw team export (v2, 2026-10-11): topic_map.csv + hee_geo_long.csv",
+ "n_included": 41657,
+ "regions": {
+  "EAS": {
+   "n": 7044,
+   "top": [
+    {
+     "disease": "Lung cancer",
+     "category": "Non-communicable",
+     "n": 322,
+     "share": 0.04571266325951164
+    },
+    {
+     "disease": "Viral hepatitis",
+     "category": "Communicable",
+     "n": 228,
+     "share": 0.03236797274275979
+    },
+    {
+     "disease": "Diabetes",
+     "category": "Non-communicable",
+     "n": 220,
+     "share": 0.031232254400908575
+    }
+   ]
+  },
+  "ECS": {
+   "n": 10091,
+   "top": [
+    {
+     "disease": "Depression & mental disorders",
+     "category": "Non-communicable",
+     "n": 648,
+     "share": 0.06421563769695769
+    },
+    {
+     "disease": "Diabetes",
+     "category": "Non-communicable",
+     "n": 384,
+     "share": 0.038053711227826775
+    },
+    {
+     "disease": "Psoriasis & rheumatoid arthritis",
+     "category": "Non-communicable",
+     "n": 326,
+     "share": 0.032306015261123776
+    }
+   ]
+  },
+  "LCN": {
+   "n": 1225,
+   "top": [
+    {
+     "disease": "Maternal & newborn health",
+     "category": "Communicable",
+     "n": 63,
+     "share": 0.05142857142857143
+    },
+    {
+     "disease": "Breast cancer",
+     "category": "Non-communicable",
+     "n": 51,
+     "share": 0.04163265306122449
+    },
+    {
+     "disease": "Asthma",
+     "category": "Non-communicable",
+     "n": 49,
+     "share": 0.04
+    }
+   ]
+  },
+  "MEA": {
+   "n": 591,
+   "top": [
+    {
+     "disease": "Diabetes",
+     "category": "Non-communicable",
+     "n": 38,
+     "share": 0.06429780033840947
+    },
+    {
+     "disease": "Bacterial infections",
+     "category": "Communicable",
+     "n": 29,
+     "share": 0.049069373942470386
+    },
+    {
+     "disease": "Viral hepatitis",
+     "category": "Communicable",
+     "n": 29,
+     "share": 0.049069373942470386
+    }
+   ]
+  },
+  "NAC": {
+   "n": 8697,
+   "top": [
+    {
+     "disease": "Breast cancer",
+     "category": "Non-communicable",
+     "n": 302,
+     "share": 0.03472461768425894
+    },
+    {
+     "disease": "Diabetes",
+     "category": "Non-communicable",
+     "n": 262,
+     "share": 0.03012533057376107
+    },
+    {
+     "disease": "Lung cancer",
+     "category": "Non-communicable",
+     "n": 250,
+     "share": 0.028745544440611705
+    }
+   ]
+  },
+  "SAS": {
+   "n": 852,
+   "top": [
+    {
+     "disease": "Maternal & newborn health",
+     "category": "Communicable",
+     "n": 113,
+     "share": 0.13262910798122066
+    },
+    {
+     "disease": "Tuberculosis",
+     "category": "Communicable",
+     "n": 66,
+     "share": 0.07746478873239436
+    },
+    {
+     "disease": "HIV",
+     "category": "Communicable",
+     "n": 37,
+     "share": 0.04342723004694836
+    }
+   ]
+  },
+  "SSF": {
+   "n": 1395,
+   "top": [
+    {
+     "disease": "HIV",
+     "category": "Communicable",
+     "n": 350,
+     "share": 0.25089605734767023
+    },
+    {
+     "disease": "Maternal & newborn health",
+     "category": "Communicable",
+     "n": 270,
+     "share": 0.1935483870967742
+    },
+    {
+     "disease": "Malaria & dengue",
+     "category": "Communicable",
+     "n": 138,
+     "share": 0.0989247311827957
+    }
+   ]
+  }
+ }
+}

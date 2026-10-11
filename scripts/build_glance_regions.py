@@ -23,6 +23,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "docs", "data")
 OUT = os.path.join(ROOT, "docs", "figures", "fig_glance_regions.html")
 REGIONS_CSV = os.path.join(ROOT, "scripts", "wb_regions.csv")
+# Top disease themes by region, from scripts/build_region_disease_themes.py
+# (needs the internal team export). All publication years only.
+THEMES_JSON = os.path.join(ROOT, "scripts", "region_disease_themes.json")
 
 REGION_ORDER = ["EAS", "ECS", "LCN", "MEA", "NAC", "SAS", "SSF"]
 # Approximate label positions (lon, lat) for the black region tags on the map.
@@ -74,18 +77,17 @@ NOTES = {
                "A study in several groups is split equally between them. Caveats: only about half of all studies have a disease group; "
                "asthma, allergies and autoimmune conditions are also coded as infectious, which overstates the communicable share; "
                "'metabolic & nutritional' (diabetes and malnutrition together) is counted as non-communicable because the data cannot separate them.",
-    "top_diseases": "Not available yet. Each study's disease is recorded only as one or more of 14 broad groups "
-                    "(e.g. cardiovascular, neoplasms, infectious, mental & substance use), so the data can say a study is about "
-                    "'cardiovascular disease' but not whether it is about stroke, heart failure or hypertension. "
-                    "The detailed disease terms (MeSH headings) that these groups were built from are not included in the map's data. "
-                    "To fill this row, the source data needs either those MeSH headings mapped to specific GBD causes, "
-                    "or the study-level research themes from the topic model (which name diseases such as malaria, HIV and dementia). "
-                    "Until then, the top three of the 14 broad groups could be shown instead.",
+    "top_diseases": "Where these come from: the studies' coded disease fields are too broad to name a specific disease, "
+                    "so this row uses research themes instead. A computer grouped all studies by the wording of their abstracts "
+                    "into 73 themes (a 'topic model'), and we gave each theme that is about one disease a plain name, "
+                    "such as HIV or breast cancer; themes about a procedure or setting rather than a disease are left out. "
+                    "The percentage is the share of the region's evaluations in that theme. Each study belongs to at most one theme, "
+                    "and about 14% of studies fit no theme, so these shares are a lower bound. The dot colour shows "
+                    "communicable, non-communicable or injury, as in the disease focus row above.",
     "utility_region": "Share of the region's studies that report QALYs. The red line is the share across all studies.",
     "trend": "Cumulative share of the region's countries (the 155 countries in the map's country data) "
              "named by at least one study, or by two or more, by each year. The grey line is the same for all regions combined. "
              "The final, partial year of data is left out.",
-    "search_dates": "Search dates are not in the web data; they need to come from the review protocol.",
 }
 
 
@@ -218,6 +220,16 @@ def main():
             "trend1": coverage(sorted(isos), 1), "trend2": coverage(sorted(isos), 2),
         })
 
+    themes = {}
+    if full_range and os.path.exists(THEMES_JSON):
+        with open(THEMES_JSON, encoding="utf-8") as f:
+            themes = json.load(f)["regions"]
+        for r in regions:
+            t = themes.get(r["code"])
+            if t and t["n"] != r["n"]:
+                raise SystemExit(f"{THEMES_JSON}: {r['code']} n={t['n']} but the web data gives n={r['n']}; re-run build_region_disease_themes.py")
+    top_max = max((d["share"] for t in themes.values() for d in t["top"]), default=0)
+
     page = render(locals())
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write(page)
@@ -284,9 +296,17 @@ def render(v):
     qaly_global = v["qaly_all"]
     cards = []
     for r in regions:
-        top3 = "".join(
-            '<div class="dz"><span class="dz-icon"></span><span class="dz-name">xx</span>'
-            '<span class="dz-v">xx%</span><div class="dz-bar"><b style="width:0"></b></div></div>' for _ in range(3))
+        top = v["themes"].get(r["code"], {}).get("top", [])
+        if top:
+            # Bars share one scale: the largest top-three share across regions.
+            top3 = "".join(
+                f'<div class="dz on"><span class="dz-icon" style="background:{CAT_COLOURS[d["category"]]}"></span>'
+                f'<span class="dz-name">{html.escape(d["disease"])}</span><span class="dz-v">{pct(d["share"])}</span>'
+                f'<div class="dz-bar"><b style="width:{100 * d["share"] / v["top_max"]:.1f}%"></b></div></div>' for d in top)
+        else:
+            top3 = "".join(
+                '<div class="dz"><span class="dz-icon"></span><span class="dz-name">xx</span>'
+                '<span class="dz-v">xx%</span><div class="dz-bar"><b style="width:0"></b></div></div>' for _ in range(3))
         qaly = r["qaly"]
         cards.append(f"""
       <div class="card" style="--accent:{_accent(r['pos'])}">
@@ -321,7 +341,7 @@ def render(v):
         plotly_src=PLOTLY_SRC, plotly_sri=PLOTLY_SRI,
         q_intensity=help_btn("intensity"), q_disease=help_btn("disease"),
         q_top=help_btn("top_diseases"), q_utility=help_btn("utility_region"),
-        q_trend=help_btn("trend"), q_search=help_btn("search_dates"),
+        q_trend=help_btn("trend"),
         n_countries=len(v["countries"]), trend_end=v["trend_end"],
     )
 
@@ -386,6 +406,9 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 .dz-icon {{ width:20px; height:20px; border-radius:50%; background:#d6d0c5; grid-row:span 2; }}
 .dz-name, .dz-v {{ color:var(--muted); font-weight:700; }}
 .dz-bar {{ grid-column:2 / 4; height:4px; background:#d6d0c5; border-radius:2px; }}
+.dz-bar b {{ display:block; height:100%; border-radius:2px; background:var(--ink); }}
+.dz.on .dz-name, .dz.on .dz-v {{ color:var(--ink); }}
+.dz.on .dz-name {{ font-weight:600; line-height:1.15; }}
 .big {{ font:800 26px/1 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; text-align:center; margin:8px 0 8px; }}
 .ubar {{ position:relative; height:16px; border-radius:8px; background:#cbc5ba; overflow:visible; }}
 .ubar b {{ display:block; height:100%; border-radius:8px; background:var(--ink); }}
@@ -429,9 +452,9 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 
   <div class="foot">
     <div>
-      <p>Data: HEE evidence map web build ({built}); {period} publication years. Search dates: xx {q_search}</p>
+      <p>Data: HEE evidence map web build ({built}); {period} publication years.</p>
       <p>Regions: World Bank (EAS East Asia &amp; Pacific, ECS Europe &amp; Central Asia, LCN Latin America &amp; Caribbean, MEA Middle East &amp; North Africa, NAC North America, SAS South Asia, SSF Sub-Saharan Africa). Map and trend lines cover the {n_countries} countries in the map's country data; trends run to {trend_end}.</p>
-      <p>Burden: GBD 2023 all-cause DALYs. Utility measure: QALY reported. Disease groups: 14 harmonised groups from MeSH, grouped into GBD level-1 causes. Map: Robinson projection; grey = no eligible evaluation or no country data.</p>
+      <p>Burden: GBD 2023 all-cause DALYs. Utility measure: QALY reported. Disease groups: 14 harmonised groups from MeSH, grouped into GBD level-1 causes. Top three diseases: research themes from a topic model of the abstracts (team export, 2026-10-11). Map: Robinson projection; grey = no eligible evaluation or no country data.</p>
     </div>
   </div>
 </div>
