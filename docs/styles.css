@@ -84,6 +84,17 @@ h1, h2, h3, h4, h5,
 
 main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 
+/* v2 preview banner (2026-10-07) */
+.preview-banner {
+  background: #fff4d6;
+  color: var(--hee-ink);
+  border-bottom: 1px solid var(--hee-gold);
+  padding: .55rem 1.25rem;
+  font-size: .9rem;
+  text-align: center;
+}
+.preview-banner a { color: var(--hee-accent); font-weight: 600; }
+
 .tab-pane { display: none; }
 .tab-pane.active { display: block; }
 

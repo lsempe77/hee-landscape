@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-09-18">
+<link rel="stylesheet" href="styles.css?v=2026-10-08">
 </head>
 <body>
 
@@ -27,6 +27,10 @@
   </div>
   <span class="navbar-text" id="nav-built"></span>
 </nav>
+
+<!-- v2 preview banner (2026-10-07): this build is published beside the live site at /v2/;
+     the link is relative so it resolves to the parent (published) site. -->
+<div class="preview-banner" role="note">Revised October 2026 (41,657 studies). The September 2026 version is archived at <a href="v1/">v1/</a></div>
 
 <main>
 
@@ -277,11 +281,10 @@
              analysis is the study; the analysis is descriptive and, where it compares research
              against disease burden, ecological.</p>
           <p>Title/abstract screening was machine-learning based, with a measured sensitivity
-             of 0.959 against the current corrected human reference vintage (93/97; 95% CI 0.899–0.984). Partial evaluations (cost-minimisation,
-             budget-impact, cost-of-illness) and records unclear at extraction are excluded, so
-             the analysis population is full evaluations by construction. Studies whose
-             consequence is a non-clinical metric (e.g. diagnostic accuracy, utilisation) are
-             kept and flagged. Reviews synthesising published economic evaluations are retained by extraction design (framework v6.8 codes them as literature/registry synthesis); 1,602 of the 38,199 (4.2%) are title-flagged reviews, 65% of which name no single country, so country-level panels draw mostly on articles.</p>
+             of 0.959 on the human-labelled reference set used to develop the screening prompt (93/97; 95% CI 0.899–0.984) and 0.86 on an independent blinded sample of 1,000 records (32 of 37 eligible studies with an abstract; 95% CI 0.72–0.94). Records the model voted include but flagged unsure advanced to data extraction; records with no abstract were excluded. Partial evaluations (cost-minimisation,
+             budget-impact, cost-of-illness), records unclear at extraction (including full evaluations that report no consequence) and studies whose
+             consequence is not clinical are excluded, so
+             the analysis population is full evaluations by construction; duplicate DOIs and titles are removed. Reviews synthesising published economic evaluations are retained by extraction design (framework v6.8 codes them as literature/registry synthesis); 1,706 of the 41,657 (4.1%) are title-flagged reviews, 67% of which name no single country, so country-level panels draw mostly on articles.</p>
           <!-- Funnel rows rendered by app.js from content.json `funnel`
                (DATA_CONTRACT.md §15.4) — skeleton only, no hardcoded rows. -->
           <table class="methods-table">
@@ -298,9 +301,9 @@
             <thead><tr><th>Input</th><th>Source</th></tr></thead>
             <tbody>
               <tr><td>Study metadata &amp; bibliometrics</td>
-                  <td>CrossRef + OpenAlex + PubMed + NLM MeSH harvest (~93% coverage
-                      of the eligible population)</td></tr>
-              <tr><td>Income groups</td><td>World Bank API classification</td></tr>
+                  <td>CrossRef + OpenAlex + PubMed + NLM MeSH harvest (field coverage
+                      ~87% of the eligible population for journal, topic and open-access status)</td></tr>
+              <tr><td>Income groups</td><td>World Bank API classification (Taiwan, absent from the API, is coded high income by a recorded override)</td></tr>
               <tr><td>Population</td>
                   <td>World Bank SP.POP.TOTL (latest observation, mostly 2025)</td></tr>
               <tr><td>Disease burden</td>
@@ -310,16 +313,16 @@
                       capita, PPP 2022; national total = per-capita × latest
                       population)</td></tr>
               <tr><td>Disease coding</td>
-                  <td>MeSH C-tree any-topic headings (2026 vocabulary, incl. the C12.050 pregnancy-complications branch and F03) mapped to 12 groups, crosswalked
-                      to GBD Level-2 causes</td></tr>
+                  <td>MeSH C-tree any-topic headings (2026 vocabulary, incl. the C12.050.703 pregnancy-complications branch and F03) mapped to 14 groups, crosswalked
+                      to GBD Level-2 causes (eye and ear-nose-throat headings form Sense organ; stomatognathic, blood and urogenital headings that sit in no other mapped branch form Other NCD; kidney conditions join Metabolic &amp; nutritional)</td></tr>
               <tr><td>Research topics</td>
                   <td>OpenAlex topic taxonomy plus an emergent theme model (abstract
                       embeddings → UMAP → HDBSCAN)</td></tr>
             </tbody>
           </table>
-          <p>Intervention type and care setting were extracted for every eligible study by a
-             single-pass language model (validated against a keyword lexicon, the emergent-topic
-             clusters and a second model lineage; no human validation available).</p>
+          <p>Intervention type and care setting were extracted by a single-pass language model
+             (validated against a keyword lexicon, the emergent-topic clusters and a second model
+             lineage; no human validation available) for every eligible study (one parse failure).</p>
           <p class="methods-note">Reference data are fetched from dated sources, never
             bundled snapshots.</p>
         </div>
@@ -329,12 +332,13 @@
         <div class="card-header">Rules that keep the numbers honest</div>
         <div class="card-body">
           <p><strong>Extracted geography only.</strong> The author-affiliation proxy is accurate
-            where it applies, but its availability is income-biased — merging it would inflate
-            the headline burden gap from 17.8× to 25.8×, so it is excluded from every income
+            where it applies, but its availability is income-biased — on an earlier build, merging it
+            inflated the headline burden gap from 17.8× to 25.8×, so it is excluded from every income
             figure.</p>
-          <p><strong>Multi-country studies count once per country</strong> in the country panels,
-            and every figure declares whether its denominator is studies or study–country
-            pairs.</p>
+          <p><strong>Multi-country studies count once per country</strong> in the country panels
+            (studies naming more than 15 countries are treated as multi-country and kept off the
+            country map), and every figure declares whether its denominator is studies or
+            study–country pairs.</p>
           <p><strong>Countries without a World Bank income group are visibly absent,</strong>
             never zero-filled as “0 studies”.</p>
           <p><strong>Burden proportionality is a reference point, not a normative target:</strong>
@@ -352,10 +356,12 @@
         <div class="card-body">
           <p>The corpus is effectively English-only (99.8%). Geography is missing for ~33% of
             studies; country-level figures cover the placeable subset. Harvest coverage is
-            partial (47–93% depending on field) and declared per figure. Comparisons of
-            research to burden are ecological. Extraction fields disagree for 8.3% of studies,
-            handled by conservative disqualification. The 50,661 records unsure at
-            title/abstract are held out of the population pending a handling policy.</p>
+            partial (from ~27% for funders to ~87% for journal and open-access status) and declared per figure. Comparisons of
+            research to burden are ecological. The screening sensitivity on the independent
+            blinded sample (0.86) is below the 0.95 the protocol targeted, and the extraction
+            step that decides full-evaluation status over-includes (9–12% in a human-coded
+            check). The 52,273 records voted include but flagged unsure at title/abstract were
+            advanced to extraction, whose eligibility check reads the abstract rather than the full text.</p>
         </div>
       </div>
 
@@ -401,7 +407,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-09-18"></script>
+<script type="module" src="app.js?v=2026-10-08"></script>
 
 </body>
 </html>
