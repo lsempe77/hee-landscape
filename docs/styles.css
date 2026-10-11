@@ -564,6 +564,8 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   font-size: .72rem;
 }
 .metrics-overview-label { color: var(--hee-ink-soft); white-space: nowrap; }
+.metrics-overview-label .metric-help-button,
+.metrics-overview-note .metric-help-button { width: 16px; height: 16px; margin-left: .3rem; vertical-align: middle; font-size: .6rem; }
 .metrics-overview-track {
   height: 7px;
   overflow: hidden;

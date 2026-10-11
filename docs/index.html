@@ -39,7 +39,9 @@
 
 <!-- Archive banner (from origin fab69cc): the September 2026 version is kept at /v1/;
      the link is relative so it resolves to the parent (published) site. -->
+<!-- Hidden 2026-10-11; the /v1/ archive itself is still published.
 <div class="preview-banner" role="note">Revised October 2026 (41,657 studies). The September 2026 version is archived at <a href="v1/">v1/</a></div>
+-->
 
 <main>
 
@@ -387,6 +389,20 @@
         <p>A study counts as <strong>open access</strong> when its full text can be read online free of charge, either on the publisher's website or in an open repository, without a subscription or paywall.</p>
         <p>Open-access status comes from <strong>OpenAlex</strong>, looked up using each study's DOI. Studies whose status could not be found were left out, so the percentage is the share of studies <em>with a known open-access status</em> that are open access, not the share of all studies in the map.</p>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Shared "?" help dialog for overview cards; title and text filled by app.js. -->
+<div class="modal-backdrop" id="card-help-modal">
+  <div class="modal-dialog info-modal-dialog" role="dialog" aria-modal="true"
+       aria-labelledby="card-help-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="card-help-title"></h3>
+        <button class="modal-close" id="card-help-close" type="button">Close</button>
+      </div>
+      <div class="modal-body info-modal-body" id="card-help-body"></div>
     </div>
   </div>
 </div>

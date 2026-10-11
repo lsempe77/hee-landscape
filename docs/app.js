@@ -815,9 +815,18 @@ if (typeof document !== "undefined") {
       title: "(Un)equal weight at a glance: research intensity and evaluations by region",
       caption: "Draft infographic built from the map's data by World Bank region: research per unit of " +
         "disease burden, headline figures, and each region's disease focus, QALY use and country " +
-        "coverage over time. \"xx\" marks values not yet available; click any ? for details."
+        "coverage over time. Click any ? for details."
     }
   }];
+  // Thematic sections hidden from the site, and figures moved to one other
+  // section (removed from every section they were in), so each appears once.
+  // content.json is left as built. "Size & growth": its growth chart
+  // duplicates the Overview's Publication trends; its QALY/DALY chart (also in
+  // Trends over time) moves to Methods & metrics only.
+  const HIDDEN_SECTIONS = new Set(["Size & growth"]);
+  const MOVED_FIGURES = [
+    { file: "fig_method_stream.webp", to: "Methods & metrics", after: "fig_metric.webp" }
+  ];
   // Country landscape state: lazy drill shards cached per ISO3, and the fresh
   // index object read by the bound-once heatmap click handler (§16.6).
   const drillCache = {};
@@ -1062,7 +1071,7 @@ if (typeof document !== "undefined") {
   const PLACEHOLDER_PCT = "XX%";
 
   const TILE_ACTIONS = {
-    "Eligible full evaluations": () => openOverviewTheme("Size & growth"),
+    "Eligible full evaluations": () => showOverviewTrend("annual"),
     "Years covered": () => showOverviewTrend("cumulative"),
     [ACCESS_CARD]: () => openOverviewTheme("Open access & funding"),
     "Countries studied": () => openOverviewTheme("Geography & authorship"),
@@ -1179,15 +1188,41 @@ if (typeof document !== "undefined") {
     return box;
   }
 
-  function barRowsCard(cls, titleText, rows, noteText) {
+  // "?" button that opens the shared card-help dialog. `help` is
+  // { title, paragraphs }; the card itself is clickable, so stop the click here.
+  function cardHelpButton(help) {
+    const button = el("button", "metric-help-button");
+    button.type = "button";
+    button.textContent = "?";
+    button.title = help.title;
+    button.setAttribute("aria-label", help.title);
+    button.addEventListener("click", event => {
+      event.stopPropagation();
+      $("card-help-title").textContent = help.title;
+      const body = $("card-help-body");
+      body.textContent = "";
+      for (const text of help.paragraphs) {
+        const p = el("p");
+        p.textContent = text;
+        body.appendChild(p);
+      }
+      $("card-help-modal").classList.add("open");
+    });
+    button.addEventListener("keydown", event => event.stopPropagation());
+    return button;
+  }
+
+  // rows: [label, pct, help?]; noteHelp: optional help for the note line.
+  function barRowsCard(cls, titleText, rows, noteText, noteHelp) {
     const box = el("div", "value-box metrics-overview-card " + cls);
     const title = el("div", "value-box-title");
     title.textContent = titleText;
     const chart = el("div", "metrics-overview-chart");
-    for (const [label, pct] of rows) {
+    for (const [label, pct, help] of rows) {
       const row = el("div", "metrics-overview-row");
       const labelEl = el("span", "metrics-overview-label");
       labelEl.textContent = label;
+      if (help) labelEl.appendChild(cardHelpButton(help));
       const track = el("div", "metrics-overview-track");
       const fill = el("span", "metrics-overview-fill");
       fill.style.width = (pct == null ? 0 : pct) + "%";
@@ -1199,15 +1234,43 @@ if (typeof document !== "undefined") {
     }
     const note = el("div", "metrics-overview-note");
     note.textContent = noteText;
+    if (noteHelp) note.appendChild(cardHelpButton(noteHelp));
     box.append(title, chart, note);
     return box;
   }
 
+  // The web data flags QALY use only. DALY and other-outcome counts are from the
+  // v2 team export (hee_outcomes_long.csv `family`, included studies,
+  // 2026-10-11): studies with at least one outcome in the DALYs family, and with
+  // at least one outcome in any family other than QALYs or DALYs. Update with
+  // the export; if the study count changes, those two rows show "XX%".
+  const OUTCOME_STUDIES = 41657;
+  const DALY_STUDIES = 1435;
+  const OTHER_OUTCOME_STUDIES = 36332;
+
   function outcomeMetricsCard() {
-    const qalyPct = 100 * countLevel("qaly_label", "Uses QALY") / Math.max(1, db.nStudies);
+    const n = Math.max(1, db.nStudies);
+    const fromExport = count => db.nStudies === OUTCOME_STUDIES ? 100 * count / n : null;
     return barRowsCard("", "Outcome metrics used in studies",
-      [["QALYs", qalyPct]],
-      "Share of all studies.");
+      [["QALYs", 100 * countLevel("qaly_label", "Uses QALY") / n],
+       ["DALYs", fromExport(DALY_STUDIES)],
+       ["Other metrics", fromExport(OTHER_OUTCOME_STUDIES), {
+         title: "What are other metrics?",
+         paragraphs: [
+           "Any health outcome a study reports other than QALYs (quality-adjusted life years) or DALYs (disability-adjusted life years).",
+           "The most common are survival or deaths, side effects and complications, symptom and clinical scores, quality of life, " +
+           "major clinical events such as heart attacks, life-years gained, cases detected or prevented, disease progression, " +
+           "and test results such as blood pressure or blood sugar."
+         ]
+       }]],
+      "Share of all studies. A study may report more than one metric.", {
+        title: "Why do the percentages add up to more than 100%?",
+        paragraphs: [
+          "Each bar is the share of all studies that report that kind of outcome.",
+          "Many studies report more than one kind, for example QALYs and survival, so they count in more than one bar. " +
+          "The bars therefore add up to more than 100%."
+        ]
+      });
   }
 
   // The web data has no funder field. Counts are from the v2 team export
@@ -1228,7 +1291,14 @@ if (typeof document !== "undefined") {
   function fundersCard() {
     return barRowsCard("funding-overview-card", "Who funds the evidence?",
       FUNDER_TYPE_COUNTS.map(([label, n]) => [label, 100 * n / FUNDER_STUDIES]),
-      "Among " + fmtNum(FUNDER_STUDIES) + " studies reporting a funder. Categories may overlap.");
+      "Among " + fmtNum(FUNDER_STUDIES) + " studies reporting a funder. Categories may overlap.", {
+        title: "Why do the percentages add up to more than 100%?",
+        paragraphs: [
+          "Each bar is the share of the " + fmtNum(FUNDER_STUDIES) + " studies that name at least one funder of that type.",
+          "Many studies have more than one funder, for example a government grant and a company, so they count in more than one bar. " +
+          "The bars therefore add up to more than 100%."
+        ]
+      });
   }
 
   function makeOverviewCardInteractive(box, key) {
@@ -2529,6 +2599,11 @@ if (typeof document !== "undefined") {
     });
     $("fig-modal-close").addEventListener("click", closeModal);
     $("fig-modal").addEventListener("click", e => { if (e.target === $("fig-modal")) closeModal(); });
+    const closeCardHelp = () => $("card-help-modal").classList.remove("open");
+    $("card-help-close").addEventListener("click", closeCardHelp);
+    $("card-help-modal").addEventListener("click", e => {
+      if (e.target === $("card-help-modal")) closeCardHelp();
+    });
     const closeOaHelp = () => $("oa-help-modal").classList.remove("open");
     $("oa-help-close").addEventListener("click", closeOaHelp);
     $("oa-help-modal").addEventListener("click", e => {
@@ -2570,6 +2645,15 @@ if (typeof document !== "undefined") {
     // Gallery sections, figure entries and the interpolated paper01 PRISMA
     // caption all come from content.json (§15.1) — nothing hardcoded.
     GALLERY = db.content.gallery.map(sec => ({ ...sec, figs: sec.figs.slice() }));
+    for (const m of MOVED_FIGURES) {
+      const fig = GALLERY.flatMap(s => s.figs).find(f => f.file === m.file);
+      const sec = GALLERY.find(s => s.title === m.to);
+      if (!fig || !sec) continue;
+      for (const s of GALLERY) s.figs = s.figs.filter(f => f.file !== m.file);
+      const after = sec.figs.findIndex(f => f.file === m.after);
+      sec.figs.splice(after < 0 ? sec.figs.length : after + 1, 0, fig);
+    }
+    GALLERY = GALLERY.filter(sec => !HIDDEN_SECTIONS.has(sec.title));
     for (const x of EXTRA_FIGURES) {
       const sec = GALLERY.find(s => s.title === x.section);
       if (sec) sec.figs.splice(x.index, 0, x.fig);
