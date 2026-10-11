@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-11-overview-funders";
+const BUILD = "2026-10-11-geography-topics";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -825,7 +825,7 @@ if (typeof document !== "undefined") {
   // scripts/build_glance_regions.py), added on top of content.json's gallery
   // so the upstream content build stays untouched. Shown in an iframe.
   const EXTRA_FIGURES = [{
-    section: "Maps & regional charts",
+    section: "Geography",
     index: 0,
     fig: {
       file: "fig_glance_regions.html",
@@ -841,15 +841,22 @@ if (typeof document !== "undefined") {
   // content.json is left as built. "Size & growth": its growth chart
   // duplicates the Overview's Publication trends; its QALY/DALY chart (also in
   // Trends over time) moves to Methods & metrics only.
-  const HIDDEN_SECTIONS = new Set(["Size & growth"]);
+  const HIDDEN_SECTIONS = new Set(["Size & growth", "Maps & regional charts"]);
+  // The selection flow is opened from the Overview's study-count card.
+  const HIDDEN_FIGURES = new Set(["paper01.webp"]);
   // Renamed sections (applied before the moves below, which use the new
   // names). Authorship figures join open access; funding figures get one
   // section, placed straight after it.
   const SECTION_RENAMES = {
+    "Topics & diseases": {
+      title: "Topic clustering & disease focus",
+      blurb: "Explore the research themes and interventions studied, and how disease focus " +
+        "differs across income groups and over time."
+    },
     "Geography & authorship": {
       title: "Geography",
-      blurb: "Where the research is about. Income-comparative figures use extracted geography only " +
-        "(the affiliation proxy is income-biased in availability)."
+      blurb: "Explore where health economic research exists and how its coverage and intensity " +
+        "differ across countries, income groups and regions."
     },
     "Open access & funding": {
       title: "Authorship & access",
@@ -874,8 +881,43 @@ if (typeof document !== "undefined") {
     { file: "fig_forest.webp", to: "Authorship & access", after: "fig_authorship_pattern.webp" },
     { file: "paper06.webp", to: "Authorship & access", after: "fig_forest.webp" },
     { file: "fig_collab_chord.webp", to: "Authorship & access", after: "paper06.webp" },
-    { file: "fig_funder_funders.webp", to: "Research funding", first: true }
+    { file: "fig_funder_funders.webp", to: "Research funding", first: true },
+    { file: "fig_map_growth.webp", to: "Geography", after: "fig_worldmap.webp" },
+    { file: "fig_map_burden.webp", to: "Geography", after: "paper03.webp" },
+    { file: "fig_map_openaccess.webp", to: "Authorship & access", after: "fig_openaccess.webp" },
+    { file: "fig_map_authorship.webp", to: "Authorship & access", after: "fig_collab_chord.webp" },
+    { file: "fig_map_model.webp", to: "Methods & metrics", after: "paper02.webp" }
   ];
+  const SECTION_GROUPS = {
+    "Topic clustering & disease focus": [
+      {
+        title: "Topic clusters",
+        blurb: "Explore the research theme clusters, their income patterns, and the " +
+          "interventions evaluated within the research space.",
+        files: ["fig_intervention_map.webp", "fig_theme_rank.webp", "fig_intervention_mix.webp"]
+      },
+      {
+        title: "Disease focus",
+        blurb: "Which disease groups research focuses on, how this differs by income, " +
+          "and how the disease mix is changing over time.",
+        files: ["fig_disease_circular.webp", "fig_transition.webp", "paper04.webp", "paper05.webp"]
+      }
+    ],
+    Geography: [
+      {
+        title: "Geographic coverage",
+        blurb: "Where studies have been conducted, how many evaluations name each country, " +
+          "and where the evidence base is growing.",
+        files: ["fig_dotmap.webp", "fig_worldmap.webp", "fig_map_growth.webp"]
+      },
+      {
+        title: "Geographic inequalities",
+        blurb: "How research intensity differs across countries, income groups and regions, " +
+          "including how the evidence compares with disease burden.",
+        files: ["fig_glance_regions.html", "fig_map_burden.webp", "paper03.webp"]
+      }
+    ]
+  };
   // Country landscape state: lazy drill shards cached per ISO3, and the fresh
   // index object read by the bound-once heatmap click handler (§16.6).
   const drillCache = {};
@@ -1120,7 +1162,7 @@ if (typeof document !== "undefined") {
   const PLACEHOLDER_PCT = "XX%";
 
   const TILE_ACTIONS = {
-    "Eligible full evaluations": () => showOverviewTrend("annual"),
+    "Eligible full evaluations": () => openModal("paper01.webp"),
     "Years covered": () => showOverviewTrend("cumulative"),
     [ACCESS_CARD]: () => openOverviewTheme("Authorship & access"),
     "Countries studied": () => openOverviewTheme("Geography"),
@@ -1351,8 +1393,10 @@ if (typeof document !== "undefined") {
     const label = box.querySelector(".value-box-title").textContent;
     box.classList.add("overview-nav-card");
     box.tabIndex = 0;
-    box.setAttribute("role", "link");
-    box.setAttribute("aria-label", label + ": open related analysis");
+    const opensSelection = key === "Eligible full evaluations";
+    box.setAttribute("role", opensSelection ? "button" : "link");
+    box.setAttribute("aria-label", label + (opensSelection
+      ? ": open study selection figure" : ": open related analysis"));
     box.addEventListener("click", action);
     box.addEventListener("keydown", event => {
       if (event.key === "Enter" || event.key === " ") {
@@ -1604,6 +1648,30 @@ if (typeof document !== "undefined") {
     }, PLOTLY_CFG);
   }
 
+  function thematicCard(sec, onClick) {
+    const card = el("button", "thematic-card");
+    card.type = "button";
+    const img = el("img", "thematic-card-image");
+    img.src = "figures/" + (sec.figs.find(f => !f.html) || sec.figs[0]).file;
+    img.alt = "";
+    img.loading = "lazy";
+    const body = el("div", "thematic-card-body");
+    const title = el("h2", "thematic-card-title");
+    title.textContent = sec.title;
+    const count = el("div", "thematic-card-count");
+    count.textContent = (sec.groups ? sec.groups.length + " topics · " : "") + sec.figs.length + " figures";
+    const description = el("p", "thematic-card-description");
+    const fullBlurb = sec.blurb.replace(/\s+/g, " ").trim();
+    description.textContent = fullBlurb.length > 155 ? fullBlurb.slice(0, 152) + "..." : fullBlurb;
+    const arrow = el("span", "thematic-card-arrow");
+    arrow.textContent = "→";
+    arrow.setAttribute("aria-hidden", "true");
+    body.append(title, count, description, arrow);
+    card.append(img, body);
+    card.addEventListener("click", onClick);
+    return card;
+  }
+
   // Thematic analysis index: one card per content.json gallery section, plus
   // the matching entries in the navbar dropdown.
   function renderGalleryIndex() {
@@ -1612,27 +1680,7 @@ if (typeof document !== "undefined") {
     idx.textContent = "";
     menu.textContent = "";
     GALLERY.forEach((sec, i) => {
-      const card = el("button", "thematic-card");
-      card.type = "button";
-      const img = el("img", "thematic-card-image");
-      img.src = "figures/" + (sec.figs.find(f => !f.html) || sec.figs[0]).file;
-      img.alt = "";
-      img.loading = "lazy";
-      const body = el("div", "thematic-card-body");
-      const title = el("h2", "thematic-card-title");
-      title.textContent = sec.title;
-      const count = el("div", "thematic-card-count");
-      count.textContent = sec.figs.length + " figures";
-      const description = el("p", "thematic-card-description");
-      const fullBlurb = sec.blurb.replace(/\s+/g, " ").trim();
-      description.textContent = fullBlurb.length > 155 ? fullBlurb.slice(0, 152) + "..." : fullBlurb;
-      const arrow = el("span", "thematic-card-arrow");
-      arrow.textContent = "→";
-      arrow.setAttribute("aria-hidden", "true");
-      body.append(title, count, description, arrow);
-      card.append(img, body);
-      card.addEventListener("click", () => showSection(i));
-      idx.appendChild(card);
+      idx.appendChild(thematicCard(sec, () => showSection(i)));
 
       const item = el("button", "nav-theme-link");
       item.type = "button";
@@ -1650,22 +1698,39 @@ if (typeof document !== "undefined") {
   // Where the section's back link leads: null = theme index, "overview" =
   // back to the Overview.
   let sectionReturnTo = null;
+  let sectionGroup = null;
+  let sectionParentIndex = null;
 
   // Figures drawn at least this many pixels wide span two grid columns.
   const WIDE_FIGURE_MIN_PX = 2300;
 
-  function showSection(i, returnTo = null) {
+  function showSection(i, returnTo = null, groupIndex = null) {
     const sec = GALLERY[i];
+    const group = groupIndex == null ? null : sec.groups[groupIndex];
+    const view = group || sec;
     sectionReturnTo = returnTo;
-    $("gal-back").innerHTML = returnTo === "overview" ? "&larr; Back to Overview" : "&larr; All themes";
+    sectionGroup = groupIndex;
+    sectionParentIndex = group ? i : null;
+    $("gal-back").textContent = group ? "← Back to " + sec.title :
+      returnTo === "overview" ? "← Back to Overview" : "← All themes";
     $("gal-index").style.display = "none";
     $("gal-section").style.display = "block";
-    $("gal-sec-title").textContent = sec.title;
-    $("gal-sec-blurb").textContent = sec.blurb.replace(/\s+/g, " ").trim();
+    $("gal-sec-title").textContent = view.title;
+    $("gal-sec-blurb").textContent = view.blurb.replace(/\s+/g, " ").trim();
+    const topics = $("gal-subsections");
+    topics.textContent = "";
+    topics.hidden = !sec.groups || !!group;
     const grid = $("gal-sec-grid");
     grid.textContent = "";
-    grid.classList.toggle("fig-grid-single", sec.figs.length === 1);
-    for (const f of sec.figs) {
+    grid.hidden = !!sec.groups && !group;
+    if (sec.groups && !group) {
+      sec.groups.forEach((topic, j) => topics.appendChild(thematicCard(topic,
+        () => showSection(i, returnTo, j))));
+      window.scrollTo(0, 0);
+      return;
+    }
+    grid.classList.toggle("fig-grid-single", view.figs.length === 1);
+    for (const f of view.figs) {
       if (f.html) {
         grid.appendChild(htmlFigureCard(f));
         continue;
@@ -1730,10 +1795,16 @@ if (typeof document !== "undefined") {
     $("gal-section").style.display = "none";
     $("gal-index").style.display = "block";
     sectionReturnTo = null;
+    sectionGroup = null;
+    sectionParentIndex = null;
     $("gal-back").innerHTML = "&larr; All themes";
   }
 
   function goBackFromSection() {
+    if (sectionGroup != null) {
+      showSection(sectionParentIndex, sectionReturnTo);
+      return;
+    }
     const toOverview = sectionReturnTo === "overview";
     hideSection();
     if (toOverview) {
@@ -2803,9 +2874,16 @@ if (typeof document !== "undefined") {
       const sec = GALLERY.find(s => s.title === x.section);
       if (sec) sec.figs.splice(x.index, 0, x.fig);
     }
+    for (const sec of GALLERY) {
+      const groups = SECTION_GROUPS[sec.title];
+      if (groups) sec.groups = groups.map(group => ({ ...group,
+        figs: group.files.map(file => sec.figs.find(f => f.file === file)).filter(Boolean)
+      }));
+    }
     FIG_INDEX = {};
     for (const sec of GALLERY) {
       for (const f of sec.figs) FIG_INDEX[f.file] = { ...f, sectionTitle: sec.title };
+      sec.figs = sec.figs.filter(f => !HIDDEN_FIGURES.has(f.file));
     }
 
     if (window.Plotly && !window.Plotly.__softColorway) {

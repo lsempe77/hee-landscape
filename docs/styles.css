@@ -773,6 +773,9 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   border-radius: 6px;
 }
 .thematic-card-body { display: flex; flex: 1; flex-direction: column; padding: .9rem .25rem .15rem; }
+.thematic-grid.thematic-subsections { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.thematic-subsections[hidden], .fig-grid[hidden] { display: none; }
+@media (max-width: 620px) { .thematic-grid.thematic-subsections { grid-template-columns: 1fr; } }
 .thematic-card-title {
   margin: 0;
   color: var(--hee-ink);

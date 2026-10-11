@@ -3,7 +3,7 @@
 Reads the web build in docs/data plus scripts/wb_regions.csv (World Bank
 regions) and writes one self-contained interactive page,
 docs/figures/fig_glance_regions.html, which the site embeds in the
-"Maps & regional charts" Thematic analysis section.
+"Geography" Thematic analysis section, under "Geographic inequalities".
 
 Values the web data cannot supply are shown as "xx"; every "xx" (and every
 figure that needs a caveat) carries a "?" button explaining why.
