@@ -907,6 +907,8 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   gap: 1.4rem;
 }
 .fig-grid.fig-grid-single { grid-template-columns: minmax(0, 1fr); max-width: 1180px; }
+.fig-grid.fig-grid-single:has(> .fig-card-html) { max-width: none; }
+.theme-blurb.theme-blurb-full { max-width: none; }
 /* Wide figures span two columns once the grid is wide enough to hold two
    330px columns; "dense" backfills the gaps they would otherwise leave. */
 .fig-grid { container-type: inline-size; grid-auto-flow: dense; }

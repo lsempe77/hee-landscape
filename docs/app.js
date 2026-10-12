@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-12-topic-figures";
+const BUILD = "2026-10-12-wellcome-layout";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -844,6 +844,9 @@ if (typeof document !== "undefined") {
   const HIDDEN_SECTIONS = new Set(["Size & growth", "Maps & regional charts"]);
   // The selection flow is opened from the Overview's study-count card.
   const HIDDEN_FIGURES = new Set(["paper01.webp"]);
+  // Shown only as the section's index thumbnail; its interactive view already
+  // carries the same numbers, so the section page shows that view alone.
+  const THUMBNAIL_ONLY_FIGURES = new Set(["fig_wellcome_priorities.svg"]);
   // Renamed sections (applied before the moves below, which use the new
   // names). Authorship figures join open access; funding figures get one
   // section, placed straight after it.
@@ -873,7 +876,7 @@ if (typeof document !== "undefined") {
         "reference point, not a target."
     }
   };
-  const SECTION_AFTER = { "Research funding": "Authorship & access", "Wellcome priority themes": "Research funding" };
+  const SECTION_AFTER = { "Research funding": "Authorship & access", "Wellcome priority themes": "Trends over time" };
   // after: file to follow in the target section; first: true puts it first.
   const MOVED_FIGURES = [
     { file: "fig_method_stream.webp", to: "Methods & metrics", after: "fig_metric.webp" },
@@ -1783,8 +1786,11 @@ if (typeof document !== "undefined") {
       window.scrollTo(0, 0);
       return;
     }
-    grid.classList.toggle("fig-grid-single", view.figs.length === 1);
-    for (const f of view.figs) {
+    const figs = view.figs.filter(f => !THUMBNAIL_ONLY_FIGURES.has(f.file));
+    grid.classList.toggle("fig-grid-single", figs.length === 1);
+    // A page holding only an interactive view lets its intro span the full width.
+    $("gal-sec-blurb").classList.toggle("theme-blurb-full", figs.length === 1 && !!figs[0].html);
+    for (const f of figs) {
       if (f.html) {
         grid.appendChild(htmlFigureCard(f));
         continue;

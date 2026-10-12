@@ -39,6 +39,28 @@ PRIORITIES = {
 CLIMATE = re.compile(r"\bclimat(?:e|ic)\b|global warming|greenhouse gas|carbon (?:footprint|tax)|decarbon|heat[ -]?wave|heat[ -]related|heat mitigation|heat[ -]health|heat stress|heat risks|heat warning|wildfire|cold weather plan|representative concentration pathways", re.I)
 CLIMATE_EXCLUSIONS = re.compile(r"climate schools|tropical and subtropical climate settings", re.I)
 MENTAL_FOCUS = re.compile(r"\banxiet\w*|\bdepress\w*|\bpsychos\w*|\bpsychoti\w*|\bschizophren\w*", re.I)
+# Indicative title-keyword groups for Wellcome-funded studies outside all three themes.
+# First match wins; unmatched studies fall into the final catch-all group.
+OUTSIDE_GROUPS = [
+    ("infectious", "Infectious disease without a disease tag",
+     re.compile(r"malaria|tubercul|\bhiv\b|antiretroviral|hepatitis|cryptococc|talaromyc|shigella|strep|sars-cov|coronavirus|covid|dengue|wolbachia|\bhpv\b|sepsis|febrile|antibiotic|cephalosporin|infection", re.I),
+     "Clearly infectious-disease topics (malaria, tuberculosis, HIV, hepatitis, vaccines, antibiotic use) that lack a harmonised disease tag, so the tag-based Infectious Diseases theme does not count them."),
+    ("mental", "Alcohol, drugs and mental health without a disease tag",
+     re.compile(r"alcohol|\bdrug\b|mindfulness|mental health", re.I),
+     "Alcohol and drug use or mental-health outcomes without a disease tag; these relate to the Mental Health theme's mental and substance-use proxy."),
+    ("food", "Food systems and diet",
+     re.compile(r"food|diet|meals?\b|salt|palm oil|meat|tariff|undernutrition", re.I), None),
+    ("cardiometabolic", "Cardiometabolic disease and obesity",
+     re.compile(r"diabet|hypertens|cardiovascular|obes|weight management|stroke|retinopathy", re.I), None),
+    ("mnch", "Maternal, newborn and child health",
+     re.compile(r"maternal|newborn|neonat|caesarean|post-partum|fertility|life-saving practices", re.I), None),
+    ("cancer", "Cancer screening and care", re.compile(r"cancer|melanoma", re.I), None),
+    ("activity", "Physical activity", re.compile(r"physical activity|walking|dance", re.I), None),
+    ("systems", "Health systems, policy and methods",
+     re.compile(r"benefits package|development assistance|basic income|tobacco|frailty|falls|life table|childhood policy|non-communicable", re.I), None),
+]
+OUTSIDE_OTHER = ("other", "Other clinical care", None)
+ENVIRONMENT = re.compile(r"environment|sustainab", re.I)
 PLACEHOLDERS = re.compile(r"^(?:na|n/a|none\.?|unknown|not (?:reported|available|applicable|stated)|no (?:funding|funder|external funding)|self[ -]funded|self[ -]funding)[.!]?$", re.I)
 
 
@@ -152,12 +174,36 @@ def build_analysis(rows, meta, source_hash):
         themes[key] = {"label": label, "url": url, "definition": definition, **stats(subset), "donors": donor_counts(subset)}
     wellcome = [r for r in rows if r["wellcome"]]
     focus = [r for r in rows if MENTAL_FOCUS.search(r["title"])]
+    labels = {key: label for key, (label, _, _) in PRIORITIES.items()}
+
+    def overlaps(subset):
+        pairs = Counter(" + ".join(labels[k] for k in sorted(r["themes"], key=list(PRIORITIES).index))
+                        for r in subset if len(r["themes"]) > 1)
+        return {"n": sum(pairs.values()), "combinations": dict(pairs.most_common())}
+
+    groups = {key: [] for key, *_ in OUTSIDE_GROUPS + [OUTSIDE_OTHER]}
+    for r in wellcome:
+        if not r["themes"]:
+            key = next((k for k, _, pattern, _ in OUTSIDE_GROUPS if pattern.search(r["title"])), OUTSIDE_OTHER[0])
+            groups[key].append(r)
+    outside_groups = []
+    for key, label, *rest in OUTSIDE_GROUPS + [OUTSIDE_OTHER]:
+        note = rest[-1]
+        if key == "food":
+            env = sum(bool(ENVIRONMENT.search(r["title"])) for r in groups[key])
+            note = (f"Diet and food-policy models. {env} also estimate environmental impacts, which relate to Climate & Health "
+                    "but use no climate terms, so the Climate & Health title screen does not count them.") if env else None
+        studies = sorted(groups[key], key=lambda r: (r["year"], r["title"]))
+        outside_groups.append({"key": key, "label": label, "note": note, "n": len(studies),
+                               "studies": [{"title": r["title"], "year": r["year"], "url": r["url"]} for r in studies]})
     return {"meta": {"years": meta["years"], "data_built": meta["built"], "master_sha256": source_hash,
                       "unit": "Unique eligible studies reporting each funder; no grant amounts or causal attribution.",
                       "theme_overlap": True, "sources_accessed": "2026-10-12"},
             "global": stats(rows), "wellcome": stats(wellcome), "themes": themes,
             "mental_focus_title_screen": stats(focus),
             "wellcome_outside_themes": sum(not r["themes"] for r in wellcome),
+            "wellcome_outside_groups": sorted((g for g in outside_groups if g["n"]), key=lambda g: (g["key"] == "other", -g["n"])),
+            "wellcome_theme_overlap": overlaps(wellcome), "all_theme_overlap": overlaps(rows),
             "disease_tagged": sum(r["disease_groups"] not in ("", "NA") for r in rows),
             "donors": donor_counts(rows),
             "wellcome_by_year": [{"year": y, "n": sum(int(r["year"]) == y for r in wellcome)} for y in range(meta["years"][0], meta["years"][1] + 1)]}
@@ -215,7 +261,9 @@ def plots(analysis, staging):
     # The muted final bar accounts for the rest of the Wellcome cohort.
     values = [t["wellcome"] for t in themes] + [outside]
     labels = ["Infectious Diseases", "Mental Health", "Climate & Health", "Outside these three themes"]
-    notes = [f"{pct(t['wellcome'], t['n'])} of {t['n']:,} theme studies · {wellcome_rank(t['donors'])}" for t in themes] + ["No theme tag or climate title match"]
+    untagged = next((g["n"] for g in analysis["wellcome_outside_groups"] if g["key"] == "infectious"), 0)
+    notes = [f"{pct(t['wellcome'], t['n'])} of {t['n']:,} theme studies · {wellcome_rank(t['donors'])}" for t in themes] + [
+        f"Includes {untagged} untagged infectious-disease studies" if untagged else "No theme tag or climate title match"]
     colors = [LAVENDER] * 3 + ["#C9C4BA"]
     bars = ax.barh(range(4), values, color=colors, height=.58)
     for bar, color in zip(bars, colors):
@@ -234,11 +282,12 @@ def plots(analysis, staging):
         spine.set_visible(False)
     ax.tick_params(axis="y", length=0, pad=10)
     ax.axhline(2.5, color="#ded9ce", linewidth=1)
-    fig.subplots_adjust(left=.23, right=.97, top=.76, bottom=.2)
+    fig.subplots_adjust(left=.23, right=.97, top=.76, bottom=.24)
     fig.text(.025, .93, "Wellcome priority themes: Wellcome-funded studies", fontsize=22, fontweight="bold", color="#10243e")
     fig.text(.025, .85, f"{total:,} eligible evaluations report Wellcome Trust as a funder; {total - outside} fall in at least one priority theme",
              fontsize=15, color="#705a84")
-    fig.text(.025, .04, "A study can fall in more than one theme. Infectious Diseases and Mental Health use broad disease-group tags; Climate & Health is a provisional title screen.\n"
+    fig.text(.025, .035, f"{overlap_text(analysis['wellcome_theme_overlap'], 'Wellcome-funded')}\n"
+             "Infectious Diseases and Mental Health use broad disease-group tags, so studies without a tag fall outside; Climate & Health is a provisional title screen.\n"
              "Rank compares studies reporting each funder within the theme. Funding is reported for about a quarter of studies, so counts are a lower bound,\n"
              "not grant value, exclusive support or Wellcome programme membership.", fontsize=10, color="#5a564d", linespacing=1.6)
     fig.savefig(staging / "fig_wellcome_priorities.svg", facecolor=background)
@@ -253,6 +302,17 @@ def escape(value):
 
 def pct(n, total):
     return f"{100 * n / total:.1f}%" if total else "Not estimable"
+
+
+def overlap_text(overlap, who):
+    """One sentence on how many studies sit in more than one theme, and which ones."""
+    n = overlap["n"]
+    if not n:
+        return f"No {who} study falls in more than one theme."
+    items = list(overlap["combinations"].items())
+    combos = ("all in " + items[0][0].replace(" + ", " and ") if len(items) == 1 else
+              "; ".join(f"{count:,} in {combo.replace(' + ', ' and ')}" for combo, count in items))
+    return f"{n:,} {who} {'study falls' if n == 1 else 'studies fall'} in more than one theme ({combos})."
 
 
 def ordinal(n):
@@ -289,15 +349,15 @@ def stacked_bar(counts, total):
 STYLE = '''
 *{box-sizing:border-box}
 body{margin:0;background:#faf9f6;color:#10243e;font:15px/1.6 Inter,system-ui,sans-serif}
-main{max-width:1180px;margin:auto;padding:28px 28px 40px}
+main{padding:24px 28px 40px}
 h1,h2{font-family:Newsreader,Georgia,serif;font-weight:600;letter-spacing:-.01em}
 h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:12px 0 10px}
 h2{font-size:26px;margin:0 0 6px}
 h3{font-size:16px;margin:34px 0 4px}
 a{color:#1f5fa8}
 .badge{display:inline-block;background:#ece6f1;color:#594069;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600}
-.lede{max-width:110ch;color:#33475f;margin:0}
-.hint{color:#5a564d;font-size:13.5px;margin:2px 0 12px;max-width:110ch}
+.lede{color:#33475f;margin:0}
+.hint{color:#5a564d;font-size:13.5px;margin:2px 0 12px}
 .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .summary{display:flex;flex-wrap:wrap;margin:24px 0 32px;border-top:1px solid #e7e3da;border-bottom:1px solid #e7e3da}
 .summary div{flex:1 1 200px;padding:16px 20px 16px 0}
@@ -310,6 +370,17 @@ th,td{padding:9px 10px;border-bottom:1px solid #eeeae2;text-align:left;vertical-
 thead th{font-size:12px;font-weight:600;color:#5a564d;border-bottom:1px solid #d9d3c7}
 tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
 th[scope=row]{font-weight:500}
+.overview td:nth-child(3){width:38%}
+h2#outside{margin-top:36px}
+.groups{padding:6px 22px}
+.group{border:0;border-bottom:1px solid #eeeae2;border-radius:0;margin:0;padding:0;background:none}
+.group:last-child{border-bottom:0}
+.group summary{display:grid;grid-template-columns:minmax(220px,32%) 1fr 48px;gap:16px;align-items:center;padding:11px 0;font-weight:500;list-style:none}
+.group summary::-webkit-details-marker{display:none}
+.group summary .g-label::before{content:"\\25B8";display:inline-block;width:16px;color:#8a857b;transition:transform .15s}
+.group[open] summary .g-label::before{transform:rotate(90deg)}
+.group ol{margin:4px 0 14px;padding-left:40px;font-size:13.5px}
+.group .hint{margin:0 0 6px 16px}
 .overview button{all:unset;cursor:pointer;color:#1f5fa8;font-weight:600}
 .overview button:hover{text-decoration:underline}
 .meter{position:relative;height:10px;background:#f1eef4;border-radius:5px;min-width:120px}
@@ -319,7 +390,7 @@ nav button{background:white;color:#594069;border:1px solid #c8b9d2;border-radius
 nav button[aria-pressed=true]{background:#705a84;border-color:#705a84;color:white}
 button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #1f5fa8;outline-offset:3px}
 .theme{padding-top:24px}
-.definition{border-left:3px solid #9B87B8;padding:2px 0 2px 14px;color:#33475f;font-size:14px;max-width:110ch;margin:8px 0 18px}
+.definition{border-left:3px solid #9B87B8;padding:2px 0 2px 14px;color:#33475f;font-size:14px;margin:8px 0 18px}
 .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .metric{padding:16px 18px;background:white;border:1px solid #e7e3da;border-radius:10px}
 .metric strong{display:block;font:600 28px/1.1 Newsreader,Georgia,serif}
@@ -353,7 +424,6 @@ li{margin-bottom:8px}
 small{color:#5a564d}
 .download{display:flex;gap:18px;flex-wrap:wrap;margin:24px 0 8px;font-size:14px}
 .method{font-size:13.5px;color:#33475f}
-.method p{max-width:110ch}
 .year-table{max-width:320px}
 [hidden]{display:none!important}
 @media(max-width:760px){main{padding:16px}.metrics{grid-template-columns:1fr}.summary div+div{border-left:0;padding-left:0;border-top:1px solid #e7e3da}.panel{padding:14px}}
@@ -419,6 +489,23 @@ def report(analysis, rows):
 <div class="panel table-scroll"><table class="donors"><caption hidden>Recorded funders in {escape(t['label'])}</caption><thead><tr><th class="num">#</th><th class="who">Funder</th><th class="bars">Studies by setting</th><th class="num">Total</th><th class="num">HIC</th><th class="num">LMIC</th><th class="num">Other</th></tr></thead><tbody>{''.join(donor_rows) or '<tr><td colspan="7">No named funder available.</td></tr>'}</tbody></table></div>
 <h3>Where the studies are set</h3><p class="hint">Share of studies by setting: all theme evidence compared with Wellcome-funded studies.</p>
 <div class="panel table-scroll"><table class="geo"><tbody>{geo}</tbody></table><div class="legend">{legend}</div></div>{extra}</section>''')
+    groups = analysis["wellcome_outside_groups"]
+    max_g = max([g["n"] for g in groups] or [1])
+    untagged = sum(g["n"] for g in groups if g["key"] in ("infectious", "mental"))
+    group_items = []
+    for g in groups:
+        studies = ''.join(
+            f'<li>{f"""<a href="{escape(s["url"])}" target="_blank" rel="noopener">{escape(s["title"])}</a>""" if s["url"].startswith(("https://", "http://")) else escape(s["title"])} <small>({escape(s["year"])})</small></li>'
+            for s in g["studies"])
+        note = f'<p class="hint">{escape(g["note"])}</p>' if g["note"] else ''
+        group_items.append(f'<details class="group"><summary><span class="g-label">{escape(g["label"])}</span>'
+                           f'<span class="meter" aria-hidden="true"><i style="width:{100 * g["n"] / max_g:.4f}%"></i></span>'
+                           f'<span class="num"><strong>{g["n"]}</strong></span></summary>{note}<ol>{studies}</ol></details>')
+    outside_html = (f'<h2 id="outside">What the {outside:,} studies outside the themes cover</h2>'
+                    f'<p class="hint">Wellcome-funded studies with no infectious or mental-health disease tag and no climate title match, grouped by keywords in their titles. '
+                    f'Groupings are indicative. <strong>{untagged:,} of the {outside:,} are infectious-disease, substance-use or mental-health studies that simply lack a disease tag</strong>, '
+                    f'so the theme counts above understate Wellcome-funded work in those themes. Select a group to list its studies.</p>'
+                    f'<div class="panel groups">{"".join(group_items)}</div>')
     years = analysis["meta"]["years"]
     annual = ''.join(f'<tr><th scope="row">{d["year"]}{" (partial)" if d["year"] == years[1] else ""}</th><td class="num">{d["n"]}</td></tr>' for d in analysis["wellcome_by_year"])
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -427,14 +514,15 @@ def report(analysis, rows):
             f'<style>{STYLE}</style></head><body><main>' + f'''
 <span class="badge">Funder-specific view · Wellcome</span><h1>{escape(SECTION)}</h1>
 <p class="lede">How much economic evaluation evidence exists in Wellcome's three priority themes, and which of those studies report Wellcome Trust as a funder (Wellcome-funded studies). Theme relevance and recorded support are different measures. This view is separate from the global evidence map and is not an official Wellcome grant-portfolio assessment.</p>
-<div class="summary"><div><strong>{wellcome:,}</strong><span>Evaluations report Wellcome Trust as a funder</span></div><div><strong>{wellcome - outside:,}</strong><span>Of these fall in at least one priority theme</span></div><div><strong>{outside:,}</strong><span>Fall outside the three themes</span></div><div><strong>{pct(analysis['global']['named_funder'], total)}</strong><span>Of all {total:,} evaluations ({years[0]}–{years[1]}) report any funder</span></div></div>
-<h2>The three themes at a glance</h2><p class="hint">Select a theme to see its top funders and settings. A study can belong to more than one theme.</p>
+<div class="summary"><div><strong>{wellcome:,}</strong><span>Evaluations report Wellcome Trust as a funder</span></div><div><strong>{wellcome - outside:,}</strong><span>Of these fall in at least one priority theme</span></div><div><strong>{outside:,}</strong><span>Fall outside the three themes · <a href="#outside">see what they cover</a></span></div><div><strong>{pct(analysis['global']['named_funder'], total)}</strong><span>Of all {total:,} evaluations ({years[0]}–{years[1]}) report any funder</span></div></div>
+<h2>The three themes at a glance</h2><p class="hint">Select a theme to see its top funders and settings. A study can belong to more than one theme: {escape(overlap_text(analysis['wellcome_theme_overlap'], 'Wellcome-funded'))} Across all eligible studies, {analysis['all_theme_overlap']['n']:,} fall in more than one theme.</p>
 <div class="panel table-scroll"><table class="overview"><thead><tr><th>Theme</th><th class="num">Theme studies</th><th colspan="2">Wellcome-funded studies</th><th class="num">Share of theme</th><th>Wellcome's rank among funders</th></tr></thead><tbody>{''.join(overview)}</tbody></table></div>
+{outside_html}
 <nav aria-label="Select a priority theme">{''.join(buttons)}</nav>{''.join(panels)}
 <details><summary>Wellcome-funded studies by publication year</summary><p class="hint">Publication counts, not grant-award dates or spending. The final year is partial.</p><table class="year-table"><thead><tr><th>Year</th><th class="num">Studies</th></tr></thead><tbody>{annual}</tbody></table></details>
 <details class="method"><summary>Technical details and sources</summary><p>Each funder is counted once per eligible study. A study can name multiple funders and belong to multiple themes, so counts do not sum across funders or themes. Funding is recorded for {pct(analysis['global']['named_funder'], total)} of the evidence base, so absence of a name does not establish absence of support. Burroughs Wellcome Fund is a separate organisation and is excluded from the Wellcome cohort.</p>
 <p>Setting comparisons use single-country studies with known income; all other studies stay visible in the multi-country, regional or income-unavailable category. Names are lightly normalised (NIHR, HTA, NIH, MRC, Gates and common variants); agencies and their programmes are not comprehensively merged. Rankings count reported funders, not funding amounts, and tied funders share a rank. A programme named in an acknowledgement does not establish membership in a current priority programme.</p>
-<p>Infectious Diseases and Mental Health use broad MeSH-derived disease groups; only {analysis['disease_tagged']:,} of {total:,} eligible studies have a harmonised disease tag, so untagged studies can contain relevant evidence. Climate &amp; Health is a reproducible provisional title screen; full-text validation is outstanding. The anxiety, depression and psychosis title screen is a separate sensitivity view. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
+<p>Infectious Diseases and Mental Health use broad MeSH-derived disease groups; only {analysis['disease_tagged']:,} of {total:,} eligible studies have a harmonised disease tag, so untagged studies can contain relevant evidence. Climate &amp; Health is a reproducible provisional title screen; full-text validation is outstanding. The anxiety, depression and psychosis title screen is a separate sensitivity view. Wellcome-funded studies outside all three themes are grouped by keywords in their titles (first matching group wins) to describe what they cover; this grouping does not change any theme count. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
 <p>Source: the map's eligible analysis master; web data built {escape(analysis['meta']['data_built'])}. Publication years {years[0]}–{years[1]} (final year partial). Programme scope checked 12 October 2026: <a href="https://wellcome.org/our-priorities/infectious-disease">Infectious Disease</a>, <a href="https://wellcome.org/our-priorities/mental-health">Mental Health</a>, <a href="https://wellcome.org/our-priorities/climate-and-health">Climate and Health</a>.</p></details>
 <div class="download"><a href="wellcome_theme_funders.csv" download>Download funder counts by theme (CSV)</a><a href="wellcome_analysis.json" download>Download aggregate analysis (JSON)</a></div>
 </main><script>
