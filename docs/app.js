@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-12-wellcome-themes";
+const BUILD = "2026-10-12-topic-figures";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -843,8 +843,7 @@ if (typeof document !== "undefined") {
   // Trends over time) moves to Methods & metrics only.
   const HIDDEN_SECTIONS = new Set(["Size & growth", "Maps & regional charts"]);
   // The selection flow is opened from the Overview's study-count card.
-  const HIDDEN_FIGURES = new Set(["paper01.webp", "fig_transition.webp"]);
-  const OVERVIEW_ONLY_FIGURES = new Set(["fig_disease_circular.webp", "fig_intervention_mix.webp"]);
+  const HIDDEN_FIGURES = new Set(["paper01.webp"]);
   // Renamed sections (applied before the moves below, which use the new
   // names). Authorship figures join open access; funding figures get one
   // section, placed straight after it.
@@ -895,13 +894,13 @@ if (typeof document !== "undefined") {
         title: "Topic clusters",
         blurb: "Explore the research theme clusters, their income patterns, and the " +
           "interventions evaluated within the research space.",
-        files: ["fig_intervention_map.webp", "fig_theme_rank.webp"]
+        files: ["fig_intervention_map.webp", "fig_intervention_mix.webp", "fig_theme_rank.webp"]
       },
       {
         title: "Disease focus",
         blurb: "Which disease groups research focuses on, how this differs by income, " +
           "and how the disease mix is changing over time.",
-        files: ["paper04.webp", "paper05.webp"]
+        files: ["fig_disease_circular.webp", "fig_transition.webp", "paper04.webp", "paper05.webp"]
       }
     ],
     Geography: [
@@ -1505,10 +1504,10 @@ if (typeof document !== "undefined") {
       const name = el("span");
       name.textContent = f ? f.title : h.alt;
       head.appendChild(name);
-      if (h.takeaway || OVERVIEW_ONLY_FIGURES.has(h.file)) {
+      if (h.takeaway) {
         const link = el("button", "card-header-link overview-explore-link");
         link.type = "button";
-        link.textContent = h.takeaway ? "Explore geographic evidence \u2192" : "Explore figure \u2192";
+        link.textContent = "Explore geographic evidence \u2192";
         link.addEventListener("click", () => openModal(h.file));
         head.appendChild(link);
       } else if (f && f.sectionTitle) {
@@ -2939,7 +2938,7 @@ if (typeof document !== "undefined") {
     FIG_INDEX = {};
     for (const sec of GALLERY) {
       for (const f of sec.figs) FIG_INDEX[f.file] = { ...f, sectionTitle: sec.title };
-      sec.figs = sec.figs.filter(f => !HIDDEN_FIGURES.has(f.file) && !OVERVIEW_ONLY_FIGURES.has(f.file));
+      sec.figs = sec.figs.filter(f => !HIDDEN_FIGURES.has(f.file));
     }
 
     if (window.Plotly && !window.Plotly.__softColorway) {
