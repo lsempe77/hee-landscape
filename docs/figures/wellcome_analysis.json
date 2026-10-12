@@ -5,7 +5,7 @@
       2026
     ],
     "data_built": "2026-10-08",
-    "master_sha256": "a03ac2d43780073b461bd72497e526f47e8fd1f78ad1ee7fb63c09ec9c2639b3",
+    "master_sha256": "5b3096d12d39d8b72c6d01e4b9625ed5b74325d0704275cfa567df388b52994b",
     "unit": "Unique eligible studies reporting each funder; no grant amounts or causal attribution.",
     "theme_overlap": true,
     "sources_accessed": "2026-10-12"
@@ -12822,7 +12822,7 @@
           ]
         },
         {
-          "funder": "Netherlands Organization for International Cooperation in Higher Education",
+          "funder": "Netherlands organization for international cooperation in higher education",
           "n": 1,
           "income_counts": [
             0,
@@ -12831,7 +12831,7 @@
           ]
         },
         {
-          "funder": "Netherlands organization for international cooperation in higher education",
+          "funder": "Netherlands Organization for International Cooperation in Higher Education",
           "n": 1,
           "income_counts": [
             0,
@@ -93007,6 +93007,259 @@
         0,
         0
       ]
+    }
+  ],
+  "parent_donors": [
+    {
+      "funder": "NIHR",
+      "n": 1666,
+      "merged_names": 122,
+      "hta": 844
+    },
+    {
+      "funder": "US NIH",
+      "n": 1093,
+      "merged_names": 126
+    },
+    {
+      "funder": "NSFC (China)",
+      "n": 477,
+      "merged_names": 1
+    },
+    {
+      "funder": "Gates Foundation",
+      "n": 320,
+      "merged_names": 1
+    },
+    {
+      "funder": "NHMRC (Australia)",
+      "n": 283,
+      "merged_names": 1
+    },
+    {
+      "funder": "Pfizer",
+      "n": 194,
+      "merged_names": 1
+    },
+    {
+      "funder": "ZonMw",
+      "n": 175,
+      "merged_names": 1
+    },
+    {
+      "funder": "Wellcome Trust",
+      "n": 174,
+      "merged_names": 1
+    },
+    {
+      "funder": "UK MRC",
+      "n": 145,
+      "merged_names": 1
+    },
+    {
+      "funder": "AstraZeneca",
+      "n": 113,
+      "merged_names": 1
+    },
+    {
+      "funder": "Canadian Institutes of Health Research",
+      "n": 105,
+      "merged_names": 1
+    },
+    {
+      "funder": "Centers for Disease Control and Prevention",
+      "n": 101,
+      "merged_names": 1
+    },
+    {
+      "funder": "Agency for Healthcare Research and Quality",
+      "n": 91,
+      "merged_names": 1
+    },
+    {
+      "funder": "Gilead Sciences",
+      "n": 84,
+      "merged_names": 1
+    },
+    {
+      "funder": "Medtronic",
+      "n": 78,
+      "merged_names": 1
+    },
+    {
+      "funder": "World Health Organization",
+      "n": 70,
+      "merged_names": 1
+    },
+    {
+      "funder": "Merck",
+      "n": 60,
+      "merged_names": 1
+    },
+    {
+      "funder": "United States Agency for International Development",
+      "n": 58,
+      "merged_names": 1
+    },
+    {
+      "funder": "European Commission",
+      "n": 57,
+      "merged_names": 1
+    },
+    {
+      "funder": "GlaxoSmithKline",
+      "n": 56,
+      "merged_names": 1
+    },
+    {
+      "funder": "Japan Society for the Promotion of Science",
+      "n": 55,
+      "merged_names": 1
+    },
+    {
+      "funder": "Novartis",
+      "n": 54,
+      "merged_names": 1
+    },
+    {
+      "funder": "Bristol-Myers Squibb",
+      "n": 53,
+      "merged_names": 1
+    },
+    {
+      "funder": "Novo Nordisk",
+      "n": 53,
+      "merged_names": 1
+    },
+    {
+      "funder": "Sanofi",
+      "n": 48,
+      "merged_names": 1
+    },
+    {
+      "funder": "AbbVie",
+      "n": 45,
+      "merged_names": 1
+    },
+    {
+      "funder": "Eli Lilly and Company",
+      "n": 45,
+      "merged_names": 1
+    },
+    {
+      "funder": "Natural Science Foundation of Hunan Province",
+      "n": 44,
+      "merged_names": 1
+    },
+    {
+      "funder": "Instituto de Salud Carlos III",
+      "n": 43,
+      "merged_names": 1
+    },
+    {
+      "funder": "Ministry of Health, Labour and Welfare",
+      "n": 43,
+      "merged_names": 1
+    },
+    {
+      "funder": "Ministry of Science and Technology, Taiwan",
+      "n": 41,
+      "merged_names": 1
+    },
+    {
+      "funder": "Cancer Research UK",
+      "n": 40,
+      "merged_names": 1
+    },
+    {
+      "funder": "Amgen",
+      "n": 38,
+      "merged_names": 1
+    },
+    {
+      "funder": "Ministry of Health and Welfare",
+      "n": 37,
+      "merged_names": 1
+    },
+    {
+      "funder": "National Research Foundation of Korea",
+      "n": 37,
+      "merged_names": 1
+    },
+    {
+      "funder": "Boehringer Ingelheim",
+      "n": 36,
+      "merged_names": 1
+    },
+    {
+      "funder": "Boston Scientific Corporation",
+      "n": 36,
+      "merged_names": 1
+    },
+    {
+      "funder": "Horizon 2020 Framework Programme",
+      "n": 36,
+      "merged_names": 1
+    },
+    {
+      "funder": "Horizon 2020",
+      "n": 34,
+      "merged_names": 1
+    },
+    {
+      "funder": "HRC (New Zealand)",
+      "n": 34,
+      "merged_names": 1
+    },
+    {
+      "funder": "National Key Research and Development Program of China",
+      "n": 34,
+      "merged_names": 1
+    },
+    {
+      "funder": "Roche",
+      "n": 34,
+      "merged_names": 1
+    },
+    {
+      "funder": "National Institute for Health and Care Excellence",
+      "n": 33,
+      "merged_names": 1
+    },
+    {
+      "funder": "National Science Foundation",
+      "n": 29,
+      "merged_names": 1
+    },
+    {
+      "funder": "Edwards Lifesciences",
+      "n": 27,
+      "merged_names": 1
+    },
+    {
+      "funder": "British Heart Foundation",
+      "n": 26,
+      "merged_names": 1
+    },
+    {
+      "funder": "National Heart Foundation of Australia",
+      "n": 26,
+      "merged_names": 1
+    },
+    {
+      "funder": "Bayer",
+      "n": 24,
+      "merged_names": 1
+    },
+    {
+      "funder": "Bundesministerium für Bildung und Forschung",
+      "n": 24,
+      "merged_names": 1
+    },
+    {
+      "funder": "China Postdoctoral Science Foundation",
+      "n": 24,
+      "merged_names": 1
     }
   ],
   "wellcome_by_year": [

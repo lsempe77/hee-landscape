@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-12-climate-reviewed";
+const BUILD = "2026-10-12-funder-treemap";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -999,14 +999,35 @@ if (typeof document !== "undefined") {
   function openModal(file) {
     const f = FIG_INDEX[file];
     if (!f) return;
-    modalFigure = f;
-    $("fig-modal-title").textContent = f.title;
-    const img = $("fig-modal-img");
-    img.src = "figures/" + f.file;
-    img.alt = f.title;
-    renderFigureNotes($("fig-modal-caption"), f);
-    setFigureZoom(1);
-    $("fig-zoom-viewport").scrollTo(0, 0);
+    // Figures with alternative views (content.json `views`) get tabs; the first view is the default.
+    const tabs = $("fig-modal-views");
+    tabs.textContent = "";
+    tabs.hidden = !f.views || f.views.length < 2;
+    const show = (view, button) => {
+      // A view inherits the figure's own copy and overrides what it sets itself.
+      const shown = view ? { ...f, ...view, views: f.views } : f;
+      modalFigure = shown;
+      $("fig-modal-title").textContent = shown.title;
+      const img = $("fig-modal-img");
+      img.src = "figures/" + shown.file;
+      img.alt = shown.title;
+      renderFigureNotes($("fig-modal-caption"), shown);
+      setFigureZoom(1);
+      $("fig-zoom-viewport").scrollTo(0, 0);
+      for (const b of tabs.children) b.setAttribute("aria-selected", String(b === button));
+    };
+    if (!tabs.hidden) {
+      f.views.forEach((view, i) => {
+        const button = el("button", "figure-view-tab");
+        button.type = "button";
+        button.setAttribute("role", "tab");
+        button.textContent = view.label;
+        // The first view is the figure as published, so it keeps the figure's own title and copy.
+        button.addEventListener("click", () => show(i === 0 ? null : view, button));
+        tabs.appendChild(button);
+      });
+    }
+    show(null, tabs.firstChild);
     $("fig-modal").classList.add("open");
   }
 

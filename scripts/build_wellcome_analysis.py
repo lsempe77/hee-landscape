@@ -39,6 +39,41 @@ PRIORITIES = {
 # Reviewed Climate & Health list (scripts/build_climate_candidates.py, then a review of every candidate).
 CLIMATE_REVIEW = ROOT / "exports" / "climate_health_review_decisions_2026-10-12.csv"
 CLIMATE_SECTOR = "Health-sector emissions"
+# Parent funders for the merged treemap view only; the bar chart keeps names as normalised.
+# NIHR: its programmes (HTA, PHR, HS&DR, PGfAR, EME, RfPB), BRCs, ARCs/CLAHRCs, schools and fellowships.
+NIHR_FAMILY = re.compile(r"\bnihr\b|national institute (for|of) health (and care )?research|health technology assessment|"
+                         r"public health research programme|health (services|and social care) (and )?delivery research|"
+                         r"programme grants for applied research|efficacy and mechanism evaluation|research for patient benefit|"
+                         r"biomedical research centre|applied research collaboration|clahrc|"
+                         r"collaboration for leadership in applied health research|school for primary care research", re.I)
+# US NIH: the agency and its institutes and centres. Same-named bodies in other countries stay separate.
+NIH_FAMILY = re.compile(r"^us nih$|national institutes of health|\bnih\b|national cancer institute|"
+                        r"national heart,? lung,? and blood institute|national institute of allergy and infectious disease|"
+                        r"national institute (on|of) drug abuse|national center for advancing translational sciences|"
+                        r"national institute of mental health|national institute of diabetes and digestive and kidney disease|"
+                        r"child health and human development|eunice kennedy shriver|national institute on aging|"
+                        r"national institute of general medical sciences|national institute of arthritis and musculoskeletal|"
+                        r"national institute on minority health|fogarty international center|national institute on alcohol abuse|"
+                        r"national institute of neurologic(al)? disorders|national human genome research institute|"
+                        r"national institute of nursing research|national institute of dental and craniofacial|"
+                        r"national institute of biomedical imaging|national institute of environmental health sciences|"
+                        r"national institute on deafness|national center for complementary and integrative health|"
+                        r"national library of medicine|national eye institute", re.I)
+NON_US = re.compile(r"\b(korea\w*|french|france|colombia\w*|malaysia\w*|brazil\w*|japan\w*|ital(y|ian)|thai\w*|india\w*|"
+                    r"canad\w*|mexic\w*|china|chinese|iran\w*|pakistan\w*|nigeria\w*|vietnam\w*|peru\w*|chile\w*|"
+                    r"argentin\w*|taiwan\w*|egypt\w*)\b", re.I)
+TREEMAP_N = 15
+
+
+def parent_funder(name):
+    """Parent organisation for the merged view; NIHR and US NIH absorb their programmes and institutes."""
+    if NON_US.search(name):
+        return name
+    if NIHR_FAMILY.search(name):
+        return "NIHR"
+    if NIH_FAMILY.search(name):
+        return "US NIH"
+    return name
 MENTAL_FOCUS = re.compile(r"\banxiet\w*|\bdepress\w*|\bpsychos\w*|\bpsychoti\w*|\bschizophren\w*", re.I)
 # Indicative title-keyword groups for Wellcome-funded studies outside all three themes.
 # First match wins; unmatched studies fall into the final catch-all group.
@@ -180,6 +215,20 @@ def donor_counts(rows):
     return sorted(({"funder": name, "n": sum(values), "income_counts": values} for name, values in counts.items()), key=lambda d: (-d["n"], d["funder"].casefold()))
 
 
+def parent_donor_counts(rows):
+    """Unique studies per parent funder, with the names merged into each parent and the HTA share of NIHR."""
+    counts, merged = defaultdict(set), defaultdict(set)
+    for r in rows:
+        for name in r["named_funders"]:
+            parent = parent_funder(name)
+            counts[parent].add(r["record_id"])
+            merged[parent].add(name)
+    hta = sum("NIHR HTA Programme" in r["named_funders"] for r in rows)
+    ranked = sorted(counts, key=lambda p: (-len(counts[p]), p.casefold()))
+    return [{"funder": p, "n": len(counts[p]), "merged_names": len(merged[p]),
+             **({"hta": hta} if p == "NIHR" else {})} for p in ranked[:50]]
+
+
 def stats(rows):
     return {"n": len(rows), "named_funder": sum(bool(r["named_funders"]) for r in rows),
             "wellcome": sum(r["wellcome"] for r in rows),
@@ -226,8 +275,85 @@ def build_analysis(rows, meta, source_hash):
             "wellcome_outside_groups": sorted((g for g in outside_groups if g["n"]), key=lambda g: (g["key"] == "other", -g["n"])),
             "wellcome_theme_overlap": overlaps(wellcome), "all_theme_overlap": overlaps(rows),
             "disease_tagged": sum(r["disease_groups"] not in ("", "NA") for r in rows),
-            "donors": donor_counts(rows),
+            "donors": donor_counts(rows), "parent_donors": parent_donor_counts(rows),
             "wellcome_by_year": [{"year": y, "n": sum(int(r["year"]) == y for r in wellcome)} for y in range(meta["years"][0], meta["years"][1] + 1)]}
+
+
+def squarify(sizes, x, y, dx, dy):
+    """Squarified treemap layout (Bruls et al.); sizes sorted descending and summing to dx * dy."""
+    def worst(row, side):
+        total = sum(row)
+        return max(max(side * side * r / (total * total), total * total / (side * side * r)) for r in row)
+    rects, sizes = [], list(sizes)
+    while sizes:
+        side = min(dx, dy)
+        row = [sizes.pop(0)]
+        while sizes and worst(row + [sizes[0]], side) <= worst(row, side):
+            row.append(sizes.pop(0))
+        total = sum(row)
+        if dx >= dy:  # Fill a column down the left edge.
+            width, top = total / dy, y
+            for r in row:
+                rects.append((x, top, width, r / width))
+                top += r / width
+            x, dx = x + width, dx - width
+        else:  # Fill a row along the top edge.
+            height, left = total / dx, x
+            for r in row:
+                rects.append((left, y, r / height, height))
+                left += r / height
+            y, dy = y + height, dy - height
+    return rects
+
+
+TREEMAP_COLORS = ["#6D91BE", "#62A89B", "#D98F7A", "#D6B264", "#9B87B8", "#8FB3C9", "#B9A58C", "#A7BF8E",
+                  "#C99BB0", "#7FA7A0", "#D4A373", "#9AA5C4", "#B8B08A", "#A0B8B0", "#C4A7A0"]
+
+
+def plot_treemap(analysis, staging, plt, background):
+    """Top parent funders as a treemap; NIHR and US NIH absorb their programmes and institutes."""
+    import textwrap as tw
+    from matplotlib.patches import Rectangle
+    donors = analysis["parent_donors"][:TREEMAP_N]
+    width, height = 100.0, 58.0
+    total = sum(d["n"] for d in donors)
+    rects = squarify([d["n"] * width * height / total for d in donors], 0, 0, width, height)
+    fig = plt.figure(figsize=(14, 9.6), facecolor=background)
+    ax = fig.add_axes([.025, .13, .95, .69])
+    ax.set_xlim(0, width)
+    ax.set_ylim(height, 0)
+    ax.axis("off")
+    points_per_unit = .95 * 14 * 72 / width
+    for d, (x, y, w, h), color in zip(donors, rects, TREEMAP_COLORS):
+        ax.add_patch(Rectangle((x, y), w, h, facecolor=color, edgecolor=background, linewidth=3))
+        name = {"NIHR": "NIHR", "US NIH": "US NIH"}.get(d["funder"], d["funder"])
+        detail = (f"incl. HTA Programme: {d['hta']:,}" if d["funder"] == "NIHR" else
+                  "incl. institutes (e.g. NCI, NIAID, NIDA)" if d["funder"] == "US NIH" else "")
+        size = max(8, min(24, (w * h) ** .5 * .95))
+        chars = max(8, int((w - 2.4) * points_per_unit / (size * .68)))
+        label = tw.fill(name, chars)
+        pad = min(1.2, w * .06)
+        ax.text(x + pad, y + pad * .9, label, ha="left", va="top", fontsize=size, fontweight="bold", color="#10243e", linespacing=1.05)
+        if detail and h > 8:
+            lines = label.count("\n") + 1
+            ax.text(x + pad, y + pad * .9 + lines * size * 1.25 / points_per_unit, tw.fill(detail, int(chars * 1.6)),
+                    ha="left", va="top", fontsize=max(8, size * .5), color="#10243e")
+        ax.text(x + pad, y + h - pad * .7, f"{d['n']:,}", ha="left", va="bottom", fontsize=min(34, size * 1.45),
+                fontweight="bold", color="#10243e")
+    top = donors[0]
+    fig.text(.025, .95, "Top donors by organisation: who funds the most studies?", fontsize=22, fontweight="bold", color="#10243e")
+    fig.text(.025, .905, f"{top['funder']} is named in {top['n']:,} studies, more than any other funder. Bigger box = more studies.",
+             fontsize=13.5, color="#33475f")
+    fig.text(.025, .865, "Programmes and institutes are counted under the organisation they belong to, "
+             "such as NIHR's HTA Programme or the NIH's National Cancer Institute.", fontsize=11.5, color="#5a564d")
+    notes = ("NIHR includes its programmes (HTA, Public Health Research, HS&DR, Programme Grants for Applied Research, EME, Research for Patient Benefit),\n"
+             "Biomedical Research Centres, ARCs/CLAHRCs and fellowships. US NIH includes its institutes and centres (e.g. NCI, NIAID, NIDA, NHLBI, NIMH, NCATS).\n"
+             "Same-named bodies in other countries stay separate. Each study counts once per funder. Counts describe recorded acknowledgements, not funding amounts.")
+    fig.text(.025, .03, notes, fontsize=10, color="#5a564d", linespacing=1.6)
+    fig.savefig(staging / "fig_funder_treemap.svg", facecolor=background)
+    tidy_svg(staging / "fig_funder_treemap.svg")
+    fig.savefig(staging / "fig_funder_treemap.png", dpi=110, facecolor=background)
+    plt.close(fig)
 
 
 def plots(analysis, staging):
@@ -257,9 +383,10 @@ def plots(analysis, staging):
     for spine in ax.spines.values():
         spine.set_visible(False)
     ax.tick_params(axis="y", length=0)
-    ax.legend(loc="lower left", bbox_to_anchor=(-.38, 1.02), ncol=3, frameon=False, fontsize=9)
-    fig.subplots_adjust(left=.31, right=.96, top=.79, bottom=.2)
-    fig.text(.025, .95, "Top dollar: who funds economic evaluations, and where?", fontsize=22, fontweight="bold", color="#10243e")
+    # Legend sits directly under the subtitle, aligned with the title.
+    fig.legend(*ax.get_legend_handles_labels(), loc="upper left", bbox_to_anchor=(.019, .885), ncol=3, frameon=False, fontsize=10)
+    fig.subplots_adjust(left=.31, right=.96, top=.83, bottom=.2)
+    fig.text(.025, .95, "Top donors: who funds economic evaluations, and where?", fontsize=22, fontweight="bold", color="#10243e")
     fig.text(.025, .905, "Top 15 recorded funders, ranked by unique eligible studies", fontsize=14, color="#33475f")
     n = analysis["global"]["n"]
     known = analysis["global"]["named_funder"]
@@ -273,6 +400,7 @@ def plots(analysis, staging):
     tidy_svg(staging / "fig_funder_funders.svg")
     fig.savefig(staging / "fig_funder_funders.png", dpi=110, facecolor=background)
     plt.close(fig)
+    plot_treemap(analysis, staging, plt, background)
 
     fig, ax = plt.subplots(figsize=(13, 6.6), facecolor=background)
     ax.set_facecolor(background)
@@ -308,7 +436,7 @@ def plots(analysis, staging):
     ax.tick_params(axis="y", length=0, pad=10)
     ax.axhline(2.65, color="#ded9ce", linewidth=1)  # below the two-line Climate & Health note
     fig.subplots_adjust(left=.23, right=.97, top=.76, bottom=.24)
-    fig.text(.025, .93, "Wellcome priority themes: Wellcome-funded studies", fontsize=22, fontweight="bold", color="#10243e")
+    fig.text(.025, .93, "Wellcome-funded studies: which priority themes do they cover?", fontsize=22, fontweight="bold", color="#10243e")
     fig.text(.025, .85, f"{total:,} eligible evaluations report Wellcome Trust as a funder; {total - outside} fall in at least one priority theme",
              fontsize=15, color="#705a84")
     fig.text(.025, .035, f"{overlap_text(analysis['wellcome_theme_overlap'], 'Wellcome-funded')}\n"
@@ -587,11 +715,25 @@ def main():
         if not analysis["wellcome"]["n"] or not analysis["donors"]:
             raise ValueError("No Wellcome records or reported funders; refusing to build an empty analysis.")
         for entry in general_entries:
-            entry.update(file="fig_funder_funders.svg", title="Top dollar: who funds economic evaluations, and where?",
+            entry.update(file="fig_funder_funders.svg", title="Top donors: who funds economic evaluations, and where?",
                          caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} evaluations report a funder. Blue/coral identify single-country studies with known income; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
+            nihr = next(d for d in analysis["parent_donors"] if d["funder"] == "NIHR")
+            # Alternative views shown as tabs in the figure pop-up; the bar chart stays the default.
+            entry["views"] = [
+                {"label": "Funders as named", "file": "fig_funder_funders.svg"},
+                {"label": "Grouped by organisation", "file": "fig_funder_treemap.svg",
+                 "title": "Top donors by organisation: who funds the most studies?",
+                 "summary": (f"The same funders, with programmes and institutes counted under the organisation they belong to. NIHR (incl. HTA Programme: {nihr['hta']:,}) "
+                             f"is named in {nihr['n']:,} studies, and the US NIH including its institutes in "
+                             f"{next(d['n'] for d in analysis['parent_donors'] if d['funder'] == 'US NIH'):,}. Bigger box = more studies. "
+                             "Counts are studies that name a funder, not amounts of money."),
+                 "caption": ("NIHR includes its programmes (HTA, Public Health Research, HS&DR, Programme Grants for Applied Research, EME, "
+                             "Research for Patient Benefit), Biomedical Research Centres, ARCs/CLAHRCs and fellowships. US NIH includes its "
+                             "institutes and centres (e.g. NCI, NIAID, NIDA, NHLBI, NIMH, NCATS). Same-named bodies in other countries stay "
+                             "separate. Each study counts once per funder; other funders are counted as in the bar chart.")}]
         section = {"title": SECTION, "blurb": "A funder-specific view of economic evaluation evidence in Wellcome's three priority themes: Infectious Diseases, Mental Health and Climate & Health. It separates all evidence in each theme from studies that report Wellcome funding, ranks the funders reported within each theme, and sets out how each theme was defined.",
-                   "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-funded studies across the priority themes", "caption": "Studies reporting Wellcome Trust as a funder in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses broad disease-group tags and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."},
-                            {"file": "wellcome_analysis.html", "html": True, "title": "Explore each theme: evidence, top funders and settings", "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health is a reviewed title-and-abstract screen and is small because few economic evaluations address climate."}]}
+                   "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-funded studies: which priority themes do they cover?", "caption": "Studies reporting Wellcome Trust as a funder in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses broad disease-group tags and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."},
+                            {"file": "wellcome_analysis.html", "html": True, "title": "Theme explorer: who funds each priority theme, and where?", "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health is a reviewed title-and-abstract screen and is small because few economic evaluations address climate."}]}
         # Also drop the section under its earlier name so a rename never leaves a duplicate.
         content["gallery"] = [s for s in content["gallery"] if s["title"] not in (SECTION, "Wellcome-specific analysis")] + [section]
         with tempfile.TemporaryDirectory(dir=OUT) as temporary:
