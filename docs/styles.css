@@ -328,6 +328,25 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 .overview-ratio-card .overview-analysis-body { height: auto; flex: none; }
 .overview-ratio-card .overview-figure-button { height: auto; }
 .overview-ratio-card .overview-analysis-figure { height: auto; }
+.overview-wellcome-card {
+  grid-column: 1 / -1;
+  padding: 1.5rem;
+  border-left: 4px solid #705a84;
+  background: #f5f1f7;
+}
+.overview-wellcome-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: .3rem .65rem;
+  border-radius: 999px;
+  background: #e9e2ee;
+  color: #594069;
+  font-size: .75rem;
+  font-weight: 600;
+}
+.overview-wellcome-card h3 { margin: .75rem 0 .5rem; font-size: 1.6rem; }
+.overview-wellcome-card p { max-width: 850px; margin: 0 0 .65rem; line-height: 1.6; }
+.overview-wellcome-card .card-header-link { align-self: flex-start; }
 .overview-featured-takeaway {
   margin: 0;
   padding: 1.25rem 1.5rem .5rem;

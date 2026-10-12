@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-11-geography-topics";
+const BUILD = "2026-10-12-wellcome-analysis";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -874,7 +874,7 @@ if (typeof document !== "undefined") {
         "reference point, not a target."
     }
   };
-  const SECTION_AFTER = { "Research funding": "Authorship & access" };
+  const SECTION_AFTER = { "Research funding": "Authorship & access", "Wellcome-specific analysis": "Research funding" };
   // after: file to follow in the target section; first: true puts it first.
   const MOVED_FIGURES = [
     { file: "fig_method_stream.webp", to: "Methods & metrics", after: "fig_metric.webp" },
@@ -882,7 +882,7 @@ if (typeof document !== "undefined") {
     { file: "fig_forest.webp", to: "Authorship & access", after: "fig_authorship_pattern.webp" },
     { file: "paper06.webp", to: "Authorship & access", after: "fig_forest.webp" },
     { file: "fig_collab_chord.webp", to: "Authorship & access", after: "paper06.webp" },
-    { file: "fig_funder_funders.webp", to: "Research funding", first: true },
+    { file: "fig_funder_funders.svg", to: "Research funding", first: true },
     { file: "fig_map_growth.webp", to: "Geography", after: "fig_worldmap.webp" },
     { file: "fig_map_burden.webp", to: "Geography", after: "paper03.webp" },
     { file: "fig_map_openaccess.webp", to: "Authorship & access", after: "fig_openaccess.webp" },
@@ -1476,7 +1476,7 @@ if (typeof document !== "undefined") {
       { file: "fig_research_burden_ratio.svg", alt: "Country research-to-burden ratios grouped by income, with proportionality at 1", wide: true },
       { file: "fig_disease_circular.webp", alt: "Line of sight: disease groups studied in health economic evaluations" },
       { file: "fig_intervention_mix.webp", alt: "What gets evaluated: intervention mix by income" },
-      { file: "fig_funder_funders.webp", alt: "Top funders by evaluations and country income group" }
+      { file: "fig_funder_funders.svg", alt: "Top recorded funders by study count and setting, with equal styling for all funders" }
     ];
     const hw = $("ov-hero-imgs");
     hw.textContent = "";
@@ -1522,6 +1522,21 @@ if (typeof document !== "undefined") {
       card.appendChild(body);
       hw.appendChild(card);
     });
+    const wellcomeCard = el("div", "card overview-wellcome-card");
+    const wellcomeBadge = el("span", "overview-wellcome-badge");
+    wellcomeBadge.textContent = "Funder-specific view";
+    const wellcomeTitle = el("h3");
+    wellcomeTitle.textContent = "Wellcome-specific analysis";
+    const wellcomeCopy = el("p");
+    wellcomeCopy.textContent = "Explore Infectious Diseases, Mental Health and Climate & Health, " +
+      "including top donors within each theme and studies naming Wellcome. Theme definitions " +
+      "and funding coverage are shown in the separate view.";
+    const wellcomeLink = el("button", "card-header-link overview-explore-link");
+    wellcomeLink.type = "button";
+    wellcomeLink.textContent = "Explore Wellcome priority themes \u2192";
+    wellcomeLink.addEventListener("click", () => openOverviewTheme("Wellcome-specific analysis"));
+    wellcomeCard.append(wellcomeBadge, wellcomeTitle, wellcomeCopy, wellcomeLink);
+    hw.appendChild(wellcomeCard);
   }
 
   // Overview publication trend for the unfiltered corpus, with a
