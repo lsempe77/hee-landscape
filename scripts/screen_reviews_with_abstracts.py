@@ -22,7 +22,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / 'data' / 'raw'
-VERSION = 'title-abstract-rules-v6-reconciled'
+VERSION = 'title-abstract-rules-v7-separate-original-evaluation'
 NS = {'x': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 
 
@@ -162,6 +162,23 @@ def classify_signals(title, abstract):
                   'No qualifying review signal found in the title/abstract. This is not proof that the paper is primary research.', '')
 
 
+def separate_original_evaluation(screened):
+    """Keep review type independent of an additional original evaluation."""
+    mixed = screened['review_type'] == 'Mixed review and original evaluation'
+    screened['review_has_original_evaluation'] = (
+        'Yes' if mixed or screened.get('review_mixed_primary_analysis') == 'TRUE'
+        or screened.get('review_subtype', '').startswith('Original evaluation')
+        else 'Not identified'
+    )
+    if mixed:
+        screened['review_type'] = (
+            'Systematic review' if screened['review_subtype'] == 'Systematic review component'
+            else 'Non-systematic review'
+        )
+        screened['review_type_explanation'] = ''
+    return screened
+
+
 def classify(title, abstract):
     """Apply the user's explicit-label policy and distinguish own work from inputs."""
     title, abstract = clean(title), clean(abstract)
@@ -213,7 +230,7 @@ def classify(title, abstract):
         if not META.search(title) and not meta_parts:
             screened['review_subtype'] = 'Systematic review without meta-analysis'
     screened['review_type_explanation'] = REVIEW_TYPE_EXPLANATIONS.get(screened['review_type'], '')
-    return screened
+    return separate_original_evaluation(screened)
 
 
 def read_upload(path):
@@ -266,7 +283,7 @@ def sha(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--master', type=Path, default=RAW / 'hee_analysis_master.csv')
+    parser.add_argument('--master', type=Path, default=RAW / 'hee_analysis_master_v2.csv')
     parser.add_argument('--upload', type=Path, default=RAW / 'hee_included_titles_abstracts_for_review_screening.xlsx')
     parser.add_argument('--apply', action='store_true')
     parser.add_argument('--reuse-prepared', action='store_true', help='Use the audited JSON screen only when input hashes and method version still match.')
@@ -317,6 +334,7 @@ def main():
                              review_screen_reason='Agent title/abstract audit: ' + audit['reason'],
                              review_type_explanation=REVIEW_TYPE_EXPLANATIONS.get(audit['review_type'], ''),
                              review_verification_status='Provisional - agent title/abstract checked; not human verified')
+        separate_original_evaluation(screened[rid])
     new_fields = ['abstract', 'abstract_source'] + list(next(iter(screened.values())))
     new_fields += ['review_type_human_verified', 'review_screened_at']
     timestamp = datetime.now(timezone.utc).isoformat(timespec='seconds')
@@ -344,6 +362,8 @@ def main():
         if sha(args.master) != source_hash or sha(args.upload) != upload_hash:
             raise ValueError('An input changed during screening; refusing to overwrite.')
         final_fields = fields + [f for f in new_fields if f not in fields]
+        final_fields.remove('review_has_original_evaluation')
+        final_fields.insert(final_fields.index('review_type') + 1, 'review_has_original_evaluation')
         final_fields.remove('review_type_explanation')
         final_fields.insert(final_fields.index('review_type') + 1, 'review_type_explanation')
         upload_by_id = {r['record_id']: r for r in upload}
@@ -410,7 +430,7 @@ def main():
         'Systematic review: explicit title or abstract self-description of this paper. Database searching, PRISMA or other method signals alone do not establish this user-defined label.',
         'Non-systematic review: user-defined category combining narrative/non-systematic reviews and other reviews without an explicit systematic-review self-description. This operational code does not establish that the methods were non-systematic.',
         'Review subtype and original supporting evidence are retained, including scoping, umbrella, rapid, literature and meta-analysis labels.',
-        'Mixed review and original evaluation: review plus new model/trial/cohort signals. Do not automatically exclude these as secondary evidence.',
+        'Review type and original evaluation are separate: an own systematic review remains Systematic review when combined with an original analysis; other own reviews remain Non-systematic review.',
         'Unclear: automated screening could not confidently establish the paper\'s role; reviewer assessment is needed. This does not imply that the abstract itself lacks the information.',
         'No review identified: no qualifying signal, or an original evaluation that mentions/uses review inputs. This is not proof of primary-study status.',
         'Review protocol: planned review, not a completed synthesis. Treatment protocols and registered protocols in completed reviews are different.',
@@ -423,6 +443,7 @@ def main():
         '`abstract`: full text from uploaded workbook; blank for records without supplied abstracts.',
         '`abstract_source`: uploaded workbook filename.',
         '`review_type`, `review_subtype`: proposed paper type and detailed subtype.',
+        '`review_has_original_evaluation`: Yes when original analysis is identified; Not identified does not confirm absence. Placed immediately after review_type.',
         '`review_type_explanation`: plain-language definition for unclear and mixed records, placed beside review_type.',
         '`review_screen_confidence`, `review_screen_reason`, `review_screen_evidence`: strength, rationale and supporting title/abstract extracts.',
         '`review_component`, `review_mixed_primary_analysis`: distinguishes reviews used as inputs and hybrid papers.',

@@ -9,7 +9,7 @@ python scripts/apply_publication_links.py
 
 The first script matches the three `ExportedRis*.txt` files to
 `studies_without_doi.csv` by RIS `U1` / EPPI `record_id`. The second enriches
-`data/raw/hee_analysis_master.csv` with recovered DOIs, URLs and their sources,
+`data/raw/hee_analysis_master_v2.csv` with recovered DOIs, URLs and their sources,
 refreshes column coverage, and writes link fields to all four web study datasets.
 A copy of the original master is kept in `data/raw/url_lookup` before the first
 update. Reapply after regenerating the web datasets; reruns are idempotent.

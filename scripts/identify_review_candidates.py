@@ -11,7 +11,7 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "data" / "raw" / "hee_analysis_master.csv"
+SOURCE = ROOT / "data" / "raw" / "hee_analysis_master_v2.csv"
 OUT = ROOT / "data" / "raw" / "review_screening"
 SYSTEMATIC = re.compile(r"\bsystematic(?:[ -]+(?:literature|evidence))?[ -]+reviews?\b", re.I)
 META = re.compile(r"\bmeta[ -]?analys\w*", re.I)

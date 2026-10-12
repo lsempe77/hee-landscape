@@ -41,7 +41,7 @@ def main():
     region_of = {r["iso3"]: r["wb_region_code"] for r in read_csv(os.path.join(ROOT, "scripts", "wb_regions.csv"))}
     themes = {r["cluster"]: r for r in read_csv(os.path.join(ROOT, "scripts", "topic_disease_map.csv"))}
 
-    master = read_csv(os.path.join(args.raw, "hee_analysis_master.csv"))
+    master = read_csv(os.path.join(args.raw, "hee_analysis_master_v2.csv"))
     included = {r["record_id"] for r in master if r["is_eligible"] == "TRUE"}
     cluster_of = {r["record_id"]: r["cluster"] for r in read_csv(os.path.join(args.raw, "topic_map.csv"))}
 

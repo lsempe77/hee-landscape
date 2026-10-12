@@ -63,7 +63,7 @@ def write_json(path, data):
 
 def main():
     csv.field_size_limit(10**9)
-    master_path = RAW / "hee_analysis_master.csv"
+    master_path = RAW / "hee_analysis_master_v2.csv"
     columns, master = read_csv(master_path)
     _, updates = read_csv(LOOKUP / "EPPI_updated_studies.csv")
     by_id = {r["record_id"]: r for r in master}

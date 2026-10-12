@@ -7,7 +7,7 @@ python scripts/build_wellcome_analysis.py
 python -m unittest discover -s tests -p "test_wellcome_analysis.py"
 ```
 
-The builder requires matplotlib, `data/raw/hee_analysis_master.csv`,
+The builder requires matplotlib, `data/raw/hee_analysis_master_v2.csv`,
 `docs/data/dict.json` and `docs/data/content.json`. It validates required columns,
 unique IDs, publication years, income values and the eligible-study total against
 the web build. All figures, report and metadata are staged before replacement.

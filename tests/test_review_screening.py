@@ -37,7 +37,8 @@ class ReviewScreenTests(unittest.TestCase):
 
     def test_hybrid_kept_separate(self):
         r = screen.classify('Systematic review and model-based evaluation', 'We conducted a systematic review. We developed a Markov model.')
-        self.assertEqual(r['review_type'], 'Mixed review and original evaluation')
+        self.assertEqual(r['review_type'], 'Systematic review')
+        self.assertEqual(r['review_has_original_evaluation'], 'Yes')
         self.assertEqual(r['review_mixed_primary_analysis'], 'TRUE')
 
     def test_meta_analysis_alone_is_not_proof_of_systematic_methods(self):
@@ -63,7 +64,8 @@ class ReviewScreenTests(unittest.TestCase):
 
     def test_new_cohort_and_review_kept_mixed(self):
         r = screen.classify('Treatment costs and a narrative review', 'In this cross-sectional study, we assessed twelve patients.')
-        self.assertEqual(r['review_type'], 'Mixed review and original evaluation')
+        self.assertEqual(r['review_type'], 'Non-systematic review')
+        self.assertEqual(r['review_has_original_evaluation'], 'Yes')
 
     def test_appraisal_group_does_not_establish_review_paper(self):
         r = screen.classify('An Evidence Review Group Perspective of a NICE Single Technology Appraisal', 'The model was validated.')
@@ -75,7 +77,8 @@ class ReviewScreenTests(unittest.TestCase):
 
     def test_mixed_methods_with_narrative_review(self):
         r = screen.classify('Mixed-methods analysis', 'We conducted a mixed-methods analysis integrating a narrative review and an economic evaluation.')
-        self.assertEqual(r['review_type'], 'Mixed review and original evaluation')
+        self.assertEqual(r['review_type'], 'Non-systematic review')
+        self.assertEqual(r['review_has_original_evaluation'], 'Yes')
 
     def test_other_title_with_explicit_sr_abstract(self):
         r = screen.classify('A literature review of health costs', 'We conducted a systematic review of economic evaluations.')
@@ -95,15 +98,18 @@ class ReviewScreenTests(unittest.TestCase):
 
     def test_review_and_parameters_in_new_model(self):
         r = screen.classify('Model parameters for treatment costs', 'A systematic review was performed. The parameters were incorporated into a cost-utility model.')
-        self.assertEqual(r['review_type'], 'Mixed review and original evaluation')
+        self.assertEqual(r['review_type'], 'Systematic review')
+        self.assertEqual(r['review_has_original_evaluation'], 'Yes')
 
     def test_own_meta_analysis_with_reimbursement_analysis(self):
         r = screen.classify('Treatment outcomes and economic costs', 'We performed meta-analyses of efficacy. We analyzed individual reimbursement data from insurance records.')
-        self.assertEqual(r['review_type'], 'Mixed review and original evaluation')
+        self.assertEqual(r['review_type'], 'Non-systematic review')
+        self.assertEqual(r['review_has_original_evaluation'], 'Yes')
 
     def test_systemised_review_with_new_scenarios(self):
         r = screen.classify('A systemised review and modelling study', 'We undertook a systemised review of taxes. These tax scenarios were modelled to estimate lifetime costs.')
-        self.assertEqual(r['review_type'], 'Mixed review and original evaluation')
+        self.assertEqual(r['review_type'], 'Non-systematic review')
+        self.assertEqual(r['review_has_original_evaluation'], 'Yes')
 
     def test_drug_utilization_review_is_service(self):
         r = screen.classify('Costs of drug utilization review', 'We conducted difference-in-differences analysis using insurance claims data.')
@@ -111,7 +117,8 @@ class ReviewScreenTests(unittest.TestCase):
 
     def test_title_identifies_review_and_new_model(self):
         r = screen.classify('Treatment: a systematic review and economic evaluation', 'A decision-analytic model was developed. Inputs were informed by a systematic review.')
-        self.assertEqual(r['review_type'], 'Mixed review and original evaluation')
+        self.assertEqual(r['review_type'], 'Systematic review')
+        self.assertEqual(r['review_has_original_evaluation'], 'Yes')
 
     def test_prior_guideline_reviews_are_inputs(self):
         r = screen.classify('Cost-effectiveness of brief advice', 'A Markov model was used. Data to populate the model were derived from systematic literature reviews and literature searches that were conducted for national guidelines.')
