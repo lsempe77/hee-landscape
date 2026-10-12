@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-12-wellcome-layout";
+const BUILD = "2026-10-12-climate-reviewed";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -1379,7 +1379,7 @@ if (typeof document !== "undefined") {
   }
 
   // The web data has no funder field. Counts are from the v2 team export
-  // (hee_analysis_master.csv `funders`, 2026-10-11): included studies naming at
+  // (hee_analysis_master_v2.csv `funders`, 2026-10-11): included studies naming at
   // least one funder ("None"/"self-funded" entries dropped), and how many name
   // a funder of each type. Types follow OECD Frascati sectors: university
   // hospitals sit with universities; other public hospitals and health services

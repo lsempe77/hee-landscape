@@ -5,7 +5,7 @@
       2026
     ],
     "data_built": "2026-10-08",
-    "master_sha256": "d8b3f4e5289e73e7b16af79c24d2efc43033809df2ef383c7fe2720a694c49fb",
+    "master_sha256": "a03ac2d43780073b461bd72497e526f47e8fd1f78ad1ee7fb63c09ec9c2639b3",
     "unit": "Unique eligible studies reporting each funder; no grant amounts or causal attribution.",
     "theme_overlap": true,
     "sources_accessed": "2026-10-12"
@@ -23502,26 +23502,89 @@
     "climate": {
       "label": "Climate & Health",
       "url": "https://wellcome.org/our-priorities/climate-and-health",
-      "definition": "Provisional title screen: explicit climate, greenhouse gas, carbon footprint/tax, heat-health, wildfire or cold-weather-plan terms. This includes health-sector emissions studies. It is not a validated climate-change attribution or programme-eligibility classification; relevant studies may be missed.",
-      "n": 33,
-      "named_funder": 15,
-      "wellcome": 1,
+      "definition": "Reviewed keyword screen: the titles and abstracts of all eligible studies were searched for climate, extreme heat and weather, air pollution, emissions and related terms, and every candidate was reviewed against Wellcome's Climate & Health framing (health impacts of climate change, climate-sensitive infectious disease, air pollution, and mitigation with health co-benefits). Studies of health care's own emissions are included and shown separately. MeSH has no climate category, so this theme does not use disease tags.",
+      "n": 102,
+      "named_funder": 37,
+      "wellcome": 4,
       "income_counts": [
-        15,
-        8,
-        10
+        53,
+        24,
+        25
       ],
       "wellcome_income_counts": [
         1,
-        0,
-        0
+        1,
+        2
       ],
       "donors": [
+        {
+          "funder": "NSFC (China)",
+          "n": 4,
+          "income_counts": [
+            0,
+            4,
+            0
+          ]
+        },
+        {
+          "funder": "Wellcome Trust",
+          "n": 4,
+          "income_counts": [
+            1,
+            1,
+            2
+          ]
+        },
         {
           "funder": "HRC (New Zealand)",
           "n": 2,
           "income_counts": [
             2,
+            0,
+            0
+          ]
+        },
+        {
+          "funder": "Legacy for Airway Health",
+          "n": 2,
+          "income_counts": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "funder": "National Key Research and Development Program of China",
+          "n": 2,
+          "income_counts": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "funder": "Agentschap Innoveren en Ondernemen (BE)",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "funder": "AllerGen",
+          "n": 1,
+          "income_counts": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "funder": "ANR-French National Research Agency",
+          "n": 1,
+          "income_counts": [
+            1,
             0,
             0
           ]
@@ -23536,7 +23599,52 @@
           ]
         },
         {
+          "funder": "Beijing Social Science",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "funder": "China Agricultural University",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "funder": "D Program of China",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
           "funder": "DesignBuilder Software Ltd., UCL and Innovate KTP project",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "funder": "Environment and Climate Change Canada",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "funder": "ERANET-SUSFOOD",
           "n": 1,
           "income_counts": [
             1,
@@ -23554,6 +23662,15 @@
           ]
         },
         {
+          "funder": "Flemish Innovation and Entrepreneurship",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
           "funder": "Horizon 2020",
           "n": 1,
           "income_counts": [
@@ -23564,6 +23681,15 @@
         },
         {
           "funder": "Horizon 2020 Framework Programme",
+          "n": 1,
+          "income_counts": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "funder": "Horizon Europe",
           "n": 1,
           "income_counts": [
             0,
@@ -23590,11 +23716,38 @@
           ]
         },
         {
-          "funder": "Legacy for Airway Health",
+          "funder": "Janssen Pharmaceutica",
           "n": 1,
           "income_counts": [
             1,
             0,
+            0
+          ]
+        },
+        {
+          "funder": "Janssen Pharmaceutica NV",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "funder": "Karolinska Institute",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "funder": "Mahidol University",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
             0
           ]
         },
@@ -23608,6 +23761,15 @@
           ]
         },
         {
+          "funder": "National Aeronautics and Space Administration",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
           "funder": "National Institute of Technology, Raipur",
           "n": 1,
           "income_counts": [
@@ -23617,7 +23779,16 @@
           ]
         },
         {
-          "funder": "National Key Research and Development Program of China",
+          "funder": "National Key R&",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "funder": "National Nutrition and Food Technology Research Institute",
           "n": 1,
           "income_counts": [
             0,
@@ -23653,7 +23824,7 @@
           ]
         },
         {
-          "funder": "Natural Environment Research Council",
+          "funder": "Natural Research Council",
           "n": 1,
           "income_counts": [
             1,
@@ -23662,7 +23833,16 @@
           ]
         },
         {
-          "funder": "Natural Research Council",
+          "funder": "Natural Science Foundation of Shandong Province in China",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "funder": "Natural Sciences and Engineering Research Council of Canada",
           "n": 1,
           "income_counts": [
             1,
@@ -23689,7 +23869,16 @@
           ]
         },
         {
-          "funder": "NSFC (China)",
+          "funder": "Novo Nordisk",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "funder": "Outstanding Innovative Talents Cultivation Funded Programs 2020",
           "n": 1,
           "income_counts": [
             0,
@@ -23698,7 +23887,52 @@
           ]
         },
         {
+          "funder": "Perkins&Will Inc",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "funder": "Public Health Research programme",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
           "funder": "Ramón y Cajal Research Fellowship",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "funder": "Research Consortium for School Health and Nutrition",
+          "n": 1,
+          "income_counts": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "funder": "Research Grants Council, University Grants Committee",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "funder": "Rijksinstituut voor Volksgezondheid en Milieu",
           "n": 1,
           "income_counts": [
             1,
@@ -23734,11 +23968,38 @@
           ]
         },
         {
+          "funder": "Shahid Beheshti University of Medical Sciences",
+          "n": 1,
+          "income_counts": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
           "funder": "Shanghai Pujiang Programme",
           "n": 1,
           "income_counts": [
             0,
             1,
+            0
+          ]
+        },
+        {
+          "funder": "University Grants Committee Research Grants Council",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "funder": "University Health Network",
+          "n": 1,
+          "income_counts": [
+            1,
+            0,
             0
           ]
         },
@@ -23752,7 +24013,7 @@
           ]
         },
         {
-          "funder": "Wellcome Trust",
+          "funder": "University of Toronto",
           "n": 1,
           "income_counts": [
             1,
@@ -23768,6 +24029,43 @@
             0,
             0
           ]
+        },
+        {
+          "funder": "World Bank Group",
+          "n": 1,
+          "income_counts": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "reviewed": 138,
+      "subareas": [
+        {
+          "label": "Health-sector emissions",
+          "n": 40,
+          "wellcome": 0
+        },
+        {
+          "label": "Mitigation with health co-benefits",
+          "n": 24,
+          "wellcome": 3
+        },
+        {
+          "label": "Health impacts of climate change",
+          "n": 19,
+          "wellcome": 1
+        },
+        {
+          "label": "Air pollution",
+          "n": 14,
+          "wellcome": 0
+        },
+        {
+          "label": "Climate-sensitive infectious disease",
+          "n": 5,
+          "wellcome": 0
         }
       ]
     }
@@ -23787,7 +24085,7 @@
       1
     ]
   },
-  "wellcome_outside_themes": 84,
+  "wellcome_outside_themes": 81,
   "wellcome_outside_groups": [
     {
       "key": "infectious",
@@ -24008,8 +24306,8 @@
     {
       "key": "food",
       "label": "Food systems and diet",
-      "note": "Diet and food-policy models. 4 also estimate environmental impacts, which relate to Climate & Health but use no climate terms, so the Climate & Health title screen does not count them.",
-      "n": 10,
+      "note": null,
+      "n": 7,
       "studies": [
         {
           "title": "Modelling of potential food policy interventions in Fiji and Tonga and their impacts on noncommunicable disease mortality",
@@ -24023,11 +24321,6 @@
         },
         {
           "title": "Estimating the cost-effectiveness of salt reformulation and increasing access to leisure centres in England, with PRIMEtime CE model validation using the AdViSHE tool",
-          "year": "2019",
-          "url": ""
-        },
-        {
-          "title": "International trade, dietary change, and cardiovascular disease health outcomes: Import tariff reform using an integrated macroeconomic, environmental and health modelling framework for Thailand",
           "year": "2019",
           "url": ""
         },
@@ -24049,16 +24342,6 @@
         {
           "title": "Economic and health impacts of the Change4Life Food Scanner app: Findings from a randomized pilot and feasibility study",
           "year": "2023",
-          "url": ""
-        },
-        {
-          "title": "A reform of value-added taxes on foods can have health, environmental and economic benefits in Europe",
-          "year": "2025",
-          "url": ""
-        },
-        {
-          "title": "The health, environmental, and cost implications of providing healthy and sustainable school meals for every child by 2030: a global modelling study",
-          "year": "2025",
           "url": ""
         }
       ]
@@ -24289,11 +24572,11 @@
     }
   },
   "all_theme_overlap": {
-    "n": 125,
+    "n": 134,
     "combinations": {
       "Infectious Diseases + Mental Health": 121,
-      "Infectious Diseases + Climate & Health": 3,
-      "Mental Health + Climate & Health": 1
+      "Infectious Diseases + Climate & Health": 11,
+      "Mental Health + Climate & Health": 2
     }
   },
   "disease_tagged": 21648,

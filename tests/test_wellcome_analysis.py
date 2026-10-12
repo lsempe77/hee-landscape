@@ -28,6 +28,14 @@ class WellcomeAnalysisTests(unittest.TestCase):
         ]
         (self.root / "dict.json").write_text(json.dumps({"meta": {"n_studies": 4, "years": [2010, 2026], "built": "2026-10-08"}}))
         (self.root / "content.json").write_text(json.dumps({"gallery": [{"figs": [{"file": "fig_funder_funders.webp"}]}]}))
+        # Reviewed Climate & Health decisions: only the heat study is included.
+        review = self.root / "climate_review.csv"
+        review.write_text("row,record_id,title,decision,subarea,basis\n"
+                          "1,2,Heat-related illness and mental health,Include,Health impacts of climate change,test\n"
+                          "2,3,Climate Schools anxiety prevention,Exclude,,test\n", encoding="utf-8")
+        review_patch = patch.object(builder, "CLIMATE_REVIEW", review)
+        review_patch.start()
+        self.addCleanup(review_patch.stop)
 
     def row(self, rid, title, funders, disease, scope="single_country"):
         return {"record_id": rid, "is_eligible": "TRUE", "title": title, "year": "2020",
@@ -36,7 +44,7 @@ class WellcomeAnalysisTests(unittest.TestCase):
 
     def write_master(self):
         import csv
-        with (self.root / "hee_analysis_master.csv").open("w", newline="") as handle:
+        with (self.root / "hee_analysis_master_v2.csv").open("w", newline="") as handle:
             writer = csv.DictWriter(handle, fieldnames=list(self.rows[0]))
             writer.writeheader()
             writer.writerows(self.rows)

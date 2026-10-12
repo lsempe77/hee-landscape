@@ -34,10 +34,11 @@ PRIORITIES = {
     "mental": ("Mental Health", "https://wellcome.org/our-priorities/mental-health",
                "Broad proxy: the map's Mental & substance use group. It includes substance use and is wider than Wellcome's focus on early intervention in anxiety, depression and psychosis. A separate focus-condition title screen is reported below."),
     "climate": ("Climate & Health", "https://wellcome.org/our-priorities/climate-and-health",
-                "Provisional title screen: explicit climate, greenhouse gas, carbon footprint/tax, heat-health, wildfire or cold-weather-plan terms. This includes health-sector emissions studies. It is not a validated climate-change attribution or programme-eligibility classification; relevant studies may be missed."),
+                "Reviewed keyword screen: the titles and abstracts of all eligible studies were searched for climate, extreme heat and weather, air pollution, emissions and related terms, and every candidate was reviewed against Wellcome's Climate & Health framing (health impacts of climate change, climate-sensitive infectious disease, air pollution, and mitigation with health co-benefits). Studies of health care's own emissions are included and shown separately. MeSH has no climate category, so this theme does not use disease tags."),
 }
-CLIMATE = re.compile(r"\bclimat(?:e|ic)\b|global warming|greenhouse gas|carbon (?:footprint|tax)|decarbon|heat[ -]?wave|heat[ -]related|heat mitigation|heat[ -]health|heat stress|heat risks|heat warning|wildfire|cold weather plan|representative concentration pathways", re.I)
-CLIMATE_EXCLUSIONS = re.compile(r"climate schools|tropical and subtropical climate settings", re.I)
+# Reviewed Climate & Health list (scripts/build_climate_candidates.py, then a review of every candidate).
+CLIMATE_REVIEW = ROOT / "exports" / "climate_health_review_decisions_2026-10-12.csv"
+CLIMATE_SECTOR = "Health-sector emissions"
 MENTAL_FOCUS = re.compile(r"\banxiet\w*|\bdepress\w*|\bpsychos\w*|\bpsychoti\w*|\bschizophren\w*", re.I)
 # Indicative title-keyword groups for Wellcome-funded studies outside all three themes.
 # First match wins; unmatched studies fall into the final catch-all group.
@@ -60,7 +61,6 @@ OUTSIDE_GROUPS = [
      re.compile(r"benefits package|development assistance|basic income|tobacco|frailty|falls|life table|childhood policy|non-communicable", re.I), None),
 ]
 OUTSIDE_OTHER = ("other", "Other clinical care", None)
-ENVIRONMENT = re.compile(r"environment|sustainab", re.I)
 PLACEHOLDERS = re.compile(r"^(?:na|n/a|none\.?|unknown|not (?:reported|available|applicable|stated)|no (?:funding|funder|external funding)|self[ -]funded|self[ -]funding)[.!]?$", re.I)
 
 
@@ -115,8 +115,22 @@ def funders_of(value):
     return names
 
 
+def load_climate_review(path):
+    """Included record IDs and sub-areas from the reviewed Climate & Health decisions, plus the number reviewed."""
+    if not path.is_file():
+        raise ValueError(f"Missing reviewed Climate & Health decisions: {path}")
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        decisions = list(csv.DictReader(handle))
+    if not decisions or any(d["decision"] not in ("Include", "Exclude") for d in decisions):
+        raise ValueError("Climate & Health decisions must be complete: every candidate marked Include or Exclude.")
+    included = {d["record_id"]: d["subarea"] for d in decisions if d["decision"] == "Include"}
+    if any(not subarea for subarea in included.values()):
+        raise ValueError("Every included Climate & Health study needs a sub-area.")
+    return included, len(decisions)
+
+
 def load_inputs(raw):
-    master_path = raw / "hee_analysis_master.csv"
+    master_path = raw / "hee_analysis_master_v2.csv"
     required = [master_path, DATA / "dict.json", DATA / "content.json"]
     missing = [str(p) for p in required if not p.is_file() or p.stat().st_size == 0]
     if missing:
@@ -132,6 +146,11 @@ def load_inputs(raw):
     if len({r["record_id"] for r in all_rows}) != len(all_rows) or any(not r["record_id"] for r in all_rows):
         raise ValueError("Analysis-master record IDs must be present and unique.")
     rows = [r for r in all_rows if r["is_eligible"] == "TRUE"]
+    climate, reviewed = load_climate_review(CLIMATE_REVIEW)
+    unknown = set(climate) - {r["record_id"] for r in rows}
+    if unknown:
+        raise ValueError(f"{len(unknown)} reviewed Climate & Health studies are not eligible records: " + ", ".join(sorted(unknown)[:5]))
+    meta = {**meta, "climate_reviewed": reviewed}
     if len(rows) != meta["n_studies"] or not rows:
         raise ValueError(f"Eligible count {len(rows)} does not match web data {meta['n_studies']}; rebuild the matching dataset first.")
     for r in rows:
@@ -143,9 +162,10 @@ def load_inputs(raw):
         r["wellcome"] = "Wellcome Trust" in r["named_funders"]
         r["setting"] = (0 if r["income_broad"] == "High income" else 1) if r["geo_scope"] == "single_country" and r["income_broad"] in ("High income", "Low & middle income") else 2
         disease = set(r["disease_groups"].split(";"))
+        r["climate_subarea"] = climate.get(r["record_id"])
         r["themes"] = {k for k, match in [("infectious", "Infectious" in disease),
                                            ("mental", "Mental & substance use" in disease),
-                                           ("climate", bool(CLIMATE.search(r["title"])) and not CLIMATE_EXCLUSIONS.search(r["title"]))] if match}
+                                           ("climate", r["climate_subarea"] is not None)] if match}
     entries = [f for s in content["gallery"] for f in s["figs"] if f["file"] in ("fig_funder_funders.webp", "fig_funder_funders.svg")]
     if not entries:
         raise ValueError("The gallery has no general funder figure to update.")
@@ -172,6 +192,11 @@ def build_analysis(rows, meta, source_hash):
     for key, (label, url, definition) in PRIORITIES.items():
         subset = [r for r in rows if key in r["themes"]]
         themes[key] = {"label": label, "url": url, "definition": definition, **stats(subset), "donors": donor_counts(subset)}
+    climate = [r for r in rows if "climate" in r["themes"]]
+    themes["climate"]["reviewed"] = meta.get("climate_reviewed", 0)
+    themes["climate"]["subareas"] = [
+        {"label": label, "n": n, "wellcome": sum(r["wellcome"] for r in climate if r["climate_subarea"] == label)}
+        for label, n in Counter(r["climate_subarea"] for r in climate).most_common()]
     wellcome = [r for r in rows if r["wellcome"]]
     focus = [r for r in rows if MENTAL_FOCUS.search(r["title"])]
     labels = {key: label for key, (label, _, _) in PRIORITIES.items()}
@@ -189,10 +214,6 @@ def build_analysis(rows, meta, source_hash):
     outside_groups = []
     for key, label, *rest in OUTSIDE_GROUPS + [OUTSIDE_OTHER]:
         note = rest[-1]
-        if key == "food":
-            env = sum(bool(ENVIRONMENT.search(r["title"])) for r in groups[key])
-            note = (f"Diet and food-policy models. {env} also estimate environmental impacts, which relate to Climate & Health "
-                    "but use no climate terms, so the Climate & Health title screen does not count them.") if env else None
         studies = sorted(groups[key], key=lambda r: (r["year"], r["title"]))
         outside_groups.append({"key": key, "label": label, "note": note, "n": len(studies),
                                "studies": [{"title": r["title"], "year": r["year"], "url": r["url"]} for r in studies]})
@@ -263,7 +284,11 @@ def plots(analysis, staging):
     labels = ["Infectious Diseases", "Mental Health", "Climate & Health", "Outside these three themes"]
     untagged = next((g["n"] for g in analysis["wellcome_outside_groups"] if g["key"] == "infectious"), 0)
     notes = [f"{pct(t['wellcome'], t['n'])} of {t['n']:,} theme studies · {wellcome_rank(t['donors'])}" for t in themes] + [
-        f"Includes {untagged} untagged infectious-disease studies" if untagged else "No theme tag or climate title match"]
+        f"Includes {untagged} untagged infectious-disease studies" if untagged else "No theme tag and not on the reviewed climate list"]
+    # Explain the small Climate & Health count where readers see it.
+    climate = analysis["themes"]["climate"]
+    notes[2] += (f"\nSmall because few economic evaluations address climate: "
+                 f"{climate['n']:,} of {analysis['global']['n']:,} studies ({pct(climate['n'], analysis['global']['n'])})")
     colors = [LAVENDER] * 3 + ["#C9C4BA"]
     bars = ax.barh(range(4), values, color=colors, height=.58)
     for bar, color in zip(bars, colors):
@@ -275,19 +300,19 @@ def plots(analysis, staging):
     for y, (value, note) in enumerate(zip(values, notes)):
         ax.text(value + step, y - .1, f"{value} {'study' if value == 1 else 'studies'}", va="center", fontsize=13,
                 fontweight="bold", color="#10243e" if y < 3 else "#5a564d")
-        ax.text(value + step, y + .2, note, va="center", fontsize=10.5, color="#5a564d")
+        ax.text(value + step, y + .1, note, va="top", fontsize=10.5, color="#5a564d", linespacing=1.5)
     ax.set_xlim(0, max(1, max(values)) * 1.75)
     ax.set_xticks([])
     for spine in ax.spines.values():
         spine.set_visible(False)
     ax.tick_params(axis="y", length=0, pad=10)
-    ax.axhline(2.5, color="#ded9ce", linewidth=1)
+    ax.axhline(2.65, color="#ded9ce", linewidth=1)  # below the two-line Climate & Health note
     fig.subplots_adjust(left=.23, right=.97, top=.76, bottom=.24)
     fig.text(.025, .93, "Wellcome priority themes: Wellcome-funded studies", fontsize=22, fontweight="bold", color="#10243e")
     fig.text(.025, .85, f"{total:,} eligible evaluations report Wellcome Trust as a funder; {total - outside} fall in at least one priority theme",
              fontsize=15, color="#705a84")
     fig.text(.025, .035, f"{overlap_text(analysis['wellcome_theme_overlap'], 'Wellcome-funded')}\n"
-             "Infectious Diseases and Mental Health use broad disease-group tags, so studies without a tag fall outside; Climate & Health is a provisional title screen.\n"
+             "Infectious Diseases and Mental Health use broad disease-group tags, so untagged studies fall outside. Climate & Health is a reviewed title-and-abstract screen.\n"
              "Rank compares studies reporting each funder within the theme. Funding is reported for about a quarter of studies, so counts are a lower bound,\n"
              "not grant value, exclusive support or Wellcome programme membership.", fontsize=10, color="#5a564d", linespacing=1.6)
     fig.savefig(staging / "fig_wellcome_priorities.svg", facecolor=background)
@@ -471,18 +496,32 @@ def report(analysis, rows):
         if key == "mental":
             focus = analysis["mental_focus_title_screen"]
             extra = f'<aside><strong>Narrower check on anxiety, depression and psychosis:</strong> {focus["n"]:,} eligible studies mention these conditions in their title; {focus["named_funder"]:,} report any funder and {focus["wellcome"]:,} report Wellcome funding. This title screen covers all eligible studies, including those without disease tags. It does not establish early-intervention focus or Wellcome programme eligibility.</aside>'
+        lead = ''
         if key == "climate":
-            items = []
-            for r in rows:
-                if "climate" in r["themes"]:
-                    title = escape(r["title"])
-                    if r["url"].startswith(("https://", "http://")):
-                        title = f'<a href="{escape(r["url"])}" target="_blank" rel="noopener">{title}</a>'
-                    items.append(f'<li>{title} <small>({escape(r["year"])}){" · Wellcome-funded" if r["wellcome"] else ""}</small></li>')
-            extra = f'<details><summary>Review the {len(items)} provisional Climate &amp; Health title matches</summary><p class="hint">Title inspection only; full-text confirmation is still needed. Topic labels alone were not used because some are unrelated to the study title.</p><ol>' + ''.join(items) + '</ol></details>'
+            lead = (f'<aside><strong>Why so few studies?</strong> This map covers health economic evaluations: cost-effectiveness and related '
+                    f'studies of health interventions. Most climate-and-health research is epidemiology or impact modelling, so it falls outside the map. '
+                    f'Only {t["n"]:,} of {total:,} eligible studies ({pct(t["n"], total)}) are economic evaluations that address climate. '
+                    f'The {t["reviewed"]:,} candidates found by the keyword screen were each reviewed, and a broader search for related terms found almost no further studies. '
+                    f'The small count reflects how thin this evidence is, not a gap in the search.</aside>')
+            max_s = max([s["n"] for s in t["subareas"]] or [1])
+            sub_items = []
+            for s in t["subareas"]:
+                items = []
+                for r in rows:
+                    if r["climate_subarea"] == s["label"]:
+                        title = escape(r["title"])
+                        if r["url"].startswith(("https://", "http://")):
+                            title = f'<a href="{escape(r["url"])}" target="_blank" rel="noopener">{title}</a>'
+                        items.append(f'<li>{title} <small>({escape(r["year"])}){" · Wellcome-funded" if r["wellcome"] else ""}</small></li>')
+                tag = ' <small>(shown separately: emissions of health care itself)</small>' if s["label"] == CLIMATE_SECTOR else ''
+                sub_items.append(f'<details class="group"><summary><span class="g-label">{escape(s["label"])}{tag}</span>'
+                                 f'<span class="meter" aria-hidden="true"><i style="width:{100 * s["n"] / max_s:.4f}%"></i></span>'
+                                 f'<span class="num"><strong>{s["n"]}</strong></span></summary><ol>{"".join(items)}</ol></details>')
+            extra = (f'<h3>What the {t["n"]:,} studies cover</h3><p class="hint">Sub-areas follow Wellcome\'s Climate &amp; Health framing; each study has one. '
+                     f'Select a sub-area to list its studies.</p><div class="panel groups">{"".join(sub_items)}</div>')
         panels.append(f'''<section id="theme-{key}" class="theme" {'hidden' if index else ''}>
 <h2>{escape(t['label'])}</h2><p class="definition">{escape(t['definition'])} <a href="{escape(t['url'])}" target="_blank" rel="noopener">Wellcome programme scope&nbsp;↗</a></p>
-<div class="metrics">{metrics}</div>
+{lead}<div class="metrics">{metrics}</div>
 <p class="hint">Funding is reported for {pct(t['named_funder'], t['n'])} of theme studies, so these are observed shares and a lower bound on support.</p>
 <h3>Top funders in this theme</h3><p class="hint">Ranked by the number of studies reporting each funder; = marks a tie. Wellcome is highlighted, and added below the top 10 when it ranks lower.</p>
 <div class="legend">{legend}</div>
@@ -502,7 +541,7 @@ def report(analysis, rows):
                            f'<span class="meter" aria-hidden="true"><i style="width:{100 * g["n"] / max_g:.4f}%"></i></span>'
                            f'<span class="num"><strong>{g["n"]}</strong></span></summary>{note}<ol>{studies}</ol></details>')
     outside_html = (f'<h2 id="outside">What the {outside:,} studies outside the themes cover</h2>'
-                    f'<p class="hint">Wellcome-funded studies with no infectious or mental-health disease tag and no climate title match, grouped by keywords in their titles. '
+                    f'<p class="hint">Wellcome-funded studies with no infectious or mental-health disease tag and not on the reviewed Climate &amp; Health list, grouped by keywords in their titles. '
                     f'Groupings are indicative. <strong>{untagged:,} of the {outside:,} are infectious-disease, substance-use or mental-health studies that simply lack a disease tag</strong>, '
                     f'so the theme counts above understate Wellcome-funded work in those themes. Select a group to list its studies.</p>'
                     f'<div class="panel groups">{"".join(group_items)}</div>')
@@ -522,7 +561,7 @@ def report(analysis, rows):
 <details><summary>Wellcome-funded studies by publication year</summary><p class="hint">Publication counts, not grant-award dates or spending. The final year is partial.</p><table class="year-table"><thead><tr><th>Year</th><th class="num">Studies</th></tr></thead><tbody>{annual}</tbody></table></details>
 <details class="method"><summary>Technical details and sources</summary><p>Each funder is counted once per eligible study. A study can name multiple funders and belong to multiple themes, so counts do not sum across funders or themes. Funding is recorded for {pct(analysis['global']['named_funder'], total)} of the evidence base, so absence of a name does not establish absence of support. Burroughs Wellcome Fund is a separate organisation and is excluded from the Wellcome cohort.</p>
 <p>Setting comparisons use single-country studies with known income; all other studies stay visible in the multi-country, regional or income-unavailable category. Names are lightly normalised (NIHR, HTA, NIH, MRC, Gates and common variants); agencies and their programmes are not comprehensively merged. Rankings count reported funders, not funding amounts, and tied funders share a rank. A programme named in an acknowledgement does not establish membership in a current priority programme.</p>
-<p>Infectious Diseases and Mental Health use broad MeSH-derived disease groups; only {analysis['disease_tagged']:,} of {total:,} eligible studies have a harmonised disease tag, so untagged studies can contain relevant evidence. Climate &amp; Health is a reproducible provisional title screen; full-text validation is outstanding. The anxiety, depression and psychosis title screen is a separate sensitivity view. Wellcome-funded studies outside all three themes are grouped by keywords in their titles (first matching group wins) to describe what they cover; this grouping does not change any theme count. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
+<p>Infectious Diseases and Mental Health use broad MeSH-derived disease groups; only {analysis['disease_tagged']:,} of {total:,} eligible studies have a harmonised disease tag, so untagged studies can contain relevant evidence. Climate &amp; Health uses a keyword screen of all titles and abstracts (scripts/build_climate_candidates.py), after which every candidate was reviewed against Wellcome's Climate &amp; Health framing; decisions and their basis are in exports/climate_health_review_decisions_2026-10-12.csv. A broader recall check found almost no further studies. Classification uses titles and abstracts, not full texts. The anxiety, depression and psychosis title screen is a separate sensitivity view. Wellcome-funded studies outside all three themes are grouped by keywords in their titles (first matching group wins) to describe what they cover; this grouping does not change any theme count. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
 <p>Source: the map's eligible analysis master; web data built {escape(analysis['meta']['data_built'])}. Publication years {years[0]}–{years[1]} (final year partial). Programme scope checked 12 October 2026: <a href="https://wellcome.org/our-priorities/infectious-disease">Infectious Disease</a>, <a href="https://wellcome.org/our-priorities/mental-health">Mental Health</a>, <a href="https://wellcome.org/our-priorities/climate-and-health">Climate and Health</a>.</p></details>
 <div class="download"><a href="wellcome_theme_funders.csv" download>Download funder counts by theme (CSV)</a><a href="wellcome_analysis.json" download>Download aggregate analysis (JSON)</a></div>
 </main><script>
@@ -551,8 +590,8 @@ def main():
             entry.update(file="fig_funder_funders.svg", title="Top dollar: who funds economic evaluations, and where?",
                          caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} evaluations report a funder. Blue/coral identify single-country studies with known income; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
         section = {"title": SECTION, "blurb": "A funder-specific view of economic evaluation evidence in Wellcome's three priority themes: Infectious Diseases, Mental Health and Climate & Health. It separates all evidence in each theme from studies that report Wellcome funding, ranks the funders reported within each theme, and sets out how each theme was defined.",
-                   "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-funded studies across the priority themes", "caption": "Wellcome-funded studies Trust in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses broad disease-group tags and a provisional Climate & Health title screen. Themes can overlap; this is not a grant-portfolio assessment."},
-                            {"file": "wellcome_analysis.html", "html": True, "title": "Explore each theme: evidence, top funders and settings", "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health classification is provisional."}]}
+                   "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-funded studies across the priority themes", "caption": "Studies reporting Wellcome Trust as a funder in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses broad disease-group tags and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."},
+                            {"file": "wellcome_analysis.html", "html": True, "title": "Explore each theme: evidence, top funders and settings", "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health is a reviewed title-and-abstract screen and is small because few economic evaluations address climate."}]}
         # Also drop the section under its earlier name so a rename never leaves a duplicate.
         content["gallery"] = [s for s in content["gallery"] if s["title"] not in (SECTION, "Wellcome-specific analysis")] + [section]
         with tempfile.TemporaryDirectory(dir=OUT) as temporary:
