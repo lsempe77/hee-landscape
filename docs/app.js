@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-12-wellcome-analysis";
+const BUILD = "2026-10-12-soft-palette";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -769,15 +769,15 @@ export function drillRecords(db, iso3, indices) {
 // SCAT_X / SCAT_Y / SIGNAL_METRICS) now come from content.json registries —
 // see buildRegistries() and db.registries (DATA_CONTRACT.md §9, §15.6).
 
-const OA_COLORS = { "Open access": "#1baf7a", "Not open": "#eb6834", "Unknown": "#adb5bd" };
+const OA_COLORS = { "Open access": "#62A89B", "Not open": "#D98F7A", "Unknown": "#B7BBC5" };
 const ACCENT = "#1f5fa8";
 const GREY = "#adb5bd";
 // Softer income colours, shared by every income-coloured chart.
 const LANDSCAPE_INCOME_COLORS = {
-  "Low income": "#c96a4a",
-  "Lower middle income": "#d2a84a",
-  "Upper middle income": "#3b9b84",
-  "High income": "#356fa8"
+  "Low income": "#D98F7A",
+  "Lower middle income": "#D6B264",
+  "Upper middle income": "#62A89B",
+  "High income": "#6D91BE"
 };
 // Country profile: light-to-strong ramps for the country bars, grey-blue for peers.
 const PROFILE_BLUE = ["#c9ddef", "#9fc4df", "#70a7cf", "#4288bb", "#1f659f"];
@@ -785,10 +785,10 @@ const PROFILE_TEAL = ["#d8ebe4", "#add6c7", "#79bda6", "#48a087", "#217b68"];
 const PROFILE_LAVENDER = ["#e5ddec", "#cab9da", "#ad91c4", "#8c69aa", "#6d4d8e"];
 const PROFILE_PEER = ["#edf1f4", "#dfe6eb", "#ced9e1", "#bdcbd5", "#aabcc8"];
 // Default series colours for interactive charts (same family as the figures).
-const SOFT_COLORWAY = ["#1764C0", "#2F9B92", "#63B0BC", "#93A3D0", "#D2B06B", "#88B7A8",
-  "#B79BCB", "#7E94B1", "#C98F7A", "#9FB7C8"];
+const SOFT_COLORWAY = ["#6D91BE", "#62A89B", "#88B8C5", "#9B87B8", "#D6B264", "#88B7A8",
+  "#B79BCB", "#7E94B1", "#D98F7A", "#9FB7C8"];
 // Light-to-strong blue-teal ramp used for single-series bars and maps.
-const SOFT_RAMP = ["#dcecf3", "#bddbe7", "#8fc7cf", "#5eb2ba", "#2f8f9d", "#1f5fa8"];
+const SOFT_RAMP = ["#EAF1F5", "#D3E3EA", "#ACCED8", "#88B8C5", "#679AAC", "#476F94"];
 
 function rampColor(t) {
   const stops = SOFT_RAMP.map(h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16)));
@@ -978,6 +978,22 @@ if (typeof document !== "undefined") {
     $("fig-zoom-in").disabled = figureZoom >= 3;
   }
 
+  function renderFigureNotes(container, figure) {
+    container.textContent = "";
+    const summary = el("p", "figure-summary");
+    summary.textContent = (figure.summary || figure.caption || "").replace(/\s+/g, " ").trim();
+    container.appendChild(summary);
+    if (figure.summary && figure.caption) {
+      const details = el("details", "figure-technical-details");
+      const toggle = el("summary");
+      toggle.textContent = "\u24d8 Technical details";
+      const note = el("p");
+      note.textContent = figure.caption.replace(/\s+/g, " ").trim();
+      details.append(toggle, note);
+      container.appendChild(details);
+    }
+  }
+
   function openModal(file) {
     const f = FIG_INDEX[file];
     if (!f) return;
@@ -986,7 +1002,7 @@ if (typeof document !== "undefined") {
     const img = $("fig-modal-img");
     img.src = "figures/" + f.file;
     img.alt = f.title;
-    $("fig-modal-caption").textContent = f.caption;
+    renderFigureNotes($("fig-modal-caption"), f);
     setFigureZoom(1);
     $("fig-zoom-viewport").scrollTo(0, 0);
     $("fig-modal").classList.add("open");
@@ -1520,6 +1536,11 @@ if (typeof document !== "undefined") {
         card.appendChild(takeaway);
       }
       card.appendChild(body);
+      if (f) {
+        const notes = el("div", "fig-caption overview-figure-notes");
+        renderFigureNotes(notes, f);
+        card.appendChild(notes);
+      }
       hw.appendChild(card);
     });
     const wellcomeCard = el("div", "card overview-wellcome-card");
@@ -1783,7 +1804,7 @@ if (typeof document !== "undefined") {
       const ft = el("div", "fig-title");
       ft.textContent = f.title;
       const fc = el("div", "fig-caption");
-      fc.textContent = f.caption.replace(/\s+/g, " ").trim();
+      renderFigureNotes(fc, f);
       body.appendChild(ft);
       body.appendChild(fc);
       card.appendChild(body);
@@ -1814,7 +1835,7 @@ if (typeof document !== "undefined") {
     const ft = el("div", "fig-title");
     ft.textContent = f.title;
     const fc = el("div", "fig-caption");
-    fc.textContent = f.caption;
+    renderFigureNotes(fc, f);
     const open = el("a", "fig-open-link");
     open.href = "figures/" + f.file;
     open.target = "_blank";
@@ -2882,8 +2903,8 @@ if (typeof document !== "undefined") {
       if (!r.ok) throw new Error("failed to load data/" + name + ".json: " + r.status);
       return r.json();
     };
-    const [dict, studies, geo, disease, countries, content] = await Promise.all(
-      ["dict", "studies", "geo", "disease", "countries", "content"].map(get));
+    const [dict, studies, geo, disease, countries, content, figureCopy] = await Promise.all(
+      ["dict", "studies", "geo", "disease", "countries", "content", "figure_copy"].map(get));
     db = loadData({ dict, studies, geo, disease, countries, content });
 
     // Gallery sections, figure entries and the interpolated paper01 PRISMA
@@ -2909,6 +2930,7 @@ if (typeof document !== "undefined") {
       if (sec) sec.figs.splice(x.index, 0, x.fig);
     }
     for (const sec of GALLERY) {
+      sec.figs = sec.figs.map(figure => ({ ...figure, ...figureCopy[figure.file] }));
       const groups = SECTION_GROUPS[sec.title];
       if (groups) sec.groups = groups.map(group => ({ ...group,
         figs: group.files.map(file => sec.figs.find(f => f.file === file)).filter(Boolean)

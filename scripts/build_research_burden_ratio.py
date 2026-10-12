@@ -10,13 +10,17 @@ import math
 import os
 from pathlib import Path
 import tempfile
+try:
+    from figure_style import BACKGROUND, INCOME_COLORS
+except ModuleNotFoundError:
+    from scripts.figure_style import BACKGROUND, INCOME_COLORS
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs" / "data"
 OUT = ROOT / "docs" / "figures"
-TITLE = "How does economic evaluation evidence compare with disease burden?"
+TITLE = "Where need is high, economic evidence is scarce"
 GROUPS = ["Low income", "Lower middle income", "Upper middle income", "High income"]
-COLORS = ["#eb6834", "#eda100", "#1baf7a", "#2a78d6"]
+COLORS = INCOME_COLORS
 
 
 def load_inputs():
@@ -55,7 +59,7 @@ def main():
         from matplotlib.ticker import FixedLocator, FixedFormatter
     except (OSError, ValueError, KeyError, TypeError, ImportError) as exc:
         raise SystemExit(f"Stopped before writing outputs: {exc}") from exc
-    ground = "#f7f4ee"
+    ground = BACKGROUND
     fig, axes = plt.subplots(1, 4, figsize=(24, 16), facecolor=ground)
     ticks = [.01, .1, 1, 10, 100]
     extent = max(2.30103, max(abs(math.log10(c["ratio"])) for c in rows if c["ratio"] > 0) + .15)
@@ -67,7 +71,7 @@ def main():
         ax.set_xscale("log")
         ax.set_xlim(*limits)
         ax.set_ylim(max_rows, -1)
-        ax.axvspan(limits[0], 1, color="#eee8df", zorder=0)
+        ax.axvspan(limits[0], 1, color="#F0EDE8", zorder=0)
         ax.axvline(1, color="#10243e", linewidth=1.5, zorder=2)
         for y, c in enumerate(group_rows):
             ratio = c["ratio"]
@@ -84,19 +88,19 @@ def main():
         ax.xaxis.set_major_formatter(FixedFormatter(["0.01", "0.1", "1", "10", "100"]))
         ax.grid(axis="x", which="major", color="#ded9ce", linewidth=.6)
         ax.tick_params(axis="x", which="minor", bottom=False)
-        ax.set_title(f"{group}\n{len(group_rows)} countries", fontsize=16, color=color, loc="left", pad=18, fontweight="bold")
+        ax.set_title(f"{group}\n{len(group_rows)} countries", fontsize=16, color="#33475f", loc="left", pad=18, fontweight="bold")
         for spine in ax.spines.values():
             spine.set_visible(False)
         ax.set_xlabel("Research-to-burden ratio", fontsize=10, labelpad=10)
     fig.subplots_adjust(left=.12, right=.985, bottom=.15, top=.84, wspace=1.05)
     fig.text(.025, .965, TITLE, fontsize=26, fontweight="bold", color="#10243e")
-    fig.text(.025, .925, "Country share of study-country counts divided by country share of DALYs", fontsize=17, color="#33475f")
+    fig.text(.025, .925, "Lower-income countries generally have less economic evaluation evidence relative to disease burden.", fontsize=17, color="#33475f")
     fig.text(.025, .891, "Below 1: less evidence relative to burden     |     1: proportional shares     |     Above 1: more evidence relative to burden", fontsize=14, color="#33475f")
     years = meta["years"]
     caption = (f"Base: {len(rows)} countries with positive burden data; {studies:,} study-country counts. "
                f"{excluded} country excluded because burden is unavailable.\n"
                f"Evaluations published {years[0]}–{years[1]} (final year partial); GBD 2023 all-cause DALYs. "
-               "Both shares use the same countries, including those with zero studies.\n"
+               "Ratio = country share of study-country counts divided by country share of DALYs. Both shares use the same countries, including zeros.\n"
                "A study naming multiple countries contributes once to each country. "
                "Countries are ranked within income group. Zero-evidence countries are labelled 0 beside their names.\n"
                "The ratio axis is logarithmic. The benchmark describes proportionality, not adequacy or a recommended research allocation.")
@@ -106,6 +110,8 @@ def main():
     with tempfile.TemporaryDirectory(dir=OUT) as staging:
         staging = Path(staging)
         fig.savefig(staging / entry["file"], facecolor=ground)
+        svg_path = staging / entry["file"]
+        svg_path.write_text("\n".join(line.rstrip() for line in svg_path.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")
         fig.savefig(staging / "fig_research_burden_ratio.png", dpi=100, facecolor=ground)
         with (staging / "research_burden_ratios.csv").open("w", encoding="utf-8", newline="") as handle:
             writer = csv.DictWriter(handle, fieldnames=["iso3", "country", "income", "studies", "dalys", "evidence_share", "burden_share", "ratio"], extrasaction="ignore")

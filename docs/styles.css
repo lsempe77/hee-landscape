@@ -324,6 +324,28 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   object-fit: contain;
 }
 .overview-featured-card { grid-column: 1 / -1; }
+.figure-summary { margin: 0 0 .6rem; line-height: 1.6; }
+.overview-figure-notes { padding: .5rem 1rem 1rem; }
+.figure-technical-details {
+  margin-top: .65rem;
+  padding: .65rem .8rem;
+  border: 1px solid var(--hee-line);
+  border-radius: 6px;
+  background: #f5f3ed;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.figure-technical-details > summary {
+  cursor: pointer;
+  color: var(--hee-accent);
+  font-weight: 600;
+  font-size: .8rem;
+}
+.figure-technical-details > summary:focus-visible {
+  outline: 2px solid var(--hee-accent);
+  outline-offset: 3px;
+}
+.figure-technical-details p { margin: .65rem 0 0; line-height: 1.6; }
+.footer-technical-details { max-width: 900px; margin: .75rem auto 0; text-align: left; }
 .overview-ratio-card { grid-column: 1 / -1; }
 .overview-ratio-card .overview-analysis-body { height: auto; flex: none; }
 .overview-ratio-card .overview-figure-button { height: auto; }

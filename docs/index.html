@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-12-wellcome-analysis">
+<link rel="stylesheet" href="styles.css?v=2026-10-12-soft-palette">
 </head>
 <body>
 
@@ -344,7 +344,7 @@
         <div class="figure-zoom-viewport" id="fig-zoom-viewport">
           <img class="modal-fig" id="fig-modal-img" src="" alt="">
         </div>
-        <p class="fig-caption" id="fig-modal-caption" style="margin-top:.6rem"></p>
+        <div class="fig-caption" id="fig-modal-caption" style="margin-top:.6rem"></div>
       </div>
     </div>
   </div>
@@ -412,15 +412,22 @@
 
 <footer class="site-footer">
   <!-- Record count and date filled by app.js from dict.json meta. -->
-  <strong>About the data:</strong> This release analyses <span id="footer-n">xx</span> records dated
-  <span id="footer-date">xx</span>. Classification is LLM-assisted with human oversight and verification.
-  See <a href="https://sawalee-3ie.github.io/health-financing-platform/#methods-title" target="_blank" rel="noopener">methods and scope</a> for details.
+  <strong>About the data:</strong> This map includes <span id="footer-n">xx</span> economic evaluation records,
+  including reviews. Data updated <span id="footer-date">xx</span>. AI helped identify and classify the records.
+  <details class="figure-technical-details footer-technical-details">
+    <summary>&#x24d8; Technical details and methods</summary>
+    <p>The map includes evaluations that compare costs and health outcomes, including reviews of published evaluations.
+       Review status has not been verified for every record. AI-assisted screening and classification can introduce errors;
+       checks and data coverage vary by analysis. Figures explain which records they include and where information is missing.</p>
+    <p>Publication counts are not funding amounts or measures of research quality. The final publication year is incomplete.</p>
+    <p>See <a href="https://sawalee-3ie.github.io/health-financing-platform/#methods-title" target="_blank" rel="noopener">methods and scope</a>.</p>
+  </details>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-12-wellcome-analysis"></script>
+<script type="module" src="app.js?v=2026-10-12-soft-palette"></script>
 
 </body>
 </html>

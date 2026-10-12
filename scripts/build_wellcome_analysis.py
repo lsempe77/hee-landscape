@@ -22,7 +22,12 @@ DATA = ROOT / "docs" / "data"
 OUT = ROOT / "docs" / "figures"
 SECTION = "Wellcome-specific analysis"
 INCOMES = ["High-income setting", "Low- & middle-income setting", "Other scope / income unavailable"]
-COLORS = ["#2a78d6", "#eb6834", "#b3aea5"]
+try:
+    from figure_style import BACKGROUND, FUNDER_COLORS, LAVENDER, shade_bars, tidy_svg
+except ModuleNotFoundError:
+    from scripts.figure_style import BACKGROUND, FUNDER_COLORS, LAVENDER, shade_bars, tidy_svg
+
+COLORS = FUNDER_COLORS
 PRIORITIES = {
     "infectious": ("Infectious Diseases", "https://wellcome.org/our-priorities/infectious-disease",
                    "Broad proxy: studies tagged Infectious in the map's harmonised disease groups. Missing disease tags are not treated as evidence of absence."),
@@ -163,14 +168,15 @@ def plots(analysis, staging):
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     from matplotlib.ticker import MaxNLocator
-    background = "#f7f4ee"
+    background = BACKGROUND
     donors = analysis["donors"][:15]
     fig, ax = plt.subplots(figsize=(14, 9), facecolor=background)
     ax.set_facecolor(background)
     left = [0] * len(donors)
     for i, (label, color) in enumerate(zip(INCOMES, COLORS)):
         values = [d["income_counts"][i] for d in donors]
-        ax.barh(range(len(donors)), values, left=left, color=color, height=.7, label=label)
+        bars = ax.barh(range(len(donors)), values, left=left, color=color, height=.7, label=label)
+        shade_bars(ax, bars, color)
         left = [a + b for a, b in zip(left, values)]
     ax.set_yticks(range(len(donors)), [textwrap.fill(d["funder"], 38) for d in donors], fontsize=10)
     for y, d in enumerate(donors):
@@ -192,11 +198,12 @@ def plots(analysis, staging):
     known = analysis["global"]["named_funder"]
     notes = (f"Base: {n:,} eligible evaluations; {known:,} ({100 * known / n:.1f}%) name a funder. "
              "Counts describe recorded acknowledgements, not funding amounts.\n"
-             "Blue and orange: single-country studies with known income. Grey: other geographic scope or unavailable income.\n"
+             "Blue and coral: single-country studies with known income. Grey: other geographic scope or unavailable income.\n"
              "Names are lightly normalised and counted once per study; funding coverage is incomplete.\n"
              f"Publication years {analysis['meta']['years'][0]}–{analysis['meta']['years'][1]} (final year partial).")
     fig.text(.025, .04, notes, fontsize=10, color="#5a564d", linespacing=1.6)
     fig.savefig(staging / "fig_funder_funders.svg", facecolor=background)
+    tidy_svg(staging / "fig_funder_funders.svg")
     fig.savefig(staging / "fig_funder_funders.png", dpi=110, facecolor=background)
     plt.close(fig)
 
@@ -205,7 +212,8 @@ def plots(analysis, staging):
     themes = list(analysis["themes"].values())
     values = [t["wellcome"] for t in themes]
     labels = ["Infectious Diseases\n(mapped disease group)", "Mental Health\n(mental & substance use proxy)", "Climate & Health\n(provisional title screen)"]
-    ax.barh(range(3), values, color="#705a84", height=.55)
+    bars = ax.barh(range(3), values, color=LAVENDER, height=.55)
+    shade_bars(ax, bars, LAVENDER)
     ax.set_yticks(range(3), labels, fontsize=11)
     ax.invert_yaxis()
     total = analysis["wellcome"]["n"]
@@ -225,6 +233,7 @@ def plots(analysis, staging):
              "Theme matches are proxies, not confirmed Wellcome programme membership; missing tags can hide relevant studies.\n"
              "Recorded funder names are incomplete and do not establish exclusive support, grant value or impact.", fontsize=10, color="#5a564d", linespacing=1.6)
     fig.savefig(staging / "fig_wellcome_priorities.svg", facecolor=background)
+    tidy_svg(staging / "fig_wellcome_priorities.svg")
     fig.savefig(staging / "fig_wellcome_priorities.png", dpi=110, facecolor=background)
     plt.close(fig)
 
@@ -252,7 +261,7 @@ def report(analysis, rows):
         top = t["donors"][:10]
         donor_rows = []
         for d in top:
-            segments = ''.join(f'<span style="width:{100 * count / max_n:.4f}%;background:{color}"></span>' for count, color in zip(d["income_counts"], COLORS))
+            segments = ''.join(f'<span style="width:{100 * count / max_n:.4f}%;background:linear-gradient(180deg,color-mix(in srgb,{color} 80%,white),{color})"></span>' for count, color in zip(d["income_counts"], COLORS))
             donor_rows.append(f'<tr class="{"wellcome" if d["funder"] == "Wellcome Trust" else ""}"><th scope="row">{escape(d["funder"])}</th><td><div class="bar" aria-hidden="true">{segments}</div></td><td>{d["n"]:,}</td><td>{d["income_counts"][0]:,}</td><td>{d["income_counts"][1]:,}</td><td>{d["income_counts"][2]:,}</td></tr>')
         rank = next((i for i, d in enumerate(t["donors"], 1) if d["funder"] == "Wellcome Trust"), None)
         rank_text = (f"Rank {rank} by count (ties ordered alphabetically)." if rank else "No Wellcome acknowledgement identified in this theme subset.")
@@ -291,10 +300,10 @@ def report(analysis, rows):
 <nav aria-label="Select a priority theme">{''.join(buttons)}</nav>{''.join(panels)}
 <details><summary>Studies naming Wellcome by publication year</summary><p>Publication counts, not grant-award dates or spending. The final year is partial.</p><table><thead><tr><th>Year</th><th>Studies</th></tr></thead><tbody>{annual}</tbody></table></details>
 <div class="download"><a href="wellcome_theme_funders.csv" download>Download donor counts by theme (CSV)</a><a href="wellcome_analysis.json" download>Download aggregate analysis (JSON)</a></div>
-<section class="method"><h2>How to read these results</h2><p>Each funder is counted once per eligible study. A study can name multiple funders and belong to multiple themes. Counts do not sum to unique study totals across funders or themes. Funding is recorded for {pct(analysis['global']['named_funder'],total)} of the evidence base, so absence of a name does not establish absence of support.</p>
+<details class="method"><summary>&#x24d8; Technical details and sources</summary><p>Each funder is counted once per eligible study. A study can name multiple funders and belong to multiple themes. Counts do not sum to unique study totals across funders or themes. Funding is recorded for {pct(analysis['global']['named_funder'],total)} of the evidence base, so absence of a name does not establish absence of support.</p>
 <p>Income comparisons use single-country studies with known income. All other studies remain visible in the other / unavailable category. Names are lightly normalised (NIHR, HTA, NIH, MRC, Gates and common variants); agencies and their programmes are not comprehensively merged. Rankings are counts of named acknowledgements, not funding amounts. A programme named in an acknowledgement does not establish membership in a current priority programme.</p>
 <p>Infectious Diseases and Mental Health use broad existing MeSH-derived disease groups. Climate &amp; Health is a reproducible provisional title screen; full-text validation is outstanding. The focus-condition mental-health title screen is a separate sensitivity view. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
-<p>Source: the map's eligible analysis master; web data built {escape(analysis['meta']['data_built'])}. Publication years {years[0]}–{years[1]} (final year partial). Programme scope checked 12 October 2026: <a href="https://wellcome.org/our-priorities/infectious-disease">Infectious Disease</a>, <a href="https://wellcome.org/our-priorities/mental-health">Mental Health</a>, <a href="https://wellcome.org/our-priorities/climate-and-health">Climate and Health</a>.</p></section>
+<p>Source: the map's eligible analysis master; web data built {escape(analysis['meta']['data_built'])}. Publication years {years[0]}–{years[1]} (final year partial). Programme scope checked 12 October 2026: <a href="https://wellcome.org/our-priorities/infectious-disease">Infectious Disease</a>, <a href="https://wellcome.org/our-priorities/mental-health">Mental Health</a>, <a href="https://wellcome.org/our-priorities/climate-and-health">Climate and Health</a>.</p></details>
 </main><script>
 document.querySelectorAll('[data-theme]').forEach(button => button.addEventListener('click', () => {{
  document.querySelectorAll('[data-theme]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
@@ -314,7 +323,7 @@ def main():
             raise ValueError("No Wellcome records or named funders; refusing to build an empty analysis.")
         for entry in general_entries:
             entry.update(file="fig_funder_funders.svg", title="Top dollar: who funds economic evaluations, and where?",
-                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} evaluations name a funder. Blue/orange identify single-country studies with known income; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
+                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} evaluations name a funder. Blue/coral identify single-country studies with known income; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
         section = {"title": SECTION, "blurb": "Funder-specific view of Wellcome's priority themes: Infectious Diseases, Mental Health and Climate & Health. Distinguishes the global theme landscape from studies naming Wellcome; includes donor rankings by theme and transparent screening definitions.",
                    "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-specific analysis: recorded support across priority themes", "caption": "Studies naming Wellcome Trust, using broad disease-group proxies and a provisional Climate & Health title screen. Themes can overlap; this is not a grant-portfolio assessment."},
                             {"file": "wellcome_analysis.html", "html": True, "title": "Wellcome priority themes: evidence landscape and top donors", "caption": "Explore theme evidence, funding coverage, Wellcome acknowledgements, geographic focus and donor rankings. Definitions and denominators are provided within the view; Climate & Health classification is provisional."}]}
