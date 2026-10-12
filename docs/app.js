@@ -843,7 +843,8 @@ if (typeof document !== "undefined") {
   // Trends over time) moves to Methods & metrics only.
   const HIDDEN_SECTIONS = new Set(["Size & growth", "Maps & regional charts"]);
   // The selection flow is opened from the Overview's study-count card.
-  const HIDDEN_FIGURES = new Set(["paper01.webp"]);
+  const HIDDEN_FIGURES = new Set(["paper01.webp", "fig_transition.webp"]);
+  const OVERVIEW_ONLY_FIGURES = new Set(["fig_disease_circular.webp", "fig_intervention_mix.webp"]);
   // Renamed sections (applied before the moves below, which use the new
   // names). Authorship figures join open access; funding figures get one
   // section, placed straight after it.
@@ -894,13 +895,13 @@ if (typeof document !== "undefined") {
         title: "Topic clusters",
         blurb: "Explore the research theme clusters, their income patterns, and the " +
           "interventions evaluated within the research space.",
-        files: ["fig_intervention_map.webp", "fig_theme_rank.webp", "fig_intervention_mix.webp"]
+        files: ["fig_intervention_map.webp", "fig_theme_rank.webp"]
       },
       {
         title: "Disease focus",
         blurb: "Which disease groups research focuses on, how this differs by income, " +
           "and how the disease mix is changing over time.",
-        files: ["fig_disease_circular.webp", "fig_transition.webp", "paper04.webp", "paper05.webp"]
+        files: ["paper04.webp", "paper05.webp"]
       }
     ],
     Geography: [
@@ -908,7 +909,7 @@ if (typeof document !== "undefined") {
         title: "Geographic coverage",
         blurb: "Where studies have been conducted, how many evaluations name each country, " +
           "and where the evidence base is growing.",
-        files: ["fig_dotmap.webp", "fig_worldmap.webp", "fig_map_growth.webp"]
+        files: ["fig_dotmap.svg", "fig_worldmap.webp", "fig_map_growth.webp"]
       },
       {
         title: "Geographic inequalities",
@@ -1467,9 +1468,14 @@ if (typeof document !== "undefined") {
     // Overview figure cards: header = the figure's content.json title, with a
     // "More on …" link to the Thematic analysis section that holds it.
     const heroes = [
-      { file: "fig_dotmap.webp", alt: "Global dot map" },
-      { file: "fig_burden.webp", alt: "Evidence vs burden" },
-      { file: "fig_transition.webp", alt: "Epidemiological transition" },
+      {
+        file: "fig_dotmap.svg",
+        alt: "World map of economic evaluations by country and income group",
+        takeaway: "Economic evaluation evidence is concentrated in the global north."
+      },
+      { file: "fig_research_burden_ratio.svg", alt: "Country research-to-burden ratios grouped by income, with proportionality at 1", wide: true },
+      { file: "fig_disease_circular.webp", alt: "Line of sight: disease groups studied in health economic evaluations" },
+      { file: "fig_intervention_mix.webp", alt: "What gets evaluated: intervention mix by income" },
       { file: "fig_funder_funders.webp", alt: "Top funders by evaluations and country income group" }
     ];
     const hw = $("ov-hero-imgs");
@@ -1477,11 +1483,19 @@ if (typeof document !== "undefined") {
     heroes.forEach(h => {
       const f = FIG_INDEX[h.file];
       const card = el("div", "card overview-analysis-card");
+      if (h.takeaway) card.classList.add("overview-featured-card");
+      if (h.wide) card.classList.add("overview-ratio-card");
       const head = el("div", "card-header overview-card-head");
       const name = el("span");
       name.textContent = f ? f.title : h.alt;
       head.appendChild(name);
-      if (f && f.sectionTitle) {
+      if (h.takeaway || OVERVIEW_ONLY_FIGURES.has(h.file)) {
+        const link = el("button", "card-header-link overview-explore-link");
+        link.type = "button";
+        link.textContent = h.takeaway ? "Explore geographic evidence \u2192" : "Explore figure \u2192";
+        link.addEventListener("click", () => openModal(h.file));
+        head.appendChild(link);
+      } else if (f && f.sectionTitle) {
         const link = el("button", "card-header-link");
         link.type = "button";
         link.textContent = "More on " + f.sectionTitle.toLowerCase() + " →";
@@ -1500,6 +1514,11 @@ if (typeof document !== "undefined") {
       btn.addEventListener("click", () => openModal(h.file));
       body.appendChild(btn);
       card.appendChild(head);
+      if (h.takeaway) {
+        const takeaway = el("h3", "overview-featured-takeaway");
+        takeaway.textContent = h.takeaway;
+        card.appendChild(takeaway);
+      }
       card.appendChild(body);
       hw.appendChild(card);
     });
@@ -2883,7 +2902,7 @@ if (typeof document !== "undefined") {
     FIG_INDEX = {};
     for (const sec of GALLERY) {
       for (const f of sec.figs) FIG_INDEX[f.file] = { ...f, sectionTitle: sec.title };
-      sec.figs = sec.figs.filter(f => !HIDDEN_FIGURES.has(f.file));
+      sec.figs = sec.figs.filter(f => !HIDDEN_FIGURES.has(f.file) && !OVERVIEW_ONLY_FIGURES.has(f.file));
     }
 
     if (window.Plotly && !window.Plotly.__softColorway) {
