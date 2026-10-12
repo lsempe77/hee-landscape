@@ -874,7 +874,7 @@ if (typeof document !== "undefined") {
         "reference point, not a target."
     }
   };
-  const SECTION_AFTER = { "Research funding": "Authorship & access", "Wellcome-specific analysis": "Research funding" };
+  const SECTION_AFTER = { "Research funding": "Authorship & access", "Wellcome priority themes": "Research funding" };
   // after: file to follow in the target section; first: true puts it first.
   const MOVED_FIGURES = [
     { file: "fig_method_stream.webp", to: "Methods & metrics", after: "fig_metric.webp" },
@@ -1397,7 +1397,7 @@ if (typeof document !== "undefined") {
       "Among " + fmtNum(FUNDER_STUDIES) + " studies reporting a funder. Categories may overlap.", {
         title: "Why do the percentages add up to more than 100%?",
         paragraphs: [
-          "Each bar is the share of the " + fmtNum(FUNDER_STUDIES) + " studies that name at least one funder of that type.",
+          "Each bar is the share of the " + fmtNum(FUNDER_STUDIES) + " studies that report at least one funder of that type.",
           "Many studies have more than one funder, for example a government grant and a company, so they count in more than one bar. " +
           "The bars therefore add up to more than 100%."
         ]
@@ -1547,15 +1547,15 @@ if (typeof document !== "undefined") {
     const wellcomeBadge = el("span", "overview-wellcome-badge");
     wellcomeBadge.textContent = "Funder-specific view";
     const wellcomeTitle = el("h3");
-    wellcomeTitle.textContent = "Wellcome-specific analysis";
+    wellcomeTitle.textContent = "Wellcome priority themes";
     const wellcomeCopy = el("p");
     wellcomeCopy.textContent = "Explore Infectious Diseases, Mental Health and Climate & Health, " +
-      "including top donors within each theme and studies naming Wellcome. Theme definitions " +
+      "including top donors within each theme and Wellcome-funded studies. Theme definitions " +
       "and funding coverage are shown in the separate view.";
     const wellcomeLink = el("button", "card-header-link overview-explore-link");
     wellcomeLink.type = "button";
     wellcomeLink.textContent = "Explore Wellcome priority themes \u2192";
-    wellcomeLink.addEventListener("click", () => openOverviewTheme("Wellcome-specific analysis"));
+    wellcomeLink.addEventListener("click", () => openOverviewTheme("Wellcome priority themes"));
     wellcomeCard.append(wellcomeBadge, wellcomeTitle, wellcomeCopy, wellcomeLink);
     hw.appendChild(wellcomeCard);
   }

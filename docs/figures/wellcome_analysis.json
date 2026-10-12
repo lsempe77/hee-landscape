@@ -5,8 +5,8 @@
       2026
     ],
     "data_built": "2026-10-08",
-    "master_sha256": "b671a4db226edada7760c83985e4186053c2c64c3ac073691362345630859cb7",
-    "unit": "Unique eligible studies naming each funder; no grant amounts or causal attribution.",
+    "master_sha256": "9c595ecae9ce8cde0b5d0d1f5cab684edf4010680e76d03a6e9900e5d69fa2eb",
+    "unit": "Unique eligible studies reporting each funder; no grant amounts or causal attribution.",
     "theme_overlap": true,
     "sources_accessed": "2026-10-12"
   },

@@ -1,4 +1,4 @@
-"""Build neutral global funder figures and a separate Wellcome-specific view.
+"""Build neutral global funder figures and a separate Wellcome priority-themes view.
 
 Run: python scripts/build_wellcome_analysis.py [--raw data/raw]
 Requires matplotlib. All inputs are validated and all outputs staged before
@@ -20,7 +20,7 @@ import textwrap
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs" / "data"
 OUT = ROOT / "docs" / "figures"
-SECTION = "Wellcome-specific analysis"
+SECTION = "Wellcome priority themes"
 INCOMES = ["High-income setting", "Low- & middle-income setting", "Other scope / income unavailable"]
 try:
     from figure_style import BACKGROUND, FUNDER_COLORS, LAVENDER, shade_bars, tidy_svg
@@ -153,7 +153,7 @@ def build_analysis(rows, meta, source_hash):
     wellcome = [r for r in rows if r["wellcome"]]
     focus = [r for r in rows if MENTAL_FOCUS.search(r["title"])]
     return {"meta": {"years": meta["years"], "data_built": meta["built"], "master_sha256": source_hash,
-                      "unit": "Unique eligible studies naming each funder; no grant amounts or causal attribution.",
+                      "unit": "Unique eligible studies reporting each funder; no grant amounts or causal attribution.",
                       "theme_overlap": True, "sources_accessed": "2026-10-12"},
             "global": stats(rows), "wellcome": stats(wellcome), "themes": themes,
             "mental_focus_title_screen": stats(focus),
@@ -183,7 +183,7 @@ def plots(analysis, staging):
         ax.text(d["n"] + 8, y, f"{d['n']:,}", va="center", fontsize=10)
     ax.invert_yaxis()
     ax.set_xlim(0, max(d["n"] for d in donors) * 1.15)
-    ax.set_xlabel("Studies naming the funder (a study may name several)", fontsize=11, labelpad=12)
+    ax.set_xlabel("Studies reporting the funder (a study may report several)", fontsize=11, labelpad=12)
     ax.xaxis.set_major_locator(MaxNLocator(integer=True))
     ax.grid(axis="x", alpha=.16)
     ax.set_axisbelow(True)
@@ -196,7 +196,7 @@ def plots(analysis, staging):
     fig.text(.025, .905, "Top 15 recorded funders, ranked by unique eligible studies", fontsize=14, color="#33475f")
     n = analysis["global"]["n"]
     known = analysis["global"]["named_funder"]
-    notes = (f"Base: {n:,} eligible evaluations; {known:,} ({100 * known / n:.1f}%) name a funder. "
+    notes = (f"Base: {n:,} eligible evaluations; {known:,} ({100 * known / n:.1f}%) report a funder. "
              "Counts describe recorded acknowledgements, not funding amounts.\n"
              "Blue and coral: single-country studies with known income. Grey: other geographic scope or unavailable income.\n"
              "Names are lightly normalised and counted once per study; funding coverage is incomplete.\n"
@@ -207,31 +207,40 @@ def plots(analysis, staging):
     fig.savefig(staging / "fig_funder_funders.png", dpi=110, facecolor=background)
     plt.close(fig)
 
-    fig, ax = plt.subplots(figsize=(12, 6), facecolor=background)
+    fig, ax = plt.subplots(figsize=(13, 6.6), facecolor=background)
     ax.set_facecolor(background)
     themes = list(analysis["themes"].values())
-    values = [t["wellcome"] for t in themes]
-    labels = ["Infectious Diseases\n(mapped disease group)", "Mental Health\n(mental & substance use proxy)", "Climate & Health\n(provisional title screen)"]
-    bars = ax.barh(range(3), values, color=LAVENDER, height=.55)
-    shade_bars(ax, bars, LAVENDER)
-    ax.set_yticks(range(3), labels, fontsize=11)
-    ax.invert_yaxis()
     total = analysis["wellcome"]["n"]
-    for y, value in enumerate(values):
-        ax.text(value + 1, y, f"{value} {'study' if value == 1 else 'studies'} ({100 * value / total:.1f}%)", va="center", fontsize=11)
-    ax.set_xlim(0, max(1, max(values)) * 1.55)
-    ax.set_xlabel("Studies naming Wellcome Trust", fontsize=11)
-    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    outside = analysis["wellcome_outside_themes"]
+    # The muted final bar accounts for the rest of the Wellcome cohort.
+    values = [t["wellcome"] for t in themes] + [outside]
+    labels = ["Infectious Diseases", "Mental Health", "Climate & Health", "Outside these three themes"]
+    notes = [f"{pct(t['wellcome'], t['n'])} of {t['n']:,} theme studies · {wellcome_rank(t['donors'])}" for t in themes] + ["No theme tag or climate title match"]
+    colors = [LAVENDER] * 3 + ["#C9C4BA"]
+    bars = ax.barh(range(4), values, color=colors, height=.58)
+    for bar, color in zip(bars, colors):
+        shade_bars(ax, [bar], color)
+    ax.set_yticks(range(4), labels, fontsize=13, color="#10243e")
+    ax.get_yticklabels()[-1].set_color("#5a564d")
+    ax.invert_yaxis()
+    step = max(1, max(values)) * .015
+    for y, (value, note) in enumerate(zip(values, notes)):
+        ax.text(value + step, y - .1, f"{value} {'study' if value == 1 else 'studies'}", va="center", fontsize=13,
+                fontweight="bold", color="#10243e" if y < 3 else "#5a564d")
+        ax.text(value + step, y + .2, note, va="center", fontsize=10.5, color="#5a564d")
+    ax.set_xlim(0, max(1, max(values)) * 1.75)
+    ax.set_xticks([])
     for spine in ax.spines.values():
         spine.set_visible(False)
-    ax.grid(axis="x", alpha=.15)
-    ax.set_axisbelow(True)
-    fig.subplots_adjust(left=.31, right=.97, top=.74, bottom=.25)
-    fig.text(.025, .93, "Wellcome-specific analysis: priority themes", fontsize=22, fontweight="bold", color="#10243e")
-    fig.text(.025, .84, f"{total:,} eligible evaluations name Wellcome Trust as a funder", fontsize=16, color="#705a84")
-    fig.text(.025, .05, "Shares use all studies naming Wellcome as the denominator. Themes can overlap.\n"
-             "Theme matches are proxies, not confirmed Wellcome programme membership; missing tags can hide relevant studies.\n"
-             "Recorded funder names are incomplete and do not establish exclusive support, grant value or impact.", fontsize=10, color="#5a564d", linespacing=1.6)
+    ax.tick_params(axis="y", length=0, pad=10)
+    ax.axhline(2.5, color="#ded9ce", linewidth=1)
+    fig.subplots_adjust(left=.23, right=.97, top=.76, bottom=.2)
+    fig.text(.025, .93, "Wellcome priority themes: Wellcome-funded studies", fontsize=22, fontweight="bold", color="#10243e")
+    fig.text(.025, .85, f"{total:,} eligible evaluations report Wellcome Trust as a funder; {total - outside} fall in at least one priority theme",
+             fontsize=15, color="#705a84")
+    fig.text(.025, .04, "A study can fall in more than one theme. Infectious Diseases and Mental Health use broad disease-group tags; Climate & Health is a provisional title screen.\n"
+             "Rank compares studies reporting each funder within the theme. Funding is reported for about a quarter of studies, so counts are a lower bound,\n"
+             "not grant value, exclusive support or Wellcome programme membership.", fontsize=10, color="#5a564d", linespacing=1.6)
     fig.savefig(staging / "fig_wellcome_priorities.svg", facecolor=background)
     tidy_svg(staging / "fig_wellcome_priorities.svg")
     fig.savefig(staging / "fig_wellcome_priorities.png", dpi=110, facecolor=background)
@@ -246,30 +255,152 @@ def pct(n, total):
     return f"{100 * n / total:.1f}%" if total else "Not estimable"
 
 
+def ordinal(n):
+    suffix = "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suffix}"
+
+
+def ranks(donors):
+    """Competition ranks: tied counts share a rank, so ties are never broken alphabetically."""
+    return [1 + sum(other["n"] > d["n"] for other in donors) for d in donors]
+
+
+def wellcome_rank(donors):
+    w = next((d for d in donors if d["funder"] == "Wellcome Trust"), None)
+    if not w:
+        return "not named in this theme"
+    rank = 1 + sum(d["n"] > w["n"] for d in donors)
+    tied = sum(d["n"] == w["n"] for d in donors) > 1
+    return f"{'joint ' if tied else ''}{ordinal(rank)} of {len(donors):,} reported funders"
+
+
+def stacked_bar(counts, total):
+    """Inline 100% bar split by setting, with readable labels on wide segments."""
+    if not total:
+        return '<div class="stack empty">No studies</div>'
+    parts = []
+    for count, color, label in zip(counts, COLORS, INCOMES):
+        share = 100 * count / total
+        text = f"{share:.0f}%" if share >= 9 else ""
+        parts.append(f'<span style="width:{share:.4f}%;background:{color}" title="{escape(label)}: {count:,} ({share:.1f}%)">{text}</span>')
+    return '<div class="stack">' + "".join(parts) + "</div>"
+
+
+STYLE = '''
+*{box-sizing:border-box}
+body{margin:0;background:#faf9f6;color:#10243e;font:15px/1.6 Inter,system-ui,sans-serif}
+main{max-width:1180px;margin:auto;padding:28px 28px 40px}
+h1,h2{font-family:Newsreader,Georgia,serif;font-weight:600;letter-spacing:-.01em}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:12px 0 10px}
+h2{font-size:26px;margin:0 0 6px}
+h3{font-size:16px;margin:34px 0 4px}
+a{color:#1f5fa8}
+.badge{display:inline-block;background:#ece6f1;color:#594069;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600}
+.lede{max-width:110ch;color:#33475f;margin:0}
+.hint{color:#5a564d;font-size:13.5px;margin:2px 0 12px;max-width:110ch}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.summary{display:flex;flex-wrap:wrap;margin:24px 0 32px;border-top:1px solid #e7e3da;border-bottom:1px solid #e7e3da}
+.summary div{flex:1 1 200px;padding:16px 20px 16px 0}
+.summary div+div{border-left:1px solid #e7e3da;padding-left:20px}
+.summary strong{display:block;font:600 30px/1.1 Newsreader,Georgia,serif;color:#705a84}
+.summary span{display:block;font-size:13px;color:#33475f;margin-top:4px}
+.panel{background:white;border:1px solid #e7e3da;border-radius:10px;padding:20px 22px;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{padding:9px 10px;border-bottom:1px solid #eeeae2;text-align:left;vertical-align:middle}
+thead th{font-size:12px;font-weight:600;color:#5a564d;border-bottom:1px solid #d9d3c7}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+th[scope=row]{font-weight:500}
+.overview button{all:unset;cursor:pointer;color:#1f5fa8;font-weight:600}
+.overview button:hover{text-decoration:underline}
+.meter{position:relative;height:10px;background:#f1eef4;border-radius:5px;min-width:120px}
+.meter i{position:absolute;inset:0 auto 0 0;background:#9B87B8;border-radius:5px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 0;position:sticky;top:0;background:#faf9f6;padding:12px 0;z-index:1;border-bottom:1px solid #e7e3da}
+nav button{background:white;color:#594069;border:1px solid #c8b9d2;border-radius:24px;padding:8px 18px;font:600 14px Inter,system-ui,sans-serif;cursor:pointer}
+nav button[aria-pressed=true]{background:#705a84;border-color:#705a84;color:white}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #1f5fa8;outline-offset:3px}
+.theme{padding-top:24px}
+.definition{border-left:3px solid #9B87B8;padding:2px 0 2px 14px;color:#33475f;font-size:14px;max-width:110ch;margin:8px 0 18px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.metric{padding:16px 18px;background:white;border:1px solid #e7e3da;border-radius:10px}
+.metric strong{display:block;font:600 28px/1.1 Newsreader,Georgia,serif}
+.metric span{display:block;font-size:13px;color:#33475f;margin-top:4px}
+.metric small{display:block;font-size:12.5px;color:#5a564d;margin-top:6px}
+.metric.wellcome{background:#f6f2f9;border-color:#d9cde3}
+.metric.wellcome strong{color:#705a84}
+.metrics+.hint{margin-top:10px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:#33475f;margin:8px 0 4px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.table-scroll{overflow-x:auto}
+.donors{min-width:760px}
+.donors .rank{width:36px;color:#5a564d}
+.donors .who{width:30%}
+.donors .bars{width:34%}
+.donors td.muted{color:#5a564d}
+.bar{display:flex;height:14px;background:#f5f3ef;border-radius:3px;overflow:hidden}
+.bar span{display:block;height:100%}
+tr.wellcome{background:#f6f2f9}
+tr.wellcome th{font-weight:700;color:#705a84}
+tr.gap td{color:#8a857b;text-align:center;padding:2px;font-size:12px}
+.stack{display:flex;height:26px;border-radius:4px;overflow:hidden;background:#f5f3ef;min-width:260px}
+.stack span{display:flex;align-items:center;justify-content:center;color:white;font-size:12px;font-weight:600;text-shadow:0 0 2px rgba(0,0,0,.25)}
+.stack.empty{color:#5a564d;font-size:12.5px;align-items:center;padding-left:8px}
+.geo th[scope=row]{width:26%}
+.geo td.num{width:90px;color:#5a564d}
+aside{background:#f0ece4;padding:14px 16px;border-radius:8px;font-size:14px;margin:18px 0}
+details{border:1px solid #e2dbe6;background:white;padding:14px 18px;border-radius:8px;margin:18px 0}
+summary{cursor:pointer;font-weight:600}
+li{margin-bottom:8px}
+small{color:#5a564d}
+.download{display:flex;gap:18px;flex-wrap:wrap;margin:24px 0 8px;font-size:14px}
+.method{font-size:13.5px;color:#33475f}
+.method p{max-width:110ch}
+.year-table{max-width:320px}
+[hidden]{display:none!important}
+@media(max-width:760px){main{padding:16px}.metrics{grid-template-columns:1fr}.summary div+div{border-left:0;padding-left:0;border-top:1px solid #e7e3da}.panel{padding:14px}}
+@media print{nav{display:none}.theme[hidden]{display:block!important}.theme{break-before:page}.table-scroll{overflow:visible}}
+'''
+
+
 def report(analysis, rows):
     total = analysis["global"]["n"]
     wellcome = analysis["wellcome"]["n"]
-    buttons, panels = [], []
+    outside = analysis["wellcome_outside_themes"]
+    legend = ''.join(f'<span><i style="background:{color}"></i>{escape(label)}</span>'
+                     for color, label in zip(COLORS, ["High-income setting", "Low- & middle-income setting", "Multi-country, regional or income unavailable"]))
+    max_w = max([t["wellcome"] for t in analysis["themes"].values()] or [1]) or 1
+    overview, buttons, panels = [], [], []
     for index, (key, t) in enumerate(analysis["themes"].items()):
+        overview.append(f'<tr><th scope="row"><button type="button" data-go="{key}">{escape(t["label"])}</button></th>'
+                        f'<td class="num">{t["n"]:,}</td>'
+                        f'<td><div class="meter" aria-hidden="true"><i style="width:{100 * t["wellcome"] / max_w:.4f}%"></i></div></td>'
+                        f'<td class="num"><strong>{t["wellcome"]:,}</strong></td>'
+                        f'<td class="num">{pct(t["wellcome"], t["n"])}</td>'
+                        f'<td>{escape(wellcome_rank(t["donors"]).capitalize())}</td></tr>')
         buttons.append(f'<button type="button" aria-pressed="{str(index == 0).lower()}" aria-controls="theme-{key}" data-theme="{key}">{escape(t["label"])}</button>')
-        metrics = ''.join(f'<div class="metric"><strong>{value}</strong><span>{escape(label)}</span></div>' for value, label in [
-            (f"{t['n']:,}", "Eligible theme studies"),
-            (f"{t['named_funder']:,} · {pct(t['named_funder'], t['n'])}", "Theme studies naming any funder"),
-            (f"{t['wellcome']:,}", "Theme studies naming Wellcome"),
-            (pct(t['wellcome'], t['named_funder']), "Wellcome share among theme studies naming a funder")])
+        metrics = (f'<div class="metric"><strong>{t["n"]:,}</strong><span>Eligible studies in this theme</span></div>'
+                   f'<div class="metric"><strong>{pct(t["named_funder"], t["n"])}</strong><span>Report at least one funder</span><small>{t["named_funder"]:,} studies</small></div>'
+                   f'<div class="metric wellcome"><strong>{t["wellcome"]:,}</strong><span>Wellcome-funded ({pct(t["wellcome"], t["n"])} of theme studies)</span>'
+                   f'<small>{escape(wellcome_rank(t["donors"]).capitalize())} · {pct(t["wellcome"], t["named_funder"])} of studies that report a funder</small></div>')
         max_n = max([d["n"] for d in t["donors"]] or [1])
-        top = t["donors"][:10]
+        rank_of = ranks(t["donors"])
+        shown = list(range(min(10, len(t["donors"]))))
+        w_index = next((i for i, d in enumerate(t["donors"]) if d["funder"] == "Wellcome Trust"), None)
         donor_rows = []
-        for d in top:
-            segments = ''.join(f'<span style="width:{100 * count / max_n:.4f}%;background:linear-gradient(180deg,color-mix(in srgb,{color} 80%,white),{color})"></span>' for count, color in zip(d["income_counts"], COLORS))
-            donor_rows.append(f'<tr class="{"wellcome" if d["funder"] == "Wellcome Trust" else ""}"><th scope="row">{escape(d["funder"])}</th><td><div class="bar" aria-hidden="true">{segments}</div></td><td>{d["n"]:,}</td><td>{d["income_counts"][0]:,}</td><td>{d["income_counts"][1]:,}</td><td>{d["income_counts"][2]:,}</td></tr>')
-        rank = next((i for i, d in enumerate(t["donors"], 1) if d["funder"] == "Wellcome Trust"), None)
-        rank_text = (f"Rank {rank} by count (ties ordered alphabetically)." if rank else "No Wellcome acknowledgement identified in this theme subset.")
-        income_rows = ''.join(f'<tr><th scope="row">{escape(label)}</th><td>{t["income_counts"][i]:,} ({pct(t["income_counts"][i], t["n"])})</td><td>{t["wellcome_income_counts"][i]:,} ({pct(t["wellcome_income_counts"][i], t["wellcome"])})</td></tr>' for i, label in enumerate(INCOMES))
+        for i in shown + ([w_index] if w_index is not None and w_index not in shown else []):
+            d = t["donors"][i]
+            if i == w_index and i not in shown:
+                donor_rows.append('<tr class="gap"><td colspan="7">⋯</td></tr>')
+            segments = ''.join(f'<span style="width:{100 * count / max_n:.4f}%;background:{color}"></span>' for count, color in zip(d["income_counts"], COLORS))
+            tied = rank_of.count(rank_of[i]) > 1
+            donor_rows.append(f'<tr class="{"wellcome" if i == w_index else ""}"><td class="num rank">{"=" if tied else ""}{rank_of[i]}</td>'
+                              f'<th scope="row">{escape(d["funder"])}</th><td><div class="bar" aria-hidden="true">{segments}</div></td>'
+                              f'<td class="num"><strong>{d["n"]:,}</strong></td>' + ''.join(f'<td class="num muted">{c:,}</td>' for c in d["income_counts"]) + '</tr>')
+        geo = (f'<tr><th scope="row">All theme studies</th><td>{stacked_bar(t["income_counts"], t["n"])}</td><td class="num">n = {t["n"]:,}</td></tr>'
+               f'<tr><th scope="row">Wellcome-funded studies</th><td>{stacked_bar(t["wellcome_income_counts"], t["wellcome"])}</td><td class="num">n = {t["wellcome"]:,}</td></tr>')
         extra = ''
         if key == "mental":
             focus = analysis["mental_focus_title_screen"]
-            extra = f'<aside><strong>Focus-condition title screen:</strong> {focus["n"]:,} eligible studies mention anxiety, depression or psychosis/schizophrenia; {focus["named_funder"]:,} name any funder and {focus["wellcome"]:,} name Wellcome. This separate screen covers all eligible studies, including those without disease tags. It does not establish early intervention or Wellcome programme eligibility.</aside>'
+            extra = f'<aside><strong>Narrower check on anxiety, depression and psychosis:</strong> {focus["n"]:,} eligible studies mention these conditions in their title; {focus["named_funder"]:,} report any funder and {focus["wellcome"]:,} report Wellcome funding. This title screen covers all eligible studies, including those without disease tags. It does not establish early-intervention focus or Wellcome programme eligibility.</aside>'
         if key == "climate":
             items = []
             for r in rows:
@@ -277,39 +408,46 @@ def report(analysis, rows):
                     title = escape(r["title"])
                     if r["url"].startswith(("https://", "http://")):
                         title = f'<a href="{escape(r["url"])}" target="_blank" rel="noopener">{title}</a>'
-                    items.append(f'<li>{title} <small>({escape(r["year"])}){" · Wellcome named" if r["wellcome"] else ""}</small></li>')
-            extra = '<details><summary>Review the provisional Climate &amp; Health title matches</summary><p>Title inspection only; full-text confirmation is still needed. No climate-topic label alone was used because some topic labels are unrelated to the study title.</p><ol>' + ''.join(items) + '</ol></details>'
+                    items.append(f'<li>{title} <small>({escape(r["year"])}){" · Wellcome-funded" if r["wellcome"] else ""}</small></li>')
+            extra = f'<details><summary>Review the {len(items)} provisional Climate &amp; Health title matches</summary><p class="hint">Title inspection only; full-text confirmation is still needed. Topic labels alone were not used because some are unrelated to the study title.</p><ol>' + ''.join(items) + '</ol></details>'
         panels.append(f'''<section id="theme-{key}" class="theme" {'hidden' if index else ''}>
-<h2>{escape(t['label'])}</h2><p class="definition">{escape(t['definition'])} <a href="{escape(t['url'])}" target="_blank" rel="noopener">Wellcome programme scope ↗</a></p>
+<h2>{escape(t['label'])}</h2><p class="definition">{escape(t['definition'])} <a href="{escape(t['url'])}" target="_blank" rel="noopener">Wellcome programme scope&nbsp;↗</a></p>
 <div class="metrics">{metrics}</div>
-<p>Wellcome is named by <strong>{pct(t['wellcome'], t['n'])}</strong> of all identified theme studies, including those without a named funder. Missing acknowledgements mean this is an observed share, not an estimate of total support.</p>
-<h3>Top donors within this priority-theme evidence</h3><p>Top 10 by unique studies naming the funder. All eligible theme studies are retained; grey includes multi-country, regional and unspecified geography.</p>
-<div class="legend"><span><i style="background:{COLORS[0]}"></i>High-income setting</span><span><i style="background:{COLORS[1]}"></i>Low- &amp; middle-income setting</span><span><i style="background:{COLORS[2]}"></i>Other / unavailable</span></div>
-<div class="table-scroll"><table class="donors"><caption>Recorded funders in {escape(t['label'])}</caption><thead><tr><th>Funder</th><th>Study counts by setting</th><th>Total</th><th>HIC</th><th>LMIC</th><th>Other</th></tr></thead><tbody>{''.join(donor_rows) or '<tr><td colspan="6">No named funder available.</td></tr>'}</tbody></table></div>
-<aside><strong>Wellcome within this theme:</strong> {t['wellcome']:,} studies. {rank_text} Wellcome emphasis appears only in this funder-specific view.</aside>
-<h3>Geographic focus: all theme evidence and studies naming Wellcome</h3><div class="table-scroll"><table><thead><tr><th>Setting</th><th>All theme studies</th><th>Studies naming Wellcome</th></tr></thead><tbody>{income_rows}</tbody></table></div>{extra}</section>''')
+<p class="hint">Funding is reported for {pct(t['named_funder'], t['n'])} of theme studies, so these are observed shares and a lower bound on support.</p>
+<h3>Top funders in this theme</h3><p class="hint">Ranked by the number of studies reporting each funder; = marks a tie. Wellcome is highlighted, and added below the top 10 when it ranks lower.</p>
+<div class="legend">{legend}</div>
+<div class="panel table-scroll"><table class="donors"><caption hidden>Recorded funders in {escape(t['label'])}</caption><thead><tr><th class="num">#</th><th class="who">Funder</th><th class="bars">Studies by setting</th><th class="num">Total</th><th class="num">HIC</th><th class="num">LMIC</th><th class="num">Other</th></tr></thead><tbody>{''.join(donor_rows) or '<tr><td colspan="7">No named funder available.</td></tr>'}</tbody></table></div>
+<h3>Where the studies are set</h3><p class="hint">Share of studies by setting: all theme evidence compared with Wellcome-funded studies.</p>
+<div class="panel table-scroll"><table class="geo"><tbody>{geo}</tbody></table><div class="legend">{legend}</div></div>{extra}</section>''')
     years = analysis["meta"]["years"]
-    annual = ''.join(f'<tr><th scope="row">{d["year"]}{" (partial)" if d["year"] == years[1] else ""}</th><td>{d["n"]}</td></tr>' for d in analysis["wellcome_by_year"])
-    return '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wellcome-specific analysis</title><style>
-*{box-sizing:border-box}body{margin:0;background:#faf9f6;color:#10243e;font:15px/1.55 system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:28px}h1{font:600 clamp(25px,4vw,38px)/1.15 Georgia,serif;margin:12px 0}h2{font:600 28px Georgia,serif}h3{margin-top:30px}a{color:#1f5fa8}.badge{display:inline-block;background:#e9e2ee;color:#594069;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700}.lede{max-width:950px;color:#33475f}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}.metric{padding:18px;background:white;border:1px solid #e7e3da;border-radius:9px}.metric strong{display:block;font-size:25px;color:#705a84}.metric span{display:block;font-size:13px;margin-top:6px}.theme{border-top:1px solid #e7e3da;padding-top:16px}.definition,aside{background:#f0ece4;padding:16px;border-radius:7px}nav{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0}button{background:white;color:#594069;border:1px solid #c8b9d2;border-radius:24px;padding:10px 18px;font:600 15px system-ui;cursor:pointer}button[aria-pressed=true]{background:#705a84;color:white}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #1f5fa8;outline-offset:3px}.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;margin:14px 0}.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;background:white;margin:10px 0 20px;font-size:13px}caption{text-align:left;font-size:14px;font-weight:600;margin-bottom:8px}th,td{padding:10px;border-bottom:1px solid #e7e3da;text-align:left}thead th{background:#eeeae2}th[scope=row]{font-weight:500}.donors{min-width:720px}.donors th:first-child{width:28%}.donors td:nth-child(2){width:32%}.bar{display:flex;height:16px;background:#f5f3ef;min-width:180px}.wellcome th:first-child{font-weight:700;color:#705a84}.wellcome{background:#f4eef7}.download{display:flex;gap:18px;flex-wrap:wrap;margin:20px 0}details{border:1px solid #ded6e3;padding:16px;border-radius:8px;margin:20px 0}summary{cursor:pointer;font-weight:600}li{margin-bottom:10px}small{color:#5a564d}.method{border-top:1px solid #e7e3da;margin-top:30px;padding-top:12px;font-size:13px;color:#33475f}[hidden]{display:none!important}@media(max-width:700px){main{padding:16px}.metrics{grid-template-columns:repeat(2,1fr)}.metric strong{font-size:22px}}@media print{nav{display:none}.theme[hidden]{display:block!important}.theme{break-before:page}.table-scroll{overflow:visible}}
-</style></head><body><main>''' + f'''
-<span class="badge">Funder-specific view · Wellcome</span><h1>Wellcome-specific analysis</h1>
-<p class="lede">Explore the global economic evaluation landscape in Wellcome's three priority themes, then see which studies name Wellcome. Theme relevance and recorded support are different measures. This view is separate from the general global evidence map and is not an official Wellcome grant-portfolio assessment.</p>
-<div class="metrics"><div class="metric"><strong>{total:,}</strong><span>Eligible evaluations, {years[0]}–{years[1]}</span></div><div class="metric"><strong>{analysis['global']['named_funder']:,}</strong><span>Studies naming any funder ({pct(analysis['global']['named_funder'], total)})</span></div><div class="metric"><strong>{wellcome:,}</strong><span>Studies naming Wellcome Trust</span></div><div class="metric"><strong>{analysis['wellcome_outside_themes']:,}</strong><span>Wellcome-named studies outside these theme tags / screens</span></div></div>
-<p>Burroughs Wellcome Fund is a separate organisation and is excluded from the Wellcome cohort. Themes may overlap. Only {analysis['disease_tagged']:,} of {total:,} eligible studies have a harmonised disease tag; untagged studies can contain relevant evidence.</p>
+    annual = ''.join(f'<tr><th scope="row">{d["year"]}{" (partial)" if d["year"] == years[1] else ""}</th><td class="num">{d["n"]}</td></tr>' for d in analysis["wellcome_by_year"])
+    return ('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+            '<title>Wellcome priority themes</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+            '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">'
+            f'<style>{STYLE}</style></head><body><main>' + f'''
+<span class="badge">Funder-specific view · Wellcome</span><h1>{escape(SECTION)}</h1>
+<p class="lede">How much economic evaluation evidence exists in Wellcome's three priority themes, and which of those studies report Wellcome Trust as a funder (Wellcome-funded studies). Theme relevance and recorded support are different measures. This view is separate from the global evidence map and is not an official Wellcome grant-portfolio assessment.</p>
+<div class="summary"><div><strong>{wellcome:,}</strong><span>Evaluations report Wellcome Trust as a funder</span></div><div><strong>{wellcome - outside:,}</strong><span>Of these fall in at least one priority theme</span></div><div><strong>{outside:,}</strong><span>Fall outside the three themes</span></div><div><strong>{pct(analysis['global']['named_funder'], total)}</strong><span>Of all {total:,} evaluations ({years[0]}–{years[1]}) report any funder</span></div></div>
+<h2>The three themes at a glance</h2><p class="hint">Select a theme to see its top funders and settings. A study can belong to more than one theme.</p>
+<div class="panel table-scroll"><table class="overview"><thead><tr><th>Theme</th><th class="num">Theme studies</th><th colspan="2">Wellcome-funded studies</th><th class="num">Share of theme</th><th>Wellcome's rank among funders</th></tr></thead><tbody>{''.join(overview)}</tbody></table></div>
 <nav aria-label="Select a priority theme">{''.join(buttons)}</nav>{''.join(panels)}
-<details><summary>Studies naming Wellcome by publication year</summary><p>Publication counts, not grant-award dates or spending. The final year is partial.</p><table><thead><tr><th>Year</th><th>Studies</th></tr></thead><tbody>{annual}</tbody></table></details>
-<div class="download"><a href="wellcome_theme_funders.csv" download>Download donor counts by theme (CSV)</a><a href="wellcome_analysis.json" download>Download aggregate analysis (JSON)</a></div>
-<details class="method"><summary>&#x24d8; Technical details and sources</summary><p>Each funder is counted once per eligible study. A study can name multiple funders and belong to multiple themes. Counts do not sum to unique study totals across funders or themes. Funding is recorded for {pct(analysis['global']['named_funder'],total)} of the evidence base, so absence of a name does not establish absence of support.</p>
-<p>Income comparisons use single-country studies with known income. All other studies remain visible in the other / unavailable category. Names are lightly normalised (NIHR, HTA, NIH, MRC, Gates and common variants); agencies and their programmes are not comprehensively merged. Rankings are counts of named acknowledgements, not funding amounts. A programme named in an acknowledgement does not establish membership in a current priority programme.</p>
-<p>Infectious Diseases and Mental Health use broad existing MeSH-derived disease groups. Climate &amp; Health is a reproducible provisional title screen; full-text validation is outstanding. The focus-condition mental-health title screen is a separate sensitivity view. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
+<details><summary>Wellcome-funded studies by publication year</summary><p class="hint">Publication counts, not grant-award dates or spending. The final year is partial.</p><table class="year-table"><thead><tr><th>Year</th><th class="num">Studies</th></tr></thead><tbody>{annual}</tbody></table></details>
+<details class="method"><summary>Technical details and sources</summary><p>Each funder is counted once per eligible study. A study can name multiple funders and belong to multiple themes, so counts do not sum across funders or themes. Funding is recorded for {pct(analysis['global']['named_funder'], total)} of the evidence base, so absence of a name does not establish absence of support. Burroughs Wellcome Fund is a separate organisation and is excluded from the Wellcome cohort.</p>
+<p>Setting comparisons use single-country studies with known income; all other studies stay visible in the multi-country, regional or income-unavailable category. Names are lightly normalised (NIHR, HTA, NIH, MRC, Gates and common variants); agencies and their programmes are not comprehensively merged. Rankings count reported funders, not funding amounts, and tied funders share a rank. A programme named in an acknowledgement does not establish membership in a current priority programme.</p>
+<p>Infectious Diseases and Mental Health use broad MeSH-derived disease groups; only {analysis['disease_tagged']:,} of {total:,} eligible studies have a harmonised disease tag, so untagged studies can contain relevant evidence. Climate &amp; Health is a reproducible provisional title screen; full-text validation is outstanding. The anxiety, depression and psychosis title screen is a separate sensitivity view. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
 <p>Source: the map's eligible analysis master; web data built {escape(analysis['meta']['data_built'])}. Publication years {years[0]}–{years[1]} (final year partial). Programme scope checked 12 October 2026: <a href="https://wellcome.org/our-priorities/infectious-disease">Infectious Disease</a>, <a href="https://wellcome.org/our-priorities/mental-health">Mental Health</a>, <a href="https://wellcome.org/our-priorities/climate-and-health">Climate and Health</a>.</p></details>
+<div class="download"><a href="wellcome_theme_funders.csv" download>Download funder counts by theme (CSV)</a><a href="wellcome_analysis.json" download>Download aggregate analysis (JSON)</a></div>
 </main><script>
-document.querySelectorAll('[data-theme]').forEach(button => button.addEventListener('click', () => {{
- document.querySelectorAll('[data-theme]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
- document.querySelectorAll('.theme').forEach(panel => {{ panel.hidden = panel.id !== 'theme-' + button.dataset.theme; }});
+function show(key) {{
+ document.querySelectorAll('[data-theme]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.theme === key)));
+ document.querySelectorAll('.theme').forEach(panel => {{ panel.hidden = panel.id !== 'theme-' + key; }});
+}}
+document.querySelectorAll('[data-theme]').forEach(button => button.addEventListener('click', () => show(button.dataset.theme)));
+document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => {{
+ show(button.dataset.go);
+ document.querySelector('nav').scrollIntoView({{behavior: 'smooth', block: 'start'}});
 }}));
-</script></body></html>'''
+</script></body></html>''')
 
 
 def main():
@@ -320,14 +458,15 @@ def main():
         rows, meta, content, general_entries, source_hash = load_inputs(args.raw)
         analysis = build_analysis(rows, meta, source_hash)
         if not analysis["wellcome"]["n"] or not analysis["donors"]:
-            raise ValueError("No Wellcome records or named funders; refusing to build an empty analysis.")
+            raise ValueError("No Wellcome records or reported funders; refusing to build an empty analysis.")
         for entry in general_entries:
             entry.update(file="fig_funder_funders.svg", title="Top dollar: who funds economic evaluations, and where?",
-                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} evaluations name a funder. Blue/coral identify single-country studies with known income; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
-        section = {"title": SECTION, "blurb": "Funder-specific view of Wellcome's priority themes: Infectious Diseases, Mental Health and Climate & Health. Distinguishes the global theme landscape from studies naming Wellcome; includes donor rankings by theme and transparent screening definitions.",
-                   "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-specific analysis: recorded support across priority themes", "caption": "Studies naming Wellcome Trust, using broad disease-group proxies and a provisional Climate & Health title screen. Themes can overlap; this is not a grant-portfolio assessment."},
-                            {"file": "wellcome_analysis.html", "html": True, "title": "Wellcome priority themes: evidence landscape and top donors", "caption": "Explore theme evidence, funding coverage, Wellcome acknowledgements, geographic focus and donor rankings. Definitions and denominators are provided within the view; Climate & Health classification is provisional."}]}
-        content["gallery"] = [s for s in content["gallery"] if s["title"] != SECTION] + [section]
+                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} evaluations report a funder. Blue/coral identify single-country studies with known income; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
+        section = {"title": SECTION, "blurb": "A funder-specific view of economic evaluation evidence in Wellcome's three priority themes: Infectious Diseases, Mental Health and Climate & Health. It separates all evidence in each theme from studies that report Wellcome funding, ranks the funders reported within each theme, and sets out how each theme was defined.",
+                   "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-funded studies across the priority themes", "caption": "Wellcome-funded studies Trust in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses broad disease-group tags and a provisional Climate & Health title screen. Themes can overlap; this is not a grant-portfolio assessment."},
+                            {"file": "wellcome_analysis.html", "html": True, "title": "Explore each theme: evidence, top funders and settings", "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health classification is provisional."}]}
+        # Also drop the section under its earlier name so a rename never leaves a duplicate.
+        content["gallery"] = [s for s in content["gallery"] if s["title"] not in (SECTION, "Wellcome-specific analysis")] + [section]
         with tempfile.TemporaryDirectory(dir=OUT) as temporary:
             staging = Path(temporary)
             plots(analysis, staging)
@@ -346,9 +485,9 @@ def main():
             os.replace(staging / "content.json", DATA / "content.json")
     except (OSError, ValueError, KeyError, TypeError, ImportError) as exc:
         raise SystemExit(f"Build stopped: {exc}. Required input checks and staging protect existing outputs from invalid inputs or rendering failures.") from exc
-    print(f"Success: {len(rows):,} eligible studies; {analysis['global']['named_funder']:,} name a funder; {analysis['wellcome']['n']:,} name Wellcome Trust.")
+    print(f"Success: {len(rows):,} eligible studies; {analysis['global']['named_funder']:,} report a funder; {analysis['wellcome']['n']:,} report Wellcome Trust.")
     for t in analysis["themes"].values():
-        print(f"{t['label']}: {t['n']:,} theme studies; {t['named_funder']:,} name a funder; {t['wellcome']:,} name Wellcome.")
+        print(f"{t['label']}: {t['n']:,} theme studies; {t['named_funder']:,} report a funder; {t['wellcome']:,} report Wellcome.")
     print(OUT / "wellcome_analysis.html")
 
 
