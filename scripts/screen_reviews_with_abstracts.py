@@ -78,7 +78,6 @@ def result(kind, subtype, confidence, reason, evidence, component='', mixed=Fals
         'review_screen_evidence': evidence[:1800],
         'review_component': component,
         'review_mixed_primary_analysis': 'TRUE' if mixed else 'FALSE',
-        'review_verification_status': 'Provisional - title/abstract screen; not human verified',
         'review_screen_method': VERSION,
     }
 
@@ -99,7 +98,7 @@ def classify_signals(title, abstract):
                           (title_review and rx(r'\b(?:and|plus|with) (?:a |an )?(?:model[ -]based|trial[ -]based|economic evaluation|cost[ -]effectiveness analysis|original (?:analysis|evaluation))\b').search(title)))
     excerpt = lambda ss: ' | '.join(ss[:3])
     if TITLE_INPUT.search(title) and primary_signal:
-        return result('No review identified', 'Original evaluation using a review', 'Moderate',
+        return result('Not identified as a review', 'Original evaluation using a review', 'Moderate',
                       'The title states that an original model/evaluation uses review data as inputs; the review is not this paper\'s main design.',
                       title + ' | ' + excerpt(primary), 'Review used as input')
     if (PROTOCOL.search(title) and title_review) or (FUTURE.search(abstract) and (title_review or systematic) and not selected):
@@ -113,7 +112,7 @@ def classify_signals(title, abstract):
         return result('Systematic review', 'Systematic review with meta-analysis' if META.search(title + ' ' + abstract) else 'Systematic review',
                       'High', 'The title explicitly identifies this paper as a systematic review.', title + ' | ' + excerpt(systematic or search))
     if NARRATIVE.search(title):
-        return result('Non-systematic review', NARRATIVE.search(title).group(), 'High',
+        return result('Review (non-systematic)', NARRATIVE.search(title).group(), 'High',
                       'The title explicitly identifies a narrative/non-systematic review.', title)
     if APPRAISAL.search(title):
         return result('Unclear - manual check needed', 'Technology appraisal / evidence review group', 'Low',
@@ -124,7 +123,7 @@ def classify_signals(title, abstract):
                       'A review subtype is named, but it should not automatically be called non-systematic.', title + ' | ' + excerpt(search))
     if systematic and primary_signal:
         if INPUT_REVIEW.search(abstract) and not title_review:
-            return result('No review identified', 'Original evaluation using a review', 'Moderate',
+            return result('Not identified as a review', 'Original evaluation using a review', 'Moderate',
                           'Original evaluation methods are reported; the review appears to supply model inputs rather than define the paper.',
                           excerpt(primary + systematic), 'Systematic review used as input')
         return result('Mixed review and original evaluation', 'Systematic review component', 'Moderate',
@@ -138,7 +137,7 @@ def classify_signals(title, abstract):
                       'The abstract describes both a review component and an original evaluation/study; check their roles.',
                       excerpt((narrative or other) + primary), 'Review plus original analysis', True)
     if narrative and not primary_signal:
-        return result('Non-systematic review', NARRATIVE.search(excerpt(narrative)).group(), 'Moderate',
+        return result('Review (non-systematic)', NARRATIVE.search(excerpt(narrative)).group(), 'Moderate',
                       'The abstract describes this paper as a narrative/non-systematic review.', excerpt(narrative))
     if other and not primary_signal:
         return result('Other review - methods need checking', OTHER.search(excerpt(other)).group(), 'Moderate',
@@ -150,15 +149,15 @@ def classify_signals(title, abstract):
         return result('Other review - methods need checking', 'Meta-analysis; systematic status unclear', 'Moderate',
                       'Meta-analysis is identified, but this alone does not establish systematic review methods.', title + ' | ' + excerpt(search + selected))
     if primary_signal and (SR.search(abstract) or OTHER.search(abstract)):
-        return result('No review identified', 'Original evaluation mentioning/using a review', 'Moderate',
+        return result('Not identified as a review', 'Original evaluation mentioning/using a review', 'Moderate',
                       'Original evaluation methods are present; mentioning a review does not make this paper a review.', excerpt(primary), 'Review mentioned or used as input')
     if CHART_REVIEW.search(title):
-        return result('No review identified', 'Original chart/record review', 'Moderate',
+        return result('Not identified as a review', 'Original chart/record review', 'Moderate',
                       'Review refers to patient/chart records rather than a synthesis of research studies.', title)
     if REVIEW.search(title) or own or has_methods or SR.search(abstract) or NARRATIVE.search(abstract) or OTHER.search(abstract):
         return result('Unclear - manual check needed', 'Possible review or review mentioned', 'Low',
                       'Review-related wording is present, but this paper\'s role or review methods are unclear.', title + ' | ' + excerpt(own or search or [s for s in parts if REVIEW.search(s)]))
-    return result('No review identified', '', 'Low',
+    return result('Not identified as a review', '', 'Low',
                   'No qualifying review signal found in the title/abstract. This is not proof that the paper is primary research.', '')
 
 
@@ -168,12 +167,12 @@ def separate_original_evaluation(screened):
     screened['review_has_original_evaluation'] = (
         'Yes' if mixed or screened.get('review_mixed_primary_analysis') == 'TRUE'
         or screened.get('review_subtype', '').startswith('Original evaluation')
-        else 'Not identified'
+        else 'Original evaluation not identified'
     )
     if mixed:
         screened['review_type'] = (
             'Systematic review' if screened['review_subtype'] == 'Systematic review component'
-            else 'Non-systematic review'
+            else 'Review (non-systematic)'
         )
         screened['review_type_explanation'] = ''
     return screened
@@ -202,11 +201,11 @@ def classify(title, abstract):
                               'Moderate', 'The paper reports conducting a review/synthesis and a new evaluation or analysis.',
                               ' | '.join((own_synthesis + primary)[:4]), 'Review plus original analysis', True)
         elif primary and not own_synthesis and (INPUT_REVIEW.search(abstract) or TITLE_INPUT.search(title)):
-            screened = result('No review identified', 'Original evaluation using a review', 'Moderate',
+            screened = result('Not identified as a review', 'Original evaluation using a review', 'Moderate',
                               'The paper reports an original analysis; review evidence supplies inputs rather than being this paper\'s synthesis.',
                               ' | '.join(primary[:3]), 'Review used as input')
         elif primary and rx(r'\bdrug utili[sz]ation review\b').search(title):
-            screened = result('No review identified', 'Original evaluation of a review service', 'Moderate',
+            screened = result('Not identified as a review', 'Original evaluation of a review service', 'Moderate',
                               'Drug utilization review is the service evaluated; the paper reports an original claims-data analysis.', ' | '.join(primary[:3]))
         elif screened['review_type'] in ('Other review - methods need checking', 'Systematic review'):
             if explicit_sr:
@@ -217,7 +216,7 @@ def classify(title, abstract):
                 if screened['review_subtype'] == 'Inferred from review methods':
                     screened['review_subtype'] = 'Systematic review - explicit abstract description'
             else:
-                screened.update(review_type='Non-systematic review',
+                screened.update(review_type='Review (non-systematic)',
                                 review_screen_reason='User-defined coding: a review without an explicit systematic-review self-description. This does not establish that its methods were non-systematic.')
                 if screened['review_subtype'] == 'Inferred from review methods':
                     screened['review_subtype'] = 'Review described by methods; no explicit systematic label'
@@ -332,11 +331,20 @@ def main():
             raise ValueError(f'Audited title/abstract changed; recheck record {rid}')
         screened[rid].update(review_type=audit['review_type'], review_subtype=audit['review_subtype'],
                              review_screen_reason='Agent title/abstract audit: ' + audit['reason'],
-                             review_type_explanation=REVIEW_TYPE_EXPLANATIONS.get(audit['review_type'], ''),
-                             review_verification_status='Provisional - agent title/abstract checked; not human verified')
+                             review_type_explanation=REVIEW_TYPE_EXPLANATIONS.get(audit['review_type'], ''))
         separate_original_evaluation(screened[rid])
+    resolution_path = out / 'review_resolution_applied.json'
+    if resolution_path.exists():
+        for rid, audit in json.loads(resolution_path.read_text(encoding='utf-8')).items():
+            r = upload_by_id.get(rid)
+            if r is None:
+                raise ValueError(f'Resolved record missing from upload: {rid}')
+            signature = hashlib.sha256((r['title'] + '\n' + r['abstract']).encode()).hexdigest()
+            if signature != audit['title_abstract_sha256']:
+                raise ValueError(f'Resolved title/abstract changed; recheck record {rid}')
+            screened[rid].update(audit['classification'])
     new_fields = ['abstract', 'abstract_source'] + list(next(iter(screened.values())))
-    new_fields += ['review_type_human_verified', 'review_screened_at']
+    new_fields += ['review_screened_at']
     timestamp = datetime.now(timezone.utc).isoformat(timespec='seconds')
     out.mkdir(exist_ok=True)
     (out / 'review_screen_results.json').write_text(json.dumps(screened, ensure_ascii=False, indent=2), encoding='utf-8')
@@ -383,7 +391,6 @@ def main():
                     row['review_screened_at'] = timestamp
                 elif not row['review_type']:
                     row['review_type'] = 'Not screened - abstract not supplied'
-                    row['review_verification_status'] = 'Not screened'
                 writer.writerow(row)
         try:
             with staging.open(encoding='utf-8', newline='') as handle:
@@ -408,7 +415,7 @@ def main():
     (out / 'review_screen_summary.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
     priority = {'Unclear - manual check needed': 1, 'Mixed review and original evaluation': 2,
                 'Other review - methods need checking': 3, 'Review protocol': 4,
-                'Systematic review': 5, 'Non-systematic review': 6}
+                'Systematic review': 5, 'Review (non-systematic)': 6}
     queue_fields = ['manual_check_priority', 'record_id', 'year', 'title', 'abstract', 'doi', 'url'] + new_fields[2:] + ['reviewer_notes']
     records = {r['record_id']: r for r in upload}
     queue = sorted((rid for rid, label in screened.items() if label['review_type'] in priority),
@@ -428,11 +435,11 @@ def main():
         '## Interpretation', '',
         'All review_type labels are provisional automated title/abstract screens, not verified study designs or eligibility decisions.',
         'Systematic review: explicit title or abstract self-description of this paper. Database searching, PRISMA or other method signals alone do not establish this user-defined label.',
-        'Non-systematic review: user-defined category combining narrative/non-systematic reviews and other reviews without an explicit systematic-review self-description. This operational code does not establish that the methods were non-systematic.',
+        'Review (non-systematic): user-defined category combining narrative/non-systematic reviews and other reviews without an explicit systematic-review self-description. This operational code does not establish that the methods were non-systematic.',
         'Review subtype and original supporting evidence are retained, including scoping, umbrella, rapid, literature and meta-analysis labels.',
-        'Review type and original evaluation are separate: an own systematic review remains Systematic review when combined with an original analysis; other own reviews remain Non-systematic review.',
+        'Review type and original evaluation are separate: an own systematic review remains Systematic review when combined with an original analysis; other own reviews remain Review (non-systematic).',
         'Unclear: automated screening could not confidently establish the paper\'s role; reviewer assessment is needed. This does not imply that the abstract itself lacks the information.',
-        'No review identified: no qualifying signal, or an original evaluation that mentions/uses review inputs. This is not proof of primary-study status.',
+        'Not identified as a review: no qualifying signal, or an original evaluation that mentions/uses review inputs. This is not proof of primary-study status.',
         'Review protocol: planned review, not a completed synthesis. Treatment protocols and registered protocols in completed reviews are different.',
         'Not screened: the uploaded file contains included records only; other master rows have no supplied abstract and were not screened.', '',
         'Confidence describes the strength of rule-based text signals, not a calibrated probability. Every classification still needs human verification.',
@@ -443,12 +450,11 @@ def main():
         '`abstract`: full text from uploaded workbook; blank for records without supplied abstracts.',
         '`abstract_source`: uploaded workbook filename.',
         '`review_type`, `review_subtype`: proposed paper type and detailed subtype.',
-        '`review_has_original_evaluation`: Yes when original analysis is identified; Not identified does not confirm absence. Placed immediately after review_type.',
+        '`review_has_original_evaluation`: Yes when original analysis is identified; Original evaluation not identified does not confirm absence. Placed immediately after review_type.',
         '`review_type_explanation`: plain-language definition for unclear and mixed records, placed beside review_type.',
         '`review_screen_confidence`, `review_screen_reason`, `review_screen_evidence`: strength, rationale and supporting title/abstract extracts.',
         '`review_component`, `review_mixed_primary_analysis`: distinguishes reviews used as inputs and hybrid papers.',
-        '`review_verification_status`, `review_screen_method`, `review_screened_at`: screening provenance.',
-        '`review_type_human_verified`: left blank for reviewer-confirmed final labels; preserved if already populated.', '',
+        '`review_screen_method`, `review_screened_at`: screening provenance.', '',
         '## Counts among included records', '',
     ]
     notes += [f"- {label}: {count:,}" for label, count in summary['review_type_counts'].items()]

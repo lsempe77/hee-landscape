@@ -51,73 +51,66 @@ def propose(row):
         r'|\b(?:decision[ -]tree|economic|financial|mathematical|diabetes|population|cost.avoidance)\s*(?:model)?\b.{0,90}\b(?:created|formulated|developed|designed|used|estimated|compared)\b'
         r'|\b(?:model|modelling|modeling|microsimulation|simulation|within.trial|trial.based)\b.{0,100}\b(?:cost|economic|QALY|cost.effectiveness)\b', s)
         and not match(r'\b(?:included studies|studies included|studies were|studies that|published studies|previous studies|company|manufacturer|sponsor)\b', s)]
-    original = 'Yes' if primary else 'Not identified'
+    original = 'Yes' if primary else 'Original evaluation not identified'
 
     def decision(kind, subtype, reason, evidence, rule, confidence='Moderate'):
         result = screen.result(kind, subtype, confidence, reason, ' | '.join(evidence)[:1800])
         result.update(review_has_original_evaluation=original,
-                      review_mixed_primary_analysis='TRUE' if original == 'Yes' and kind in ('Systematic review', 'Non-systematic review') else 'FALSE',
-                      review_component='Own review plus original evaluation' if original == 'Yes' and kind in ('Systematic review', 'Non-systematic review') else '',
-                      review_verification_status='Provisional - second-pass title/abstract assessment; not human verified',
+                      review_mixed_primary_analysis='TRUE' if original == 'Yes' and kind in ('Systematic review', 'Review (non-systematic)') else 'FALSE',
+                      review_component='Own review plus original evaluation' if original == 'Yes' and kind in ('Systematic review', 'Review (non-systematic)') else '',
+                      resolution_source='Uploaded full abstract',
                       review_screen_method=METHOD, resolution_rule=rule)
         return result
 
-    if 'cochrane database of systematic reviews' in row['journal'].lower() and match(r'\b(?:main results|data collection and analysis)\b', abstract):
+    if 'cochrane database of systematic reviews' in row.get('journal', '').lower() and match(r'\b(?:main results|data collection and analysis)\b', abstract):
         return decision('Systematic review', 'Completed Cochrane systematic review', 'The record is a completed Cochrane review with reported study selection, synthesis and results; Cochrane identifies these as systematic reviews.', review_parts[:3], 'completed-cochrane-review')
 
     if not match(systematic, abstract) and match(r'\b(?:in this review|this is a narrative review|purpose of review|study design:? review|design:? narrative review|review article|a literature review is presented|literature review.*has been deployed|literature was also reviewed|review of the current literature|areas covered in this review)\b', abstract):
-        return decision('Non-systematic review', 'Narrative/literature review', 'The abstract identifies this work as a review of research literature without an explicit systematic-review label.', review_parts[:3], 'self-described-other-review')
+        return decision('Review (non-systematic)', 'Narrative/literature review', 'The abstract identifies this work as a review of research literature without an explicit systematic-review label.', review_parts[:3], 'self-described-other-review')
 
     own_sr = [s for s in own if match(systematic, re.sub(r'Cochrane Database of Systematic Reviews', '', s, flags=re.I)) and not match(r'\b(?:recent|published study|published systematic|derived from|using data from|reviews were used|review were used)\b', s)]
     if match(systematic, title) and not screen.TITLE_INPUT.search(title):
         return decision('Systematic review', 'Explicit systematic-review title', 'The title identifies this paper as a systematic review.', [title] + primary[:1], 'own-sr-title')
+    own_sr = [s for s in own_sr if not match(r'\b(?:informed by|incorporating data|combining cost)\b', s) or match(r'\b(?:we|authors|researchers|EAC)\b.*' + action, s)]
+    if match(r'\bscoping review of systematic reviews\b', abstract):
+        return decision('Review (non-systematic)', 'Scoping review of existing systematic reviews', 'The own synthesis is a scoping review; systematic describes the included reviews, not the own review.', review_parts[:2], 'scoping-of-reviews')
     if own_sr:
         return decision('Systematic review', 'Own systematic review - explicit methods', 'The abstract explicitly describes a systematic review conducted within this work.', own_sr[:2] + primary[:1], 'own-sr-methods')
     own_non = [s for s in own if not match(systematic, s)]
     if own_non:
-        return decision('Non-systematic review', 'Own synthesis without explicit systematic label', 'The abstract describes conducting a literature review or meta-analysis without an explicit systematic-review self-description.', own_non[:2] + primary[:1], 'own-other-methods')
-    if not match(r'rapid health technology assessment', title):
-        cache_path = OUT / 'public_fulltext_cache' / (row['record_id'] + '.json')
-        if cache_path.exists():
-            cached = json.loads(cache_path.read_text(encoding='utf-8'))
-            metadata = cached.get('metadata', {})
-            types = metadata.get('pubTypeList', {}).get('pubType', [])
-            if 'Systematic Review' in types and match(systematic, abstract):
-                result = decision('Systematic review', 'Systematic review - corroborating indexed publication type', 'The indexed publication type explicitly identifies this record as Systematic Review, corroborating the abstract review component. Ownership classification is provisional where full-text methods are unavailable.', ['Indexed publication type: Systematic Review'] + review_parts[:2], 'indexed-sr-corroboration')
-                result['resolution_source'] = cached.get('source') or ('https://pubmed.ncbi.nlm.nih.gov/' + metadata['id'] + '/' if metadata.get('source') == 'MED' else cached['query_url'])
-                return result
+        return decision('Review (non-systematic)', 'Own synthesis without explicit systematic label', 'The abstract describes conducting a literature review or meta-analysis without an explicit systematic-review self-description.', own_non[:2] + primary[:1], 'own-other-methods')
     if screen.APPRAISAL.search(title) or match(r'pharmacoeconomic review report|reimbursement review', title):
         own_search = [s for s in parts if match(r'\b(?:ERG|EAC|review group|assessment group|CADTH|CDA.AMC)\b.{0,100}\b(?:independently searched|conducted.*search|searched for relevant|performed.*search|additional literature search)\b', s)]
         own_economic = [s for s in parts if match(r'\b(?:ERG|EAC|review group|assessment group|CADTH|CDA.AMC)\b.{0,120}\b(?:adjusted|modified|recalculated|revised|revisions|undertook.*analys|conducted.*analys|scenario analyses|sensitivity analys|base.case|developed.*model|changes.*model|re.analysis|reanalys)\w*\b', s) and not match(r'\b(?:requested|could not|unable to|could not be|at the ERG.s request)\b', s)]
-        original = 'Yes' if own_economic else 'Not identified'
+        original = 'Yes' if own_economic else 'Original evaluation not identified'
         if own_search:
-            return decision('Non-systematic review', 'Own supplementary evidence search in technology appraisal', 'The independent assessment group conducted its own supplementary evidence search; this own synthesis is not explicitly described as a systematic review.', own_search[:2] + own_economic[:1], 'appraisal-own-search')
+            return decision('Review (non-systematic)', 'Own supplementary evidence search in technology appraisal', 'The independent assessment group conducted its own supplementary evidence search; this own synthesis is not explicitly described as a systematic review.', own_search[:2] + own_economic[:1], 'appraisal-own-search')
         appraisal = [s for s in parts if match(r'\b(?:submission|manufacturer|sponsor|ERG|review group|CDA.AMC|CADTH)\b', s)]
-        return decision('No review identified', 'Technology appraisal of submitted evidence; own synthesis not identified', 'This report appraises submitted evidence. The abstract does not establish a literature synthesis conducted by the report authors; company reviews and organisation names are not counted as an own review.', appraisal[:2] + own_economic[:1], 'appraisal-submission-review')
+        return decision('Not identified as a review', 'Technology appraisal of submitted evidence; own synthesis not identified', 'This report appraises submitted evidence. The abstract does not establish a literature synthesis conducted by the report authors; company reviews and organisation names are not counted as an own review.', appraisal[:2] + own_economic[:1], 'appraisal-submission-review')
     search = [s for s in parts if screen.SEARCH.search(s) and screen.DATABASE.search(s) and not match(third_party, s)]
     selection = [s for s in parts if screen.SELECTION.search(s)]
     if match(r'rapid health technology assessment', title) and match(r'\b(?:databases?|websites?)\b.{0,150}\bsearched\b|\bsearched\b.{0,150}\b(?:databases?|websites?)\b', abstract) and match(r'\bincluded\b', abstract):
-        original = 'Not identified'
-        return decision('Non-systematic review', 'Rapid evidence synthesis without own systematic label', 'This rapid HTA searches and synthesises existing reviews/economic studies. Included systematic reviews are inputs, not an explicit systematic label for this own synthesis.', review_parts[:3], 'rapid-hta-synthesis')
+        original = 'Original evaluation not identified'
+        return decision('Review (non-systematic)', 'Rapid evidence synthesis without own systematic label', 'This rapid HTA searches and synthesises existing reviews/economic studies. Included systematic reviews are inputs, not an explicit systematic label for this own synthesis.', review_parts[:3], 'rapid-hta-synthesis')
     if search and selection:
-        return decision('Non-systematic review', 'Literature synthesis - no explicit systematic label', 'This work reports searching and selecting studies; systematic searching alone does not meet the agreed explicit systematic-review label.', search[:1] + selection[:2], 'search-selection')
+        return decision('Review (non-systematic)', 'Literature synthesis - no explicit systematic label', 'This work reports searching and selecting studies; systematic searching alone does not meet the agreed explicit systematic-review label.', search[:1] + selection[:2], 'search-selection')
     if match(service, title) or any(match(service, s) for s in parts):
         # A simultaneous genuine synthesis must already have passed the own-review tests.
         if not any(match(systematic, s) for s in parts):
             evidence = [s for s in parts if match(service, s)]
-            return decision('No review identified', 'Clinical service or patient-record review', 'Review refers to a clinical service, patient records or an administrative process, not a synthesis of research studies.', [title] + evidence[:2], 'clinical-record-review')
+            return decision('Not identified as a review', 'Clinical service or patient-record review', 'Review refers to a clinical service, patient records or an administrative process, not a synthesis of research studies.', [title] + evidence[:2], 'clinical-record-review')
     if match(r'\breview\b|\bmeta.analys', title) and not match(service, title) and not screen.APPRAISAL.search(title):
         if match(r'pharmacoeconomic review report|reimbursement review', title):
             return None
-        return decision('Non-systematic review', 'Review - no explicit systematic label', 'The title identifies a review and the abstract does not explicitly identify an own systematic review.', [title] + review_parts[:2], 'other-review-title')
+        return decision('Review (non-systematic)', 'Review - no explicit systematic label', 'The title identifies a review and the abstract does not explicitly identify an own systematic review.', [title] + review_parts[:2], 'other-review-title')
     if any(match(systematic, s) for s in parts):
         # Passive "derived from a systematic review" alone cannot establish who did it.
         external = [s for s in parts if match(systematic, s) and match(r'\b(?:previous|prior|earlier|published|existing|recent|cochrane)\b|guideline|company|manufacturer|sponsor', s)]
         if external and len(external) == len([s for s in parts if match(systematic, s)]):
-            return decision('No review identified', 'Existing review cited or used as input', 'The systematic review is explicitly attributed to earlier/published work or an external submission rather than conducted by this paper.', external[:2] + primary[:1], 'external-review')
+            return decision('Not identified as a review', 'Existing review cited or used as input', 'The systematic review is explicitly attributed to earlier/published work or an external submission rather than conducted by this paper.', external[:2] + primary[:1], 'external-review')
         return None
     if primary and not screen.APPRAISAL.search(title):
-        return decision('No review identified', 'Original evaluation; no own synthesis established', 'The abstract reports original evaluation methods but does not describe conducting a literature synthesis; review-related wording concerns inputs or background.', primary[:2] + review_parts[:1], 'primary-no-own-review')
+        return decision('Not identified as a review', 'Original evaluation; no own synthesis established', 'The abstract reports original evaluation methods but does not describe conducting a literature synthesis; review-related wording concerns inputs or background.', primary[:2] + review_parts[:1], 'primary-no-own-review')
     return None
 
 
@@ -142,9 +135,8 @@ def main():
             override = overrides[row['record_id']]
             result = screen.result(override['review_type'], override['review_subtype'], 'Moderate', override['reason'], override['evidence'])
             result.update(review_has_original_evaluation=override['original_evaluation'],
-                          review_mixed_primary_analysis='TRUE' if override['original_evaluation'] == 'Yes' and override['review_type'] in ('Systematic review', 'Non-systematic review') else 'FALSE',
+                          review_mixed_primary_analysis='TRUE' if override['original_evaluation'] == 'Yes' and override['review_type'] in ('Systematic review', 'Review (non-systematic)') else 'FALSE',
                           review_component=override.get('component', ''), review_screen_method=METHOD,
-                          review_verification_status='Provisional - agent evidence assessment; not human verified',
                           resolution_rule='record-specific-assessment', resolution_source=override.get('source', 'Uploaded full abstract'))
         if result:
             decisions[row['record_id']] = result
@@ -156,6 +148,9 @@ def main():
                       'categories': dict(Counter(r['review_type'] for r in decisions.values())),
                       'rules': dict(Counter(r['resolution_rule'] for r in decisions.values()))}, indent=2))
     if not args.apply:
+        return
+    if not decisions:
+        print('No new decisions to apply.')
         return
     timestamp = datetime.now(timezone.utc).isoformat(timespec='seconds')
     originals = [dict(r) for r in rows]
@@ -185,6 +180,25 @@ def main():
     shutil.copy2(master, backup)
     assert hashlib.sha256(backup.read_bytes()).hexdigest() == before_hash
     os.replace(staging, master)
+    persistent_path = OUT / 'review_resolution_applied.json'
+    persistent = json.loads(persistent_path.read_text(encoding='utf-8')) if persistent_path.exists() else {}
+    for row in unclear:
+        rid = row['record_id']
+        if rid in decisions:
+            persistent[rid] = {'title_abstract_sha256': hashlib.sha256((row['title'] + '\n' + row['abstract']).encode()).hexdigest(),
+                               'classification': {k: v for k, v in decisions[rid].items() if k in fields},
+                               'source': decisions[rid].get('resolution_source', 'Uploaded full abstract'), 'rule': decisions[rid]['resolution_rule']}
+    persistent_path.write_text(json.dumps(persistent, ensure_ascii=False, indent=2), encoding='utf-8')
+    remaining_fields = ['record_id', 'title', 'doi', 'url', 'abstract', 'review_type', 'review_subtype', 'evidence_needed', 'public_source_status']
+    with (OUT / 'remaining_review_checks.csv').open('w', encoding='utf-8-sig', newline='') as handle:
+        writer = csv.DictWriter(handle, fieldnames=remaining_fields)
+        writer.writeheader()
+        for row in unresolved:
+            cache_path = OUT / 'public_fulltext_cache' / (row['record_id'] + '.json')
+            cached = json.loads(cache_path.read_text(encoding='utf-8')) if cache_path.exists() else {}
+            writer.writerow({**{k: row.get(k, '') for k in remaining_fields},
+                             'evidence_needed': 'Methods/full text establishing whether this record conducts a new review or only uses an existing review; if own, its explicit design label.',
+                             'public_source_status': cached.get('status', 'No public full text retrieved')})
     audit_fields = list(dict.fromkeys(k for change in changes for k in change))
     with (OUT / 'unclear_resolution_decisions.csv').open('w', encoding='utf-8-sig', newline='') as handle:
         writer = csv.DictWriter(handle, fieldnames=audit_fields)
@@ -203,7 +217,7 @@ def main():
         if row['record_id'] in decisions:
             row.update({k: v for k, v in decisions[row['record_id']].items() if k in qfields})
             row['review_screened_at'] = timestamp
-            row['manual_check_priority'] = {'Systematic review': '5', 'Non-systematic review': '6', 'No review identified': '7', 'Review protocol': '4'}[row['review_type']]
+            row['manual_check_priority'] = {'Systematic review': '5', 'Review (non-systematic)': '6', 'Not identified as a review': '7', 'Review protocol': '4'}[row['review_type']]
     with queue.open('w', encoding='utf-8', newline='') as handle:
         writer = csv.DictWriter(handle, fieldnames=qfields)
         writer.writeheader()
@@ -215,6 +229,15 @@ def main():
                    master_sha256_after=hashlib.sha256(master.read_bytes()).hexdigest(),
                    unclear_resolution={'assessed': len(unclear), 'resolved': len(decisions), 'remaining': len(unresolved), 'backup': str(backup), 'timestamp': timestamp, 'method': METHOD})
     summary_path.write_text(json.dumps(summary, indent=2), encoding='utf-8')
+    notes = ['# Resolution of ambiguous review classifications', '',
+             f'Assessed {len(unclear):,} previously unclear included records; resolved {len(decisions):,}; {len(unresolved):,} remain awaiting methods evidence.', '',
+             'Classification uses the agreed own-review rule. Existing reviews used as inputs are not counted as an own SR. Scoping/rapid/umbrella and other syntheses without explicit systematic self-description are Review (non-systematic). Indexing publication-type labels alone do not establish own-review authorship.', '',
+             'These are agent evidence assessments, not independent human verification. Not identified as a review means an own synthesis was not established, not proof of absence. Original evaluation not identified in the original-evaluation column does not establish absence.', '',
+             'unclear_resolution_decisions.csv contains decisions, reasons, evidence and source URLs. remaining_review_checks.csv provides the outstanding records and evidence needed. review_resolution_applied.json preserves decisions with title/abstract hashes for future screening runs.', '',
+             f'Backup: {backup.name}. All IDs, row order, full abstracts, eligibility and other analysis fields were checked unchanged.', '',
+             '## Resolved classifications', '']
+    notes += [f'- {kind}: {count:,}' for kind, count in Counter(r['review_type'] for r in decisions.values()).items()]
+    (OUT / 'unclear_resolution_report.md').write_text('\n'.join(notes) + '\n', encoding='utf-8')
     print('Applied and validated; backup: ' + str(backup))
 
 

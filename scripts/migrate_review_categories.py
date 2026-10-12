@@ -79,9 +79,9 @@ def main():
     (out / f'review_category_split_{timestamp}.json').write_text(json.dumps(changes, indent=2), encoding='utf-8')
     (out / 'review_category_policy.md').write_text(
         '# Review category policy\n\n'
-        'review_type separates Systematic review from Non-systematic review. '
+        'review_type separates Systematic review from Review (non-systematic). '
         'Scoping, rapid and umbrella reviews without an explicit systematic self-description '
-        'are Non-systematic review. Authors conducting their own systematic review remain '
+        'are Review (non-systematic). Authors conducting their own systematic review remain '
         'Systematic review even when they also conduct an original evaluation. '
         'Using an existing review as input does not establish an own review.\n\n'
         'review_has_original_evaluation is adjacent to review_type: Yes means an original '
