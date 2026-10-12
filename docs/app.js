@@ -1489,7 +1489,7 @@ if (typeof document !== "undefined") {
         alt: "World map of economic evaluations by country and income group",
         takeaway: "Economic evaluation evidence is concentrated in the global north."
       },
-      { file: "fig_research_burden_ratio.svg", alt: "Country research-to-burden ratios grouped by income, with proportionality at 1", wide: true },
+      { file: "fig_research_burden_ratio.svg", alt: "Strip plot of country research-to-burden ratios by income group, with group medians and a proportional reference line", wide: true },
       { file: "fig_disease_circular.webp", alt: "Line of sight: disease groups studied in health economic evaluations" },
       { file: "fig_intervention_mix.webp", alt: "What gets evaluated: intervention mix by income" },
       { file: "fig_funder_funders.svg", alt: "Top recorded funders by study count and setting, with equal styling for all funders" }
