@@ -341,7 +341,7 @@ def plot_treemap(analysis, staging, plt, background):
         ax.text(x + pad, y + h - pad * .7, f"{d['n']:,}", ha="left", va="bottom", fontsize=min(34, size * 1.45),
                 fontweight="bold", color="#10243e")
     top = donors[0]
-    fig.text(.025, .95, "Top donors by organisation: who funds the most studies?", fontsize=22, fontweight="bold", color="#10243e")
+    fig.text(.025, .95, "Top funders by organisation: who funds the most studies?", fontsize=22, fontweight="bold", color="#10243e")
     fig.text(.025, .905, f"{top['funder']} is named in {top['n']:,} studies, more than any other funder. Bigger box = more studies.",
              fontsize=13.5, color="#33475f")
     fig.text(.025, .865, "Programmes and institutes are counted under the organisation they belong to, "
@@ -386,11 +386,11 @@ def plots(analysis, staging):
     # Legend sits directly under the subtitle, aligned with the title.
     fig.legend(*ax.get_legend_handles_labels(), loc="upper left", bbox_to_anchor=(.019, .885), ncol=3, frameon=False, fontsize=10)
     fig.subplots_adjust(left=.31, right=.96, top=.83, bottom=.2)
-    fig.text(.025, .95, "Top donors: who funds economic evaluations, and where?", fontsize=22, fontweight="bold", color="#10243e")
+    fig.text(.025, .95, "Top funders: who funds economic evidence, and where?", fontsize=22, fontweight="bold", color="#10243e")
     fig.text(.025, .905, "Top 15 recorded funders, ranked by unique eligible studies", fontsize=14, color="#33475f")
     n = analysis["global"]["n"]
     known = analysis["global"]["named_funder"]
-    notes = (f"Base: {n:,} eligible evaluations; {known:,} ({100 * known / n:.1f}%) report a funder. "
+    notes = (f"Base: {n:,} eligible studies, including reviews; {known:,} ({100 * known / n:.1f}%) report a funder. "
              "Counts describe recorded acknowledgements, not funding amounts.\n"
              "Blue and coral: single-country studies with known income. Grey: other geographic scope or unavailable income.\n"
              "Names are lightly normalised and counted once per study; funding coverage is incomplete.\n"
@@ -415,7 +415,7 @@ def plots(analysis, staging):
         f"Includes {untagged} untagged infectious-disease studies" if untagged else "No theme tag and not on the reviewed climate list"]
     # Explain the small Climate & Health count where readers see it.
     climate = analysis["themes"]["climate"]
-    notes[2] += (f"\nSmall because few economic evaluations address climate: "
+    notes[2] += (f"\nSmall because few studies in the map address climate: "
                  f"{climate['n']:,} of {analysis['global']['n']:,} studies ({pct(climate['n'], analysis['global']['n'])})")
     colors = [LAVENDER] * 3 + ["#C9C4BA"]
     bars = ax.barh(range(4), values, color=colors, height=.58)
@@ -437,7 +437,7 @@ def plots(analysis, staging):
     ax.axhline(2.65, color="#ded9ce", linewidth=1)  # below the two-line Climate & Health note
     fig.subplots_adjust(left=.23, right=.97, top=.76, bottom=.24)
     fig.text(.025, .93, "Wellcome-funded studies: which priority themes do they cover?", fontsize=22, fontweight="bold", color="#10243e")
-    fig.text(.025, .85, f"{total:,} eligible evaluations report Wellcome Trust as a funder; {total - outside} fall in at least one priority theme",
+    fig.text(.025, .85, f"{total:,} eligible studies report Wellcome Trust as a funder; {total - outside} fall in at least one priority theme",
              fontsize=15, color="#705a84")
     fig.text(.025, .035, f"{overlap_text(analysis['wellcome_theme_overlap'], 'Wellcome-funded')}\n"
              "Infectious Diseases and Mental Health use broad disease-group tags, so untagged studies fall outside. Climate & Health is a reviewed title-and-abstract screen.\n"
@@ -626,9 +626,9 @@ def report(analysis, rows):
             extra = f'<aside><strong>Narrower check on anxiety, depression and psychosis:</strong> {focus["n"]:,} eligible studies mention these conditions in their title; {focus["named_funder"]:,} report any funder and {focus["wellcome"]:,} report Wellcome funding. This title screen covers all eligible studies, including those without disease tags. It does not establish early-intervention focus or Wellcome programme eligibility.</aside>'
         lead = ''
         if key == "climate":
-            lead = (f'<aside><strong>Why so few studies?</strong> This map covers health economic evaluations: cost-effectiveness and related '
-                    f'studies of health interventions. Most climate-and-health research is epidemiology or impact modelling, so it falls outside the map. '
-                    f'Only {t["n"]:,} of {total:,} eligible studies ({pct(t["n"], total)}) are economic evaluations that address climate. '
+            lead = (f'<aside><strong>Why so few studies?</strong> This map covers health economic evaluations (cost-effectiveness and related '
+                    f'studies of health interventions) and reviews of them. Most climate-and-health research is epidemiology or impact modelling, so it falls outside the map. '
+                    f'Only {t["n"]:,} of {total:,} eligible studies ({pct(t["n"], total)}) address climate. '
                     f'The {t["reviewed"]:,} candidates found by the keyword screen were each reviewed, and a broader search for related terms found almost no further studies. '
                     f'The small count reflects how thin this evidence is, not a gap in the search.</aside>')
             max_s = max([s["n"] for s in t["subareas"]] or [1])
@@ -680,8 +680,8 @@ def report(analysis, rows):
             '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">'
             f'<style>{STYLE}</style></head><body><main>' + f'''
 <span class="badge">Funder-specific view · Wellcome</span><h1>{escape(SECTION)}</h1>
-<p class="lede">How much economic evaluation evidence exists in Wellcome's three priority themes, and which of those studies report Wellcome Trust as a funder (Wellcome-funded studies). Theme relevance and recorded support are different measures. This view is separate from the global evidence map and is not an official Wellcome grant-portfolio assessment.</p>
-<div class="summary"><div><strong>{wellcome:,}</strong><span>Evaluations report Wellcome Trust as a funder</span></div><div><strong>{wellcome - outside:,}</strong><span>Of these fall in at least one priority theme</span></div><div><strong>{outside:,}</strong><span>Fall outside the three themes · <a href="#outside">see what they cover</a></span></div><div><strong>{pct(analysis['global']['named_funder'], total)}</strong><span>Of all {total:,} evaluations ({years[0]}–{years[1]}) report any funder</span></div></div>
+<p class="lede">How much economic evidence exists in Wellcome's three priority themes, and which of those studies report Wellcome Trust as a funder (Wellcome-funded studies). Theme relevance and recorded support are different measures. This view is separate from the global evidence map and is not an official Wellcome grant-portfolio assessment.</p>
+<div class="summary"><div><strong>{wellcome:,}</strong><span>Studies report Wellcome Trust as a funder</span></div><div><strong>{wellcome - outside:,}</strong><span>Of these fall in at least one priority theme</span></div><div><strong>{outside:,}</strong><span>Fall outside the three themes · <a href="#outside">see what they cover</a></span></div><div><strong>{pct(analysis['global']['named_funder'], total)}</strong><span>Of all {total:,} studies ({years[0]}–{years[1]}) report any funder</span></div></div>
 <h2>The three themes at a glance</h2><p class="hint">Select a theme to see its top funders and settings. A study can belong to more than one theme: {escape(overlap_text(analysis['wellcome_theme_overlap'], 'Wellcome-funded'))} Across all eligible studies, {analysis['all_theme_overlap']['n']:,} fall in more than one theme.</p>
 <div class="panel table-scroll"><table class="overview"><thead><tr><th>Theme</th><th class="num">Theme studies</th><th colspan="2">Wellcome-funded studies</th><th class="num">Share of theme</th><th>Wellcome's rank among funders</th></tr></thead><tbody>{''.join(overview)}</tbody></table></div>
 {outside_html}
@@ -715,14 +715,14 @@ def main():
         if not analysis["wellcome"]["n"] or not analysis["donors"]:
             raise ValueError("No Wellcome records or reported funders; refusing to build an empty analysis.")
         for entry in general_entries:
-            entry.update(file="fig_funder_funders.svg", title="Top donors: who funds economic evaluations, and where?",
-                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} evaluations report a funder. Blue/coral identify single-country studies with known income; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
+            entry.update(file="fig_funder_funders.svg", title="Top funders: who funds economic evidence, and where?",
+                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} studies report a funder. Blue/coral identify single-country studies with known income; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
             nihr = next(d for d in analysis["parent_donors"] if d["funder"] == "NIHR")
             # Alternative views shown as tabs in the figure pop-up; the bar chart stays the default.
             entry["views"] = [
                 {"label": "Funders as named", "file": "fig_funder_funders.svg"},
                 {"label": "Grouped by organisation", "file": "fig_funder_treemap.svg",
-                 "title": "Top donors by organisation: who funds the most studies?",
+                 "title": "Top funders by organisation: who funds the most studies?",
                  "summary": (f"The same funders, with programmes and institutes counted under the organisation they belong to. NIHR (incl. HTA Programme: {nihr['hta']:,}) "
                              f"is named in {nihr['n']:,} studies, and the US NIH including its institutes in "
                              f"{next(d['n'] for d in analysis['parent_donors'] if d['funder'] == 'US NIH'):,}. Bigger box = more studies. "
@@ -731,7 +731,7 @@ def main():
                              "Research for Patient Benefit), Biomedical Research Centres, ARCs/CLAHRCs and fellowships. US NIH includes its "
                              "institutes and centres (e.g. NCI, NIAID, NIDA, NHLBI, NIMH, NCATS). Same-named bodies in other countries stay "
                              "separate. Each study counts once per funder; other funders are counted as in the bar chart.")}]
-        section = {"title": SECTION, "blurb": "A funder-specific view of economic evaluation evidence in Wellcome's three priority themes: Infectious Diseases, Mental Health and Climate & Health. It separates all evidence in each theme from studies that report Wellcome funding, ranks the funders reported within each theme, and sets out how each theme was defined.",
+        section = {"title": SECTION, "blurb": "A funder-specific view of economic evidence in Wellcome's three priority themes: Infectious Diseases, Mental Health and Climate & Health. It separates all evidence in each theme from studies that report Wellcome funding, ranks the funders reported within each theme, and sets out how each theme was defined.",
                    "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-funded studies: which priority themes do they cover?", "caption": "Studies reporting Wellcome Trust as a funder in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses broad disease-group tags and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."},
                             {"file": "wellcome_analysis.html", "html": True, "title": "Theme explorer: who funds each priority theme, and where?", "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health is a reviewed title-and-abstract screen and is small because few economic evaluations address climate."}]}
         # Also drop the section under its earlier name so a rename never leaves a duplicate.

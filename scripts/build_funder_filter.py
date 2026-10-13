@@ -1,7 +1,7 @@
 """Funder data for the Explorer's funder filter.
 
 Reads the funders recorded for each eligible study in the team export and
-normalises the names with the same rules as the Top donors figure
+normalises the names with the same rules as the Top funders figure
 (build_wellcome_analysis.funders_of), so the filter and the figure agree.
 Writes docs/data/funders.json:
 

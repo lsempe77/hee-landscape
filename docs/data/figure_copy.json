@@ -1,12 +1,13 @@
 {
   "fig_growth.webp": {
-    "summary": "The number of economic evaluations has grown rapidly. Half of the included research was published from 2020 onwards. The 2026 count covers only part of the year."
+    "summary": "The number of studies (economic evaluations and reviews of them) has grown rapidly. Half of the included research was published from 2020 onwards. The 2026 count covers only part of the year."
   },
   "fig_method_stream.webp": {
     "title": "How studies measure health benefits is changing",
     "summary": "More studies now use measures that combine length and quality of life. These measures help compare health benefits across different diseases. The 2026 count is incomplete."
   },
   "fig_disease_circular.webp": {
+    "title": "Which disease groups does the economic evidence focus on?",
     "summary": "This chart shows which disease groups receive the most research attention. A study can cover several groups, so the percentages can add up to more than 100%. Only studies with disease information are included."
   },
   "fig_transition.webp": {
@@ -16,7 +17,7 @@
   "paper04.webp": {
     "title": "Disease priorities are changing in lower-income countries",
     "summary": "Compare the diseases studied in earlier and later years. Infectious diseases account for a smaller share of research in lower-income settings, while cancer and respiratory disease account for more. Studies can cover several disease groups.",
-    "caption": "Disease mix of economic evaluations by period (2010–17, 2018–26) and income group. Infectious disease is falling as a share of low- and middle-income research while cancer and respiratory disease rise; the high-income mix is comparatively flat. Disease areas from MeSH subject headings; bars are 95% confidence intervals and point size shows the number of studies."
+    "caption": "Disease mix of studies by period (2010–17, 2018–26) and income group. Infectious disease is falling as a share of low- and middle-income research while cancer and respiratory disease rise; the high-income mix is comparatively flat. Disease areas from MeSH subject headings; bars are 95% confidence intervals and point size shows the number of studies."
   },
   "paper05.webp": {
     "title": "The diseases studied differ by country income",
@@ -53,17 +54,17 @@
     "summary": "Compare reporting across types of healthcare. The chart checks for information about value for money, uncertainty and whose costs are considered. It uses what is reported in abstracts, so a missing item does not mean the study did not address it."
   },
   "fig_dotmap.svg": {
-    "summary": "Each bubble represents a country; larger bubbles mean more economic evaluations mention it. Colours show country income. A study covering several countries can appear in several bubbles.",
-    "title": "Most economic evaluations are about high-income countries"
+    "summary": "Each bubble represents a country; larger bubbles mean more studies mention it. Colours show country income. A study covering several countries can appear in several bubbles.",
+    "title": "Most economic evidence is about high-income countries"
   },
   "fig_worldmap.webp": {
-    "summary": "This map compares the number of evaluations with each country's population. It shows research coverage rather than the quality of the evidence or the amount of funding received.",
+    "summary": "This map compares the number of studies with each country's population. It shows research coverage rather than the quality of the evidence or the amount of funding received.",
     "title": "Studies per person, by country",
-    "caption": "Per-capita choropleth (Robinson): evaluations naming each country per 10\n                      million people. Mid-grey = the 54 countries and territories named by no\n                      eligible study (of 241 Natural Earth polygons, Antarctica excluded); pale grey\n                      = named but outside the 155-country list the shading uses. 31,775\n                      study–country pairs across 187 countries."
+    "caption": "Per-capita choropleth (Robinson): studies naming each country per 10\n                      million people. Mid-grey = the 54 countries and territories named by no\n                      eligible study (of 241 Natural Earth polygons, Antarctica excluded); pale grey\n                      = named but outside the 155-country list the shading uses. 31,775\n                      study–country pairs across 187 countries."
   },
   "paper03.webp": {
     "title": "How much research is available relative to population?",
-    "summary": "Compare economic evaluation counts per 10 million people across country income groups. This adjusts for population size, but does not measure research quality or whether enough evidence exists."
+    "summary": "Compare study counts per 10 million people across country income groups. This adjusts for population size, but does not measure research quality or whether enough evidence exists."
   },
   "fig_authorship_pattern_v2.svg": {
     "title": "Are local researchers involved in studies about their countries?",
@@ -86,7 +87,7 @@
     "caption": "Base: 154 countries with disease-burden data; 31,471 study–country counts (a study naming several countries counts once for each). Eritrea and Mauritius have no identified studies. Studies published 2010–2026 (final year partial); disease burden is GBD 2023 all-cause DALYs. Ratios compare shares, so countries well above the line push others below it. The line is a reference point, not a measure of adequacy or a recommended allocation. Horizontal position within a group is spread out only for readability."
   },
   "paper07.webp": {
-    "summary": "Compare how many economic evaluations countries have relative to illness and early death. The comparison adjusts for disease burden, but does not determine how much research a country needs.",
+    "summary": "Compare how many studies countries have relative to illness and early death. The comparison adjusts for disease burden, but does not determine how much research a country needs.",
     "caption": "Studies per 100,000 DALYs (healthy years lost) against total disease burden, by country and income group (2023). The typical high-income country has 22 times as many studies per unit of burden as the typical low-income country. Studies naming each country divided by GBD 2023 all-cause DALYs; point size shows population."
   },
   "fig_burden_disease_companion.webp": {
@@ -101,7 +102,7 @@
   "fig_deficit.webp": {
     "title": "Where are the largest differences between research and disease burden?",
     "summary": "This chart highlights the largest differences between research output and disease burden. It does not estimate the cost of filling an evidence gap or prove that a particular funding allocation would be best.",
-    "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,627 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,471 pairs). Country colours use July 2026 income groups. Evaluations published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point, not a recommended allocation."
+    "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,627 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,471 pairs). Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point, not a recommended allocation."
   },
   "fig_injustice.webp": {
     "title": "How research attention compares with disease burden worldwide",
@@ -113,11 +114,11 @@
     "caption": "Base: 106 LMIC countries with GBD 2023 all-cause DALYs; 8,732 study–country pairs; 2 countries have no study. Countries ordered by studies per DALY. The first 41 countries crossing 50% of burden carry 53.9% of burden and 1,455 pairs (16.7%); the marker is at these actual coordinates. The five countries with the greatest burden (India, China, Nigeria, Indonesia, Pakistan) instead carry 51.7% of burden and 48.1% of evidence. Gini = 0.49. Country grouping uses July 2026 income classifications; studies span 2010–2026, final year partial. Each multi-country study counts once per country."
   },
   "fig_openaccess.webp": {
-    "summary": "More economic evaluations are available to read without paying. The chart uses recorded open-access status; unknown access status is not treated as paywalled.",
+    "summary": "More studies are available to read without paying. The chart uses recorded open-access status; unknown access status is not treated as paywalled.",
     "caption": "Share of studies that are open access, by year and by the income of the country studied (2010–25; 2026 partial, left out). Fewer than half were open in 2010; by 2025 about four in five were. All three lines use single-country studies with a known income group and a known open-access status: 22,970 studies. Open-access status is from OpenAlex and is known for about 87% of studies."
   },
   "fig_funder_funders.svg": {
-    "title": "Top donors: who funds economic evaluations, and where?",
+    "title": "Top funders: who funds economic evidence, and where?",
     "summary": "The bars show how many studies report each funder, rather than how much money they provided. Only about 27% of studies report a funder in the dataset, so this is an incomplete picture. Colours show study setting; grey retains other settings and missing income information."
   },
   "fig_map_burden.webp": {
@@ -129,7 +130,7 @@
     "summary": "Compare recorded open-access availability across countries. Access information is incomplete; an unknown status does not necessarily mean an article requires payment."
   },
   "fig_map_growth.webp": {
-    "summary": "Compare how economic evaluation output has grown across countries. Growth describes publication counts rather than evidence quality. The final publication year is incomplete."
+    "summary": "Compare how research output has grown across countries. Growth describes publication counts rather than evidence quality. The final publication year is incomplete."
   },
   "fig_map_authorship_v2.svg": {
     "title": "Where do studies include locally based authors?",
@@ -142,11 +143,11 @@
   },
   "fig_equity_time.webp": {
     "title": "A growing share of research focuses on lower-income countries",
-    "summary": "Track the share of economic evaluations about low- and middle-income countries over time. Publication counts show research attention, rather than funding amounts or evidence quality."
+    "summary": "Track the share of studies about low- and middle-income countries over time. Publication counts show research attention, rather than funding amounts or evidence quality."
   },
   "fig_reach_time.webp": {
-    "title": "More countries now have at least one economic evaluation",
-    "summary": "Track how many countries are mentioned in at least one included evaluation. Having one study indicates some coverage; it does not mean there is enough evidence for all healthcare decisions.",
+    "title": "More countries now have at least one study",
+    "summary": "Track how many countries are mentioned in at least one included study. Having one study indicates some coverage; it does not mean there is enough evidence for all healthcare decisions.",
     "caption": "Cumulative reach through each publication year. Countries are grouped by the World Bank classification in force on 1 January of that year; the denominator excludes unavailable country-year groups. Taiwan uses the recorded high-income override. A country is reached once any eligible study has named it by that year, including studies from its earlier income groups. In 2025, solid lines cover 154 classified countries from the 155-country website list (2 unreached); dashed lines cover 197 classified/overridden Natural Earth Sovereign country/Country entities (21 unreached), with no population floor. Denominators vary by year; 197 is not a fixed count of all World Bank economies. 2026 is partial and omitted, so the Ethiopia/Venezuela 2026 fallback does not affect these lines."
   },
   "fig_decision_time.webp": {
@@ -171,10 +172,10 @@
   },
   "fig_wellcome_priorities.svg": {
     "title": "Wellcome-funded studies: which priority themes do they cover?",
-    "summary": "This chart counts studies that report Wellcome Trust as a funder in each theme, with Wellcome's share of theme studies and its rank among reported funders. The grey bar shows studies outside all three themes. Disease groups provide broad theme indicators, and Climate & Health uses a reviewed title-and-abstract screen. Climate & Health is small because few health economic evaluations address climate. Themes can overlap; these counts are not a complete record of Wellcome grants."
+    "summary": "This chart counts studies that report Wellcome Trust as a funder in each theme, with Wellcome's share of theme studies and its rank among reported funders. The grey bar shows studies outside all three themes. Disease groups provide broad theme indicators, and Climate & Health uses a reviewed title-and-abstract screen. Climate & Health is small because few studies in the map address climate. Themes can overlap; these counts are not a complete record of Wellcome grants."
   },
   "wellcome_analysis.html": {
-    "summary": "Explore the evidence and recorded funders within Wellcome's priority themes. The view separates all theme-related studies from Wellcome-funded studies. Theme coverage and funding records are incomplete. Climate & Health is a reviewed title-and-abstract screen, and is small because few health economic evaluations address climate."
+    "summary": "Explore the evidence and recorded funders within Wellcome's priority themes. The view separates all theme-related studies from Wellcome-funded studies. Theme coverage and funding records are incomplete. Climate & Health is a reviewed title-and-abstract screen, and is small because few studies in the map address climate."
   },
   "fig_glance_regions_who.html": {
     "title": "Research coverage and health needs by region",

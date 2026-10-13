@@ -978,7 +978,7 @@ if (typeof document !== "undefined") {
     Geography: [
       {
         title: "Geographic coverage",
-        blurb: "Where studies have been conducted, how many evaluations name each country, " +
+        blurb: "Where studies have been conducted, how many studies name each country, " +
           "and where the evidence base is growing.",
         files: ["fig_dotmap.svg", "fig_worldmap.webp", "fig_map_growth.webp"]
       },
@@ -1619,11 +1619,11 @@ if (typeof document !== "undefined") {
     const heroes = [
       {
         file: "fig_dotmap.svg",
-        alt: "World map of economic evaluations by country and income group",
-        takeaway: "Most economic evaluations are about high-income countries."
+        alt: "World map of economic evidence by country and income group",
+        takeaway: "Most economic evidence is about high-income countries."
       },
       { file: "fig_research_burden_ratio.svg", alt: "Strip plot of country research-to-burden ratios by income group, with group medians and a proportional reference line" },
-      { file: "fig_disease_circular.webp", alt: "Line of sight: disease groups studied in health economic evaluations" },
+      { file: "fig_disease_circular.webp", alt: "Line of sight: disease groups studied in health economic evidence" },
       { file: "fig_intervention_mix.webp", alt: "What gets evaluated: intervention mix by income" },
       { file: "fig_funder_funders.svg", alt: "Top recorded funders by study count and setting, with equal styling for all funders" }
     ];
@@ -1682,7 +1682,7 @@ if (typeof document !== "undefined") {
     wellcomeTitle.textContent = "Wellcome priority themes";
     const wellcomeCopy = el("p");
     wellcomeCopy.textContent = "Explore Infectious Diseases, Mental Health and Climate & Health, " +
-      "including top donors within each theme and Wellcome-funded studies. Theme definitions " +
+      "including top funders within each theme and Wellcome-funded studies. Theme definitions " +
       "and funding coverage are shown in the separate view.";
     const wellcomeLink = el("button", "card-header-link overview-explore-link");
     wellcomeLink.type = "button";

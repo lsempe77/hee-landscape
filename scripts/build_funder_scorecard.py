@@ -130,7 +130,7 @@ def main():
             spine.set_color("#c9c2b4")
 
     fig.text(.02, .965, TITLE, fontsize=26, fontweight="bold", color=ink, va="top")
-    fig.text(.02, .915, "Each country's share of economic evaluations divided by its share of global disease burden. "
+    fig.text(.02, .915, "Each country's share of studies divided by its share of global disease burden. "
              "Country size does not drive the ranking. It is a benchmark, not a funding recommendation.",
              fontsize=14.5, color="#33475f", va="top")
     fig.legend(handles=[Patch(color=color[g], label=g) for g in GROUPS], loc="upper left",
@@ -163,7 +163,7 @@ def main():
     if len(entries) != 1:
         raise SystemExit("Expected exactly one scorecard gallery entry in content.json.")
     entries[0].update(file=f"{STEM}.svg", title=TITLE, caption=(
-        "Each country's share of economic evaluations divided by its share of global disease burden "
+        "Each country's share of studies divided by its share of global disease burden "
         "(GBD 2023 all-cause DALYs), so country size does not drive the ranking. " + caption.replace("\n", " ") +
         " Proportional is a reference point, not a measure of adequacy or a recommended allocation. "
         f"Full country values: {STEM}.csv."))

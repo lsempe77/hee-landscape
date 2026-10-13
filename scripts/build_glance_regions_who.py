@@ -83,7 +83,7 @@ NOTES = {
                     "so this row uses research themes instead. A computer grouped all studies by the wording of their abstracts "
                     "into 73 themes (a 'topic model'), and we gave each theme that is about one disease a plain name, "
                     "such as HIV or breast cancer; themes about a procedure or setting rather than a disease are left out. "
-                    "The percentage is the share of the region's evaluations in that theme. Each study belongs to at most one theme, "
+                    "The percentage is the share of the region's studies in that theme. Each study belongs to at most one theme, "
                     "and about 14% of studies fit no theme, so these shares are a lower bound. The dot colour shows "
                     "communicable, non-communicable or injury, as in the disease focus row above.",
     "utility_region": "Share of the region's studies that report QALYs. The red line is the share across all studies.",
@@ -287,7 +287,7 @@ def render(v):
     start, end, regions = v["start"], v["end"], v["regions"]
     period = f"{start}–{end}"
     kpis = [
-        (fmt_int(v["n_studies"]), f"health economic evaluations, {period}", None),
+        (fmt_int(v["n_studies"]), f"studies (economic evaluations and reviews), {period}", None),
         (fmt_int(sum(1 for i in v["per_country"] if v["per_country"][i] > 0)),
          "countries with at least one study", "countries"),
         (pct(v["qaly_all"]), "report QALYs (years of life in full health)", "utility"),
@@ -433,25 +433,25 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 <div class="wrap">
   <div class="eyebrow"><span>Health economic evaluation map</span><span class="badge">Data as of {built}</span></div>
   <h1>Health economic research compared with disease burden</h1>
-  <p class="lede">Compared with how much illness and early death they carry, high-income countries have far more economic evaluations than lower-income countries.</p>
+  <p class="lede">Compared with how much illness and early death they carry, high-income countries have far more economic evidence than lower-income countries.</p>
 
   <div class="sec"><b>A</b><h2>Research intensity by country</h2><span>Studies per 100,000 healthy years lost (DALYs) · median {median}</span>{q_intensity}</div>
   <div id="map"></div>
 
   <div class="kpis">{kpis}</div>
 
-  <div class="sec"><b>B</b><h2>Profile of evaluations by region</h2><span>Each card matches the black region tag on the map</span></div>
+  <div class="sec"><b>B</b><h2>Profile of studies by region</h2><span>Each card matches the black region tag on the map</span></div>
   <div class="regions">
     <div class="labels">
       <div></div><div></div><div></div>
       <div class="lab">Marker shows where each region falls on the map's colour scale {q_intensity}</div>
-      <div class="lab"><strong>Disease focus {q_disease}</strong>Share of disease-coded evaluations. 1 dot = 1%
+      <div class="lab"><strong>Disease focus {q_disease}</strong>Share of disease-coded studies. 1 dot = 1%
         <span class="key"><i style="background:#3f8f80"></i>Communicable</span>
         <span class="key"><i style="background:#8a63a8"></i>Non-communicable</span>
         <span class="key"><i style="background:#d8a03c"></i>Injuries</span></div>
-      <div class="lab"><strong>Top three diseases {q_top}</strong>Bar = share of evaluations</div>
+      <div class="lab"><strong>Top three diseases {q_top}</strong>Bar = share of studies</div>
       <div class="lab"><strong>Use of QALYs {q_utility}</strong>Black = share reporting QALYs; red line = all studies</div>
-      <div class="lab"><strong>Trend over time {q_trend}</strong>% of the region's countries with an evaluation: solid = at least 1, dashed = 2 or more, grey = all regions (at least 1)</div>
+      <div class="lab"><strong>Trend over time {q_trend}</strong>% of the region's countries with a study: solid = at least 1, dashed = 2 or more, grey = all regions (at least 1)</div>
     </div>
     {cards}
   </div>
@@ -472,7 +472,7 @@ const MAP = {map_json};
   const rows = MAP.rows;
   const z = rows.map(r => r.rate > 0 ? Math.log10(r.rate) : null);
   const text = rows.map(r => r.country + "<br>" + r.n.toLocaleString("en-GB") + " studies" +
-    (r.rate > 0 ? "<br>" + r.rate.toFixed(2) + " per 100,000 DALYs" : "<br>no eligible evaluation"));
+    (r.rate > 0 ? "<br>" + r.rate.toFixed(2) + " per 100,000 DALYs" : "<br>no eligible study"));
   const none = rows.filter(r => r.rate === 0);
   window.Plotly.newPlot("map", [
     {{ type: "choropleth", locations: rows.filter(r => r.rate > 0).map(r => r.iso3),
@@ -482,7 +482,7 @@ const MAP = {map_json};
        colorbar: {{ title: {{ text: "per 100,000<br>DALYs", font: {{ size: 11 }} }}, thickness: 10, len: 0.55, x: 0.02, y: 0.3,
          tickvals: [MAP.zmin, Math.log10(MAP.median), MAP.zmax], ticktext: ["low", "median", "high"] }} }},
     {{ type: "choropleth", locations: none.map(r => r.iso3), z: none.map(() => 0), showscale: false,
-       text: none.map(r => r.country + "<br>no eligible evaluation"), hoverinfo: "text",
+       text: none.map(r => r.country + "<br>no eligible study"), hoverinfo: "text",
        colorscale: [[0, "#dcd6cc"], [1, "#dcd6cc"]], marker: {{ line: {{ color: "#ffffff", width: 0.4 }} }} }},
     // Region tags: black boxes, then their white codes on top.
     {{ type: "scattergeo", lon: MAP.tags.map(t => t.lon), lat: MAP.tags.map(t => t.lat), mode: "markers",

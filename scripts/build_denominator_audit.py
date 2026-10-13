@@ -115,7 +115,7 @@ def main():
                        "Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export "
                        "and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. "
                        "This larger country set differs from the 154-country website burden analysis (31,471 pairs). "
-                       "Country colours use July 2026 income groups. Evaluations published 2010–2026, final year partial; "
+                       "Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; "
                        "GBD 2023 all-cause DALYs. Proportionality is a reference point, not a recommended allocation.")
     fig.text(.09, .035, textwrap.fill(deficit_caption, 138), va="bottom", fontsize=9, linespacing=1.5)
     updated_deficit = save(fig, "fig_deficit_checked", "Where research counts differ most from burden shares", deficit_caption)

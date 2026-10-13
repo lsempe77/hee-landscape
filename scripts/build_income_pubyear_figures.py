@@ -150,7 +150,7 @@ def equity_time(rows):
     save(fig, "fig_equity_time_pubyear.webp")
     return {"caption": f"Share of each year's single-country studies about low- and middle-income countries (LMICs): "
                        f"{pct(vals[0])} in {years[0]} → {pct(vals[-1])} in {years[-1]}, against the 83% of global disease "
-                       "burden (GBD 2023 all-cause DALYs) those countries carry (dashed line). Full economic evaluations "
+                       "burden (GBD 2023 all-cause DALYs) those countries carry (dashed line). Studies "
                        f"naming a single country with a known income group ({n:,}); 2026 is partial and left out. Income "
                        "group: the World Bank classification in force on 1 January of the publication year (World Bank "
                        "historical classifications)."}
@@ -188,10 +188,10 @@ def metric(rows):
     footer(fig, f"All {len(rows):,} studies; the income rows use studies of a single country. A study may report "
                 f"neither measure, one or both. {RULE}")
     save(fig, "fig_metric_pubyear.webp")
-    return {"caption": f"Share of eligible evaluations reporting each comparable metric. The metric flips with income: "
+    return {"caption": f"Share of eligible studies reporting each comparable metric. The metric flips with income: "
                        f"high-income research reports QALYs ({pct(hi[0])}) and almost no DALYs ({pct(hi[1])}); "
                        f"low-income research does the reverse ({pct(lo[1])} DALYs, {pct(lo[0])} QALYs) — so rich and poor "
-                       f"settings are measured in different units. Base: {len(rows):,} eligible evaluations (income shown "
+                       f"settings are measured in different units. Base: {len(rows):,} eligible studies (income shown "
                        "for single-country studies, by the World Bank group in force on 1 January of the publication year); "
                        "a study may report neither, one, or both."}
 
@@ -248,8 +248,8 @@ def intervention_mix(rows):
                 "assigned by a large language model from each abstract and checked against keyword and topic "
                 f"groupings. {RULE}")
     save(fig, "fig_intervention_mix_pubyear.webp")
-    low = ("care-model and organisational evaluations " + f"({pct(cm[3], 1)}) narrowly become the most common class"
-           if cm[3] > ph[3] else f"they stay narrowly ahead of care-model and organisational evaluations ({pct(cm[3], 1)})")
+    low = ("care-model and organisational studies " + f"({pct(cm[3], 1)}) narrowly become the most common class"
+           if cm[3] > ph[3] else f"they stay narrowly ahead of care-model and organisational studies ({pct(cm[3], 1)})")
     return {"caption": f"Share of each income group's eligible single-country studies whose primary intervention class is "
                        f"the given type (the optional secondary class is not folded in). Pharmaceuticals peak in "
                        f"upper-middle-income settings ({pct(ph[1], 1)}) and fall to {pct(ph[3], 1)} at low income, where "
@@ -306,8 +306,8 @@ def paper05(rows, geo_groups):
                 f"{n['Upper middle income']:,}, high {n['High income']:,}. {RULE}", y=.015, width=135)
     save(fig, "paper05_pubyear.webp")
     inf = share["Infectious"]
-    return {"caption": "Percentage of each income group's disease-coded full "
-                       "economic evaluations that name each disease area, across the 14 harmonised groups (maternal & "
+    return {"caption": "Percentage of each income group's disease-coded "
+                       "studies that name each disease area, across the 14 harmonised groups (maternal & "
                        "neonatal includes the MeSH pregnancy-complications branch C12.050.703; mental & substance use is "
                        "MeSH F03). Rows run from areas most concentrated in low-income research (top) to high-income "
                        f"research (bottom): infectious disease dominates lower-income groups ({pct(inf['Low income'])} of "

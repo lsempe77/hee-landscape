@@ -141,7 +141,7 @@ def main():
     lic = [c for c in rows if c["income"] == GROUPS[0]]
     fig.subplots_adjust(left=.13, right=.89, bottom=.2, top=.74)
     fig.text(.03, .965, TITLE.replace(" relative", "\nrelative"), fontsize=21, va="top", linespacing=1.15, fontweight="bold", color=ink)
-    fig.text(.03, .862, "Each point is a country: its share of economic evaluations divided by its share of global disease burden.",
+    fig.text(.03, .862, "Each point is a country: its share of studies divided by its share of global disease burden.",
              fontsize=13.5, color="#33475f")
     fig.text(.03, .826, f"{below_all} of {len(rows)} countries have a smaller research share than burden share, "
              f"including {sum(c['ratio'] < 1 for c in lic)} of {len(lic)} low-income countries.",
@@ -149,7 +149,7 @@ def main():
     years = meta["years"]
     caption = (f"Base: {len(rows)} countries with positive burden data; {studies:,} study-country counts. "
                f"{excluded} country excluded because burden is unavailable. {' and '.join(zero_names)} have no identified studies.\n"
-               f"Evaluations published {years[0]}–{years[1]} (final year partial); GBD 2023 all-cause DALYs. "
+               f"Studies published {years[0]}–{years[1]} (final year partial); GBD 2023 all-cause DALYs. "
                "A study naming multiple countries counts once for each country.\n"
                "Ratios compare shares, so countries well above proportional push others below it. "
                "Proportional is a reference point, not a measure of adequacy or a recommended allocation.\n"

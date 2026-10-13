@@ -20,7 +20,7 @@ Not covered here:
 3. **Titles state the finding plainly, without wordplay or loaded words.** Avoid "(Un)equal weight", "grabbing… market", "exploit", "seized", "injustice", "inequity", "donors", "scorecard", "opportunity matrix", "where the next pound buys", "real progress", "public good", and "never overlap" (true by construction).
 4. **One footnote line at most** (source and years). Denominators, n values, confidence-interval methods, map projections, population cut-offs and MeSH codes move to Technical details.
 5. **Consistent terms across figures:**
-   - "studies", not a mix of studies, evaluations and evidence
+   - "studies", not a mix of studies, evaluations and evidence. Every figure counts all 41,657 studies, and 2,653 of them are reviews of earlier studies (1,856 systematic, 797 other), so "economic evaluations" misdescribes the base. Use "studies" in counts and axes, and "economic evidence" in titles about the whole evidence base (e.g. "Who funds economic evidence"). Keep "evaluation type" and the method names, which apply to reviews too.
    - "low- and middle-income", not LMIC or low-/middle-income
    - "funders", not donors
    - "100,000", not "100 000"
@@ -52,10 +52,17 @@ Not covered here:
 
 ## Per-figure changes
 
+**Titles that say "economic evaluations" (the base includes reviews; see rule 5)**
+- `fig_disease_circular`: "Which disease groups are the focus of health economic evidence?"
+- `paper03`: "Studies per 10 million people, by income group".
+- `fig_inequality`: "Small disease burden, few studies".
+- `paper02`: "measured evaluations" can stay: it contrasts how evidence was produced.
+- `paper01`: keep "full economic evaluations" and reviews as the two named parts, but update the review count to the title-and-abstract screen (see the table above).
+
 **fig_method_stream**
 - Title: "More studies now measure health gains in QALYs or DALYs". The current "exploit" reads as misuse.
-- Subtitle: "Between 2010 and 2025, cost-utility studies rose from 43% to 50% of all evaluations." (Drop "seized".)
-- Y-axis: "Evaluations published per year".
+- Subtitle: "Between 2010 and 2025, cost-utility studies rose from 43% to 50% of all studies." (Drop "seized".)
+- Y-axis: "Studies published per year".
 - Legend: add a one-line plain gloss of the four evaluation types in the footnote.
 
 **fig_disease_circular**
@@ -96,7 +103,7 @@ Not covered here:
 - Country names: "Serbia" and "Eswatini".
 
 **fig_dotmap**
-- Title: "Most economic evaluations are about high-income countries", not "Look north…".
+- Title: "Most economic evidence is about high-income countries", not "Look north…".
 
 **fig_authorship_pattern** (wait for the affiliation data and redraw with income at publication)
 - Panel B: "In 70% of these studies, every other co-author is based in a high-income country."
@@ -166,7 +173,7 @@ Not covered here:
 - Use a neutral colour pair, since red reads as "bad".
 
 **fig_reach_time**
-- Title: "Nearly every country now has at least one economic evaluation".
+- Title: "Nearly every country now has at least one study".
 - Legend: "Countries counted", not "Denominator". Fix the overlapping end labels.
 
 **fig_decision_time**
