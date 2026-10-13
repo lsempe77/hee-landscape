@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-13-who-regions";
+const BUILD = "2026-10-13-income-pubyear";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -141,6 +141,12 @@ export function loadData({ dict, studies, geo, disease, countries, content }) {
     incLv: dict.meta.inc_lv.slice(),
     incOrder: dict.meta.inc_lv.slice().reverse(),
     incomeOf: countries.map(r => r.income),
+    // Income group in force on 1 January of a publication year (World Bank
+    // FY of that year); incomeOf is the current group, for country views.
+    incomeAt: (c, y) => {
+      const v = countries[c].income_y;
+      return v ? (v[y - dict.meta.years[0]] ?? null) : countries[c].income;
+    },
     regionOf: countries.map(r => r.who_region),
     disease_grps: dict.disease_grps,
     diseaseSets,
@@ -213,7 +219,7 @@ export function applyFilters(db, filt) {
     const s = g.s[i];
     if (!base[s]) continue;
     const c = g.c[i];
-    if (incSet && !incSet.has(db.incomeOf[c])) continue;
+    if (incSet && !incSet.has(db.incomeAt(c, g.y[i]))) continue;
     if (regSet) {
       const r = db.regionOf[c];
       if (r == null || !regSet.has(r)) continue;
@@ -304,7 +310,7 @@ export function trendSeries(db, flt, varName) {
     const seen = new Set();
     for (const i of flt.geoRows) {
       const s = db.geo.s[i], y = db.geo.y[i], c = db.geo.c[i];
-      const cat = varName === "income" ? db.incomeOf[c] : db.regionOf[c];
+      const cat = varName === "income" ? db.incomeAt(c, y) : db.regionOf[c];
       if (cat == null) continue;
       const key = s + "|" + y + "|" + cat;
       if (seen.has(key)) continue;
@@ -2050,7 +2056,7 @@ if (typeof document !== "undefined") {
         const s = g.s[i];
         if (!mask[s]) continue;
         if (!countriesOf.has(s)) countriesOf.set(s, []);
-        countriesOf.get(s).push(db.countries[g.c[i]]);
+        countriesOf.get(s).push(Object.assign({ income_pub: db.incomeAt(g.c[i], g.y[i]) }, db.countries[g.c[i]]));
       }
       const diseasesOf = new Map();
       const d = db.disease;
@@ -2072,7 +2078,7 @@ if (typeof document !== "undefined") {
       const st = db.studies;
       const label = (col, s) => db.levels[col][st[col][s]] ?? "";
       const yesNo = v => v === 1 ? "Yes" : v === 0 ? "No" : "";
-      const header = ["map_id", "year", "title", "countries", "income_groups", "disease_groups",
+      const header = ["map_id", "year", "title", "countries", "income_groups", "income_groups_at_publication", "disease_groups",
         "evaluation_type", "design_basis", "approach", "qaly", "open_access", "geographic_scope",
         "topic_domain", "abstract_reports_icer", "abstract_reports_threshold",
         "record_id", "doi", "url", "url_source", "doi_source", "publication_link"];
@@ -2083,6 +2089,7 @@ if (typeof document !== "undefined") {
           st.id[s], st.year[s], titleOf.get(s) || "",
           cs.map(c => c.country).join("; "),
           [...new Set(cs.map(c => c.income))].join("; "),
+          [...new Set(cs.map(c => c.income_pub ?? "Not classified"))].join("; "),
           (diseasesOf.get(s) || []).join("; "),
           label("econ_eval_type", s), label("design_basis", s), label("model_label", s),
           label("qaly_label", s), label("oa_label", s), label("geo_scope", s), label("topic_domain", s),
