@@ -179,6 +179,6 @@
   },
   "fig_glance_regions_who_v2.html": {
     "title": "Research coverage and health needs by region",
-    "summary": "Compare WHO regions' research coverage against disease burden, with headline figures and each region's disease focus, use of utility measures (QALYs, DALYs) and country coverage over time. Use the information buttons to see how each measure was calculated. These comparisons describe evidence coverage, rather than recommending a funding allocation."
+    "summary": "Compare WHO regions' research coverage against disease burden, with headline figures and each region's disease focus, use of utility measures (QALYs, DALYs) and country coverage over time. Use the information buttons to see how each measure was calculated."
   }
 }
