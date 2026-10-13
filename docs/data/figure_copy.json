@@ -84,7 +84,7 @@
   },
   "fig_research_burden_ratio.svg": {
     "summary": "Each dot is a country. Dots below the line have less research than their share of the world's illness and early death would suggest. A typical low-income country has about a tenth of that share; a typical high-income country has about twice its share. The line is a reference point, not a target.",
-    "caption": "Base: 154 countries with disease-burden data; 31,471 study–country counts (a study naming several countries counts once for each). Eritrea and Mauritius have no identified studies. Studies published 2010–2026 (final year partial); disease burden is GBD 2023 all-cause DALYs. Ratios compare shares, so countries well above the line push others below it. The line is a reference point, not a measure of adequacy or a recommended allocation. Horizontal position within a group is spread out only for readability."
+    "caption": "Base: 154 countries with disease-burden data; 31,471 study–country counts (a study naming several countries counts once for each). Eritrea and Mauritius have no identified studies. Studies published 2010–2026 (final year partial); disease burden is GBD 2023 all-cause DALYs. Ratios compare shares, so countries well above the line push others below it. The line is a reference point, not a measure of adequacy. Horizontal position within a group is spread out only for readability."
   },
   "paper07.webp": {
     "summary": "Compare how many studies countries have relative to illness and early death. The comparison adjusts for disease burden, but does not determine how much research a country needs.",
@@ -92,7 +92,7 @@
   },
   "fig_burden_disease_companion.webp": {
     "title": "Does research attention match the burden of different diseases?",
-    "summary": "Compare each disease group's share of research with its share of illness and early death. This helps identify areas receiving relatively less research attention; it is not a recommended funding allocation."
+    "summary": "Compare each disease group's share of research with its share of illness and early death. This helps identify areas receiving relatively less research attention."
   },
   "paper08.webp": {
     "title": "Some disease groups receive less research attention relative to their burden",
@@ -101,8 +101,8 @@
   },
   "fig_deficit.webp": {
     "title": "Where are the largest differences between research and disease burden?",
-    "summary": "This chart highlights the largest differences between research output and disease burden. It does not estimate the cost of filling an evidence gap or prove that a particular funding allocation would be best.",
-    "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,627 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,471 pairs). Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point, not a recommended allocation."
+    "summary": "This chart highlights the largest differences between research output and disease burden.",
+    "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,627 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,471 pairs). Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point."
   },
   "fig_injustice.webp": {
     "title": "How research attention compares with disease burden worldwide",

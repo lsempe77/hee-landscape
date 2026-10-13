@@ -165,7 +165,7 @@ def main():
     entries[0].update(file=f"{STEM}.svg", title=TITLE, caption=(
         "Each country's share of studies divided by its share of global disease burden "
         "(GBD 2023 all-cause DALYs), so country size does not drive the ranking. " + caption.replace("\n", " ") +
-        " Proportional is a reference point, not a measure of adequacy or a recommended allocation. "
+        " Proportional is a reference point, not a measure of adequacy. "
         f"Full country values: {STEM}.csv."))
     content_path.write_text(json.dumps(content, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"Success: {len(rows)} countries plotted; zero-study: {', '.join(zero)}.")

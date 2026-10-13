@@ -32,6 +32,6 @@
   "fig_deficit.webp": {
     "file": "fig_deficit_checked.svg",
     "title": "Where research counts differ most from burden shares",
-    "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,627 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,471 pairs). Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point, not a recommended allocation."
+    "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,627 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,471 pairs). Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point."
   }
 }

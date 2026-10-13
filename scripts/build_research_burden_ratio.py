@@ -152,7 +152,7 @@ def main():
                f"Studies published {years[0]}–{years[1]} (final year partial); GBD 2023 all-cause DALYs. "
                "A study naming multiple countries counts once for each country.\n"
                "Ratios compare shares, so countries well above proportional push others below it. "
-               "Proportional is a reference point, not a measure of adequacy or a recommended allocation.\n"
+               "Proportional is a reference point, not a measure of adequacy.\n"
                "Horizontal position within a group is random jitter. Full country values: research_burden_ratios.csv.")
     fig.text(.03, .03, caption, fontsize=10.5, color=muted, linespacing=1.6)
     entry.update(file="fig_research_burden_ratio.svg", title=TITLE, caption=caption.replace("\n", " "))
