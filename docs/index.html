@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-13-review-types">
+<link rel="stylesheet" href="styles.css?v=2026-10-13-filter-help">
 </head>
 <body>
 
@@ -123,44 +123,54 @@
           <label class="control-label" for="x-disease">Disease area</label>
           <select id="x-disease" multiple placeholder="All areas"></select>
         </div>
-        <div class="control-group">
-          <label class="control-label" for="x-evaltype">Evaluation type</label>
+        <div class="control-group has-filter-help">
+          <div class="control-label-row">
+            <label class="control-label" for="x-evaltype">Evaluation type</label>
+            <span class="filter-help" tabindex="0" role="button" aria-label="About evaluation type" aria-describedby="tip-evaltype">?</span>
+            <span class="filter-tip" role="tooltip" id="tip-evaltype">How health effects are counted. Cost-utility: in QALYs or DALYs. Cost-effectiveness: in natural units such as lives saved. Cost-benefit: in money. Cost-consequence: costs and effects listed side by side. Choose “Systematic review” or “Other review” to see reviews instead; the four types are then hidden, because reviews are not counted as a type. In charts, reviews that report no evaluation of their own appear as “Review (no evaluation type)”.</span>
+          </div>
           <select id="x-evaltype" multiple placeholder="All types"></select>
-          <p class="plot-note">How health effects are counted. Cost-utility: in QALYs or DALYs. Cost-effectiveness:
-            in natural units such as lives saved. Cost-benefit: in money. Cost-consequence: costs and effects listed
-            side by side. Choose “Systematic review” or “Other review” to see reviews instead; the four types are
-            then hidden, because reviews are not counted as a type. In charts, reviews that report no evaluation of
-            their own appear as “Review (no evaluation type)”.</p>
         </div>
-        <div class="control-group">
-          <label class="control-label" for="x-design">Where the data come from</label>
+        <div class="control-group has-filter-help">
+          <div class="control-label-row">
+            <label class="control-label" for="x-design">Where the data come from</label>
+            <span class="filter-help" tabindex="0" role="button" aria-label="About where the data come from" aria-describedby="tip-design">?</span>
+            <span class="filter-tip" role="tooltip" id="tip-design">The kind of study the costs and effects are drawn from, for example a randomised trial (RCT), routine records (observational) or published sources (literature/registry synthesis).</span>
+          </div>
           <select id="x-design" multiple placeholder="All designs"></select>
-          <p class="plot-note">The kind of study the costs and effects are drawn from, for example a randomised
-            trial (RCT), routine records (observational) or published sources (literature/registry synthesis).</p>
         </div>
-        <div class="control-group">
-          <label class="control-label" for="x-funder">Funder</label>
+        <div class="control-group has-filter-help">
+          <div class="control-label-row">
+            <label class="control-label" for="x-funder">Funder</label>
+            <span class="filter-help" tabindex="0" role="button" aria-label="About funder" aria-describedby="tip-funder">?</span>
+            <span class="filter-tip" role="tooltip" id="tip-funder">As named in the publication record. About a quarter of studies report a funder, so choosing a funder shows only studies that name it. Numbers in brackets are studies.</span>
+          </div>
           <select id="x-funder" multiple placeholder="All studies"></select>
-          <p class="plot-note">As named in the publication record. About a quarter of studies report a funder, so
-            choosing a funder shows only studies that name it. Numbers in brackets are studies.</p>
         </div>
-        <div class="control-group">
-          <label class="control-label" for="x-language">Publication language</label>
+        <div class="control-group has-filter-help">
+          <div class="control-label-row">
+            <label class="control-label" for="x-language">Publication language</label>
+            <span class="filter-help" tabindex="0" role="button" aria-label="About publication language" aria-describedby="tip-language">?</span>
+            <span class="filter-tip" role="tooltip" id="tip-language">From the publication record. Almost all included studies are in English, which reflects how studies were searched rather than the wider literature.</span>
+          </div>
           <select id="x-language" multiple placeholder="All languages"></select>
-          <p class="plot-note">From the publication record. Almost all included studies are in English, which
-            reflects how studies were searched rather than the wider literature.</p>
         </div>
 
-        <div class="control-group">
-          <label class="control-label">Approach</label>
+        <div class="control-group has-filter-help">
+          <div class="control-label-row">
+            <label class="control-label">Approach</label>
+            <span class="filter-help" tabindex="0" role="button" aria-label="About approach" aria-describedby="tip-approach">?</span>
+            <span class="filter-tip" role="tooltip" id="tip-approach">Model-based: results estimated with a computer model. Measured: results taken directly from data collected on patients.</span>
+          </div>
           <div class="radio-inline" id="x-model"></div>
-          <p class="plot-note">Model-based: results estimated with a computer model. Measured: results taken
-            directly from data collected on patients.</p>
         </div>
-        <div class="control-group">
-          <label class="control-label">QALY use</label>
+        <div class="control-group has-filter-help">
+          <div class="control-label-row">
+            <label class="control-label">QALY use</label>
+            <span class="filter-help" tabindex="0" role="button" aria-label="About qaly use" aria-describedby="tip-qaly-use">?</span>
+            <span class="filter-tip" role="tooltip" id="tip-qaly-use">A QALY (quality-adjusted life year) is one year of life in full health.</span>
+          </div>
           <div class="radio-inline" id="x-qaly"></div>
-          <p class="plot-note">A QALY (quality-adjusted life year) is one year of life in full health.</p>
         </div>
         <div class="control-group">
           <label class="control-label">Open access</label>
@@ -470,7 +480,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-13-review-types"></script>
+<script type="module" src="app.js?v=2026-10-13-filter-help"></script>
 
 </body>
 </html>

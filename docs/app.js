@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-13-review-types";
+const BUILD = "2026-10-13-filter-help";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -1303,10 +1303,13 @@ if (typeof document !== "undefined") {
   // (hee_analysis_master_v2.csv `review_type`, 2026-10-12): an automated
   // title-and-abstract screen of the included studies. Update with the export.
   const REVIEW_COUNTS = { systematic: 1856, other: 797 };
-  const REVIEW_ONLY = db.dict.meta.review_only || 1986;
+  // paragraphs is a getter: it is read when the help opens, after the data
+  // has loaded (db is still null while this block runs).
   const REVIEW_HELP = {
     title: "How are reviews counted?",
-    paragraphs: [
+    get paragraphs() {
+      const reviewOnly = (db && db.dict.meta.review_only) || 1986;
+      return [
       "Reviews bring together the results of earlier studies. A systematic review searches for and appraises " +
       "studies using set, reported methods; other reviews (narrative, scoping or rapid reviews, or reviews that " +
       "do not describe themselves as systematic) are counted separately.",
@@ -1314,10 +1317,11 @@ if (typeof document !== "undefined") {
       "Some reviews also include the authors' own evaluation. The selection diagram uses an older, stricter " +
       "title-only flag and counts 1,706 reviews.",
       "Charts of evaluation type (cost-benefit, cost-consequence, cost-effectiveness, cost-utility) do not count " +
-      "the " + fmtNum(REVIEW_ONLY) + " reviews that report no evaluation of their own: they appear as a separate " +
+      "the " + fmtNum(reviewOnly) + " reviews that report no evaluation of their own: they appear as a separate " +
       "“Review (no evaluation type)” group, and type percentages leave them out. Reviews that also report " +
       "the authors' own evaluation keep its type."
-    ]
+      ];
+    }
   };
 
   const TILE_ACTIONS = {

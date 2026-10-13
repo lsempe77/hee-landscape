@@ -1154,6 +1154,46 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   margin: 0 0 .35rem;
 }
 .sidebar .control-group { margin-bottom: .9rem; }
+/* Filter explanations sit behind a "?" next to the label and show on hover,
+   keyboard focus or tap. The tip spans the control group so it never runs
+   past the sidebar's edge. */
+.sidebar .control-group.has-filter-help { position: relative; }
+.control-label-row { display: flex; align-items: center; gap: .4rem; margin: 0 0 .35rem; }
+.sidebar .control-label-row .control-label { margin: 0; }
+.filter-help {
+  display: inline-flex;
+  flex: 0 0 16px;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: var(--hee-accent);
+  font: 700 .62rem/1 'Inter', system-ui, sans-serif;
+  cursor: help;
+  user-select: none;
+}
+.filter-help:hover,
+.filter-help:focus-visible { background: color-mix(in srgb, var(--hee-accent) 10%, white); }
+.filter-help:focus-visible { outline: 2px solid var(--hee-accent); outline-offset: 2px; }
+.filter-tip {
+  display: none;
+  position: absolute;
+  top: 1.6rem;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  padding: .6rem .75rem;
+  border-radius: 8px;
+  background: #10243e;
+  color: #fff;
+  font-size: .74rem;
+  line-height: 1.45;
+  box-shadow: 0 6px 18px rgba(16, 36, 62, .22);
+}
+.filter-help:hover + .filter-tip,
+.filter-help:focus + .filter-tip { display: block; }
 .sidebar hr { border: none; border-top: 1px solid var(--hee-line); margin: 1rem 0; }
 .sidebar .text-muted { color: var(--hee-muted); font-size: .78rem; line-height: 1.5; }
 .plot-note { color: var(--hee-muted); font-size: .72rem; line-height: 1.45; margin: 6px 0 0; }
