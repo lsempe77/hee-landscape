@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-13-income-pubyear-figs">
+<link rel="stylesheet" href="styles.css?v=2026-10-13-plain-language">
 </head>
 <body>
 
@@ -126,19 +126,39 @@
         <div class="control-group">
           <label class="control-label" for="x-evaltype">Evaluation type</label>
           <select id="x-evaltype" multiple placeholder="All types"></select>
+          <p class="plot-note">How health effects are counted. Cost-utility: in QALYs or DALYs. Cost-effectiveness:
+            in natural units such as lives saved. Cost-benefit: in money. Cost-consequence: costs and effects listed
+            side by side.</p>
         </div>
         <div class="control-group">
-          <label class="control-label" for="x-design">Design basis</label>
+          <label class="control-label" for="x-design">Where the data come from</label>
           <select id="x-design" multiple placeholder="All designs"></select>
+          <p class="plot-note">The kind of study the costs and effects are drawn from, for example a randomised
+            trial (RCT), routine records (observational) or published sources (literature/registry synthesis).</p>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-funder">Funder</label>
+          <select id="x-funder" multiple placeholder="All studies"></select>
+          <p class="plot-note">As named in the publication record. About a quarter of studies report a funder, so
+            choosing a funder shows only studies that name it. Numbers in brackets are studies.</p>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-language">Publication language</label>
+          <select id="x-language" multiple placeholder="All languages"></select>
+          <p class="plot-note">From the publication record. Almost all included studies are in English, which
+            reflects how studies were searched rather than the wider literature.</p>
         </div>
 
         <div class="control-group">
           <label class="control-label">Approach</label>
           <div class="radio-inline" id="x-model"></div>
+          <p class="plot-note">Model-based: results estimated with a computer model. Measured: results taken
+            directly from data collected on patients.</p>
         </div>
         <div class="control-group">
           <label class="control-label">QALY use</label>
           <div class="radio-inline" id="x-qaly"></div>
+          <p class="plot-note">A QALY (quality-adjusted life year) is one year of life in full health.</p>
         </div>
         <div class="control-group">
           <label class="control-label">Open access</label>
@@ -154,11 +174,12 @@
         <p class="download-status" id="x-download-status" aria-live="polite"></p>
         <hr>
         <p class="text-muted">
-          Every filter combines. Open-access status is known for 87% of studies; “Unknown”
-          records are excluded when a side is chosen. Country panels count a multi-country
-          study once per country it is about. The income filter and the trend by income use the World Bank
-          group in force on 1 January of each study’s publication year; country tables, maps and profiles show the
-          current group (July 2026).
+          Filters work together. Open-access status is known for 87% of studies, so choosing
+          “Open access” or “Not open” leaves out studies whose status is unknown. A study about
+          several countries counts once for each country. The income filter and the trend by income use the World Bank
+          group in force on 1 January of each study’s publication year. This filter also applies to the
+          studies counted in the Explorer map and country table. Country income labels, colours and
+          profile peer comparisons use the current group (July 2026).
         </p>
       </aside>
 
@@ -188,7 +209,7 @@
                 <div class="tb-field"><label for="x-map-metric">Metric</label><select id="x-map-metric" class="form-select"></select></div>
               </div>
               <div id="x-map" class="plot" style="height:320px"></div>
-              <p class="plot-note">Regions: WHO regions as in the WHO Global Health Observatory's country list (Indonesia in the Western Pacific Region since the World Health Assembly approved its move in May 2025). Places that list does not assign to a region (Taiwan, Hong Kong) get the WHO region of the other countries in their UN M49 sub-region (Eastern Asia: Western Pacific Region). The United States and Argentina left the WHO in 2026 but the list keeps them in the Region of the Americas. The earlier UN M49 sub-regions are kept in the dataset as <code>un_region</code>.</p>
+              <p class="plot-note">Regions follow the WHO’s regions (with Indonesia in the Western Pacific since 2025). Taiwan and Hong Kong, which the WHO does not assign, are placed with their neighbours in the Western Pacific. The United States and Argentina left the WHO in 2026 but stay in the Americas region on the WHO’s list.</p>
             </div>
           </div>
           <div class="card">
@@ -238,6 +259,9 @@
         at one country, click its bubble or search for it with the picker below. The two mix
         charts and the disease group × evaluation type grid will then show that country. Click
         any cell in the grid to see the studies behind it.</p>
+      <p class="plot-note">Study income grouping in the Explorer follows the World Bank classification
+        in force on 1 January of each publication year. This landscape includes all years;
+        bubble colours show each country's current income group (July 2026).</p>
       <div class="control-group land-picker">
         <div class="picker-label-row">
           <label class="control-label" for="land-country">Pick a country</label>
@@ -288,10 +312,13 @@
           <select id="c-picker" placeholder="Pick a country…"></select>
         </div>
         <dl class="fact-list" id="c-facts"></dl>
+        <p class="plot-note">Study income grouping in the Explorer follows the World Bank classification
+          in force on 1 January of each publication year. This profile includes all years and
+          compares countries in the same current income group (July 2026); Explorer filters do not apply.</p>
       </aside>
       <div class="explorer-main">
         <div class="grid-4 summary-tiles" id="c-tiles">
-          <div class="value-box bg-primary"><div class="value-box-title">Eligible studies</div><div class="value-box-value" id="c-n">—</div></div>
+          <div class="value-box bg-primary"><div class="value-box-title">Studies</div><div class="value-box-value" id="c-n">—</div></div>
           <div class="value-box bg-info"><div class="value-box-title">Per 100k DALYs</div><div class="value-box-value" id="c-daly">—</div></div>
           <div class="value-box bg-secondary"><div class="value-box-title">Per US$1bn spending</div><div class="value-box-value" id="c-spend">—</div></div>
           <div class="value-box bg-success"><div class="value-box-title">Per million people</div><div class="value-box-value" id="c-percap">—</div></div>
@@ -380,7 +407,7 @@
         <button class="modal-close" id="country-help-close" type="button">Close</button>
       </div>
       <div class="modal-body info-modal-body">
-        <p>The country views cover the <strong>155 countries in the map's country data</strong>, which holds their disease-burden (GBD 2023) and health-spending figures. 153 of them have at least one study; Mauritius and Eritrea have none.</p>
+        <p>The country views cover the <strong>155 countries with disease-burden and health-spending data</strong> (disease burden from the Global Burden of Disease study, 2023). 153 of them have at least one study; Mauritius and Eritrea have none.</p>
       </div>
     </div>
   </div>
@@ -422,10 +449,13 @@
   including reviews. Data updated <span id="footer-date">xx</span>. AI helped identify and classify the records.
   <details class="figure-technical-details footer-technical-details">
     <summary>&#x24d8; Technical details and methods</summary>
-    <p>The map includes evaluations that compare costs and health outcomes, including reviews of published evaluations.
-       Review status has not been verified for every record. AI-assisted screening and classification can introduce errors;
-       checks and data coverage vary by analysis. Figures explain which records they include and where information is missing.</p>
-    <p>Publication counts are not funding amounts or measures of research quality. The final publication year is incomplete.</p>
+    <p>The map includes studies that compare the costs and health effects of two or more options, and reviews of
+       such studies. Some records may be wrongly labelled as reviews. AI tools helped sort and classify the studies and
+       can make mistakes; each figure says which studies it includes and where information is missing.</p>
+    <p>Counts of studies are not funding amounts or measures of research quality. 2026 is incomplete: the searches
+       ran during the year.</p>
+    <p>Almost all included studies are published in English. This reflects how studies were searched, not the
+       wider literature.</p>
     <p>See <a href="../#methods-title">methods and scope</a>.</p>
   </details>
 </footer>
@@ -433,7 +463,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-13-income-pubyear-figs"></script>
+<script type="module" src="app.js?v=2026-10-13-plain-language"></script>
 
 </body>
 </html>

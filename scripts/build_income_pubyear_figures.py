@@ -51,8 +51,7 @@ GREYLINE = "#c3bdb3"
 RED = "#D24A12"
 TITLE_FONT = "Franklin Gothic Heavy"
 BODY_FONT = "Franklin Gothic Book"
-RULE = ("Income group: the World Bank classification in force on 1 January of the publication year "
-        "(historical classifications, OGHIST).")
+RULE = "Income group: the World Bank group the country was in when the study was published."
 
 plt.rcParams.update({"font.family": BODY_FONT, "font.size": 11, "text.color": INK, "axes.edgecolor": GRID,
                      "axes.labelcolor": MUTED, "xtick.color": MUTED, "ytick.color": MUTED,
@@ -127,33 +126,34 @@ def equity_time(rows):
     years = sorted(data)
     vals = [data[y] for y in years]
     fig = plt.figure(figsize=(9, 5.75))
-    header(fig, "LMICs are grabbing a growing share of the research market",
-           "Share of each year's single-country economic evaluations that are about low- and middle-income countries.",
-           f"Health economic evaluations focused on LMIC contexts climbed from {pct(vals[0])} in {years[0]} to "
-           f"{pct(vals[-1])} in {years[-1]}—real progress, but still far below the 83% disease burden share "
-           "carried by those countries (dashed line).")
+    header(fig, "Studies of lower-income countries are growing but lag their health needs",
+           "Share of each year's studies of a single country that are about low- and middle-income countries.",
+           f"It rose from {pct(vals[0])} in {years[0]} to {pct(vals[-1])} in {years[-1]}, still far below the 83% "
+           "of the world's disease burden those countries carry (dashed line).")
     ax = fig.add_axes([.09, .19, .88, .55])
     style(ax)
     ax.grid(axis="x", color=GRID, lw=.6)
     ax.fill_between(years, vals, .83, color="#f2ddd0", alpha=.55, lw=0)
     ax.axhline(.83, color=MUTED, ls=(0, (2, 2)), lw=1)
-    ax.text(years[0], .80, "low- & middle-income share of global disease burden — 83%", fontsize=10, color="#8a857c", va="top")
+    ax.text(years[0], .80, "low- and middle-income countries' share of the world's disease burden: 83%", fontsize=10,
+            color="#8a857c", va="top")
     ax.plot(years, vals, color=ORANGE, lw=3.2, marker="o", ms=5.5)
     ax.text(years[-1] + .25, vals[-1], pct(vals[-1]), color="#c0442a", fontsize=11, fontweight="bold", va="center")
     ax.set_ylim(0, 1)
     ax.set_xlim(years[0] - .8, years[-1] + 2)
     ax.set_yticks([0, .25, .5, .75, 1], ["0%", "25%", "50%", "75%", "100%"])
     ax.set_xticks(years[::2])
-    ax.set_ylabel("Share of single-country evaluations about LMICs", fontsize=11)
-    footer(fig, f"Eligible full economic evaluations naming a single country with a known income (extracted geography), "
-                f"by publication year; 2026 (partial) omitted; n = {n:,}. {RULE} Burden reference: LMIC share of "
-                "global GBD 2023 all-cause DALYs. The shaded band is the distance to that reference.")
+    ax.set_ylabel("Share about low- and middle-income countries", fontsize=11)
+    footer(fig, f"Studies of a single country with a known income group, by year of publication ({n:,} studies); "
+                f"2026 is incomplete and left out. {RULE} Disease burden: healthy years lost to illness and early "
+                "death (DALYs), Global Burden of Disease 2023. The shaded band is the gap to that share.", width=135)
     save(fig, "fig_equity_time_pubyear.webp")
-    return {"caption": f"Share of each year's single-country evaluations about LMICs: {pct(vals[0])} in {years[0]} → "
-                       f"{pct(vals[-1])} in {years[-1]} — real progress, but still far below the 83% of global disease "
-                       "burden those countries carry (dashed line). Eligible full evaluations naming a single country "
-                       "with a known income; 2026 partial omitted. Income group at publication: the World Bank "
-                       "classification in force on 1 January of the publication year."}
+    return {"caption": f"Share of each year's single-country studies about low- and middle-income countries (LMICs): "
+                       f"{pct(vals[0])} in {years[0]} → {pct(vals[-1])} in {years[-1]}, against the 83% of global disease "
+                       "burden (GBD 2023 all-cause DALYs) those countries carry (dashed line). Full economic evaluations "
+                       f"naming a single country with a known income group ({n:,}); 2026 is partial and left out. Income "
+                       "group: the World Bank classification in force on 1 January of the publication year (World Bank "
+                       "historical classifications)."}
 
 
 def metric(rows):
@@ -161,10 +161,11 @@ def metric(rows):
     labels = list(m)
     hi, lo = m["High income"], m["Low income"]
     fig = plt.figure(figsize=(9, 5.2))
-    header(fig, "The comparable metric differs by income",
-           "Share of eligible evaluations reporting each comparable metric.",
-           f"The metric flips with income: high-income research reports QALYs ({pct(hi[0])}) and almost no DALYs "
-           f"({pct(hi[1])}); low-income research does the reverse ({pct(lo[1])} DALYs, {pct(lo[0])} QALYs).")
+    header(fig, "Studies in richer and poorer countries measure health gains differently",
+           "Share of studies reporting each measure. A QALY is a year of life in full health; a DALY is a year of "
+           "healthy life lost to illness or early death.",
+           f"High-income studies mostly report QALYs ({pct(hi[0])}) and almost never DALYs ({pct(hi[1])}); "
+           f"low-income studies do the reverse ({pct(lo[1])} DALYs, {pct(lo[0])} QALYs).")
     ax = fig.add_axes([.21, .1, .74, .62])
     ax.set_facecolor(BG)
     for s in ax.spines.values():
@@ -184,8 +185,8 @@ def metric(rows):
     ax.legend(handles=[plt.Rectangle((0, 0), 1, 1, color=ORANGE), plt.Rectangle((0, 0), 1, 1, color=BLUE)],
               labels=["Reports a DALY", "Reports a QALY"], loc="lower center", bbox_to_anchor=(.5, 1.0), ncol=2,
               frameon=False, fontsize=11)
-    footer(fig, f"Base: {len(rows):,} eligible evaluations (income shown for single-country studies with an income group). "
-                f"A study may report neither, one, or both. {RULE}")
+    footer(fig, f"All {len(rows):,} studies; the income rows use studies of a single country. A study may report "
+                f"neither measure, one or both. {RULE}")
     save(fig, "fig_metric_pubyear.webp")
     return {"caption": f"Share of eligible evaluations reporting each comparable metric. The metric flips with income: "
                        f"high-income research reports QALYs ({pct(hi[0])}) and almost no DALYs ({pct(hi[1])}); "
@@ -203,15 +204,18 @@ def intervention_mix(rows):
     va = [mix[g]["vaccine"] for g in order]
     su = [mix[g]["surgical_procedural"] for g in order]
     de = [mix[g]["device_or_supply"] for g in order]
-    lead = "care-model and organisational evaluations become the most common class" if cm[3] > ph[3] else \
-        f"pharmaceuticals stay narrowly ahead of care-model and organisational evaluations ({pct(cm[3], 1)})"
+    if round(100 * cm[3]) == round(100 * ph[3]):
+        lead = f"level with studies of how care is organised ({pct(cm[3])})"
+    elif cm[3] > ph[3]:
+        lead = f"overtaken by studies of how care is organised ({pct(cm[3])})"
+    else:
+        lead = f"just ahead of studies of how care is organised ({pct(cm[3])})"
     fig = plt.figure(figsize=(9, 6))
-    header(fig, "What gets evaluated: the intervention mix turns with income",
-           "Share of each income group's eligible single-country studies whose primary intervention class is the given type.",
-           f"Pharmaceuticals peak in upper-middle-income settings ({pct(ph[1], 1)}) and fall to {pct(ph[3], 1)} in "
-           f"low-income settings, where {lead}. Vaccines rise steadily from high to low income ({pct(va[0], 1)} → "
-           f"{pct(va[3], 1)}) while surgery ({pct(su[0], 1)} → {pct(su[3], 1)}) and devices ({pct(de[0], 1)} → "
-           f"{pct(de[3], 1)}) fall.")
+    header(fig, "What gets evaluated changes with country income",
+           "Share of each income group's studies, by the main type of health care evaluated.",
+           f"Medicines peak in upper-middle-income countries ({pct(ph[1])}) and fall to {pct(ph[3])} in low-income "
+           f"countries, {lead}. Vaccines rise from {pct(va[0])} to {pct(va[3])} as income falls, while surgery and "
+           "devices fall.")
     ax = fig.add_axes([.07, .2, .66, .48])
     style(ax)
     x = range(4)
@@ -235,16 +239,14 @@ def intervention_mix(rows):
         ax.annotate(label, (3, v), (3.12, y), va="center", fontsize=10.5, fontweight="bold",
                     color=hl or "#8f897f", annotation_clip=False,
                     arrowprops=dict(arrowstyle="-", color="#8f897f", lw=.6, shrinkA=0, shrinkB=3))
-    ax.text(1, ph[1] + .03, f"pharma peaks at {pct(ph[1], 1)} in upper-middle income", ha="center", color=BLUE, fontsize=10.5)
+    ax.text(1, ph[1] + .03, f"medicines peak at {pct(ph[1])} in upper-middle income", ha="center", color=BLUE, fontsize=10.5)
     ax.set_xticks(list(x), order, fontsize=11.5)
     ax.set_xlim(-.3, 3.3)
     ax.set_ylim(-.05, .5)
     ax.set_yticks([0, .1, .2, .3, .4, .5], ["0%", "10%", "20%", "30%", "40%", "50%"])
-    footer(fig, f"Base: {n:,} eligible single-country studies with a known 4-level World Bank income group; PRIMARY "
-                "intervention class only — the optional secondary class is not folded in. Derived by a single-pass "
-                "language model (deepseek/deepseek-v4.1-flash, temperature 0), validated against a keyword lexicon, the "
-                "emergent-topic clusters and a second model lineage; no human validation available. "
-                f"Class shares are of studies, not study-country pairs. {RULE}")
+    footer(fig, f"Studies of a single country with a known income group ({n:,}). Main type of health care only, "
+                "assigned by a large language model from each abstract and checked against keyword and topic "
+                f"groupings. {RULE}")
     save(fig, "fig_intervention_mix_pubyear.webp")
     low = ("care-model and organisational evaluations " + f"({pct(cm[3], 1)}) narrowly become the most common class"
            if cm[3] > ph[3] else f"they stay narrowly ahead of care-model and organisational evaluations ({pct(cm[3], 1)})")
@@ -254,9 +256,9 @@ def intervention_mix(rows):
                        f"{low}; vaccines rise steadily with lower income ({pct(va[0], 1)} → {pct(va[3], 1)}) while surgery "
                        f"({pct(su[0], 1)} → {pct(su[3], 1)}) and devices ({pct(de[0], 1)} → {pct(de[3], 1)}) fall. Base: "
                        f"{n:,} eligible single-country studies with a World Bank income group in force on 1 January of "
-                       "the publication year; derived by a single-pass language model (deepseek/deepseek-v4.1-flash, "
-                       "temperature 0), validated against a keyword lexicon, the emergent-topic clusters and a second "
-                       "model lineage — no human validation available (reviews/intervention-extraction.md)."}
+                       "the publication year. Intervention classes were assigned by a large language model from each "
+                       "abstract (one pass), checked against a keyword list, the topic clusters and a second model; "
+                       "they have not been checked by people."}
 
 
 def paper05(rows, geo_groups):
@@ -270,9 +272,11 @@ def paper05(rows, geo_groups):
              "Digestive", "Cardiovascular", "Neoplasms"]
     assert set(areas) == set(share), set(share) ^ set(areas)
     fig = plt.figure(figsize=(9, 10))
-    fig.text(.02, .975, "The disease areas studied are sorted by national income", fontsize=19, fontweight="bold",
+    fig.text(.02, .975, "Which diseases are studied differs by country income", fontsize=19, fontweight="bold",
              family="Arial", va="top")
-    ax = fig.add_axes([.27, .17, .64, .7])
+    fig.text(.02, .94, "% of each income group's studies that cover each disease area", fontsize=12.5,
+             family="Arial", color=MUTED, va="top")
+    ax = fig.add_axes([.3, .15, .61, .68])
     cmap = LinearSegmentedColormap.from_list("b", ["#d6e6fb", "#9cc3f0", "#3d8be0", "#0b3a73"])
     grid = [[100 * share[a][g] for g in groups] for a in areas]
     im = ax.imshow(grid, cmap=cmap, vmin=0, vmax=80, aspect="auto")
@@ -283,7 +287,8 @@ def paper05(rows, geo_groups):
     ax.set_xticks(range(4), ["Low income", "Lower\nmiddle\nincome", "Upper\nmiddle\nincome", "High\nincome"],
                   fontsize=12, family="Arial", fontweight="bold", color="#4a463f")
     ax.xaxis.tick_top()
-    ax.set_yticks(range(len(areas)), areas, fontsize=12.5, family="Arial", color="#4a463f")
+    shown = {"Neoplasms": "Cancers (neoplasms)", "Other NCD": "Other non-communicable", "Sense organ": "Eye and ear"}
+    ax.set_yticks(range(len(areas)), [shown.get(a, a) for a in areas], fontsize=12.5, family="Arial", color="#4a463f")
     ax.tick_params(length=0)
     for s in ax.spines.values():
         s.set_visible(False)
@@ -295,17 +300,13 @@ def paper05(rows, geo_groups):
     cb = fig.colorbar(im, cax=cax, ticks=[0, 20, 40, 60, 80])
     cb.outline.set_visible(False)
     cb.ax.tick_params(length=0, labelsize=11)
-    footer(fig, "Percentage of each income group's disease-coded full economic evaluations that name each disease area. "
-                "Rows are in the order of the published version (most concentrated in low-income research at the top). Any-topic MeSH headings mapped to the fourteen harmonised "
-                "disease groups by the shared crosswalk: maternal and neonatal includes the MeSH pregnancy-complications "
-                "sub-branch C12.050.703, and mental and substance use is MeSH F03. A study naming several disease areas "
-                "appears in each, so columns sum above 100%; a multi-country study counts in each income group it names. "
-                f"Denominator: disease-coded eligible studies per group — low {n['Low income']:,}, lower-middle "
-                f"{n['Lower middle income']:,}, upper-middle {n['Upper middle income']:,}, high {n['High income']:,}. "
-                f"{RULE}", y=.015, width=135)
+    footer(fig, "A study can cover several disease areas, so columns add up to more than 100%. A study about several "
+                "countries counts in each income group it names. Studies with a disease area per group: low "
+                f"{n['Low income']:,}, lower-middle {n['Lower middle income']:,}, upper-middle "
+                f"{n['Upper middle income']:,}, high {n['High income']:,}. {RULE}", y=.015, width=135)
     save(fig, "paper05_pubyear.webp")
     inf = share["Infectious"]
-    return {"caption": "Journal version, income at publication. Percentage of each income group's disease-coded full "
+    return {"caption": "Percentage of each income group's disease-coded full "
                        "economic evaluations that name each disease area, across the 14 harmonised groups (maternal & "
                        "neonatal includes the MeSH pregnancy-complications branch C12.050.703; mental & substance use is "
                        "MeSH F03). Rows run from areas most concentrated in low-income research (top) to high-income "
@@ -316,36 +317,47 @@ def paper05(rows, geo_groups):
                        "publication year."}
 
 
-ACRONYMS = {"Ecmo": "ECMO", "Aaa": "AAA", "Hiv": "HIV", "Nsclc": "NSCLC", "Hpv": "HPV", "Copd": "COPD", "Icu": "ICU"}
+# Plain names for topics, by cluster number (from each topic's keywords in
+# topic_labels.csv); other topics fall back to their first keyword.
+TOPIC_NAMES = {
+    "11": "Dementia", "57": "Cancer medicines", "25": "Life support and heart pumps", "32": "Alcohol and opioids",
+    "58": "Knee replacement", "40": "Urinary incontinence", "43": "Aortic aneurysm", "66": "Hospital-based trials",
+    "4": "Heart valve replacement", "59": "Heart failure and cardiac rehab", "47": "Spinal surgery",
+    "39": "Crohn's disease and colitis", "33": "Depression", "10": "Cancer immunotherapy", "53": "Back pain",
+    "17": "Malaria and dengue", "5": "Tuberculosis", "23": "Maternal and newborn health", "8": "HIV",
+    "64": "Clinical nutrition", "31": "Stomach cancer prevention", "45": "Lung cancer", "41": "Kidney stones",
+    "49": "Gallbladder surgery", "7": "HPV vaccination", "27": "COVID-19", "65": "Heart failure medicines",
+    "69": "High blood pressure", "16": "Pneumococcal vaccines", "54": "Breast cancer treatment",
+}
 
 
 def theme_rank(rows, labels):
     th, name, overall, n = fd.theme_rank(rows, labels, COL)
-    name = {c: ACRONYMS.get(v, v) for c, v in name.items()}
+    name = {c: TOPIC_NAMES.get(c, v) for c, v in name.items()}
     hic = sorted(th, key=lambda c: th[c][0])[:15]
     lmic = sorted(th, key=lambda c: -th[c][0])[:15]
     lo_rng = (min(th[c][0] for c in lmic), max(th[c][0] for c in lmic))
     hi_rng = (min(th[c][0] for c in hic), max(th[c][0] for c in hic))
     overlap = set(hic) & set(lmic)
     fig = plt.figure(figsize=(9, 8.2))
-    header(fig, "The LMIC and high-income ends of the theme space never overlap",
-           f"Emergent research themes at the two ends of the income gradient (all themes: {pct(overall)} LMIC).",
-           f"The 15 themes most about low- and middle-income countries are {pct(lo_rng[0])}–{pct(lo_rng[1])} LMIC; the "
-           f"15 most about high-income countries are {pct(hi_rng[0])}–{pct(hi_rng[1])} LMIC "
-           f"({pct(1 - hi_rng[1])}–{pct(1 - hi_rng[0])} high-income). "
-           + ("The two ends never overlap: no theme appears in both lists." if not overlap else ""), width=105)
+    header(fig, "Research topics split sharply by country income",
+           f"The research topics most and least focused on low- and middle-income countries (all topics: "
+           f"{pct(overall)} of studies are about these countries).",
+           f"In the 15 topics most about them, {pct(lo_rng[0])}–{pct(lo_rng[1])} of studies are about low- and "
+           f"middle-income countries; in the 15 most about high-income countries, {pct(1 - hi_rng[1])}–"
+           f"{pct(1 - hi_rng[0])} are about high-income countries.", width=105)
     for k, (cs, share_of, colour, ref, title) in enumerate([
             (hic, lambda c: 1 - th[c][0], "#bbb6ae", 1 - overall,
-             "MOST ABOUT HIGH-INCOME COUNTRIES — share of the theme's studies about high-income countries"),
+             "MOST ABOUT HIGH-INCOME COUNTRIES — % of the topic's studies about high-income countries"),
             (lmic, lambda c: th[c][0], RED, overall,
-             "MOST ABOUT LOW- & MIDDLE-INCOME COUNTRIES — share of the theme's studies about them")]):
-        ax = fig.add_axes([.2, .5 - k * .34, .74, .27])
+             "MOST ABOUT LOW- AND MIDDLE-INCOME COUNTRIES — % of the topic's studies about them")]):
+        ax = fig.add_axes([.31, .5 - k * .34, .63, .27])
         ax.set_facecolor(BG)
         vals = [share_of(c) for c in cs]
         ax.barh(range(15), vals, color=colour, height=.72)
         for i, v in enumerate(vals):
             ax.text(v + .006, i, pct(v), va="center", fontsize=9.5, fontweight="bold")
-        ax.set_yticks(range(15), [f"{name[c]}  (n={th[c][1]:,})" for c in cs], fontsize=10)
+        ax.set_yticks(range(15), [f"{name[c]}  ({th[c][1]:,})" for c in cs], fontsize=10)
         ax.invert_yaxis()
         ax.axvline(ref, color=MUTED, ls=(0, (2, 2)), lw=1)
         ax.set_xlim(0, 1)
@@ -354,18 +366,15 @@ def theme_rank(rows, labels):
         for s in ax.spines.values():
             s.set_visible(False)
         ax.set_title(title, loc="left", fontsize=11.5, family="Franklin Gothic Demi Cond", pad=6)
-    fig.text(.57, .13, "Share of the theme's studies about the income group the panel names (dashed line: all themes)",
-             ha="center", fontsize=11, color=MUTED)
-    footer(fig, f"Themes from R/05-topic-model.py (embeddings of title and abstract only → UMAP → HDBSCAN, protocol Appendix K); "
-                f"the 15 most- and 15 least-LMIC of {len(th)} themes with ≥30 income-known studies. Income for "
-                f"single-country studies (n = {n:,}); n per theme = its single-country studies with a known income group. "
-                f"{RULE}", width=140)
+    fig.text(.57, .13, "Number of studies in brackets. Dashed line: all topics.", ha="center", fontsize=11, color=MUTED)
+    footer(fig, f"Topics found by grouping studies with similar titles and abstracts ({len(th)} topics with at least 30 "
+                f"studies). Studies of a single country with a known income group ({n:,}). {RULE}", width=140)
     save(fig, "fig_theme_rank_pubyear.webp")
     top_h, top_l = hic[0], lmic[0]
-    return {"caption": f"The 15 most-LMIC and 15 most-high-income of {len(th)} emergent themes (all themes: {pct(overall)} "
-                       f"LMIC). The high-income panel is shown first, plotted as each theme's high-income share "
+    return {"caption": f"The 15 most-LMIC and 15 most-high-income of {len(th)} research topics (found by clustering title-and-abstract embeddings) (all themes: {pct(overall)} "
+                       f" LMIC). The high-income panel is shown first, plotted as each theme's high-income share "
                        f"({name[top_h].lower()} leads at {pct(1 - th[top_h][0])}); the LMIC panel as its LMIC share "
-                       f"({name[top_l].lower()} leads at {pct(th[top_l][0])}). The two ends never overlap: "
+                       f"({name[top_l].lower()} leads at {pct(th[top_l][0])}): "
                        f"{pct(lo_rng[0])}–{pct(lo_rng[1])} LMIC vs {pct(hi_rng[0])}–{pct(hi_rng[1])} LMIC. n per theme = "
                        "single-country studies with a World Bank income group in force on 1 January of the publication year."}
 

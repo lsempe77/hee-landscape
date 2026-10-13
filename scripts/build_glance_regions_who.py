@@ -68,12 +68,12 @@ PLOTLY_SRI = "sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEuln
 # Explanations behind the "?" buttons.
 NOTES = {
     "countries": "Countries in the map's country data named by at least one study in the period.",
-    "model": "Share of studies with a clear label that are model-based (decision-analytic model) rather than measured in patients. "
+    "model": "Share of studies that estimate results with a computer model rather than measure them in patients. "
              "Studies whose approach is unclear (about 4%) are left out of the base, as on the site's Overview.",
     "utility": "Share of studies that report QALYs.",
     "open_access": "Share of studies with a known open-access status (from OpenAlex, matched by DOI). Studies whose status could not be found are left out of the base.",
     "lmic": "Share of studies naming at least one country that name at least one low- or middle-income country, using the World Bank income group in force on 1 January of each study's publication year. Studies naming no country are left out of the base.",
-    "intensity": "Studies naming at least one country in the region, divided by the region's total disease burden (GBD 2023 all-cause DALYs, summed over its countries), per 100,000 DALYs. "
+    "intensity": "Studies naming at least one country in the region, divided by the region's disease burden: the healthy years of life lost to illness and early death (DALYs, Global Burden of Disease 2023), per 100,000 DALYs. "
                  "The marker sits on the same colour scale as the map.",
     "disease": "Share of the region's disease-coded studies, split into communicable (infectious, maternal and neonatal), non-communicable and injuries. "
                "A study in several groups is split equally between them. Caveats: only about half of all studies have a disease group; "
@@ -289,9 +289,9 @@ def render(v):
     kpis = [
         (fmt_int(v["n_studies"]), f"health economic evaluations, {period}", None),
         (fmt_int(sum(1 for i in v["per_country"] if v["per_country"][i] > 0)),
-         "countries profiled in the map with at least one", "countries"),
-        (pct(v["qaly_all"]), "report a utility measure such as the QALY", "utility"),
-        (pct(v["model_all"]), "are model-based", "model"),
+         "countries with at least one study", "countries"),
+        (pct(v["qaly_all"]), "report QALYs (years of life in full health)", "utility"),
+        (pct(v["model_all"]), "use a computer model", "model"),
         (pct(v["oa_known"]), "are open access", "open_access"),
         (pct(v["lmic"]), "focus on low- and middle-income countries", "lmic"),
     ]
@@ -369,7 +369,7 @@ TEMPLATE = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>(Un)equal weight at a glance</title>
+<title>Research and health needs by region</title>
 <style>
 :root {{ --ink:#1d1d1d; --muted:#6b665d; --line:#d9d3c7; --bg:#f7f3ec; --card:#ece6dc; --red:#c2412d; }}
 * {{ box-sizing: border-box; }}
@@ -431,11 +431,11 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 </head>
 <body>
 <div class="wrap">
-  <div class="eyebrow"><span>HEE evidence map</span><span class="badge">Draft · data as of {built}</span></div>
-  <h1>(Un)equal weight: Health economic research output compared to disease burden</h1>
-  <p class="lede">Research intensity is concentrated in high-income countries, where systems are more likely to be in place to evaluate evidence and use it to inform benefit decisions.</p>
+  <div class="eyebrow"><span>Health economic evaluation map</span><span class="badge">Data as of {built}</span></div>
+  <h1>Health economic research compared with disease burden</h1>
+  <p class="lede">Compared with how much illness and early death they carry, high-income countries have far more economic evaluations than lower-income countries.</p>
 
-  <div class="sec"><b>A</b><h2>Research intensity by country</h2><span>Evaluations per 100,000 DALYs · median {median}</span>{q_intensity}</div>
+  <div class="sec"><b>A</b><h2>Research intensity by country</h2><span>Studies per 100,000 healthy years lost (DALYs) · median {median}</span>{q_intensity}</div>
   <div id="map"></div>
 
   <div class="kpis">{kpis}</div>
@@ -450,7 +450,7 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
         <span class="key"><i style="background:#8a63a8"></i>Non-communicable</span>
         <span class="key"><i style="background:#d8a03c"></i>Injuries</span></div>
       <div class="lab"><strong>Top three diseases {q_top}</strong>Bar = share of evaluations</div>
-      <div class="lab"><strong>Utility measure as an outcome {q_utility}</strong>Black = QALY reported; red line = all-study average</div>
+      <div class="lab"><strong>Use of QALYs {q_utility}</strong>Black = share reporting QALYs; red line = all studies</div>
       <div class="lab"><strong>Trend over time {q_trend}</strong>% of the region's countries with an evaluation: solid = at least 1, dashed = 2 or more, grey = all regions (at least 1)</div>
     </div>
     {cards}
@@ -458,9 +458,9 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 
   <div class="foot">
     <div>
-      <p>Data: HEE evidence map web build ({built}); {period} publication years.</p>
-      <p>Regions: WHO Global Health Observatory country list (AFR African, AMR Americas, SEAR South-East Asia, EUR European, EMR Eastern Mediterranean, WPR Western Pacific); Indonesia is in the Western Pacific Region since the World Health Assembly approved its move in May 2025. Places the list does not assign to a region (Taiwan, Hong Kong) get the WHO region of the other countries in their UN M49 sub-region (Eastern Asia: Western Pacific). The United States and Argentina left the WHO in 2026 but the list keeps them in the Region of the Americas, which includes the United States and Canada. Map and trend lines cover the {n_countries} countries in the map's country data; trends run to {trend_end}.</p>
-      <p>Burden: GBD 2023 all-cause DALYs. Utility measure: QALY reported. Disease groups: 14 harmonised groups from MeSH, grouped into GBD level-1 causes. Top three diseases: research themes from a topic model of the abstracts (team export, 2026-10-11). Map: Robinson projection; grey = no eligible evaluation or no country data.</p>
+      <p>Data: health economic evaluation map ({built}); studies published {period}.</p>
+      <p>Regions: the WHO's six regions (AFR Africa, AMR Americas, SEAR South-East Asia, EUR Europe, EMR Eastern Mediterranean, WPR Western Pacific), with Indonesia in the Western Pacific since 2025. Taiwan and Hong Kong, which the WHO does not assign, are placed in the Western Pacific. The United States and Argentina left the WHO in 2026 but stay in the Americas region on the WHO's list. The map and trend lines cover the {n_countries} countries with disease-burden data; trends run to {trend_end}.</p>
+      <p>Disease burden: healthy years lost to illness and early death (DALYs), Global Burden of Disease 2023. Disease focus: 14 disease groups from the studies' subject headings, grouped into communicable, non-communicable and injuries. Top three diseases: research topics found by grouping similar abstracts. Grey on the map: no study or no burden data.</p>
     </div>
   </div>
 </div>

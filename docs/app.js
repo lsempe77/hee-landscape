@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-13-income-pubyear-figs";
+const BUILD = "2026-10-13-plain-language";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -101,12 +101,28 @@ function sortedYearObj(map) {
 // content.json. Map preserves insertion order, so selector/legend order is the
 // content.json array order. Replaces the previously hardcoded TREND_VARS /
 // COMP_VARS / STACK_VARS / MAP_METRICS / SCAT_X / SCAT_Y / SIGNAL_METRICS.
+// Plain-language names for selector options whose content.json labels are
+// technical; the column each option reads is unchanged.
+const PLAIN_LABELS = {
+  "Nothing (total)": "All studies (total)",
+  "Model vs measured": "Computer model or measured",
+  "Era": "Period (2010–17 or 2018–26)",
+  "Topic domain": "Research field",
+  "Reports an ICER": "Reports a cost per health gained (ICER)",
+  "Reports a threshold": "Compares with a value-for-money threshold",
+  "Studies per 100k DALYs": "Studies per 100,000 healthy years lost (DALYs)",
+  "Studies per US$1bn spending": "Studies per US$1bn of health spending",
+  "Total DALYs (GBD 2023)": "Disease burden: healthy years lost (DALYs, 2023)",
+  "Health spending, PPP US$bn (2022)": "Health spending, US$bn adjusted for prices (2022)"
+};
+export const plainLabel = label => PLAIN_LABELS[label] || label;
+
 export function buildRegistries(content) {
   if (!content || !content.registries) {
     throw new Error("buildRegistries: content.json with .registries is required");
   }
   const r = content.registries;
-  const toMap = arr => new Map(arr.map(o => [o.label, o.column]));
+  const toMap = arr => new Map(arr.map(o => [plainLabel(o.label), o.column]));
   return {
     TREND_VARS: toMap(r.trend_vars),
     COMP_VARS: toMap(r.comp_vars),
@@ -118,7 +134,7 @@ export function buildRegistries(content) {
   };
 }
 
-export function loadData({ dict, studies, geo, disease, countries, content }) {
+export function loadData({ dict, studies, geo, disease, countries, content, funders, languages }) {
   const levels = dict.levels;
   const codeOf = {};
   for (const col of CODED_COLS) {
@@ -131,6 +147,12 @@ export function loadData({ dict, studies, geo, disease, countries, content }) {
   Object.assign(palInc, LANDSCAPE_INCOME_COLORS);
   const diseaseSets = dict.disease_grps.map(() => new Set());
   for (let i = 0; i < disease.s.length; i++) diseaseSets[disease.g[i]].add(disease.s[i]);
+  // Funders as reported (scripts/build_funder_filter.py); "any" also counts
+  // funders too rare to list.
+  const fund = funders || { names: [], n: [], s: [], f: [], any: [] };
+  const funderSets = fund.names.map(() => new Set());
+  for (let i = 0; i < fund.s.length; i++) funderSets[fund.f[i]].add(fund.s[i]);
+  const fundedSet = new Set(fund.any);
   return {
     dict, levels, studies, geo, disease, countries,
     content,
@@ -150,9 +172,14 @@ export function loadData({ dict, studies, geo, disease, countries, content }) {
     regionOf: countries.map(r => r.who_region),
     disease_grps: dict.disease_grps,
     diseaseSets,
+    funders: fund, funderSets, fundedSet,
+    // Publication language per study (scripts/build_language_filter.py).
+    languages: languages || null,
     years: dict.years
   };
 }
+
+export const ANY_FUNDER = "Any funder reported";
 
 export function normalizeFilter(filt, db) {
   const f = filt || {};
@@ -165,6 +192,8 @@ export function normalizeFilter(filt, db) {
     disease: arr(f.disease),
     evaltype: arr(f.evaltype),
     design: arr(f.design),
+    funder: arr(f.funder),
+    language: arr(f.language),
     model: one(f.model),
     qaly: one(f.qaly),
     oa: one(f.oa),
@@ -196,6 +225,19 @@ export function applyFilters(db, filt) {
     }
   }
 
+  // Funder: a study passes if it reports any selected funder ("any" = any funder).
+  let funSet = null;
+  if (f.funder.length && db.funderSets) {
+    funSet = new Set();
+    for (const name of f.funder) {
+      const src = name === ANY_FUNDER ? db.fundedSet : db.funderSets[db.funders.names.indexOf(name)];
+      if (src) for (const s of src) funSet.add(s);
+    }
+  }
+
+  const langCodes = f.language.length && db.languages
+    ? new Set(f.language.map(l => db.languages.levels.indexOf(l))) : null;
+
   for (let s = 0; s < n; s++) {
     const y = st.year[s];
     if (y < lo || y > hi) continue;
@@ -206,6 +248,8 @@ export function applyFilters(db, filt) {
     if (oaCode !== null && st.oa_label[s] !== oaCode) continue;
     if (scopeCode !== null && st.geo_scope[s] !== scopeCode) continue;
     if (disSet && !disSet.has(s)) continue;
+    if (funSet && !funSet.has(s)) continue;
+    if (langCodes && !langCodes.has(db.languages.code[s])) continue;
     base[s] = 1;
   }
 
@@ -628,7 +672,7 @@ export function countryFacts(db, iso3) {
   if (!r) return [];
   const pop = num(r.pop), dalys = num(r.dalys), spend = num(r.total_spend_bn);
   const pairs = [
-    ["Income group", r.income],
+    ["Income group (July 2026)", r.income],
     ["WHO region", r.who_region == null ? "—" : r.who_region]
   ];
   if (pop != null) pairs.push(["Population", fmtNum(rRound(pop / 1e6)) + " M"]);
@@ -843,10 +887,10 @@ if (typeof document !== "undefined") {
     fig: {
       file: "fig_glance_regions_who.html",
       html: true,
-      title: "(Un)equal weight at a glance: research intensity and evaluations by region",
-      caption: "Draft infographic built from the map's data by WHO region: research per unit of " +
-        "disease burden, headline figures, and each region's disease focus, QALY use and country " +
-        "coverage over time. Click any ? for details."
+      title: "Research coverage and health needs by region",
+      caption: "Built from the map's data by WHO region: studies per unit of disease burden, headline " +
+        "figures, and each region's disease focus, QALY use and country coverage over time. " +
+        "Click any ? for details."
     }
   }];
   // Thematic sections hidden from the site, and figures moved to one other
@@ -865,9 +909,9 @@ if (typeof document !== "undefined") {
   // section, placed straight after it.
   const SECTION_RENAMES = {
     "Topics & diseases": {
-      title: "Topic clustering & disease focus",
-      blurb: "Explore the research themes and interventions studied, and how disease focus " +
-        "differs across income groups and over time."
+      title: "Topics & diseases",
+      blurb: "The main research topics and types of health care studied, which diseases the studies " +
+        "cover, and how this differs by country income and over time."
     },
     "Geography & authorship": {
       title: "Geography",
@@ -876,17 +920,29 @@ if (typeof document !== "undefined") {
     },
     "Open access & funding": {
       title: "Authorship & access",
-      blurb: "Who leads the research, and how readers can reach it. Authorship figures use harvested " +
-        "affiliations and declare their denominator, including the income-group local-authorship estimate " +
-        "with its confidence intervals. Open-access status covers 87% of the included studies " +
-        "(post DOI-supplement harvest)."
+      blurb: "Whether studies include researchers based in the country they study, and whether " +
+        "readers can get the papers free of charge. Where authors are based is known for most " +
+        "studies; open-access status is known for 87%."
     },
     "Priority-setting for funders": {
       title: "Research funding",
-      blurb: "Who funds the evidence, and where the next pound buys the most missing evidence. The funder " +
-        "field covers ~27% of studies and is a floor, not a census. Gaps are ranked by size, never by " +
-        "cost-to-close: there is no cost or research-funding-amount data. Proportionality to burden is a " +
-        "reference point, not a target."
+      blurb: "Who funds the studies, and where evidence is thin compared with health needs. Only about " +
+        "a quarter of studies name a funder, so counts are a minimum. There are no data on funding " +
+        "amounts, so the gaps show where evidence is thin, not what it would cost to fill them."
+    },
+    "Methods & metrics": {
+      title: "Methods & metrics",
+      blurb: "How studies measure health benefits, how often they rely on computer models, and whether " +
+        "their summaries report what decision-makers need."
+    },
+    "Gaps vs disease burden": {
+      title: "Gaps vs disease burden",
+      blurb: "How the amount of research compares with the burden of illness and early death in each " +
+        "country and for each disease."
+    },
+    "Trends over time": {
+      title: "Trends over time",
+      blurb: "How the research has changed since 2010. Charts stop at 2025 because 2026 is incomplete."
     }
   };
   const SECTION_AFTER = { "Research funding": "Authorship & access", "Wellcome priority themes": "Trends over time" };
@@ -905,11 +961,11 @@ if (typeof document !== "undefined") {
     { file: "fig_map_model.webp", to: "Methods & metrics", after: "paper02.webp" }
   ];
   const SECTION_GROUPS = {
-    "Topic clustering & disease focus": [
+    "Topics & diseases": [
       {
-        title: "Topic clusters",
-        blurb: "Explore the research theme clusters, their income patterns, and the " +
-          "interventions evaluated within the research space.",
+        title: "What the research covers",
+        blurb: "The main research topics, the types of health care evaluated, and how they differ " +
+          "by country income.",
         files: ["fig_intervention_map.webp", "fig_intervention_mix.webp", "fig_theme_rank.webp"]
       },
       {
@@ -1199,7 +1255,7 @@ if (typeof document !== "undefined") {
   const WIDE_TILES = new Set([METRICS_CARD, FUNDERS_CARD]);
   const NARROW_TILES = new Set(["Model-based"]);
   const OVERVIEW_TILE_COPY = {
-    "Eligible full evaluations": { label: "Full health economic evaluations captured in the map" },
+    "Eligible full evaluations": { label: "Studies in the map", sub: "Including 1,706 reviews of earlier studies" },
     "Years covered": { label: "Publication years covered" },
     // Countries in the map's country data named by at least one study (153),
     // counted from the data. The upstream build's 169 ("named in extracted
@@ -1207,10 +1263,11 @@ if (typeof document !== "undefined") {
     // dict.json; it needs fixing in the pipeline too.
     "Countries studied": {
       label: "Countries covered by studies",
-      sub: "Across the global evidence base",
+      sub: "Of 155 countries with disease-burden and health-spending data",
       value: () => fmtNum(db.countries.filter(r => r.studies > 0).length)
     },
-    "Journals": { sub: "Among studies with journal details available" }
+    "Journals": { sub: "Among studies with journal details available" },
+    "Model-based": { sub: "Results estimated with a computer model rather than measured in patients" }
   };
   const PLACEHOLDER_PCT = "XX%";
 
@@ -1241,7 +1298,7 @@ if (typeof document !== "undefined") {
     node.textContent = text;
     if (text === PLACEHOLDER_PCT) {
       node.classList.add("tile-placeholder");
-      node.title = "Placeholder: not yet available in the web data";
+      node.title = "Not yet available";
     }
   }
 
@@ -1391,8 +1448,16 @@ if (typeof document !== "undefined") {
     const n = Math.max(1, db.nStudies);
     const fromExport = count => db.nStudies === OUTCOME_STUDIES ? 100 * count / n : null;
     return barRowsCard("", "Outcome metrics used in studies",
-      [["QALYs", 100 * countLevel("qaly_label", "Uses QALY") / n],
-       ["DALYs", fromExport(DALY_STUDIES)],
+      [["QALYs", 100 * countLevel("qaly_label", "Uses QALY") / n, {
+         title: "What is a QALY?",
+         paragraphs: ["A quality-adjusted life year: one year of life in full health. Years lived in poorer " +
+           "health count as less than one. Studies use QALYs to compare health gains across diseases."]
+       }],
+       ["DALYs", fromExport(DALY_STUDIES), {
+         title: "What is a DALY?",
+         paragraphs: ["A disability-adjusted life year: one year of healthy life lost to illness, disability " +
+           "or early death. Studies report DALYs averted; the measure is common in lower-income settings."]
+       }],
        ["Other metrics", fromExport(OTHER_OUTCOME_STUDIES), {
          title: "What are other metrics?",
          paragraphs: [
@@ -1477,7 +1542,17 @@ if (typeof document !== "undefined") {
     // HTML whitespace collapsing turns the source newlines/indent into spaces.
     const hero = $("ov-hero");
     hero.textContent = "";
-    for (const seg of db.content.hero) {
+    // Plain-language hero (replaces content.json's, which names old tab labels).
+    const HERO = [
+      { text: "This map brings together " },
+      { text: fmtNum(db.nStudies), strong: true },
+      { text: " studies published 2010–2026 that weigh the costs of health care against its health " +
+        "effects, including reviews of earlier studies. Use " },
+      { text: "Thematic analysis", em: true }, { text: " for the main findings, " },
+      { text: "Explorer", em: true }, { text: " to filter and compare studies, and " },
+      { text: "Countries", em: true }, { text: " to see one country's evidence." }
+    ];
+    for (const seg of HERO) {
       const node = document.createElement(seg.strong ? "strong" : seg.em ? "em" : "span");
       node.textContent = seg.text;
       hero.appendChild(node);
@@ -1523,7 +1598,7 @@ if (typeof document !== "undefined") {
       {
         file: "fig_dotmap.svg",
         alt: "World map of economic evaluations by country and income group",
-        takeaway: "Economic evaluation evidence is concentrated in the global north."
+        takeaway: "Most economic evaluations are about high-income countries."
       },
       { file: "fig_research_burden_ratio.svg", alt: "Strip plot of country research-to-burden ratios by income group, with group medians and a proportional reference line" },
       { file: "fig_disease_circular.webp", alt: "Line of sight: disease groups studied in health economic evaluations" },
@@ -1926,12 +2001,12 @@ if (typeof document !== "undefined") {
     });
   }
 
-  function makeMultiSelect(id, options, placeholder, key) {
+  function makeMultiSelect(id, options, placeholder, key, labelOf) {
     const sel = $(id);
     for (const o of options) {
       const opt = document.createElement("option");
       opt.value = o;
-      opt.textContent = o;
+      opt.textContent = labelOf ? labelOf(o) : o;
       sel.appendChild(opt);
     }
     state.ts[key] = new window.TomSelect(sel, {
@@ -1949,7 +2024,7 @@ if (typeof document !== "undefined") {
     const m = db.dict.meta;
     state.filt = {
       years: db.years.slice(),
-      income: [], region: [], disease: [], evaltype: [], design: [],
+      income: [], region: [], disease: [], evaltype: [], design: [], funder: [], language: [],
       model: "All", qaly: "All", oa: "All", scope: "All"
     };
 
@@ -1977,6 +2052,12 @@ if (typeof document !== "undefined") {
     makeMultiSelect("x-disease", db.disease_grps, "All areas", "disease");
     makeMultiSelect("x-evaltype", db.levels.econ_eval_type, "All types", "evaltype");
     makeMultiSelect("x-design", db.levels.design_basis, "All designs", "design");
+    const funderN = new Map(db.funders.names.map((nm, i) => [nm, db.funders.n[i]]));
+    makeMultiSelect("x-funder", [ANY_FUNDER, ...db.funders.names], "All studies", "funder",
+      nm => nm + " (" + fmtNum(nm === ANY_FUNDER ? db.funders.any.length : funderN.get(nm)) + ")");
+    const langN = new Map(db.languages.levels.map((l, i) => [l, db.languages.n[i]]));
+    makeMultiSelect("x-language", db.languages.levels, "All languages", "language",
+      l => l + " (" + fmtNum(langN.get(l)) + ")");
 
     makeRadios("x-model", "x_model", ["All", "Model-based", "Measured"]);
     makeRadios("x-qaly", "x_qaly", ["All", "Uses QALY", "No QALY"]);
@@ -1992,7 +2073,7 @@ if (typeof document !== "undefined") {
     $("x-download").addEventListener("click", downloadFilteredStudies);
     $("x-reset").addEventListener("click", () => {
       slider.noUiSlider.set(db.years);
-      for (const k of ["income", "region", "disease", "evaltype", "design"]) state.ts[k].clear();
+      for (const k of ["income", "region", "disease", "evaltype", "design", "funder", "language"]) state.ts[k].clear();
       for (const [cont, name] of [["x-model", "model"], ["x-qaly", "qaly"], ["x-oa", "oa"]]) {
         const first = $(cont).querySelector("input");
         first.checked = true;
@@ -2018,8 +2099,8 @@ if (typeof document !== "undefined") {
       o.textContent = lab;
       compMode.appendChild(o);
     }
-    fillSelect($("x-scatter-x"), [...REG.SCAT_X.keys()], ["Total DALYs (GBD 2023)"]);
-    fillSelect($("x-scatter-y"), [...REG.SCAT_Y.keys()], ["Studies per 100k DALYs"]);
+    fillSelect($("x-scatter-x"), [...REG.SCAT_X.keys()], [plainLabel("Total DALYs (GBD 2023)")]);
+    fillSelect($("x-scatter-y"), [...REG.SCAT_Y.keys()], [plainLabel("Studies per 100k DALYs")]);
 
     $("x-trend-by").addEventListener("change", renderTrend);
     $("x-map-metric").addEventListener("change", renderMap);
@@ -2063,6 +2144,13 @@ if (typeof document !== "undefined") {
         if (!countriesOf.has(s)) countriesOf.set(s, []);
         countriesOf.get(s).push(Object.assign({ income_pub: db.incomeAt(g.c[i], g.y[i]) }, db.countries[g.c[i]]));
       }
+      const fundersOf = new Map();
+      for (let i = 0; i < db.funders.s.length; i++) {
+        const s = db.funders.s[i];
+        if (!mask[s]) continue;
+        if (!fundersOf.has(s)) fundersOf.set(s, []);
+        fundersOf.get(s).push(db.funders.names[db.funders.f[i]]);
+      }
       const diseasesOf = new Map();
       const d = db.disease;
       for (let i = 0; i < d.s.length; i++) {
@@ -2083,7 +2171,7 @@ if (typeof document !== "undefined") {
       const st = db.studies;
       const label = (col, s) => db.levels[col][st[col][s]] ?? "";
       const yesNo = v => v === 1 ? "Yes" : v === 0 ? "No" : "";
-      const header = ["map_id", "year", "title", "countries", "income_groups", "income_groups_at_publication", "disease_groups",
+      const header = ["map_id", "year", "title", "countries", "income_groups", "income_groups_at_publication", "disease_groups", "funders", "publication_language",
         "evaluation_type", "design_basis", "approach", "qaly", "open_access", "geographic_scope",
         "topic_domain", "abstract_reports_icer", "abstract_reports_threshold",
         "record_id", "doi", "url", "url_source", "doi_source", "publication_link"];
@@ -2096,6 +2184,8 @@ if (typeof document !== "undefined") {
           [...new Set(cs.map(c => c.income))].join("; "),
           [...new Set(cs.map(c => c.income_pub ?? "Not classified"))].join("; "),
           (diseasesOf.get(s) || []).join("; "),
+          fundersOf.has(s) ? fundersOf.get(s).join("; ") : (db.fundedSet.has(s) ? "Other (fewer than 5 studies)" : ""),
+          db.languages ? db.languages.levels[db.languages.code[s]] : "",
           label("econ_eval_type", s), label("design_basis", s), label("model_label", s),
           label("qaly_label", s), label("oa_label", s), label("geo_scope", s), label("topic_domain", s),
           yesNo(st.has_icer[s]), yesNo(st.has_threshold[s]),
@@ -2940,10 +3030,10 @@ if (typeof document !== "undefined") {
       if (!r.ok) throw new Error("failed to load data/" + name + ".json: " + r.status);
       return r.json();
     };
-    const [dict, studies, geo, disease, countries, content, figureCopy, figureUpdates] = await Promise.all(
-      ["dict", "studies", "geo", "disease", "countries", "content", "figure_copy", "figure_updates"].map(get));
+    const [dict, studies, geo, disease, countries, content, figureCopy, figureUpdates, funders, languages] = await Promise.all(
+      ["dict", "studies", "geo", "disease", "countries", "content", "figure_copy", "figure_updates", "funders", "languages"].map(get));
     FIGURE_UPDATES = figureUpdates;
-    db = loadData({ dict, studies, geo, disease, countries, content });
+    db = loadData({ dict, studies, geo, disease, countries, content, funders, languages });
 
     // Gallery sections, figure entries and the interpolated paper01 PRISMA
     // caption all come from content.json (§15.1) — nothing hardcoded.
