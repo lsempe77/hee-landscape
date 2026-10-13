@@ -69,7 +69,12 @@ classifications in force on 1 January of each study's publication year (the Worl
 year ending in that calendar year). Countries changing classification therefore contribute to
 different income groups in different publication years. This uses publication year as a proxy
 for the timing of the research, rather than the year of data collection. Countries without a
-classification in that year were excluded from income-group comparisons. Taiwan, which has no
+classification in that year were excluded from income-group comparisons, except Ethiopia:
+for 2026 publications, its missing FY2026 classification was replaced by its FY2025 low-income
+classification. For Venezuela's 2026 publications, its missing FY2026 classification was
+replaced by its last available classification, FY2021 upper-middle income, because FY2025 was
+also unavailable. These are analysis exceptions rather than official FY2026 classifications;
+Venezuela's missing classifications for 2022–2025 were not filled. Taiwan, which has no
 World Bank entry, was coded as high income in every year by recorded override. Populations were
 retrieved from the World Bank API [access date]. Studies
 naming more than 15 countries were classed as multi-country. Disease areas were assigned from
@@ -104,6 +109,14 @@ study counts displayed on its country maps and tables. Country-level colours, in
 and profile peer comparisons use the July 2026 classification, allowing each country to have
 one income group in these summaries. Country landscapes and profiles include all publication
 years and do not inherit Explorer filters. These distinctions are stated alongside the views.
+Country counts vary with geography coverage, available denominators and minimum-study rules.
+The website contains 155 countries, 153 with studies; its burden analysis includes 154 with
+positive DALYs (152 with studies), contributing 31,471 unique study–country pairs. The deficit
+figure instead uses all 204 locations in the national GBD export and 31,627 pairs across that
+same location set. The full eligible geography contains 187 countries/territories and 31,775
+pairs. Each multi-country study contributes once per named country. The country-reach figure
+uses each year's income classification for its denominator and reports cumulative coverage
+within that year's groups; unavailable country-year classifications are excluded.
 Analyses were done in R (version 4.4.1) and
 Python.
 

@@ -27,7 +27,12 @@ Countries changing group must contribute to the appropriate group in each year;
 retain Taiwan's recorded high-income override. Keep single-country studies with
 unavailable historical income, and studies of other geographic scope, in the
 third setting category. Do not silently substitute current income for missing
-historical income. Before rebuilding, check that the versioned master includes
+historical income, except the recorded Ethiopia fallback: for 2026 publications,
+use its FY2025 low-income group when FY2026 is unavailable. For Venezuela's 2026
+publications only, use its last available FY2021 upper-middle-income group because
+FY2025 is also unavailable. State both exceptions in the notes; do not fill
+Venezuela's missing 2022–2025 classifications.
+Before rebuilding, check that the versioned master includes
 the latest eligibility, review decisions and funder data from the base master.
 
 Regenerate all affected donor/theme counts, figures, report, CSV and JSON outputs

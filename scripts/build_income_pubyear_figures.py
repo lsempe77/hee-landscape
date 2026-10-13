@@ -384,13 +384,19 @@ def main():
     ap.add_argument("--raw", default=os.path.join(ROOT, "data", "raw"))
     args = ap.parse_args()
     rows, labels, geo_groups = fd.load(args.raw)
-    captions = {
+    captions = json.load(open(CAPTIONS, encoding="utf-8")) if os.path.exists(CAPTIONS) else {}
+    income_captions = {
         "fig_equity_time.webp": {"file": "fig_equity_time_pubyear.webp", **equity_time(rows)},
         "fig_metric.webp": {"file": "fig_metric_pubyear.webp", **metric(rows)},
         "fig_intervention_mix.webp": {"file": "fig_intervention_mix_pubyear.webp", **intervention_mix(rows)},
         "paper05.webp": {"file": "paper05_pubyear.webp", **paper05(rows, geo_groups)},
         "fig_theme_rank.webp": {"file": "fig_theme_rank_pubyear.webp", **theme_rank(rows, labels)},
     }
+    for entry in income_captions.values():
+        entry["caption"] += (" For 2026 publications only, missing FY2026 classifications use "
+                             "FY2025 low income for Ethiopia and FY2021 upper-middle income for "
+                             "Venezuela (FY2025 also unavailable); these are analysis exceptions.")
+    captions.update(income_captions)
     with open(CAPTIONS, "w", encoding="utf-8", newline="\n") as f:
         json.dump(captions, f, ensure_ascii=False, indent=1)
         f.write("\n")

@@ -11,6 +11,9 @@ Codes that are not a plausible publication language (CrossRef's "ng") are
 shown as "Unclear code". The map is almost entirely English-language: this
 reflects how studies were searched, not the wider literature.
 
+Pending recovery of missing publication-language values is documented in
+scripts/publication_language_recovery.md.
+
 Usage:
     python scripts/build_language_filter.py [--raw data/raw]
 """

@@ -72,7 +72,7 @@ NOTES = {
              "Studies whose approach is unclear (about 4%) are left out of the base, as on the site's Overview.",
     "utility": "Share of studies that report QALYs.",
     "open_access": "Share of studies with a known open-access status (from OpenAlex, matched by DOI). Studies whose status could not be found are left out of the base.",
-    "lmic": "Share of studies naming at least one country that name at least one low- or middle-income country, using the World Bank income group in force on 1 January of each study's publication year. Studies naming no country are left out of the base.",
+    "lmic": "Share of studies naming at least one country that name at least one low- or middle-income country, using the World Bank income group in force on 1 January of each study's publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions. Studies naming no country are left out of the base.",
     "intensity": "Studies naming at least one country in the region, divided by the region's disease burden: the healthy years of life lost to illness and early death (DALYs, Global Burden of Disease 2023), per 100,000 DALYs. "
                  "The marker sits on the same colour scale as the map.",
     "disease": "Share of the region's disease-coded studies, split into communicable (infectious, maternal and neonatal), non-communicable and injuries. "

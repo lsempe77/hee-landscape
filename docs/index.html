@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-13-review-counts">
+<link rel="stylesheet" href="styles.css?v=2026-10-13-denominator-audit">
 </head>
 <body>
 
@@ -179,7 +179,11 @@
           several countries counts once for each country. The income filter and the trend by income use the World Bank
           group in force on 1 January of each study’s publication year. This filter also applies to the
           studies counted in the Explorer map and country table. Country income labels, colours and
-          profile peer comparisons use the current group (July 2026).
+          profile peer comparisons use the current group (July 2026). For 2026 publications,
+          Ethiopia retains its FY2025 low-income group because FY2026 is unclassified.
+          Venezuela uses its last available FY2021 upper-middle-income group for 2026 publications
+          because FY2025 is also unavailable. These are analysis exceptions; Venezuela's missing
+          2022–2025 groups remain unclassified.
         </p>
       </aside>
 
@@ -199,7 +203,7 @@
                 <div class="tb-field"><label for="x-trend-by">Colour by</label><select id="x-trend-by" class="form-select"></select></div>
               </div>
               <div id="x-trend" class="plot" style="height:320px"></div>
-              <p class="plot-note">Income group: World Bank classification in force on 1 January of each study’s publication year (for example, Kenya counts as low income for studies published up to 2015). Countries the World Bank did not classify that year are left out of the income lines.</p>
+              <p class="plot-note">Income group: World Bank classification in force on 1 January of each study’s publication year (for example, Kenya counts as low income for studies published up to 2015). Ethiopia and Venezuela have no FY2026 classification: for 2026 publications, Ethiopia uses FY2025 low income and Venezuela uses its last available FY2021 upper-middle income (FY2025 also unavailable). These are analysis exceptions. Other unavailable country-year classifications are left out of the income lines.</p>
             </div>
           </div>
           <div class="card">
@@ -209,6 +213,7 @@
                 <div class="tb-field"><label for="x-map-metric">Metric</label><select id="x-map-metric" class="form-select"></select></div>
               </div>
               <div id="x-map" class="plot" style="height:320px"></div>
+              <p class="plot-note">The income filter counts studies by income group at publication. For 2026 publications, missing FY2026 groups use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable). These are analysis exceptions; other missing country-year groups remain unclassified.</p>
               <p class="plot-note">Regions follow the WHO’s regions (with Indonesia in the Western Pacific since 2025). Taiwan and Hong Kong, which the WHO does not assign, are placed with their neighbours in the Western Pacific. The United States and Argentina left the WHO in 2026 but stay in the Americas region on the WHO’s list.</p>
             </div>
           </div>
@@ -463,7 +468,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-13-review-counts"></script>
+<script type="module" src="app.js?v=2026-10-13-denominator-audit"></script>
 
 </body>
 </html>

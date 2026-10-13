@@ -22,6 +22,9 @@ Writes:
                                        `income_broad_pubyear` after `income_broad`
 
 Taiwan keeps the recorded High-income decision (Q3, 2026-10-05) in every year.
+Ethiopia's missing FY26 group uses its FY25 low-income group for 2026 publications.
+Venezuela's missing FY26 group uses its last available FY21 upper-middle-income
+group for 2026 publications only; missing groups in earlier years remain unavailable.
 
 Usage:
     python scripts/build_income_pubyear.py [--oghist data/raw/OGHIST_2026_10_08.xlsx] [--skip-raw]
@@ -109,7 +112,12 @@ def group_at(hist, iso, year):
         return OVERRIDE[iso]
     if iso not in hist:
         return None
-    return CODES.get(hist[iso].get(f"FY{year % 100:02d}", ""))
+    group = CODES.get(hist[iso].get(f"FY{year % 100:02d}", ""))
+    if group is None and iso == "ETH" and year == 2026:
+        return CODES.get(hist[iso].get("FY25", ""))
+    if group is None and iso == "VEN" and year == 2026:
+        return CODES.get(hist[iso].get("FY21", ""))
+    return group
 
 
 def broad(group):
