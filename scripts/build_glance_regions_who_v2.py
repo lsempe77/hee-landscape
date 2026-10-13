@@ -419,7 +419,7 @@ def render(v):
         <div class="row row-top3">{top3}</div>
         <div class="row row-utility">
           <div class="big">{pct(utility)}</div>
-          <div class="ubar"><b style="width:{100 * utility:.1f}%"></b><span class="avg" style="left:{100 * utility_global:.1f}%"></span></div>
+          <div class="ubar"><b style="width:{100 * utility:.1f}%"></b><span class="avg" style="left:{100 * utility_global:.1f}%"></span><span class="avg-l" style="left:{100 * utility_global:.1f}%">{pct(utility_global)}</span></div>
         </div>
         <div class="row row-trend">{sparkline(v['trend_years'], r['trend1'], r['trend2'], v['trend_all'])}</div>
       </div>""")
@@ -512,6 +512,7 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 .big {{ font:800 26px/1 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; text-align:center; margin:8px 0 8px; }}
 .ubar {{ position:relative; height:16px; border-radius:8px; background:#cbc5ba; overflow:visible; }}
 .ubar b {{ display:block; height:100%; border-radius:8px; background:var(--ink); }}
+.ubar .avg-l {{ position:absolute; top:22px; transform:translateX(-50%); font-size:10px; font-weight:700; color:var(--red); white-space:nowrap; }}
 .ubar .avg {{ position:absolute; top:-3px; width:2.5px; height:22px; margin-left:-1.25px; background:var(--red); }}
 .spark {{ width:100%; height:auto; overflow:visible; }}
 .spark text {{ font-size:9px; fill:#3b3832; }}
