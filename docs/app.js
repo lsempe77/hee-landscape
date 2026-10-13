@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-13-review-counts";
+const BUILD = "2026-10-13-denominator-audit";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -949,15 +949,15 @@ if (typeof document !== "undefined") {
   // after: file to follow in the target section; first: true puts it first.
   const MOVED_FIGURES = [
     { file: "fig_method_stream.webp", to: "Methods & metrics", after: "fig_metric.webp" },
-    { file: "fig_authorship_pattern.webp", to: "Authorship & access", first: true },
-    { file: "fig_forest.webp", to: "Authorship & access", after: "fig_authorship_pattern.webp" },
-    { file: "paper06.webp", to: "Authorship & access", after: "fig_forest.webp" },
-    { file: "fig_collab_chord.webp", to: "Authorship & access", after: "paper06.webp" },
+    { file: "fig_authorship_pattern_v2.svg", to: "Authorship & access", first: true },
+    { file: "fig_forest_v2.svg", to: "Authorship & access", after: "fig_authorship_pattern_v2.svg" },
+    { file: "paper06_v2.svg", to: "Authorship & access", after: "fig_forest_v2.svg" },
+    { file: "fig_collab_chord_v2.svg", to: "Authorship & access", after: "paper06_v2.svg" },
     { file: "fig_funder_funders.svg", to: "Research funding", first: true },
     { file: "fig_map_growth.webp", to: "Geography", after: "fig_worldmap.webp" },
     { file: "fig_map_burden.webp", to: "Geography", after: "paper03.webp" },
     { file: "fig_map_openaccess.webp", to: "Authorship & access", after: "fig_openaccess.webp" },
-    { file: "fig_map_authorship.webp", to: "Authorship & access", after: "fig_collab_chord.webp" },
+    { file: "fig_map_authorship_v2.svg", to: "Authorship & access", after: "fig_collab_chord_v2.svg" },
     { file: "fig_map_model.webp", to: "Methods & metrics", after: "paper02.webp" }
   ];
   const SECTION_GROUPS = {
