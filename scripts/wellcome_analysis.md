@@ -13,6 +13,28 @@ unique IDs, publication years, income values and the eligible-study total agains
 the web build. All figures, report and metadata are staged before replacement.
 An incomplete or incompatible input dataset cannot replace the published outputs.
 
+## Requirement for the next dataset refresh
+
+When refreshing the Wellcome and general funder analyses, use the latest matching
+master dataset with `income_group_pubyear` and `income_broad_pubyear` (currently
+`data/raw/hee_analysis_master_v2_1.csv`). Update the builder's required fields,
+validation and setting assignments to use `income_broad_pubyear` for HIC/LMIC
+comparisons, rather than the fixed `income_broad` classification. The current
+builder still reads `hee_analysis_master_v2.csv` and has not made this switch.
+
+Apply the World Bank group in force on 1 January of each study's publication year.
+Countries changing group must contribute to the appropriate group in each year;
+retain Taiwan's recorded high-income override. Keep single-country studies with
+unavailable historical income, and studies of other geographic scope, in the
+third setting category. Do not silently substitute current income for missing
+historical income. Before rebuilding, check that the versioned master includes
+the latest eligibility, review decisions and funder data from the base master.
+
+Regenerate all affected donor/theme counts, figures, report, CSV and JSON outputs
+from the same dataset, record its hash and classification convention, and update
+captions and methods notes to state publication-year income grouping. Verify a
+country that changes group and the retained study totals when updating tests.
+
 ## Separation of audiences
 
 The global `fig_funder_funders.svg` ranks the top 15 recorded funders by unique
