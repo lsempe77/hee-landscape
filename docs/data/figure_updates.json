@@ -1,0 +1,22 @@
+{
+ "fig_equity_time.webp": {
+  "file": "fig_equity_time_pubyear.webp",
+  "caption": "Share of each year's single-country evaluations about LMICs: 17% in 2010 → 35% in 2025 — real progress, but still far below the 83% of global disease burden those countries carry (dashed line). Eligible full evaluations naming a single country with a known income; 2026 partial omitted. Income group at publication: the World Bank classification in force on 1 January of the publication year."
+ },
+ "fig_metric.webp": {
+  "file": "fig_metric_pubyear.webp",
+  "caption": "Share of eligible evaluations reporting each comparable metric. The metric flips with income: high-income research reports QALYs (54%) and almost no DALYs (1%); low-income research does the reverse (39% DALYs, 7% QALYs) — so rich and poor settings are measured in different units. Base: 41,657 eligible evaluations (income shown for single-country studies, by the World Bank group in force on 1 January of the publication year); a study may report neither, one, or both."
+ },
+ "fig_intervention_mix.webp": {
+  "file": "fig_intervention_mix_pubyear.webp",
+  "caption": "Share of each income group's eligible single-country studies whose primary intervention class is the given type (the optional secondary class is not folded in). Pharmaceuticals peak in upper-middle-income settings (46.6%) and fall to 17.9% at low income, where they stay narrowly ahead of care-model and organisational evaluations (17.6%); vaccines rise steadily with lower income (4.7% → 14.0%) while surgery (13.8% → 7.8%) and devices (8.5% → 2.8%) fall. Base: 27,923 eligible single-country studies with a World Bank income group in force on 1 January of the publication year; derived by a single-pass language model (deepseek/deepseek-v4.1-flash, temperature 0), validated against a keyword lexicon, the emergent-topic clusters and a second model lineage — no human validation available (reviews/intervention-extraction.md)."
+ },
+ "paper05.webp": {
+  "file": "paper05_pubyear.webp",
+  "caption": "Journal version, income at publication. Percentage of each income group's disease-coded full economic evaluations that name each disease area, across the 14 harmonised groups (maternal & neonatal includes the MeSH pregnancy-complications branch C12.050.703; mental & substance use is MeSH F03). Rows run from areas most concentrated in low-income research (top) to high-income research (bottom): infectious disease dominates lower-income groups (79% of low-income and 61% of lower-middle-income studies), neoplasms and cardiovascular disease the high-income group. A study naming several areas appears in each, so columns sum above 100%. Income group: the World Bank classification in force on 1 January of the publication year."
+ },
+ "fig_theme_rank.webp": {
+  "file": "fig_theme_rank_pubyear.webp",
+  "caption": "The 15 most-LMIC and 15 most-high-income of 73 emergent themes (all themes: 28% LMIC). The high-income panel is shown first, plotted as each theme's high-income share (dementia leads at 93%); the LMIC panel as its LMIC share (malaria leads at 86%). The two ends never overlap: 36%–86% LMIC vs 7%–16% LMIC. n per theme = single-country studies with a World Bank income group in force on 1 January of the publication year."
+ }
+}

@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-13-income-pubyear";
+const BUILD = "2026-10-13-income-pubyear-figs";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -828,6 +828,11 @@ if (typeof document !== "undefined") {
 
   let db = null;
   let GALLERY = [];
+  // Figures redrawn here with income at publication year (scripts/
+  // build_income_pubyear_figures.py): original file -> { file, caption }.
+  // The original stays the figure's key; only the image and caption change.
+  let FIGURE_UPDATES = {};
+  const figSrc = file => "figures/" + ((FIGURE_UPDATES[file] && FIGURE_UPDATES[file].file) || file);
   let FIG_INDEX = {};
   // Interactive figures: self-contained HTML pages built by scripts/ (here
   // scripts/build_glance_regions_who.py), added on top of content.json's gallery
@@ -1017,7 +1022,7 @@ if (typeof document !== "undefined") {
       modalFigure = shown;
       $("fig-modal-title").textContent = shown.title;
       const img = $("fig-modal-img");
-      img.src = "figures/" + shown.file;
+      img.src = figSrc(shown.file);
       img.alt = shown.title;
       renderFigureNotes($("fig-modal-caption"), shown);
       setFigureZoom(1);
@@ -1072,7 +1077,7 @@ if (typeof document !== "undefined") {
     const f = modalFigure;
     if (!f) return;
     const img = new Image();
-    img.src = "figures/" + f.file;
+    img.src = figSrc(f.file);
     try { await img.decode(); } catch (e) { return; }
     const w = img.naturalWidth, h = img.naturalHeight;
     const fontSize = Math.max(14, Math.round(w * 0.011));
@@ -1553,7 +1558,7 @@ if (typeof document !== "undefined") {
       btn.type = "button";
       btn.setAttribute("aria-label", "Open figure: " + (f ? f.title : h.alt));
       const img = el("img", "overview-analysis-figure");
-      img.src = "figures/" + h.file;
+      img.src = figSrc(h.file);
       img.alt = h.alt;
       img.loading = "lazy";
       btn.appendChild(img);
@@ -1737,7 +1742,7 @@ if (typeof document !== "undefined") {
     const card = el("button", "thematic-card");
     card.type = "button";
     const img = el("img", "thematic-card-image");
-    img.src = "figures/" + (sec.figs.find(f => !f.html) || sec.figs[0]).file;
+    img.src = figSrc((sec.figs.find(f => !f.html) || sec.figs[0]).file);
     img.alt = "";
     img.loading = "lazy";
     const body = el("div", "thematic-card-body");
@@ -1823,7 +1828,7 @@ if (typeof document !== "undefined") {
       }
       const card = el("div", "fig-card");
       const img = el("img");
-      img.src = "figures/" + f.file;
+      img.src = figSrc(f.file);
       img.alt = f.title;
       img.loading = "lazy";
       img.addEventListener("click", () => openModal(f.file));
@@ -1868,7 +1873,7 @@ if (typeof document !== "undefined") {
     const fc = el("div", "fig-caption");
     renderFigureNotes(fc, f);
     const open = el("a", "fig-open-link");
-    open.href = "figures/" + f.file;
+    open.href = figSrc(f.file);
     open.target = "_blank";
     open.rel = "noopener";
     open.textContent = "Open full page ↗";
@@ -2935,8 +2940,9 @@ if (typeof document !== "undefined") {
       if (!r.ok) throw new Error("failed to load data/" + name + ".json: " + r.status);
       return r.json();
     };
-    const [dict, studies, geo, disease, countries, content, figureCopy] = await Promise.all(
-      ["dict", "studies", "geo", "disease", "countries", "content", "figure_copy"].map(get));
+    const [dict, studies, geo, disease, countries, content, figureCopy, figureUpdates] = await Promise.all(
+      ["dict", "studies", "geo", "disease", "countries", "content", "figure_copy", "figure_updates"].map(get));
+    FIGURE_UPDATES = figureUpdates;
     db = loadData({ dict, studies, geo, disease, countries, content });
 
     // Gallery sections, figure entries and the interpolated paper01 PRISMA
@@ -2962,7 +2968,8 @@ if (typeof document !== "undefined") {
       if (sec) sec.figs.splice(x.index, 0, x.fig);
     }
     for (const sec of GALLERY) {
-      sec.figs = sec.figs.map(figure => ({ ...figure, ...figureCopy[figure.file] }));
+      sec.figs = sec.figs.map(figure => ({ ...figure, ...figureCopy[figure.file],
+        ...(FIGURE_UPDATES[figure.file] ? { caption: FIGURE_UPDATES[figure.file].caption } : {}) }));
       const groups = SECTION_GROUPS[sec.title];
       if (groups) sec.groups = groups.map(group => ({ ...group,
         figs: group.files.map(file => sec.figs.find(f => f.file === file)).filter(Boolean)
