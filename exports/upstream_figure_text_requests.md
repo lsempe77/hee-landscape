@@ -38,6 +38,7 @@ Not covered here:
 | Open access | 71% (`fig_map_openaccess`) vs 66.6% (Overview) | Map counts study–country pairs |
 | Model-based | 63.9% (`fig_map_model`) vs 54% (Overview) | Map counts study–country pairs |
 | `fig_inequality` | Subtitle "58% of evidence / 43% of burden" vs footnote "48.1% / half" | Unknown |
+| Reviews | 1,706 (selection diagram `paper01`, methods text) vs 2,653 = 1,856 systematic + 797 other (Overview) | Older title-only flag vs the newer title-and-abstract screen (`review_type`); pick one for the diagram and methods |
 
 ## Rendering defects
 

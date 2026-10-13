@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-13-plain-language";
+const BUILD = "2026-10-13-review-counts";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -1255,7 +1255,7 @@ if (typeof document !== "undefined") {
   const WIDE_TILES = new Set([METRICS_CARD, FUNDERS_CARD]);
   const NARROW_TILES = new Set(["Model-based"]);
   const OVERVIEW_TILE_COPY = {
-    "Eligible full evaluations": { label: "Studies in the map", sub: "Including 1,706 reviews of earlier studies" },
+    "Eligible full evaluations": { label: "Studies in the map", sub: "Including reviews of earlier studies" },
     "Years covered": { label: "Publication years covered" },
     // Countries in the map's country data named by at least one study (153),
     // counted from the data. The upstream build's 169 ("named in extracted
@@ -1270,6 +1270,21 @@ if (typeof document !== "undefined") {
     "Model-based": { sub: "Results estimated with a computer model rather than measured in patients" }
   };
   const PLACEHOLDER_PCT = "XX%";
+  // The web data has no review-type field. Counts are from the team export
+  // (hee_analysis_master_v2.csv `review_type`, 2026-10-12): an automated
+  // title-and-abstract screen of the included studies. Update with the export.
+  const REVIEW_COUNTS = { systematic: 1856, other: 797 };
+  const REVIEW_HELP = {
+    title: "How are reviews counted?",
+    paragraphs: [
+      "Reviews bring together the results of earlier studies. A systematic review searches for and appraises " +
+      "studies using set, reported methods; other reviews (narrative, scoping or rapid reviews, or reviews that " +
+      "do not describe themselves as systematic) are counted separately.",
+      "These counts come from an automated screen of each study's title and abstract, so they are provisional. " +
+      "Some reviews also include the authors' own evaluation. The selection diagram uses an older, stricter " +
+      "title-only flag and counts 1,706 reviews."
+    ]
+  };
 
   const TILE_ACTIONS = {
     "Eligible full evaluations": () => openModal("paper01.webp"),
@@ -1584,6 +1599,13 @@ if (typeof document !== "undefined") {
           const sub = el("div", "value-box-sub");
           sub.textContent = subText;
           box.appendChild(sub);
+        }
+        if (key === "Journals") {
+          const reviews = el("div", "value-box-sub");
+          reviews.textContent = "Reviews among the studies: " + fmtNum(REVIEW_COUNTS.systematic) +
+            " systematic, " + fmtNum(REVIEW_COUNTS.other) + " other ";
+          reviews.appendChild(cardHelpButton(REVIEW_HELP));
+          box.appendChild(reviews);
         }
       }
       if (WIDE_TILES.has(key)) box.classList.add("tile-wide");
