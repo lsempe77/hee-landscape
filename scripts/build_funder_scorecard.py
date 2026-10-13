@@ -131,7 +131,7 @@ def main():
 
     fig.text(.02, .965, TITLE, fontsize=26, fontweight="bold", color=ink, va="top")
     fig.text(.02, .915, "Each country's share of studies divided by its share of global disease burden. "
-             "Country size does not drive the ranking. It is a benchmark, not a funding recommendation.",
+             "Country size does not drive the ranking.",
              fontsize=14.5, color="#33475f", va="top")
     fig.legend(handles=[Patch(color=color[g], label=g) for g in GROUPS], loc="upper left",
                bbox_to_anchor=(.02, .865), ncol=4, frameon=False, fontsize=13, handlelength=2.2,

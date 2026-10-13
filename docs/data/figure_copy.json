@@ -160,7 +160,7 @@
   },
   "fig_funder_scorecard_v2.svg": {
     "title": "Evidence gaps: where is research coverage lowest relative to disease burden?",
-    "summary": "Compare each country's share of research with its share of global disease burden. Because the comparison uses shares, large countries do not dominate the ranking. Ratios based on few studies are less stable. The ranking is a starting point for discussion, rather than a funding recommendation or an estimate of value for money."
+    "summary": "Compare each country's share of research with its share of global disease burden. Because the comparison uses shares, large countries do not dominate the ranking. Ratios based on few studies are less stable."
   },
   "fig_funder_capacity.webp": {
     "title": "Local capacity: where could research capacity be strengthened?",
