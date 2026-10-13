@@ -2052,11 +2052,14 @@ if (typeof document !== "undefined") {
     makeMultiSelect("x-disease", db.disease_grps, "All areas", "disease");
     makeMultiSelect("x-evaltype", db.levels.econ_eval_type, "All types", "evaltype");
     makeMultiSelect("x-design", db.levels.design_basis, "All designs", "design");
+    if (!db.funders.names.length) $("x-funder").closest(".control-group").hidden = true;
     const funderN = new Map(db.funders.names.map((nm, i) => [nm, db.funders.n[i]]));
     makeMultiSelect("x-funder", [ANY_FUNDER, ...db.funders.names], "All studies", "funder",
       nm => nm + " (" + fmtNum(nm === ANY_FUNDER ? db.funders.any.length : funderN.get(nm)) + ")");
-    const langN = new Map(db.languages.levels.map((l, i) => [l, db.languages.n[i]]));
-    makeMultiSelect("x-language", db.languages.levels, "All languages", "language",
+    const lang = db.languages || { levels: [], n: [] };
+    if (!lang.levels.length) $("x-language").closest(".control-group").hidden = true;
+    const langN = new Map(lang.levels.map((l, i) => [l, lang.n[i]]));
+    makeMultiSelect("x-language", lang.levels, "All languages", "language",
       l => l + " (" + fmtNum(langN.get(l)) + ")");
 
     makeRadios("x-model", "x_model", ["All", "Model-based", "Measured"]);
@@ -3030,8 +3033,14 @@ if (typeof document !== "undefined") {
       if (!r.ok) throw new Error("failed to load data/" + name + ".json: " + r.status);
       return r.json();
     };
+    // Add-on files (redrawn figures, funder and language filters): if a copy of
+    // the site lacks one, carry on without that feature instead of failing.
+    const OPTIONAL_DATA = { figure_updates: {}, funders: null, languages: null };
+    const load = name => name in OPTIONAL_DATA
+      ? get(name).catch(err => { console.warn(err.message); return OPTIONAL_DATA[name]; })
+      : get(name);
     const [dict, studies, geo, disease, countries, content, figureCopy, figureUpdates, funders, languages] = await Promise.all(
-      ["dict", "studies", "geo", "disease", "countries", "content", "figure_copy", "figure_updates", "funders", "languages"].map(get));
+      ["dict", "studies", "geo", "disease", "countries", "content", "figure_copy", "figure_updates", "funders", "languages"].map(load));
     FIGURE_UPDATES = figureUpdates;
     db = loadData({ dict, studies, geo, disease, countries, content, funders, languages });
 
