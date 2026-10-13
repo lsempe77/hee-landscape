@@ -177,7 +177,7 @@
   "wellcome_analysis.html": {
     "summary": "Explore the evidence and recorded funders within Wellcome's priority themes. The view separates all theme-related studies from Wellcome-funded studies. Theme coverage and funding records are incomplete. Climate & Health is a reviewed title-and-abstract screen, and is small because few studies in the map address climate."
   },
-  "fig_glance_regions_who.html": {
+  "fig_glance_regions_who_v2.html": {
     "title": "Research coverage and health needs by region",
     "summary": "Compare regions' research coverage, disease focus and health needs. Use the information buttons to see how each measure was calculated. These comparisons describe evidence coverage, rather than recommending a funding allocation."
   }

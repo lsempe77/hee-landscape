@@ -908,17 +908,17 @@ if (typeof document !== "undefined") {
   const figSrc = file => "figures/" + ((FIGURE_UPDATES[file] && FIGURE_UPDATES[file].file) || file);
   let FIG_INDEX = {};
   // Interactive figures: self-contained HTML pages built by scripts/ (here
-  // scripts/build_glance_regions_who.py), added on top of content.json's gallery
+  // scripts/build_glance_regions_who_v2.py), added on top of content.json's gallery
   // so the upstream content build stays untouched. Shown in an iframe.
   const EXTRA_FIGURES = [{
     section: "Geography",
     index: 0,
     fig: {
-      file: "fig_glance_regions_who.html",
+      file: "fig_glance_regions_who_v2.html",
       html: true,
       title: "Research coverage and health needs by region",
       caption: "Built from the map's data by WHO region: studies per unit of disease burden, headline " +
-        "figures, and each region's disease focus, QALY use and country coverage over time. " +
+        "figures, and each region's disease focus, use of utility measures (QALYs, DALYs) and country coverage over time. " +
         "Click any ? for details."
     }
   }];
@@ -1015,7 +1015,7 @@ if (typeof document !== "undefined") {
         title: "Geographic inequalities",
         blurb: "How research intensity differs across countries, income groups and regions, " +
           "including how the evidence compares with disease burden.",
-        files: ["fig_glance_regions_who.html", "fig_map_burden.webp", "paper03.webp"]
+        files: ["fig_glance_regions_who_v2.html", "fig_map_burden.webp", "paper03.webp"]
       }
     ]
   };
