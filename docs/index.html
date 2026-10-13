@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-12-funder-treemap">
+<link rel="stylesheet" href="styles.css?v=2026-10-13-who-regions">
 </head>
 <body>
 
@@ -116,7 +116,7 @@
           <select id="x-income" multiple placeholder="All groups"></select>
         </div>
         <div class="control-group">
-          <label class="control-label" for="x-region">UN region</label>
+          <label class="control-label" for="x-region">WHO region</label>
           <select id="x-region" multiple placeholder="All regions"></select>
         </div>
         <div class="control-group">
@@ -185,6 +185,7 @@
                 <div class="tb-field"><label for="x-map-metric">Metric</label><select id="x-map-metric" class="form-select"></select></div>
               </div>
               <div id="x-map" class="plot" style="height:320px"></div>
+              <p class="plot-note">Regions: WHO regions as in the WHO Global Health Observatory's country list (Indonesia in the Western Pacific Region since the World Health Assembly approved its move in May 2025). Places that list does not assign to a region (Taiwan, Hong Kong) get the WHO region of the other countries in their UN M49 sub-region (Eastern Asia: Western Pacific Region). The United States and Argentina left the WHO in 2026 but the list keeps them in the Region of the Americas. The earlier UN M49 sub-regions are kept in the dataset as <code>un_region</code>.</p>
             </div>
           </div>
           <div class="card">
@@ -422,14 +423,14 @@
        Review status has not been verified for every record. AI-assisted screening and classification can introduce errors;
        checks and data coverage vary by analysis. Figures explain which records they include and where information is missing.</p>
     <p>Publication counts are not funding amounts or measures of research quality. The final publication year is incomplete.</p>
-    <p>See <a href="https://sawalee-3ie.github.io/health-financing-platform/#methods-title" target="_blank" rel="noopener">methods and scope</a>.</p>
+    <p>See <a href="../#methods-title">methods and scope</a>.</p>
   </details>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-12-funder-treemap"></script>
+<script type="module" src="app.js?v=2026-10-13-who-regions"></script>
 
 </body>
 </html>

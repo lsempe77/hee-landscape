@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-12-funder-treemap";
+const BUILD = "2026-10-13-who-regions";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -141,7 +141,7 @@ export function loadData({ dict, studies, geo, disease, countries, content }) {
     incLv: dict.meta.inc_lv.slice(),
     incOrder: dict.meta.inc_lv.slice().reverse(),
     incomeOf: countries.map(r => r.income),
-    regionOf: countries.map(r => r.un_region),
+    regionOf: countries.map(r => r.who_region),
     disease_grps: dict.disease_grps,
     diseaseSets,
     years: dict.years
@@ -251,6 +251,7 @@ export function applyFilters(db, filt) {
       country: r.country,
       income: r.income,
       un_region: r.un_region,
+      who_region: r.who_region,
       pop: pop,
       dalys: dalys,
       total_spend_bn: spend,
@@ -292,7 +293,7 @@ export function trendSeries(db, flt, varName) {
     }
     return sortedYearObj(counts);
   }
-  const isGeo = varName === "income" || varName === "un_region";
+  const isGeo = varName === "income" || varName === "who_region";
   const counts = new Map();
   const bump = (y, cat) => {
     let m = counts.get(y);
@@ -424,7 +425,7 @@ export function tableRows(db, flt, k = 25) {
   return rows.slice(0, k).map(r => ({
     Country: r.country,
     Income: r.income,
-    Region: r.un_region == null ? "" : r.un_region,
+    Region: r.who_region == null ? "" : r.who_region,
     Studies: r.studies,
     "Per 100k DALYs": r.per100k == null ? null : rRound(r.per100k, 2),
     "Per US$1bn": r.per_bn == null ? null : rRound(r.per_bn, 2),
@@ -595,6 +596,7 @@ export function countryProfile(db, iso3) {
     iso3: r.iso3,
     income: r.income,
     un_region: r.un_region,
+    who_region: r.who_region,
     c_n: r.studies,
     c_daly: num(r.per100k_dalys),
     c_spend: num(r.per_bn_usd),
@@ -621,7 +623,7 @@ export function countryFacts(db, iso3) {
   const pop = num(r.pop), dalys = num(r.dalys), spend = num(r.total_spend_bn);
   const pairs = [
     ["Income group", r.income],
-    ["UN region", r.un_region == null ? "—" : r.un_region]
+    ["WHO region", r.who_region == null ? "—" : r.who_region]
   ];
   if (pop != null) pairs.push(["Population", fmtNum(rRound(pop / 1e6)) + " M"]);
   if (dalys != null) pairs.push(["Disease burden", fmtNum(rRound(dalys / 1e6)) + " M DALYs (2023)"]);
@@ -822,16 +824,16 @@ if (typeof document !== "undefined") {
   let GALLERY = [];
   let FIG_INDEX = {};
   // Interactive figures: self-contained HTML pages built by scripts/ (here
-  // scripts/build_glance_regions.py), added on top of content.json's gallery
+  // scripts/build_glance_regions_who.py), added on top of content.json's gallery
   // so the upstream content build stays untouched. Shown in an iframe.
   const EXTRA_FIGURES = [{
     section: "Geography",
     index: 0,
     fig: {
-      file: "fig_glance_regions.html",
+      file: "fig_glance_regions_who.html",
       html: true,
       title: "(Un)equal weight at a glance: research intensity and evaluations by region",
-      caption: "Draft infographic built from the map's data by World Bank region: research per unit of " +
+      caption: "Draft infographic built from the map's data by WHO region: research per unit of " +
         "disease burden, headline figures, and each region's disease focus, QALY use and country " +
         "coverage over time. Click any ? for details."
     }
@@ -917,7 +919,7 @@ if (typeof document !== "undefined") {
         title: "Geographic inequalities",
         blurb: "How research intensity differs across countries, income groups and regions, " +
           "including how the evidence compares with disease burden.",
-        files: ["fig_glance_regions.html", "fig_map_burden.webp", "paper03.webp"]
+        files: ["fig_glance_regions_who.html", "fig_map_burden.webp", "paper03.webp"]
       }
     ]
   };
@@ -2142,7 +2144,7 @@ if (typeof document !== "undefined") {
       if (v === "income") {
         cats = db.incLv.slice();
         colorMap = db.palInc;
-      } else if (v === "un_region") {
+      } else if (v === "who_region") {
         cats = [...new Set(years.flatMap(y => Object.keys(ser[y])))].sort();
       } else {
         const lv = db.levels[v];
