@@ -507,8 +507,13 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   box-shadow: 0 4px 14px rgba(16, 36, 62, .06);
   color: var(--hee-ink);
 }
-#ov-tiles .value-box.tile-wide { grid-column: span 18; }
-#ov-tiles .value-box.tile-narrow { grid-column: span 12; }
+/* Rows: studies (2/3) + access (1/3); geography (full); metrics + model + funders. */
+#ov-tiles .value-box.tile-studies { grid-column: span 32; }
+#ov-tiles .value-box.tile-access { grid-column: span 16; }
+#ov-tiles .value-box.tile-geo { grid-column: 1 / -1; }
+#ov-tiles .value-box.tile-metrics,
+#ov-tiles .value-box.tile-funders { grid-column: span 18; }
+#ov-tiles .value-box.tile-model { grid-column: span 12; }
 #ov-tiles .value-box::before {
   content: "";
   position: absolute;
@@ -516,15 +521,12 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   width: 5px;
   background: var(--tile-accent);
 }
-#ov-tiles .value-box:nth-child(1) { --tile-accent: #2769a8; --tile-bg: #f0f6fc; }
-#ov-tiles .value-box:nth-child(2) { --tile-accent: #a77b25; --tile-bg: #fbf7ed; }
-#ov-tiles .value-box:nth-child(3) { --tile-accent: #b05b47; --tile-bg: #fbf2ef; }
-#ov-tiles .value-box:nth-child(4) { --tile-accent: #7b668c; --tile-bg: #f7f3f8; }
-#ov-tiles .value-box:nth-child(5) { --tile-accent: #16869a; --tile-bg: #eef8f8; }
-#ov-tiles .value-box:nth-child(6) { --tile-accent: #53687d; --tile-bg: #f2f5f7; }
-#ov-tiles .value-box:nth-child(7) { --tile-accent: #25835f; --tile-bg: #eff8f3; }
-#ov-tiles .value-box:nth-child(8) { --tile-accent: #2b6cae; --tile-bg: #f1f6fb; }
-#ov-tiles .value-box:nth-child(9) { --tile-accent: #287f91; --tile-bg: #eff8fa; }
+#ov-tiles .value-box.tile-studies { --tile-accent: #2769a8; --tile-bg: #f0f6fc; }
+#ov-tiles .value-box.tile-access { --tile-accent: #b05b47; --tile-bg: #fbf2ef; }
+#ov-tiles .value-box.tile-geo { --tile-accent: #25835f; --tile-bg: #f2f8f4; }
+#ov-tiles .value-box.tile-metrics { --tile-accent: #16869a; --tile-bg: #eef8f8; }
+#ov-tiles .value-box.tile-model { --tile-accent: #2b6cae; --tile-bg: #f1f6fb; }
+#ov-tiles .value-box.tile-funders { --tile-accent: #7b668c; --tile-bg: #f7f3f8; }
 /* "Who funds the evidence?" card: purple bars on a lavender track. */
 .funding-overview-card .metrics-overview-row { grid-template-columns: minmax(9.2rem, 1.25fr) minmax(5rem, 2fr) 3.2rem; }
 .funding-overview-card .metrics-overview-track { background: #e4dfea; }
@@ -532,40 +534,156 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 /* "Who funds the evidence?" card: link-style prompt to the funder figures. */
 .funders-card-link { display: inline-block; margin-top: .45rem; color: var(--tile-accent); font-size: .78rem; font-weight: 650; }
 #ov-tiles .funders-card:hover .funders-card-link { text-decoration: underline; }
-/* "Geographic scope of studies": split bar plus two labels. */
+/* "Studies captured in the map": big count, then journals and reviews. */
+.studies-overview-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .2rem .6rem;
+}
+.studies-overview-value {
+  color: var(--hee-ink);
+  font-size: 2.6rem;
+  font-weight: 650;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+.studies-overview-text { color: var(--hee-ink-soft); font-size: 1rem; }
+.studies-overview-text strong { color: var(--hee-ink); }
+.studies-overview-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem 1.2rem;
+  margin-top: .9rem;
+  padding-top: .85rem;
+  border-top: 1px solid color-mix(in srgb, var(--tile-accent) 22%, white);
+}
+.studies-overview-stat + .studies-overview-stat {
+  padding-left: 1.2rem;
+  border-left: 1px solid color-mix(in srgb, var(--tile-accent) 22%, white);
+}
+.studies-overview-label {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-bottom: .35rem;
+  color: var(--tile-accent);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.studies-overview-row { display: flex; align-items: baseline; gap: .6rem; }
+.studies-overview-row strong {
+  color: var(--hee-ink);
+  font-size: 1.55rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+.studies-overview-row span { color: var(--hee-muted); font-size: .76rem; line-height: 1.35; }
+/* "Geographic coverage of studies": three columns split by rules. */
+.geo-overview-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+.geo-overview-col { min-width: 0; padding: 0 1.3rem; }
+.geo-overview-col:first-child { padding-left: 0; }
+.geo-overview-col:last-child { padding-right: 0; }
+.geo-overview-col + .geo-overview-col { border-left: 1px solid color-mix(in srgb, var(--tile-accent) 20%, white); }
+.geo-overview-subhead {
+  margin: 0 0 .45rem;
+  color: var(--hee-ink);
+  font-size: .8rem;
+  font-weight: 650;
+}
+.geo-overview-col .studies-overview-value { font-size: 2.2rem; }
+.geo-overview-col .studies-overview-text { font-size: .85rem; }
+.geo-overview-note { margin: .2rem 0 1rem; color: var(--hee-muted); font-size: .7rem; }
 .geo-scope-bar {
   display: flex;
   width: 100%;
-  height: 30px;
-  margin: .7rem 0 .75rem;
+  height: 14px;
+  margin: .2rem 0 .6rem;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 3px;
   background: #d9e1e7;
 }
-.geo-scope-segment {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.8rem;
-  color: #fff;
-  font-size: .78rem;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
-.geo-scope-single { background: linear-gradient(90deg, #356fa8, #1f5fa8); }
-.geo-scope-other { background: linear-gradient(90deg, #79bda6, #2f8b73); }
-.geo-scope-labels {
+.geo-scope-segment + .geo-scope-segment { border-left: 2px solid var(--tile-bg); }
+.geo-scope-single { background: #2f6aa6; }
+.geo-scope-other { background: #6fb79c; }
+.geo-scope-none { background: #c2ccd4; }
+.geo-scope-legend { display: grid; gap: .2rem; }
+.geo-scope-legend-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: 10px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .5rem;
   color: var(--hee-ink-soft);
-  font-size: .74rem;
-  line-height: 1.3;
+  font-size: .76rem;
 }
-.geo-scope-labels strong,
-.geo-scope-labels span { display: block; }
-.geo-scope-labels strong { margin-bottom: .15rem; color: var(--hee-ink); }
-@media (max-width: 700px) { .geo-scope-labels { grid-template-columns: 1fr; } }
+.geo-scope-swatch { width: 10px; height: 10px; border-radius: 2px; }
+.geo-scope-legend-row strong { color: var(--hee-ink); font-variant-numeric: tabular-nums; }
+.geo-income-circles {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: .5rem;
+  min-height: 170px;
+  padding-top: .4rem;
+}
+.geo-income-item {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  min-width: 0;
+  text-align: center;
+}
+.geo-income-item strong { color: var(--hee-ink); font-size: .78rem; font-variant-numeric: tabular-nums; }
+.geo-income-dot { display: block; flex: 0 0 auto; border-radius: 50%; }
+.geo-income-name { min-height: 2.4em; color: var(--hee-ink-soft); font-size: .74rem; line-height: 1.2; }
+.geo-region-rows { display: grid; gap: .55rem; padding-top: .3rem; }
+.geo-region-row {
+  display: grid;
+  grid-template-columns: minmax(6.5rem, auto) minmax(4rem, 1fr) 3.4rem;
+  align-items: center;
+  gap: .6rem;
+  font-size: .78rem;
+}
+.geo-region-name { color: var(--hee-ink-soft); text-align: right; white-space: nowrap; }
+.geo-region-track { position: relative; height: 10px; }
+.geo-region-stem {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #cfe8dc, #4fa889);
+  transform: translateY(-50%);
+}
+.geo-region-stem::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--tile-bg);
+  border-radius: 50%;
+  background: #1f7a5c;
+  transform: translateY(-50%);
+}
+.geo-region-row strong { color: var(--hee-ink); font-variant-numeric: tabular-nums; text-align: right; }
+@media (max-width: 980px) {
+  .geo-overview-cols { grid-template-columns: 1fr; gap: 1.1rem; }
+  .geo-overview-col { padding: 0; }
+  .geo-overview-col + .geo-overview-col { padding-top: 1rem; border-left: 0; border-top: 1px solid color-mix(in srgb, var(--tile-accent) 20%, white); }
+}
+@media (max-width: 620px) {
+  .studies-overview-stats { grid-template-columns: 1fr; }
+  .studies-overview-stat + .studies-overview-stat { padding-left: 0; border-left: 0; }
+}
 .tile-placeholder { color: var(--hee-muted) !important; font-style: italic; }
 /* "Publication access" card: two metrics side by side. */
 .publication-access-metrics {
@@ -702,19 +820,21 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 }
 @media (max-width: 980px) {
   #ov-tiles { grid-template-columns: repeat(12, minmax(0, 1fr)); }
-  #ov-tiles .value-box,
-  #ov-tiles .value-box.tile-wide,
-  #ov-tiles .value-box.tile-narrow { grid-column: span 6; }
-  #ov-tiles .value-box:last-child:nth-child(odd) { grid-column: 4 / span 6; }
+  #ov-tiles .value-box.tile-studies,
+  #ov-tiles .value-box.tile-access,
+  #ov-tiles .value-box.tile-funders { grid-column: 1 / -1; }
+  #ov-tiles .value-box.tile-metrics,
+  #ov-tiles .value-box.tile-model { grid-column: span 6; }
 }
 @media (max-width: 620px) {
   .overview-intro { padding: 1.1rem 0 .8rem; }
   .overview-intro .hero-title { font-size: 1.65rem; text-align: left; }
   .overview-intro .hero-text { text-align: left; }
-  #ov-tiles .value-box,
-  #ov-tiles .value-box.tile-wide,
-  #ov-tiles .value-box.tile-narrow,
-  #ov-tiles .value-box:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  #ov-tiles .value-box.tile-studies,
+  #ov-tiles .value-box.tile-access,
+  #ov-tiles .value-box.tile-funders,
+  #ov-tiles .value-box.tile-metrics,
+  #ov-tiles .value-box.tile-model { grid-column: 1 / -1; }
 }
 
 /* Summary tiles on the Explorer and Country profile: same look as the Overview

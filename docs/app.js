@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-13-filter-help";
+const BUILD = "2026-10-13-glance-cards";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -1272,30 +1272,26 @@ if (typeof document !== "undefined") {
   }
 
   // Overview "at a glance" tiles, including composite cards built from study data.
+  const STUDIES_CARD = "__studies";
   const ACCESS_CARD = "__publication_access";
+  const GEO_CARD = "__geography";
   const METRICS_CARD = "__outcome_metrics";
-  const GEO_SCOPE_CARD = "__geo_scope";
   const FUNDERS_CARD = "__funders";
   const OVERVIEW_TILE_ORDER = [
-    "Eligible full evaluations", "Years covered", ACCESS_CARD,
-    "Journals", "Countries studied", GEO_SCOPE_CARD,
+    STUDIES_CARD, ACCESS_CARD,
+    GEO_CARD,
     METRICS_CARD, "Model-based", FUNDERS_CARD
   ];
-  const WIDE_TILES = new Set([METRICS_CARD, FUNDERS_CARD]);
-  const NARROW_TILES = new Set(["Model-based"]);
+  // Grid widths and colours per card (styles.css: .tile-*).
+  const TILE_CLASS = {
+    [STUDIES_CARD]: "tile-studies",
+    [ACCESS_CARD]: "tile-access",
+    [GEO_CARD]: "tile-geo",
+    [METRICS_CARD]: "tile-metrics",
+    "Model-based": "tile-model",
+    [FUNDERS_CARD]: "tile-funders"
+  };
   const OVERVIEW_TILE_COPY = {
-    "Eligible full evaluations": { label: "Studies in the map", sub: "Including reviews of earlier studies" },
-    "Years covered": { label: "Publication years covered" },
-    // Countries in the map's country data named by at least one study (153),
-    // counted from the data. The upstream build's 169 ("named in extracted
-    // geography") could not be reproduced and was replaced in content.json and
-    // dict.json; it needs fixing in the pipeline too.
-    "Countries studied": {
-      label: "Countries covered by studies",
-      sub: "Of 155 countries with disease-burden and health-spending data",
-      value: () => fmtNum(db.countries.filter(r => r.studies > 0).length)
-    },
-    "Journals": { sub: "Among studies with journal details available" },
     "Model-based": { sub: "Results estimated with a computer model rather than measured in patients" }
   };
   const PLACEHOLDER_PCT = "XX%";
@@ -1325,12 +1321,9 @@ if (typeof document !== "undefined") {
   };
 
   const TILE_ACTIONS = {
-    "Eligible full evaluations": () => openModal("paper01.webp"),
-    "Years covered": () => showOverviewTrend("cumulative"),
+    [STUDIES_CARD]: () => openModal("paper01.webp"),
     [ACCESS_CARD]: () => openOverviewTheme("Authorship & access"),
-    "Countries studied": () => openOverviewTheme("Geography"),
-    "Journals": () => openOverviewTheme("Authorship & access"),
-    [GEO_SCOPE_CARD]: () => openOverviewTheme("Geography"),
+    [GEO_CARD]: () => openOverviewTheme("Geography"),
     [METRICS_CARD]: () => openOverviewTheme("Methods & metrics"),
     "Model-based": () => openOverviewTheme("Methods & metrics"),
     [FUNDERS_CARD]: () => openOverviewTheme("Research funding")
@@ -1398,42 +1391,164 @@ if (typeof document !== "undefined") {
     return box;
   }
 
-  function geoScopeCard() {
-    const box = el("div", "value-box geo-scope-card");
+  // Headline card: study count and years, with journals and reviews beneath.
+  function studiesCard(tileByLabel) {
+    const box = el("div", "value-box studies-overview-card");
     const title = el("div", "value-box-title");
-    title.textContent = "Geographic scope of studies";
-    const total = Math.max(1, db.nStudies);
-    const pctOf = count => 100 * count / total;
-    const singlePct = pctOf(countLevel("geo_scope", "Single country"));
-    const otherPct = 100 - singlePct;
-    const multiPct = pctOf(countLevel("geo_scope", "Multi-country") +
-      countLevel("geo_scope", "Region/global"));
-    const nonePct = pctOf(countLevel("geo_scope", "No country stated"));
+    title.textContent = "Studies captured in the map";
+    const head = el("div", "studies-overview-head");
+    const value = el("span", "studies-overview-value");
+    value.textContent = fmtNum(db.nStudies);
+    const yearsTile = tileByLabel.get("Years covered");
+    const years = el("strong");
+    years.textContent = yearsTile ? yearsTile.value : db.years[0] + "–" + db.years[1];
+    const text = el("span", "studies-overview-text");
+    text.append("studies published ", years);
+    head.append(value, text);
 
-    const bar = el("div", "geo-scope-bar");
-    const single = el("div", "geo-scope-segment geo-scope-single");
-    single.style.width = singlePct + "%";
-    single.textContent = Math.round(singlePct) + "%";
-    const other = el("div", "geo-scope-segment geo-scope-other");
-    other.style.width = otherPct + "%";
-    other.textContent = Math.round(otherPct) + "%";
-    bar.append(single, other);
-
-    const labels = el("div", "geo-scope-labels");
-    for (const [heading, text] of [
-      ["Single-country", "One country examined"],
-      ["Other geographic scope", multiPct.toFixed(1) +
-        "% multi-country or regional/global; " + nonePct.toFixed(1) + "% no country stated"]
+    const stats = el("div", "studies-overview-stats");
+    const journalsTile = tileByLabel.get("Journals");
+    const nReviews = REVIEW_COUNTS.systematic + REVIEW_COUNTS.other;
+    for (const [label, valueText, note, help] of [
+      ["Journals", journalsTile ? journalsTile.value : "—",
+        "Publishing the studies, among those with journal details available"],
+      ["Reviews", fmtNum(nReviews),
+        fmtNum(REVIEW_COUNTS.systematic) + " systematic · " + fmtNum(REVIEW_COUNTS.other) +
+        " other reviews of earlier studies", REVIEW_HELP]
     ]) {
-      const item = el("div");
-      const strong = el("strong");
-      strong.textContent = heading;
-      const span = el("span");
-      span.textContent = text;
-      item.append(strong, span);
-      labels.appendChild(item);
+      const stat = el("div", "studies-overview-stat");
+      const statLabel = el("div", "studies-overview-label");
+      statLabel.textContent = label;
+      if (help) statLabel.appendChild(cardHelpButton(help));
+      const row = el("div", "studies-overview-row");
+      const statValue = el("strong");
+      statValue.textContent = valueText;
+      const statNote = el("span");
+      statNote.textContent = note;
+      row.append(statValue, statNote);
+      stat.append(statLabel, row);
+      stats.appendChild(stat);
     }
-    box.append(title, bar, labels);
+    box.append(title, head, stats);
+    return box;
+  }
+
+  // Geography card: countries and geographic scope, studies by income group
+  // (circles, area = studies) and by WHO region (lollipops). A multi-country
+  // study counts once in each income group and region it examines.
+  function geographyCard() {
+    const box = el("div", "value-box geo-overview-card");
+    const title = el("div", "value-box-title");
+    title.textContent = "Geographic coverage of studies";
+    const cols = el("div", "geo-overview-cols");
+
+    const subhead = text => {
+      const h = el("div", "geo-overview-subhead");
+      h.textContent = text;
+      return h;
+    };
+
+    // Column 1: countries named, then single / multi / none scope bar.
+    const colCountries = el("div", "geo-overview-col");
+    const countryHead = el("div", "studies-overview-head");
+    const nCountries = el("span", "studies-overview-value");
+    nCountries.textContent = fmtNum(db.countries.filter(r => r.studies > 0).length);
+    const countryText = el("span", "studies-overview-text");
+    countryText.textContent = "countries named by at least one study";
+    countryHead.append(nCountries, countryText);
+    const countryNote = el("div", "geo-overview-note");
+    countryNote.textContent = "Of " + fmtNum(db.countries.length) +
+      " countries with disease-burden and health-spending data";
+
+    const total = Math.max(1, db.nStudies);
+    const scopes = [
+      ["Single country", countLevel("geo_scope", "Single country"), "geo-scope-single"],
+      ["Multi-country or regional/global",
+        countLevel("geo_scope", "Multi-country") + countLevel("geo_scope", "Region/global"), "geo-scope-other"],
+      ["No country stated", countLevel("geo_scope", "No country stated"), "geo-scope-none"]
+    ];
+    const bar = el("div", "geo-scope-bar");
+    const legend = el("div", "geo-scope-legend");
+    for (const [label, n, cls] of scopes) {
+      const pct = 100 * n / total;
+      const seg = el("div", "geo-scope-segment " + cls);
+      seg.style.width = pct + "%";
+      seg.title = label + ": " + pct.toFixed(1) + "%";
+      bar.appendChild(seg);
+      const item = el("div", "geo-scope-legend-row");
+      const swatch = el("span", "geo-scope-swatch " + cls);
+      const name = el("span");
+      name.textContent = label;
+      const value = el("strong");
+      value.textContent = pct.toFixed(1) + "%";
+      item.append(swatch, name, value);
+      legend.appendChild(item);
+    }
+    colCountries.append(subhead("Countries"), countryHead, countryNote,
+      subhead("Geographic scope"), bar, legend);
+
+    // Unique studies per income group (at publication year) and WHO region.
+    const incSets = new Map(), regSets = new Map();
+    const add = (map, key, s) => {
+      if (key == null) return;
+      let set = map.get(key);
+      if (!set) { set = new Set(); map.set(key, set); }
+      set.add(s);
+    };
+    for (let i = 0; i < db.geo.s.length; i++) {
+      const s = db.geo.s[i], c = db.geo.c[i];
+      add(incSets, db.incomeAt(c, db.geo.y[i]), s);
+      add(regSets, db.regionOf[c], s);
+    }
+
+    // Column 2: income circles, low to high.
+    const colIncome = el("div", "geo-overview-col");
+    const circles = el("div", "geo-income-circles");
+    const incCounts = db.incLv.map(lv => [lv, incSets.has(lv) ? incSets.get(lv).size : 0]);
+    const maxInc = Math.max(1, ...incCounts.map(([, n]) => n));
+    const shades = ["#cfe8dc", "#93cdb3", "#4fa889", "#1f7a5c"];
+    incCounts.forEach(([lv, n], i) => {
+      const item = el("div", "geo-income-item");
+      const count = el("strong");
+      count.textContent = fmtNum(n);
+      const dot = el("span", "geo-income-dot");
+      const d = Math.max(8, 104 * Math.sqrt(n / maxInc));
+      dot.style.width = dot.style.height = d + "px";
+      dot.style.background = shades[i] || shades[shades.length - 1];
+      const name = el("span", "geo-income-name");
+      name.textContent = lv.replace(/ income$/, "");
+      item.title = lv + ": " + fmtNum(n) + " studies";
+      item.append(count, dot, name);
+      circles.appendChild(item);
+    });
+    colIncome.append(subhead("By country income group"), circles);
+
+    // Column 3: WHO regions, most studied first.
+    const colRegion = el("div", "geo-overview-col");
+    const regions = el("div", "geo-region-rows");
+    const regCounts = [...regSets].map(([r, set]) => [r, set.size]).sort((a, b) => b[1] - a[1]);
+    const maxReg = Math.max(1, ...regCounts.map(([, n]) => n));
+    for (const [r, n] of regCounts) {
+      const row = el("div", "geo-region-row");
+      const name = el("span", "geo-region-name");
+      name.textContent = r.replace(/^Region of the /, "").replace(/ Region$/, "");
+      const track = el("div", "geo-region-track");
+      const stem = el("span", "geo-region-stem");
+      stem.style.width = (100 * n / maxReg) + "%";
+      track.appendChild(stem);
+      const value = el("strong");
+      value.textContent = fmtNum(n);
+      row.title = r + ": " + fmtNum(n) + " studies";
+      row.append(name, track, value);
+      regions.appendChild(row);
+    }
+    colRegion.append(subhead("By WHO region"), regions);
+
+    cols.append(colCountries, colIncome, colRegion);
+    const note = el("div", "metrics-overview-note");
+    note.textContent = "A multi-country study counts in every income group and region of the countries it " +
+      "examines. Income groups are World Bank groups in the publication year; circle area = studies.";
+    box.append(title, cols, note);
     return box;
   }
 
@@ -1564,7 +1679,7 @@ if (typeof document !== "undefined") {
     const label = box.querySelector(".value-box-title").textContent;
     box.classList.add("overview-nav-card");
     box.tabIndex = 0;
-    const opensSelection = key === "Eligible full evaluations";
+    const opensSelection = key === STUDIES_CARD;
     box.setAttribute("role", opensSelection ? "button" : "link");
     box.setAttribute("aria-label", label + (opensSelection
       ? ": open study selection figure" : ": open related analysis"));
@@ -1618,9 +1733,10 @@ if (typeof document !== "undefined") {
     const tileByLabel = new Map(db.content.glance_tiles.map(tile => [tile.label, tile]));
     for (const key of OVERVIEW_TILE_ORDER) {
       let box;
-      if (key === ACCESS_CARD) box = publicationAccessCard();
+      if (key === STUDIES_CARD) box = studiesCard(tileByLabel);
+      else if (key === ACCESS_CARD) box = publicationAccessCard();
+      else if (key === GEO_CARD) box = geographyCard();
       else if (key === METRICS_CARD) box = outcomeMetricsCard();
-      else if (key === GEO_SCOPE_CARD) box = geoScopeCard();
       else if (key === FUNDERS_CARD) box = fundersCard();
       else {
         const tile = tileByLabel.get(key);
@@ -1630,7 +1746,7 @@ if (typeof document !== "undefined") {
         const title = el("div", "value-box-title");
         title.textContent = copy.label || tile.label;
         const value = el("div", "value-box-value");
-        value.textContent = copy.value ? copy.value() : tile.value;
+        value.textContent = tile.value;
         box.append(title, value);
         const subText = "sub" in copy ? copy.sub : tile.sub;
         if (subText != null) {
@@ -1638,16 +1754,8 @@ if (typeof document !== "undefined") {
           sub.textContent = subText;
           box.appendChild(sub);
         }
-        if (key === "Journals") {
-          const reviews = el("div", "value-box-sub");
-          reviews.textContent = "Reviews among the studies: " + fmtNum(REVIEW_COUNTS.systematic) +
-            " systematic, " + fmtNum(REVIEW_COUNTS.other) + " other ";
-          reviews.appendChild(cardHelpButton(REVIEW_HELP));
-          box.appendChild(reviews);
-        }
       }
-      if (WIDE_TILES.has(key)) box.classList.add("tile-wide");
-      if (NARROW_TILES.has(key)) box.classList.add("tile-narrow");
+      if (TILE_CLASS[key]) box.classList.add(TILE_CLASS[key]);
       makeOverviewCardInteractive(box, key);
       wrap.appendChild(box);
     }
@@ -1733,12 +1841,6 @@ if (typeof document !== "undefined") {
   // Overview publication trend for the unfiltered corpus, with a
   // "Per year | Cumulative" switch.
   let overviewTrendMode = "annual";
-
-  function showOverviewTrend(mode) {
-    switchTab("overview");
-    setOverviewTrendMode(mode);
-    document.querySelector(".overview-trend-card").scrollIntoView({ behavior: "smooth", block: "start" });
-  }
 
   function setOverviewTrendMode(mode) {
     overviewTrendMode = mode;
