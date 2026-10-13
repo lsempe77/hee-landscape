@@ -7,6 +7,7 @@ The site shows each figure with a plain title and summary first, and a collapsed
 
 Not covered here:
 - The five figures already redrawn in this repository with plain wording and income at publication year: `fig_equity_time`, `fig_metric`, `fig_intervention_mix`, `paper05` and `fig_theme_rank`. Their `*_pubyear` versions show the target style.
+- Evaluation-type figures: reviews that report no evaluation of their own (1,986) are not counted as a cost-benefit, cost-consequence, cost-effectiveness or cost-utility analysis; reviews that also report the authors' own evaluation (667) keep their type. Any upstream figure that counts evaluation types must follow this rule (`scripts/apply_review_eval_type.py`).
 - The funder and Wellcome figures (`fig_funder_funders`, `fig_wellcome_priorities`), which wait for the updated funder data.
 
 ## Rules for every figure
@@ -59,11 +60,7 @@ Not covered here:
 - `paper02`: "measured evaluations" can stay: it contrasts how evidence was produced.
 - `paper01`: keep "full economic evaluations" and reviews as the two named parts, but update the review count to the title-and-abstract screen (see the table above).
 
-**fig_method_stream**
-- Title: "More studies now measure health gains in QALYs or DALYs". The current "exploit" reads as misuse.
-- Subtitle: "Between 2010 and 2025, cost-utility studies rose from 43% to 50% of all studies." (Drop "seized".)
-- Y-axis: "Studies published per year".
-- Legend: add a one-line plain gloss of the four evaluation types in the footnote.
+**fig_method_stream**: done in this repository (`fig_method_stream_v2`, `scripts/build_eval_type_figures.py`).
 
 **fig_disease_circular**
 - Subtitle: "Each bar is a disease group; longer bars mean more studies. Colour shows whether research leans towards richer or poorer countries."
@@ -176,9 +173,7 @@ Not covered here:
 - Title: "Nearly every country now has at least one study".
 - Legend: "Countries counted", not "Denominator". Fix the overlapping end labels.
 
-**fig_decision_time**
-- Title: "Study summaries increasingly report what decision-makers need".
-- Legend gloss: ICER = "cost per health gained"; perspective = "whose costs are counted".
+**fig_decision_time**: done in this repository (`fig_decision_time_v2`, `scripts/build_eval_type_figures.py`).
 
 **fig_funder_opportunity**
 - Title: "Where research is thinnest compared with disease burden".

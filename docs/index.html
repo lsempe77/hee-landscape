@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-13-denominator-audit">
+<link rel="stylesheet" href="styles.css?v=2026-10-13-review-types">
 </head>
 <body>
 
@@ -128,7 +128,9 @@
           <select id="x-evaltype" multiple placeholder="All types"></select>
           <p class="plot-note">How health effects are counted. Cost-utility: in QALYs or DALYs. Cost-effectiveness:
             in natural units such as lives saved. Cost-benefit: in money. Cost-consequence: costs and effects listed
-            side by side.</p>
+            side by side. Choose “Systematic review” or “Other review” to see reviews instead; the four types are
+            then hidden, because reviews are not counted as a type. In charts, reviews that report no evaluation of
+            their own appear as “Review (no evaluation type)”.</p>
         </div>
         <div class="control-group">
           <label class="control-label" for="x-design">Where the data come from</label>
@@ -468,7 +470,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-13-denominator-audit"></script>
+<script type="module" src="app.js?v=2026-10-13-review-types"></script>
 
 </body>
 </html>

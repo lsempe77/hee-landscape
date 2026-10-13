@@ -1,10 +1,16 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-13-denominator-audit";
+const BUILD = "2026-10-13-review-types";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
+
+// econ_eval_type level for reviews with no evaluation of their own
+// (scripts/apply_review_eval_type.py). Type shares leave it out.
+const REVIEW_TYPE = "Review (no evaluation type)";
+// review_label levels offered as choices in the evaluation-type filter.
+const REVIEW_CHOICES = ["Systematic review", "Other review"];
 
 // HTML-escapes a string for HTML sinks. Plotly renders hover `text` and
 // hovertemplate output as HTML, so every data-derived string concatenated into
@@ -140,6 +146,11 @@ export function loadData({ dict, studies, geo, disease, countries, content, fund
   for (const col of CODED_COLS) {
     codeOf[col] = new Map(levels[col].map((lab, i) => [lab, i]));
   }
+  // Optional: review_label (scripts/apply_review_eval_type.py) feeds the review
+  // choices in the Explorer's evaluation-type filter.
+  if (levels.review_label && studies.review_label) {
+    codeOf.review_label = new Map(levels.review_label.map((lab, i) => [lab, i]));
+  }
   const pal = dict.meta.pal_inc;
   const palInc = {};
   if (Array.isArray(pal)) dict.meta.inc_lv.forEach((lv, i) => { palInc[lv] = pal[i]; });
@@ -208,8 +219,14 @@ export function applyFilters(db, filt) {
   const [lo, hi] = f.years;
   const base = new Uint8Array(n);
 
-  const evalCodes = f.evaltype.length
-    ? new Set(f.evaltype.map(l => db.codeOf.econ_eval_type.get(l))) : null;
+  // The evaluation-type filter also offers review choices. Choosing a review
+  // hides the four types, so the two never combine.
+  const reviewMap = db.codeOf.review_label;
+  const reviewSel = reviewMap ? f.evaltype.filter(l => REVIEW_CHOICES.includes(l)) : [];
+  const typeSel = f.evaltype.filter(l => !REVIEW_CHOICES.includes(l));
+  const reviewCodes = reviewSel.length ? new Set(reviewSel.map(l => reviewMap.get(l))) : null;
+  const evalCodes = !reviewCodes && typeSel.length
+    ? new Set(typeSel.map(l => db.codeOf.econ_eval_type.get(l))) : null;
   const designCodes = f.design.length
     ? new Set(f.design.map(l => db.codeOf.design_basis.get(l))) : null;
   const modelCode = f.model !== "All" ? db.codeOf.model_label.get(f.model) : null;
@@ -242,6 +259,7 @@ export function applyFilters(db, filt) {
     const y = st.year[s];
     if (y < lo || y > hi) continue;
     if (evalCodes && !evalCodes.has(st.econ_eval_type[s])) continue;
+    if (reviewCodes && !reviewCodes.has(st.review_label[s])) continue;
     if (designCodes && !designCodes.has(st.design_basis[s])) continue;
     if (modelCode !== null && st.model_label[s] !== modelCode) continue;
     if (qalyCode !== null && st.qaly_label[s] !== qalyCode) continue;
@@ -362,10 +380,8 @@ export function trendSeries(db, flt, varName) {
       bump(y, cat);
     }
   } else {
-    const lv = db.levels[varName];
-    for (const s of flt.studies) {
-      bump(db.studies.year[s], lv[db.studies[varName][s]]);
-    }
+    const catOf = studyCatGetter(db, varName, flt);
+    for (const s of flt.studies) bump(db.studies.year[s], catOf(s));
   }
   const out = {};
   for (const y of [...counts.keys()].sort((a, b) => a - b)) {
@@ -374,8 +390,19 @@ export function trendSeries(db, flt, varName) {
   return out;
 }
 
-function studyCatGetter(db, varName) {
+// With a review chosen in the evaluation-type filter, charts by evaluation type
+// show each study's review label instead: reviews are not counted as a type.
+function reviewsChosen(db, flt) {
+  return !!(db.codeOf.review_label && flt && flt.filt &&
+    flt.filt.evaltype.some(l => REVIEW_CHOICES.includes(l)));
+}
+
+function studyCatGetter(db, varName, flt) {
   const st = db.studies;
+  if (varName === "econ_eval_type" && reviewsChosen(db, flt)) {
+    const rl = db.levels.review_label;
+    return s => rl[st.review_label[s]];
+  }
   if (varName === "icer_label") return s => st.has_icer[s] === 1 ? "ICER reported" : "Not reported";
   if (varName === "thresh_label") return s => st.has_threshold[s] === 1 ? "Threshold reported" : "Not reported";
   const lv = db.levels[varName];
@@ -400,7 +427,7 @@ export function compCounts(db, flt, xv, sv, mode) {
   };
 
   if (xv === "grp") {
-    const stackOf = stacked ? studyCatGetter(db, sv) : null;
+    const stackOf = stacked ? studyCatGetter(db, sv, flt) : null;
     const d = db.disease;
     for (let i = 0; i < d.s.length; i++) {
       const s = d.s[i];
@@ -408,8 +435,8 @@ export function compCounts(db, flt, xv, sv, mode) {
       add(db.disease_grps[d.g[i]], stacked ? stackOf(s) : null);
     }
   } else {
-    const catOf = studyCatGetter(db, xv);
-    const stackOf = stacked ? studyCatGetter(db, sv) : null;
+    const catOf = studyCatGetter(db, xv, flt);
+    const stackOf = stacked ? studyCatGetter(db, sv, flt) : null;
     for (const s of flt.studies) add(catOf(s), stacked ? stackOf(s) : null);
   }
 
@@ -503,9 +530,9 @@ function methodsMixSets(db, cs, ps) {
   const lv = db.levels.econ_eval_type;
   const col = db.studies.econ_eval_type;
   const cn = new Map(), pn = new Map();
-  for (const s of cs) { const t = lv[col[s]]; cn.set(t, (cn.get(t) || 0) + 1); }
-  for (const s of ps) { const t = lv[col[s]]; pn.set(t, (pn.get(t) || 0) + 1); }
-  const nc = cs.size, np = ps.size;
+  let nc = 0, np = 0;
+  for (const s of cs) { const t = lv[col[s]]; if (t === REVIEW_TYPE) continue; cn.set(t, (cn.get(t) || 0) + 1); nc++; }
+  for (const s of ps) { const t = lv[col[s]]; if (t === REVIEW_TYPE) continue; pn.set(t, (pn.get(t) || 0) + 1); np++; }
   const rows = [...new Set([...cn.keys(), ...pn.keys()])].map(t => ({
     type: t,
     country_share: nc > 0 ? 100 * (cn.get(t) || 0) / nc : null,
@@ -753,9 +780,11 @@ export function countryMixes(db, iso3) {
     const t = lv[db.studies.econ_eval_type[s]];
     evalCounts.set(t, (evalCounts.get(t) || 0) + 1);
   }
+  // Reviews with no evaluation type go last, after the four types.
   const evalMix = [...evalCounts.entries()]
     .map(([label, count]) => ({ label, code: lv.indexOf(label), count }))
-    .sort((a, b) => (b.count - a.count) || cmpStr(a.label, b.label));
+    .sort((a, b) => ((a.label === REVIEW_TYPE) - (b.label === REVIEW_TYPE)) ||
+      (b.count - a.count) || cmpStr(a.label, b.label));
 
   const d = db.disease;
   const diseaseCounts = new Map();
@@ -948,7 +977,7 @@ if (typeof document !== "undefined") {
   const SECTION_AFTER = { "Research funding": "Authorship & access", "Wellcome priority themes": "Trends over time" };
   // after: file to follow in the target section; first: true puts it first.
   const MOVED_FIGURES = [
-    { file: "fig_method_stream.webp", to: "Methods & metrics", after: "fig_metric.webp" },
+    { file: "fig_method_stream_v2.svg", to: "Methods & metrics", after: "fig_metric.webp" },
     { file: "fig_authorship_pattern_v2.svg", to: "Authorship & access", first: true },
     { file: "fig_forest_v2.svg", to: "Authorship & access", after: "fig_authorship_pattern_v2.svg" },
     { file: "paper06_v2.svg", to: "Authorship & access", after: "fig_forest_v2.svg" },
@@ -1274,6 +1303,7 @@ if (typeof document !== "undefined") {
   // (hee_analysis_master_v2.csv `review_type`, 2026-10-12): an automated
   // title-and-abstract screen of the included studies. Update with the export.
   const REVIEW_COUNTS = { systematic: 1856, other: 797 };
+  const REVIEW_ONLY = db.dict.meta.review_only || 1986;
   const REVIEW_HELP = {
     title: "How are reviews counted?",
     paragraphs: [
@@ -1282,7 +1312,11 @@ if (typeof document !== "undefined") {
       "do not describe themselves as systematic) are counted separately.",
       "These counts come from an automated screen of each study's title and abstract, so they are provisional. " +
       "Some reviews also include the authors' own evaluation. The selection diagram uses an older, stricter " +
-      "title-only flag and counts 1,706 reviews."
+      "title-only flag and counts 1,706 reviews.",
+      "Charts of evaluation type (cost-benefit, cost-consequence, cost-effectiveness, cost-utility) do not count " +
+      "the " + fmtNum(REVIEW_ONLY) + " reviews that report no evaluation of their own: they appear as a separate " +
+      "“Review (no evaluation type)” group, and type percentages leave them out. Reviews that also report " +
+      "the authors' own evaluation keep its type."
     ]
   };
 
@@ -2042,6 +2076,46 @@ if (typeof document !== "undefined") {
     });
   }
 
+  // Evaluation type: the four types plus, when the data has review_label,
+  // "Systematic review" and "Other review". Choosing a review removes the four
+  // types (reviews are not counted as a type); clearing it brings them back.
+  function makeEvalTypeSelect() {
+    const types = db.levels.econ_eval_type.filter(t => t !== REVIEW_TYPE);
+    const hasReviews = !!db.codeOf.review_label;
+    const reviews = hasReviews ? REVIEW_CHOICES : [];
+    const count = new Map();
+    const col = db.studies.econ_eval_type;
+    for (let s = 0; s < db.nStudies; s++) {
+      const t = db.levels.econ_eval_type[col[s]];
+      count.set(t, (count.get(t) || 0) + 1);
+      if (hasReviews) {
+        const r = db.levels.review_label[db.studies.review_label[s]];
+        count.set(r, (count.get(r) || 0) + 1);
+      }
+    }
+    const option = (v, ord) => ({ value: v, text: v + " (" + fmtNum(count.get(v) || 0) + ")", ord });
+    const typeOptions = types.map((t, i) => option(t, i));
+    const ts = state.ts.evaltype = new window.TomSelect($("x-evaltype"), {
+      plugins: ["remove_button"],
+      placeholder: "All types",
+      allowEmptyOption: false,
+      options: typeOptions.concat(reviews.map((r, i) => option(r, types.length + i))),
+      sortField: [{ field: "ord" }],
+      onChange: vals => {
+        let sel = Array.isArray(vals) ? vals.slice() : (vals ? [vals] : []);
+        const reviewChosen = sel.some(v => REVIEW_CHOICES.includes(v));
+        for (const o of typeOptions) {
+          if (reviewChosen && ts.options[o.value]) ts.removeOption(o.value, true);
+          else if (!reviewChosen && !ts.options[o.value]) ts.addOption(o);
+        }
+        if (reviewChosen) sel = sel.filter(v => REVIEW_CHOICES.includes(v));
+        ts.refreshOptions(false);
+        state.filt.evaltype = sel;
+        refreshExplorer();
+      }
+    });
+  }
+
   function setupExplorerControls() {
     const m = db.dict.meta;
     state.filt = {
@@ -2072,7 +2146,7 @@ if (typeof document !== "undefined") {
     makeMultiSelect("x-income", db.incOrder, "All groups", "income");
     makeMultiSelect("x-region", db.dict.REGIONS, "All regions", "region");
     makeMultiSelect("x-disease", db.disease_grps, "All areas", "disease");
-    makeMultiSelect("x-evaltype", db.levels.econ_eval_type, "All types", "evaltype");
+    makeEvalTypeSelect();
     makeMultiSelect("x-design", db.levels.design_basis, "All designs", "design");
     if (!db.funders.names.length) $("x-funder").closest(".control-group").hidden = true;
     const funderN = new Map(db.funders.names.map((nm, i) => [nm, db.funders.n[i]]));
@@ -2808,7 +2882,8 @@ if (typeof document !== "undefined") {
       x: desc.map(r => r.count),
       // Largest bar strongest: the ramp runs light→strong bottom-up.
       marker: {
-        color: spreadPalette(colors, desc.length).reverse(),
+        color: spreadPalette(colors, desc.length).reverse()
+          .map((c, i) => desc[i].label === REVIEW_TYPE ? "#c5c2bb" : c),
         line: { color: "rgba(255,255,255,.75)", width: 0.5 }
       },
       hovertemplate: "%{y}: %{x}<extra></extra>"

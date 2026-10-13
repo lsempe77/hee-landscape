@@ -30,7 +30,9 @@ as taxes and subsidies, was in scope); and a design that is not a full economic 
 evaluations, including cost-of-illness studies, budget-impact analyses, cost-minimisation
 analyses and studies comparing costs only, were excluded, as were studies whose consequences were
 not clinical (for example, service use alone). Systematic and narrative reviews that synthesised
-published economic evaluations were eligible.
+published economic evaluations were eligible. Reviews that report no evaluation of their own
+(1,986) are not counted as a cost-benefit, cost-consequence, cost-effectiveness or cost-utility
+analysis; reviews that also report the authors' own evaluation (667) keep that type.
 
 ## Screening
 

@@ -2,9 +2,9 @@
   "fig_growth.webp": {
     "summary": "The number of studies (economic evaluations and reviews of them) has grown rapidly. Half of the included research was published from 2020 onwards. The 2026 count covers only part of the year."
   },
-  "fig_method_stream.webp": {
+  "fig_method_stream_v2.svg": {
     "title": "How studies measure health benefits is changing",
-    "summary": "More studies now use measures that combine length and quality of life. These measures help compare health benefits across different diseases. The 2026 count is incomplete."
+    "summary": "More studies now use measures that combine length and quality of life. These measures help compare health benefits across different diseases. Reviews that report no evaluation of their own are shown separately and not counted as an evaluation type. The 2026 count is incomplete and left out."
   },
   "fig_disease_circular.webp": {
     "title": "Which disease groups does the economic evidence focus on?",
@@ -150,9 +150,9 @@
     "summary": "Track how many countries are mentioned in at least one included study. Having one study indicates some coverage; it does not mean there is enough evidence for all healthcare decisions.",
     "caption": "Cumulative reach through each publication year. Countries are grouped by the World Bank classification in force on 1 January of that year; the denominator excludes unavailable country-year groups. Taiwan uses the recorded high-income override. A country is reached once any eligible study has named it by that year, including studies from its earlier income groups. In 2025, solid lines cover 154 classified countries from the 155-country website list (2 unreached); dashed lines cover 197 classified/overridden Natural Earth Sovereign country/Country entities (21 unreached), with no population floor. Denominators vary by year; 197 is not a fixed count of all World Bank economies. 2026 is partial and omitted, so the Ethiopia/Venezuela 2026 fallback does not affect these lines."
   },
-  "fig_decision_time.webp": {
+  "fig_decision_time_v2.svg": {
     "title": "Studies increasingly report information that helps assess value for money",
-    "summary": "Track how often abstracts mention costs relative to health benefits, uncertainty and other information useful for decisions. These are abstract-based checks; an item may be addressed in the full paper even if it is absent from the abstract."
+    "summary": "Track how often abstracts mention costs relative to health benefits, uncertainty and other information useful for decisions. These are abstract-based checks; an item may be addressed in the full paper even if it is absent from the abstract. Reviews that report no evaluation of their own are left out."
   },
   "fig_funder_opportunity.webp": {
     "title": "Evidence gaps: where is research scarce relative to health needs?",

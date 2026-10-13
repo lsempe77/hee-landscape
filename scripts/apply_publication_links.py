@@ -106,7 +106,9 @@ def main():
             assert n == len(eligible), f"Unexpected study count: {site}"
             for i, row in enumerate(eligible):
                 assert str(studies["year"][i]) == row["year"], f"Year order mismatch: {site}, {i}"
-                assert dictionary["levels"]["econ_eval_type"][studies["econ_eval_type"][i]] == row["econ_eval_type"], f"Evaluation order mismatch: {site}, {i}"
+                # apply_review_eval_type.py moves review-only studies to their own type group.
+                assert dictionary["levels"]["econ_eval_type"][studies["econ_eval_type"][i]] in (
+                    row["econ_eval_type"], "Review (no evaluation type)"), f"Evaluation order mismatch: {site}, {i}"
             mapping = dict(enumerate(eligible))
             for _, shard in shards:
                 for i, title in zip(shard["s"], shard["t"]):
