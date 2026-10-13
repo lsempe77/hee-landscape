@@ -916,10 +916,9 @@ if (typeof document !== "undefined") {
     fig: {
       file: "fig_glance_regions_who_v2.html",
       html: true,
-      title: "Research coverage and health needs by region",
-      caption: "Built from the map's data by WHO region: studies per unit of disease burden, headline " +
-        "figures, and each region's disease focus, use of utility measures (QALYs, DALYs) and country coverage over time. " +
-        "Click any ? for details."
+      // No caption: the summary in figure_copy.json says it all, so no
+      // "Technical details" toggle for this figure.
+      title: "Research coverage and health needs by region"
     }
   }];
   // Thematic sections hidden from the site, and figures moved to one other
