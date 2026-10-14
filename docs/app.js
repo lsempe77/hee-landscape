@@ -156,7 +156,10 @@ export function loadData({ dict, studies, geo, disease, countries, content, fund
   if (Array.isArray(pal)) dict.meta.inc_lv.forEach((lv, i) => { palInc[lv] = pal[i]; });
   else Object.assign(palInc, pal);
   Object.assign(palInc, LANDSCAPE_INCOME_COLORS);
-  const diseaseSets = dict.disease_grps.map(() => new Set());
+  // GBD 2023 groups (disease_gbd.json, scripts/build_disease_gbd_data.py) carry
+  // their own names; the older MeSH-based disease.json uses dict.disease_grps.
+  const diseaseGrps = disease.grps || dict.disease_grps;
+  const diseaseSets = diseaseGrps.map(() => new Set());
   for (let i = 0; i < disease.s.length; i++) diseaseSets[disease.g[i]].add(disease.s[i]);
   // Funders as reported (scripts/build_funder_filter.py); "any" also counts
   // funders too rare to list.
@@ -181,7 +184,7 @@ export function loadData({ dict, studies, geo, disease, countries, content, fund
       return v ? (v[y - dict.meta.years[0]] ?? null) : countries[c].income;
     },
     regionOf: countries.map(r => r.who_region),
-    disease_grps: dict.disease_grps,
+    disease_grps: diseaseGrps,
     diseaseSets,
     funders: fund, funderSets, fundedSet,
     // Publication language per study (scripts/build_language_filter.py).
@@ -908,13 +911,13 @@ if (typeof document !== "undefined") {
   const figSrc = file => "figures/" + ((FIGURE_UPDATES[file] && FIGURE_UPDATES[file].file) || file);
   let FIG_INDEX = {};
   // Interactive figures: self-contained HTML pages built by scripts/ (here
-  // scripts/build_glance_regions_who_v2.py), added on top of content.json's gallery
+  // scripts/build_glance_regions_who_v3.py), added on top of content.json's gallery
   // so the upstream content build stays untouched. Shown in an iframe.
   const EXTRA_FIGURES = [{
     section: "Geography",
     index: 0,
     fig: {
-      file: "fig_glance_regions_who_v2.html",
+      file: "fig_glance_regions_who_v3.html",
       html: true,
       // No caption: the summary in figure_copy.json says it all, so no
       // "Technical details" toggle for this figure.
@@ -1014,7 +1017,7 @@ if (typeof document !== "undefined") {
         title: "Geographic inequalities",
         blurb: "How research intensity differs across countries, income groups and regions, " +
           "including how the evidence compares with disease burden.",
-        files: ["fig_glance_regions_who_v2.html", "fig_map_burden.webp", "paper03.webp"]
+        files: ["fig_glance_regions_who_v3.html", "fig_map_burden.webp", "paper03.webp"]
       }
     ]
   };
@@ -3240,9 +3243,11 @@ if (typeof document !== "undefined") {
     const OPTIONAL_DATA = { figure_updates: {}, funders: null, languages: null };
     const load = name => name in OPTIONAL_DATA
       ? get(name).catch(err => { console.warn(err.message); return OPTIONAL_DATA[name]; })
+      // GBD disease groups; a copy of the site without them falls back to the MeSH groups.
+      : name === "disease_gbd" ? get(name).catch(err => { console.warn(err.message); return get("disease"); })
       : get(name);
     const [dict, studies, geo, disease, countries, content, figureCopy, figureUpdates, funders, languages] = await Promise.all(
-      ["dict", "studies", "geo", "disease", "countries", "content", "figure_copy", "figure_updates", "funders", "languages"].map(load));
+      ["dict", "studies", "geo", "disease_gbd", "countries", "content", "figure_copy", "figure_updates", "funders", "languages"].map(load));
     FIGURE_UPDATES = figureUpdates;
     db = loadData({ dict, studies, geo, disease, countries, content, funders, languages });
 
