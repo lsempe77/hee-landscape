@@ -1,0 +1,828 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        7
+      ]
+    ],
+    "date-time": "2026-01-07T07:26:05Z",
+    "timestamp": 1767770765637,
+    "version": "build-2238731810"
+  },
+  "update-to": [
+    {
+      "DOI": "10.1002/14651858.cd001917.pub3",
+      "type": "new_version",
+      "label": "New version",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2015,
+            12,
+            15
+          ]
+        ],
+        "date-time": "2015-12-15T00:00:00Z",
+        "timestamp": 1450137600000
+      }
+    }
+  ],
+  "reference-count": 59,
+  "publisher": "Wiley",
+  "issue": "4",
+  "content-domain": {
+    "domain": [
+      "wiley.com",
+      "cochranelibrary.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "DOI": "10.1002/14651858.cd001917.pub4",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        15
+      ]
+    ],
+    "date-time": "2015-12-15T10:07:07Z",
+    "timestamp": 1450174027000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 5,
+  "title": [
+    "Home versus hospital intravenous antibiotic therapy for cystic fibrosis"
+  ],
+  "prefix": "10.1002",
+  "volume": "2021",
+  "author": [
+    {
+      "given": "Albert",
+      "family": "Balaguer",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Pediatrics; Hospital Universitari General de Catalunya; Barcelona Spain"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Javier",
+      "family": "González de Dios",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Dept. of Paediatrics; Hospital General Universitario de Alicante; Alicante Spain"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        15
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0001|cit1",
+      "first-page": "567",
+      "article-title": "Intravenous home therapy: a randomised trial in adult cystic fibrosis patients [abstract]",
+      "volume": "25",
+      "author": "Wolter",
+      "year": "1995",
+      "journal-title": "Australian & New Zealand Journal of Medicine"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0002|cit2",
+      "doi-asserted-by": "crossref",
+      "first-page": "896",
+      "DOI": "10.1183/09031936.97.10040896",
+      "article-title": "Home intravenous therapy in cystic fibrosis: a prospective randomized trial examining clinical, quality of life and cost aspects",
+      "volume": "10",
+      "author": "Wolter",
+      "year": "1997",
+      "journal-title": "European Respiratory Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0003|cit3",
+      "first-page": "123s",
+      "article-title": "Home intravenous therapy in adult cystic fibrosis patients. The impact on lung fuction and quality of life [abstract]",
+      "volume": "Suppl 31",
+      "author": "Amelina",
+      "year": "2000",
+      "journal-title": "European Respiratory Journal"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0004|cit4",
+      "doi-asserted-by": "crossref",
+      "first-page": "42",
+      "DOI": "10.1002/(SICI)1099-0496(199707)24:1<42::AID-PPUL7>3.0.CO;2-L",
+      "article-title": "Effectiveness of home versus hospital care in the routine treatment of cystic fibrosis",
+      "volume": "24",
+      "author": "Bosworth",
+      "year": "1997",
+      "journal-title": "Pediatric Pulmonology"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0005|cit5",
+      "first-page": "207",
+      "article-title": "A randomized trial of home intravenous antibiotic therapy (HIVAT) in Cystic Fibrosis (CF): Short-Term Safety and efficacy [abstract]",
+      "volume": "Suppl 5",
+      "author": "Davis",
+      "year": "1990",
+      "journal-title": "Pediatric Pulmonology"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0006|cit6",
+      "first-page": "338",
+      "article-title": "A randomized trial of home intravenous antibiotic therapy (HIVAT) in Cystic Fibrosis (CF): Short-Term psychological effects [abstract]",
+      "volume": "Suppl 5",
+      "author": "Davis",
+      "year": "1990",
+      "journal-title": "Pediatric Pulmonology"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0007|cit7",
+      "doi-asserted-by": "crossref",
+      "first-page": "28",
+      "DOI": "10.1016/S0022-3476(87)80337-2",
+      "article-title": "Prospective controlled study of home and hospital therapy of cystic fibrosis pulmonary disease",
+      "volume": "111",
+      "author": "Donati",
+      "year": "1987",
+      "journal-title": "Journal of Pediatrics"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0008|cit8",
+      "doi-asserted-by": "crossref",
+      "first-page": "52",
+      "DOI": "10.1111/j.1365-2702.2005.01236.x",
+      "article-title": "Comparison of hospital and home intravenous antibiotic therapy in adults with cystic fibrosis",
+      "volume": "15",
+      "author": "Esmond",
+      "year": "2006",
+      "journal-title": "Journal of Clinical Nursing"
+    },
+    {
+      "issue": "17",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0009|cit9",
+      "first-page": "648",
+      "article-title": "Home intravenous antibiotic treatments in cystic fibrosis units of Madrid",
+      "volume": "122",
+      "author": "Girón",
+      "year": "2004",
+      "journal-title": "Medicina clínica"
+    },
+    {
+      "issue": "15",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0010|cit10",
+      "first-page": "567",
+      "article-title": "Efficiency of the home intravenous antibiotics treatment in cystic fibrosis",
+      "volume": "127",
+      "author": "Girón",
+      "year": "2006",
+      "journal-title": "Medicina clínica"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0011|cit11",
+      "first-page": "626",
+      "article-title": "Economic aspects in treatment of cystic fibrosis with chronic pulmonary pseudomonas infection. Ambulatory intarvenous therapy in comparison with inpatient treatment",
+      "volume": "92",
+      "author": "Graf von der Schulenburg",
+      "year": "1997",
+      "journal-title": "Medizinische Klinik"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0012|cit12",
+      "first-page": "31",
+      "article-title": "Ambulatory vs. inpatient intravenous antibiotic therapy in mucoviscidosis patients - a controlled study",
+      "volume": "53",
+      "author": "Klettke",
+      "year": "1999",
+      "journal-title": "Pneumologie"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0013|cit13",
+      "first-page": "1047",
+      "article-title": "Home intravenous antibiotic therapy vs. hospital therapy - an alternative for patients with cystic fibrosis?",
+      "volume": "144",
+      "author": "Magdorf",
+      "year": "1996",
+      "journal-title": "Monatsschrift Fur Kinderheilkunde"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0014|cit14",
+      "doi-asserted-by": "crossref",
+      "first-page": "525",
+      "DOI": "10.1017/S0266462306051476",
+      "article-title": "Cost of home and hospital care for patients with cystic fibrosis followed up in two reference medical centers in France",
+      "volume": "22",
+      "author": "Horvais",
+      "year": "2006",
+      "journal-title": "International journal of technology assessment in health care"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0015|cit15",
+      "doi-asserted-by": "crossref",
+      "first-page": "744",
+      "DOI": "10.1002/ppul.20433",
+      "article-title": "Home versus hospital intravenous antibiotic therapy for acute pulmonary exacerbations in children with cystic fibrosis",
+      "volume": "41",
+      "author": "Nazer",
+      "year": "2006",
+      "journal-title": "Pediatric Pulmonology"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0016|cit16",
+      "doi-asserted-by": "crossref",
+      "first-page": "427",
+      "DOI": "10.1046/j.1365-2710.2000.00319.x",
+      "article-title": "Pharmaceutical intervention in the care of cystic fibrosis patients",
+      "volume": "25",
+      "author": "Ramström",
+      "year": "2000",
+      "journal-title": "Journal of Clinical Pharmacy and Therapeutics"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0017|cit17",
+      "doi-asserted-by": "crossref",
+      "first-page": "387",
+      "DOI": "10.1007/s15010-002-2095-0",
+      "article-title": "Home and hospital antibiotic treatment prove similarly effective in cystic fibrosis",
+      "volume": "30",
+      "author": "Riethmueller",
+      "year": "2002",
+      "journal-title": "Infection"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0018|cit18",
+      "doi-asserted-by": "crossref",
+      "first-page": "424",
+      "DOI": "10.1007/s15010-009-8117-4",
+      "article-title": "Tobramycin once- vs thrice-daily for elective intravenous antipseudomonal therapy in pediatric cystic fibrosis patients",
+      "volume": "37",
+      "author": "Riethmueller",
+      "year": "2009",
+      "journal-title": "Infection"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0019|cit19",
+      "unstructured": "Riethmueller J Busch A Franke P Ziebach R von Butler R Stern M Pharmacodynamic variation of intravenous antibiotic treatment with ceftazidime and tobramycin in CF-patients is equally effective [abstract] Proceedings of the 13th International Cystic Fibrosis Congress; 2000 June 4-8; Stockholm, Sweden 2000 166"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0020|cit20",
+      "unstructured": "Riethmueller J Franke P Schroeter TW Claass A Busch A Ziebach R Optimised intravenous antibiotic treatment with ceftazidime (thrice daily vs continuous) and tobramycin (thrice vs once daily) in CF patients [abstract] Proceedings of the 24th European Cystic Fibrosis Conference; 2001 June 6-9; Vienna, Austria 2001 P192"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0021|cit21",
+      "doi-asserted-by": "crossref",
+      "first-page": "418",
+      "DOI": "10.1007/s15010-009-8116-5",
+      "article-title": "Continuous vs thrice-daily ceftazidime for elective intravenous antipseudomonal therapy in cystic fibrosis",
+      "volume": "37",
+      "author": "Riethmueller",
+      "year": "2009",
+      "journal-title": "Infection"
+    },
+    {
+      "issue": "Suppl 24",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0022|cit22",
+      "first-page": "289",
+      "article-title": "Acute-phase nephrotoxicity of tobramycin in CF patients: A prospective randomized trial of once-versus thrice-daily dosing [abstract]",
+      "volume": "34",
+      "author": "Schroeter",
+      "year": "2002",
+      "journal-title": "Pediatric Pulmonology"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0023|cit23",
+      "unstructured": "Schroeter TW Eggert P Riethmueller J Stern M Claass A A prospective randomized trial on the nephrotoxicity of thrice-daily versus once-daily tobramycin in cystic fibrosis patients [abstract] Proceedings of the 24th European Cystic Fibrosis Conference; 2001 June 6-9; Vienna, Austria 2001 P190"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0024|cit24",
+      "first-page": "79",
+      "article-title": "Ofloxacin in the treatment of cystic fibrosis",
+      "volume": "44",
+      "author": "Romano",
+      "year": "1992",
+      "journal-title": "Minerva Pediatrica"
+    },
+    {
+      "issue": "13",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0025|cit25",
+      "first-page": "181",
+      "article-title": "Role of home therapy with ofloxacin in patients with cystic fibrosis (CF)",
+      "volume": "38",
+      "author": "Romano",
+      "year": "1991",
+      "journal-title": "Giornale Italiano de Chemioterapia"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0026|cit26",
+      "doi-asserted-by": "crossref",
+      "first-page": "506",
+      "DOI": "10.1017/S0266462305050701",
+      "article-title": "Comparing costs of home- versus hospital-based treatment of infections in adults in a specialist cystic fibrosis center",
+      "volume": "21",
+      "author": "Elliott",
+      "year": "2005",
+      "journal-title": "International Journal of Technology Assessment in Health Care"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0027|cit27",
+      "doi-asserted-by": "crossref",
+      "first-page": "242",
+      "DOI": "10.1136/thx.2003.005876",
+      "article-title": "Free Full TextLong term clinical outcome of home and hospital intravenous antibiotic treatment in adults with cystic fibrosis",
+      "volume": "59",
+      "author": "Thornton",
+      "year": "2004",
+      "journal-title": "Thorax"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0028|cit28",
+      "doi-asserted-by": "crossref",
+      "first-page": "239",
+      "DOI": "10.1016/j.jcf.2005.08.003",
+      "article-title": "Clinical and economic choices in the treatment of respiratory infections in cystic fibrosis: comparing hospital and home care",
+      "volume": "4",
+      "author": "Thornton",
+      "year": "2005",
+      "journal-title": "Journal of Cystic Fibrosis"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0029|cit29",
+      "doi-asserted-by": "crossref",
+      "first-page": "263",
+      "DOI": "10.1016/S0163-4453(03)00135-X",
+      "article-title": "A randomized trial of home vs hospital intravenous antibiotic therapy in adults with infectious diseases",
+      "volume": "48",
+      "author": "Wolter",
+      "year": "2004",
+      "journal-title": "Journal of Infection"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0030|cit30",
+      "unstructured": "Hjelte L Widen B Malmborg AS Freyschuss U Strandvik B [Intravenous administration of antibiotics at home in patients with cystic fibrosis improves quality of life] Lakartidningen 1988 18 1614 7"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0031|cit31",
+      "doi-asserted-by": "crossref",
+      "first-page": "553",
+      "DOI": "10.1046/j.1365-2362.2000.00667.x",
+      "article-title": "Metabolic and inflammatory responses to pulmonary exacerbation in adults with cystic fibrosis",
+      "volume": "30",
+      "author": "Bell",
+      "year": "2000",
+      "journal-title": "European Journal of Clinical Investigation"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0032|cit32",
+      "doi-asserted-by": "crossref",
+      "first-page": "1137",
+      "DOI": "10.1164/rccm.201001-0057OC",
+      "article-title": "Location and duration of treatment of cystic fibrosis respiratory exacerbations do not affect outcomes",
+      "volume": "182",
+      "author": "Collaco",
+      "year": "2010",
+      "journal-title": "American Journal of Respiratory and Critical Care Medicine"
+    },
+    {
+      "issue": "23",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0033|cit33",
+      "doi-asserted-by": "crossref",
+      "first-page": "2386-92",
+      "DOI": "10.1001/jama.2010.791",
+      "article-title": "Association between respiratory tract methicillin-resistant Staphylococcus aureus and survival in cystic fibrosis",
+      "volume": "303",
+      "author": "Dasenbrook",
+      "year": "2010",
+      "journal-title": "JAMA"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0034|cit34",
+      "doi-asserted-by": "crossref",
+      "first-page": "130",
+      "DOI": "10.1177/014107688908200303",
+      "article-title": "Intravenous antibiotics at home in children with cystic fibrosis",
+      "volume": "82",
+      "author": "David",
+      "year": "1986",
+      "journal-title": "Journal of the Royal Society of Medicine"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0035|cit35",
+      "doi-asserted-by": "crossref",
+      "first-page": "341",
+      "DOI": "10.1002/sim.4780060325",
+      "article-title": "Methods for combining randomized clinical trials: strengths and limitations",
+      "volume": "6",
+      "author": "DeMets",
+      "year": "1987",
+      "journal-title": "Statistics in Medicine"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0036|cit36",
+      "doi-asserted-by": "crossref",
+      "first-page": "177",
+      "DOI": "10.1016/0197-2456(86)90046-2",
+      "article-title": "Meta-analysis in clinical trials",
+      "volume": "7",
+      "author": "DerSimonian",
+      "year": "1986",
+      "journal-title": "Controlled Clinical Trials"
+    },
+    {
+      "issue": "7109",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0037|cit37",
+      "doi-asserted-by": "crossref",
+      "first-page": "629",
+      "DOI": "10.1136/bmj.315.7109.629",
+      "article-title": "Bias in meta-analysis detected by a simple, graphical test",
+      "volume": "315",
+      "author": "Egger",
+      "year": "1997",
+      "journal-title": "BMJ (Clinical Research Ed.)"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0038|cit38",
+      "doi-asserted-by": "crossref",
+      "first-page": "802",
+      "DOI": "10.1164/rccm.200812-1845PP",
+      "article-title": "Cystic fibrosis pulmonary guidelines: treatment of pulmonary exacerbations",
+      "volume": "180",
+      "author": "Flume",
+      "year": "2009",
+      "journal-title": "American Journal of Respiratory and Critical Care Medicine"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0039|cit39",
+      "doi-asserted-by": "crossref",
+      "first-page": "512",
+      "DOI": "10.1136/adc.63.5.512",
+      "article-title": "Home intravenous antibiotic treatment in cystic fibrosis",
+      "volume": "63",
+      "author": "Gilbert",
+      "year": "1988",
+      "journal-title": "Archives of Disease in Childhood"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0040|cit40",
+      "doi-asserted-by": "crossref",
+      "first-page": "647",
+      "DOI": "10.1136/adc.2009.162222",
+      "article-title": "A review of the home intravenous antibiotic service available to children with cystic fibrosis",
+      "volume": "94",
+      "author": "Gilchrist",
+      "year": "2009",
+      "journal-title": "Archives of Disease in Childhood"
+    },
+    {
+      "issue": "Pt 4",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0041|cit41",
+      "doi-asserted-by": "crossref",
+      "first-page": "917",
+      "DOI": "10.1099/mic.0.2006/004077-0",
+      "article-title": "Microbial ecology of the cystic fibrosis lung",
+      "volume": "153",
+      "author": "Harrison",
+      "year": "2007",
+      "journal-title": "Microbiology"
+    },
+    {
+      "issue": "7414",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0042|cit42",
+      "doi-asserted-by": "crossref",
+      "first-page": "557",
+      "DOI": "10.1136/bmj.327.7414.557",
+      "article-title": "Measuring inconsistency in meta-analyses",
+      "volume": "327",
+      "author": "Higgins",
+      "year": "2003",
+      "journal-title": "BMJ"
+    },
+    {
+      "issue": "Suppl 43",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0043|cit43",
+      "first-page": "66",
+      "article-title": "Recent advances in cross-infection in cystic fibrosis: Burkholderia cepacia complex, Pseudomonas aeruginosa, MRSA and pandoraea spp",
+      "volume": "96",
+      "author": "Jones",
+      "year": "2003",
+      "journal-title": "Journal of the Royal Society of Medicine"
+    },
+    {
+      "issue": "7303",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0044|cit44",
+      "doi-asserted-by": "crossref",
+      "first-page": "42",
+      "DOI": "10.1136/bmj.323.7303.42",
+      "article-title": "Systematic reviews in health care: Assessing the quality of controlled clinical trials",
+      "volume": "323",
+      "author": "Jüni",
+      "year": "2001",
+      "journal-title": "BMJ"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0045|cit45",
+      "doi-asserted-by": "crossref",
+      "first-page": "449",
+      "DOI": "10.1002/(SICI)1097-0258(19960315)15:5<449::AID-SIM173>3.0.CO;2-X",
+      "article-title": "The incidence of cystic fibrosis",
+      "volume": "15",
+      "author": "Kosorok",
+      "year": "1996",
+      "journal-title": "Statistics in Medicine"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0046|cit46",
+      "doi-asserted-by": "crossref",
+      "first-page": "641",
+      "DOI": "10.1002/sim.698",
+      "article-title": "A comparison of methods to detect publication bias in meta-analysis",
+      "volume": "20",
+      "author": "Macaskill",
+      "year": "2001",
+      "journal-title": "Statistics in Medicine"
+    },
+    {
+      "issue": "12",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0047|cit47",
+      "doi-asserted-by": "crossref",
+      "first-page": "2697",
+      "DOI": "10.2337/dc10-1768",
+      "article-title": "Clinical care guidelines for cystic fibrosis-related diabetes: a position statement of the American Diabetes Association and a clinical practice guideline of the Cystic Fibrosis Foundation, endorsed by the Pediatric Endocrine Society",
+      "volume": "33",
+      "author": "Moran",
+      "year": "2010",
+      "journal-title": "Diabetes Care"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0048|cit48",
+      "doi-asserted-by": "crossref",
+      "first-page": "1640",
+      "DOI": "10.1183/09031936.94.07091640",
+      "article-title": "Home versus hospital intravenous antibiotic therapy in the treatment of young adults with cystic fibrosis",
+      "volume": "7",
+      "author": "Pond",
+      "year": "1994",
+      "journal-title": "European Respiratory Journal"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0049|cit49",
+      "doi-asserted-by": "crossref",
+      "first-page": "244",
+      "DOI": "10.1016/j.rmed.2008.08.017",
+      "article-title": "Real life evaluation of intravenous antibiotic treatment in a paediatric cystic fibrosis centre: outcome of home therapy is not inferior",
+      "volume": "103",
+      "author": "Proesmans",
+      "year": "2009",
+      "journal-title": "Respiratory Medicine"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0050|cit50",
+      "doi-asserted-by": "crossref",
+      "first-page": "358",
+      "DOI": "10.1542/peds.54.3.358",
+      "article-title": "Outpatient intravenous medication in the management of cystic fibrosis",
+      "volume": "54",
+      "author": "Rucker",
+      "year": "1974",
+      "journal-title": "Pediatrics"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0051|cit51",
+      "doi-asserted-by": "crossref",
+      "first-page": "408",
+      "DOI": "10.1001/jama.1995.03520290060030",
+      "article-title": "Empirical evidence of bias. Dimensions of methodological quality associated with estimates of treatment in controlled trials",
+      "volume": "273",
+      "author": "Schulz",
+      "year": "1995",
+      "journal-title": "JAMA"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0052|cit52",
+      "doi-asserted-by": "crossref",
+      "first-page": "111",
+      "DOI": "10.4103/1817-1737.53346",
+      "article-title": "Home intravenous antibiotic treatment for acute pulmonary exacerbations in cystic fibrosis - Is it good for the patient?",
+      "volume": "4",
+      "author": "Sequeiros",
+      "year": "2009",
+      "journal-title": "Annals of Thoracic Medicine"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0053|cit53",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD007491",
+      "article-title": "Hospital at home admission avoidance",
+      "author": "Shepperd",
+      "year": "2008",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0054|cit54",
+      "doi-asserted-by": "crossref",
+      "first-page": "340",
+      "DOI": "10.1111/j.1651-2227.1992.tb12239.x",
+      "article-title": "Home intravenous antibiotic treatment of patients with cystic fibrosis",
+      "volume": "81",
+      "author": "Strandvik",
+      "year": "1992",
+      "journal-title": "Acta Paediatrica"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0055|cit55",
+      "doi-asserted-by": "crossref",
+      "first-page": "63",
+      "DOI": "10.1016/0924-8579(94)00060-8",
+      "article-title": "Cystic fibrosis and outpatient treatment with parenteral antibiotics in children",
+      "volume": "5",
+      "author": "Laag",
+      "year": "1995",
+      "journal-title": "International Journal of Antimicrobial Agents"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0056|cit56",
+      "doi-asserted-by": "crossref",
+      "first-page": "635",
+      "DOI": "10.1164/rccm.201009-1392OC",
+      "article-title": "Stenotrophomonas maltophilia in cystic fibrosis: serologic response and effect on lung disease",
+      "volume": "183",
+      "author": "Waters",
+      "year": "2011",
+      "journal-title": "American Journal of Respiratory and Critical Care Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001917.pub4-BIB0057|cit57",
+      "unstructured": "Home versus hospital intravenous antibiotic therapy for cystic fibrosis Cochrane Database of Systematic Reviews 2000 4 10.1002/14651858.CD001917"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0058|cit58",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD001917",
+      "article-title": "Home versus hospital intravenous antibiotic therapy for cystic fibrosis",
+      "author": "Balaguer",
+      "year": "2008",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001917.pub4-BIB0059|cit59",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD001917.pub3",
+      "article-title": "Home versus hospital intravenous antibiotic therapy for cystic fibrosis",
+      "author": "Balaguer",
+      "year": "2012",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    }
+  ],
+  "container-title": [
+    "Cochrane Database of Systematic Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://onlinelibrary.wiley.com/doi/full/10.1002/14651858.CD001917.pub4",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        6,
+        12
+      ]
+    ],
+    "date-time": "2024-06-12T22:41:58Z",
+    "timestamp": 1718232118000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://doi.wiley.com/10.1002/14651858.CD001917.pub4"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "name": "Cochrane Cystic Fibrosis and Genetic Disorders Group",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "editor",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        15
+      ]
+    ]
+  },
+  "references-count": 59,
+  "journal-issue": {
+    "issue": "4",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          4
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1002/14651858.cd001917.pub4",
+  "relation": {},
+  "ISSN": [
+    "1465-1858"
+  ],
+  "issn-type": [
+    {
+      "value": "1465-1858",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2015,
+        12,
+        15
+      ]
+    ]
+  }
+}

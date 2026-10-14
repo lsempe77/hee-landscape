@@ -1,0 +1,23 @@
+{
+  "131462474": {
+    "doi": "10.1016/j.ajog.2024.04.014",
+    "journal": "American Journal of Obstetrics and Gynecology",
+    "publication_type": "journal-article",
+    "url": "https://doi.org/10.1016/j.ajog.2024.04.014",
+    "note": "Conference DOI replaced with the full-article DOI matching the supplied abstract and journal/year. Original DOI retained in metadata_original_doi.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/38621481/"
+  },
+  "132018093": {
+    "doi": "10.6002/ect.mesot2016.P34",
+    "journal": "Experimental and Clinical Transplantation",
+    "publication_type": "journal-article",
+    "url": "https://doi.org/10.6002/ect.mesot2016.P34",
+    "note": "2015 conference DOI/journal replaced with the 2017 full-article citation matching the supplied abstract. Sample location not reported in title/abstract. \"Printed in Turkey\" is a publisher notice, not a recruitment or treatment location. Turkey and derived geography/income classifications cleared under the user-directed title/abstract rule.",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/28260458/"
+  },
+  "132866626": {
+    "doi": "",
+    "note": "Recorded DOI resolves to an unrelated conscientious-objection paper and has been cleared. Original DOI retained in metadata_original_doi. Preliminary abstract retained; no unverified conference DOI invented. Evaluation linked to canonical full paper 131977666.",
+    "source": "https://api.crossref.org/works/10.3109%2F13625187.2015.1135897"
+  }
+}

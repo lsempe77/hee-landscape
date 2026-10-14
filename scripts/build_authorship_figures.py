@@ -60,10 +60,15 @@ def load():
                 iso3.add(hit.alpha_3 if hit else ISO2_EXTRA[c])
             aff[r["record_id"]] = iso3
     year = {}
+    excluded = set()
     with (RAW / "hee_analysis_master_v2_1.csv").open(encoding="utf-8") as f:
         for r in csv.DictReader(f):
+            if r["is_eligible"] != "TRUE":
+                excluded.add(r["record_id"])
+                continue
             if r["record_id"] in aff:
                 year[r["record_id"]] = int(r["year"])
+    aff = {rid: countries for rid, countries in aff.items() if rid not in excluded}
     if set(year) != set(aff):
         raise ValueError("Every study in the affiliation file needs a publication year in the master file.")
     places = collections.defaultdict(dict)

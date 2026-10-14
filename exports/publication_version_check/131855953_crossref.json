@@ -1,0 +1,463 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        3
+      ]
+    ],
+    "date-time": "2022-04-03T22:53:39Z",
+    "timestamp": 1649026419963
+  },
+  "reference-count": 21,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "2",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2013,
+            9,
+            11
+          ]
+        ],
+        "date-time": "2013-09-11T00:00:00Z",
+        "timestamp": 1378857600000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "http://www.springer.com/tdm"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "PharmacoEcon Ital Res Artic"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2013,
+        10
+      ]
+    ]
+  },
+  "DOI": "10.1007/s40276-013-0006-2",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2013,
+        9,
+        11
+      ]
+    ],
+    "date-time": "2013-09-11T07:40:36Z",
+    "timestamp": 1378885236000
+  },
+  "page": "91-100",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Dronedarone per il trattamento della fibrillazione atriale"
+  ],
+  "prefix": "10.1007",
+  "volume": "15",
+  "author": [
+    {
+      "given": "Claire",
+      "family": "McKenna",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Emma",
+      "family": "Maund",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Muhammad",
+      "family": "Sarowar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "David",
+      "family": "Fox",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Matt",
+      "family": "Stevenson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Chris",
+      "family": "Pepper",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Nerys",
+      "family": "Woolacott",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Stephen",
+      "family": "Palmer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2013,
+        9,
+        11
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "6_CR1",
+      "unstructured": "National Institute for Health and Clinical Excellence. Guide to the single technology appraisal (STA) process. London: NICE; 2006 [online]. Available from URL: http://www.nice.org.uk/nicemedia/pdf/STA_Process_Guide.pdf [Accessed 2010 May 1]."
+    },
+    {
+      "issue": "5",
+      "key": "6_CR2",
+      "doi-asserted-by": "crossref",
+      "first-page": "347",
+      "DOI": "10.2165/11535680-000000000-00000",
+      "volume": "28",
+      "author": "M Sculpher",
+      "year": "2010",
+      "unstructured": "Sculpher M. Single technology appraisal at the UK National institute for Health and Clinical Excellence: a source of evidence and analysis for decision making internationally. Pharmacoeconomics. 2010;28(5):347–9.",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "5",
+      "key": "6_CR3",
+      "doi-asserted-by": "crossref",
+      "first-page": "351",
+      "DOI": "10.2165/11532160-000000000-00000",
+      "volume": "28",
+      "author": "M Rodgers",
+      "year": "2010",
+      "unstructured": "Rodgers M, Griffin S, Paulden M, et al. Alitretinoin for severe chronic hand eczema: a NICE single technology appraisal. Pharmacoeconomics. 2010;28(5):351–62.",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "6",
+      "key": "6_CR4",
+      "doi-asserted-by": "crossref",
+      "first-page": "439",
+      "DOI": "10.2165/11532220-000000000-00000",
+      "volume": "28",
+      "author": "A Bagust",
+      "year": "2010",
+      "unstructured": "Bagust A, Greenhalgh J, Boland A, et al. Cetuximab for recurrent and/or metastatic squamous cell carcinoma of the head and neck: a NICE single technology appraisal. Pharmacoeconomics. 2010;28(6):439–48.",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "2",
+      "key": "6_CR5",
+      "doi-asserted-by": "crossref",
+      "first-page": "133",
+      "DOI": "10.2165/11535770-000000000-00000",
+      "volume": "29",
+      "author": "M Stevenson",
+      "year": "2011",
+      "unstructured": "Stevenson M, Pandor A. Febuxostat for the management of hyperuricaemia in patients with gout: a NICE single technology appraisal. Pharmacoeconomics. 2011;29(2):133–40.",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "11",
+      "key": "6_CR6",
+      "doi-asserted-by": "crossref",
+      "first-page": "951",
+      "DOI": "10.2165/11589310-000000000-00000",
+      "volume": "29",
+      "author": "G Scotland",
+      "year": "2011",
+      "unstructured": "Scotland G, Waugh N, Royle P, et al. Denosumab for the prevention of osteoporotic fractures in post-menopausal women: a NICE single technology appraisal. Pharmacoeconomics. 2011;29(11):951–61.",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "12",
+      "key": "6_CR7",
+      "doi-asserted-by": "crossref",
+      "first-page": "1051",
+      "DOI": "10.2165/11591600-000000000-00000",
+      "volume": "29",
+      "author": "R Dickson",
+      "year": "2011",
+      "unstructured": "Dickson R, Bagust A, Boland A, et al. Erlotinib monotherapy for the maintenance treatment of non-small cell lung cancer after previous platinum-containing chemotherapy: a NICE single technology appraisal. Pharmacoeconomics. 2011;29(12):1051–62. doi: 10.2165/11591600-000000000-00000 .",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "2",
+      "key": "6_CR8",
+      "doi-asserted-by": "crossref",
+      "first-page": "137",
+      "DOI": "10.2165/11591590-000000000-00000",
+      "volume": "30",
+      "author": "M Holmes",
+      "year": "2012",
+      "unstructured": "Holmes M, Carroll C, Papaioannou D. Dabigatran etexilate for the prevention of venous thromboembolism in patients undergoing elective hip and knee surgery: a NICE single technology appraisal. Pharmacoeconomics. 2012;30(2):137–46. doi: 10.2165/11591590-000000000-00000 .",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "4",
+      "key": "6_CR9",
+      "doi-asserted-by": "crossref",
+      "first-page": "257",
+      "DOI": "10.2165/11595920-000000000-00000",
+      "volume": "30",
+      "author": "H Yang",
+      "year": "2012",
+      "unstructured": "Yang H, Craig D, Epstein D, et al. Golimumab for the treatment of psoriatic arthritis: a NICE single technology appraisal. Pharmacoeconomics. 2012;30(4):257–70. doi: 10.2165/11595920-000000000-00000 .",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "6",
+      "key": "6_CR10",
+      "doi-asserted-by": "crossref",
+      "first-page": "483",
+      "DOI": "10.2165/11591550-000000000-00000",
+      "volume": "30",
+      "author": "D Boyers",
+      "year": "2012",
+      "unstructured": "Boyers D, Jia X, Jenkinson D, et al. Eltrombopag for the treatment of chronic immune or idiopathic thrombocytopenic purpura: a NICE single technology appraisal. Pharmacoeconomics. 2012;30(6):483–95. doi: 10.2165/11591550-000000000-00000 .",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "key": "6_CR11",
+      "unstructured": "National Institute for Health and Clinical Excellence. Atrial fibrillation: dronedarone. London: NICE; 2010 [online]. Available from URL: http://guidance.nice.org.uk/TA/Wave19/57 [Accessed 2010 Jul 16]."
+    },
+    {
+      "key": "6_CR12",
+      "doi-asserted-by": "crossref",
+      "first-page": "239",
+      "DOI": "10.1136/hrt.2003.014720",
+      "volume": "90",
+      "author": "JS Steinberg",
+      "year": "2004",
+      "unstructured": "Steinberg JS. Atrial fibrillation: an emerging epidemic. Heart. 2004;90:239–40.",
+      "journal-title": "Heart"
+    },
+    {
+      "issue": "7 Suppl.",
+      "key": "6_CR13",
+      "doi-asserted-by": "crossref",
+      "first-page": "2N",
+      "DOI": "10.1016/S0002-9149(98)00583-9",
+      "volume": "82",
+      "author": "WB Kannel",
+      "year": "1998",
+      "unstructured": "Kannel WB, Wolf PA, Benjamin EJ, et al. Prevalence, incidence, prognosis, and predisposing conditions for atrial fibrillation: population-based estimates. Am J Cardiol. 1998;82(7 Suppl.):2N–9N.",
+      "journal-title": "Am J Cardiol"
+    },
+    {
+      "key": "6_CR14",
+      "unstructured": "National Institute for Health and Clinical Excellence. Guide to the methods of technology appraisal. London: NICE; 2008 [online]. Available from URL: http://www.nice.org.uk/media/B52/A7/TAMethodsGuideUpdatedJune2008.pdf [Accessed 2010 May 1]."
+    },
+    {
+      "issue": "10",
+      "key": "6_CR15",
+      "doi-asserted-by": "crossref",
+      "first-page": "987",
+      "DOI": "10.1056/NEJMoa054686",
+      "volume": "357",
+      "author": "BN Singh",
+      "year": "2007",
+      "unstructured": "Singh BN, Connolly SJ, Crijns HJ, et al. Dronedarone for maintenance of sinus rhythm in atrial fibrillation or flutter. N Engl J Med. 2007;357(10):987–99.",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "issue": "7",
+      "key": "6_CR16",
+      "doi-asserted-by": "crossref",
+      "first-page": "668",
+      "DOI": "10.1056/NEJMoa0803778",
+      "volume": "360",
+      "author": "SH Hohnloser",
+      "year": "2009",
+      "unstructured": "Hohnloser SH, Crijns HJ, van Eickels M, et al. Effect of dronedarone on cardiovascular events in atrial fibrillation. N Engl J Med. 2009;360(7):668–78.",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "6_CR17",
+      "unstructured": "Sanofi-Aventis Pharmaceuticals. Double blind trial to evaluate the efficacy and safety of dronedarone (400 mg bid) versus amiodarone (600 mg daily for 28 days, then 200 mg daily thereafter) for at least 6 months for the maintenance of sinus rhythm in patients with atrial fibrillation: DIONYSOS clinical study report. Bridgewater (NJ): Sanofi-Aventis Pharmaceuticals; 2009."
+    },
+    {
+      "key": "6_CR18",
+      "unstructured": "National Collaborating Centre for Chronic Conditions. Atrial fibrillation: national clinical guideline for management in primary and secondary care. London: Royal College of Physicians; 2006 [online]. Available from URL: http://guidance.nice.org.uk/CG36/Guidance/pdf/English [Accessed 2010May 10]."
+    },
+    {
+      "key": "6_CR19",
+      "unstructured": "Datapharm Communications. Electronic medicines compendium [online]. Available from URL: http://www.medicines.org.uk/emc [Accessed 2009 Nov 25]."
+    },
+    {
+      "key": "6_CR20",
+      "unstructured": "National Institute for Health and Clinical Excellence. Atrial fibrillation—dronedarone: appraisal consultation document. London: NICE; 2009 Dec [online]. Available from URL: http://www.nice.org.uk/guidance/index.jsp?action=folder&o=46767 [Accessed 2010 May 10]."
+    },
+    {
+      "key": "6_CR21",
+      "unstructured": "National Institute for Health and Clinical Excellence. Atrial fibrillation—dronedarone: final appraisal determination. London: NICE; 2010 Jul [online]. Available from URL: http://guidance.nice.org.uk/TA/Wave19/57/FAD [Accessed 2010 Jul 16]."
+    }
+  ],
+  "container-title": [
+    "PharmacoEconomics Italian Research Articles"
+  ],
+  "original-title": [],
+  "language": "it",
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s40276-013-0006-2.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/article/10.1007/s40276-013-0006-2/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s40276-013-0006-2",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        6,
+        2
+      ]
+    ],
+    "date-time": "2019-06-02T19:59:47Z",
+    "timestamp": 1559505587000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/s40276-013-0006-2"
+    }
+  },
+  "subtitle": [
+    "Valutazione di tecnologia singola presso il NICE"
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2013,
+        9,
+        11
+      ]
+    ]
+  },
+  "references-count": 21,
+  "journal-issue": {
+    "issue": "2",
+    "published-print": {
+      "date-parts": [
+        [
+          2013,
+          10
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "6"
+  ],
+  "URL": "https://doi.org/10.1007/s40276-013-0006-2",
+  "relation": {},
+  "ISSN": [
+    "1590-9158",
+    "2035-6137"
+  ],
+  "issn-type": [
+    {
+      "value": "1590-9158",
+      "type": "print"
+    },
+    {
+      "value": "2035-6137",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2013,
+        9,
+        11
+      ]
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "eligible_count": 41610,
+  "five_master_checks": "passed",
+  "current_v2_v3_web_indices": "passed",
+  "pending_records_retained": 0,
+  "figure_file_check": "89 figure files referenced; 0 problem(s).",
+  "affected_builds": "passed; followup_build_logs",
+  "kld_draws": 1000,
+  "browser_check": "unavailable: runtime failed to start",
+  "manuscript_updated": true,
+  "excluded_total": 47,
+  "geography_correction": "Title/abstract sample location not reported; Turkey removed",
+  "kld_output": "kld_followup",
+  "manuscript_reconciliation": "manuscript_reconciliation.json; all four user-confirmed manuscript placeholders resolved",
+  "all_gallery_figures_reconciled": true,
+  "gallery_figures_checked": 43,
+  "remaining_static_figures_rebuilt": 15,
+  "figure_audit": "figure_refresh/all_figure_audit.json",
+  "visual_check": "15 rebuilt static figures reviewed as rendered previews; browser runtime not used"
+}

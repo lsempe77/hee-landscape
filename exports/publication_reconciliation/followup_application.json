@@ -1,0 +1,90 @@
+{
+  "applied_at_utc": "20261014T152925Z",
+  "backup": "data\\raw\\publication_reconciliation\\backups\\before_followup_20261014T152925Z.zip",
+  "additional_exclusions": 4,
+  "excluded_total": 47,
+  "eligible_after": 41610,
+  "geography_original": {
+    "data\\raw\\hee_analysis_master_v2.csv": {
+      "geo_scope": "single_country",
+      "country_iso3": "TUR",
+      "country_name": "Turkey",
+      "income_group": "Upper middle income",
+      "income_broad": "Low & middle income",
+      "continent": "Asia",
+      "un_region": "Western Asia",
+      "country_pop": "85878556",
+      "country_dalys": "25525041.58",
+      "income_reason": "classified"
+    },
+    "data\\raw\\hee_analysis_master_v2_1.csv": {
+      "geo_scope": "single_country",
+      "country_iso3": "TUR",
+      "country_name": "Turkey",
+      "income_group": "Upper middle income",
+      "income_broad": "Low & middle income",
+      "income_group_pubyear": "Upper middle income",
+      "income_broad_pubyear": "Low & middle income",
+      "continent": "Asia",
+      "un_region": "Western Asia",
+      "who_region": "European Region",
+      "who_region_source": "WHO",
+      "country_pop": "85878556",
+      "country_dalys": "25525041.58",
+      "income_reason": "classified"
+    },
+    "data\\raw\\hee_analysis_master_v2_who.csv": {
+      "geo_scope": "single_country",
+      "country_iso3": "TUR",
+      "country_name": "Turkey",
+      "income_group": "Upper middle income",
+      "income_broad": "Low & middle income",
+      "continent": "Asia",
+      "un_region": "Western Asia",
+      "who_region": "European Region",
+      "who_region_source": "WHO",
+      "country_pop": "85878556",
+      "country_dalys": "25525041.58",
+      "income_reason": "classified"
+    },
+    "data\\raw\\hee_analysis_master_with_review_explanations.csv": {
+      "geo_scope": "single_country",
+      "country_iso3": "TUR",
+      "country_name": "Turkey",
+      "income_group": "Upper middle income",
+      "income_broad": "Low & middle income",
+      "continent": "Asia",
+      "un_region": "Western Asia",
+      "country_pop": "85878556",
+      "country_dalys": "25525041.5785472",
+      "income_reason": "classified"
+    },
+    "data\\raw\\hee_share_v2_1\\hee_analysis_master.csv": {
+      "geo_scope": "single_country",
+      "country_iso3": "TUR",
+      "country_name": "Turkey",
+      "income_group": "Upper middle income",
+      "income_broad": "Low & middle income",
+      "continent": "Asia",
+      "un_region": "Western Asia",
+      "country_pop": "85878556",
+      "country_dalys": "25525041.5785472",
+      "income_reason": "classified"
+    }
+  },
+  "geography_note": "Sample location not reported in title/abstract. \"Printed in Turkey\" is a publisher notice, not a recruitment or treatment location. Turkey and derived geography/income classifications cleared under the user-directed title/abstract rule.",
+  "linkage_authority": {
+    "16": [
+      "131512107",
+      "User directed linkage of TCTR20221219005 to the 2024 results article. Distinctive title, interventions and outcomes match; no explicit registry-to-publication citation verified. Treat as user-adjudicated linkage, not newly source-confirmed."
+    ],
+    "27": [
+      "131808468",
+      "Publisher footnote explicitly identifies the 2015 German report as a shortened translation of Rainer, Mucke and Schlaefke (2013). User directed retention of the 2013 original."
+    ],
+    "57": [
+      "131377387",
+      "User directed consolidation with the full JAMA article based on matching topic, episode categories, overlapping author and conference comparison sample. Claims periods and estimates differ; preliminary-to-final relationship is user-adjudicated, not explicitly source-confirmed."
+    ]
+  }
+}

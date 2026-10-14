@@ -1,0 +1,2886 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        13
+      ]
+    ],
+    "date-time": "2026-10-13T14:17:40Z",
+    "timestamp": 1791901060484,
+    "version": "4.3.4"
+  },
+  "update-to": [
+    {
+      "DOI": "10.1002/14651858.cd001800.pub2",
+      "type": "new_version",
+      "label": "New version",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2016,
+            1,
+            5
+          ]
+        ],
+        "date-time": "2016-01-05T00:00:00Z",
+        "timestamp": 1451952000000
+      }
+    }
+  ],
+  "reference-count": 254,
+  "publisher": "Wiley",
+  "content-domain": {
+    "domain": [
+      "wiley.com",
+      "cochranelibrary.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "DOI": "10.1002/14651858.cd001800.pub3",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        5
+      ]
+    ],
+    "date-time": "2016-01-05T10:54:21Z",
+    "timestamp": 1451991261000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 384,
+  "title": [
+    "Exercise-based cardiac rehabilitation for coronary heart disease"
+  ],
+  "prefix": "10.1002",
+  "author": [
+    {
+      "given": "Lindsey",
+      "family": "Anderson",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "University of Exeter Medical School; Institute of Health Research; Veysey Building, Salmon Pool Lane Exeter UK EX2 4SG"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "David R",
+      "family": "Thompson",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Melbourne; Department of Psychiatry; St Vincent's Hospital Melbourne Victoria Australia VIC 3000"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Neil",
+      "family": "Oldridge",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Aurora Sinai/Aurora St. Luke's Medical Center; University of Wisconsin School of Medicine & Public Health and Aurora Cardiovascular Services; Milwaukee Wisconsin USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ann-Dorthe",
+      "family": "Zwisler",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Copenhagen University Hospital, Rigshospitalet; Department of Cardiology, The Heart Centre; Blegsdamsvej 9 Copenhagen Denmark 2100"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Karen",
+      "family": "Rees",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Warwick Medical School, University of Warwick; Division of Health Sciences; Coventry UK CV4 7AL"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Nicole",
+      "family": "Martin",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University College London; Farr Institute of Health Informatics Research; 222 Euston Road London UK NW1 2DA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Rod S",
+      "family": "Taylor",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Exeter Medical School; Institute of Health Research; Veysey Building, Salmon Pool Lane Exeter UK EX2 4SG"
+        },
+        {
+          "name": "University of Southern Denmark; National Institute of Public Health; Copenhagen Denmark"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        5
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "45",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0001|cit1",
+      "first-page": "2952",
+      "article-title": "The value of regular, supervised physical training after acute myocardial infarction",
+      "volume": "143",
+      "author": "Andersen",
+      "year": "1981",
+      "journal-title": "Ugeskrift for Laeger"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0002|cit2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Aronov DM Krasnitskij VB Bubnova MG Efficacy of physical training and analysis of lipid-lowering therapy in patients with ischemic heart disease after acute coronary incidents Rational Pharmacotherapy Cardiology 2010 9 19",
+      "DOI": "10.20996/1819-6446-2010-6-1-9-19"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0003|cit3",
+      "doi-asserted-by": "crossref",
+      "first-page": "307",
+      "DOI": "10.1016/j.ejcnurse.2008.02.001",
+      "article-title": "Effects of high frequency exercise in patients before and after elective percutaneous coronary intervention",
+      "volume": "7",
+      "author": "Bäck",
+      "year": "2008",
+      "journal-title": "European Journal of Cardiovascular Nursing"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0004|cit4",
+      "doi-asserted-by": "crossref",
+      "first-page": "1891",
+      "DOI": "10.1016/S0735-1097(01)01236-0",
+      "article-title": "Exercise training intervention after coronary angioplasty: The ETICA Trial",
+      "volume": "37",
+      "author": "Belardinelli",
+      "year": "2001",
+      "journal-title": "Journal of the American College of Cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0005|cit5",
+      "unstructured": "Bell JM A comparison of a multi-disciplinary home based cardiac rehabilitation programme with comprehensive conventional rehabilitation in post-myocardial infarction patients PhD Thesis, University of London 1998"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0006|cit6",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.2340/16501977198315147153",
+      "article-title": "Rehabilitation after myocardial infarction",
+      "volume": "15",
+      "author": "Bengtsson",
+      "year": "1983",
+      "journal-title": "Scandinavian Journal of Rehabilitation Medicine"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0007|cit7",
+      "doi-asserted-by": "crossref",
+      "first-page": "147",
+      "DOI": "10.1016/S0035-8819(25)01192-4",
+      "article-title": "Benefits and weaknesses of a cardiac rehabilitation programme",
+      "volume": "26",
+      "author": "Bertie",
+      "year": "1992",
+      "journal-title": "Journal of the Royal College of Physicians of London"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0008|cit8",
+      "doi-asserted-by": "crossref",
+      "first-page": "370",
+      "DOI": "10.1136/hrt.64.6.370",
+      "article-title": "A controlled trial of community based coronary rehabilitation",
+      "volume": "64",
+      "author": "Bethell",
+      "year": "1990",
+      "journal-title": "British Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0009|cit9",
+      "first-page": "687",
+      "article-title": "Impact of cardiac rehabilitation on quality of life and depression after acute coronary syndrome",
+      "volume": "24",
+      "author": "Bettencourt",
+      "year": "2005",
+      "journal-title": "Revista Portuguesa de Cardiologia"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0010|cit10",
+      "doi-asserted-by": "crossref",
+      "first-page": "450",
+      "DOI": "10.5694/j.1326-5377.2005.tb07121.x",
+      "article-title": "Cost-effectiveness of rehabilitation after an acute coronary event: a randomised controlled trial",
+      "volume": "183",
+      "author": "Briffa",
+      "year": "2005",
+      "journal-title": "Medical Journal of Australia"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0011|cit11",
+      "first-page": "1",
+      "article-title": "Serum cholesterol, lifestyle, working capacity and quality of life in patients with coronary artery disease. Experiences from a hospital-based secondary prevention programme",
+      "volume": "50",
+      "author": "Carlsson",
+      "year": "1998",
+      "journal-title": "Scandinavian Cardiovascular Journal. Supplement"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0012|cit12",
+      "doi-asserted-by": "crossref",
+      "first-page": "147",
+      "DOI": "10.1016/S0035-8819(25)02680-7",
+      "article-title": "Exercise after myocardial infarction: a controlled trial",
+      "volume": "16",
+      "author": "Carson",
+      "year": "1982",
+      "journal-title": "Journal of the Royal College of Physicians of London"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0013|cit13",
+      "doi-asserted-by": "crossref",
+      "first-page": "721",
+      "DOI": "10.7326/0003-4819-120-9-199405010-00001",
+      "article-title": "A case management system for coronary risk factor modification following acute myocardial infarction",
+      "volume": "120",
+      "author": "DeBusk",
+      "year": "1994",
+      "journal-title": "Annals of Internal Medicine"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0014|cit14",
+      "doi-asserted-by": "crossref",
+      "first-page": "157",
+      "DOI": "10.1097/00008483-199705000-00002",
+      "article-title": "The effect of a home-based, case-managed, multifactorial risk-reduction program on reducing psychological distress in patients with cardiovascular disease",
+      "volume": "17",
+      "author": "Taylor",
+      "year": "1997",
+      "journal-title": "Journal of Cardiopulmonary Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0015|cit15",
+      "doi-asserted-by": "crossref",
+      "first-page": "1764",
+      "DOI": "10.1161/01.CIR.100.17.1764",
+      "article-title": "Results of a multicenter randomized clinical trial of exercise and long-term survival in myocardial infarction patients: the National Exercise and Heart Disease Project (NEHDP)",
+      "volume": "100",
+      "author": "Dorn",
+      "year": "1999",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0016|cit16",
+      "doi-asserted-by": "crossref",
+      "first-page": "359",
+      "DOI": "10.1136/hrt.81.4.359",
+      "article-title": "Changes in cardiorespiratory fitness, psychological wellbeing, quality of life, and vocational status following a 12 month cardiac exercise rehabilitation programme",
+      "volume": "81",
+      "author": "Dugmore",
+      "year": "1999",
+      "journal-title": "Heart"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0017|cit17",
+      "doi-asserted-by": "crossref",
+      "first-page": "167",
+      "DOI": "10.1007/BF00635616",
+      "article-title": "Quality of life during rehabilitation after coronary bypass surgery",
+      "volume": "1",
+      "author": "Engblom",
+      "year": "1992",
+      "journal-title": "Quality of Life Research"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0018|cit18",
+      "doi-asserted-by": "crossref",
+      "first-page": "1053",
+      "DOI": "10.1093/oxfordjournals.eurheartj.a060313",
+      "article-title": "Exercise habits and physical performance during comprehensive rehabilitation after coronary artery bypass surgery",
+      "volume": "13",
+      "author": "Engblom",
+      "year": "1992",
+      "journal-title": "European Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0019|cit19",
+      "doi-asserted-by": "crossref",
+      "first-page": "1428",
+      "DOI": "10.1016/S0002-9149(96)00629-7",
+      "article-title": "Effects of five years of cardiac rehabilitation after coronary artery bypass grafting on coronary risk factors",
+      "volume": "78",
+      "author": "Engblom",
+      "year": "1996",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0020|cit20",
+      "doi-asserted-by": "crossref",
+      "first-page": "29",
+      "DOI": "10.1097/00008483-199701000-00004",
+      "article-title": "Quality of life and return to work 5 years after coronary artery bypass surgery",
+      "volume": "17",
+      "author": "Engblom",
+      "year": "1997",
+      "journal-title": "Journal of Cardiopulmonary Rehabilitation"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0021|cit21",
+      "doi-asserted-by": "crossref",
+      "first-page": "232",
+      "DOI": "10.1093/oxfordjournals.eurheartj.a060152",
+      "article-title": "Coronary heart disease risk factors before and after bypass surgery: results of a controlled trial on multifactorial rehabilitation",
+      "volume": "13",
+      "author": "Engblom",
+      "year": "1992",
+      "journal-title": "European Heart Journal"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0022|cit22",
+      "doi-asserted-by": "crossref",
+      "first-page": "206",
+      "DOI": "10.1097/00008483-198606000-00001",
+      "article-title": "Predictability of beneficial effects in cardiac rehabilitation: A randomized clinical trial of psychosocial variables",
+      "volume": "6",
+      "author": "Erdman",
+      "year": "1986",
+      "journal-title": "Journal of Cardiopulmonary Rehabilitation"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0023|cit23",
+      "doi-asserted-by": "crossref",
+      "first-page": "170",
+      "DOI": "10.1016/0002-9149(94)90209-7",
+      "article-title": "Exercise testing and training in physically disabled men with clinical evidence of coronary artery disease",
+      "volume": "73",
+      "author": "Fletcher",
+      "year": "1994",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0024|cit24",
+      "doi-asserted-by": "crossref",
+      "first-page": "23",
+      "DOI": "10.1111/j.1471-6712.1991.tb00078.x",
+      "article-title": "Recovery after myocardial infarction: Effects of a caring rehabilitation programme",
+      "volume": "5",
+      "author": "Fridlund",
+      "year": "1991",
+      "journal-title": "Scandinavian Journal of Caring Sciences"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0025|cit25",
+      "doi-asserted-by": "crossref",
+      "first-page": "129",
+      "DOI": "10.1111/j.1471-6712.1989.tb00385.x",
+      "article-title": "A caring perspective on rehabilitation after myocardial infarction: A theoretical framework and a suggestion for a rehabilitation programme",
+      "volume": "3",
+      "author": "Fridlund",
+      "year": "1989",
+      "journal-title": "Scandinavian Journal of Caring Sciences"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0026|cit26",
+      "doi-asserted-by": "crossref",
+      "first-page": "141",
+      "DOI": "10.1111/j.1365-2702.1992.tb00084.x",
+      "article-title": "A supportive - educative caring rehabilitation programme: improvements of physical health after myocardial infarction",
+      "volume": "1",
+      "author": "Fridlund",
+      "year": "1992",
+      "journal-title": "Journal of Clinical Nursing"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0027|cit27",
+      "doi-asserted-by": "crossref",
+      "first-page": "67",
+      "DOI": "10.1111/j.1471-6712.1996.tb00314.x",
+      "article-title": "Long-term effects of a comprehensive rehabilitation programme after myocardial infarction",
+      "volume": "10",
+      "author": "Lidell",
+      "year": "1996",
+      "journal-title": "Scandinavian Journal of Caring Sciences"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0028|cit28",
+      "doi-asserted-by": "crossref",
+      "first-page": "113",
+      "DOI": "10.1097/HJR.0b013e3282f00990",
+      "article-title": "Left ventricular remodelling in patients with moderate systolic dysfunction after myocardial infarction: favourable effects of exercise training and predictive role of N-terminal pro-brain natriuretic peptide",
+      "volume": "15",
+      "author": "Giallauria",
+      "year": "2008",
+      "journal-title": "European Journal of Cardiovascular Prevention and Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0029|cit29",
+      "doi-asserted-by": "crossref",
+      "first-page": "1371",
+      "DOI": "10.1161/01.CIR.0000121360.31954.1F",
+      "article-title": "Percutaneous coronary angioplasty compared with exercise training in patients with stable coronary artery disease: a randomized trial",
+      "volume": "109",
+      "author": "Hambrecht",
+      "year": "2004",
+      "journal-title": "Circulation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0030|cit30",
+      "doi-asserted-by": "crossref",
+      "first-page": "107",
+      "DOI": "10.1097/HJR.0b013e3282f29aa6",
+      "article-title": "Regular exercise training compared with percutaneous intervention leads to a reduction of inflammatory markers and cardiovascular events in patients with coronary artery disease",
+      "volume": "15",
+      "author": "Walther",
+      "year": "2008",
+      "journal-title": "Eur J Cardiovasc Prev Rehabil"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0031|cit31",
+      "doi-asserted-by": "crossref",
+      "first-page": "975",
+      "DOI": "10.1161/01.CIR.89.3.975",
+      "article-title": "Effects of intensive multiple risk factor reduction on coronary atherosclerosis and clinical cardiac events in men and women with coronary artery disease: The Stanford Coronary Risk Intervention Project (SCRIP)",
+      "volume": "89",
+      "author": "Haskell",
+      "year": "1994",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "11",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0032|cit32",
+      "doi-asserted-by": "crossref",
+      "first-page": "759",
+      "DOI": "10.1016/0002-9149(93)91058-P",
+      "article-title": "Secondary prevention after acute myocardial infarction",
+      "volume": "72",
+      "author": "Heller",
+      "year": "1993",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0033|cit33",
+      "doi-asserted-by": "crossref",
+      "first-page": "219",
+      "DOI": "10.1016/S0738-3991(00)00164-6",
+      "article-title": "Rehabilitation outcomes following percutaneous coronary interventions (PCI)",
+      "volume": "43",
+      "author": "Higgins",
+      "year": "2001",
+      "journal-title": "Patient Education & Counseling"
+    },
+    {
+      "issue": "20",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0034|cit34",
+      "doi-asserted-by": "crossref",
+      "first-page": "1465",
+      "DOI": "10.1053/euhj.1999.1544",
+      "article-title": "Two-year results of a controlled study of residential rehabilitation for patients treated with percutaneous transluminal coronary angioplasty. A randomized study of a multifactorial programme",
+      "volume": "20",
+      "author": "Hofman-Bang",
+      "year": "1999",
+      "journal-title": "European Heart Journal"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0036|cit35",
+      "doi-asserted-by": "crossref",
+      "first-page": "143",
+      "DOI": "10.1016/S0022-3999(98)00074-9",
+      "article-title": "Behavioral effects of a comprehensive multifactorial program for lifestyle change after percutaneous transluminal coronary angioplasty: A prospective randomized, controlled study",
+      "volume": "46",
+      "author": "Lisspers",
+      "year": "1999",
+      "journal-title": "Journal of Psychosomatic Research"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0035|cit36",
+      "doi-asserted-by": "crossref",
+      "first-page": "41",
+      "DOI": "10.1037/0278-6133.24.1.41",
+      "article-title": "Long-term effects of lifestyle behavior change in coronary artery disease: Effects on recurrent coronary events after percutaneous coronary intervention",
+      "volume": "24",
+      "author": "Lisspers",
+      "year": "2005",
+      "journal-title": "Health Psychology"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0037|cit37",
+      "doi-asserted-by": "crossref",
+      "first-page": "551",
+      "DOI": "10.1016/S0003-9993(21)01618-X",
+      "article-title": "Training after myocardial infarction: Lack of long-term effects on physical capacity and psychological variables",
+      "volume": "75",
+      "author": "Holmbäck",
+      "year": "1994",
+      "journal-title": "Archives of Physical Medical and Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0038|cit38",
+      "doi-asserted-by": "crossref",
+      "first-page": "27",
+      "DOI": "10.1016/j.cjca.2011.09.020",
+      "article-title": "Effectiveness of a pedometer-based program using a socio-cognitive intervention on physical activity and quality of life in a setting of cardiac rehabilitation",
+      "volume": "28",
+      "author": "Houle",
+      "year": "2012",
+      "journal-title": "Canadian Journal of Cardiology"
+    },
+    {
+      "issue": "8152",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0039|cit39",
+      "doi-asserted-by": "crossref",
+      "first-page": "1091",
+      "DOI": "10.1016/S0140-6736(79)92502-9",
+      "article-title": "Reduction in sudden deaths by a multifactorial intervention programme after acute myocardial infarction",
+      "volume": "2",
+      "author": "Kallio",
+      "year": "1979",
+      "journal-title": "Lancet"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0040|cit40",
+      "doi-asserted-by": "crossref",
+      "first-page": "10",
+      "DOI": "10.1046/j.1444-2892.2002.00105.x",
+      "article-title": "Economic Evaluation of a Randomised Trial of Early Return to Normal Activities Versus Cardiac Rehabilitation After Acute Myocardial Infarction",
+      "volume": "11",
+      "author": "Hall",
+      "year": "2002",
+      "journal-title": "Heart, Lung and Circulation 2002"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0041|cit41",
+      "doi-asserted-by": "crossref",
+      "first-page": "952",
+      "DOI": "10.1016/j.amjcard.2005.10.040",
+      "article-title": "Return to full normal activities including work at two weeks after acute myocardial infarction",
+      "volume": "97",
+      "author": "Kovoor",
+      "year": "2006",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0042|cit42",
+      "doi-asserted-by": "crossref",
+      "first-page": "945",
+      "DOI": "10.1161/01.CIR.0000027565.12764.E1",
+      "article-title": "Exercise-induced increase in baroreflex sensitivity predicts improved prognosis after myocardial infarction",
+      "volume": "106",
+      "author": "Rovere",
+      "year": "2002",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0043|cit43",
+      "doi-asserted-by": "crossref",
+      "first-page": "612",
+      "DOI": "10.1093/oxfordjournals.eurheartj.a059948",
+      "article-title": "Comparison of a rehabilitation programme, a counselling programme and usual care after an acute myocardial infarction: Results of a long-term randomized trial. P.RE.COR. Group",
+      "volume": "12",
+      "author": "Leizorovicz",
+      "year": "1991",
+      "journal-title": "European Heart Journal"
+    },
+    {
+      "issue": "8800",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0044|cit44",
+      "doi-asserted-by": "crossref",
+      "first-page": "1036",
+      "DOI": "10.1016/0140-6736(92)90547-G",
+      "article-title": "Effects of self-help post-myocardial infarction rehabilitation on psychological adjustment and use of health services",
+      "volume": "339",
+      "author": "Lewin",
+      "year": "1992",
+      "journal-title": "Lancet"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0045|cit45",
+      "doi-asserted-by": "publisher",
+      "first-page": "701",
+      "DOI": "10.1177/2047487314535076",
+      "article-title": "A mobile phone intervention increases physical activity in people with cardiovascular disease: Results from the HEART randomized controlled trial",
+      "volume": "22",
+      "author": "Maddison",
+      "year": "2014",
+      "journal-title": "European Journal of Preventive Cardiology"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0046|cit46",
+      "first-page": "687",
+      "article-title": "Retardation of coronary atherosclerosis with yoga lifestyle intervention",
+      "volume": "48",
+      "author": "Manchanda",
+      "year": "2000",
+      "journal-title": "Journal of the Association of Physicians of India"
+    },
+    {
+      "issue": "17",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0047|cit47",
+      "doi-asserted-by": "crossref",
+      "first-page": "2201",
+      "DOI": "10.1161/01.CIR.0000066322.21016.4A",
+      "article-title": "Improved exercise tolerance and quality of life with cardiac rehabilitation of older patients after myocardial infarction: Results of a randomized, controlled trial",
+      "volume": "107",
+      "author": "Marchionni",
+      "year": "2003",
+      "journal-title": "Circulation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0048|cit48",
+      "first-page": "1181",
+      "article-title": "Cardiac rehabilitation in patients with myocardial infarction: a 10-year follow-up study",
+      "volume": "58",
+      "author": "Maroto",
+      "year": "2005",
+      "journal-title": "Revista Espanola de Cardiologia"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0049|cit49",
+      "doi-asserted-by": "crossref",
+      "first-page": "251",
+      "DOI": "10.1016/0002-9149(85)90355-8",
+      "article-title": "Medically directed at-home rehabilitation soon after clinically uncomplicated acute myocardial infarction: a new model for patient care",
+      "volume": "55",
+      "author": "DeBusk",
+      "year": "1985",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0050|cit50",
+      "doi-asserted-by": "crossref",
+      "first-page": "645",
+      "DOI": "10.1161/01.CIR.70.4.645",
+      "article-title": "Home versus group exercise training for increasing functional capacity after myocardial infarction",
+      "volume": "70",
+      "author": "Miller",
+      "year": "1984",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0051|cit51",
+      "doi-asserted-by": "crossref",
+      "first-page": "581",
+      "DOI": "10.1016/0022-3999(86)90031-0",
+      "article-title": "The effects of exercise training programs on psychosocial improvement in uncomplicated postmyocardial infarction patients",
+      "volume": "30",
+      "author": "Taylor",
+      "year": "1986",
+      "journal-title": "Journal of Psychosomatic Research"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0052|cit52",
+      "doi-asserted-by": "crossref",
+      "first-page": "331",
+      "DOI": "10.1016/0306-4603(88)90039-1",
+      "article-title": "Smoking cessation after acute myocardial infarction: The effects of exercise training",
+      "volume": "13",
+      "author": "Taylor",
+      "year": "1988",
+      "journal-title": "Addictive Behaviors"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0053|cit53",
+      "doi-asserted-by": "crossref",
+      "first-page": "850",
+      "DOI": "10.1177/1741826710397600",
+      "article-title": "High intensity interval training reduces systemic inflammation in post-PCI patients",
+      "volume": "18",
+      "author": "Munk",
+      "year": "2011",
+      "journal-title": "European Journal of Cardiovascular Prevention & Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0054|cit54",
+      "doi-asserted-by": "crossref",
+      "first-page": "734",
+      "DOI": "10.1016/j.ahj.2009.08.021",
+      "article-title": "High-intensity interval training may reduce in-stent restenosis following percutaneous coronary intervention with stent implantation",
+      "volume": "158",
+      "author": "Munk",
+      "year": "2009",
+      "journal-title": "American Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0055|cit55",
+      "first-page": "152",
+      "article-title": "Randomized controlled evaluation shows the effectiveness of a home-based cardiac rehabilitation program",
+      "volume": "33",
+      "author": "Mutwalli",
+      "year": "2012",
+      "journal-title": "Saudi Medical Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0056|cit56",
+      "doi-asserted-by": "crossref",
+      "first-page": "e001820",
+      "DOI": "10.1136/bmjopen-2012-001820",
+      "article-title": "Home-based cardiac rehabilitation is an attractive alternative to no cardiac rehabilitation for elderly patients with coronary heart disease: results from a randomised clinical trial",
+      "volume": "2",
+      "author": "Oerkild",
+      "year": "2012",
+      "journal-title": "BMJ Open"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0057|cit57",
+      "doi-asserted-by": "crossref",
+      "first-page": "154",
+      "DOI": "10.1016/0002-9149(93)90152-3",
+      "article-title": "Economic Evaluation of Cardiac Rehabilitation Soon After Acute Myocardial Infarction",
+      "volume": "72",
+      "author": "Oldridge",
+      "year": "1993",
+      "journal-title": "THe American Journal of Cardiology"
+    },
+    {
+      "issue": "13",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0058|cit58",
+      "doi-asserted-by": "crossref",
+      "first-page": "1084",
+      "DOI": "10.1016/0002-9149(91)90870-Q",
+      "article-title": "Effects on quality of life with comprehensive rehabilitation after acute myocardial infarction",
+      "volume": "67",
+      "author": "Oldridge",
+      "year": "1991",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0059|cit59",
+      "doi-asserted-by": "crossref",
+      "first-page": "900",
+      "DOI": "10.1249/00005768-199506000-00016",
+      "article-title": "Profile of mood states and cardiac rehabilitation after acute myocardial infarction",
+      "volume": "27",
+      "author": "Oldridge",
+      "year": "1995",
+      "journal-title": "Medicine and Science in Sports and Exercise"
+    },
+    {
+      "issue": "8708",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0060|cit60",
+      "doi-asserted-by": "crossref",
+      "first-page": "129",
+      "DOI": "10.1016/0140-6736(90)91656-U",
+      "article-title": "Can lifestyle changes reverse coronary heart disease? The Lifestyle Heart Trial",
+      "volume": "336",
+      "author": "Ornish",
+      "year": "1990",
+      "journal-title": "Lancet"
+    },
+    {
+      "issue": "23",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0061|cit61",
+      "doi-asserted-by": "crossref",
+      "first-page": "2001",
+      "DOI": "10.1001/jama.280.23.2001",
+      "article-title": "Intensive lifestyle changes for reversal of coronary heart disease",
+      "volume": "280",
+      "author": "Ornish",
+      "year": "1998",
+      "journal-title": "JAMA"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0062|cit62",
+      "doi-asserted-by": "crossref",
+      "first-page": "584",
+      "DOI": "10.1037/0278-6133.27.5.584",
+      "article-title": "Long-term effects of lifestyle changes on well-being and cardiac variables among coronary heart disease patients",
+      "volume": "27",
+      "author": "Pischke",
+      "year": "2008",
+      "journal-title": "Health Psychology"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0063|cit63",
+      "doi-asserted-by": "crossref",
+      "first-page": "1357-1364",
+      "DOI": "10.1177/1741826711422988",
+      "article-title": "Randomized trial of an internet-based computer-tailored expert system for physical activity in patients with heart disease",
+      "volume": "19",
+      "author": "Reid",
+      "year": "2012",
+      "journal-title": "European Journal of Preventive Cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0064|cit64",
+      "doi-asserted-by": "crossref",
+      "first-page": "223",
+      "DOI": "10.1159/000173598",
+      "article-title": "Cardiac rehabilitation after acute myocardial infarction. 9-year controlled follow-up study",
+      "volume": "70",
+      "author": "Roman",
+      "year": "1983",
+      "journal-title": "Cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0065|cit65",
+      "doi-asserted-by": "crossref",
+      "first-page": "60",
+      "DOI": "10.1080/14038190510010287",
+      "article-title": "Rehabilitation of elderly with coronary heart disease - Improvement in quality of life at a low cost",
+      "volume": "7",
+      "author": "Sandström",
+      "year": "2005",
+      "journal-title": "Advances in physiotherapy"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0066|cit66",
+      "doi-asserted-by": "crossref",
+      "first-page": "468",
+      "DOI": "10.1016/0735-1097(93)90051-2",
+      "article-title": "Various intensities of leisure time physical activity in patients with coronary artery disease: Effects on cardiorespiratory fitness and progression of coronary atherosclerotic lesions",
+      "volume": "22",
+      "author": "Hambrecht",
+      "year": "1993",
+      "journal-title": "Journal of the American College of Cardiology"
+    },
+    {
+      "issue": "11",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0067|cit67",
+      "doi-asserted-by": "crossref",
+      "first-page": "771",
+      "DOI": "10.1016/S0002-9149(99)80224-0",
+      "article-title": "Impact of intensive physical exercise and low-fat diet on collateral vessel formation in stable angina pectoris and angiographically confirmed coronary artery disease",
+      "volume": "76",
+      "author": "Niebauer",
+      "year": "1995",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0068|cit68",
+      "doi-asserted-by": "crossref",
+      "first-page": "2534",
+      "DOI": "10.1161/01.CIR.96.8.2534",
+      "article-title": "Attenuated progression of coronary artery disease after 6 years of multifactorial risk intervention: role of physical exercise",
+      "volume": "96",
+      "author": "Niebauer",
+      "year": "1997",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0069|cit69",
+      "doi-asserted-by": "crossref",
+      "first-page": "163",
+      "DOI": "10.1016/S0002-9149(96)00251-2",
+      "article-title": "Predictive value of lipid profile for salutary coronary angiographic changes in patients on a low-fat diet and physical exercise program",
+      "volume": "78",
+      "author": "Niebauer",
+      "year": "1996",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0070|cit70",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1159/000177615",
+      "article-title": "Treatment of coronary heart disease with diet and exercise: problems of compliance",
+      "volume": "35",
+      "author": "Nikolaus",
+      "year": "1991",
+      "journal-title": "Annals of Nutrition and Metabolism"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0071|cit71",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1161/01.CIR.86.1.1",
+      "article-title": "Regular physical exercise and low-fat diet. Effects on progression of coronary artery disease",
+      "volume": "86",
+      "author": "Schuler",
+      "year": "1992",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0072|cit72",
+      "doi-asserted-by": "crossref",
+      "first-page": "73",
+      "DOI": "10.1253/circj.67.73",
+      "article-title": "Effects of phase III cardiac rehabilitation programs on health-related quality of life in elderly patients with coronary artery disease: Juntendo Cardiac Rehabilitation Program (J-CARP)",
+      "volume": "67",
+      "author": "Seki",
+      "year": "2003",
+      "journal-title": "Circulation Journal"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0073|cit73",
+      "doi-asserted-by": "crossref",
+      "first-page": "1230",
+      "DOI": "10.1253/circj.72.1230",
+      "article-title": "Effects of a phase III cardiac rehabilitation program on physical status and lipid profiles in elderly patients with coronary artery disease: Juntendo Cardiac Rehabilitation Program (J-CARP)",
+      "volume": "72",
+      "author": "Seki",
+      "year": "2008",
+      "journal-title": "Circulation Journal"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0074|cit74",
+      "doi-asserted-by": "crossref",
+      "first-page": "352",
+      "DOI": "10.1159/000169916",
+      "article-title": "The National Exercise and Heart Disease Project. The pre-randomization exercise program. Report number 2",
+      "volume": "63",
+      "author": "Naughton",
+      "year": "1978",
+      "journal-title": "Cardiology"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0075|cit75",
+      "doi-asserted-by": "crossref",
+      "first-page": "39",
+      "DOI": "10.1016/0002-9149(81)90570-1",
+      "article-title": "Effects of a prescribed supervised exercise program on mortality and cardiovascular morbidity in patients after a myocardial infarction. The National Exercise and Heart Disease Project",
+      "volume": "48",
+      "author": "Shaw",
+      "year": "1981",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0076|cit76",
+      "doi-asserted-by": "crossref",
+      "first-page": "1093",
+      "DOI": "10.1001/archinte.1982.00340190049009",
+      "article-title": "The National Exercise and Heart Disease Project: Long-term psychosocial outcome",
+      "volume": "142",
+      "author": "Stern",
+      "year": "1982",
+      "journal-title": "Archives of Internal Medicine"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0077|cit77",
+      "first-page": "162",
+      "article-title": "A controlled randomized study of early cardiac rehabilitation: The sickness impact profile as an assessment tool",
+      "volume": "12",
+      "author": "Ott",
+      "year": "1983",
+      "journal-title": "Heart & Lung"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0078|cit78",
+      "doi-asserted-by": "crossref",
+      "first-page": "357",
+      "DOI": "10.1056/NEJM198108133050701",
+      "article-title": "In-hospital exercise after myocardial infarction does not improve treadmill performance",
+      "volume": "305",
+      "author": "Sivarajan",
+      "year": "1981",
+      "journal-title": "New England Journal of Medicine"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0079|cit79",
+      "doi-asserted-by": "crossref",
+      "first-page": "1420",
+      "DOI": "10.1161/01.CIR.65.7.1420",
+      "article-title": "Treadmill test responses to an early exercise program after myocardial infarction: A randomized study",
+      "volume": "65",
+      "author": "Sivarajan",
+      "year": "1982",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0080|cit80",
+      "first-page": "65",
+      "article-title": "Limited effects of outpatient teaching and counselling after myocardial infarction: A controlled study",
+      "volume": "12",
+      "author": "Sivarajan",
+      "year": "1983",
+      "journal-title": "Heart & Lung"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0081|cit81",
+      "doi-asserted-by": "crossref",
+      "first-page": "978",
+      "DOI": "10.1161/01.CIR.94.5.978",
+      "article-title": "Interaction between exercise training and ejection fraction in predicting prognosis after a first myocardial infarction",
+      "volume": "94",
+      "author": "Specchia",
+      "year": "1996",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0082|cit82",
+      "doi-asserted-by": "crossref",
+      "first-page": "13",
+      "DOI": "10.1002/pri.268",
+      "article-title": "Long term effects of exercise training on physical activity level and quality of life in elderly coronary patients - a three- to six-year follow-up",
+      "volume": "8",
+      "author": "Hage",
+      "year": "2003",
+      "journal-title": "Physiotherapy Research International"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0083|cit83",
+      "doi-asserted-by": "crossref",
+      "first-page": "111",
+      "DOI": "10.1080/003655000750045451",
+      "article-title": "Important factors for physical activity among elderly patients one year after an acute myocardial infarction",
+      "volume": "32",
+      "author": "Ståhle",
+      "year": "2000",
+      "journal-title": "Scandinavian Journal of Rehabilitation Medicine"
+    },
+    {
+      "issue": "20",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0084|cit84",
+      "doi-asserted-by": "crossref",
+      "first-page": "1475",
+      "DOI": "10.1053/euhj.1999.1581",
+      "article-title": "Improved physical fitness and quality of life following training of elderly patients after acute coronary events. A 1 year follow-up randomized controlled study",
+      "volume": "20",
+      "author": "Ståhle",
+      "year": "1999",
+      "journal-title": "European Heart Journal"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0085|cit85",
+      "doi-asserted-by": "crossref",
+      "first-page": "101",
+      "DOI": "10.1080/003655099444614",
+      "article-title": "Effects of organized aerobic group training in elderly patients discharged after an acute coronary syndrome. A randomized controlled study.",
+      "volume": "31",
+      "author": "Ståhle",
+      "year": "1999",
+      "journal-title": "Scandinavian Journal of Rehabilitation Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0086|cit86",
+      "doi-asserted-by": "crossref",
+      "first-page": "29",
+      "DOI": "10.1080/140381901300039305",
+      "article-title": "Effects of aerobic group training on exercise capacity, muscular endurance and recovery in elderly patients with recent coronary events: A randomized, controlled study",
+      "volume": "3",
+      "author": "Ståhle",
+      "year": "2001",
+      "journal-title": "Advances in Physiotherapy"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0087|cit87",
+      "doi-asserted-by": "crossref",
+      "first-page": "1719",
+      "DOI": "10.1001/archinte.1983.00350090097016",
+      "article-title": "The group counseling v exercise therapy study. A controlled intervention with subjects following myocardial infarction",
+      "volume": "143",
+      "author": "Stern",
+      "year": "1983",
+      "journal-title": "Archives of Internal Medicine"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0088|cit88",
+      "doi-asserted-by": "crossref",
+      "first-page": "177",
+      "DOI": "10.1016/S0738-3991(98)00074-3",
+      "article-title": "Behavioral and psychosocial effects of intensive lifestyle management for women with coronary heart disease",
+      "volume": "35",
+      "author": "Toobert",
+      "year": "1998",
+      "journal-title": "Patient Education and Counseling"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0089|cit89",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1007/BF02895162",
+      "article-title": "Physiologic and related behavioral outcomes from the Women's Lifestyle Heart Trial",
+      "volume": "22",
+      "author": "Toobert",
+      "year": "2000",
+      "journal-title": "Annals of Behavioral Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0090|cit90",
+      "first-page": "419",
+      "article-title": "Early functional evaluation and physical rehabilitation in patients with wide myocardial infarction",
+      "volume": "11",
+      "author": "Vecchio",
+      "year": "1981",
+      "journal-title": "Giornale Italiano di Cardiologia"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0091|cit91",
+      "doi-asserted-by": "crossref",
+      "first-page": "798",
+      "DOI": "10.1016/0002-8703(83)90243-0",
+      "article-title": "Effects of cardiac rehabilitation after myocardial infarction: changes in coronary risk factors and long-term prognosis",
+      "volume": "105",
+      "author": "Vermeulen",
+      "year": "1983",
+      "journal-title": "American Heart Journal"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0092|cit92",
+      "doi-asserted-by": "crossref",
+      "first-page": "429",
+      "DOI": "10.1097/01.hjr.0000107024.38316.6a",
+      "article-title": "Influence on lifestyle measures and five-year coronary risk by a comprehensive lifestyle intervention programme in patients with coronary heart disease",
+      "volume": "10",
+      "author": "Vestfold Heartcare Study Group",
+      "year": "2003",
+      "journal-title": "European Journal of Cardiovascular Prevention and Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0093|cit93",
+      "doi-asserted-by": "crossref",
+      "first-page": "15",
+      "DOI": "10.1016/j.hrtlng.2011.05.005",
+      "article-title": "Effects of home-based rehabilitation on health-related quality of life and psychological status in Chinese patients recovering from acute myocardial infarction",
+      "volume": "41",
+      "author": "Wang",
+      "year": "2012",
+      "journal-title": "Heart & Lung"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0094|cit94",
+      "doi-asserted-by": "crossref",
+      "first-page": "637",
+      "DOI": "10.1136/heartjnl-2011-300302",
+      "article-title": "Rehabilitation after myocardial infarction trial (RAMIT): multi-centre randomised controlled trial of comprehensive cardiac rehabilitation in patients following acute myocardial infarction",
+      "volume": "98",
+      "author": "West",
+      "year": "2012",
+      "journal-title": "Heart"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0095|cit95",
+      "unstructured": "World Health Organization Rehabilitation and comprehensive secondary prevention after acute myocardial infarction EURO Reports and Studies 84 1983"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0096|cit96",
+      "first-page": "1",
+      "article-title": "Exercise tolerance and physical training of non-selected patients after myocardial infarction",
+      "volume": "Supplementum 55",
+      "author": "Sanne",
+      "year": "1973",
+      "journal-title": "Acta Medica Scandinavica"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0097|cit97",
+      "doi-asserted-by": "crossref",
+      "first-page": "491",
+      "DOI": "10.1016/0091-7435(75)90035-3",
+      "article-title": "A controlled trial of physical training after myocardial infarction. Effects on risk factors, nonfatal reinfarction, and death",
+      "volume": "4",
+      "author": "Wilhelmsen",
+      "year": "1975",
+      "journal-title": "Preventive Medicine"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0098|cit98",
+      "doi-asserted-by": "crossref",
+      "first-page": "321",
+      "DOI": "10.1016/S0002-9149(02)03159-4",
+      "article-title": "Long-term changes in exercise capacity, quality of life, body anthropometry, and lipid profiles after a cardiac rehabilitation program in obese patients with coronary heart disease",
+      "volume": "91",
+      "author": "Yu",
+      "year": "2003",
+      "journal-title": "American Journal of Cardiology"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0099|cit99",
+      "doi-asserted-by": "crossref",
+      "first-page": "e24",
+      "DOI": "10.1016/j.ahj.2003.12.004",
+      "article-title": "Effect of a cardiac rehabilitation program on left ventricular diastolic function and its relationship to exercise capacity in patients with coronary heart disease: experience from a randomized, controlled study",
+      "volume": "147",
+      "author": "Yu",
+      "year": "2004",
+      "journal-title": "American Heart Journal"
+    },
+    {
+      "issue": "12",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0100|cit100",
+      "doi-asserted-by": "crossref",
+      "first-page": "1915",
+      "DOI": "10.1016/j.apmr.2004.05.010",
+      "article-title": "A short course of cardiac rehabilitation program is highly cost effective in improving long-term quality of life in patients with recent myocardial infarction or percutaneous coronary intervention",
+      "volume": "85",
+      "author": "Yu",
+      "year": "2004",
+      "journal-title": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0101|cit101",
+      "doi-asserted-by": "crossref",
+      "first-page": "478",
+      "DOI": "10.1017/S0266462306051403",
+      "article-title": "Comprehensive cardiac rehabilitation: A cost assessment based on a randomized clinical trial",
+      "volume": "22",
+      "author": "Kruse",
+      "year": "2006",
+      "journal-title": "International Journal of Technology Assessment in Health Care"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0102|cit102",
+      "doi-asserted-by": "crossref",
+      "first-page": "1106",
+      "DOI": "10.1016/j.ahj.2007.12.033",
+      "article-title": "Hospital-based comprehensive cardiac rehabilitation versus usual care among patients with congestive heart failure, ischemic heart disease, or high risk of ischemic heart disease: 12-month results of a randomized clinical trial",
+      "volume": "155",
+      "author": "Zwisler",
+      "year": "2008",
+      "journal-title": "American Heart Journal"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0103|cit103",
+      "doi-asserted-by": "crossref",
+      "first-page": "451",
+      "DOI": "10.1093/oxfordjournals.eurheartj.a059509",
+      "article-title": "Improvements of the lipoprotein profile after coronary bypass surgery: additional effects of an exercise training program",
+      "volume": "10",
+      "author": "Agren",
+      "year": "1989",
+      "journal-title": "European Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0104|cit104",
+      "doi-asserted-by": "crossref",
+      "first-page": "566",
+      "DOI": "10.1177/1403494810377125",
+      "article-title": "A five-year rehabilitation programme for younger women after a coronary event reduces the need for hospital care",
+      "volume": "38",
+      "author": "Andersson",
+      "year": "2010",
+      "journal-title": "Scandinavian Journal of Public Health"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0105|cit105",
+      "first-page": "33",
+      "article-title": "Exercise in outpatient complex rehabilitation and secondary prophylaxis in patients with ischemic heart disease after acute coronary events (a cooperative trial in Russia)",
+      "volume": "78",
+      "author": "Aronov",
+      "year": "2006",
+      "journal-title": "Terapevticheskii Arkhiv"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0106|cit106",
+      "doi-asserted-by": "crossref",
+      "first-page": "170",
+      "DOI": "10.1159/000339224",
+      "article-title": "Cardiac rehabilitation to improve physical functioning in refractory angina: a pilot study",
+      "volume": "122",
+      "author": "Asbury",
+      "year": "2012",
+      "journal-title": "Cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0107|cit107",
+      "doi-asserted-by": "crossref",
+      "first-page": "349",
+      "DOI": "10.1097/HJR.0b013e3283336c8d",
+      "article-title": "Physical training after percutaneous coronary intervention in patients with stable angina: effects on working capacity, metabolism, and markers of inflammation",
+      "volume": "17",
+      "author": "Astengo",
+      "year": "2010",
+      "journal-title": "European Journal of Cardiovascular Prevention & Rehabilitation"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0108|cit108",
+      "doi-asserted-by": "crossref",
+      "first-page": "913",
+      "DOI": "10.1161/01.CIR.65.5.913",
+      "article-title": "The effect of moderate physical exercise on the plasma lipoprotein subfractions of male survivors of myocardial infarction",
+      "volume": "65",
+      "author": "Ballantyne",
+      "year": "1982",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0109|cit109",
+      "doi-asserted-by": "crossref",
+      "first-page": "117",
+      "DOI": "10.1097/00008483-199203010-00007",
+      "article-title": "Cardiac rehabilitation contributes to the restoration of leisure and social activities",
+      "volume": "12",
+      "author": "Bär",
+      "year": "1992",
+      "journal-title": "Journal of Cardiopulmonary Rehabilitation"
+    },
+    {
+      "issue": "16",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0110|cit110",
+      "first-page": "3543",
+      "article-title": "Long-term benefits of cardiac rehabilitation in patients with incomplete revascularization: 5-year follow-up",
+      "volume": "116",
+      "author": "Belardinelli",
+      "year": "2007",
+      "journal-title": "Circulation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0111|cit111",
+      "doi-asserted-by": "crossref",
+      "first-page": "2598",
+      "DOI": "10.1253/circj.CJ-10-0104",
+      "article-title": "Influence of dynamic training on hemodynamic, neurohormonal responses to static exercise and on inflammatory markers in patients after coronary artery bypass grafting",
+      "volume": "74",
+      "author": "Bilinska",
+      "year": "2010",
+      "journal-title": "Circulation Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0112|cit112",
+      "doi-asserted-by": "crossref",
+      "first-page": "17",
+      "DOI": "10.5603/CJ.2013.0004",
+      "article-title": "Influence of aerobic training on neurohormonal and hemodynamic responses to head-up tilt test and on autonomic nervous activity at rest and after exercise in patients after bypass surgery",
+      "volume": "20",
+      "author": "Bilinska",
+      "year": "2013",
+      "journal-title": "Cardiology Journal"
+    },
+    {
+      "issue": "1-6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0113|cit113",
+      "doi-asserted-by": "crossref",
+      "first-page": "439",
+      "DOI": "10.1111/j.0954-6820.1972.tb04843.x",
+      "article-title": "Effects of physical training on glucose tolerance, plasma insulin and lipids and on body composition in men after myocardial infarction",
+      "volume": "192",
+      "author": "Björntorp",
+      "year": "1972",
+      "journal-title": "Acta Medica Scandinavica"
+    },
+    {
+      "issue": "19",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0114|cit114",
+      "doi-asserted-by": "crossref",
+      "first-page": "2213",
+      "DOI": "10.1001/archinte.1997.00440400063008",
+      "article-title": "Stress management and exercise training in cardiac patients with myocardial ischemia: effects on prognosis and evaluation of mechanisms",
+      "volume": "157",
+      "author": "Blumenthal",
+      "year": "1997",
+      "journal-title": "Archives of Internal Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0115|cit115",
+      "doi-asserted-by": "crossref",
+      "first-page": "620",
+      "DOI": "10.1186/1471-2458-10-620",
+      "article-title": "Study protocol: a randomised controlled trial investigating the effect of exercise training on peripheral blood gene expression in patients with stable angina",
+      "volume": "10",
+      "author": "Bourke",
+      "year": "2010",
+      "journal-title": "BMC Public Health"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0116|cit116",
+      "first-page": "23",
+      "article-title": "Программа обучения дома упражнения после острого коронарного синдрома и / или эндоваскулярнойкоронарной интервенции: эффективность и проблемы мотивации пациента. [A home exercise training program after acute coronary syndrome and/or endovascular coronary intervention: efficiency and a patient motivation problem]",
+      "volume": "86",
+      "author": "Bubnova",
+      "year": "2014",
+      "journal-title": "Terapevticheskii Arkhiv"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0117|cit117",
+      "doi-asserted-by": "crossref",
+      "first-page": "2270-6. Erratum",
+      "DOI": "10.1111/jgs.12030",
+      "article-title": "Resistance and balance training improves functional capacity in very old participants attending cardiac rehabilitation after coronary bypass surgery.",
+      "volume": "60",
+      "author": "Busch",
+      "year": "2012",
+      "journal-title": "Journal of the American Geriatrics Society"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0118|cit118",
+      "doi-asserted-by": "crossref",
+      "first-page": "105",
+      "DOI": "10.1097/HCR.0b013e31819a01ff",
+      "article-title": "Effects of a Pedometer-Based Intervention on Physical Activity Levels After Cardiac Rehabilitation: a randomized controlled trial",
+      "volume": "29",
+      "author": "Butler",
+      "year": "2009",
+      "journal-title": "Journal of Cardiopulmonary Rehabilitation and Prevention"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0119|cit119",
+      "doi-asserted-by": "crossref",
+      "first-page": "256",
+      "DOI": "10.1136/hrt.77.3.256",
+      "article-title": "Influence of coronary nursing management follow up on lifestyle after acute myocardial infarction",
+      "volume": "77",
+      "author": "Carlsson",
+      "year": "1997",
+      "journal-title": "Heart"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0120|cit120",
+      "doi-asserted-by": "crossref",
+      "first-page": "461",
+      "DOI": "10.1142/S0192415X10007981",
+      "article-title": "Effects of Tai Chi rehabilitation on heart rate responses in patients with coronary artery disease",
+      "volume": "38",
+      "author": "Chang",
+      "year": "2010",
+      "journal-title": "American Journal of Chinese Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0121|cit121",
+      "first-page": "88",
+      "article-title": "Wpływ rehabilitacji ambulatoryjnej kardiologicznej na sprawności fizycznej na pacjentów po STEMI [The influence of the outpatient cardiologic rehabilitation on the physical fitness at patients after a STEMI]",
+      "volume": "36",
+      "author": "Chatian",
+      "year": "2014",
+      "journal-title": "Polski Merkuriusz Lekarski"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0122|cit122",
+      "doi-asserted-by": "crossref",
+      "first-page": "e000606",
+      "DOI": "10.1136/bmjopen-2011-000606",
+      "article-title": "Design and rationale of the tobacco, exercise and diet messages (TEXT ME) trial of a text message-based intervention for ongoing prevention of cardiovascular disease in people with coronary disease: a randomised controlled trial protocol",
+      "volume": "2",
+      "author": "Chow",
+      "year": "2012",
+      "journal-title": "BMJ Open"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0123|cit123",
+      "first-page": "75",
+      "article-title": "Long-term beneficial effects of an expanded cardiac rehabilitation after an acute myocardial infarction or coronary artery by-pass grafting: a five year follow-up of a randomized controlled study",
+      "volume": "30",
+      "author": "Edstrom-Pluss",
+      "year": "2009",
+      "journal-title": "Eur. Heart J."
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0124|cit124",
+      "doi-asserted-by": "crossref",
+      "first-page": "53",
+      "DOI": "10.1016/S0300-8932(04)77061-X",
+      "article-title": "Postmyocardial infarction cardiac rehabilitation in low risk patients. Results with a coordinated program of cardiological and primary care",
+      "volume": "57",
+      "author": "Espinosa Caliani",
+      "year": "2004",
+      "journal-title": "Revista Espanola de Cardiologia"
+    },
+    {
+      "issue": "25",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0125|cit125",
+      "first-page": "4874",
+      "article-title": "Effect of health management on the rehabilitation of patients undergoing coronary artery bypass graft",
+      "volume": "11",
+      "author": "Gao",
+      "year": "2007",
+      "journal-title": "Journal of Clinical Rehabilitative Tissue Engineering Research"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0126|cit126",
+      "first-page": "151",
+      "article-title": "Exercise-based cardiac rehabilitation improves hemodynamic responses after coronary artery bypass graft surgery",
+      "volume": "7",
+      "author": "Ghashghaei",
+      "year": "2012",
+      "journal-title": "Arya Atherosclerosis"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0127|cit127",
+      "doi-asserted-by": "crossref",
+      "first-page": "300",
+      "DOI": "10.1016/j.ijcard.2008.05.026",
+      "article-title": "Favourable effects of exercise-based Cardiac Rehabilitation after acute myocardial infarction on left atrial remodeling",
+      "volume": "136",
+      "author": "Giallauria",
+      "year": "2009",
+      "journal-title": "International Journal of Cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0128|cit128",
+      "doi-asserted-by": "crossref",
+      "first-page": "1410",
+      "DOI": "10.1177/1741826711425427",
+      "article-title": "Effects of exercise training started within 2 weeks after acute myocardial infarction on myocardial perfusion and left ventricular function: a gated SPECT imaging study",
+      "volume": "19",
+      "author": "Giallauria",
+      "year": "2012",
+      "journal-title": "European Journal of Preventive Cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0129|cit129",
+      "doi-asserted-by": "crossref",
+      "first-page": "315",
+      "DOI": "10.1007/s00259-012-2302-x",
+      "article-title": "Exercise training early after acute myocardial infarction reduces stress-induced hypoperfusion and improves left ventricular function",
+      "volume": "40",
+      "author": "Giallauria",
+      "year": "2013",
+      "journal-title": "European Journal of Nuclear Medicine & Molecular Imaging"
+    },
+    {
+      "issue": "20",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0130|cit130",
+      "doi-asserted-by": "crossref",
+      "first-page": "2194",
+      "DOI": "10.1001/archinte.168.20.2194",
+      "article-title": "Global secondary prevention strategies to limit event recurrence after myocardial infarction: Results of the GOSPEL study, a multicenter, randomized controlled trial from the Italian Cardiac Rehabilitation Network",
+      "volume": "168",
+      "author": "Giannuzzi",
+      "year": "2008",
+      "journal-title": "Archives of Internal Medicine"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0131|cit131",
+      "doi-asserted-by": "crossref",
+      "first-page": "e3",
+      "DOI": "10.1067/mhj.2003.58a",
+      "article-title": "Home-based versus hospital-based exercise programs in patients with coronary artery disease: effects on coronary vasomotion",
+      "volume": "145",
+      "author": "Gielen",
+      "year": "2003",
+      "journal-title": "American Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0132|cit132",
+      "first-page": "1p",
+      "article-title": "Development and application of an early exercise program for open heart surgery patients [Korean]",
+      "volume": "4",
+      "author": "Ha",
+      "year": "2011",
+      "journal-title": "Journal of Korean Critical Care Nursing"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0133|cit133",
+      "doi-asserted-by": "crossref",
+      "first-page": "51",
+      "DOI": "10.4103/1995-705X.86013",
+      "article-title": "Effect of exercise-based cardiac rehabilitation on ejection fraction in coronary artery disease patients: a randomized controlled trial",
+      "volume": "12",
+      "author": "Haddadzadeh",
+      "year": "2011",
+      "journal-title": "Heart Views"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0134|cit134",
+      "doi-asserted-by": "crossref",
+      "first-page": "639",
+      "DOI": "10.2143/AC.64.5.2042694",
+      "article-title": "Reduction of cardiovascular event rate: different effects of cardiac rehabilitation in CABG and PCI patients",
+      "volume": "64",
+      "author": "Hansen",
+      "year": "2009",
+      "journal-title": "Acta Cardiologica"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0135|cit135",
+      "doi-asserted-by": "crossref",
+      "first-page": "319",
+      "DOI": "10.1177/0269215509353262",
+      "article-title": "Long-term effect of rehabilitation in coronary artery disease patients: randomized clinical trial of the impact of exercise volume",
+      "volume": "24",
+      "author": "Hansen",
+      "year": "2010",
+      "journal-title": "Clinical Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0136|cit136",
+      "doi-asserted-by": "crossref",
+      "first-page": "1334",
+      "DOI": "10.1111/j.1365-2702.2008.02654.x",
+      "article-title": "Does a telephone follow-up intervention for patients discharged with acute myocardial infarction have long-term effects on health-related quality of life? A randomised controlled trial",
+      "volume": "18",
+      "author": "Hanssen",
+      "year": "2009",
+      "journal-title": "Journal of Clinical Nursing"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0137|cit137",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Hawkes AL Atherton J Taylor CB Scuffham P Eadie K Miller NH Randomised controlled trial of a secondary prevention program for myocardial infarction patients ('ProActive Heart'): study protocol. Secondary prevention program for myocardial infarction patients BMC Cardiovascular Disorders 2009 16",
+      "DOI": "10.1186/1471-2261-9-16"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0138|cit138",
+      "doi-asserted-by": "crossref",
+      "first-page": "59",
+      "DOI": "10.1080/14017430050142413",
+      "article-title": "Randomised training after myocardial infarction: Short and long-term effects of exercise training after myocardial infarction in patients on beta-blocker treatment. A randomized, controlled study",
+      "volume": "34",
+      "author": "Heldal",
+      "year": "2000",
+      "journal-title": "Scandinavian Cardiovascular Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0139|cit139",
+      "doi-asserted-by": "crossref",
+      "first-page": "e237",
+      "DOI": "10.1016/j.pec.2011.03.018",
+      "article-title": "Innovative program to increase physical activity following an acute coronary syndrome: randomized controlled trial",
+      "volume": "85",
+      "author": "Houle",
+      "year": "2011",
+      "journal-title": "Patient Education & Counseling"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0140|cit140",
+      "doi-asserted-by": "crossref",
+      "first-page": "19",
+      "DOI": "10.1016/j.acvd.2009.09.005",
+      "article-title": "Functional decline in elderly patients presenting with acute coronary syndromes: impact on midterm outcome",
+      "volume": "103",
+      "author": "Huerre",
+      "year": "2010",
+      "journal-title": "Archives of cardiovascular diseases"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0141|cit141",
+      "doi-asserted-by": "crossref",
+      "first-page": "1886",
+      "DOI": "10.1111/j.1365-2702.2007.01838.x",
+      "article-title": "A nurse-led cardiac rehabilitation programme improves health behaviours and cardiac physiological risk parameters: evidence from Chengdu, China",
+      "volume": "16",
+      "author": "Jiang",
+      "year": "2007",
+      "journal-title": "Journal of Clinical Nursing"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0142|cit142",
+      "first-page": "6",
+      "article-title": "Rehabilitative and prophylactic measures including physical training for the correction of risk factors in patients presenting with ischemic heart disease following percutaneous coronary interventions",
+      "volume": "6",
+      "author": "Karpova",
+      "year": "2009",
+      "journal-title": "Voprosy Kurortologii, Fizioterapii i Lechebnoi Fizicheskoi Kultury"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0143|cit143",
+      "first-page": "62",
+      "article-title": "Exercise versus hypnotherapy in coronary rehabilitation",
+      "volume": "19",
+      "author": "Kavanagh",
+      "year": "1973",
+      "journal-title": "Canadian Family Physician"
+    },
+    {
+      "issue": "Suppl 9",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0144|cit144",
+      "first-page": "1",
+      "article-title": "Physical fitness and feasibility of physical rehabilitation after myocardial infarction in men of working age",
+      "volume": "4",
+      "author": "Kentala",
+      "year": "1972",
+      "journal-title": "Annals of Clinical Research"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0145|cit145",
+      "doi-asserted-by": "crossref",
+      "first-page": "375",
+      "DOI": "10.5535/arm.2011.35.3.375",
+      "article-title": "Prognostic influences of cardiac rehabilitation in Korean acute myocardial infarction patients",
+      "volume": "35",
+      "author": "Kim",
+      "year": "2011",
+      "journal-title": "Annals of Rehabilitation Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0146|cit146",
+      "doi-asserted-by": "crossref",
+      "first-page": "254",
+      "DOI": "10.5535/arm.2012.36.2.254",
+      "article-title": "Impact of Exercise-based Cardiac Rehabilitation on In-stent Restenosis with Different Generations of Drug Eluting Stent",
+      "volume": "36",
+      "author": "Kim",
+      "year": "2012",
+      "journal-title": "Annals of Rehabilitation Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0147|cit147",
+      "doi-asserted-by": "crossref",
+      "first-page": "924",
+      "DOI": "10.5603/KP.2013.0227",
+      "article-title": "Effects of six-week cardiac rehabilitation and exercise on adiponectin in patients with acute coronary syndrome",
+      "volume": "71",
+      "author": "Kim",
+      "year": "2013",
+      "journal-title": "Kardiologia Polska"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0148|cit148",
+      "doi-asserted-by": "crossref",
+      "first-page": "175",
+      "DOI": "10.1007/BF02784438",
+      "article-title": "Trace elements in coronary heart disease",
+      "volume": "60",
+      "author": "Krachler",
+      "year": "1997",
+      "journal-title": "Biological Trace Element Research"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0149|cit149",
+      "first-page": "166",
+      "article-title": "The impact of complex cardiac rehabilitation on manifestation of risk factors in patients with coronary heart disease",
+      "volume": "48",
+      "author": "Kubilius",
+      "year": "2012",
+      "journal-title": "Medicina (Kaunas, Lithuania)"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0150|cit150",
+      "doi-asserted-by": "crossref",
+      "first-page": "2617",
+      "DOI": "10.1016/j.ijcard.2012.06.122",
+      "article-title": "Regular exercise training reduces coronary restenosis after percutaneous coronary intervention in patients with acute myocardial infarction",
+      "volume": "167",
+      "author": "Lee",
+      "year": "2013",
+      "journal-title": "International Journal of Cardiology"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0151|cit151",
+      "first-page": "1601",
+      "article-title": "Effect of exercise therapy on the quality of life in patients after successful percutaneous transluminal coronary angioplasty",
+      "volume": "8",
+      "author": "Li",
+      "year": "2004",
+      "journal-title": "Chinese Journal of Clinical Rehabilitation"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0152|cit152",
+      "first-page": "153",
+      "article-title": "Effects of early rehabilitation programme on heart rate variability and quality of life in patients with uncomplicated acute myocardial infarction",
+      "volume": "18",
+      "author": "Liao",
+      "year": "2003",
+      "journal-title": "Journal of Rehabilitation Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0153|cit153",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Lie I Arnesen H Sandvik L Hamilton G Bunch EH Health-related quality of life after coronary artery bypass grafting. The impact of a randomised controlled home-based intervention program Quality of Life Research 2009 201 7",
+      "DOI": "10.1007/s11136-008-9438-y"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0154|cit154",
+      "doi-asserted-by": "crossref",
+      "first-page": "217",
+      "DOI": "10.1177/0269215510380825",
+      "article-title": "Effects of long-term exercise training on cardiac baroreflex sensitivity in patients with coronary artery disease: a randomized controlled trial",
+      "volume": "25",
+      "author": "Mameletzi",
+      "year": "2011",
+      "journal-title": "Clinical Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0155|cit155",
+      "doi-asserted-by": "crossref",
+      "first-page": "7",
+      "DOI": "10.1155/2013/903604",
+      "article-title": "Effects of Community-Based Cardiac Rehabilitation on Body Composition and Physical Function in Individuals with Stable Coronary Artery Disease: 1.6-Year Follow-up",
+      "volume": "2013",
+      "author": "Mandic",
+      "year": "2013",
+      "journal-title": "Biomed Research International"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0156|cit156",
+      "doi-asserted-by": "crossref",
+      "first-page": "1049",
+      "DOI": "10.1161/HYPERTENSIONAHA.111.176644",
+      "article-title": "Effects of long-term exercise training on autonomic control in myocardial infarction patients",
+      "volume": "58",
+      "author": "Martinez",
+      "year": "2011",
+      "journal-title": "Hypertension"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0157|cit157",
+      "doi-asserted-by": "crossref",
+      "first-page": "145",
+      "DOI": "10.1177/2047487312465526",
+      "article-title": "Efficacy of a long-term secondary prevention programme following inpatient cardiovascular rehabilitation on risk and health-related quality of life in a low-education cohort: A randomized controlled study",
+      "volume": "21",
+      "author": "Mayer-Berger",
+      "year": "2014",
+      "journal-title": "European Journal of Preventive Cardiology"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0158|cit158",
+      "doi-asserted-by": "crossref",
+      "first-page": "353",
+      "DOI": "10.1556/oh.2008.28184",
+      "article-title": "Outpatient cardiac rehabilitation: initial experience in the first Hungarian multicenter study",
+      "volume": "149",
+      "author": "Mezey",
+      "year": "2008",
+      "journal-title": "Orvosi Hetilap"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0159|cit159",
+      "unstructured": "Mehani SHM Autonomic adaptation and functional capacity outcomes after hospital-based cardiac rehabilitation post coronary artery by pass graft Indian Journal of Physiotherapy and Occupational Therapy 2012 263"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0160|cit160",
+      "doi-asserted-by": "crossref",
+      "first-page": "33",
+      "DOI": "10.1177/0269215511405229",
+      "article-title": "Aerobic interval training increases peak oxygen uptake more than usual care exercise training in myocardial infarction patients: a randomized controlled study",
+      "volume": "26",
+      "author": "Moholdt",
+      "year": "2012",
+      "journal-title": "Clinical Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0161|cit161",
+      "doi-asserted-by": "crossref",
+      "first-page": "e41199",
+      "DOI": "10.1371/journal.pone.0041199",
+      "article-title": "Home-based aerobic interval training improves peak oxygen uptake equal to residential cardiac rehabilitation: a randomized, controlled trial",
+      "volume": "7",
+      "author": "Moholdt",
+      "year": "2012",
+      "journal-title": "PLoS ONE [Electronic Resource]"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0162|cit162",
+      "doi-asserted-by": "crossref",
+      "first-page": "581",
+      "DOI": "10.1007/s11739-011-0654-z",
+      "article-title": "Effects of a structured physical activity intervention on measures of physical performance in frail elderly patients after cardiac rehabilitation: a pilot study with 1-year follow-up",
+      "volume": "8",
+      "author": "Molino-Lova",
+      "year": "2013",
+      "journal-title": "Internal and Emergency Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0163|cit163",
+      "doi-asserted-by": "crossref",
+      "first-page": "745-53 Erratum",
+      "DOI": "10.1136/jech-2011-200689",
+      "article-title": "An evaluation of the effectiveness and cost effectiveness of the National Exercise Referral Scheme in Wales, UK: a randomised controlled trial of a public health policy initiative.",
+      "volume": "66",
+      "author": "Murphy",
+      "year": "2012",
+      "journal-title": "Journal of Epidemiology & Community Health"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0164|cit164",
+      "doi-asserted-by": "crossref",
+      "first-page": "177",
+      "DOI": "10.1186/CVM-1-3-177",
+      "article-title": "Design of a randomized controlled trial of comprehensive rehabilitation in patients with myocardial infarction, stabilized acute coronary syndrome, percutaneous transluminal coronary angioplasty or coronary artery bypass grafting: Akershus Comprehensive Cardiac Rehabilitation Trial (the CORE Study)",
+      "volume": "1",
+      "author": "Pater",
+      "year": "2000",
+      "journal-title": "Current Controlled Trials in Cardiovascular Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0165|cit165",
+      "doi-asserted-by": "crossref",
+      "first-page": "106",
+      "DOI": "10.1186/1471-2261-13-106",
+      "article-title": "Copenhagen study of overweight patients with coronary artery disease undergoing low energy diet or interval training: the randomized CUT-IT trial protocol",
+      "volume": "13",
+      "author": "Pedersen",
+      "year": "2013",
+      "journal-title": "BMC Cardiovascular Disorders"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0166|cit166",
+      "doi-asserted-by": "crossref",
+      "first-page": "476",
+      "DOI": "10.1097/HJR.0b013e328167239d",
+      "article-title": "High, but not moderate frequency and duration of exercise training induces downregulation of the expression of inflammatory and atherogenic adhesion molecules",
+      "volume": "14",
+      "author": "Peschel",
+      "year": "2007",
+      "journal-title": "European Journal of Cardiovascular Prevention and Rehabilitation"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0167|cit167",
+      "first-page": "309",
+      "article-title": "The impact of comprehensive cardiac rehabilitation in young patients after acute myocardial infarction treated with primary coronary intervention on the clinical outcome and leading again a \"normal\" life",
+      "volume": "111",
+      "author": "Piestrzeniewicz",
+      "year": "2004",
+      "journal-title": "Polskie Archiwum Medycyny Wewnetrznej"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0168|cit168",
+      "doi-asserted-by": "crossref",
+      "first-page": "79",
+      "DOI": "10.1177/0269215510376006",
+      "article-title": "Long-term effects of an expanded cardiac rehabilitation programme after myocardial infarction or coronary artery bypass surgery: a five-year follow-up of a randomized controlled study",
+      "volume": "25",
+      "author": "Pluss",
+      "year": "2011",
+      "journal-title": "Clinical Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0169|cit169",
+      "first-page": "407",
+      "article-title": "General health improves with home-based cardiac rehabilitation program",
+      "volume": "32",
+      "author": "Poortaghi",
+      "year": "2011",
+      "journal-title": "Saudi Medical Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0170|cit170",
+      "doi-asserted-by": "crossref",
+      "first-page": "287",
+      "DOI": "10.1186/1756-0500-6-287",
+      "article-title": "The effect of home-based cardiac rehabilitation program on self efficacy of patients referred to cardiac rehabilitation center",
+      "volume": "6",
+      "author": "Poortaghi",
+      "year": "2013",
+      "journal-title": "BMC Research Notes"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0171|cit171",
+      "doi-asserted-by": "crossref",
+      "first-page": "135",
+      "DOI": "10.1016/j.repc.2011.12.009",
+      "article-title": "Exercise training enhances autonomic function after acute myocardial infarction: a randomized controlled study",
+      "volume": "31",
+      "author": "Ribeiro",
+      "year": "2012",
+      "journal-title": "Revista Portuguesa de Cardiologia"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0172|cit172",
+      "doi-asserted-by": "crossref",
+      "first-page": "642",
+      "DOI": "10.1177/0269215511429161",
+      "article-title": "Patient mortality in the 12 years following enrolment into a pre-surgical cardiac rehabilitation programme",
+      "volume": "26",
+      "author": "Rideout",
+      "year": "2012",
+      "journal-title": "Clinical Rehabilitation"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0173|cit173",
+      "doi-asserted-by": "crossref",
+      "first-page": "61",
+      "DOI": "10.1007/BF00845347",
+      "article-title": "Influence of a cardiac rehabilitation program on the cardiovascular, psychological, and social functioning of cardiac patients",
+      "volume": "7",
+      "author": "Roviaro",
+      "year": "1984",
+      "journal-title": "Journal of Behavioral Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0174|cit174",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sadeghi M Garakyaraghi M Khosravi M Taghavi M Sarrafzadegan N Roohafza H The impacts of cardiac rehabilitation program on echocardiographic parameters in coronary artery disease patients with left ventricular dysfunction Cardiology Research and Practice 2013",
+      "DOI": "10.1155/2013/201713"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0175|cit175",
+      "unstructured": "Sagar N Bangi NA Moiz JA Effect of supervised versus home based phase II cardiac rehabilitation program on exercise capacity and quality of life in post CABG patients Indian Journal of Physiotherapy and Occupational Therapy - An International Journal 2012 59 64"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0176|cit176",
+      "doi-asserted-by": "crossref",
+      "first-page": "238",
+      "DOI": "10.1536/ihj.51.238",
+      "article-title": "Effect of Tai Chi training on baroreflex sensitivity and heart rate variability in patients with coronary heart disease",
+      "volume": "51",
+      "author": "Sato",
+      "year": "2010",
+      "journal-title": "International Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0177|cit177",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sawatzky JA Kehler DS Ready AE Lerner N Boreskie S Lamont D Prehabilitation program for elective coronary artery bypass graft surgery patients: a pilot randomized controlled study Clinical Rehabilitation 2014 648 57",
+      "DOI": "10.1177/0269215513516475"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0178|cit178",
+      "first-page": "356",
+      "article-title": "Physical performance is associated with markers of vascular inflammation in patients with coronary heart disease",
+      "volume": "13",
+      "author": "Schumacher",
+      "year": "2006",
+      "journal-title": "European Journal of Cardiovascular Prevention and Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0179|cit179",
+      "doi-asserted-by": "crossref",
+      "first-page": "581",
+      "DOI": "10.1177/1741826710389392",
+      "article-title": "In-patient cardiac rehabilitation versus medical care - a prospective multicentre controlled 12 months follow-up in patients with coronary heart disease",
+      "volume": "18",
+      "author": "Schwaab",
+      "year": "2011",
+      "journal-title": "European Journal of Cardiovascular Prevention & Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0180|cit180",
+      "first-page": "247",
+      "article-title": "Effect of cardiac rehabilitation program on exercise capacity in women undergoing coronary artery bypass graft in Hamadan-Iran",
+      "volume": "1",
+      "author": "Shabani",
+      "year": "2010",
+      "journal-title": "International Journal of Preventive Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0181|cit181",
+      "first-page": "9",
+      "article-title": "Clinical and cost effectiveness of rehabilitation programs including physical exercises for patients with ischemic heart disease under conditions of resort and outpatient clinics",
+      "volume": "6",
+      "author": "Shikhova",
+      "year": "2010",
+      "journal-title": "Voprosy Kurortologii, Fizioterapii i Lechebnoi Fizicheskoi Kultury"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0182|cit182",
+      "doi-asserted-by": "crossref",
+      "first-page": "21",
+      "DOI": "10.1186/1758-5996-5-21",
+      "article-title": "Cardiometabolic risk reduction through lifestyle intervention programs in the Brazilian public health system",
+      "volume": "5",
+      "author": "Siqueira-Catania",
+      "year": "2013",
+      "journal-title": "Diabetology & metabolic syndrome"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0183|cit183",
+      "first-page": "54",
+      "article-title": "Evaluation of the effect of cardiac rehabilitation on left ventricular diastolic and systolic function and cardiac chamber size in patients undergoing percutaneous coronary intervention",
+      "volume": "9",
+      "author": "Soleimannejad",
+      "year": "2014",
+      "journal-title": "Journal of Tehran University Heart Center"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0184|cit184",
+      "doi-asserted-by": "crossref",
+      "first-page": "101",
+      "DOI": "10.1080/003655099444614",
+      "article-title": "Effects of organized aerobic group training in elderly patients discharged after an acute coronary syndrome. A randomized controlled study",
+      "volume": "31",
+      "author": "Stahle",
+      "year": "1999",
+      "journal-title": "Scandinavian Journal of Rehabilitation Medicine"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0185|cit185",
+      "doi-asserted-by": "crossref",
+      "first-page": "5",
+      "DOI": "10.1177/204748730501200102",
+      "article-title": "Cardiac rehabilitation for the elderly: Qi Gong and group discussions",
+      "volume": "12",
+      "author": "Stenlund",
+      "year": "2005",
+      "journal-title": "European Journal of Cardiovascular Prevention and Rehabilitation"
+    },
+    {
+      "issue": "11",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0186|cit186",
+      "doi-asserted-by": "crossref",
+      "first-page": "809",
+      "DOI": "10.1253/jcj.64.809",
+      "article-title": "Effects of physical training on the recovery of the autonomic nervous activity during exercise after coronary artery bypass grafting: effects of physical training after CABG",
+      "volume": "64",
+      "author": "Takeyama",
+      "year": "2000",
+      "journal-title": "Japanese Circulation Journal"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0187|cit187",
+      "doi-asserted-by": "crossref",
+      "first-page": "193",
+      "DOI": "10.1097/00008483-200305000-00006",
+      "article-title": "Training and detaining effects of a combined-strength and aerobic exercise program on blood lipids in patients with coronary artery disease",
+      "volume": "23",
+      "author": "Tokmakidis",
+      "year": "2003",
+      "journal-title": "Journal of Cardiopulmonary Rehabilitation"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0188|cit188",
+      "doi-asserted-by": "crossref",
+      "first-page": "375",
+      "DOI": "10.1097/00149831-200606000-00013",
+      "article-title": "Physiological alterations to detraining following prolonged combined strength and aerobic training in cardiac patients",
+      "volume": "13",
+      "author": "Volaklis",
+      "year": "2006",
+      "journal-title": "European Journal of Cardiovascular Prevention and Rehabilitation"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0189|cit189",
+      "doi-asserted-by": "crossref",
+      "first-page": "33",
+      "DOI": "10.1186/1471-2261-13-33",
+      "article-title": "Cost-effectiveness of a coronary heart disease secondary prevention program in patients with myocardial infarction: Results from a randomised controlled trial (ProActive Heart)",
+      "volume": "13",
+      "author": "Turkstra",
+      "year": "2013",
+      "journal-title": "BMC Cardiovascular Disorders"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0190|cit190",
+      "first-page": "167",
+      "article-title": "Impact of different exercise training modalities on the coronary collateral circulation and plaque composition in patients with significant coronary artery disease (EXCITE trial): study protocol for a randomized controlled trial",
+      "volume": "13",
+      "author": "Uhlemann",
+      "year": "2012",
+      "journal-title": "Trials [Electronic Resource]"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0191|cit191",
+      "doi-asserted-by": "crossref",
+      "first-page": "8",
+      "DOI": "10.1186/1471-2261-10-5",
+      "article-title": "A mobile phone-based care model for outpatient cardiac rehabilitation: the care assessment platform (CAP)",
+      "volume": "10",
+      "author": "Walters",
+      "year": "2010",
+      "journal-title": "Bmc Cardiovascular Disorders"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0192|cit192",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Wood DA Kotseva K Connolly S Jennings C Mead A Jones J Nurse-coordinated multidisciplinary, family-based cardiovascular disease prevention programme (EUROACTION) for patients with coronary heart disease and asymptomatic individuals at high risk of cardiovascular disease: a paired, cluster-randomised controlled trial The Lancet 2008 1999 2012",
+      "DOI": "10.1016/S0140-6736(08)60868-5"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0193|cit193",
+      "doi-asserted-by": "crossref",
+      "first-page": "854",
+      "DOI": "10.1093/oxfordjournals.eurheartj.a014966",
+      "article-title": "A comparison of the effects of strength and aerobic exercise training on exercise capacity and lipids after coronary artery bypass surgery",
+      "volume": "17",
+      "author": "Wosornu",
+      "year": "1996",
+      "journal-title": "European Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0194|cit194",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Yonezawa R Masuda T Matsunaga A Takahashi Y Saitoh M Ishii A Effects of phase II cardiac rehabilitation on job stress and health-related quality of life after return to work in middle-aged patients with acute myocardial infarction International Heart Journal 2009 279 90",
+      "DOI": "10.1536/ihj.50.279"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0195|cit195",
+      "doi-asserted-by": "crossref",
+      "first-page": "776",
+      "DOI": "10.2340/16501977-0254",
+      "article-title": "Effects of 6 months exercise training on ventricular remodelling and autonomic tone in patients with acute myocardial infarction and percutaneous coronary intervention",
+      "volume": "40",
+      "author": "Zheng",
+      "year": "2008",
+      "journal-title": "Journal of Rehabilitation Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0196|cit196",
+      "doi-asserted-by": "crossref",
+      "first-page": "S6",
+      "DOI": "10.1016/S0167-5273(13)70541-2",
+      "article-title": "The effect of a TTM-based exercise stage-matched intervention on angina in patients with coronary heart disease: A randomized controlled trial",
+      "volume": "1)",
+      "author": "Zhu",
+      "year": "2013",
+      "journal-title": "International Journal of Cardiology"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0197|cit197",
+      "doi-asserted-by": "crossref",
+      "first-page": "e186",
+      "DOI": "10.2196/jmir.3340",
+      "article-title": "A Web-Based Program Improves Physical Activity Outcomes ina Primary Care Angina Population: Randomized Controlled Trial",
+      "volume": "16",
+      "author": "Devi",
+      "year": "2014",
+      "journal-title": "J Med Internet Res"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0198|cit198",
+      "doi-asserted-by": "crossref",
+      "first-page": "e307+e309",
+      "DOI": "10.1016/j.rehab.2012.07.779",
+      "article-title": "The effects of cardiovascular rehabilitation after coronary stenting",
+      "volume": "55",
+      "author": "Ghroubi",
+      "year": "2012",
+      "journal-title": "Annals of Physical and Rehabilitation Medicine"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0199|cit199",
+      "doi-asserted-by": "crossref",
+      "first-page": "217",
+      "DOI": "10.4040/jkan.2008.38.2.217",
+      "article-title": "The development and effects of an integrated symptom management program for prevention of recurrent cardiac events after percutaneous coronary intervention",
+      "volume": "38",
+      "author": "Son",
+      "year": "2008",
+      "journal-title": "Journal of Korean Academy of Nursing"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0200|cit200",
+      "first-page": "226",
+      "article-title": "Exercise training vs. PCI/stenting in stable coronary artery disease: Long term effects on antiatherosclerotic mediators",
+      "volume": "32",
+      "author": "Roeder",
+      "year": "2011",
+      "journal-title": "European Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0201|cit201",
+      "unstructured": "Walther C Fiess A Preoperative exercise training is associated with less peri- and postoperative adverse events but similar long term outcome in patients with stable coronary artery disease European Journal of Cardiovascular Prevention and Rehabilitation 2010 S59"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0202|cit202",
+      "doi-asserted-by": "crossref",
+      "first-page": "1489",
+      "DOI": "10.1016/j.ijnurstu.2012.07.004",
+      "article-title": "Behavioural intervention to increase physical activity among patients with coronary heart disease: protocol for a randomised controlled trial",
+      "volume": "49",
+      "author": "Alsaleh",
+      "year": "2012",
+      "journal-title": "International Journal of Nursing Studies"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0203|cit203",
+      "unstructured": "CTRI/2012/02/002408 A study on effectiveness of YOGA based cardiac rehabilitation programme in India and United Kingdom http://apps.who.int/trialsearch/Trial2.aspx?TrialID=CTRI/2012/02/002408 (accessed 6 March 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0204|cit204",
+      "unstructured": "IRCT2014061418075N2 The Effect of a Cardiac Rehabilitation Program on Quality of Life in Acute Coronary Syndrome ‎Patients http://apps.who.int/trialsearch/Trial2.aspx?TrialID=IRCT2014061418075N2 (accessed 6 March 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0205|cit205",
+      "unstructured": "JPRN-UMIN000005177 Japanese prospective multicenter study on outpatient cardiac rehabilitation after the percutaneous coronary intervention http://apps.who.int/trialsearch/Trial2.aspx?TrialID=JPRN-UMIN000005177 (accessed 6 March 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0206|cit206",
+      "unstructured": "JPRN-UMIN000010031 Impact of comprehensive cardiac rehabilitation program on stabilization of coronary plaque after acute coronary syndrome http://apps.who.int/trialsearch/Trial2.aspx?TrialID=JPRN-UMIN000010031 (acessed 6 March 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0207|cit207",
+      "unstructured": "NCT00725088 Study of Rehabilitation Therapy on Patients After Acute Myocardial Infarction clinicaltrial.gov/NCT00725088 (accessed 6 March 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0208|cit208",
+      "unstructured": "NCT01916525 Effectiveness of Exercise Cardiac Rehabilitation (EFEX-CARE) clinicaltrials.gov/NCT01916525 (accessed 6 March 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0209|cit209",
+      "unstructured": "NCT01941355 Trial of Rehabilitation in Phase 1 After Coronary Artery Bypass Grafting (SheppHeart) clinicaltrials.gov/NCT01941355"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0210|cit210",
+      "unstructured": "NCT02025257 Effects of Exercise in Patients With Coronary Artery Disease Aged 80 Years or Older clinicaltrials.gov/NCT02025257 (accessed 6 March 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0211|cit211",
+      "unstructured": "NCT02219815 Pre-operative Rehabilitation for Reduction of Hospitalization After Coronary Bypass and Valvular Surgery clinicaltrials.gov/NCT02219815 (accessed 6 March 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0212|cit212",
+      "unstructured": "NCT02235753 High-intensity Exercise After Acute Cardiac Event (HITCARE) clinicaltrials.gov/NCT02235753 (accessed 6 March 2015)"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0213|cit213",
+      "doi-asserted-by": "crossref",
+      "first-page": "32",
+      "DOI": "10.1186/1471-2261-13-32",
+      "article-title": "Randomized clinical trial to evaluate the effect of a supervised exercise training program on readmissions in patients with myocardial ischemia: A study protocol",
+      "volume": "13",
+      "author": "Santaularia",
+      "year": "2013",
+      "journal-title": "BMC Cardiovascular Disorders"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0214|cit214",
+      "unstructured": "British Association for Cardiovascular Prevention and Rehabilitation The BACPR standards and core components for cardiovascular disease prevention and rehabilitation,2nd edition http://www.bacpr.com/resources/46C_BACPR_Standards_and_Core_Components_2012.pdf"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0215|cit215",
+      "doi-asserted-by": "crossref",
+      "first-page": "2951-2960",
+      "DOI": "10.1161/CIR.0b013e31823b21e2",
+      "article-title": "Referral, enrollment, and delivery of cardiac rehabilitation/secondary prevention programs at clinical centers and beyond: a presidential advisory from the American Heart Association",
+      "volume": "124",
+      "author": "Balady",
+      "year": "2011",
+      "journal-title": "Circulation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0216|cit216",
+      "doi-asserted-by": "crossref",
+      "first-page": "401-6",
+      "DOI": "10.1016/j.jclinepi.2010.07.015",
+      "article-title": "GRADE guidelines: 3. Rating the quality of evidence",
+      "volume": "64",
+      "author": "Balshem",
+      "year": "2011",
+      "journal-title": "Journal of Clinical Epidemiology"
+    },
+    {
+      "issue": "iii-iv,ix-x",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0217|cit217",
+      "first-page": "1",
+      "article-title": "Provision, uptake and cost of cardiac rehabilitation programmes: improving services to under-represented groups",
+      "volume": "8",
+      "author": "Beswick",
+      "year": "2004",
+      "journal-title": "Health Technology Assessment"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0218|cit218",
+      "doi-asserted-by": "crossref",
+      "first-page": "386",
+      "DOI": "10.1097/HCR.0b013e31818c3b44",
+      "article-title": "Outpatient cardiac rehabilitation attendance in England: variability by region and clinical characteristics",
+      "volume": "28",
+      "author": "Bethell",
+      "year": "2008",
+      "journal-title": "Journal of Cardiopulmonary Rehabilitation and Prevention"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0219|cit219",
+      "volume-title": "Braunwald's heart disease: a textbook of cardiovascular medicine",
+      "author": "Bonow",
+      "year": "2011"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0220|cit220",
+      "doi-asserted-by": "crossref",
+      "first-page": "659-672",
+      "DOI": "10.7326/0003-4819-143-9-200511010-00010",
+      "article-title": "Meta-analysis:secondary prevention programs for patients with coronary artery disease",
+      "volume": "143",
+      "author": "Clark",
+      "year": "2005",
+      "journal-title": "Annals of Internal Medicine"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0221|cit221",
+      "doi-asserted-by": "crossref",
+      "first-page": "835",
+      "DOI": "10.1016/j.ahj.2012.08.020",
+      "article-title": "A qualitative systematic review of influences on attendance at cardiac rehabilitation programs after referral",
+      "volume": "164",
+      "author": "Clark",
+      "year": "2012",
+      "journal-title": "American Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0222|cit222",
+      "doi-asserted-by": "crossref",
+      "first-page": "436-42",
+      "DOI": "10.1161/01.CIR.53.3.436",
+      "article-title": "Heart rate and arterial blood pressure during exercise in patients with angina pectoris: effects of exercise training and of nitroglycerin",
+      "volume": "53",
+      "author": "Clausen",
+      "year": "1976",
+      "journal-title": "Circulation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0223|cit223",
+      "unstructured": "Deeks JJ Higgins JPT Altman DG (editors) Chapter 9: Analysing data and undertaking meta-analyses. In: Higgins JPT, Green S (editors). Cochrane Handbook for Systematic Reviews of Interventions Version 5.1.0 (updated March 2011). The Cochrane Collaboration, 2011 Available from www.cochrane-handbook.org"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0224|cit224",
+      "doi-asserted-by": "crossref",
+      "first-page": "629",
+      "DOI": "10.1136/bmj.315.7109.629",
+      "article-title": "Bias in meta-analysis detected by a simple graphical test",
+      "volume": "315",
+      "author": "Egger",
+      "year": "1997",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0225|cit225",
+      "unstructured": "GRADEpro GTD: GRADEpro Guideline Development Tool [software]. McMaster University, 2015 (developed by Evidence Prime, Inc) Available from www.gradepro.org"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0226|cit226",
+      "doi-asserted-by": "crossref",
+      "first-page": "454-60",
+      "DOI": "10.1056/NEJM200002173420702",
+      "article-title": "Effect of exercise on coronary endothelial function in patients with coronary artery disease",
+      "volume": "342",
+      "author": "Hambrecht",
+      "year": "2000",
+      "journal-title": "New England Journal of Medicine"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0227|cit227",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD003823.pub2",
+      "article-title": "Blood pressure lowering efficacy of angiotensin converting enzyme (ACE) inhibitors for primary hypertension",
+      "author": "Heran",
+      "year": "2008",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0228|cit228",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD003822.pub2",
+      "article-title": "Blood pressure lowering efficacy of angiotensin receptor blockers for primary hypertension",
+      "author": "Heran",
+      "year": "2008",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "7414",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0229|cit229",
+      "doi-asserted-by": "crossref",
+      "first-page": "557",
+      "DOI": "10.1136/bmj.327.7414.557",
+      "article-title": "Measuring inconsistency in meta-analyses",
+      "volume": "327",
+      "author": "Higgins",
+      "year": "2003",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0230|cit230",
+      "unstructured": "Higgins JPT Altman DG Sterne JAC (editors) Chapter 8: Assessing risk of bias in included studies. In: Higgins JPT, Green S (editors). Cochrane Handbook for Systematic Reviews of Interventions Version 5.1.0 (updated March 2011). The Cochrane Collaboration, 2011 Available from www.cochrane-handbook.org"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0231|cit231",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD007131.pub3",
+      "article-title": "Promoting patient uptake and adherence in cardiac rehabilitation",
+      "author": "Karmali",
+      "year": "2014",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0232|cit232",
+      "unstructured": "Lefebvre C Manheimer E Glanville J Chapter 6: Searching for studies Cochrane Handbook for Systematic Reviews of Interventions Version 5.1.0 (updated March 2011).The Cochrane Collaboration, 2011. Available from www.cochrane-handbook.org 2011"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0233|cit233",
+      "doi-asserted-by": "crossref",
+      "first-page": "e1000100",
+      "DOI": "10.1371/journal.pmed.1000100",
+      "article-title": "The PRISMA statement for reporting systematic reviews and meta-analyses of studies that evaluate health care interventions: explanation and elaboration",
+      "volume": "6",
+      "author": "Liberati",
+      "year": "2009",
+      "journal-title": "PLoS Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0234|cit234",
+      "volume-title": "European Cardiovascular Disease Statistics",
+      "author": "Nichols",
+      "year": "2012"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0235|cit235",
+      "doi-asserted-by": "crossref",
+      "first-page": "2329",
+      "DOI": "10.1001/archinte.166.21.2329",
+      "article-title": "Safety of exercise training for cardiac patients: results of the French registry of complications during cardiac rehabilitation",
+      "volume": "166",
+      "author": "Pavy",
+      "year": "2006",
+      "journal-title": "Arch Intern Med"
+    },
+    {
+      "issue": "13",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0236|cit236",
+      "doi-asserted-by": "crossref",
+      "first-page": "1635",
+      "DOI": "10.1093/eurheartj/ehs092",
+      "article-title": "European Association for Cardiovascular Prevention & Rehabilitation(EACPR); ESC Committee for Practice Guidelines (CPG).European Guidelines on cardiovascular disease prevention in clinical practice (version 2012). The Fifth Joint Task Force of the European Society of Cardiology and Other Societies on Cardiovascular Disease Prevention in Clinical Practice (constituted by representatives of nine societies and by invited experts)",
+      "volume": "33",
+      "author": "Perk",
+      "year": "2012",
+      "journal-title": "European Heart Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0237|cit237",
+      "doi-asserted-by": "crossref",
+      "first-page": "189",
+      "DOI": "10.1136/bmj.328.7441.711-b",
+      "article-title": "Exercise training meta-analysis of trials in patients with chronic heart failure (ExTraMATCH)",
+      "volume": "328",
+      "author": "Piepoli",
+      "year": "2004",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0238|cit238",
+      "unstructured": "The Nordic Cochrane Centre, The Cochrane Collaboration Review Manager (RevMan) Version 5.3. 2014"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0239|cit239",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD011197",
+      "article-title": "Exercise-based cardiac rehabilitation for adults with atrial fibrillation",
+      "author": "Risom",
+      "year": "2014",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0240|cit240",
+      "unstructured": "Schünemann HJ Oxman AD Vist GE Higgins JPT Deeks JJ Glasziou P Guyatt GH Chapter 12: Interpreting results and drawing conclusions. In: Higgins JPT, Green S (editors), Cochrane Handbook for Systematic Reviews of Interventions Version 5.1.0 (updated March 2011). The Cochrane Collaboration, 2011 Available from www.cochrane-handbook.org"
+    },
+    {
+      "issue": "23",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0241|cit241",
+      "doi-asserted-by": "crossref",
+      "first-page": "2432",
+      "DOI": "10.1016/j.jacc.2011.10.824",
+      "article-title": "AHA/ACCF secondary prevention and risk reduction therapy for patients with coronary and other atherosclerotic vascular disease: 2011 update: a guideline from the American Heart Association and American College of Cardiology Foundation endorsed by the World Heart Federation and the Preventive Cardiovascular Nurses Association",
+      "volume": "58",
+      "author": "Smith",
+      "year": "2011",
+      "journal-title": "Journal of the American college of cardiology"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0242|cit242",
+      "unstructured": "StataCorp, College Station, TX: StataCorp LP Stata Statistical Software: Release 13. 2013"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0243|cit243",
+      "first-page": "369",
+      "article-title": "Mortality reductions in patients receiving exercise-based cardiac rehabilitation: How much can be attributed to cardiovascular risk factors improvements?",
+      "volume": "136",
+      "author": "Taylor",
+      "year": "2006",
+      "journal-title": "European Journal of Cardiopulmonary Rehabilitation"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0244|cit244",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD007130.pub2",
+      "article-title": "Home-based versus centre-based cardiac rehabilitation",
+      "author": "Taylor",
+      "year": "2010",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0245|cit245",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD003331.pub4",
+      "article-title": "Exercise-based rehabilitation for heart failure",
+      "author": "Taylor",
+      "year": "2014",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0246|cit246",
+      "unstructured": "Townsend N Wickramasinghe K Bhatnagar P Smolina K Nichols M Leal J Coronary heart disease statistics 2012 edition British Heart Foundation 2012 107"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0247|cit247",
+      "doi-asserted-by": "crossref",
+      "first-page": "1101-7",
+      "DOI": "10.1161/01.CIR.0000118498.35499.B2",
+      "article-title": "Explaining the decline in coronary heart disease mortality in England and Wales between 1981 and 2000",
+      "volume": "109",
+      "author": "Unal",
+      "year": "2004",
+      "journal-title": "Circulation"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0248|cit248",
+      "doi-asserted-by": "crossref",
+      "first-page": "1160",
+      "DOI": "10.1001/jama.1986.03380090100025",
+      "article-title": "Cardiovascular complications of outpatient cardiac rehabilitation programs",
+      "volume": "256",
+      "author": "Camp",
+      "year": "1986",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0249|cit249",
+      "unstructured": "World Health Organization The top 10 causes of death. Fact sheet No. 310 http://www.who.int/mediacentre/factsheets/fs310/en/ Updated May 2014"
+    },
+    {
+      "key": "10.1002/14651858.CD001800.pub3-BIB0250|cit250",
+      "unstructured": "Anderson LA Oldridge N Thompson DR Zwisler AD Rees K Martin N Exercise-based cardiac rehabilitation for coronary heart disease Cochrane systematic review and meta-analysis Journal of the American College of Cardiology"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0251|cit251",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD001800.pub2",
+      "article-title": "Exercise-based cardiac rehabilitation for coronary heart disease",
+      "author": "Heran",
+      "year": "2011",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0252|cit252",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD001800",
+      "article-title": "Exercise-based rehabilitation for coronary heart disease",
+      "author": "Jolliffe",
+      "year": "2001",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "12",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0253|cit253",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD010876",
+      "article-title": "Exercise-based cardiac rehabilitation for adults after heart valve surgery",
+      "author": "Sibilitz",
+      "year": "2013",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "110",
+      "key": "10.1002/14651858.CD001800.pub3-BIB0254|cit254",
+      "doi-asserted-by": "crossref",
+      "first-page": "682",
+      "DOI": "10.1016/j.amjmed.2004.01.009",
+      "article-title": "Exercise-based rehabilitation for patients with coronary heart disease: systematic review and meta-analysis of randomized controlled trials",
+      "volume": "116",
+      "author": "Taylor",
+      "year": "2004",
+      "journal-title": "American Journal of Medicine"
+    }
+  ],
+  "updated-by": [
+    {
+      "DOI": "10.1002/14651858.cd001800.pub4",
+      "type": "new_version",
+      "label": "New version",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2021,
+            11,
+            6
+          ]
+        ],
+        "date-time": "2021-11-06T00:00:00Z",
+        "timestamp": 1636156800000
+      }
+    }
+  ],
+  "container-title": [
+    "Cochrane Database of Systematic Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://onlinelibrary.wiley.com/wol1/doi/10.1002/14651858.CD001800.pub3/fullpdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        5,
+        31
+      ]
+    ],
+    "date-time": "2025-05-31T21:46:00Z",
+    "timestamp": 1748727960000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://doi.wiley.com/10.1002/14651858.CD001800.pub3"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "name": "Cochrane Heart Group",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "editor"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        5
+      ]
+    ]
+  },
+  "references-count": 254,
+  "URL": "https://doi.org/10.1002/14651858.cd001800.pub3",
+  "relation": {},
+  "ISSN": [
+    "1465-1858"
+  ],
+  "issn-type": [
+    {
+      "value": "1465-1858",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        5
+      ]
+    ]
+  }
+}

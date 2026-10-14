@@ -1,0 +1,206 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        1
+      ]
+    ],
+    "date-time": "2022-04-01T00:17:16Z",
+    "timestamp": 1648772236101
+  },
+  "reference-count": 0,
+  "publisher": "Oxford University Press (OUP)",
+  "issue": "suppl_1",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2013,
+        7,
+        1
+      ]
+    ]
+  },
+  "DOI": "10.1093/icvts/ivt288.6",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2013,
+        7,
+        23
+      ]
+    ],
+    "date-time": "2013-07-23T17:25:31Z",
+    "timestamp": 1374600331000
+  },
+  "page": "S2-S2",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "B-006RESULTS OF LI-THO TRIAL: A PROSPECTIVE RANDOMIZED STUDY ON EFFECTIVENESS OF LIGASURE® IN LUNG RESECTIONS"
+  ],
+  "prefix": "10.1093",
+  "volume": "17",
+  "author": [
+    {
+      "given": "Luca",
+      "family": "Bertolaccini",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "A.",
+      "family": "Viti",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "A.",
+      "family": "Cavallo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "A.",
+      "family": "Terzi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "286",
+  "published-online": {
+    "date-parts": [
+      [
+        2013,
+        7
+      ]
+    ]
+  },
+  "container-title": [
+    "Interactive CardioVascular and Thoracic Surgery"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://academic.oup.com/icvts/article-pdf/17/suppl_1/S2/23793502/ivt288.6.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2018,
+        2,
+        5
+      ]
+    ],
+    "date-time": "2018-02-05T09:01:06Z",
+    "timestamp": 1517821266000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://academic.oup.com/icvts/article/17/suppl_1/S2/660164"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2013,
+        7,
+        1
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "suppl_1",
+    "published-online": {
+      "date-parts": [
+        [
+          2013,
+          7
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2013,
+          7,
+          1
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1093/icvts/ivt288.6",
+  "relation": {},
+  "ISSN": [
+    "1569-9285",
+    "1569-9293"
+  ],
+  "issn-type": [
+    {
+      "value": "1569-9285",
+      "type": "electronic"
+    },
+    {
+      "value": "1569-9293",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published-other": {
+    "date-parts": [
+      [
+        2013,
+        7
+      ]
+    ]
+  },
+  "published": {
+    "date-parts": [
+      [
+        2013,
+        7,
+        1
+      ]
+    ]
+  }
+}

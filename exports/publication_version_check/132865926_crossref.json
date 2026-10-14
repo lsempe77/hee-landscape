@@ -1,0 +1,221 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        21
+      ]
+    ],
+    "date-time": "2026-01-21T16:00:19Z",
+    "timestamp": 1769011219309,
+    "version": "3.49.0"
+  },
+  "reference-count": 0,
+  "publisher": "American Society of Clinical Oncology (ASCO)",
+  "issue": "15_suppl",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "JCO"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2017,
+        5,
+        20
+      ]
+    ]
+  },
+  "abstract": "<jats:p> e18331 </jats:p><jats:p> Background: Nivolumab was recently shown to improve overall survival (OS) and health-related quality of life compared to Everolimus in metastatic renal cell carcinoma (mRCC) patients previously treated with antiangiogenic therapies (CheckMate-025 trial). The aim of this study is to assess the cost-utility of Nivolumab versus Everolimus from the perspective of the Canadian publicly funded healthcare system. Methods: To evaluate the cost-utility of Nivolumab versus Everolimus, a Markov cohort model that incorporated data from the phase 3 CheckMate-025 trial and other sources was developed. The outcomes of interest were healthcare costs, life-months and quality-adjusted life-months (QALMs) gained with Nivolumab as well as the incremental cost-effectiveness ratio (ICER), and the incremental net monetary benefit. A lifetime time horizon was used in the base case with costs and outcomes discounted 5% annually. The probabilities of progression and death from cancer and utility values were captured from the CheckMate-025 trial. Expected costs were based on Ontario fees and other sources. Scenario and sensitivity analyses (SAs) were conducted to assess uncertainty. Results: Compared to Everolimus, treatment with Nivolumab provided an additional 3.9 QALMs at an incremental cost of 33,386 Canadian dollars (CAD). The resulting ICER was 8,608CAD per QALM gained. With a willingness-to-pay (WTP) of 50,000CAD per Quality-adjusted life-year (QALY) ( = 4,167CAD per QALM), Nivolumab was not cost-effective in the base case. In one-way SAs, Nivolumab cost, median OS and treatment duration on Nivolumab were sensitive to changes with plausible threshold values. Assuming a WTP of 100,000CAD per QALY ( = 8,334CAD per QALM) and a scenario of Nivolumab cost with no drug wastage, Nivolumab became a cost-effective strategy with an ICER of 7,881CAD per QALM. Conclusions: With its current price , Nivolumab is unlikely to be cost-effective compared with Everolimus for previously treated mRCC patients from a Canadian healthcare payer perspective. While mRCC patients derive a meaningful clinical benefit from Nivolumab, considerations should be given to reduce drug wastage and increase the WTP threshold to render this strategy more affordable. </jats:p>",
+  "DOI": "10.1200/jco.2017.35.15_suppl.e18331",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2018,
+        9,
+        6
+      ]
+    ],
+    "date-time": "2018-09-06T15:50:36Z",
+    "timestamp": 1536249036000
+  },
+  "page": "e18331-e18331",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+    "Nivolumab in the treatment of metastatic renal cell carcinoma: A cost-utility analysis."
+  ],
+  "prefix": "10.1200",
+  "volume": "35",
+  "author": [
+    {
+      "given": "Jacques",
+      "family": "Raphael",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Sunnybrook Health Sciences Centre, Department of Medicine, Division of Medical Oncology, Toronto, ON, Canada;"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Zhuolu",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Institute of Health Policy, Management and Evaluation, University of Toronto, Toronto, ON, Canada;"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Georg A.",
+      "family": "Bjarnason",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Sunnybrook Research Institute, Toronto, ON, Canada;"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Beate",
+      "family": "Sander",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Institute of Health Policy, Management and Evaluation, University of Toronto, Toronto, ON, Canada;"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "David M",
+      "family": "Naimark",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Medicine, Division of Nephrology, Sunnybrook Health Sciences Centre, University of Toronto, Toronto, ON, Canada;"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "233",
+  "container-title": [
+    "Journal of Clinical Oncology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://ascopubs.org/doi/pdfdirect/10.1200/JCO.2017.35.15_suppl.e18331",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2020,
+        3,
+        12
+      ]
+    ],
+    "date-time": "2020-03-12T20:04:43Z",
+    "timestamp": 1584043483000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://ascopubs.org/doi/10.1200/JCO.2017.35.15_suppl.e18331"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2017,
+        5,
+        20
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "15_suppl",
+    "published-print": {
+      "date-parts": [
+        [
+          2017,
+          5,
+          20
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1200/JCO.2017.35.15_suppl.e18331"
+  ],
+  "URL": "https://doi.org/10.1200/jco.2017.35.15_suppl.e18331",
+  "relation": {},
+  "ISSN": [
+    "0732-183X",
+    "1527-7755"
+  ],
+  "issn-type": [
+    {
+      "value": "0732-183X",
+      "type": "print"
+    },
+    {
+      "value": "1527-7755",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2017,
+        5,
+        20
+      ]
+    ]
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        3,
+        20
+      ]
+    ],
+    "date-time": "2026-03-20T05:49:13Z",
+    "timestamp": 1773985753729,
+    "version": "3.50.1"
+  },
+  "reference-count": 0,
+  "publisher": "Oxford University Press (OUP)",
+  "issue": "suppl_1",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2016,
+        5
+      ]
+    ]
+  },
+  "DOI": "10.1093/ndt/gfw200.11",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2017,
+        2,
+        3
+      ]
+    ],
+    "date-time": "2017-02-03T14:42:13Z",
+    "timestamp": 1486132933000
+  },
+  "page": "i568-i568",
+  "source": "Crossref",
+  "is-referenced-by-count": 3,
+  "title": [
+    "MP687SUCCESSFUL COST EFFECTIVE PREVENTION OF CYTOMEGALOVIRUS DISEASE IN KIDNEY TRANSPLANT RECIPIENTS USING LOW DOSE VALGANCICLOVIR"
+  ],
+  "prefix": "10.1093",
+  "volume": "31",
+  "author": [
+    {
+      "given": "Osama",
+      "family": "Gheith",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Torki",
+      "family": "Al Otaibi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Medhat A",
+      "family": "Halim",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Hany",
+      "family": "Mansour",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Hany",
+      "family": "Mansour",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Ahmed",
+      "family": "Mosaad",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Hasanein",
+      "family": "Attia",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Zakaria",
+      "family": "Elsayed",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Zakaria",
+      "family": "Elsayed",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Tarek",
+      "family": "Said",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Prasad",
+      "family": "Nair",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Naryanan",
+      "family": "Nampoory",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "286",
+  "published-online": {
+    "date-parts": [
+      [
+        2016,
+        5,
+        14
+      ]
+    ]
+  },
+  "container-title": [
+    "Nephrology Dialysis Transplantation"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://academic.oup.com/ndt/article-pdf/31/suppl_1/i568/8127264/gfw200.11.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2017,
+        8,
+        24
+      ]
+    ],
+    "date-time": "2017-08-24T10:20:06Z",
+    "timestamp": 1503570006000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://academic.oup.com/ndt/article-lookup/doi/10.1093/ndt/gfw200.11"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2016,
+        5
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "suppl_1",
+    "published-online": {
+      "date-parts": [
+        [
+          2016,
+          5,
+          14
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          5
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1093/ndt/gfw200.11",
+  "relation": {},
+  "ISSN": [
+    "1460-2385",
+    "0931-0509"
+  ],
+  "issn-type": [
+    {
+      "value": "1460-2385",
+      "type": "electronic"
+    },
+    {
+      "value": "0931-0509",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2016,
+        5
+      ]
+    ]
+  }
+}

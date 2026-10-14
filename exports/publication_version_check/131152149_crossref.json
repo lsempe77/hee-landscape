@@ -1,0 +1,614 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        6
+      ]
+    ],
+    "date-time": "2026-10-06T20:45:05Z",
+    "timestamp": 1791319505673,
+    "version": "4.3.1"
+  },
+  "reference-count": 26,
+  "publisher": "Elsevier BV",
+  "issue": "11",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2020,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2020-11-01T00:00:00Z",
+        "timestamp": 1604188800000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2020,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2020-11-01T00:00:00Z",
+        "timestamp": 1604188800000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2020,
+            4,
+            27
+          ]
+        ],
+        "date-time": "2020-04-27T00:00:00Z",
+        "timestamp": 1587945600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100001316",
+      "name": "Abbott Laboratories",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/100001316",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "clinicalkey.com",
+      "clinicalkey.com.au",
+      "clinicalkey.es",
+      "clinicalkey.fr",
+      "clinicalkey.jp",
+      "clinicalnutritionjournal.com",
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Clinical Nutrition"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2020,
+        11
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.clnu.2020.02.023",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        2,
+        25
+      ]
+    ],
+    "date-time": "2020-02-25T02:36:39Z",
+    "timestamp": 1582598199000
+  },
+  "page": "3361-3368",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 87,
+  "title": [
+    "Economic evaluation of individualized nutritional support in medical inpatients: Secondary analysis of the EFFORT trial"
+  ],
+  "prefix": "10.1016",
+  "volume": "39",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-4191-7603",
+      "authenticated-orcid": false,
+      "given": "Philipp",
+      "family": "Schuetz",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Suela",
+      "family": "Sulo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Stefan",
+      "family": "Walzer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Lutz",
+      "family": "Vollmer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Zeno",
+      "family": "Stanga",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-1702-1433",
+      "authenticated-orcid": false,
+      "given": "Filomena",
+      "family": "Gomes",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-2127-3190",
+      "authenticated-orcid": false,
+      "given": "Ricardo",
+      "family": "Rueda",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1986-2511",
+      "authenticated-orcid": false,
+      "given": "Beat",
+      "family": "Mueller",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jamie",
+      "family": "Partridge",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib1",
+      "doi-asserted-by": "crossref",
+      "first-page": "336",
+      "DOI": "10.1016/j.clnu.2017.06.025",
+      "article-title": "ESPEN guidelines on nutritional support for polymorbid internal medicine patients",
+      "volume": "37",
+      "author": "Gomes",
+      "year": "2018",
+      "journal-title": "Clin Nutr"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib2",
+      "doi-asserted-by": "crossref",
+      "first-page": "16",
+      "DOI": "10.1177/0148607110389335",
+      "article-title": "clinical guidelines: nutrition screening, assessment, and intervention in adults",
+      "volume": "35",
+      "author": "Mueller",
+      "year": "2011",
+      "journal-title": "JPEN - J Parenter Enter Nutr"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib3",
+      "doi-asserted-by": "crossref",
+      "first-page": "2312",
+      "DOI": "10.1016/S0140-6736(18)32776-4",
+      "article-title": "Individualised nutritional support in medical inpatients at nutritional risk: a randomised clinical trial",
+      "volume": "393",
+      "author": "Schuetz",
+      "year": "2019",
+      "journal-title": "Lancet"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib4",
+      "doi-asserted-by": "crossref",
+      "first-page": "18",
+      "DOI": "10.1016/j.clnu.2015.12.010",
+      "article-title": "Readmission and mortality in malnourished, older, hospitalized adults treated with a specialized oral nutritional supplement: a randomized clinical trial",
+      "volume": "35",
+      "author": "Deutz",
+      "year": "2016",
+      "journal-title": "Clin Nutr"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib5",
+      "doi-asserted-by": "crossref",
+      "first-page": "75",
+      "DOI": "10.1007/s40258-016-0269-7",
+      "article-title": "The cost-effectiveness of oral nutrition supplementation for malnourished older hospital patients",
+      "volume": "15",
+      "author": "Zhong",
+      "year": "2017",
+      "journal-title": "Appl Health Econ Health Pol"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib6",
+      "doi-asserted-by": "crossref",
+      "first-page": "142",
+      "DOI": "10.18203/2349-3259.ijct20182085",
+      "article-title": "Design and rationale of the effect of early nutritional therapy on frailty, functional outcomes and recovery of malnourished medical inpatients trial (EFFORT): a pragmatic, multicenter, randomized-controlled trial",
+      "volume": "5",
+      "author": "Schuetz",
+      "year": "2018",
+      "journal-title": "Int J Clin Trials"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib7",
+      "doi-asserted-by": "crossref",
+      "first-page": "415",
+      "DOI": "10.1016/S0261-5614(03)00098-0",
+      "article-title": "ESPEN guidelines for nutrition screening 2002",
+      "volume": "22",
+      "author": "Kondrup",
+      "year": "2003",
+      "journal-title": "Clin Nutr"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib8",
+      "article-title": "Nutritional risk screening (NRS 2002) is a strong and modifiable predictor risk score for short-term and long-term clinical outcomes: secondary analysis of a prospective randomised trial",
+      "author": "Hersberger",
+      "year": "2019",
+      "journal-title": "Clin Nutr"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib9",
+      "doi-asserted-by": "crossref",
+      "first-page": "790",
+      "DOI": "10.1016/j.nut.2016.01.019",
+      "article-title": "Detection and treatment of medical inpatients with or at-risk of malnutrition: suggested procedures based on validated guidelines",
+      "volume": "32",
+      "author": "Bounoure",
+      "year": "2016",
+      "journal-title": "Nutrition"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib10",
+      "doi-asserted-by": "crossref",
+      "first-page": "ofz268",
+      "DOI": "10.1093/ofid/ofz268",
+      "article-title": "Validation of a prediction rule for Legionella pneumonia in emergency department patients",
+      "volume": "6",
+      "author": "Bolliger",
+      "year": "2019",
+      "journal-title": "Open Forum Infect Dis"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib11",
+      "first-page": "CD003288",
+      "article-title": "Protein and energy supplementation in elderly people at risk from malnutrition",
+      "author": "Milne",
+      "year": "2009",
+      "journal-title": "Cochrane Database Syst Rev"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib12",
+      "doi-asserted-by": "crossref",
+      "first-page": "323",
+      "DOI": "10.1177/0148607101025006323",
+      "article-title": "Protein energy supplements in unwell elderly patients--a randomized controlled trial",
+      "volume": "25",
+      "author": "Potter",
+      "year": "2001",
+      "journal-title": "JPEN - J Parenter Enter Nutr"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib13",
+      "first-page": "61",
+      "article-title": "Functional evaluation: the Barthel index",
+      "volume": "14",
+      "author": "Mahoney",
+      "year": "1965",
+      "journal-title": "Md State Med J"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib14",
+      "doi-asserted-by": "crossref",
+      "first-page": "663",
+      "DOI": "10.1007/s40273-018-0615-8",
+      "article-title": "German value set for the EQ-5D-5L",
+      "volume": "36",
+      "author": "Ludwig",
+      "year": "2018",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib15",
+      "doi-asserted-by": "crossref",
+      "first-page": "397",
+      "DOI": "10.2165/00019053-199813040-00003",
+      "article-title": "An introduction to Markov modelling for economic evaluation",
+      "volume": "13",
+      "author": "Briggs",
+      "year": "1998",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib16",
+      "series-title": "What are health utilities? What is? series. UK",
+      "author": "Tolley",
+      "year": "2009"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib17",
+      "unstructured": "Federal Office of Public Health (FOPH) Switzerland. p. Health-related statistics from the Swiss federal office of public health."
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib18",
+      "series-title": "Berufsstatistik über die Ernährungsberater und Ernährungsberaterinnen in der Schweiz - resultate 2017. Berner Fachhochschule - Gesundheit",
+      "author": "Mahlstein",
+      "year": "2018"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib19",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1001/jamanetworkopen.2019.15138",
+      "article-title": "Association of nutritional support with clinical outcomes among medical inpatients who are malnourished or at nutritional risk: an updated systematic review and meta-analysis",
+      "volume": "2",
+      "author": "Gomes",
+      "year": "2019",
+      "journal-title": "JAMA Netw Open"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib20",
+      "doi-asserted-by": "crossref",
+      "first-page": "w13957",
+      "DOI": "10.4414/smw.2014.13957",
+      "article-title": "Loss of appetite in acutely ill medical inpatients: physiological response or therapeutic target?",
+      "volume": "144",
+      "author": "Schutz",
+      "year": "2014",
+      "journal-title": "Swiss Med Wkly"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib21",
+      "doi-asserted-by": "crossref",
+      "first-page": "1385",
+      "DOI": "10.1016/j.nut.2015.06.007",
+      "article-title": "Association of nutritional risk and adverse medical outcomes across different medical inpatient populations",
+      "volume": "31",
+      "author": "Felder",
+      "year": "2015",
+      "journal-title": "Nutrition"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib22",
+      "doi-asserted-by": "crossref",
+      "first-page": "43",
+      "DOI": "10.1001/jamainternmed.2015.6587",
+      "article-title": "Nutritional support and outcomes in malnourished medical inpatients: a systematic review and meta-analysis",
+      "volume": "176",
+      "author": "Bally",
+      "year": "2016",
+      "journal-title": "JAMA Intern Med"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib23",
+      "author": "Hiura",
+      "year": "2019",
+      "journal-title": "JPEN - J Parenter Enter Nutr"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib24",
+      "doi-asserted-by": "crossref",
+      "first-page": "153",
+      "DOI": "10.3390/nu8030153",
+      "article-title": "Health-care costs, glycemic control and nutritional status in malnourished older diabetics treated with a hypercaloric diabetes-specific enteral nutritional formula",
+      "volume": "8",
+      "author": "Sanz-Paris",
+      "year": "2016",
+      "journal-title": "Nutrients"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib25",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.3390/nu10020246",
+      "article-title": "Cost-effectiveness of a specialized oral nutritional supplementation for malnourished older adult patients in Spain",
+      "volume": "10",
+      "author": "Ballesteros-Pomar",
+      "year": "2018",
+      "journal-title": "Nutrients"
+    },
+    {
+      "key": "10.1016/j.clnu.2020.02.023_bib26",
+      "doi-asserted-by": "crossref",
+      "first-page": "HO2",
+      "DOI": "10.7326/M20-0120",
+      "article-title": "Web Exclusive. Annals for Hospitalists Inpatient Notes - Optimizing Inpatient Nutrition-Why Hospitalists Should Get Involved",
+      "volume": "172",
+      "author": "Schuetz",
+      "year": "2020",
+      "journal-title": "Ann Int Med"
+    }
+  ],
+  "container-title": [
+    "Clinical Nutrition"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0261561420300868?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0261561420300868?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        2
+      ]
+    ],
+    "date-time": "2025-10-02T00:56:02Z",
+    "timestamp": 1759366562000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0261561420300868"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2020,
+        11
+      ]
+    ]
+  },
+  "references-count": 26,
+  "journal-issue": {
+    "issue": "11",
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          11
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S0261561420300868"
+  ],
+  "URL": "https://doi.org/10.1016/j.clnu.2020.02.023",
+  "relation": {},
+  "ISSN": [
+    "0261-5614"
+  ],
+  "issn-type": [
+    {
+      "value": "0261-5614",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2020,
+        11
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "Economic evaluation of individualized nutritional support in medical inpatients: Secondary analysis of the EFFORT trial",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Clinical Nutrition",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.clnu.2020.02.023",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2020 The Authors. Published by Elsevier Ltd.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        18
+      ]
+    ],
+    "date-time": "2026-09-18T11:10:40Z",
+    "timestamp": 1789729840765,
+    "version": "4.0.1"
+  },
+  "reference-count": 18,
+  "publisher": "Elsevier BV",
+  "issue": "6",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2011,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2011-07-01T00:00:00Z",
+        "timestamp": 1309478400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Transplantation Proceedings"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2011,
+        7
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.transproceed.2011.06.006",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2011,
+        8,
+        13
+      ]
+    ],
+    "date-time": "2011-08-13T12:37:29Z",
+    "timestamp": 1313239049000
+  },
+  "page": "2300-2304",
+  "source": "Crossref",
+  "is-referenced-by-count": 22,
+  "title": [
+    "Cost–Benefit Estimation of Cadaveric Kidney Transplantation: The Case of a Developing Country"
+  ],
+  "prefix": "10.1016",
+  "volume": "43",
+  "author": [
+    {
+      "given": "J.",
+      "family": "Domínguez",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "R.",
+      "family": "Harrison",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "R.",
+      "family": "Atal",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib1",
+      "doi-asserted-by": "crossref",
+      "first-page": "80",
+      "DOI": "10.1111/j.1524-4733.2008.00401.x",
+      "article-title": "An empiric estimate of the value of life: updating the renal dialysis cost-effectiveness standard",
+      "volume": "12",
+      "author": "Lee",
+      "year": "2009",
+      "journal-title": "Value in Health"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib8",
+      "doi-asserted-by": "crossref",
+      "first-page": "569",
+      "DOI": "10.1111/j.1600-6143.2004.00373.x",
+      "article-title": "Cost effectiveness of organ donation: evaluating investment into Donor Action and other donor initiatives",
+      "volume": "4",
+      "author": "Whiting",
+      "year": "2004",
+      "journal-title": "Am J Transplant"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib9",
+      "doi-asserted-by": "crossref",
+      "first-page": "321",
+      "DOI": "10.1111/j.1432-2277.2003.tb00307.x",
+      "article-title": "Cost-benefit approach in evaluating investment into donor action: the German case",
+      "volume": "16",
+      "author": "Roels",
+      "year": "2003",
+      "journal-title": "Transplant Int"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib10",
+      "doi-asserted-by": "crossref",
+      "first-page": "216",
+      "DOI": "10.1046/j.1600-6143.2003.00290.x",
+      "article-title": "Payment for living donor (vendor) kidneys: a cost-effectiveness analysis",
+      "volume": "4",
+      "author": "Matas",
+      "year": "2003",
+      "journal-title": "Am J Transplant"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib11",
+      "doi-asserted-by": "crossref",
+      "first-page": "1090",
+      "DOI": "10.1111/j.1600-6143.2005.00802.x",
+      "article-title": "Consequences of eliminating HLAB in deceased donor kidney allocation to increase minority transplantation",
+      "volume": "5",
+      "author": "Mutinga",
+      "year": "2005",
+      "journal-title": "Am J Transplant"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib12",
+      "doi-asserted-by": "crossref",
+      "first-page": "123",
+      "DOI": "10.1111/j.1440-1797.2008.01073.x",
+      "article-title": "The cost-effectiveness of increasing kidney transplantation and homebased dialysis",
+      "volume": "14",
+      "author": "Howard",
+      "year": "2009",
+      "journal-title": "Nephrology"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib13",
+      "doi-asserted-by": "crossref",
+      "first-page": "1703",
+      "DOI": "10.1111/j.1600-6143.2004.00565.x",
+      "article-title": "Cost-effectiveness of extending Medicare coverage of immunosuppressive medications to the life of a kidney transplant",
+      "volume": "4",
+      "author": "Yen",
+      "year": "2004",
+      "journal-title": "Am J Transplant"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib14",
+      "doi-asserted-by": "crossref",
+      "first-page": "5381",
+      "DOI": "10.1002/sim.3100",
+      "article-title": "A semi-markov model for multistate and interval-censored data with multiple terminal events",
+      "volume": "26",
+      "author": "Foucher",
+      "year": "2007",
+      "journal-title": "Stat Med"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib15",
+      "doi-asserted-by": "crossref",
+      "first-page": "196",
+      "DOI": "10.1111/j.1524-4733.2009.00668.x",
+      "article-title": "Cost-effectiveness of screening and optimal management for diabetes, hypertension, and chronic kidney disease: a modeled analysis",
+      "volume": "3",
+      "author": "Howard",
+      "year": "2010",
+      "journal-title": "Value in Health"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib16",
+      "doi-asserted-by": "crossref",
+      "first-page": "61",
+      "DOI": "10.1016/j.trre.2006.05.001",
+      "article-title": "Economics of transplantation: a review of the literature",
+      "volume": "20",
+      "author": "Machinki",
+      "year": "2006",
+      "journal-title": "Transplant Rev"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib18",
+      "unstructured": "Held PJ, Port FK: The impact of the organ shortage beyond the immediate loss of life: social, medical, and economic costs. Presented at the conference organ transplantation: economic, ethical and policy issues at the University of Chicago, May 16, 2003."
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib20",
+      "series-title": "Ministerio de Salud (MINSAL)",
+      "year": "2005"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib24",
+      "doi-asserted-by": "crossref",
+      "first-page": "2668",
+      "DOI": "10.1016/j.transproceed.2009.06.076",
+      "article-title": "Factors that predict duration of delayed graft function in cadaveric kidney transplantation",
+      "volume": "41",
+      "author": "Domínguez",
+      "year": "2009",
+      "journal-title": "Transplant Proc"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib25",
+      "doi-asserted-by": "crossref",
+      "first-page": "616",
+      "DOI": "10.1097/00007890-200202270-00025",
+      "article-title": "Cost-effectiveness of cadaveric and living-donor liver transplantation",
+      "volume": "73",
+      "author": "Sagmeister",
+      "year": "2002",
+      "journal-title": "Transplantation"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib26",
+      "doi-asserted-by": "crossref",
+      "first-page": "2289",
+      "DOI": "10.1111/j.1600-6143.2005.01021.x",
+      "article-title": "The life-years saved by a deceased organ donor",
+      "volume": "5",
+      "author": "Schnitzler",
+      "year": "2005",
+      "journal-title": "Am J Transplant"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib27",
+      "doi-asserted-by": "crossref",
+      "first-page": "218",
+      "DOI": "10.1136/thorax.56.3.218",
+      "article-title": "Assessment of quality of life in lung transplantation using a simple generic tool",
+      "volume": "56",
+      "author": "Anyanwu",
+      "year": "2001",
+      "journal-title": "Thorax"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib29",
+      "first-page": "3",
+      "article-title": "Trasplantes, gestión y sistemas sanitarios",
+      "volume": "XXI",
+      "author": "Matesanz",
+      "year": "2001",
+      "journal-title": "Nefrología"
+    },
+    {
+      "key": "10.1016/j.transproceed.2011.06.006_bib30",
+      "author": "Margarida"
+    }
+  ],
+  "container-title": [
+    "Transplantation Proceedings"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0041134511008141?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0041134511008141?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2018,
+        11,
+        30
+      ]
+    ],
+    "date-time": "2018-11-30T20:51:26Z",
+    "timestamp": 1543611086000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0041134511008141"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2011,
+        7
+      ]
+    ]
+  },
+  "references-count": 18,
+  "journal-issue": {
+    "issue": "6",
+    "published-print": {
+      "date-parts": [
+        [
+          2011,
+          7
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S0041134511008141"
+  ],
+  "URL": "https://doi.org/10.1016/j.transproceed.2011.06.006",
+  "relation": {},
+  "ISSN": [
+    "0041-1345"
+  ],
+  "issn-type": [
+    {
+      "value": "0041-1345",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2011,
+        7
+      ]
+    ]
+  }
+}

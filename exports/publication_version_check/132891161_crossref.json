@@ -1,0 +1,286 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        7,
+        30
+      ]
+    ],
+    "date-time": "2025-07-30T12:12:43Z",
+    "timestamp": 1753877563694,
+    "version": "3.41.2"
+  },
+  "reference-count": 0,
+  "publisher": "Oxford University Press (OUP)",
+  "issue": "Supplement_1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            1,
+            29
+          ]
+        ],
+        "date-time": "2025-01-29T00:00:00Z",
+        "timestamp": 1738108800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        29
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n               <jats:sec>\n                  <jats:title>Background</jats:title>\n                  <jats:p>A preemptive approach using plasma CMV DNA load monitoring is recommended among CMV-seropositive (R+) solid organ transplant recipients (SOTr). Lately, absolute lymphocyte count (ALC) has been proposed as a surrogate marker to predict CMV infection in SOTr. We hypothesized that a preemptive approach guided by immune assessment, using low ALC, could effectively prevent CMV infection, akin to the proposed routine preemptive therapy. We aimed to assess the efficacy of logical preemptive therapy (LOG) versus ALC-guided preemptive therapy for CMV infection in CMVR+ SOTr, along with cost-effectiveness.</jats:p>\n               </jats:sec>\n               <jats:sec>\n                  <jats:title>Methods</jats:title>\n                  <jats:p>A 1:1 open-labeled randomized controlled trial was conducted at a single transplant center from February to November 2023. All adult CMVR+ SOTr not receiving anti-thymocyte globulin were randomly assigned to two groups: the LOG Group, where patients underwent plasma CMV DNA load testing every 4 weeks for 12 weeks after transplantation, and the ALC group, where the quantity of CMV DNA load was initiated when the ALC was &amp;lt; 1,000 cells/mm3. Patients were then followed for 6 months after SOT to compare the occurrence of CMV infection and the CMV DNA load testing-related cost.</jats:p>\n               </jats:sec>\n               <jats:sec>\n                  <jats:title>Results</jats:title>\n                  <jats:p>A total of 98 eligible SOTr were included and assigned into two groups, 49 patients each. They all underwent kidney transplantation (KT) with a mean+SD age of 46+11 years old; 66.3% were male. Demographic data between the two groups were comparable. Twenty-five (25.5%) participants developed CMV infection within 6 months after KT. CMV infection was comparably observed in 13 (26.5%) participants in the LOG group vs. 12 (24.5%) participants in the ALC group, p=0.82. Of those, there were no significant differences in terms of asymptomatic CMV infection, CMV disease, and clinically significant CMV infection (p=NS, all). The total cost of plasma CMV DNA load testing (68 USD per test) was significantly lower in the ALC group compared to the LOG group (2,320 vs.10,014 USD, p&amp;lt; 0.01), respectively.</jats:p>\n               </jats:sec>\n               <jats:sec>\n                  <jats:title>Conclusion</jats:title>\n                  <jats:p>Immune-guided preemptive therapy directed by low ALC appears to be effective in preventing early CMV infection after SOT. A simple and universally available ALC test could potentially be used as a personalized and cost-effective marker to initiate preemptive therapy in moderate-risk CMVR+ SOTr. TCTR20220720007.</jats:p>\n               </jats:sec>\n               <jats:sec>\n                  <jats:title>Disclosures</jats:title>\n                  <jats:p>All Authors: No reported disclosures</jats:p>\n               </jats:sec>",
+  "DOI": "10.1093/ofid/ofae631.2463",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        29
+      ]
+    ],
+    "date-time": "2025-01-29T19:30:46Z",
+    "timestamp": 1738179046000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "P-2311. Logical Versus Absolute Lymphocyte Count-guided Preemptive Therapy for CMV Prevention in Solid Organ Transplant Recipients: A Randomized Controlled Trial"
+  ],
+  "prefix": "10.1093",
+  "volume": "12",
+  "author": [
+    {
+      "given": "Piyangkul",
+      "family": "Lorcharassriwong",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Faculty of Medicine Ramathibodi Hospital, Mahidol University , Muaengsamutprakarn, Samut Prakan ,",
+          "place": [
+            "Thailand"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Sarinya",
+      "family": "Boongird",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Faculty of Medicine Ramathibodi Hospital, Mahidol University , Muaengsamutprakarn, Samut Prakan ,",
+          "place": [
+            "Thailand"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Surasak",
+      "family": "Kantachuvesiri",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Faculty of Medicine Ramathibody Hospital, Mahidol University , Bangkok, Krung Thep ,",
+          "place": [
+            "Thailand"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Teerapat",
+      "family": "Yingchoncharoen",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Faculty of Medicine Ramathibodi Hospital, Mahidol University , Muaengsamutprakarn, Samut Prakan ,",
+          "place": [
+            "Thailand"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Napan",
+      "family": "Sutharattanapong",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Faculty of Medicine Ramathibodi Hospital, Mahidol University , Muaengsamutprakarn, Samut Prakan ,",
+          "place": [
+            "Thailand"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Jackrapong",
+      "family": "Bruminhent",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Faculty of Medicine Ramathibodi Hospital, Mahidol University , Muaengsamutprakarn, Samut Prakan ,",
+          "place": [
+            "Thailand"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "286",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        29
+      ]
+    ]
+  },
+  "container-title": [
+    "Open Forum Infectious Diseases"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://academic.oup.com/ofid/article-pdf/12/Supplement_1/ofae631.2463/61679178/ofae631.2463.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://academic.oup.com/ofid/article-pdf/12/Supplement_1/ofae631.2463/61679178/ofae631.2463.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        29
+      ]
+    ],
+    "date-time": "2025-01-29T22:00:36Z",
+    "timestamp": 1738188036000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://academic.oup.com/ofid/article/doi/10.1093/ofid/ofae631.2463/7988569"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        29
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "Supplement_1",
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          29
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1093/ofid/ofae631.2463",
+  "relation": {},
+  "ISSN": [
+    "2328-8957"
+  ],
+  "issn-type": [
+    {
+      "type": "electronic",
+      "value": "2328-8957"
+    }
+  ],
+  "subject": [],
+  "published-other": {
+    "date-parts": [
+      [
+        2025,
+        2
+      ]
+    ]
+  },
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        29
+      ]
+    ]
+  },
+  "article-number": "ofae631.2463"
+}

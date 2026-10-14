@@ -38,9 +38,12 @@ def main():
         index = {str(r): i for i, r in enumerate(json.load(f)["record_id"])}
     with open(os.path.join(args.raw, SHARE, "gbd_disease_long.csv"), encoding="utf-8", newline="") as f:
         rows = list(csv.DictReader(f))
-    missing = {r["record_id"] for r in rows} - set(index)
+    with open(os.path.join(args.raw, "hee_analysis_master_v2.csv"), encoding="utf-8", newline="") as f:
+        excluded = {r["record_id"] for r in csv.DictReader(f) if r["is_eligible"] != "TRUE"}
+    missing = {r["record_id"] for r in rows} - set(index) - excluded
     if missing:
         raise SystemExit(f"{len(missing)} coded records are not in studies.json, e.g. {sorted(missing)[:3]}")
+    rows = [r for r in rows if r["record_id"] in index]
     l1 = {r["grp"]: L1[r["l1"]] for r in rows}
     n = Counter(r["grp"] for r in rows)
     order = sorted(n, key=lambda g: (list(L1_NAMES).index(l1[g]), -n[g]))

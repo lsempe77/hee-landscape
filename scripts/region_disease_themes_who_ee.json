@@ -1,120 +1,120 @@
 {
  "source": "data/raw team export (v2, 2026-10-11): topic_map.csv + hee_geo_long.csv",
- "n_included": 39004,
+ "n_included": 38958,
  "unit": "full economic evaluations (reviews left out)",
  "regions": {
   "AFR": {
-   "n": 1374,
+   "n": 1373,
    "top": [
     {
      "disease": "HIV",
      "category": "Communicable",
      "n": 346,
-     "share": 0.25181950509461426
+     "share": 0.2520029133284778
     },
     {
      "disease": "Maternal & newborn health",
      "category": "Communicable",
-     "n": 259,
-     "share": 0.18850072780203783
+     "n": 258,
+     "share": 0.18790968681718864
     },
     {
      "disease": "Malaria & dengue",
      "category": "Communicable",
      "n": 136,
-     "share": 0.09898107714701601
+     "share": 0.09905316824471959
     }
    ]
   },
   "AMR": {
-   "n": 9493,
+   "n": 9477,
    "top": [
     {
      "disease": "Breast cancer",
      "category": "Non-communicable",
      "n": 339,
-     "share": 0.035710523543663754
+     "share": 0.035770813548591324
     },
     {
      "disease": "Diabetes",
      "category": "Non-communicable",
      "n": 293,
-     "share": 0.030864847782576636
+     "share": 0.03091695684288277
     },
     {
      "disease": "HIV",
      "category": "Communicable",
      "n": 264,
-     "share": 0.027809965237543453
+     "share": 0.027856916745805635
     }
    ]
   },
   "EMR": {
-   "n": 686,
+   "n": 685,
    "top": [
     {
      "disease": "Maternal & newborn health",
      "category": "Communicable",
      "n": 52,
-     "share": 0.07580174927113703
+     "share": 0.07591240875912408
     },
     {
      "disease": "Viral hepatitis",
      "category": "Communicable",
      "n": 39,
-     "share": 0.056851311953352766
+     "share": 0.05693430656934306
     },
     {
      "disease": "Diabetes",
      "category": "Non-communicable",
      "n": 35,
-     "share": 0.05102040816326531
+     "share": 0.051094890510948905
     }
    ]
   },
   "EUR": {
-   "n": 9501,
+   "n": 9488,
    "top": [
     {
      "disease": "Depression & mental disorders",
      "category": "Non-communicable",
      "n": 622,
-     "share": 0.06546679296916114
+     "share": 0.06555649241146712
     },
     {
      "disease": "Diabetes",
      "category": "Non-communicable",
      "n": 369,
-     "share": 0.038838017050836754
+     "share": 0.03889123102866779
     },
     {
      "disease": "Psoriasis & rheumatoid arthritis",
      "category": "Non-communicable",
-     "n": 300,
-     "share": 0.031575623618566466
+     "n": 298,
+     "share": 0.03140809443507588
     }
    ]
   },
   "SEAR": {
-   "n": 1135,
+   "n": 1133,
    "top": [
     {
      "disease": "Maternal & newborn health",
      "category": "Communicable",
-     "n": 102,
-     "share": 0.08986784140969163
+     "n": 101,
+     "share": 0.08914386584289496
     },
     {
      "disease": "Tuberculosis",
      "category": "Communicable",
      "n": 73,
-     "share": 0.06431718061674009
+     "share": 0.06443071491615181
     },
     {
      "disease": "HIV",
      "category": "Communicable",
      "n": 47,
-     "share": 0.04140969162995595
+     "share": 0.04148278905560459
     }
    ]
   },

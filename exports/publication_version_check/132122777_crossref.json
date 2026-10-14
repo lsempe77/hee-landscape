@@ -1,0 +1,758 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        14
+      ]
+    ],
+    "date-time": "2026-08-14T09:39:19Z",
+    "timestamp": 1786700359892,
+    "version": "build-2736575974"
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "group-title": "SSRN",
+  "reference-count": 66,
+  "publisher": "Elsevier BV",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "abstract": "<jats:p>We develop a novel approach integrating epidemiological and economic models that allows databased simulations during a pandemic. We examine the economically optimal opening strategy that can be reconciled with the containment of a pandemic. The empirical evidence is based on data from Germany during the Sars-Cov-2 pandemic. Our empirical findings reject the view that there is necessarily a conflict between health protection and economic interests and suggest a nonlinear U-shape relationship: it is in the interest of public health and the economy to balance nonpharmaceutical interventions in a manner that further reduces the incidence of infections. Our simulations suggest that a prudent strategy that leads to a reproduction number of around 0.75 is economically optimal. Too restrictive policies cause massive economic costs. Conversely, policies that are too loose lead to higher deaths tolls and higher economic costs in the long run. We suggest this finding as a guide for policymakers in balancing interests of public health and the economy during a pandemic.</jats:p>",
+  "DOI": "10.2139/ssrn.4048521",
+  "type": "posted-content",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        3,
+        3
+      ]
+    ],
+    "date-time": "2022-03-03T22:06:59Z",
+    "timestamp": 1646345219000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+    "The Common Interests of Health Protection and the Economy: Evidence from Scenario Calculations of COVID-19 Containment Policies"
+  ],
+  "prefix": "10.2139",
+  "author": [
+    {
+      "given": "Florian",
+      "family": "Dorn",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sahamoddin",
+      "family": "Khailaie",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Marc",
+      "family": "Stockli",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sebastian C.",
+      "family": "Binder",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Tanmay",
+      "family": "Mitra",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Berit",
+      "family": "Lange",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Stefan",
+      "family": "Lautenbacher",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Andreas",
+      "family": "Peichl",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Patrizio",
+      "family": "Vanella",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Timo",
+      "family": "Wollmershaeuser",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Clemens",
+      "family": "Fuest",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Michael",
+      "family": "Meyer-Hermann",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "ref1",
+      "article-title": "Impact of non-pharmaceutical interventions (NPIs) to reduce COVID19 mortality and healthcare demand",
+      "volume": "9",
+      "author": "Ferguson",
+      "year": "2020",
+      "journal-title": "Report"
+    },
+    {
+      "key": "ref2",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1126/science.abb9789",
+      "article-title": "Inferring change points in the spread of COVID-19 reveals the effectiveness of interventions",
+      "volume": "369",
+      "author": "Dehning",
+      "year": "2020",
+      "journal-title": "Science"
+    },
+    {
+      "key": "ref3",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1186/s12916-020-01884-4",
+      "article-title": "Development of the reproduction number from coronavirus SARS-CoV-2 case data in Germany and implications for political measures",
+      "volume": "19",
+      "author": "S Khailaie",
+      "year": "2021",
+      "journal-title": "BMC Medicine"
+    },
+    {
+      "key": "ref4",
+      "article-title": "The economic costs of the coronavirus shutdown for selected European countries: A scenario calculation",
+      "volume": "25",
+      "author": "Dorn",
+      "year": "2020",
+      "journal-title": "EconPol Policy Brief"
+    },
+    {
+      "key": "ref5",
+      "article-title": "The Great Lockdown",
+      "year": "2020",
+      "journal-title": "IMF, World Economic Outlook"
+    },
+    {
+      "key": "ref6",
+      "doi-asserted-by": "crossref",
+      "first-page": "5149",
+      "DOI": "10.1093/rfs/hhab040",
+      "volume": "34",
+      "author": "Ms Eichenbaum",
+      "year": "2021",
+      "journal-title": "The macroeconomics of epidemics. The Rev. Financial Stud"
+    },
+    {
+      "key": "ref7",
+      "article-title": "A grim calculus: COVID-19 presents stark choices between life, death and the economy. The Econ",
+      "year": "2020",
+      "journal-title": "Economist"
+    },
+    {
+      "key": "ref8",
+      "article-title": "The coronavirus and the great influenza epidemic -lessons from the \"spanish flu\" for the coronavirus's potential effects on mortality and economic activity",
+      "volume": "8166",
+      "author": "Barro",
+      "year": "2020",
+      "journal-title": "CESifo Work. Pap"
+    },
+    {
+      "key": "ref9",
+      "doi-asserted-by": "crossref",
+      "first-page": "166",
+      "DOI": "10.1162/rest_a_01042",
+      "article-title": "Longer-run economic consequences of pandemics",
+      "volume": "104",
+      "author": "Jord�",
+      "year": "2022",
+      "journal-title": "Rev. Econ. Stat"
+    },
+    {
+      "key": "ref10",
+      "first-page": "56",
+      "article-title": "Global economic and financial effects of 21st century pandemics and epidemics",
+      "volume": "5",
+      "author": "Ma",
+      "year": "2020",
+      "journal-title": "Covid Econ"
+    },
+    {
+      "key": "ref11",
+      "article-title": "The challenge of estimating the direct and indirect effects of COVID-19 interventions -an integrated economic and epidemiological approach",
+      "author": "Dorn",
+      "year": "2021",
+      "journal-title": "Work. Pap. mimeo"
+    },
+    {
+      "key": "ref12",
+      "author": "Abele-Brehm",
+      "year": "2020",
+      "journal-title": "Making the fight against the Coronavirus pandemic sustainable"
+    },
+    {
+      "key": "ref13",
+      "article-title": "Pandemics depress the economy, public health interventions do not: evidence from the 1918 flu",
+      "author": "S Correia",
+      "year": "2020",
+      "journal-title": "SSRN"
+    },
+    {
+      "key": "ref14",
+      "volume": "4",
+      "author": "Holtem�ller",
+      "year": "2020",
+      "journal-title": "Integrated assessment of epidemic and economic dynamics. IWH Discuss"
+    },
+    {
+      "key": "ref15",
+      "doi-asserted-by": "crossref",
+      "first-page": "367",
+      "DOI": "10.1257/aeri.20200201",
+      "article-title": "A simple planning problem for COVID-19 lockdown, testing, and tracing",
+      "volume": "3",
+      "author": "D Alvarez",
+      "year": "2021",
+      "journal-title": "Am. Econ. Rev. Insights"
+    },
+    {
+      "key": "ref16",
+      "first-page": "5188",
+      "volume": "34",
+      "author": "T Jones",
+      "year": "2021",
+      "journal-title": "Optimal mitigation policies in a pandemic: Social distancing and working from home. The Rev. Financial Stud"
+    },
+    {
+      "key": "ref17",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1038/s41467-020-18050-2",
+      "article-title": "The geography of COVID-19 spread in Italy and implications for the relaxation of confinement measures",
+      "volume": "11",
+      "author": "Bertuzzo",
+      "year": "2020",
+      "journal-title": "Nat. Commun"
+    },
+    {
+      "key": "ref18",
+      "article-title": "A mathematical model to guide the re-opening of economies during the COVID-19 pandemic",
+      "volume": "57",
+      "author": "Noorbhai",
+      "year": "2020",
+      "journal-title": "Annals Medicine Surger"
+    },
+    {
+      "key": "ref19",
+      "article-title": "Reopening scenarios",
+      "author": "Baqaee",
+      "year": "2020",
+      "journal-title": "NBER Work. Pap"
+    },
+    {
+      "key": "ref20",
+      "article-title": "The great lockdown and the big stimulus: tracing the pandemic possibility frontier for the US",
+      "author": "B Kaplan",
+      "year": "2020",
+      "journal-title": "NBER Work. Pap"
+    },
+    {
+      "key": "ref21",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.jet.2021.105293",
+      "article-title": "Internal and external effects of social distancing in a pandemic",
+      "volume": "196",
+      "author": "Farboodi",
+      "year": "2021",
+      "journal-title": "J. Econ. Theory"
+    },
+    {
+      "key": "ref22",
+      "author": "Miclo",
+      "year": "2005",
+      "journal-title": "Optimal epidemic suppression under an ICU constraint"
+    },
+    {
+      "key": "ref23",
+      "article-title": "Estimating and simulating a SIRD model of COVID-19 for many countries, states, and cities",
+      "author": "C Fern�ndez-Villaverde",
+      "year": "2020",
+      "journal-title": "Work. Pap"
+    },
+    {
+      "key": "ref24",
+      "doi-asserted-by": "crossref",
+      "first-page": "223",
+      "DOI": "10.30958/ajs.5-3-2",
+      "article-title": "Stochastic forecasting of demographic components based on principal component analyses",
+      "volume": "5",
+      "author": "Vanella",
+      "year": "2018",
+      "journal-title": "Athens J. Sci"
+    },
+    {
+      "key": "ref25",
+      "author": "K Sauer",
+      "year": "2020",
+      "journal-title": "Handbuch der Konjunkturumfragen. (ifo Beitr�ge zur Wirtschaftsforschung)"
+    },
+    {
+      "key": "ref26",
+      "article-title": "Subjective uncertainty, expectations, and firm behavior",
+      "author": "Lautenbacher",
+      "year": "2020",
+      "journal-title": "MPRA Work. Pap"
+    },
+    {
+      "key": "ref27",
+      "article-title": "The forecasting power of the ifo business survey",
+      "volume": "8291",
+      "author": "Lehmann",
+      "year": "2020",
+      "journal-title": "CESifo Work. Pap"
+    },
+    {
+      "key": "ref28",
+      "year": "2020",
+      "journal-title": "Federal Statistical Office, Volkswirtschaftliche Gesamtrechnungen. Input-Output-Rechnung nach 12 G�tergruppen / Wirtschafts-und Produktionsbereichen"
+    },
+    {
+      "key": "ref29",
+      "article-title": "Globalization in the time of COVID-19",
+      "volume": "8184",
+      "author": "M Sforza",
+      "year": "2020",
+      "journal-title": "CESifo Work. Pap"
+    },
+    {
+      "key": "ref30",
+      "doi-asserted-by": "crossref",
+      "first-page": "644",
+      "DOI": "10.1001/jama.298.6.644",
+      "article-title": "Nonpharmaceutical interventions implemented by US cities during the 1918-1919 influenza pandemic",
+      "volume": "298",
+      "author": "Markel",
+      "year": "2007",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "ref31",
+      "doi-asserted-by": "crossref",
+      "first-page": "1422",
+      "DOI": "10.1126/science.abc6197",
+      "article-title": "Reducing transmission of SARS-CoV-2",
+      "volume": "368",
+      "author": "C Prather",
+      "year": "2020",
+      "journal-title": "Science"
+    },
+    {
+      "key": "ref32",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1073/pnas.2015954117",
+      "article-title": "Face masks considerably reduce COVID-19 cases in Germany",
+      "volume": "117",
+      "author": "Mitze",
+      "year": "2020",
+      "journal-title": "Proc. Natl. Acad. Sci"
+    },
+    {
+      "key": "ref33",
+      "doi-asserted-by": "crossref",
+      "first-page": "23",
+      "DOI": "10.1016/j.jeconom.2020.09.003",
+      "article-title": "Causal impact of masks, policies, behavior on early COVID-19 pandemic in the US",
+      "volume": "220",
+      "author": "V Chernozhukov",
+      "year": "2020",
+      "journal-title": "J. Econom"
+    },
+    {
+      "key": "ref34",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.jhealeco.2021.102475",
+      "article-title": "Face masks, public policies and slowing the spread of COVID-19: evidence from Canada",
+      "author": "Karaivanov",
+      "year": "2021",
+      "journal-title": "J. Heal. Econ"
+    },
+    {
+      "key": "ref35",
+      "article-title": "Extensions of the SEIR model for the analysis of tailored social distancing and tracing approaches to cope with COVID-19",
+      "volume": "11",
+      "author": "Grimm",
+      "year": "2021",
+      "journal-title": "Sci. Reports"
+    },
+    {
+      "key": "ref36",
+      "article-title": "My home is my castle -the benefits of working from home during a pandemic crisis",
+      "volume": "196",
+      "author": "H Jv Alipour",
+      "year": "2021",
+      "journal-title": "J. Public Econ"
+    },
+    {
+      "key": "ref37",
+      "first-page": "3",
+      "volume": "2020",
+      "author": "Wollmersh�user",
+      "year": "2020"
+    },
+    {
+      "key": "ref38",
+      "year": "2020",
+      "journal-title": "Genesis-Online"
+    },
+    {
+      "key": "ref39",
+      "year": "2020",
+      "journal-title": "Human Mortality Database"
+    },
+    {
+      "key": "ref40",
+      "year": "2020",
+      "journal-title": "Human Mortality Database, United Kingdom, Population size (abridged)"
+    },
+    {
+      "key": "ref41",
+      "article-title": "Human Mortality Database, The United States of America",
+      "year": "2020",
+      "journal-title": "Population"
+    },
+    {
+      "key": "ref42",
+      "first-page": "e261",
+      "author": "Prem",
+      "year": "2020",
+      "journal-title": "The effect of control strategies to reduce social mixing on outcomes of the COVID-19 epidemic in Wuhan, China: a modelling study. The Lancet Public Heal"
+    },
+    {
+      "key": "ref43",
+      "first-page": "1",
+      "article-title": "A stochastic agent-based model of the SARS-CoV-2 epidemic in France",
+      "author": "Hoertel",
+      "year": "2020",
+      "journal-title": "Nat. Medicine"
+    },
+    {
+      "key": "ref44",
+      "article-title": "Mathematical modeling of COVID-19 transmission dynamics with a case study of Wuhan",
+      "volume": "135",
+      "author": "Nda�rou",
+      "year": "2020",
+      "journal-title": "Chaos Solitons Factals"
+    },
+    {
+      "key": "ref45",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1186/s12916-020-01884-4",
+      "article-title": "Development of the reproduction number from coronavirus SARS-CoV-2 case data in Germany and implications for political measures",
+      "volume": "19",
+      "author": "S Khailaie",
+      "year": "2021",
+      "journal-title": "BMC Medicine"
+    },
+    {
+      "key": "ref46",
+      "article-title": "Pitfalls and solutions in case fatality risk estimation -a multi-country analysis on the effects of demographics, surveillance, time lags between reports and deaths and healthcare system capacity on COVID-19 CFR estimates",
+      "author": "Vanella",
+      "year": "2022",
+      "journal-title": "Popul. Res"
+    },
+    {
+      "key": "ref47",
+      "doi-asserted-by": "crossref",
+      "first-page": "365",
+      "DOI": "10.1007/BF00178324",
+      "article-title": "On the definition and the computation of the basic reproduction ratio r0 in models for infectious diseases in heterogeneous populations",
+      "volume": "28",
+      "author": "J A Diekmann",
+      "year": "1990",
+      "journal-title": "J Math Biol"
+    },
+    {
+      "key": "ref48",
+      "doi-asserted-by": "crossref",
+      "first-page": "873",
+      "DOI": "10.1098/rsif.2009.0386",
+      "article-title": "The construction of next-generation matrices for compartmental epidemic models",
+      "volume": "7",
+      "author": "O Diekmann",
+      "year": "2010",
+      "journal-title": "J R Soc Interface"
+    },
+    {
+      "key": "ref49",
+      "doi-asserted-by": "crossref",
+      "first-page": "112",
+      "DOI": "10.1137/S1052623496303470",
+      "article-title": "Convergence properties of the nelder-mead simplex method in low dimensions",
+      "volume": "9",
+      "author": "J A Jc Lagarias",
+      "year": "1998",
+      "journal-title": "SIAM J Optim"
+    },
+    {
+      "key": "ref50",
+      "volume": "88",
+      "author": "K Sauer",
+      "year": "2020",
+      "journal-title": "Handbuch der Konjunkturumfragen. (ifo Beitr�ge zur Wirtschaftsforschung) No"
+    },
+    {
+      "key": "ref51",
+      "article-title": "Subjective uncertainty, expectations, and firm behavior",
+      "author": "Lautenbacher",
+      "year": "2020",
+      "journal-title": "MPRA Work. Pap"
+    },
+    {
+      "key": "ref52",
+      "article-title": "The forecasting power of the ifo business survey",
+      "volume": "8291",
+      "author": "Lehmann",
+      "year": "2020",
+      "journal-title": "CESifo Work. Pap"
+    },
+    {
+      "key": "ref53",
+      "year": "2020",
+      "journal-title": "Federal Statistical Office, Volkswirtschaftliche Gesamtrechnungen. Input-Output-Rechnung nach 12 G�tergruppen / Wirtschafts-und Produktionsbereichen"
+    },
+    {
+      "key": "ref54",
+      "doi-asserted-by": "crossref",
+      "first-page": "1199",
+      "DOI": "10.1056/NEJMoa2001316",
+      "article-title": "Early transmission dynamics in Wuhan, China, of novel coronavirus-infected pneumonia",
+      "volume": "382",
+      "author": "Li",
+      "year": "2020",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "ref55",
+      "doi-asserted-by": "crossref",
+      "first-page": "284",
+      "DOI": "10.1016/j.ijid.2020.02.060",
+      "article-title": "Serial interval of novel coronavirus (COVID-19) infections",
+      "volume": "93",
+      "author": "Nishiura",
+      "year": "2020",
+      "journal-title": "Int J Infect Dis"
+    },
+    {
+      "key": "ref56",
+      "article-title": "Estimating the serial interval of the novel coronavirus disease (COVID-19): A statistical analysis using the public data in Hong Kong from",
+      "author": "Zhao",
+      "year": "2020",
+      "journal-title": "medRxiv"
+    },
+    {
+      "key": "ref57",
+      "article-title": "Clinical presentation and virological assessment of hospitalized cases of coronavirus disease 2019 in a travel-associated transmission cluster",
+      "author": "Woelfel",
+      "year": "2020",
+      "journal-title": "medRxiv"
+    },
+    {
+      "key": "ref58",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1001/jama.2020.1585",
+      "article-title": "Clinical characteristics of 138 hospitalized patients with 2019 novel coronavirus-infected pneumonia in Wuhan",
+      "author": "Wang",
+      "year": "2020",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "ref59",
+      "year": "2020",
+      "journal-title": "Report of the WHO-China joint mission on coronavirus disease 2019"
+    },
+    {
+      "key": "ref60",
+      "author": "Cai",
+      "year": "2020",
+      "journal-title": "2019-nCoV pneumonia in a normal work infectious diseases hospital besides Hubei province, China"
+    },
+    {
+      "key": "ref61",
+      "article-title": "Clinical characteristics of coronavirus disease 2019 in China",
+      "author": "Wj Guan",
+      "year": "2020",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "ref62",
+      "year": "2020",
+      "journal-title": "Steckbrief zur Coronavirus-Krankheit-2019"
+    },
+    {
+      "key": "ref63",
+      "first-page": "145",
+      "article-title": "Novel Coronavirus Pneumonia Emergency Response Epidemiology Team, The epidemiological characteristics of an outbreak of 2019 novel coronavirus diseases (COVID-19) in China",
+      "volume": "41",
+      "year": "2020",
+      "journal-title": "Zhonghua Liu Xing Bing Xue Za Zhi"
+    },
+    {
+      "key": "ref64",
+      "year": "2020",
+      "journal-title": "Report sulle caratteristiche dei pazienti deceduti positivi a COVID-19 in Italia. il presente report � basato sui dati aggiornati al 20 marzo 2020"
+    },
+    {
+      "key": "ref65",
+      "article-title": "Estimates of the severity of COVID-19 disease",
+      "author": "Verity",
+      "year": "2020",
+      "journal-title": "medRxiv"
+    },
+    {
+      "key": "ref66",
+      "author": "Khailaie Dorn"
+    }
+  ],
+  "container-title": [],
+  "original-title": [],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        14
+      ]
+    ],
+    "date-time": "2026-08-14T09:17:50Z",
+    "timestamp": 1786699070000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.ssrn.com/abstract=4048521"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "references-count": 66,
+  "URL": "https://doi.org/10.2139/ssrn.4048521",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "subtype": "preprint"
+}

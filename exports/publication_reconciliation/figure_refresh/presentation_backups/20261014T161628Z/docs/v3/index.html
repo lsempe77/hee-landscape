@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEE evidence map — interactive</title>
+<!-- The Google Fonts stylesheet (Inter/Newsreader) is loaded via @import in
+     styles.css and deliberately carries NO SRI: the fonts.googleapis.com CSS
+     response varies by user agent (woff2 vs ttf rules), so a fixed integrity
+     hash would break legitimate clients. The jsdelivr assets below are pinned
+     versions with SHA-384 integrity hashes verified by double fetch. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css?v=2026-10-11-ris-links">
+</head>
+<body>
+
+<nav class="navbar">
+  <!-- Site title hidden: the map is embedded in a larger shared platform.
+  <a class="navbar-brand" href="#">HEE evidence map</a>
+  -->
+  <div class="navbar-nav">
+    <button class="nav-link active" data-tab="overview">Overview</button>
+    <div class="nav-dropdown" id="thematic-nav">
+      <button class="nav-link nav-dropdown-toggle" id="thematic-toggle" data-tab="gallery"
+              aria-expanded="false" aria-controls="thematic-menu">
+        Thematic analysis <span class="nav-chevron" aria-hidden="true"></span>
+      </button>
+      <div class="nav-dropdown-menu" id="thematic-menu" role="menu" hidden></div>
+    </div>
+    <button class="nav-link" data-tab="explorer">Explorer</button>
+    <button class="nav-link" data-tab="countries">Countries</button>
+    <!-- Methods tab removed: methods are provided by the shared platform. -->
+  </div>
+  <!-- "bundle" build stamp hidden: provided by the shared platform.
+  <span class="navbar-text" id="nav-built"></span>
+  -->
+</nav>
+
+<!-- v2 preview banner (2026-10-07): this build is published beside the live site at /v2/;
+     the link is relative so it resolves to the parent (published) site. -->
+<div class="preview-banner" role="note">Preview: rebuilt on the revised dataset (41,657 studies,
+  October 2026). The published version is at <a href="../">../</a></div>
+
+<main>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="tab-pane active" id="pane-overview">
+    <div class="overview-intro">
+      <h2 class="hero-title">Where health-economic evidence exists — and where it is missing</h2>
+      <!-- Hero paragraph rendered by app.js from content.json `hero` segments
+           (DATA_CONTRACT.md §15.2) — no hardcoded copy. -->
+      <p class="hero-text" id="ov-hero"></p>
+      <div class="glance-head">
+        <h2 class="glance-title">The evidence base at a glance</h2>
+        <span class="glance-hint"><span class="glance-hint-icon" aria-hidden="true">&#8599;</span>Click a card to open its analysis</span>
+      </div>
+      <div id="ov-tiles"></div>
+    </div>
+    <div class="card overview-trend-card">
+      <div class="card-header overview-trend-header">
+        <span>Studies over time</span>
+        <div class="trend-toggle" role="group" aria-label="Chart view">
+          <button class="trend-toggle-btn active" type="button" data-trend-mode="annual" aria-pressed="true">Per year</button>
+          <button class="trend-toggle-btn" type="button" data-trend-mode="cumulative" aria-pressed="false">Cumulative</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="ov-trend" class="plot overview-trend-plot"></div>
+      </div>
+    </div>
+    <!-- Figure cards built by app.js; titles and "More on …" links come from content.json. -->
+    <div class="overview-analysis-grid" id="ov-hero-imgs"></div>
+  </section>
+
+  <!-- ============ THEMATIC ANALYSIS ============ -->
+  <section class="tab-pane" id="pane-gallery">
+    <div class="theme-wrap">
+      <div id="gal-index">
+        <header class="thematic-hero">
+          <img class="thematic-hero-map" src="figures/fig_worldmap.webp" alt="" aria-hidden="true">
+          <div class="thematic-hero-copy">
+            <div class="thematic-eyebrow">Thematic analysis</div>
+            <h1>Explore key patterns in the health economic evaluation evidence base.</h1>
+          </div>
+        </header>
+        <div class="thematic-grid" id="gal-section-index"></div>
+      </div>
+      <div id="gal-section" style="display:none">
+        <button class="back-link" id="gal-back">&larr; All themes</button>
+        <h2 class="hero-title" id="gal-sec-title"></h2>
+        <p class="theme-blurb" id="gal-sec-blurb"></p>
+        <div class="fig-grid" id="gal-sec-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORER ============ -->
+  <section class="tab-pane" id="pane-explorer">
+    <div class="explorer-layout">
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Filter the corpus</h2>
+
+        <div class="control-group">
+          <label class="control-label" for="x-years">Publication years</label>
+          <div class="slider-wrap"><div id="x-years"></div></div>
+          <div class="slider-readout" id="x-years-readout"></div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="x-income">Income group</label>
+          <select id="x-income" multiple placeholder="All groups"></select>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-region">UN region</label>
+          <select id="x-region" multiple placeholder="All regions"></select>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-disease">Disease area</label>
+          <select id="x-disease" multiple placeholder="All areas"></select>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-evaltype">Evaluation type</label>
+          <select id="x-evaltype" multiple placeholder="All types"></select>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-design">Design basis</label>
+          <select id="x-design" multiple placeholder="All designs"></select>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Approach</label>
+          <div class="radio-inline" id="x-model"></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">QALY use</label>
+          <div class="radio-inline" id="x-qaly"></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Open access</label>
+          <div class="radio-inline" id="x-oa"></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="x-scope">Geographic scope</label>
+          <select id="x-scope" class="form-select"></select>
+        </div>
+
+        <button class="btn-outline-secondary" id="x-reset">Reset filters</button>
+        <hr>
+        <p class="text-muted">
+          Every filter combines. Open-access status is known for 93% of the corpus; “Unknown”
+          records are excluded when a side is chosen. Country panels count a multi-country
+          study once per country it is about.
+        </p>
+      </aside>
+
+      <div class="explorer-main">
+        <div class="grid-4 summary-tiles" id="x-tiles">
+          <div class="value-box bg-primary"><div class="value-box-title">Studies in view</div><div class="value-box-value" id="v-studies">—</div></div>
+          <div class="value-box bg-info"><div class="value-box-title">Countries in view</div><div class="value-box-value" id="v-countries">—</div></div>
+          <div class="value-box bg-secondary"><div class="value-box-title">Model-based</div><div class="value-box-value" id="v-model">—</div></div>
+          <div class="value-box bg-success"><div class="value-box-title">Uses a QALY</div><div class="value-box-value" id="v-qaly">—</div></div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">Studies over time</div>
+            <div class="card-body">
+              <div class="chart-toolbar">
+                <div class="tb-field"><label for="x-trend-by">Colour by</label><select id="x-trend-by" class="form-select"></select></div>
+              </div>
+              <div id="x-trend" class="plot" style="height:320px"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Map — intensity by country</div>
+            <div class="card-body">
+              <div class="chart-toolbar">
+                <div class="tb-field"><label for="x-map-metric">Metric</label><select id="x-map-metric" class="form-select"></select></div>
+              </div>
+              <div id="x-map" class="plot" style="height:320px"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Composition of the filtered corpus</div>
+            <div class="card-body">
+              <div class="chart-toolbar">
+                <div class="tb-field wide"><label for="x-comp-var">Variable</label><select id="x-comp-var" class="form-select"></select></div>
+                <div class="tb-field wide"><label for="x-comp-stack">Group by</label><select id="x-comp-stack" class="form-select"></select></div>
+                <div class="tb-field"><label for="x-comp-mode">Measure</label><select id="x-comp-mode" class="form-select"></select></div>
+              </div>
+              <div id="x-comp" class="plot" style="height:340px"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Countries — any two variables</div>
+            <div class="card-body">
+              <div class="chart-toolbar">
+                <div class="tb-field wide"><label for="x-scatter-x">X axis</label><select id="x-scatter-x" class="form-select"></select></div>
+                <div class="tb-field wide"><label for="x-scatter-y">Y axis</label><select id="x-scatter-y" class="form-select"></select></div>
+              </div>
+              <div id="x-scatter" class="plot" style="height:340px"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Top countries in this view</div>
+          <div class="card-body">
+            <div class="table-wrap"><table class="dataTable" id="x-table"></table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTRY LANDSCAPE ============ -->
+  <section class="tab-pane" id="pane-landscape">
+    <div class="country-view-tabs" role="tablist" aria-label="Country views">
+      <button class="country-view-tab active" type="button" data-country-view="landscape" role="tab" aria-selected="true">Country landscape</button>
+      <button class="country-view-tab" type="button" data-country-view="profile" role="tab" aria-selected="false">Country profile</button>
+    </div>
+    <div class="card" id="land-intro-card"><div class="card-body">
+      <h2 class="hero-title">Country landscape</h2>
+      <p class="hero-text">This tab is <strong>unfiltered</strong>: it always shows the whole
+        corpus and does not read or change the Explorer filters. Click a bubble to select a
+        country and fill the two mix panels and the disease-group × evaluation-type grid below.
+        Click a heatmap cell to read the studies behind it. You can also search for a country
+        with the picker below.</p>
+      <div class="control-group land-picker">
+        <label class="control-label" for="land-country">Pick a country</label>
+        <select id="land-country" placeholder="Pick a country…"></select>
+      </div>
+    </div></div>
+
+    <div class="card">
+      <div class="card-header">Disease burden × health spending × income group</div>
+      <div class="card-body"><div id="land-scatter" class="plot" style="height:440px"></div></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header">Evaluation-type mix — <span id="land-eval-mix-title"></span></div>
+        <div class="card-body"><div id="land-eval-mix" class="plot" style="height:340px"></div></div>
+      </div>
+      <div class="card">
+        <div class="card-header">Disease-group mix — <span id="land-disease-mix-title"></span></div>
+        <div class="card-body"><div id="land-disease-mix" class="plot" style="height:340px"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Disease group × evaluation type — <span id="land-cross-title"></span></div>
+      <div class="card-body">
+        <div id="land-cross-heatmap" class="plot" style="height:420px"></div>
+        <p class="fig-caption">Each cell is a share of its disease-group row, so a row with any
+          studies sums to 100% across the evaluation types. A study can sit in several disease
+          groups, so rows can overlap and their totals exceed the country’s study count.
+          Click a cell to open the studies behind it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTRY PROFILE ============ -->
+  <section class="tab-pane" id="pane-country">
+    <div class="country-view-tabs" role="tablist" aria-label="Country views">
+      <button class="country-view-tab" type="button" data-country-view="landscape" role="tab" aria-selected="false">Country landscape</button>
+      <button class="country-view-tab active" type="button" data-country-view="profile" role="tab" aria-selected="true">Country profile</button>
+    </div>
+    <div class="explorer-layout">
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Country</h2>
+        <div class="control-group">
+          <select id="c-picker" placeholder="Pick a country…"></select>
+        </div>
+        <dl class="fact-list" id="c-facts"></dl>
+      </aside>
+      <div class="explorer-main">
+        <div class="grid-4 summary-tiles" id="c-tiles">
+          <div class="value-box bg-primary"><div class="value-box-title">Eligible studies</div><div class="value-box-value" id="c-n">—</div></div>
+          <div class="value-box bg-info"><div class="value-box-title">Per 100k DALYs</div><div class="value-box-value" id="c-daly">—</div></div>
+          <div class="value-box bg-secondary"><div class="value-box-title">Per US$1bn spending</div><div class="value-box-value" id="c-spend">—</div></div>
+          <div class="value-box bg-success"><div class="value-box-title">Per million people</div><div class="value-box-value" id="c-percap">—</div></div>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">Output over time — country vs income-group mean</div>
+            <div class="card-body"><div id="c-trend" class="plot" style="height:320px"></div></div>
+          </div>
+          <div class="card">
+            <div class="card-header">Disease mix — country vs income group</div>
+            <div class="card-body"><div id="c-mix" class="plot" style="height:320px"></div></div>
+          </div>
+          <div class="card">
+            <div class="card-header">Evaluation-method mix — country vs income group</div>
+            <div class="card-body"><div id="c-methods" class="plot" style="height:320px"></div></div>
+          </div>
+          <div class="card">
+            <div class="card-header">Approach & reporting — country vs income group</div>
+            <div class="card-body"><div id="c-signals" class="plot" style="height:320px"></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Where the country sits among its income peers</div>
+          <div class="card-body"><div id="c-benchmark" class="plot" style="height:380px"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<div class="modal-backdrop" id="fig-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="fig-modal-title"></h3>
+        <div class="figure-modal-actions">
+          <div class="figure-zoom-controls" aria-label="Figure zoom controls">
+            <button class="figure-zoom-button" id="fig-zoom-out" type="button"
+                    title="Zoom out" aria-label="Zoom out">−</button>
+            <button class="figure-zoom-level" id="fig-zoom-reset" type="button"
+                    title="Reset zoom" aria-label="Reset zoom">100%</button>
+            <button class="figure-zoom-button" id="fig-zoom-in" type="button"
+                    title="Zoom in" aria-label="Zoom in">+</button>
+          </div>
+          <button class="modal-close" id="fig-modal-close">Close</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="figure-zoom-viewport" id="fig-zoom-viewport">
+          <img class="modal-fig" id="fig-modal-img" src="" alt="">
+        </div>
+        <p class="fig-caption" id="fig-modal-caption" style="margin-top:.6rem"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="study-modal">
+  <div class="modal-dialog study-modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="study-modal-title"></h3>
+        <button class="modal-close" id="study-modal-close">Close</button>
+      </div>
+      <div class="modal-body">
+        <p class="study-count" id="study-modal-count"></p>
+        <div class="study-list" id="study-modal-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  Sources: GBD 2023 (IHME) · IHME Health Spending 1995–2022 · World Bank · OpenAlex/CrossRef/PubMed harvest
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
+<script type="module" src="app.js?v=2026-10-14-all-figures-reconciled"></script>
+
+</body>
+</html>

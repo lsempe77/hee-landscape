@@ -1,0 +1,743 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        7
+      ]
+    ],
+    "date-time": "2026-10-07T22:15:01Z",
+    "timestamp": 1791411301870,
+    "version": "4.3.3"
+  },
+  "reference-count": 42,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "4",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2016,
+            2,
+            9
+          ]
+        ],
+        "date-time": "2016-02-09T00:00:00Z",
+        "timestamp": 1454976000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "http://www.springer.com/tdm"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001590",
+      "name": "Health Research Board",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "HRA_HSR/2010/14"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "HRA_HSR/2010/14"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001590",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Drugs Aging"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2016,
+        4
+      ]
+    ]
+  },
+  "DOI": "10.1007/s40266-016-0348-3",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2016,
+        2,
+        9
+      ]
+    ],
+    "date-time": "2016-02-09T09:58:31Z",
+    "timestamp": 1455011911000
+  },
+  "page": "285-294",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 43,
+  "title": [
+    "Structured Pharmacist Review of Medication in Older Hospitalised Patients: A Cost-Effectiveness Analysis"
+  ],
+  "prefix": "10.1007",
+  "volume": "33",
+  "author": [
+    {
+      "given": "James",
+      "family": "Gallagher",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "David",
+      "family": "O’Sullivan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Suzanne",
+      "family": "McCarthy",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Paddy",
+      "family": "Gillespie",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Noel",
+      "family": "Woods",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Denis",
+      "family": "O’Mahony",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Stephen",
+      "family": "Byrne",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2016,
+        2,
+        9
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "4",
+      "key": "348_CR1",
+      "doi-asserted-by": "crossref",
+      "first-page": "222",
+      "DOI": "10.1136/ejhpharm-2014-000512",
+      "volume": "22",
+      "author": "MG Scott",
+      "year": "2015",
+      "unstructured": "Scott MG, Scullin C, Hogg A, et al. Integrated medicines management to medicines optimisation in Northern Ireland (2000-2014): a review. Eur J Hosp Pharm Sci Pract. 2015;22(4):222–8.",
+      "journal-title": "Eur J Hosp Pharm Sci Pract."
+    },
+    {
+      "issue": "1",
+      "key": "348_CR2",
+      "first-page": "e148",
+      "volume": "4",
+      "author": "EL Forget",
+      "year": "2008",
+      "unstructured": "Forget EL, Roos LL, Deber RB, et al. Variations in lifetime healthcare costs across a population. Healthc Policy. 2008;4(1):e148–67.",
+      "journal-title": "Healthc Policy."
+    },
+    {
+      "issue": "9582",
+      "key": "348_CR3",
+      "doi-asserted-by": "crossref",
+      "first-page": "173",
+      "DOI": "10.1016/S0140-6736(07)61091-5",
+      "volume": "370",
+      "author": "A Spinewine",
+      "year": "2007",
+      "unstructured": "Spinewine A, Schmader KE, Barber N, et al. Appropriate prescribing in elderly people: how well can it be measured and optimised? Lancet. 2007;370(9582):173–84.",
+      "journal-title": "Lancet."
+    },
+    {
+      "issue": "1",
+      "key": "348_CR4",
+      "doi-asserted-by": "crossref",
+      "first-page": "63",
+      "DOI": "10.1007/s40266-015-0329-y",
+      "volume": "33",
+      "author": "D O’Sullivan",
+      "year": "2016",
+      "unstructured": "O’Sullivan D, O’Mahony D, O’Connor MN, et al. Prevention of adverse drug reactions in hospitalized older patients using a software-supported structured pharmacist intervention: a cluster randomized controlled trial. Drugs Aging. 2016;33(1):63–73.",
+      "journal-title": "Drugs Aging."
+    },
+    {
+      "issue": "4",
+      "key": "348_CR5",
+      "doi-asserted-by": "crossref",
+      "first-page": "573",
+      "DOI": "10.1111/j.1365-2125.2012.04331.x",
+      "volume": "74",
+      "author": "A Blenkinsopp",
+      "year": "2012",
+      "unstructured": "Blenkinsopp A, Bond C, Raynor DK. Medication reviews. Br J Clin Pharmacol. 2012;74(4):573–80.",
+      "journal-title": "Br J Clin Pharmacol."
+    },
+    {
+      "issue": "9",
+      "key": "348_CR6",
+      "doi-asserted-by": "crossref",
+      "first-page": "744",
+      "DOI": "10.1310/hpj4809-744",
+      "volume": "48",
+      "author": "S Calloway",
+      "year": "2013",
+      "unstructured": "Calloway S, Akilo HA, Bierman K. Impact of a clinical decision support system on pharmacy clinical interventions, documentation efforts, and costs. Hosp Pharm. 2013;48(9):744–52.",
+      "journal-title": "Hosp Pharm."
+    },
+    {
+      "issue": "2",
+      "key": "348_CR7",
+      "doi-asserted-by": "crossref",
+      "first-page": "108",
+      "DOI": "10.1001/archinternmed.2008.520",
+      "volume": "169",
+      "author": "R Amarasingham",
+      "year": "2009",
+      "unstructured": "Amarasingham R, Plantinga L, Diener-West M, et al. Clinical information technologies and inpatient outcomes: a multiple hospital study. Arch Intern Med. 2009;169(2):108–14.",
+      "journal-title": "Arch Intern Med."
+    },
+    {
+      "issue": "9",
+      "key": "348_CR8",
+      "doi-asserted-by": "crossref",
+      "first-page": "773",
+      "DOI": "10.1136/bmjqs-2013-002165",
+      "volume": "23",
+      "author": "SR Ranji",
+      "year": "2014",
+      "unstructured": "Ranji SR, Rennke S, Wachter RM. Computerised provider order entry combined with clinical decision support systems to improve medication safety: a narrative review. BMJ Qual Saf. 2014;23(9):773–80.",
+      "journal-title": "BMJ Qual Saf."
+    },
+    {
+      "issue": "2",
+      "key": "348_CR9",
+      "doi-asserted-by": "crossref",
+      "first-page": "72",
+      "DOI": "10.5414/CPP46072",
+      "volume": "46",
+      "author": "P Gallagher",
+      "year": "2008",
+      "unstructured": "Gallagher P, Ryan C, Byrne S, et al. STOPP (Screening Tool of Older Person’s Prescriptions) and START (Screening Tool to Alert doctors to Right Treatment). Consensus validation. Int J Clin Pharmacol Ther. 2008;46(2):72–83.",
+      "journal-title": "Int J Clin Pharmacol Ther."
+    },
+    {
+      "issue": "5",
+      "key": "348_CR10",
+      "doi-asserted-by": "crossref",
+      "first-page": "360",
+      "DOI": "10.1111/jcpt.12059",
+      "volume": "38",
+      "author": "B Hill-Taylor",
+      "year": "2013",
+      "unstructured": "Hill-Taylor B, Sketris I, Hayden J, et al. Application of the STOPP/START criteria: a systematic review of the prevalence of potentially inappropriate prescribing in older adults, and evidence of clinical, humanistic and economic impact. J Clin Pharm Ther. 2013;38(5):360–72.",
+      "journal-title": "J Clin Pharm Ther."
+    },
+    {
+      "issue": "6",
+      "key": "348_CR11",
+      "doi-asserted-by": "crossref",
+      "first-page": "471",
+      "DOI": "10.1007/s40266-014-0172-6",
+      "volume": "31",
+      "author": "D O’Sullivan",
+      "year": "2014",
+      "unstructured": "O’Sullivan D, O’Mahony D, O’Connor MN, et al. The impact of a structured pharmacist intervention on the appropriateness of prescribing in older hospitalized patients. Drugs Aging. 2014;31(6):471–81.",
+      "journal-title": "Drugs Aging."
+    },
+    {
+      "issue": "12",
+      "key": "348_CR12",
+      "doi-asserted-by": "crossref",
+      "first-page": "1161",
+      "DOI": "10.2146/ajhp070506",
+      "volume": "65",
+      "author": "T Rijdt De",
+      "year": "2008",
+      "unstructured": "De Rijdt T, Willems L, Simoens S. Economic effects of clinical pharmacy interventions: a literature review. Am J Health Syst Pharm. 2008;65(12):1161–72.",
+      "journal-title": "Am J Health Syst Pharm."
+    },
+    {
+      "issue": "19",
+      "key": "348_CR13",
+      "doi-asserted-by": "crossref",
+      "first-page": "1624",
+      "DOI": "10.2146/ajhp100077",
+      "volume": "67",
+      "author": "MA Chisholm-Burns",
+      "year": "2010",
+      "unstructured": "Chisholm-Burns MA, Graff Zivin JS, Lee JK, et al. Economic effects of pharmacists on health outcomes in the United States: a systematic review. Am J Health Syst Pharm. 2010;67(19):1624–34.",
+      "journal-title": "Am J Health Syst Pharm."
+    },
+    {
+      "issue": "1",
+      "key": "348_CR14",
+      "doi-asserted-by": "crossref",
+      "first-page": "11",
+      "DOI": "10.2165/00019053-200927010-00003",
+      "volume": "27",
+      "author": "AG Zermansky",
+      "year": "2009",
+      "unstructured": "Zermansky AG, Silcock J. Is medication review by primary-care pharmacists for older people cost effective? A narrative review of the literature, focusing on costs and benefits. Pharmacoeconomics. 2009;27(1):11–24.",
+      "journal-title": "Pharmacoeconomics."
+    },
+    {
+      "issue": "1",
+      "key": "348_CR15",
+      "doi-asserted-by": "crossref",
+      "first-page": "45",
+      "DOI": "10.1016/j.eurger.2010.01.007",
+      "volume": "1",
+      "author": "D O’Mahony",
+      "year": "2010",
+      "unstructured": "O’Mahony D, Gallagher P, Ryan C, et al. STOPP & START criteria: a new approach to detecting potentially inappropriate prescribing in old age. Eur Geriatr Med. 2010;1(1):45–51.",
+      "journal-title": "Eur Geriatr Med."
+    },
+    {
+      "issue": "22",
+      "key": "348_CR16",
+      "doi-asserted-by": "crossref",
+      "first-page": "2716",
+      "DOI": "10.1001/archinte.163.22.2716",
+      "volume": "163",
+      "author": "DM Fick",
+      "year": "2003",
+      "unstructured": "Fick DM, Cooper JW, Wade WE, et al. Updating the Beers criteria for potentially inappropriate medication use in older adults: results of a US consensus panel of experts. JAMA Intern Med. 2003;163(22):2716–24.",
+      "journal-title": "JAMA Intern Med."
+    },
+    {
+      "issue": "31–32",
+      "key": "348_CR17",
+      "first-page": "543",
+      "volume": "107",
+      "author": "S Holt",
+      "year": "2010",
+      "unstructured": "Holt S, Schmiedl S, Thürmann PA. Potentially inappropriate medications in the elderly: the PRISCUS list. Dtsch Arztebl Int. 2010;107(31–32):543.",
+      "journal-title": "Dtsch Arztebl Int."
+    },
+    {
+      "key": "348_CR18",
+      "volume-title": "British national formulary 61",
+      "author": "Royal Pharmaceutical Society of Great Britain",
+      "year": "2011",
+      "unstructured": "Royal Pharmaceutical Society of Great Britain. British national formulary 61. 61st ed. London: Pharmaceutical Press; 2011.",
+      "edition": "61"
+    },
+    {
+      "issue": "2",
+      "key": "348_CR19",
+      "doi-asserted-by": "crossref",
+      "first-page": "117",
+      "DOI": "10.1017/S0266462313000160",
+      "volume": "29",
+      "author": "D Husereau",
+      "year": "2013",
+      "unstructured": "Husereau D, Drummond M, Petrou S, et al. Consolidated Health Economic Evaluation Reporting Standards (CHEERS) statement. Int J Technol Assess Health Care. 2013;29(2):117–22.",
+      "journal-title": "Int J Technol Assess Health Care."
+    },
+    {
+      "key": "348_CR20",
+      "unstructured": "Economic and Social Research Institute. Activity in acute public hospitals in Ireland. Annual report 2012. http://www.hpo.ie/latest_hipe_nprs_reports/HIPE_2012/HIPE_Report_2012.pdf . Accessed 20 Oct 2015."
+    },
+    {
+      "key": "348_CR21",
+      "doi-asserted-by": "crossref",
+      "first-page": "e5661",
+      "DOI": "10.1136/bmj.e5661",
+      "volume": "345",
+      "author": "MK Campbell",
+      "year": "2012",
+      "unstructured": "Campbell MK, Piaggio G, Elbourne DR, et al. Consort 2010 statement: extension to cluster randomised trials. BMJ. 2012;345:e5661.",
+      "journal-title": "BMJ."
+    },
+    {
+      "key": "348_CR22",
+      "unstructured": "Health Information and Quality Authority. Guidelines for the economic evaluation of health technologies in Ireland. 2014. http://www.hiqa.ie/publications/guidelines-economic-evaluation-health-technologies-ireland-0 . Accessed 20 Oct 2015."
+    },
+    {
+      "key": "348_CR23",
+      "unstructured": "Health Service Executive. Consolidated salary scales in accordance with Financial Emergency Measures in the Public Interest Act 2013. http://www.hse.ie/eng/staff/Benefits_Services/pay/July%202013.pdf . Accessed 20 Oct 2015."
+    },
+    {
+      "key": "348_CR24",
+      "unstructured": "National Casemix Programme. Ready reckoner of acute hospital inpatient and daycase activity and costs (summarised by DRG) relating to 2011 costs and activity. Health Service Executive; 2013. http://www.hse.ie/eng/services/list/1/schemes/cbd/Ready%20Reckoner.pdf . Accessed 26 Jan 2016."
+    },
+    {
+      "issue": "4",
+      "key": "348_CR25",
+      "doi-asserted-by": "crossref",
+      "first-page": "586",
+      "DOI": "10.1111/j.1532-5415.2011.03354.x",
+      "volume": "59",
+      "author": "SM Patterson",
+      "year": "2011",
+      "unstructured": "Patterson SM, Hughes CM, Cardwell C, et al. A cluster randomized controlled trial of an adapted U.S. model of pharmaceutical care for nursing home residents in Northern Ireland (Fleetwood Northern Ireland study): a cost-effectiveness analysis. J Am Geriatr Soc. 2011;59(4):586–93.",
+      "journal-title": "J Am Geriatr Soc."
+    },
+    {
+      "issue": "5",
+      "key": "348_CR26",
+      "doi-asserted-by": "crossref",
+      "first-page": "571",
+      "DOI": "10.1093/geront/36.5.571",
+      "volume": "36",
+      "author": "CA McHorney",
+      "year": "1996",
+      "unstructured": "McHorney CA. Measuring and monitoring general health status in elderly persons: practical and methodological issues in using the SF-36 Health Survey. Gerontologist. 1996;36(5):571–83.",
+      "journal-title": "Gerontologist."
+    },
+    {
+      "key": "348_CR27",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1093/oso/9780198529446.001.0001",
+      "volume-title": "Methods for the economic evaluation of health care programmes",
+      "author": "MF Drummond",
+      "year": "2005",
+      "unstructured": "Drummond MF, Sculpher MJ, Torrance GW, et al. Methods for the economic evaluation of health care programmes. 3rd ed. Oxford: Oxford Medical Publications; 2005.",
+      "edition": "3"
+    },
+    {
+      "issue": "2",
+      "key": "348_CR28",
+      "doi-asserted-by": "crossref",
+      "first-page": "350",
+      "DOI": "10.1177/0272989X11418372",
+      "volume": "32",
+      "author": "M Gomes",
+      "year": "2012",
+      "unstructured": "Gomes M, Ng ES, Grieve R, Nixon R, et al. Developing appropriate methods for cost-effectiveness analysis of cluster randomized trials. Med Decis Making. 2012;32(2):350–61.",
+      "journal-title": "Med Decis Making."
+    },
+    {
+      "issue": "11",
+      "key": "348_CR29",
+      "doi-asserted-by": "crossref",
+      "first-page": "e003479",
+      "DOI": "10.1136/bmjopen-2013-003479",
+      "volume": "3",
+      "author": "P Gillespie",
+      "year": "2013",
+      "unstructured": "Gillespie P, O’Shea E, Casey D, et al. The cost-effectiveness of a structured education pulmonary rehabilitation programme for chronic obstructive pulmonary disease in primary care: the PRINCE cluster randomised trial. BMJ Open. 2013;3(11):e003479.",
+      "journal-title": "BMJ Open."
+    },
+    {
+      "key": "348_CR30",
+      "doi-asserted-by": "crossref",
+      "first-page": "106",
+      "DOI": "10.1192/bjp.187.2.106",
+      "volume": "187",
+      "author": "E Fenwick",
+      "year": "2005",
+      "unstructured": "Fenwick E, Byford S. A guide to cost-effectiveness acceptability curves. Br J Psychiatry. 2005;187:106–8.",
+      "journal-title": "Br J Psychiatry."
+    },
+    {
+      "issue": "6",
+      "key": "348_CR31",
+      "doi-asserted-by": "crossref",
+      "first-page": "626",
+      "DOI": "10.1002/pds.2118",
+      "volume": "20",
+      "author": "D Rottenkolber",
+      "year": "2011",
+      "unstructured": "Rottenkolber D, Schmiedl S, Rottenkolber M, et al. Adverse drug reactions in Germany: direct costs of internal medicine hospitalizations. Pharmacoepidemiol Drug Saf. 2011;20(6):626–34.",
+      "journal-title": "Pharmacoepidemiol Drug Saf."
+    },
+    {
+      "issue": "1",
+      "key": "348_CR32",
+      "doi-asserted-by": "crossref",
+      "first-page": "128",
+      "DOI": "10.1592/phco.29.1.128",
+      "volume": "29",
+      "author": "A Perez",
+      "year": "2009",
+      "unstructured": "Perez A, Doloresco F, Hoffman JM, et al. ACCP: economic evaluations of clinical pharmacy services: 2001-2005. Pharmacotherapy. 2009;29(1):128.",
+      "journal-title": "Pharmacotherapy."
+    },
+    {
+      "issue": "4",
+      "key": "348_CR33",
+      "doi-asserted-by": "crossref",
+      "first-page": "481",
+      "DOI": "10.1592/phco.27.4.481",
+      "volume": "27",
+      "author": "CA Bond",
+      "year": "2007",
+      "unstructured": "Bond CA, Raehl CL. Clinical pharmacy services, pharmacy staffing, and hospital mortality rates. Pharmacotherapy. 2007;27(4):481–93.",
+      "journal-title": "Pharmacotherapy."
+    },
+    {
+      "issue": "6",
+      "key": "348_CR34",
+      "doi-asserted-by": "crossref",
+      "first-page": "1101",
+      "DOI": "10.1007/s11096-014-0008-9",
+      "volume": "36",
+      "author": "J Gallagher",
+      "year": "2014",
+      "unstructured": "Gallagher J, McCarthy S, Byrne S. Economic evaluations of clinical pharmacist interventions on hospital inpatients: a systematic review of recent literature. Int J Clin Pharm. 2014;36(6):1101–14.",
+      "journal-title": "Int J Clin Pharm."
+    },
+    {
+      "key": "348_CR35",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Nkansah N, Mostovetsky O, Yu C, et al. Effect of outpatient pharmacists’ non-dipensing roles on patient outcomes and prescribing patterns. Cochrane Database Syst Rev. 2010;(7):CD000336.",
+      "DOI": "10.1002/14651858.CD000336.pub2"
+    },
+    {
+      "issue": "1",
+      "key": "348_CR36",
+      "doi-asserted-by": "crossref",
+      "first-page": "e001563",
+      "DOI": "10.1136/bmjopen-2012-001563",
+      "volume": "3",
+      "author": "O Ghatnekar",
+      "year": "2013",
+      "unstructured": "Ghatnekar O, Bondesson A, Persson U, et al. Health economic evaluation of the Lund Integrated Medicines Management Model (LIMM) in elderly patients admitted to hospital. BMJ Open. 2013;3(1):e001563.",
+      "journal-title": "BMJ Open."
+    },
+    {
+      "issue": "9",
+      "key": "348_CR37",
+      "doi-asserted-by": "crossref",
+      "first-page": "894",
+      "DOI": "10.1001/archinternmed.2009.71",
+      "volume": "169",
+      "author": "U Gillespie",
+      "year": "2009",
+      "unstructured": "Gillespie U, Alassaad A, Henrohn D, et al. A comprehensive pharmacist intervention to reduce morbidity in patients 80 years or older: a randomized controlled trial. Arch Intern Med. 2009;169(9):894–900.",
+      "journal-title": "Arch Intern Med."
+    },
+    {
+      "key": "348_CR38",
+      "doi-asserted-by": "crossref",
+      "first-page": "e000329",
+      "DOI": "10.1136/bmjopen-2011-000329",
+      "volume": "2",
+      "author": "SM Wallerstedt",
+      "year": "2012",
+      "unstructured": "Wallerstedt SM, Bladh L, Ramsberg J. A cost-effectiveness analysis of an in-hospital clinical pharmacist service. BMJ Open. 2012;2:e000329.",
+      "journal-title": "BMJ Open."
+    },
+    {
+      "issue": "4",
+      "key": "348_CR39",
+      "doi-asserted-by": "crossref",
+      "first-page": "720",
+      "DOI": "10.1345/aph.1G515",
+      "volume": "40",
+      "author": "A Spinewine",
+      "year": "2006",
+      "unstructured": "Spinewine A, Dhillon S, Mallet L, et al. Implementation of ward-based clinical pharmacy services in Belgium–description of the impact on a geriatric unit. Ann Pharmacother. 2006;40(4):720–8.",
+      "journal-title": "Ann Pharmacother."
+    },
+    {
+      "issue": "4",
+      "key": "348_CR40",
+      "doi-asserted-by": "crossref",
+      "first-page": "397",
+      "DOI": "10.1093/ajhp/54.4.397",
+      "volume": "54",
+      "author": "ND Barber",
+      "year": "1997",
+      "unstructured": "Barber ND, Batty R, Ridout DA. Predicting the rate of physician-accepted interventions by hospital pharmacists in the United Kingdom. Am J Health Syst Pharm. 1997;54(4):397–405.",
+      "journal-title": "Am J Health Syst Pharm."
+    },
+    {
+      "issue": "9",
+      "key": "348_CR41",
+      "doi-asserted-by": "crossref",
+      "first-page": "2017",
+      "DOI": "10.1002/sim.2657",
+      "volume": "26",
+      "author": "KS Panageas",
+      "year": "2007",
+      "unstructured": "Panageas KS, Schrag D, Russell Localio A, et al. Properties of analysis methods that account for clustering in volume-outcome studies when the primary predictor is cluster size. Stat Med. 2007;26(9):2017–35.",
+      "journal-title": "Stat Med."
+    },
+    {
+      "issue": "8",
+      "key": "348_CR42",
+      "doi-asserted-by": "crossref",
+      "first-page": "757",
+      "DOI": "10.1001/archinternmed.2009.59",
+      "volume": "169",
+      "author": "MD Murray",
+      "year": "2009",
+      "unstructured": "Murray MD, Ritchey ME, Wu J, et al. Effect of a pharmacist on adverse drug events and medication errors in outpatients with cardiovascular disease. Arch Intern Med. 2009;169(8):757–63.",
+      "journal-title": "Arch Intern Med."
+    }
+  ],
+  "container-title": [
+    "Drugs &amp; Aging"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s40266-016-0348-3.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/article/10.1007/s40266-016-0348-3/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s40266-016-0348-3",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        6,
+        14
+      ]
+    ],
+    "date-time": "2024-06-14T07:37:47Z",
+    "timestamp": 1718350667000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/s40266-016-0348-3"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2016,
+        2,
+        9
+      ]
+    ]
+  },
+  "references-count": 42,
+  "journal-issue": {
+    "issue": "4",
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          4
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "348"
+  ],
+  "URL": "https://doi.org/10.1007/s40266-016-0348-3",
+  "relation": {},
+  "ISSN": [
+    "1170-229X",
+    "1179-1969"
+  ],
+  "issn-type": [
+    {
+      "value": "1170-229X",
+      "type": "print"
+    },
+    {
+      "value": "1179-1969",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2016,
+        2,
+        9
+      ]
+    ]
+  }
+}

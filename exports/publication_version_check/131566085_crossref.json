@@ -1,0 +1,756 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        28
+      ]
+    ],
+    "date-time": "2026-09-28T18:30:55Z",
+    "timestamp": 1790620255428,
+    "version": "4.1.0"
+  },
+  "reference-count": 56,
+  "publisher": "Public Library of Science (PLoS)",
+  "issue": "4",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            4,
+            30
+          ]
+        ],
+        "date-time": "2025-04-30T00:00:00Z",
+        "timestamp": 1745971200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100010269",
+      "name": "Wellcome Trust",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "224459/Z/21/Z"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "224459/Z/21/Z"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100010269",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "www.plosone.org"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "PLoS One"
+  ],
+  "abstract": "<jats:sec>\n<jats:title>Background and aims</jats:title>\n<jats:p><jats:italic>Wolbachia</jats:italic> are bacteria that inhibit dengue virus replication within the mosquito. A cluster-randomized trial in Indonesia found <jats:italic>Wolbachia</jats:italic> reduced virologically-confirmed dengue cases by 77.1%. Previous models predicted <jats:italic>Wolbachia</jats:italic> to be highly cost-effective in Indonesia, Vietnam, and Brazil. To inform decisions about future extensions in Colombia, we performed economic evaluations of potential <jats:italic>Wolbachia</jats:italic> deployments in 11 target cities.</jats:p>\n</jats:sec>\n<jats:sec>\n<jats:title>Methods</jats:title>\n<jats:p>We assembled the numbers and distribution by severity of reported dengue cases from Colombia’s national disease surveillance system and the health service provision registry (RIPS). An epidemiological panel of three experts estimated the shares of dengue that were non-medical, under-reported, or misreported as another disease. We determined costs (in 2020 US dollars at market prices) of treating dengue illness from the benchmark insurance tariff and RIPS data on treatment services per symptomatic dengue case. Our central estimates projected 10 years of efficacy and focused on Cali, the target city with the highest number of dengue cases.</jats:p>\n</jats:sec>\n<jats:sec>\n<jats:title>Results</jats:title>\n<jats:p>For Cali, we estimated a net health-sector savings of US$4.95 per person and averting 369 disability-adjusted life years (DALYs) per 100,000 population. From a societal perspective, at 10 years <jats:italic>Wolbachia</jats:italic> deployment is expected to have highly favorable benefit-cost ratios, with benefits per dollar invested of US$5.50 in Cali and US$4.68 over all target cities.</jats:p>\n</jats:sec>\n<jats:sec>\n<jats:title>Conclusions</jats:title>\n<jats:p>Over 10 years, <jats:italic>Wolbachia</jats:italic> is highly beneficial on economic grounds, and almost universally cost saving. The <jats:italic>Wolbachia</jats:italic> program’s economic benefits exceeded its costs in all 11 cities. The program’s savings in healthcare costs alone would more than offset deployment costs nationally and in 9 of 11 target cities. <jats:italic>Wolbachia</jats:italic> is likely to be the most cost-effective or cost-saving dengue control option in municipalities with both high incidence of dengue and high population density, whereas areas with high dengue incidence but low population density should consider vaccination.</jats:p>\n</jats:sec>",
+  "DOI": "10.1371/journal.pone.0307045",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        5,
+        9
+      ]
+    ],
+    "date-time": "2025-05-09T18:04:18Z",
+    "timestamp": 1746813858000
+  },
+  "page": "e0307045",
+  "update-policy": "https://doi.org/10.1371/journal.pone.corrections_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 5,
+  "title": [
+    "Economic evaluation of Wolbachia deployment in Colombia: A modeling study"
+  ],
+  "prefix": "10.1371",
+  "volume": "20",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0003-2187-0593",
+      "authenticated-orcid": true,
+      "given": "Donald S.",
+      "family": "Shepard",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Samantha R.",
+      "family": "Lee",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yara A.",
+      "family": "Halasa-Rappel",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Carlos Willian",
+      "family": "Rincon Perez",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Arturo",
+      "family": "Harker Roa",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "340",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        4,
+        30
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "5",
+      "key": "pone.0307045.ref001",
+      "doi-asserted-by": "crossref",
+      "first-page": "1065",
+      "DOI": "10.4269/ajtmh.15-0280",
+      "article-title": "The burden of dengue and the financial cost to Colombia, 2010–2012",
+      "volume": "94",
+      "author": "R Castro Rodríguez",
+      "year": "2016",
+      "journal-title": "Am J Trop Med Hyg"
+    },
+    {
+      "issue": "4",
+      "key": "pone.0307045.ref002",
+      "doi-asserted-by": "crossref",
+      "first-page": "156",
+      "DOI": "10.3390/tropicalmed5040156",
+      "article-title": "Dengue infections in Colombia: Epidemiological trends of a hyperendemic country",
+      "volume": "5",
+      "author": "H Gutierrez-Barbosa",
+      "year": "2020",
+      "journal-title": "Trop Med Infect Dis"
+    },
+    {
+      "key": "pone.0307045.ref003",
+      "doi-asserted-by": "crossref",
+      "first-page": "441",
+      "DOI": "10.2471/BLT.23.020723",
+      "article-title": "Tackling mosquito-borne viruses in the Region of the Americas",
+      "volume": "101",
+      "year": "2023",
+      "journal-title": "Bull World Health Organ"
+    },
+    {
+      "key": "pone.0307045.ref004",
+      "doi-asserted-by": "crossref",
+      "first-page": "450",
+      "DOI": "10.1038/nature10355",
+      "article-title": "The wMel Wolbachia strain blocks dengue and invades caged Aedes aegypti populations",
+      "volume": "476",
+      "author": "T Walker",
+      "year": "2011",
+      "journal-title": "Nature"
+    },
+    {
+      "issue": "2",
+      "key": "pone.0307045.ref005",
+      "doi-asserted-by": "crossref",
+      "first-page": "e1010256",
+      "DOI": "10.1371/journal.ppat.1010256",
+      "article-title": "A decade of stability for wMel Wolbachia in natural Aedes aegypti populations",
+      "volume": "18",
+      "author": "PA Ross",
+      "year": "2022",
+      "journal-title": "PLoS Pathog"
+    },
+    {
+      "key": "pone.0307045.ref006",
+      "year": "2023"
+    },
+    {
+      "issue": "10",
+      "key": "pone.0307045.ref007",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0000024",
+      "DOI": "10.1371/journal.pgph.0000024",
+      "article-title": "Economic impact of dengue in Singapore from 2010 to 2020 and the cost-effectiveness of Wolbachia interventions",
+      "volume": "1",
+      "author": "S Soh",
+      "year": "2021",
+      "journal-title": "PLOS Glob Public Health"
+    },
+    {
+      "issue": "23",
+      "key": "pone.0307045.ref008",
+      "doi-asserted-by": "crossref",
+      "first-page": "2177",
+      "DOI": "10.1056/NEJMoa2030243",
+      "article-title": "Efficacy of Wolbachia-infected mosquito deployments for the control of dengue",
+      "volume": "384",
+      "author": "A Utarini",
+      "year": "2021",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "pone.0307045.ref009",
+      "doi-asserted-by": "crossref",
+      "first-page": "11207",
+      "DOI": "10.1038/s41598-024-60896-9",
+      "article-title": "Reanalysis of cluster randomised trial data to account for exposure misclassification using a per-protocol and complier-restricted approach",
+      "volume": "14",
+      "author": "SM Dufault",
+      "year": "2024",
+      "journal-title": "Scientific Reports"
+    },
+    {
+      "issue": "1",
+      "key": "pone.0307045.ref010",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1080/16549716.2023.2166650",
+      "article-title": "Impact of randomised wMel Wolbachia deployments on notified dengue cases and insecticide fogging for dengue control in Yogyakarta City",
+      "volume": "16",
+      "author": "C Indriani",
+      "year": "2023",
+      "journal-title": "Glob Health Action"
+    },
+    {
+      "issue": "7",
+      "key": "pone.0307045.ref011",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0009556",
+      "DOI": "10.1371/journal.pntd.0009556",
+      "article-title": "Effectiveness of Wolbachia-infected mosquito deployments in reducing the incidence of dengue and other Aedes-borne diseases in Niterói, Brazil: A quasi-experimental study",
+      "volume": "15",
+      "author": "SB Pinto",
+      "year": "2021",
+      "journal-title": "PLoS Negl Trop Dis"
+    },
+    {
+      "key": "pone.0307045.ref012",
+      "doi-asserted-by": "crossref",
+      "first-page": "1587",
+      "DOI": "10.1016/S1473-3099(22)00436-4",
+      "article-title": "Estimating the effect of the wMel release programme on the incidence of dengue and chikungunya in Rio de Janeiro, Brazil: a spatiotemporal modelling study",
+      "volume": "22",
+      "author": "GR dos Santos",
+      "year": "2022",
+      "journal-title": "Lancet Infect Dis"
+    },
+    {
+      "key": "pone.0307045.ref013",
+      "doi-asserted-by": "crossref",
+      "first-page": "235",
+      "DOI": "10.1038/d41586-023-03346-2",
+      "article-title": "Dengue rates drop after release of modified mosquitoes in Colombia",
+      "volume": "623",
+      "author": "M Lenharo",
+      "year": "2023",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "pone.0307045.ref014",
+      "doi-asserted-by": "crossref",
+      "first-page": "1327",
+      "DOI": "10.12688/f1000research.19858.1",
+      "article-title": "The impact of city-wide deployment of Wolbachia-carrying mosquitoes on arboviral disease incidence in Medellín and Bello, Colombia: study protocol for an interrupted time-series analysis and a test-negative design study",
+      "author": "ID Velez",
+      "year": "2019",
+      "journal-title": "F1000 Research"
+    },
+    {
+      "issue": "11",
+      "key": "pone.0307045.ref015",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0011713",
+      "DOI": "10.1371/journal.pntd.0011713",
+      "article-title": "Reduced dengue incidence following city-wide wMel Wolbachia mosquito releases throughout three Colombian cities: Interrupted time series analysis and a prospective case-control study",
+      "volume": "17",
+      "author": "ID Velez",
+      "year": "2023",
+      "journal-title": "PLoS Negl Trop Dis"
+    },
+    {
+      "issue": "11",
+      "key": "pone.0307045.ref016",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0011642",
+      "DOI": "10.1371/journal.pntd.0011642",
+      "article-title": "Large-scale releases and establishment of wMel Wolbachia in Aedes aegypti mosquitoes throughout the Cities of Bello, Medellín and Itagüí, Colombia",
+      "volume": "17",
+      "author": "ID Velez",
+      "year": "2023",
+      "journal-title": "PLoS Negl Trop Dis"
+    },
+    {
+      "key": "pone.0307045.ref017",
+      "author": "Governorate of Valle del Cauca. This Monday",
+      "year": "2023"
+    },
+    {
+      "issue": "1",
+      "key": "pone.0307045.ref018",
+      "doi-asserted-by": "crossref",
+      "first-page": "186",
+      "DOI": "10.1186/s12916-020-01638-2",
+      "article-title": "The cost-effectiveness of controlling dengue in Indonesia using wMel Wolbachia released at scale: a modelling study",
+      "volume": "18",
+      "author": "OJ Brady",
+      "year": "2020",
+      "journal-title": "BMC Med"
+    },
+    {
+      "issue": "5",
+      "key": "pone.0307045.ref019",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0011356",
+      "DOI": "10.1371/journal.pntd.0011356",
+      "article-title": "An economic evaluation of Wolbachia deployments for dengue control in Vietnam",
+      "volume": "17",
+      "author": "HC Turner",
+      "year": "2023",
+      "journal-title": "PLoS Negl Trop Dis"
+    },
+    {
+      "key": "pone.0307045.ref020",
+      "first-page": "100783",
+      "article-title": "Simulation-based economic evaluation of the Wolbachia method in Brazil: a cost-effective strategy for dengue control",
+      "volume": "35",
+      "author": "IR Zimmermann",
+      "year": "2024",
+      "journal-title": "Lancet Reg Health Am"
+    },
+    {
+      "key": "pone.0307045.ref021",
+      "unstructured": "Shepard DS, Hariharan D, Ratu A, Anders K. Cost-benefit analysis of Wolbachia to control dengue in Suva, Fiji and Port Vila, Vanuatu. Annual Conference of the American Society of Tropical Medicine and Hygiene virtual meeting 1449 Slide 14 15-19 Nov 2020"
+    },
+    {
+      "key": "pone.0307045.ref022",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0008805",
+      "DOI": "10.1371/journal.pntd.0008805",
+      "article-title": "The economic impact and cost-effectiveness of combined vector-control and dengue vaccination strategies in Thailand: results from a dynamic transmission model",
+      "volume": "14",
+      "author": "G Knerer",
+      "year": "2020",
+      "journal-title": "PLoS Negl Trop Dis"
+    },
+    {
+      "key": "pone.0307045.ref023",
+      "article-title": "Methods for Economic Evaluation of Health Care Programmes",
+      "author": "MF Drummond",
+      "year": "2015"
+    },
+    {
+      "issue": "6",
+      "key": "pone.0307045.ref024",
+      "doi-asserted-by": "crossref",
+      "first-page": "1458",
+      "DOI": "10.4269/ajtmh.18-0309",
+      "article-title": "Impact of a nonfatal dengue episode on disability-adjusted life years: A systematic analysis",
+      "volume": "99",
+      "author": "W Zeng",
+      "year": "2018",
+      "journal-title": "Am J Trop Med Hyg"
+    },
+    {
+      "key": "pone.0307045.ref025",
+      "year": "2020"
+    },
+    {
+      "key": "pone.0307045.ref026",
+      "article-title": "Welcome to the Sivigila 4.0 Portal",
+      "author": "Instituto Nacional de Salud"
+    },
+    {
+      "issue": "8",
+      "key": "pone.0307045.ref027",
+      "doi-asserted-by": "crossref",
+      "first-page": "935",
+      "DOI": "10.1016/S1473-3099(16)00146-8",
+      "article-title": "The global economic burden of dengue: A systematic analysis",
+      "volume": "16",
+      "author": "DS Shepard",
+      "year": "2016",
+      "journal-title": "Lancet Infect Dis"
+    },
+    {
+      "key": "pone.0307045.ref028",
+      "author": "SBS Seguros"
+    },
+    {
+      "key": "pone.0307045.ref029",
+      "article-title": "Exchange Rates. US dollar to Colombian peso spot exchange rates for 2016."
+    },
+    {
+      "key": "pone.0307045.ref030",
+      "author": "M Gobierno de Colombia"
+    },
+    {
+      "key": "pone.0307045.ref031",
+      "unstructured": "Bill and Melinda Gates Foundation. Indirect Cost Guidelines. 2010; [cited 16 May 2023]. Available from: https://docs.gatesfoundation.org/documents/historical_indirect_cost_policy.pdf."
+    },
+    {
+      "issue": "No 17",
+      "key": "pone.0307045.ref032",
+      "article-title": "Estructura del gasto en Salud Pública en Colombia, Papeles en Salud",
+      "author": "M Gobierno de Colombia",
+      "year": "2018",
+      "journal-title": "Edicion"
+    },
+    {
+      "key": "pone.0307045.ref033",
+      "year": "2022"
+    },
+    {
+      "key": "pone.0307045.ref034",
+      "article-title": "Organization for Economic Cooperation and Development (OECD). Health at a Glance 2021: OECD Indicators.",
+      "volume-title": "Available from",
+      "year": "2021"
+    },
+    {
+      "key": "pone.0307045.ref035",
+      "article-title": "Analysis of Hospital Costs: A Manual for Managers",
+      "author": "D Shepard"
+    },
+    {
+      "key": "pone.0307045.ref036",
+      "year": "2022"
+    },
+    {
+      "issue": "11",
+      "key": "pone.0307045.ref037",
+      "first-page": "673",
+      "article-title": "Methods for the economic evaluation of health care interventions for priority setting in the health system: an update from WHO CHOICE",
+      "volume": "10",
+      "author": "MY Bertram",
+      "year": "2021",
+      "journal-title": "Int J Health Policy Manag"
+    },
+    {
+      "key": "pone.0307045.ref038",
+      "article-title": "Guidelines for the economic evaluation of healthcare technologies in Colombia: technical support documents.",
+      "author": "R Faria"
+    },
+    {
+      "key": "pone.0307045.ref039",
+      "year": "2001"
+    },
+    {
+      "key": "pone.0307045.ref040",
+      "doi-asserted-by": "crossref",
+      "first-page": "925",
+      "DOI": "10.2471/BLT.15.164418",
+      "article-title": "Cost-effectiveness thresholds: pros and cons",
+      "volume": "94",
+      "author": "MY Bertram",
+      "year": "2016",
+      "journal-title": "Bull World Health Organ"
+    },
+    {
+      "issue": "4",
+      "key": "pone.0307045.ref041",
+      "doi-asserted-by": "crossref",
+      "first-page": "821",
+      "DOI": "10.1080/14737167.2020.1779063",
+      "article-title": "Incremental cost-effectiveness analysis of tyrosine kinase inhibitors in advanced non-small cell lung cancer with mutations of the epidermal growth factor receptor in Colombia",
+      "volume": "21",
+      "author": "P Lasalvia",
+      "year": "2021",
+      "journal-title": "Expert Review of Pharmacoeconomics & Outcomes Research"
+    },
+    {
+      "issue": "2",
+      "key": "pone.0307045.ref042",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0297450",
+      "DOI": "10.1371/journal.pone.0297450",
+      "article-title": "A systematic review on the direct approach to elicit the demand-side cost-effectiveness threshold: Implications for low- and middle-income countries",
+      "volume": "19",
+      "author": "A Nu Vu",
+      "year": "2024",
+      "journal-title": "PLoS One"
+    },
+    {
+      "issue": "6",
+      "key": "pone.0307045.ref043",
+      "doi-asserted-by": "crossref",
+      "first-page": "e833",
+      "DOI": "10.1016/S2214-109X(23)00162-6",
+      "article-title": "Determining the efficiency path to universal health coverage: cost-effectiveness thresholds for 174 countries based on growth in life expectancy and health expenditures",
+      "volume": "11",
+      "author": "A Pichon-Riviere",
+      "year": "2023",
+      "journal-title": "Lancet Glob Health"
+    },
+    {
+      "issue": "6",
+      "key": "pone.0307045.ref044",
+      "doi-asserted-by": "crossref",
+      "first-page": "e797",
+      "DOI": "10.1016/S2214-109X(23)00196-1",
+      "article-title": "Innovative methods of determining health expenditure efficiency are urgently needed",
+      "volume": "11",
+      "author": "Z Cao",
+      "year": "2023",
+      "journal-title": "Lancet Glob Health"
+    },
+    {
+      "key": "pone.0307045.ref045",
+      "doi-asserted-by": "crossref",
+      "first-page": "147",
+      "DOI": "10.12688/gatesopenres.13347.2",
+      "article-title": "Environmental factors influence the local establishment of Wolbachia in Aedes aegypti mosquitoes in two small communities in central Vietnam",
+      "volume": "5",
+      "author": "NT Hien",
+      "year": "2022",
+      "journal-title": "Gates Open Res"
+    },
+    {
+      "key": "pone.0307045.ref046",
+      "doi-asserted-by": "crossref",
+      "first-page": "e02203-20",
+      "DOI": "10.1128/JVI.02203-20",
+      "article-title": "Using Wolbachia to eliminate dengue: Will the virus fight back?",
+      "volume": "95",
+      "author": "KM Edenborough",
+      "year": "2021",
+      "journal-title": "J Virol"
+    },
+    {
+      "key": "pone.0307045.ref047",
+      "doi-asserted-by": "crossref",
+      "first-page": "59",
+      "DOI": "10.1016/j.ijid.2020.03.026",
+      "article-title": "Cost-effectiveness of community mobilization (Camino Verde) for dengue prevention in Nicaragua and Mexico: A cluster randomized controlled trial",
+      "volume": "94",
+      "author": "CA Tschampl",
+      "year": "2020",
+      "journal-title": "Int J Infect Dis"
+    },
+    {
+      "issue": "6",
+      "key": "pone.0307045.ref048",
+      "doi-asserted-by": "crossref",
+      "first-page": "1363",
+      "DOI": "10.1016/j.vaccine.2019.12.012",
+      "article-title": "The potential impact of dengue vaccination with, and without, pre-vaccination screening",
+      "volume": "38",
+      "author": "L Coudeville",
+      "year": "2020",
+      "journal-title": "Vaccine"
+    },
+    {
+      "key": "pone.0307045.ref049",
+      "article-title": "WHO prequalifies new dengue vaccine.",
+      "author": "World Health Organization."
+    },
+    {
+      "key": "pone.0307045.ref050",
+      "author": "RR Kaul",
+      "year": "2023"
+    },
+    {
+      "issue": "Supplement 2",
+      "key": "pone.0307045.ref051",
+      "doi-asserted-by": "crossref",
+      "first-page": "S141",
+      "DOI": "10.1016/j.ijid.2023.04.347",
+      "article-title": "Disease impact and cost-effectiveness of a new dengue vaccine TAK003 in Thailand",
+      "volume": "130",
+      "author": "J Shen",
+      "year": "2023",
+      "journal-title": "International J Infectious Diseases"
+    },
+    {
+      "key": "pone.0307045.ref052",
+      "year": "2012"
+    },
+    {
+      "issue": "11",
+      "key": "pone.0307045.ref053",
+      "doi-asserted-by": "crossref",
+      "first-page": "e80639",
+      "DOI": "10.1371/journal.pone.0080639",
+      "article-title": "Cost-effectiveness analysis of the bivalent and quadrivalent human papillomavirus vaccines from a societal perspective in Colombia",
+      "volume": "8",
+      "author": "J Aponte-González",
+      "year": "2013",
+      "journal-title": "PloS One"
+    },
+    {
+      "key": "pone.0307045.ref054",
+      "doi-asserted-by": "crossref",
+      "first-page": "101",
+      "DOI": "10.1016/j.vhri.2022.04.004",
+      "article-title": "Cost-effectiveness analysis of strategies of COVID-19 vaccination in Colombia: Comparison of high-risk prioritization and no prioritization strategies with the absence of a vaccination plan",
+      "volume": "31",
+      "author": "G Morales-Zamora",
+      "year": "2022",
+      "journal-title": "Value Health Reg Issues"
+    },
+    {
+      "key": "pone.0307045.ref055",
+      "article-title": "Labour Market Profile Colombia – 2023/2024",
+      "author": "Danish Trade Union Development Agency",
+      "year": "2023"
+    },
+    {
+      "issue": "11",
+      "key": "pone.0307045.ref056",
+      "doi-asserted-by": "crossref",
+      "first-page": "1518",
+      "DOI": "10.1016/S1473-3099(22)00497-2",
+      "article-title": "Externalities modulate the effectiveness of the Wolbachia release programme",
+      "volume": "22",
+      "author": "EE Ooi",
+      "year": "2022",
+      "journal-title": "Lancet Infect Dis"
+    }
+  ],
+  "container-title": [
+    "PLOS One"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://dx.plos.org/10.1371/journal.pone.0307045",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        5,
+        9
+      ]
+    ],
+    "date-time": "2025-05-09T18:04:32Z",
+    "timestamp": 1746813872000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dx.plos.org/10.1371/journal.pone.0307045"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "given": "Bilal",
+      "family": "Rasool",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "editor"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        4,
+        30
+      ]
+    ]
+  },
+  "references-count": 56,
+  "journal-issue": {
+    "issue": "4",
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          4,
+          30
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1371/journal.pone.0307045",
+  "relation": {},
+  "ISSN": [
+    "1932-6203"
+  ],
+  "issn-type": [
+    {
+      "value": "1932-6203",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        4,
+        30
+      ]
+    ]
+  }
+}

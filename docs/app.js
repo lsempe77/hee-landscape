@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-14-publication-reconciliation";
+const BUILD = "2026-10-14-all-figures-reconciled";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -934,7 +934,7 @@ if (typeof document !== "undefined") {
     "DALYs (GBD 2023) and q its share of studies (a study naming several causes counts for each). 0 = research spread " +
     "across diseases exactly as burden is. No smoothing, as in the paper's main analysis: no cause has zero studies in " +
     "any 3-year window of the 16-cause analysis. 3-year rolling windows; solid = 2010–2019, dashed = windows reaching " +
-    "2020–23 (COVID-19). Shaded bands: 95% intervals from resampling studies within each year (1,000 draws); in 1.7% of " +
+    "2020–23 (COVID-19). Shaded bands: 95% intervals from resampling studies within each year (1,000 draws); in 1.8% of " +
     "draws a cause was left with no study and was given 0.5 study. Geography: the paper's Fig. 2a and Fig. 3 compare " +
     "global research with global burden, so geography does not enter; our 'with high-income studies' panels do the same " +
     "(all studies vs global DALYs). The split by income is our extension. For it, studies are placed by the country " +
@@ -946,8 +946,8 @@ if (typeof document !== "undefined") {
     "(shown separately in the authorship figures) with whom it serves. Author locations are also known for only 85% of " +
     "studies. Income is the World Bank group in force at publication (studies) or in the burden year (DALYs). " +
     "Reference: Schmallenbach L et al. Nat Med 2025;31:3101–9, doi:10.1038/s41591-025-03923-0.";
-  const KLD_CAVEATS = " Caveats. (1) Small numbers: 442 studies of low- and middle-income countries in 2010–12 and " +
-    "965 in 2017–19 (all studies: 3,004 and 5,246), against 7.4–8.6 million articles in the paper. Intervals for " +
+  const KLD_CAVEATS = " Caveats. (1) Small numbers: 440 studies of low- and middle-income countries in 2010–12 and " +
+    "965 in 2017–19 (all studies: 2,999 and 5,239), against 7.4–8.6 million articles in the paper. Intervals for " +
     "low- and middle-income countries are wide, and their changes cannot be told apart from zero. (2) KLD reacts " +
     "strongly to causes with few studies. The rise for low- and middle-income countries in 2016–18 comes mainly from " +
     "cardiovascular disease (9% of studies against 20% of burden, a gap that widened) and chronic respiratory disease, " +
@@ -986,10 +986,7 @@ if (typeof document !== "undefined") {
       "sensitivity and supplementary versions. Preliminary findings for discussion, not peer reviewed.",
     figs: [
       { file: KLD_DIR + "main_fig2a_16causes.png", title: "Evolution of research–disease divergence (Fig. 2a)",
-        summary: "How far the mix of diseases studied is from the mix of disease burden, over time. With high-income " +
-          "studies, divergence fell by 20% from 2010–12 to 2017–19 (95% interval −32% to −7%). For studies of low- and " +
-          "middle-income countries it changed by −5% (−34% to +30%): no clear change. Open the figure to compare it " +
-          "with the paper's original.",
+        summary: "From 2010–12 to 2017–19, divergence for all studies changed by -20% (95% interval -32% to -6%). For studies of low- and middle-income countries, it changed by -5% (-34% to +25%): no clear change. Open the figure to compare it with the paper's original.",
         caption: kldNotes("The paper's 16 GBD level-2 causes."),
         views: kldViews(KLD_DIR + "main_fig2a_16causes.png", {
           file: KLD_DIR + "original_fig2a.png", title: "Original: evolution of research–disease divergence (Schmallenbach et al. 2025, Fig. 2a)",
@@ -1001,11 +998,7 @@ if (typeof document !== "undefined") {
             "is limited to articles the authors could geolocate by first-author affiliation (about 89%)." + KLD_CREDIT }) },
       { file: KLD_DIR + "main_fig3_16causes.png",
         title: "Contributions of research and disease burden to changes in divergence (Fig. 3)",
-        summary: "With high-income studies, the fall comes from disease burden changing: with research held at its " +
-          "2010–12 mix, divergence would have fallen 25%, while research changes alone moved it +7% (−9% to +24%). " +
-          "This matches the paper. For low- and middle-income countries, burden changes alone would have raised " +
-          "divergence 9% (+2% to +15%); research changes alone lowered it 9%, but with a wide interval (−36% to +25%). " +
-          "Open the figure to compare it with the paper's original.",
+        summary: "For all studies, burden changes alone changed divergence by -25%, while research changes alone changed it by +7% (-9% to +25%). For low- and middle-income settings, burden changes alone changed it by +10% (+3% to +16%), and research changes alone by -9% (-36% to +20%). These scenarios need not add up to the observed change.",
         caption: kldNotes("The paper's 16 GBD level-2 causes.", KLD_FIG3_NOTE),
         views: kldViews(KLD_DIR + "main_fig3_16causes.png", {
           file: KLD_DIR + "original_fig3.png",
@@ -1024,7 +1017,7 @@ if (typeof document !== "undefined") {
         caption: kldNotes("The paper's 16 GBD level-2 causes.", KLD_FIG4_NOTE) },
       { file: KLD_DIR + "supp_fig2a_rare_causes_excluded_16causes.png", title: "Sensitivity: divergence without rare causes",
         summary: "The paper's check for causes with very few studies: divergence without causes whose share of studies or " +
-          "burden is below 1%. The trends hold (with high-income studies −16%; low- and middle-income −18%, with a wide " +
+          "burden is below 1%. The trends hold (with high-income studies −16%; low- and middle-income −19%, with a wide " +
           "interval), and the sharp low- and middle-income rise in 2016–18 disappears.",
         caption: kldNotes("The paper's 16 GBD level-2 causes, leaving out one fixed set per panel: causes below 1% of " +
           "studies or burden in any window (with high-income studies: nutritional deficiencies and substance use; low- " +
@@ -1033,11 +1026,11 @@ if (typeof document !== "undefined") {
       { file: KLD_DIR + "supp_fig2a_20causes.png", title: "Sensitivity: divergence with mental disorders and injuries",
         summary: "The same as Fig. 2a with 20 causes: the paper's 16 plus mental disorders and the three injury groups, " +
           "which the paper leaves out and where research is far below burden. With high-income studies divergence fell " +
-          "23%; for low- and middle-income countries it stayed flat (−3%).",
+          "23%; for low- and middle-income countries it stayed flat (−4%).",
         caption: kldNotes("20 GBD level-2 causes.", KLD_20_NOTE) },
       { file: KLD_DIR + "supp_fig3_20causes.png", title: "Sensitivity: research and burden contributions, 20 causes",
         summary: "With mental disorders and injuries included, the fall with high-income studies is again mostly burden " +
-          "(−14% with research fixed; research changes alone −9%, interval −21% to +7%), and divergence for low- and " +
+          "(−14% with research fixed; research changes alone −8%, interval −20% to +7%), and divergence for low- and " +
           "middle-income countries stays flat.",
         caption: kldNotes("20 GBD level-2 causes.", KLD_FIG3_NOTE + KLD_20_NOTE) },
       { file: KLD_DIR + "supp_fig4_20causes.png", title: "Sensitivity: which diseases moved, 20 causes",
@@ -1045,7 +1038,7 @@ if (typeof document !== "undefined") {
         caption: kldNotes("20 GBD level-2 causes.", KLD_FIG4_NOTE + KLD_20_NOTE) },
       { file: KLD_DIR + "supp_fig2a_hic_16causes.png", title: "Supplementary: divergence for high-income studies",
         summary: "Studies of high-income countries against high-income DALYs: divergence fell 21% from 2010–12 to " +
-          "2017–19 (−38% to −2%).",
+          "2017–19 (−38% to −1%).",
         caption: kldNotes("The paper's 16 GBD level-2 causes.") },
       { file: KLD_DIR + "supp_fig3_hic_16causes.png", title: "Supplementary: research and burden contributions, high-income studies",
         summary: "For high-income countries, research changes explain the fall: research changes alone lowered divergence " +
@@ -1446,8 +1439,8 @@ if (typeof document !== "undefined") {
       "studies using set, reported methods; other reviews (narrative, scoping or rapid reviews, or reviews that " +
       "do not describe themselves as systematic) are counted separately.",
       "These counts come from an automated screen of each study's title and abstract, so they are provisional. " +
-      "Some reviews also include the authors' own evaluation. The selection diagram uses an older, stricter " +
-      "title-only flag and counts 1,706 reviews.",
+      "Some reviews also include the authors' own evaluation. The selection diagram uses the same " +
+      "current classification: 1,856 systematic and 796 non-systematic reviews.",
       "Charts of evaluation type (cost-benefit, cost-consequence, cost-effectiveness, cost-utility) do not count " +
       "the " + fmtNum(reviewOnly) + " reviews that report no evaluation of their own: they appear as a separate " +
       "“Review (no evaluation type)” group, and type percentages leave them out. Reviews that also report " +
@@ -1787,6 +1780,44 @@ if (typeof document !== "undefined") {
       });
   }
 
+  // Overview card: the four full-evaluation types, as shares of studies with a type
+  // (reviews reporting no evaluation of their own are left out). Shown in place of
+  // outcomeMetricsCard. Shares are rounded so they total exactly 100%.
+  const EVAL_TYPES = [
+    ["Cost-utility", "Cost-utility (CUA)", "Health gains measured in quality-adjusted or disability-adjusted life " +
+      "years (QALYs or DALYs). Cost-effectiveness studies that report a QALY or DALY are classed here."],
+    ["Cost-effectiveness", "Cost-effectiveness (CEA)", "Health gains measured in natural units, such as " +
+      "life-years gained, cases prevented or cases detected."],
+    ["Cost-consequence", "Cost-consequence (CCA)", "Costs and a range of outcomes reported side by side, " +
+      "without combining them into a single measure."],
+    ["Cost-benefit", "Cost-benefit (CBA)", "Health gains valued in money, so costs and benefits are compared " +
+      "in the same unit."]
+  ];
+
+  function evalTypesCard() {
+    const counts = EVAL_TYPES.map(([level]) => countLevel("econ_eval_type", level));
+    const typed = Math.max(1, counts.reduce((a, b) => a + b, 0));
+    const tenths = counts.map(n => 1000 * n / typed);
+    const shown = tenths.map(Math.floor);
+    const order = tenths.map((x, i) => i).sort((a, b) => (tenths[b] - shown[b]) - (tenths[a] - shown[a]));
+    for (const i of order.slice(0, 1000 - shown.reduce((a, b) => a + b, 0))) shown[i] += 1;
+    const rows = EVAL_TYPES.map(([, label, text], i) => [label, shown[i] / 10, {
+      title: "What is a " + label.replace(/ \(.*/, "").toLowerCase() + " analysis?", paragraphs: [text] }]);
+    rows.sort((a, b) => b[1] - a[1]);
+    const reviews = countLevel("econ_eval_type", "Review (no evaluation type)");
+    return barRowsCard("", "Types of economic evaluation", rows,
+      "Share of the " + fmtNum(typed) + " studies with an evaluation type; " + fmtNum(reviews) +
+      " reviews that report no evaluation of their own are left out.", {
+        title: "How are the types counted?",
+        paragraphs: [
+          "Each study has one evaluation type, so the four bars add up to 100%.",
+          "Cost-effectiveness studies that report a QALY or DALY are classed as cost-utility. Reviews that report no " +
+          "evaluation of their own have no type and are left out; reviews that also report the authors' own " +
+          "evaluation keep its type."
+        ]
+      });
+  }
+
   // The web data has no funder field. Counts are from the v2 team export
   // (hee_analysis_master_v2.csv `funders`, 2026-10-11): included studies naming at
   // least one funder ("None"/"self-funded" entries dropped), and how many name
@@ -1878,7 +1909,7 @@ if (typeof document !== "undefined") {
       if (key === STUDIES_CARD) box = studiesCard(tileByLabel);
       else if (key === ACCESS_CARD) box = publicationAccessCard();
       else if (key === GEO_CARD) box = geographyCard();
-      else if (key === METRICS_CARD) box = outcomeMetricsCard();
+      else if (key === METRICS_CARD) box = evalTypesCard();
       else if (key === FUNDERS_CARD) box = fundersCard();
       else {
         const tile = tileByLabel.get(key);

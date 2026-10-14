@@ -1,0 +1,140 @@
+{
+  "institution": [
+    {
+      "name": "National Bureau of Economic Research",
+      "acronym": [
+        "NBER"
+      ],
+      "place": [
+        "Cambridge, MA"
+      ]
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        30
+      ]
+    ],
+    "date-time": "2026-09-30T06:58:29Z",
+    "timestamp": 1790751509102,
+    "version": "4.1.0"
+  },
+  "publisher-location": "Cambridge, MA",
+  "reference-count": 0,
+  "publisher": "National Bureau of Economic Research",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "DOI": "10.3386/w28780",
+  "type": "report",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        10
+      ]
+    ],
+    "date-time": "2021-05-10T19:32:33Z",
+    "timestamp": 1620675153000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 10,
+  "title": [
+    "Augmenting State Capacity for Child Development: Experimental Evidence from India"
+  ],
+  "prefix": "10.3386",
+  "author": [
+    {
+      "given": "Alejandro",
+      "family": "Ganimian",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Karthik",
+      "family": "Muralidharan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Christopher",
+      "family": "Walters",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "1960",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        5
+      ]
+    ]
+  },
+  "container-title": [],
+  "original-title": [],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        19
+      ]
+    ],
+    "date-time": "2026-09-19T13:22:30Z",
+    "timestamp": 1789824150000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://www.nber.org/papers/w28780.pdf"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        5
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.3386/w28780",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        5
+      ]
+    ]
+  }
+}

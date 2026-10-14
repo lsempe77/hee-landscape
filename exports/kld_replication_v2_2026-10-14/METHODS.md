@@ -1,6 +1,8 @@
 # Research–disease divergence in health economic evaluations (version 2)
 
-Built by `scripts/build_kld_replication_v2.py` on 14 October 2026, revised the same day after a cross-check. This revises version 1 (`exports/kld_replication_2026-10-14/`). The aim is to answer one question: **does research shift with disease burden once high-income studies are removed?** Preliminary, not peer reviewed.
+Built by `scripts/build_kld_replication_v2.py` on 14 October 2026, revised the same day after a cross-check.
+
+**Numbers updated to the reconciled data** (publication reconciliation, 14 October 2026). The figures and CSVs for that run, which the site uses, are in `exports/publication_reconciliation/kld_followup/`. The CSVs and PNGs in this folder are from the earlier, pre-reconciliation run and differ slightly. This revises version 1 (`exports/kld_replication_2026-10-14/`). The aim is to answer one question: **does research shift with disease burden once high-income studies are removed?** Preliminary, not peer reviewed.
 
 Reference: Schmallenbach L, et al. *Nature Medicine* 31, 3101–3109 (2025). doi:10.1038/s41591-025-03923-0.
 
@@ -12,7 +14,7 @@ Reference: Schmallenbach L, et al. *Nature Medicine* 31, 3101–3109 (2025). doi
   - 0 means research is spread across diseases exactly as burden is.
 
   The main analysis uses the paper's 16 causes. The sensitivity version uses 20, adding mental disorders and the three injury groups.
-- **No smoothing (as in the paper's main analysis).** No cause has zero studies in any 3-year window of the 16-cause analysis. In 1.7% of resampling draws (612 of 36,000), a cause was left with no study; that cause was given 0.5 study.
+- **No smoothing (as in the paper's main analysis).** No cause has zero studies in any 3-year window of the 16-cause analysis. In 1.8% of resampling draws (637 of 36,000), a cause was left with no study; that cause was given 0.5 study.
 - **Groups.**
   - **With high-income studies:** all studies against global DALYs. This includes studies naming no country, and it is the same as the paper, whose Fig. 2a and Fig. 3 are global, so geography does not enter.
   - **Without high-income studies:** studies of low- and middle-income countries against LMIC DALYs. This split is our extension; the paper does not split these two figures by income.
@@ -42,13 +44,13 @@ Reference: Schmallenbach L, et al. *Nature Medicine* 31, 3101–3109 (2025). doi
 
 | Group | Observed | Only DALYs change (research fixed) | Only research changes (DALYs fixed) |
 |---|---|---|---|
-| With high-income studies (all vs global DALYs) | −20% (−32 to −7) | −25% (−27 to −22) | +7% (−9 to +24) |
-| Without high-income studies (LMIC vs LMIC DALYs) | −5% (−34 to +30) | +9% (+2 to +15) | −9% (−36 to +25) |
-| High-income studies only (supplementary) | −21% (−38 to −2) | +10% (+7 to +13) | −30% (−45 to −12) |
+| With high-income studies (all vs global DALYs) | −20% (−32 to −6) | −25% (−27 to −22) | +7% (−9 to +25) |
+| Without high-income studies (LMIC vs LMIC DALYs) | −5% (−34 to +25) | +10% (+3 to +16) | −9% (−36 to +20) |
+| High-income studies only (supplementary) | −21% (−38 to −1) | +10% (+7 to +13) | −30% (−45 to −12) |
 
 **With high-income studies:** divergence fell by a fifth because burden changed; research changes made no detectable contribution. This matches the paper.
 
-**Low- and middle-income countries:** there was no clear change. Burden changes alone would have raised divergence by 9%. Research changes alone lowered it by 9%, but with a wide interval.
+**Low- and middle-income countries:** there was no clear change. Burden changes alone would have raised divergence by 10%. Research changes alone lowered it by 9%, but with a wide interval.
 - Research did move a lot:
   - **HIV/AIDS:** from 18% to 10% of studies;
   - **cancer:** from 15% to 23%;
@@ -58,17 +60,17 @@ Reference: Schmallenbach L, et al. *Nature Medicine* 31, 3101–3109 (2025). doi
 
 **High-income studies only:** research changes explain the fall in divergence. This differs from the paper.
 
-**Rare-cause sensitivity:** the trends hold (−16% with high-income studies, −18% for LMICs with a wide interval), and the sharp LMIC rise in 2016–18 disappears.
+**Rare-cause sensitivity:** the trends hold (−16% with high-income studies, −19% for LMICs with a wide interval), and the sharp LMIC rise in 2016–18 disappears.
 
 **20 causes:**
-- With high-income studies, divergence falls 23%, again mostly from burden. Research changes alone: −9% (−21 to +7).
-- For LMICs it stays flat (−3%).
+- With high-income studies, divergence falls 23%, again mostly from burden. Research changes alone: −8% (−20 to +7).
+- For LMICs it stays flat (−4%).
 - High-income research changes still explain that group's fall (−25%).
 
 ## Caveats
 
 1. **Small numbers.**
-   - **Study counts:** 442 LMIC studies in 2010–12 and 965 in 2017–19 (all studies: 3,004 and 5,246). The paper had 7.4–8.6 million articles.
+   - **Study counts:** 440 LMIC studies in 2010–12 and 965 in 2017–19 (all studies: 2,999 and 5,239). The paper had 7.4–8.6 million articles.
    - **What that means:** LMIC intervals are wide, and LMIC changes cannot be told apart from zero.
 2. **KLD reacts strongly to causes with few studies.** The LMIC rise in 2016–18 (from 0.205 to 0.276) comes mainly from two causes:
    - **cardiovascular disease:** its research share fell to 9.3% while its burden rose to 20.1%;

@@ -1,0 +1,692 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        24
+      ]
+    ],
+    "date-time": "2026-06-24T22:49:46Z",
+    "timestamp": 1782341386826,
+    "version": "3.54.5"
+  },
+  "reference-count": 54,
+  "publisher": "Wiley",
+  "issue": "8",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            7,
+            13
+          ]
+        ],
+        "date-time": "2021-07-13T00:00:00Z",
+        "timestamp": 1626134400000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001809",
+      "name": "National Natural Science Foundation of China",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "81670546"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "81670546"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001809",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100001809",
+      "name": "National Natural Science Foundation of China",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "81772519"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "81772519"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001809",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "onlinelibrary.wiley.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "J of Digest Diseases"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2021,
+        8
+      ]
+    ]
+  },
+  "abstract": "<jats:sec><jats:title>Objective</jats:title><jats:p>This study investigated the cost‐effectiveness of a community‐based colorectal cancer‐screening program (C‐CRCSP) in Shanghai, China, among the residents in the urban, suburban and rural areas.</jats:p></jats:sec><jats:sec><jats:title>Methods</jats:title><jats:p>A Markov model was constructed to evaluate the cost‐effectiveness of a 25‐year annual C‐CRCSP including 100 000 populations. Cost‐effectiveness was determined by the incremental cost‐effectiveness ratio (ICER); referring to either life‐years gained, or quality‐adjusted life‐years (QALYs) gained. The threshold was gross domestic product per capita. Univariate and multivariate sensitivity analyses were performed to investigate the influence of compliance, prevalence, technological performance, medical cost and annual cost discount rate (3.5%) on ICER. A probabilistic sensitivity analysis evaluated the probability of the cost‐effectiveness of C‐CRCSP at different maximum acceptable ceiling ratios.</jats:p></jats:sec><jats:sec><jats:title>Results</jats:title><jats:p>Compared with no screening, the C‐CRCSP resulted in total gains of 7840 QALYs and 2210 life‐years (LY), at a total cost of CNY 58.54 million; that is, the ICER were CNY 7460/QALYs and CNY 26650/LY. Stratifying by residency, the cumulative gains in QALYs and LY were estimated to be the lowest in the urban populations compared with the rural and suburban populations. The cost for the urban population was 3‐fold and 6‐fold that of the suburban and rural populations. The ICER for QALYs ranged from 2180 (rural) to 16 840 (urban).</jats:p></jats:sec><jats:sec><jats:title>Conclusion</jats:title><jats:p>The cost‐effectiveness of a C‐CRCSP in Shanghai was most favorable for the rural population, while the urban population benefits less in terms of QALYs. ICER could be enhanced by measures that increase compliance.</jats:p></jats:sec>",
+  "DOI": "10.1111/1751-2980.13027",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        6,
+        4
+      ]
+    ],
+    "date-time": "2021-06-04T14:16:45Z",
+    "timestamp": 1622816205000
+  },
+  "page": "452-462",
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 4,
+  "title": [
+    "Cost‐effectiveness analysis of a community‐based colorectal cancer screening program in Shanghai, China"
+  ],
+  "prefix": "10.1111",
+  "volume": "22",
+  "author": [
+    {
+      "given": "Xiao Pan",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Department of Epidemiology School of Public Health, Fudan University  Shanghai China"
+        },
+        {
+          "name": "Office of Scientific Research and Information Management, Pudong Center for Disease Control and Prevention Fudan University Pudong Institute of Preventive Medicine  Shanghai China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Hui Min",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Gastroenterology and Hepatology, Key Laboratory of Gastroenterology and Hepatology, Ministry of Health, State Key Laboratory for Oncogenes and Related Genes Shanghai Institute of Digestive Disease, Renji Hospital, School of Medicine, Shanghai Jiaotong University  Shanghai China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Xiao Hong",
+      "family": "Lei",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Gastroenterology and Hepatology, Key Laboratory of Gastroenterology and Hepatology, Ministry of Health, State Key Laboratory for Oncogenes and Related Genes Shanghai Institute of Digestive Disease, Renji Hospital, School of Medicine, Shanghai Jiaotong University  Shanghai China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Guan Shen",
+      "family": "Dou",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Health Economics, Key Laboratory For Health Technology Assessment School of Public Health, Fudan University  Shanghai China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yi Chen",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Office of Scientific Research and Information Management, Pudong Center for Disease Control and Prevention Fudan University Pudong Institute of Preventive Medicine  Shanghai China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Li Ping",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Gastroenterology and Hepatology, Key Laboratory of Gastroenterology and Hepatology, Ministry of Health, State Key Laboratory for Oncogenes and Related Genes Shanghai Institute of Digestive Disease, Renji Hospital, School of Medicine, Shanghai Jiaotong University  Shanghai China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yao",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Gastroenterology and Hepatology, Key Laboratory of Gastroenterology and Hepatology, Ministry of Health, State Key Laboratory for Oncogenes and Related Genes Shanghai Institute of Digestive Disease, Renji Hospital, School of Medicine, Shanghai Jiaotong University  Shanghai China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gen Ming",
+      "family": "Zhao",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Epidemiology School of Public Health, Fudan University  Shanghai China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-8052-1898",
+      "authenticated-orcid": false,
+      "given": "Wei",
+      "family": "Zhong",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Gastroenterology and Hepatology, Key Laboratory of Gastroenterology and Hepatology, Ministry of Health, State Key Laboratory for Oncogenes and Related Genes Shanghai Institute of Digestive Disease, Renji Hospital, School of Medicine, Shanghai Jiaotong University  Shanghai China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        7,
+        13
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_2_6_2_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3322/caac.21262"
+    },
+    {
+      "key": "e_1_2_6_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3322/caac.21338"
+    },
+    {
+      "key": "e_1_2_6_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/ijc.30825"
+    },
+    {
+      "key": "e_1_2_6_5_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.gie.2019.11.035"
+    },
+    {
+      "key": "e_1_2_6_6_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/jgh.15033"
+    },
+    {
+      "key": "e_1_2_6_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5888/pcd14.160158"
+    },
+    {
+      "key": "e_1_2_6_8_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3389/fonc.2018.00579"
+    },
+    {
+      "key": "e_1_2_6_9_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2147/RMHP.S262171"
+    },
+    {
+      "key": "e_1_2_6_10_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10903-017-0576-6"
+    },
+    {
+      "key": "e_1_2_6_11_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00384-019-03419-7"
+    },
+    {
+      "key": "e_1_2_6_12_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ypmed.2018.11.002"
+    },
+    {
+      "key": "e_1_2_6_13_1",
+      "unstructured": "Bureau of Disease Control and Prevention Ministry of Health of the People's Republic of China. Expert Committee of Cancer Early Diagnosis and Treatment Project. Early Detection and Treatment Strategies in the Cancer Project (2011 edn). Beijing: People's Health Publishing House 2011. [in Chinese]."
+    },
+    {
+      "key": "e_1_2_6_14_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/s12885-015-1730-y"
+    },
+    {
+      "key": "e_1_2_6_15_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1046/j.1524-4733.2003.00234.x"
+    },
+    {
+      "key": "e_1_2_6_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJM199304013281301"
+    },
+    {
+      "key": "e_1_2_6_17_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/s12889-018-5112-7"
+    },
+    {
+      "key": "e_1_2_6_18_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1053/j.gastro.2017.05.013"
+    },
+    {
+      "key": "e_1_2_6_19_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2165/00019053-199813040-00003"
+    },
+    {
+      "key": "e_1_2_6_20_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1177/0272989X9301300409"
+    },
+    {
+      "key": "e_1_2_6_21_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.0269-2813.2008.03726.x"
+    },
+    {
+      "key": "e_1_2_6_22_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pone.0058341"
+    },
+    {
+      "key": "e_1_2_6_23_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1136/gut.2006.095109"
+    },
+    {
+      "key": "e_1_2_6_24_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.cgh.2006.11.003"
+    },
+    {
+      "key": "e_1_2_6_25_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.7326/0003-4819-112-5-328"
+    },
+    {
+      "key": "e_1_2_6_26_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.15171/ijhpm.2017.47"
+    },
+    {
+      "key": "e_1_2_6_27_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.socscimed.2018.07.004"
+    },
+    {
+      "key": "e_1_2_6_28_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2471/BLT.15.164418"
+    },
+    {
+      "key": "e_1_2_6_29_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10900-017-0317-8"
+    },
+    {
+      "key": "e_1_2_6_30_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1177/027298902400448867"
+    },
+    {
+      "key": "e_1_2_6_31_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1524-4733.2008.00358.x"
+    },
+    {
+      "key": "e_1_2_6_32_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/hec.1481"
+    },
+    {
+      "key": "e_1_2_6_33_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pone.0109150"
+    },
+    {
+      "key": "e_1_2_6_34_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/nm1214-1365"
+    },
+    {
+      "issue": "5",
+      "key": "e_1_2_6_35_1",
+      "first-page": "381",
+      "article-title": "Health Economic Evaluation Working Group of the Cancer Screening Program in Urban China (CanSPUC). Acceptance and willingness‐to‐pay for colorectal colonoscopy screening among high‐risk populations for colorectal cancer in urban China",
+      "volume": "49",
+      "author": "Shi JF",
+      "year": "2015",
+      "journal-title": "Chin J Prev Med."
+    },
+    {
+      "key": "e_1_2_6_36_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10754-018-9238-z"
+    },
+    {
+      "key": "e_1_2_6_37_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/hec.1511"
+    },
+    {
+      "key": "e_1_2_6_38_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1365-2753.2011.01776.x"
+    },
+    {
+      "key": "e_1_2_6_39_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/s12962-018-0104-0"
+    },
+    {
+      "key": "e_1_2_6_40_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/1471-2407-6-136"
+    },
+    {
+      "key": "e_1_2_6_41_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1097/MD.0000000000002739"
+    },
+    {
+      "key": "e_1_2_6_42_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ajic.2018.01.008"
+    },
+    {
+      "key": "e_1_2_6_43_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.4103/jisp.jisp_254_16"
+    },
+    {
+      "key": "e_1_2_6_44_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/1471-2407-14-261"
+    },
+    {
+      "key": "e_1_2_6_45_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1001/jama.284.15.1954"
+    },
+    {
+      "issue": "2",
+      "key": "e_1_2_6_46_1",
+      "first-page": "116",
+      "article-title": "Optimal use of colonoscopy and fecal immunochemical test for population‐based colorectal cancer screening: a cost‐effectiveness analysis using Japanese data",
+      "volume": "46",
+      "author": "Sekiguchi M",
+      "year": "2016",
+      "journal-title": "Jpn J Clin Oncol."
+    },
+    {
+      "key": "e_1_2_6_47_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1158/1055-9965.EPI-17-0150"
+    },
+    {
+      "key": "e_1_2_6_48_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1053/j.gastro.2004.02.016"
+    },
+    {
+      "key": "e_1_2_6_49_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/ijc.31314"
+    },
+    {
+      "key": "e_1_2_6_50_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/hec.819"
+    },
+    {
+      "key": "e_1_2_6_51_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/ijc.25530"
+    },
+    {
+      "key": "e_1_2_6_52_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pone.0208200"
+    },
+    {
+      "key": "e_1_2_6_53_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.gie.2006.03.014"
+    },
+    {
+      "key": "e_1_2_6_54_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/jnci/95.11.830-a"
+    },
+    {
+      "key": "e_1_2_6_55_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00520-016-3283-2"
+    }
+  ],
+  "container-title": [
+    "Journal of Digestive Diseases"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/1751-2980.13027",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1111/1751-2980.13027",
+      "content-type": "application/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/1751-2980.13027",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        8,
+        29
+      ]
+    ],
+    "date-time": "2023-08-29T06:00:21Z",
+    "timestamp": 1693288821000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://onlinelibrary.wiley.com/doi/10.1111/1751-2980.13027"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        7,
+        13
+      ]
+    ]
+  },
+  "references-count": 54,
+  "journal-issue": {
+    "issue": "8",
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          8
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1111/1751-2980.13027"
+  ],
+  "URL": "https://doi.org/10.1111/1751-2980.13027",
+  "archive": [
+    "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+    "1751-2972",
+    "1751-2980"
+  ],
+  "issn-type": [
+    {
+      "value": "1751-2972",
+      "type": "print"
+    },
+    {
+      "value": "1751-2980",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        7,
+        13
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2020-12-23",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2021-06-03",
+      "order": 1,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2021-07-13",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

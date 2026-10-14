@@ -1,0 +1,55 @@
+series,year,class,share,records,class_mentions
+research,2010,"Communicable, maternal & nutritional",0.47297297297297297,146,148
+research,2010,Non-communicable,0.49324324324324326,146,148
+research,2010,Injuries,0.033783783783783786,146,148
+research,2011,"Communicable, maternal & nutritional",0.5333333333333333,177,180
+research,2011,Non-communicable,0.43333333333333335,177,180
+research,2011,Injuries,0.03333333333333333,177,180
+research,2012,"Communicable, maternal & nutritional",0.4155251141552511,207,219
+research,2012,Non-communicable,0.547945205479452,207,219
+research,2012,Injuries,0.0365296803652968,207,219
+research,2013,"Communicable, maternal & nutritional",0.5254237288135594,232,236
+research,2013,Non-communicable,0.4491525423728814,232,236
+research,2013,Injuries,0.025423728813559324,232,236
+research,2014,"Communicable, maternal & nutritional",0.46875,219,224
+research,2014,Non-communicable,0.5044642857142857,219,224
+research,2014,Injuries,0.026785714285714284,219,224
+research,2015,"Communicable, maternal & nutritional",0.4270833333333333,286,288
+research,2015,Non-communicable,0.53125,286,288
+research,2015,Injuries,0.041666666666666664,286,288
+research,2016,"Communicable, maternal & nutritional",0.44,343,350
+research,2016,Non-communicable,0.5257142857142857,343,350
+research,2016,Injuries,0.03428571428571429,343,350
+research,2017,"Communicable, maternal & nutritional",0.3805309734513274,333,339
+research,2017,Non-communicable,0.5722713864306784,333,339
+research,2017,Injuries,0.0471976401179941,333,339
+research,2018,"Communicable, maternal & nutritional",0.4082687338501292,379,387
+research,2018,Non-communicable,0.5555555555555556,379,387
+research,2018,Injuries,0.03617571059431524,379,387
+research,2019,"Communicable, maternal & nutritional",0.3893805309734513,442,452
+research,2019,Non-communicable,0.5730088495575221,442,452
+research,2019,Injuries,0.03761061946902655,442,452
+research,2020,"Communicable, maternal & nutritional",0.3575757575757576,484,495
+research,2020,Non-communicable,0.6,484,495
+research,2020,Injuries,0.04242424242424243,484,495
+research,2021,"Communicable, maternal & nutritional",0.35453100158982515,610,629
+research,2021,Non-communicable,0.6009538950715422,610,629
+research,2021,Injuries,0.04451510333863275,610,629
+research,2022,"Communicable, maternal & nutritional",0.28368794326241137,693,705
+research,2022,Non-communicable,0.6780141843971631,693,705
+research,2022,Injuries,0.03829787234042553,693,705
+research,2023,"Communicable, maternal & nutritional",0.29683377308707126,746,758
+research,2023,Non-communicable,0.6715039577836411,746,758
+research,2023,Injuries,0.0316622691292876,746,758
+research,2024,"Communicable, maternal & nutritional",0.2697616060225847,789,797
+research,2024,Non-communicable,0.6888331242158093,789,797
+research,2024,Injuries,0.04140526976160602,789,797
+research,2025,"Communicable, maternal & nutritional",0.27490996398559425,821,833
+research,2025,Non-communicable,0.6818727490996399,821,833
+research,2025,Injuries,0.04321728691476591,821,833
+burden,2010,"Communicable, maternal & nutritional",0.37031204583429944,,
+burden,2010,Non-communicable,0.5087690529157213,,
+burden,2010,Injuries,0.12091890124997934,,
+burden,2023,"Communicable, maternal & nutritional",0.2755903319291297,,
+burden,2023,Non-communicable,0.6114415866156394,,
+burden,2023,Injuries,0.11296808145523086,,

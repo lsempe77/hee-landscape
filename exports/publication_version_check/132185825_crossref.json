@@ -1,0 +1,109 @@
+{
+  "institution": [
+    {
+      "name": "West Virginia University Libraries",
+      "acronym": [
+        "wvul"
+      ],
+      "department": [
+        "Economics"
+      ]
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        3
+      ]
+    ],
+    "date-time": "2022-04-03T11:51:00Z",
+    "timestamp": 1648986660882
+  },
+  "reference-count": 0,
+  "publisher": "West Virginia University Libraries",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "DOI": "10.33915/etd.7601",
+  "type": "dissertation",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        5,
+        18
+      ]
+    ],
+    "date-time": "2020-05-18T19:26:23Z",
+    "timestamp": 1589829983000
+  },
+  "approved": {
+    "date-parts": [
+      [
+        2020,
+        1,
+        1
+      ]
+    ]
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Three Essays in Public Economics"
+  ],
+  "prefix": "10.33915",
+  "author": [
+    {
+      "given": "Perry",
+      "family": "Ferrell",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "19638",
+  "container-title": [],
+  "original-title": [],
+  "deposited": {
+    "date-parts": [
+      [
+        2020,
+        5,
+        18
+      ]
+    ],
+    "date-time": "2020-05-18T19:27:20Z",
+    "timestamp": 1589830040000
+  },
+  "score": 1,
+  "degree": [
+    "PhD"
+  ],
+  "resource": {
+    "primary": {
+      "URL": "https://researchrepository.wvu.edu/etd/7601"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        null
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.33915/etd.7601",
+  "relation": {},
+  "subject": []
+}

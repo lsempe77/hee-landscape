@@ -4,8 +4,8 @@
       2010,
       2026
     ],
-    "data_built": "2026-10-08",
-    "master_sha256": "39c4655138d36da5936b88e8e3d977e2ead11b1dcf7f6e804a38cf1de4c54222",
+    "data_built": "2026-10-14",
+    "master_sha256": "bb61ac626bb49ddec5ca86a5714ed5cfff5dd03f10641279f0428ffeb7718295",
     "unit": "Unique eligible studies reporting each funder; no grant amounts or causal attribution.",
     "theme_overlap": true,
     "sources_accessed": "2026-10-12",
@@ -13,13 +13,13 @@
     "analysis_built": "14 October 2026"
   },
   "global": {
-    "n": 41657,
+    "n": 41610,
     "named_funder": 11149,
     "wellcome": 174,
     "income_counts": [
-      20517,
-      7413,
-      13727
+      20491,
+      7406,
+      13713
     ],
     "wellcome_income_counts": [
       40,
@@ -47,13 +47,13 @@
       "label": "Infectious Diseases",
       "url": "https://wellcome.org/our-priorities/infectious-disease",
       "definition": "Broad proxy: studies whose title and abstract were coded to a Global Burden of Disease (GBD 2023) infectious cause: HIV/AIDS and sexually transmitted infections, respiratory infections and tuberculosis, enteric infections, malaria and neglected tropical diseases, other infectious diseases, or an infection of unstated type. Studies without a disease code are not treated as evidence of absence.",
-      "n": 6339,
+      "n": 6333,
       "named_funder": 1976,
       "wellcome": 92,
       "income_counts": [
-        2487,
-        1965,
-        1887
+        2486,
+        1961,
+        1886
       ],
       "wellcome_income_counts": [
         8,
@@ -21073,7 +21073,7 @@
       "Mental Health + Climate & Health": 4
     }
   },
-  "disease_tagged": 36480,
+  "disease_tagged": 36446,
   "donors": [
     {
       "funder": "NIHR HTA Programme",

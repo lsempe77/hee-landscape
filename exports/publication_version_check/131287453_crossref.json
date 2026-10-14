@@ -1,0 +1,372 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        4,
+        6
+      ]
+    ],
+    "date-time": "2026-04-06T14:39:31Z",
+    "timestamp": 1775486371082,
+    "version": "3.50.1"
+  },
+  "reference-count": 28,
+  "publisher": "American Economic Association",
+  "issue": "1",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "American Economic Journal: Economic Policy"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2023,
+        2,
+        1
+      ]
+    ]
+  },
+  "abstract": "<jats:p> Data from an 18-month randomized trial show large and sustained impacts on water purification and child health of a program providing monthly coupons for free water treatment solution to households with young children. The program is more effective and much more cost effective than asking Community Health Workers (CHWs) to distribute free chlorine to households during routine monthly visits. This is because only 40 percent of households use free chlorine, targeting through CHWs is worse than self-targeting through coupon redemption, and water treatment promotion by CHWs does not increase chlorine use among beneficiaries of free chlorine. (JEL I12, I18, J13, O12, O13, Q53) </jats:p>",
+  "DOI": "10.1257/pol.20210121",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        1,
+        31
+      ]
+    ],
+    "date-time": "2023-01-31T13:55:24Z",
+    "timestamp": 1675173324000
+  },
+  "page": "272-305",
+  "source": "Crossref",
+  "is-referenced-by-count": 8,
+  "title": [
+    "Expanding Access to Clean Water for the Rural Poor: Experimental Evidence from Malawi"
+  ],
+  "prefix": "10.1257",
+  "volume": "15",
+  "author": [
+    {
+      "given": "Pascaline",
+      "family": "Dupas",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Stanford University, NBER, and CEPR (email: )"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Basimenye",
+      "family": "Nhlema",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Partners In Health (email: )"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Zachary",
+      "family": "Wagner",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "RAND Corporation (email: )"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Aaron",
+      "family": "Wolf",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Northwestern University (email: )"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Emily",
+      "family": "Wroe",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Partners In Health, Harvard Medical School, and Brigham and Women’s Hospital (email: )"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "11",
+  "reference": [
+    {
+      "key": "p_1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Andres, Luis A., Michael Thibert, Camilo Lombana Cordoba, Alexander V. Danilenko, George Joseph, and Christian Borja-Vega. 2019. Doing More with Less: Smarter Subsidies for Water Supply and Sanitation. Washington, DC: World Bank.",
+      "DOI": "10.1596/32277"
+    },
+    {
+      "key": "p_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.4269/ajtmh.2007.76.354"
+    },
+    {
+      "key": "p_3",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1136/bmj.c2220"
+    },
+    {
+      "key": "p_4",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/app.20170201"
+    },
+    {
+      "key": "p_5",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1136/bmj.39118.489931.BE"
+    },
+    {
+      "key": "p_6",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/qjec.2010.125.1.1"
+    },
+    {
+      "key": "p_7",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/pol.4.4.68"
+    },
+    {
+      "key": "p_8",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jpubeco.2017.09.005"
+    },
+    {
+      "issue": "7",
+      "key": "p_9",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0219535",
+      "DOI": "10.1371/journal.pone.0219535",
+      "volume": "14",
+      "author": "Dupas Pascaline",
+      "year": "2019",
+      "journal-title": "PLoS One"
+    },
+    {
+      "key": "p_10",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.aaf6288"
+    },
+    {
+      "key": "p_11",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Dupas, P., and E. Miguel. 2017. \"Impacts and Determinants of Health Levels in Low-Income Countries.\" In Handbook of Economic Field Experiments, Vol. 2, edited by Abhijit Vinayak Banerjee and Esther Du o, 3-93. Amsterdam: North-Holland.",
+      "DOI": "10.1016/bs.hefe.2016.09.003"
+    },
+    {
+      "key": "p_12",
+      "unstructured": "Dupas, Pascaline, Basimenye Nhlema, Zachary Wagner, Aaron Wolf, and Emily Wroe. 2023. \"Replication Data for: Expanding Access to Clean Water for the Rural Poor: Experimental Evidence from Malawi.\" American Economic Association [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E139301V1."
+    },
+    {
+      "key": "p_13",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Dupas, Pascaline, Zachary Wagner, and Emily Wroe. 2018. \"Community Health Workers, Subsidies and Safe Drinking Water: Experimental Evidence from Malawi.\" AEA RCT Registry, April 17. https://doi.org/10.1257/rct.2893.",
+      "DOI": "10.1257/rct.2893"
+    },
+    {
+      "key": "p_14",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S1473-3099(04)01253-8"
+    },
+    {
+      "key": "p_15",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Haushofer, Johannes, Anett John, and Kate Orkin. 2019. \"Can Simple Psychological Interventions Increase Preventive Health Investment?\" NBER Working Papers 25731.",
+      "DOI": "10.3386/w25731"
+    },
+    {
+      "key": "p_16",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jamison, Dean T., Hellen Gelband, Susan Horton, Prabhat Jha, Ramanan Laxminarayan, Charles N. Mock, and Rachel Nugent, eds. 2018. Disease Control Priorities: Improving Health and Reducing Poverty, Vol. 9. 3rd ed. Washington, DC: World Bank.",
+      "DOI": "10.1596/978-1-4648-0527-1"
+    },
+    {
+      "key": "p_17",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/s12884-019-2714-8"
+    },
+    {
+      "key": "p_18",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Kremer, Michael, Edward Miguel, Sendhil Mullainathan, Clair Null, and Alix Peterson Zwane. 2011. \"Social Engineering: Evidence from a Suite of Take-Up Experiments in Kenya.\" Unpublished.",
+      "DOI": "10.2175/193864711802863535"
+    },
+    {
+      "key": "p_19",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S2214-109X(17)30490-4"
+    },
+    {
+      "key": "p_20",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/s13643-019-1054-0"
+    },
+    {
+      "key": "p_21",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.1103170108"
+    },
+    {
+      "key": "p_22",
+      "unstructured": "National Statistical Office. 2017. Malawi Demographic and Health Survey 2015-16. Zomba, Malawi: National Statistical Of ce."
+    },
+    {
+      "key": "p_23",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S2214-109X(18)30005-6"
+    },
+    {
+      "key": "p_24",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S2214-109X(19)30315-8"
+    },
+    {
+      "key": "p_25",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pmed.1002734"
+    },
+    {
+      "key": "p_26",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jdeveco.2019.102437"
+    },
+    {
+      "key": "p_27",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/tmi.13051"
+    },
+    {
+      "key": "p_28",
+      "unstructured": "World Health Organization. 2019. World Malaria Report 2019. Geneva: World Health Organization."
+    }
+  ],
+  "container-title": [
+    "American Economic Journal: Economic Policy"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/pol.20210121",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        1,
+        31
+      ]
+    ],
+    "date-time": "2023-01-31T13:56:44Z",
+    "timestamp": 1675173404000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://pubs.aeaweb.org/doi/10.1257/pol.20210121"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        2,
+        1
+      ]
+    ]
+  },
+  "references-count": 28,
+  "journal-issue": {
+    "issue": "1",
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          2,
+          1
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1257/pol.20210121"
+  ],
+  "URL": "https://doi.org/10.1257/pol.20210121",
+  "relation": {},
+  "ISSN": [
+    "1945-7731",
+    "1945-774X"
+  ],
+  "issn-type": [
+    {
+      "value": "1945-7731",
+      "type": "print"
+    },
+    {
+      "value": "1945-774X",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        2,
+        1
+      ]
+    ]
+  }
+}

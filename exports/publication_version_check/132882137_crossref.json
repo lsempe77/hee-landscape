@@ -1,0 +1,323 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        24
+      ]
+    ],
+    "date-time": "2025-10-24T00:45:21Z",
+    "timestamp": 1761266721374,
+    "version": "build-2065373602"
+  },
+  "reference-count": 0,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2021-01-01T00:00:00Z",
+        "timestamp": 1609459200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2021-01-01T00:00:00Z",
+        "timestamp": 1609459200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2022-01-01T00:00:00Z",
+        "timestamp": 1640995200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 365,
+      "URL": "http://www.elsevier.com/open-access/userlicense/1.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "clinicalkey.com",
+      "clinicalkey.com.au",
+      "clinicalkey.es",
+      "clinicalkey.fr",
+      "clinicalkey.jp",
+      "hpbonline.org",
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "HPB"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2021
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.hpb.2020.11.234",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        3,
+        25
+      ]
+    ],
+    "date-time": "2021-03-25T03:57:15Z",
+    "timestamp": 1616644635000
+  },
+  "page": "S99",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "special_numbering": "S1",
+  "title": [
+    "Health Economic Evaluation of Patients with Colorectal Liver Metastases Randomized to ALPPS or TSH - Analysis from the LIGRO Trial"
+  ],
+  "prefix": "10.1016",
+  "volume": "23",
+  "author": [
+    {
+      "given": "K.",
+      "family": "Hasselgren",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "M.",
+      "family": "Henriksson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "B.",
+      "family": "Røsok",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "P.",
+      "family": "Larsen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "E.",
+      "family": "Sparrelid",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "G.",
+      "family": "Lindell",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "B.",
+      "family": "Isaksson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "P.",
+      "family": "Sandström",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "B.",
+      "family": "Björnsson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "container-title": [
+    "HPB"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S1365182X20314787?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S1365182X20314787?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        24
+      ]
+    ],
+    "date-time": "2025-10-24T00:32:50Z",
+    "timestamp": 1761265970000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1365182X20314787"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021
+      ]
+    ]
+  },
+  "references-count": 0,
+  "alternative-id": [
+    "S1365182X20314787"
+  ],
+  "URL": "https://doi.org/10.1016/j.hpb.2020.11.234",
+  "relation": {},
+  "ISSN": [
+    "1365-182X"
+  ],
+  "issn-type": [
+    {
+      "type": "print",
+      "value": "1365-182X"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "Health Economic Evaluation of Patients with Colorectal Liver Metastases Randomized to ALPPS or TSH - Analysis from the LIGRO Trial",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "HPB",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.hpb.2020.11.234",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "simple-article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "Copyright © 2020 Published by Elsevier Ltd.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ]
+}

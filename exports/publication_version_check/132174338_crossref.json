@@ -1,0 +1,140 @@
+{
+  "institution": [
+    {
+      "name": "National Bureau of Economic Research",
+      "acronym": [
+        "NBER"
+      ],
+      "place": [
+        "Cambridge, MA"
+      ]
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        1
+      ]
+    ],
+    "date-time": "2026-10-01T23:03:19Z",
+    "timestamp": 1790895799956,
+    "version": "4.1.0"
+  },
+  "publisher-location": "Cambridge, MA",
+  "reference-count": 0,
+  "publisher": "National Bureau of Economic Research",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "DOI": "10.3386/w16164",
+  "type": "report",
+  "created": {
+    "date-parts": [
+      [
+        2010,
+        11,
+        23
+      ]
+    ],
+    "date-time": "2010-11-23T15:03:30Z",
+    "timestamp": 1290524610000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 49,
+  "title": [
+    "Death by Market Power: Reform, Competition and Patient Outcomes in the National Health Service"
+  ],
+  "prefix": "10.3386",
+  "author": [
+    {
+      "given": "Martin",
+      "family": "Gaynor",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Rodrigo",
+      "family": "Moreno-Serra",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Carol",
+      "family": "Propper",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "1960",
+  "published-online": {
+    "date-parts": [
+      [
+        2010,
+        7
+      ]
+    ]
+  },
+  "container-title": [],
+  "original-title": [],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        19
+      ]
+    ],
+    "date-time": "2026-09-19T11:31:41Z",
+    "timestamp": 1789817501000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://www.nber.org/papers/w16164.pdf"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2010,
+        7
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.3386/w16164",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2010,
+        7
+      ]
+    ]
+  }
+}

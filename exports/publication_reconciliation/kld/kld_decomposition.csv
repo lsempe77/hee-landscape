@@ -1,0 +1,7 @@
+cause_set,group,kld_2010_12,observed_change_pct,only_dalys_change_research_fixed_pct,only_research_changes_dalys_fixed_pct,observed_change_lo,only_dalys_change_research_fixed_lo,only_research_changes_dalys_fixed_lo,observed_change_hi,only_dalys_change_research_fixed_hi,only_research_changes_dalys_fixed_hi
+16causes,all,0.2104,-20.1,-24.6,7.2,-31.7,-26.8,-7.9,-6.1,-22.0,25.5
+16causes,lmic,0.2673,-5.3,9.5,-9.0,-33.7,3.2,-35.8,24.8,15.4,20.1
+16causes,hic,0.16,-21.2,9.9,-30.0,-38.7,7.1,-45.3,-2.0,12.6,-12.1
+20causes,all,0.382,-23.2,-14.2,-8.5,-34.4,-15.4,-21.3,-9.2,-12.6,6.9
+20causes,lmic,0.4255,-3.6,3.4,-4.7,-28.1,-0.3,-28.3,17.8,6.7,16.8
+20causes,hic,0.282,-28.3,-3.5,-24.9,-42.0,-5.0,-40.0,-13.2,-1.9,-9.0

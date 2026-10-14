@@ -1,0 +1,314 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        1
+      ]
+    ],
+    "date-time": "2022-04-01T15:59:49Z",
+    "timestamp": 1648828789274
+  },
+  "reference-count": 10,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "PharmacoEconomics"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2012,
+        1
+      ]
+    ]
+  },
+  "DOI": "10.2165/11594280-000000000-00000",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2011,
+        12,
+        3
+      ]
+    ],
+    "date-time": "2011-12-03T22:05:57Z",
+    "timestamp": 1322949957000
+  },
+  "page": "35-46",
+  "source": "Crossref",
+  "is-referenced-by-count": 21,
+  "title": [
+    "Dronedarone for the Treatment of Atrial Fibrillation"
+  ],
+  "prefix": "10.1007",
+  "volume": "30",
+  "author": [
+    {
+      "given": "Claire",
+      "family": "McKenna",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Emma",
+      "family": "Maund",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Muhammad",
+      "family": "Sarowar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "David",
+      "family": "Fox",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Matt",
+      "family": "Stevenson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Chris",
+      "family": "Pepper",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Nerys",
+      "family": "Woolacott",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Stephen",
+      "family": "Palmer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "reference": [
+    {
+      "issue": "5",
+      "key": "R2-3-20111210",
+      "doi-asserted-by": "crossref",
+      "first-page": "347",
+      "DOI": "10.2165/11535680-000000000-00000",
+      "volume": "28",
+      "author": "Sculpher",
+      "year": "2010",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "5",
+      "key": "R3-3-20111210",
+      "doi-asserted-by": "crossref",
+      "first-page": "351",
+      "DOI": "10.2165/11532160-000000000-00000",
+      "volume": "28",
+      "author": "Rodgers",
+      "year": "2010",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "6",
+      "key": "R4-3-20111210",
+      "doi-asserted-by": "crossref",
+      "first-page": "439",
+      "DOI": "10.2165/11532220-000000000-00000",
+      "volume": "28",
+      "author": "Bagust",
+      "year": "2010",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "2",
+      "key": "R5-3-20111210",
+      "doi-asserted-by": "crossref",
+      "first-page": "133",
+      "DOI": "10.2165/11535770-000000000-00000",
+      "volume": "29",
+      "author": "Stevenson",
+      "year": "2011",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "issue": "11",
+      "key": "R6-3-20111210",
+      "doi-asserted-by": "crossref",
+      "first-page": "951",
+      "DOI": "10.2165/11589310-000000000-00000",
+      "volume": "29",
+      "author": "Scotland",
+      "year": "2011",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "key": "R12-3-20111210",
+      "doi-asserted-by": "crossref",
+      "first-page": "239",
+      "DOI": "10.1136/hrt.2003.014720",
+      "volume": "90",
+      "author": "Steinberg",
+      "year": "2004",
+      "journal-title": "Heart"
+    },
+    {
+      "issue": "Suppl.",
+      "key": "R13-3-20111210",
+      "doi-asserted-by": "crossref",
+      "first-page": "2",
+      "DOI": "10.1016/S0002-9149(98)00583-9",
+      "volume": "82",
+      "author": "Kannel",
+      "year": "1998",
+      "journal-title": "Am J Cardiol"
+    },
+    {
+      "issue": "10",
+      "key": "R15-3-20111210",
+      "doi-asserted-by": "crossref",
+      "first-page": "987",
+      "DOI": "10.1056/NEJMoa054686",
+      "volume": "357",
+      "author": "Singh",
+      "year": "2007",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "issue": "7",
+      "key": "R16-3-20111210",
+      "doi-asserted-by": "crossref",
+      "first-page": "668",
+      "DOI": "10.1056/NEJMoa0803778",
+      "volume": "360",
+      "author": "Hohnloser",
+      "year": "2009",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "R17-3-20111210",
+      "author": "",
+      "year": "2009"
+    }
+  ],
+  "container-title": [
+    "PharmacoEconomics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "deposited": {
+    "date-parts": [
+      [
+        2017,
+        6,
+        20
+      ]
+    ],
+    "date-time": "2017-06-20T10:45:06Z",
+    "timestamp": 1497955506000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.2165/11594280-000000000-00000"
+    }
+  },
+  "subtitle": [
+    "A NICE Single Technology Appraisal"
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2012,
+        1
+      ]
+    ]
+  },
+  "references-count": 10,
+  "journal-issue": {
+    "issue": "1"
+  },
+  "URL": "https://doi.org/10.2165/11594280-000000000-00000",
+  "relation": {},
+  "ISSN": [
+    "1170-7690"
+  ],
+  "issn-type": [
+    {
+      "value": "1170-7690",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2012,
+        1
+      ]
+    ]
+  }
+}

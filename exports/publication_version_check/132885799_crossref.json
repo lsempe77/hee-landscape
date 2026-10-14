@@ -1,0 +1,273 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        9
+      ]
+    ],
+    "date-time": "2025-10-09T00:52:20Z",
+    "timestamp": 1759971140305,
+    "version": "build-2065373602"
+  },
+  "reference-count": 0,
+  "publisher": "Wiley",
+  "issue": "S7",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            1,
+            9
+          ]
+        ],
+        "date-time": "2025-01-09T00:00:00Z",
+        "timestamp": 1736380800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 39,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "alz-journals.onlinelibrary.wiley.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Alzheimer's &amp;amp; Dementia"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title><jats:sec><jats:title>Background</jats:title><jats:p>This post‐hoc subgroup analysis aimed to estimate the potential cost‐effectiveness of a Japanese multimodal intervention trial for the prevention of dementia (J‐MINT) from a societal perspective.</jats:p></jats:sec><jats:sec><jats:title>Method</jats:title><jats:p>Using a Markov model, we estimated the economic impact of J‐MINT on disease prevention, drawing on data from the 2019 J‐MINT trial and relevant published literature. The trial, a randomized controlled trial (RCT), focused on participants aged 65 to 85 years with mild cognitive impairment. Participants were randomly assigned either a multidomain intervention group (comprising management of vascular risk factors, physical exercise, nutritional counseling, and cognitive training) or a standard care group (involving vascular risk factor management and receipt of health‐related information every two months). The Markov model consists of five states: at‐risk, mild, moderate, severe dementia, and death. By simulating care costs and quality‐adjusted life years (QALYs), we estimated the incremental cost‐effectiveness ratio (ICER). The simulation spanned from ages 65 to 100, utilizing the Simpson 1/3 rule for correction, with a discount rate of 0.02. The intervention effect was assumed to persist for the remaining lifetime post‐program. Care costs encompassed medical care, public long‐term care, and informal care. The intervention cost was derived from the J‐MINT trial data. In addition to the base case analysis, sensitivity and scenario analysis were conducted to evaluate uncertainty and heterogeneity.</jats:p></jats:sec><jats:sec><jats:title>Result</jats:title><jats:p>Costs were JPY 18,493,579 and JPY 18,056,997 and QALYs were 12.37 and 12.46 for standard of care and J‐MINT, respectively. This translated to savings of JPY 436,582 (US$ 2,952.01) and QALY gain of 0.09 per person, affirming the dominance of the J‐MINT.</jats:p></jats:sec><jats:sec><jats:title>Conclusion</jats:title><jats:p>Our estimation supports the potential cost‐effectiveness of multimodal intervention trials, exemplified by J‐MINT, for dementia prevention.</jats:p></jats:sec>",
+  "DOI": "10.1002/alz.086754",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        9
+      ]
+    ],
+    "date-time": "2025-01-09T06:48:01Z",
+    "timestamp": 1736405281000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+    "Cost‐effectiveness analysis of the multimodal intervention for dementia prevention: post‐hoc sub‐group analyses of the J‐MINT"
+  ],
+  "prefix": "10.1002",
+  "volume": "20",
+  "author": [
+    {
+      "given": "Naoki",
+      "family": "Takashi",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "National Center for Geriatrics and Gerontology, Obu, Aichi Japan"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Shosuke",
+      "family": "Ohtera",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Center for Geriatrics and Gerontology, Obu, Aichi Japan"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Yujiro",
+      "family": "Kuroda",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Center for Geriatrics and Gerontology, Obu, Aichi Japan"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Hidenori",
+      "family": "Arai",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Center for Geriatrics and Gerontology, Obu, Aichi Japan"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Takashi",
+      "family": "Sakurai",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Center for Geriatrics and Gerontology, Obu, Aichi Japan"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "name": "J‐MINT study group",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        9
+      ]
+    ]
+  },
+  "container-title": [
+    "Alzheimer's &amp; Dementia"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/pdf/10.1002/alz.086754",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2025-10-08T12:38:58Z",
+    "timestamp": 1759927138000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.086754"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "S7",
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1002/alz.086754"
+  ],
+  "URL": "https://doi.org/10.1002/alz.086754",
+  "archive": [
+    "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+    "1552-5260",
+    "1552-5279"
+  ],
+  "issn-type": [
+    {
+      "type": "print",
+      "value": "1552-5260"
+    },
+    {
+      "type": "electronic",
+      "value": "1552-5279"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2025-01-09",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ],
+  "article-number": "e086754"
+}

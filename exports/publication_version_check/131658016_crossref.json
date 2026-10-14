@@ -1,0 +1,180 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        2,
+        1
+      ]
+    ],
+    "date-time": "2026-02-01T21:03:20Z",
+    "timestamp": 1769979800337,
+    "version": "3.49.0"
+  },
+  "reference-count": 0,
+  "publisher": "Canadian Urological Association Journal",
+  "issue": "5",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "CUAJ"
+  ],
+  "abstract": "<jats:p>Introduction: Recurrent, uncomplicated urinary tract infections (rUTIs) in women are associated with burdensome symptoms, high antibiotic use, and significant costs. The sublingual vaccine MV140 has demonstrated significant reduction in rUTI rates in Canada and Europe. This analysis examines the cost-effectiveness of MV140 as an alternative to prophylactic antibiotics (pAbs) for rUTI prevention in adult women, in the Canadian healthcare setting.\nMethods: A cost-utility model was developed to follow rUTI patients over 1.25 years through four health states: UTI-free survival, acute UTI, pyelonephritis, and death. A decision tree was used to model the acute UTI state, accounting for Ab resistance and choice of first-line Ab treatment, while Markov model transition probabilities were derived from a published direct comparison. Cost inputs included drug acquisition/administration, healthcare resource use, adverse events, and lost productivity, and were based on Canadian governmental resources. Utilities were derived from published literature. The base case was probabilistic (n=5000); multiple one-way sensitivity analyses were performed to assess model uncertainty.\nResults: MV140 was associated with cost-savings (-$1442) and increased quality of life years (0.01) compared to pAbs, with an incremental cost-effectiveness ratio of -$229 088 in the base case (societal perspective). MV140 remained dominant over pAbs in most scenario analyses, with incremental costs ranging from -$256 207 to $875.\nConclusions: MV140 represents a consistently cost-effective alternative to pAbs in the Canadian healthcare system. When societal costs are considered, MV140 is consistently dominant over pAbs irrespective of variation in scenario inputs, demonstrating the considerable economic value of MV140 in this disease setting.</jats:p>",
+  "DOI": "10.5489/cuaj.9237",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        24
+      ]
+    ],
+    "date-time": "2026-01-24T11:16:10Z",
+    "timestamp": 1769253370000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "The sublingual vaccine MV140 is dominant over prophylactic antibiotics for the prevention of recurrent, uncomplicated urinary tract infections in adult women"
+  ],
+  "prefix": "10.5489",
+  "volume": "20",
+  "author": [
+    {
+      "given": "R. Christopher",
+      "family": "Doiron",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "J. Curtis",
+      "family": "Nickel",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Shivani",
+      "family": "Kamdar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "3456",
+  "published-online": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        23
+      ]
+    ]
+  },
+  "container-title": [
+    "Canadian Urological Association Journal"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://cuaj.ca/index.php/journal/article/download/9237/6711",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://cuaj.ca/index.php/journal/article/download/9237/6710",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        27
+      ]
+    ],
+    "date-time": "2026-01-27T11:16:23Z",
+    "timestamp": 1769512583000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://cuaj.ca/index.php/journal/article/view/9237"
+    }
+  },
+  "subtitle": [
+    "A cost-utility analysis"
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        23
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "5",
+    "published-online": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          23
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.5489/cuaj.9237",
+  "relation": {},
+  "ISSN": [
+    "1920-1214",
+    "1911-6470"
+  ],
+  "issn-type": [
+    {
+      "value": "1920-1214",
+      "type": "electronic"
+    },
+    {
+      "value": "1911-6470",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        23
+      ]
+    ]
+  }
+}

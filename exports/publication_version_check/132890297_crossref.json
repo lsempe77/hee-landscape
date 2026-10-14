@@ -1,0 +1,260 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        29
+      ]
+    ],
+    "date-time": "2025-12-29T00:52:11Z",
+    "timestamp": 1766969531374,
+    "version": "3.48.0"
+  },
+  "reference-count": 0,
+  "publisher": "Cambridge University Press (CUP)",
+  "issue": "S1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            29
+          ]
+        ],
+        "date-time": "2025-12-29T00:00:00Z",
+        "timestamp": 1766966400000
+      },
+      "content-version": "unspecified",
+      "delay-in-days": 28,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Int J Technol Assess Health Care"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        12
+      ]
+    ]
+  },
+  "abstract": "<jats:sec id=\"S0266462325100615_sec0005\" sec-type=\"intro\">\n                    <jats:title>Introduction</jats:title>\n                    <jats:p>Geriatric assessment and management (GAM) is a guideline-recommended strategy for optimizing cancer management among older adults. In a recent cost-utility analysis of the Canadian 5C randomized controlled trial (RCT), GAM appeared cost effective only in selective patients. We assessed the cost-utility of GAM plus usual care (UC) versus UC alone in older adults with cancer using a decision model and best available evidence from four international RCTs: GAIN, GAP70, INTEGERATE, and 5C.</jats:p>\n                  </jats:sec>\n                  <jats:sec id=\"S0266462325100615_sec0006\" sec-type=\"methods\">\n                    <jats:title>Methods</jats:title>\n                    <jats:p>We conducted a model-based economic evaluation using pooled data from four international RCTs (GAIN, GAP70, INTEGERATE, and 5C), supplemented by additional evidence from the literature. Deterministic and probabilistic analyses were performed from the healthcare payer perspective, applying a six-month time horizon. The base case and main analyses used Canadian cost data. Sensitivity analyses included per-trial scenario analyses, one-year time horizon, and the use of USA costs. We reported healthcare costs per quality-adjusted life year (QALY) and the incremental net monetary benefit (INMB) using a CAD50,000(USD36,277) per QALY threshold.</jats:p>\n                  </jats:sec>\n                  <jats:sec id=\"S0266462325100615_sec0007\" sec-type=\"results\">\n                    <jats:title>Results</jats:title>\n                    <jats:p>The base case analysis using Canadian costs indicated that GAM was cost effective with an INMB of CAD1,117 (USD819) (95% credibility interval [CrI]: −CAD2,450 [−USD1,796], CAD5,035 [USD3,692]) and 70.7 percent probability of GAM being cost effective at a cost-effectiveness threshold of CAD50,000 (USD36,666) per QALY. Trial-specific results varied, with the GAP70 and INTEGERATE trials yielding positive INMB values (CAD2,635 [USD1932] and CAD2,886 [USD2,116], respectively), while 5C and GAIN resulted in negative INMB values (−CAD642 [−USD471] and −CAD268 [−USD196], respectively). Sensitivity analyses revealed that chemotherapy costs were the main driver of costs in both GAM and UC strategies.</jats:p>\n                  </jats:sec>\n                  <jats:sec id=\"S0266462325100615_sec0008\" sec-type=\"conclusions\">\n                    <jats:title>Conclusions</jats:title>\n                    <jats:p>Evidence showed that GAM is generally cost effective. However, GAM’s cost effectiveness varied across trial scenarios, driven primarily by differences in chemotherapy costs. Future research should focus on identifying key GAM components that most effectively reduce severe toxicity, hospitalizations, and chemotherapy-related costs to optimize overall cost effectiveness.</jats:p>\n                  </jats:sec>",
+  "DOI": "10.1017/s0266462325100615",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        29
+      ]
+    ],
+    "date-time": "2025-12-29T00:49:16Z",
+    "timestamp": 1766969356000
+  },
+  "page": "S1-S2",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "OP02 Cost-Utility Of Geriatric Assessment And Management In Older Adults With Cancer: Model-Based Economic Evaluation"
+  ],
+  "prefix": "10.1017",
+  "volume": "41",
+  "author": [
+    {
+      "given": "Selai",
+      "family": "Akseer",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Shant Torkom",
+      "family": "Yeretzian",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Lusine",
+      "family": "Abrahamyan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Martine",
+      "family": "Puts",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Mostafa",
+      "family": "Mohamed",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Wee Kheng",
+      "family": "Soo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Shabbir",
+      "family": "Alibhai",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Yeva",
+      "family": "Sahakyan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "56",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        29
+      ]
+    ]
+  },
+  "container-title": [
+    "International Journal of Technology Assessment in Health Care"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0266462325100615",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        29
+      ]
+    ],
+    "date-time": "2025-12-29T00:49:22Z",
+    "timestamp": 1766969362000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.cambridge.org/core/product/identifier/S0266462325100615/type/journal_article"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        12
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "S1",
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S0266462325100615"
+  ],
+  "URL": "https://doi.org/10.1017/s0266462325100615",
+  "relation": {},
+  "ISSN": [
+    "0266-4623",
+    "1471-6348"
+  ],
+  "issn-type": [
+    {
+      "value": "0266-4623",
+      "type": "print"
+    },
+    {
+      "value": "1471-6348",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        12
+      ]
+    ]
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        9
+      ]
+    ],
+    "date-time": "2025-10-09T00:51:27Z",
+    "timestamp": 1759971087126,
+    "version": "build-2065373602"
+  },
+  "reference-count": 0,
+  "publisher": "Wiley",
+  "issue": "S4",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            1,
+            9
+          ]
+        ],
+        "date-time": "2025-01-09T00:00:00Z",
+        "timestamp": 1736380800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 39,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "alz-journals.onlinelibrary.wiley.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Alzheimer's &amp;amp; Dementia"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title><jats:sec><jats:title>Background</jats:title><jats:p>Previous trials reported that collaborative Dementia Care Management (cDCM) could be effective for patients and caregivers and cost‐effective for healthcare systems in the short term. However, long‐term evidence is lacking. Therefore, the study’s objective was to determine the long‐term efficacy and cost‐effectiveness of cDCM compared with usual care.</jats:p></jats:sec><jats:sec><jats:title>Method</jats:title><jats:p>A General Practitioner (GP)‐based, cluster‐randomized‐controlled intervention trial (DelpHi‐MV) was conducted. Participating GP practices were randomly allocated to one of two arms (care as usual or cDCM). Participants of the intervention group received a comprehensive needs assessment and individualized interventions by nurses specifically qualified for dementia collaborating with GPs and healthcare stakeholders over six months. Controls received usual care. Primary endpoints were behavioral and psychological symptoms (NPI), caregiver burden (Berlin Inventory of Caregivers' Burden), Health‐Related Quality of Life (HRQoL, QoL‐AD, SF‐12), anti‐dementia drug treatment, potentially inappropriate medication, and cost‐effectiveness (incremental cost and Quality‐adjusted Life Years, QALYs) after 36 months.</jats:p></jats:sec><jats:sec><jats:title>Result</jats:title><jats:p>308 participants (n = 221 cDCM, n = 87 usual care) were included for the efficacy analyses, and 428 (n = 303 cDCM, n = 125 usual care) for the cost‐effectiveness analysis that included deceased patients. Based on multivariate regression models adjusted for baseline scores, participants receiving cDCM showed significantly less behavioural and psychological symptoms (adjusted mean difference ‐10.3 [95% CI ‐16.9 to ‐3.6], p = 0.003, Cohens‐d = ‐0.78), better mental health (+2.26 [0.3 to 4.2], p = 0.023, d = 0.26) and lower caregiver burden (‐0.59 [‐0.8 to ‐0.4], p&lt;0.001, d = 0.71), and more likely received anti‐dementia drugs (adjusted odds ratio 1.91 [1.0 to 3.8], p = 0.065, Cramérs‐V = 0.12) compared to usual care participants. There was no effect on overall HRQoL, physical health, or potentially inappropriate medication after 36 months. cDCM gained QALYs (+0.14 [0.01 to 0.27], p = 0.050, d = 0.20) and increased costs (+437€ [‐5,438 to 6,313], p = 0.868, d = 0.02), resulting in a cost‐effectiveness‐ratio of 3,186€/QALY. Cost‐effectiveness was significantly better in PlwD living alone (‐3,815€, +0.224 QALYs, cDCM dominates) compared to those living with a caregiver (+3.283€, +0.079 QALYs, 47,538€/QALY).</jats:p></jats:sec><jats:sec><jats:title>Conclusion</jats:title><jats:p>cDCM is effective and cost‐effective in the long term, improving patients, caregivers, and health system‐relevant outcomes beyond the intervention or short‐term periods, and, therefore, should become a health policy priority and translated into routine care practice.</jats:p></jats:sec>",
+  "DOI": "10.1002/alz.088810",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        9
+      ]
+    ],
+    "date-time": "2025-01-09T04:59:32Z",
+    "timestamp": 1736398772000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Long‐term effectiveness and cost‐effectiveness of collaborative dementia care: A general practitioner based randomized controlled trial"
+  ],
+  "prefix": "10.1002",
+  "volume": "20",
+  "author": [
+    {
+      "given": "Bernhard",
+      "family": "Michalowsky",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Deutsches Zentrum für Neurodegenerative Erkrankungen e. V. (DZNE), site Rostock / Greifswald, Greifswald Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Iris",
+      "family": "Blotenberg",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Deutsches Zentrum für Neurodegenerative Erkrankungen e. V. (DZNE), site Rostock / Greifswald, Greifswald Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Moritz",
+      "family": "Platen",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "German Center for Neurodegenerative Diseases e.V. (DZNE), Site Rostock/Greifswald, Greifswald Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Ingo",
+      "family": "Kilimann",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Psychosomatic Medicine, Rostock University Medical Center, Rostock Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Stefan",
+      "family": "Teipel",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "German Center for Neurodegenerative Diseases, Rostock Germany"
+        },
+        {
+          "name": "University of Rostock, Rostock Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Jochen René",
+      "family": "Thyrian",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Deutsches Zentrum für Neurodegenerative Erkrankungen e.V. (DZNE) and Institute for Community Medicine / University of Greifswald, Greifswald Germany"
+        },
+        {
+          "name": "Institute for Community Medicine / University of Greifswald, Greifswald Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Wolfgang",
+      "family": "Hoffmann",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "German Center for Neurodegenerative Diseases e.V. (DZNE), Site Rostock/Greifswald, Greifswald Germany"
+        },
+        {
+          "name": "Institut for Community Medicine, University Medicine, University of Greifswald, Greifswald Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        9
+      ]
+    ]
+  },
+  "container-title": [
+    "Alzheimer's &amp; Dementia"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/pdf/10.1002/alz.088810",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2025-10-08T12:27:20Z",
+    "timestamp": 1759926440000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.088810"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "S4",
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1002/alz.088810"
+  ],
+  "URL": "https://doi.org/10.1002/alz.088810",
+  "archive": [
+    "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+    "1552-5260",
+    "1552-5279"
+  ],
+  "issn-type": [
+    {
+      "type": "print",
+      "value": "1552-5260"
+    },
+    {
+      "type": "electronic",
+      "value": "1552-5279"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2025-01-09",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ],
+  "article-number": "e088810"
+}

@@ -49,6 +49,14 @@ def main():
     referenced = set(files(content["gallery"]))
     for path in ("app.js", "index.html", os.path.join("data", "figure_copy.json")):
         referenced |= set(NAME.findall(read(os.path.join(DOCS, path))))
+    # Some gallery paths concatenate a fixed subdirectory with an image name.
+    # Resolve those expressions instead of checking the basename at figures/.
+    app = read(os.path.join(DOCS, "app.js"))
+    for variable, directory in re.findall(r'''const\s+(\w+)\s*=\s*["']([^"']+/)["'];''', app):
+        pattern = re.compile(r'\b' + re.escape(variable) + r'\s*\+\s*' + NAME.pattern)
+        for name in pattern.findall(app):
+            referenced.discard(name)
+            referenced.add(directory + name)
     referenced -= {"index.html"}
     # The site shows the redrawn file in place of the original; both are kept.
     shown = {updates.get(f, {}).get("file", f) for f in referenced} | set(referenced)

@@ -1,0 +1,452 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        28
+      ]
+    ],
+    "date-time": "2026-09-28T13:30:37Z",
+    "timestamp": 1790602237749,
+    "version": "4.1.0"
+  },
+  "reference-count": 17,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "9",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2018,
+            4,
+            30
+          ]
+        ],
+        "date-time": "2018-04-30T00:00:00Z",
+        "timestamp": 1525046400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "http://www.springer.com/tdm"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "World J Urol"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2018,
+        9
+      ]
+    ]
+  },
+  "DOI": "10.1007/s00345-018-2302-y",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2018,
+        4,
+        29
+      ]
+    ],
+    "date-time": "2018-04-29T22:39:31Z",
+    "timestamp": 1525041571000
+  },
+  "page": "1441-1447",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 11,
+  "title": [
+    "Cost-effectiveness of antimicrobial prophylaxis for children in the RIVUR trial"
+  ],
+  "prefix": "10.1007",
+  "volume": "36",
+  "author": [
+    {
+      "given": "Lane S.",
+      "family": "Palmer",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Casey A.",
+      "family": "Seideman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yair",
+      "family": "Lotan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2018,
+        4,
+        30
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "3",
+      "key": "2302_CR1",
+      "doi-asserted-by": "publisher",
+      "first-page": "949",
+      "DOI": "10.1097/01.ju.0000152092.03931.9a",
+      "volume": "173",
+      "author": "AL Freedman",
+      "year": "2005",
+      "unstructured": "Freedman AL (2005) Urologic diseases in North America Project: trends in resource utilization for urinary tract infections in children. J Urol 173(3):949–954",
+      "journal-title": "J Urol"
+    },
+    {
+      "issue": "3",
+      "key": "2302_CR2",
+      "doi-asserted-by": "publisher",
+      "first-page": "626",
+      "DOI": "10.1542/peds.2005-1362",
+      "volume": "117",
+      "author": "EH Garin",
+      "year": "2006",
+      "unstructured": "Garin EH, Olavarria F, Garcia Nieto V, Valenciano B, Campos A, Young L (2006) Clinical significance of primary vesicoureteral reflux and urinary antibiotic prophylaxis after acute pyelonephritis: a multicenter, randomized, controlled study. Pediatrics 117(3):626–632",
+      "journal-title": "Pediatrics"
+    },
+    {
+      "issue": "2",
+      "key": "2302_CR3",
+      "doi-asserted-by": "publisher",
+      "first-page": "674",
+      "DOI": "10.1016/j.juro.2007.09.090",
+      "volume": "179",
+      "author": "G Roussey-Kesler",
+      "year": "2008",
+      "unstructured": "Roussey-Kesler G, Gadjos V, Idres N et al (2008) Antibiotic prophylaxis for the prevention of recurrent urinary tract infection in children with low grade vesicoureteral reflux: results from a prospective randomized study. J Urol 179(2):674–679",
+      "journal-title": "J Urol"
+    },
+    {
+      "issue": "6",
+      "key": "2302_CR4",
+      "doi-asserted-by": "publisher",
+      "first-page": "e1489",
+      "DOI": "10.1542/peds.2007-2652",
+      "volume": "121",
+      "author": "M Pennesi",
+      "year": "2008",
+      "unstructured": "Pennesi M, Travan L, Peratoner L et al (2008) Is antibiotic prophylaxis in children with vesicoureteral reflux effective in preventing pyelonephritis and renal scars? A randomized, controlled trial. Pediatrics 121(6):e1489–e1494",
+      "journal-title": "Pediatrics"
+    },
+    {
+      "issue": "5",
+      "key": "2302_CR5",
+      "doi-asserted-by": "publisher",
+      "first-page": "1064",
+      "DOI": "10.1542/peds.2007-3770",
+      "volume": "122",
+      "author": "G Montini",
+      "year": "2008",
+      "unstructured": "Montini G, Rigon L, Zucchetta P et al (2008) Prophylaxis after first febrile urinary tract infection in children? A multicenter, randomized, controlled, noninferiority trial. Pediatrics 122(5):1064–1071",
+      "journal-title": "Pediatrics"
+    },
+    {
+      "issue": "18",
+      "key": "2302_CR6",
+      "doi-asserted-by": "publisher",
+      "first-page": "1748",
+      "DOI": "10.1056/NEJMoa0902295",
+      "volume": "361",
+      "author": "JC Craig",
+      "year": "2009",
+      "unstructured": "Craig JC, Simpson JM, Williams GJ et al (2009) Antibiotic prophylaxis and recurrent urinary tract infection in children. N Engl J Med 361(18):1748–1759",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "issue": "18",
+      "key": "2302_CR7",
+      "doi-asserted-by": "publisher",
+      "first-page": "1804",
+      "DOI": "10.1056/NEJMe0907623",
+      "volume": "361",
+      "author": "A Hoberman",
+      "year": "2009",
+      "unstructured": "Hoberman A, Keren R (2009) Antimicrobial prophylaxis for urinary tract infection in children. N Engl J Med 361(18):1804–1806",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "issue": "25",
+      "key": "2302_CR8",
+      "doi-asserted-by": "publisher",
+      "first-page": "2367",
+      "DOI": "10.1056/NEJMoa1401811",
+      "volume": "370",
+      "author": "RT Investigators",
+      "year": "2014",
+      "unstructured": "Investigators RT, Hoberman A, Greenfield SP et al (2014) Antimicrobial prophylaxis for children with vesicoureteral reflux. N Engl J Med 370(25):2367–2376",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "issue": "12",
+      "key": "2302_CR9",
+      "first-page": "2483",
+      "volume": "72",
+      "author": "BS Alper",
+      "year": "2005",
+      "unstructured": "Alper BS, Curry SH (2005) Urinary tract infection in children. Am Fam Physician 72(12):2483–2488",
+      "journal-title": "Am Fam Physician"
+    },
+    {
+      "issue": "4 Pt 2",
+      "key": "2302_CR10",
+      "doi-asserted-by": "publisher",
+      "first-page": "1864",
+      "DOI": "10.1016/j.juro.2006.04.088",
+      "volume": "176",
+      "author": "TS Lendvay",
+      "year": "2006",
+      "unstructured": "Lendvay TS, Sorensen M, Cowan CA, Joyner BD, Mitchell MM, Grady RW (2006) The evolution of vesicoureteral reflux management in the era of dextranomer/hyaluronic acid copolymer: a pediatric health information system database study. J Urol 176(4 Pt 2):1864–1867",
+      "journal-title": "J Urol"
+    },
+    {
+      "issue": "5 Suppl",
+      "key": "2302_CR11",
+      "doi-asserted-by": "publisher",
+      "first-page": "1628",
+      "DOI": "10.1016/j.juro.2013.09.055",
+      "volume": "191",
+      "author": "KW Herbst",
+      "year": "2014",
+      "unstructured": "Herbst KW, Corbett ST, Lendvay TS, Caldamone AA (2014) Recent trends in the surgical management of primary vesicoureteral reflux in the era of dextranomer/hyaluronic acid. J Urol 191(5 Suppl):1628–1633",
+      "journal-title": "J Urol"
+    },
+    {
+      "issue": "2",
+      "key": "2302_CR12",
+      "doi-asserted-by": "publisher",
+      "first-page": "561",
+      "DOI": "10.1016/S0022-5347(05)67932-3",
+      "volume": "163",
+      "author": "R Mathews",
+      "year": "2000",
+      "unstructured": "Mathews R, Naslund M, Docimo S (2000) Cost analysis of the treatment of vesicoureteral reflux: a computer model. J Urol 163(2):561–566",
+      "journal-title": "J Urol"
+    },
+    {
+      "issue": "6",
+      "key": "2302_CR13",
+      "doi-asserted-by": "publisher",
+      "first-page": "2287",
+      "DOI": "10.1016/j.juro.2012.12.051",
+      "volume": "189",
+      "author": "GA Raju",
+      "year": "2013",
+      "unstructured": "Raju GA, Marks AJ, Benoit RM, Docimo SG (2013) Models of care for vesicoureteral reflux with and without an end point of reflux resolution: a computer cost analysis. J Urol 189(6):2287–2292",
+      "journal-title": "J Urol"
+    },
+    {
+      "issue": "6",
+      "key": "2302_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "594",
+      "DOI": "10.1016/j.jpurol.2011.05.006",
+      "volume": "7",
+      "author": "P Brandstrom",
+      "year": "2011",
+      "unstructured": "Brandstrom P, Jodal U, Sillen U, Hansson S (2011) The Swedish reflux trial: review of a randomized, controlled trial in children with dilating vesicoureteral reflux. J Pediatr Urol 7(6):594–600",
+      "journal-title": "J Pediatr Urol"
+    },
+    {
+      "issue": "1",
+      "key": "2302_CR15",
+      "doi-asserted-by": "publisher",
+      "first-page": "292",
+      "DOI": "10.1016/j.juro.2010.01.060",
+      "volume": "184",
+      "author": "P Brandstrom",
+      "year": "2010",
+      "unstructured": "Brandstrom P, Neveus T, Sixt R, Stokland E, Jodal U, Hansson S (2010) The Swedish reflux trial in children: IV. Renal damage. J Urol 184(1):292–297",
+      "journal-title": "J Urol"
+    },
+    {
+      "issue": "4",
+      "key": "2302_CR16",
+      "doi-asserted-by": "publisher",
+      "first-page": "1480",
+      "DOI": "10.1097/01.ju.0000056638.75652.54",
+      "volume": "169",
+      "author": "G Kobelt",
+      "year": "2003",
+      "unstructured": "Kobelt G, Canning DA, Hensle TW, Lackgren G (2003) The cost-effectiveness of endoscopic injection of dextranomer/hyaluronic acid copolymer for vesicoureteral reflux. J Urol 169(4):1480–1484",
+      "journal-title": "J Urol"
+    },
+    {
+      "issue": "2",
+      "key": "2302_CR17",
+      "doi-asserted-by": "publisher",
+      "first-page": "703",
+      "DOI": "10.1016/j.juro.2006.10.002",
+      "volume": "177",
+      "author": "MH Hsieh",
+      "year": "2007",
+      "unstructured": "Hsieh MH, Swana HS, Baskin LS, Meng MV (2007) Cost-utility analysis of treatment algorithms for moderate grade vesicoureteral reflux using Markov models. J Urol 177(2):703–709",
+      "journal-title": "J Urol"
+    }
+  ],
+  "container-title": [
+    "World Journal of Urology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://link.springer.com/article/10.1007/s00345-018-2302-y/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s00345-018-2302-y.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s00345-018-2302-y.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        4,
+        30
+      ]
+    ],
+    "date-time": "2019-04-30T08:59:12Z",
+    "timestamp": 1556614752000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/s00345-018-2302-y"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2018,
+        4,
+        30
+      ]
+    ]
+  },
+  "references-count": 17,
+  "journal-issue": {
+    "issue": "9",
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          9
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "2302"
+  ],
+  "URL": "https://doi.org/10.1007/s00345-018-2302-y",
+  "relation": {},
+  "ISSN": [
+    "0724-4983",
+    "1433-8726"
+  ],
+  "issn-type": [
+    {
+      "value": "0724-4983",
+      "type": "print"
+    },
+    {
+      "value": "1433-8726",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2018,
+        4,
+        30
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "15 January 2018",
+      "order": 1,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "19 April 2018",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "30 April 2018",
+      "order": 3,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    }
+  ]
+}

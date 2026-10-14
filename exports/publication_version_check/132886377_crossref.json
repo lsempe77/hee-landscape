@@ -1,0 +1,153 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        18
+      ]
+    ],
+    "date-time": "2023-06-18T04:18:25Z",
+    "timestamp": 1687061905482
+  },
+  "reference-count": 0,
+  "publisher": "Canadian Urological Association Journal",
+  "issue": "6S2",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "CUAJ"
+  ],
+  "DOI": "10.5489/cuaj.8414",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        16
+      ]
+    ],
+    "date-time": "2023-06-16T09:07:43Z",
+    "timestamp": 1686906463000
+  },
+  "page": "S84-90",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Poster Session 6: Functional Urology (Part 1)"
+  ],
+  "prefix": "10.5489",
+  "volume": "17",
+  "author": [
+    {
+      "given": "E",
+      "family": "CUAJ",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "3456",
+  "published-online": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        15
+      ]
+    ]
+  },
+  "container-title": [
+    "Canadian Urological Association Journal"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://cuaj.ca/index.php/journal/article/download/8414/5729",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://cuaj.ca/index.php/journal/article/download/8414/5729",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        17
+      ]
+    ],
+    "date-time": "2023-06-17T09:08:01Z",
+    "timestamp": 1686992881000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://cuaj.ca/index.php/journal/article/view/8414"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        15
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "6S2",
+    "published-online": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          15
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.5489/cuaj.8414",
+  "relation": {},
+  "ISSN": [
+    "1920-1214",
+    "1911-6470"
+  ],
+  "issn-type": [
+    {
+      "value": "1920-1214",
+      "type": "electronic"
+    },
+    {
+      "value": "1911-6470",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        15
+      ]
+    ]
+  }
+}

@@ -1,0 +1,1475 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        26
+      ]
+    ],
+    "date-time": "2026-09-26T23:26:37Z",
+    "timestamp": 1790465197979,
+    "version": "4.1.0"
+  },
+  "update-to": [
+    {
+      "DOI": "10.1002/14651858.cd004305.pub4",
+      "type": "new_version",
+      "label": "New version",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2017,
+            9,
+            12
+          ]
+        ],
+        "date-time": "2017-09-12T00:00:00Z",
+        "timestamp": 1505174400000
+      }
+    }
+  ],
+  "reference-count": 112,
+  "publisher": "Wiley",
+  "issue": "9",
+  "content-domain": {
+    "domain": [
+      "wiley.com",
+      "cochranelibrary.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "DOI": "10.1002/14651858.cd004305.pub5",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2017,
+        9,
+        12
+      ]
+    ],
+    "date-time": "2017-09-12T16:42:25Z",
+    "timestamp": 1505234545000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 38,
+  "title": [
+    "Healthcare financing systems for increasing the use of tobacco dependence treatment"
+  ],
+  "prefix": "10.1002",
+  "volume": "2017",
+  "author": [
+    {
+      "given": "Floor A",
+      "family": "van den Brand",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Maastricht University (CAPHRI); Department of Family Medicine; P.debyeplein 1 Maastricht Zuid-Limburg Netherlands 6229 HA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gera E",
+      "family": "Nagelhout",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Maastricht University (CAPHRI); Department of Family Medicine; P.debyeplein 1 Maastricht Zuid-Limburg Netherlands 6229 HA"
+        },
+        {
+          "name": "IVO Addiction Research Institute; Rotterdam Netherlands"
+        },
+        {
+          "name": "Maastricht University (CAPHRI); Department of Health Promotion; Maastricht Netherlands"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ayalu A",
+      "family": "Reda",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Brown University; Department of Biostatistics, School of Public Health; Providence RI USA"
+        },
+        {
+          "name": "Brown University; Department of Sociology; Providence USA"
+        },
+        {
+          "name": "Brown University; Population Studies and Training Centre; Providence USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Bjorn",
+      "family": "Winkens",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Maastricht University; Department of Methodology and Statistics, Faculty of Health Medicine and Life Sciences (FHML); Debyeplein 1 Maastricht Netherlands 6200 MD"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Silvia M A A",
+      "family": "Evers",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Maastricht University (CAPHRI); Department of Health Services Research; PO Box 616 6200 MD Maastricht Netherlands 6229 ER"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Daniel",
+      "family": "Kotz",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Maastricht University (CAPHRI); Department of Family Medicine; P.debyeplein 1 Maastricht Zuid-Limburg Netherlands 6229 HA"
+        },
+        {
+          "name": "Heinrich-Heine-University; Institute of General Practice, Addiction Research and Clinical Epidemiology, Medical Faculty; Düsseldorf Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Onno CP",
+      "family": "van Schayck",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Maastricht University (CAPHRI); Department of Family Medicine; P.debyeplein 1 Maastricht Zuid-Limburg Netherlands 6229 HA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2017,
+        9,
+        12
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0001|cit1",
+      "doi-asserted-by": "crossref",
+      "first-page": "1993",
+      "DOI": "10.1001/archinte.168.18.1993",
+      "article-title": "A randomized trial of a pay-for-performance program targeting clinician referral to a state tobacco quitline",
+      "volume": "168",
+      "author": "An",
+      "year": "2008",
+      "journal-title": "Archives of Internal Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0002|cit2",
+      "doi-asserted-by": "crossref",
+      "first-page": "162",
+      "DOI": "10.1377/hlthaff.21.6.162",
+      "article-title": "Does insurance coverage for drug therapy affect smoking cessation?",
+      "volume": "21",
+      "author": "Boyle",
+      "year": "2002",
+      "journal-title": "Health Affairs (Project Hope)"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0003|cit3",
+      "doi-asserted-by": "crossref",
+      "first-page": "673",
+      "DOI": "10.1056/NEJM199809033391006",
+      "article-title": "Use and cost effectiveness of smoking-cessation services under four insurance plans in a health maintenance organization",
+      "volume": "339",
+      "author": "Curry",
+      "year": "1998",
+      "journal-title": "New England Journal of Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0004|cit4",
+      "first-page": "127",
+      "article-title": "Should smoking cessation cost a packet? A pilot randomized controlled trial of the cost-effectiveness of distributing nicotine therapy free of charge",
+      "volume": "49",
+      "author": "Dey",
+      "year": "1999",
+      "journal-title": "British Journal of General Practice"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0005|cit5",
+      "doi-asserted-by": "crossref",
+      "first-page": "54",
+      "DOI": "10.5034/inquiryjrnl_43.1.54",
+      "article-title": "The costs and effectiveness of different benefit designs for treating tobacco dependence: results from a randomized trial",
+      "volume": "43",
+      "author": "Halpin",
+      "year": "2006",
+      "journal-title": "Inquiry"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0006|cit6",
+      "doi-asserted-by": "crossref",
+      "first-page": "486",
+      "DOI": "10.1016/0091-7435(91)90046-7",
+      "article-title": "Effect of cost on the self-administration and efficacy of nicotine gum: a preliminary study",
+      "volume": "20",
+      "author": "Hughes",
+      "year": "1991",
+      "journal-title": "Preventive Medicine"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0007|cit7",
+      "doi-asserted-by": "crossref",
+      "first-page": "992",
+      "DOI": "10.1093/ntr/ntu025",
+      "article-title": "Evaluating the effect of access to free medication to quit smoking: a clinical trial testing the role of motivation",
+      "volume": "16",
+      "author": "Jardin",
+      "year": "2014",
+      "journal-title": "Nicotine & Tobacco Research"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0008|cit8",
+      "doi-asserted-by": "crossref",
+      "first-page": "2106",
+      "DOI": "10.1111/j.1475-6773.2008.00891.x",
+      "article-title": "The effectiveness of covering smoking cessation services for Medicare beneficiaries",
+      "volume": "43",
+      "author": "Joyce",
+      "year": "2008",
+      "journal-title": "Health Services Research"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0009|cit9",
+      "doi-asserted-by": "crossref",
+      "first-page": "453",
+      "DOI": "10.2165/00019053-200624050-00004",
+      "article-title": "Encouraging smokers to quit: the cost effectiveness of reimbursing the costs of smoking cessation treatment",
+      "volume": "24",
+      "author": "Kaper",
+      "year": "2006",
+      "journal-title": "Pharmacoeconomics"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0010|cit10",
+      "doi-asserted-by": "crossref",
+      "first-page": "1656",
+      "DOI": "10.1111/j.1360-0443.2006.01578.x",
+      "article-title": "A randomized controlled trial to assess the effects of reimbursing the costs of smoking cessation therapy on sustained abstinence",
+      "volume": "101",
+      "author": "Kaper",
+      "year": "2006",
+      "journal-title": "Addiction"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0011|cit11",
+      "doi-asserted-by": "crossref",
+      "first-page": "1012",
+      "DOI": "10.1111/j.1360-0443.2005.01097.x",
+      "article-title": "Reimbursement for smoking cessation treatment may double the abstinence rate: results of a randomized trial",
+      "volume": "100",
+      "author": "Kaper",
+      "year": "2005",
+      "journal-title": "Addiction"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0012|cit12",
+      "doi-asserted-by": "crossref",
+      "first-page": "91",
+      "DOI": "10.1155/2015/871204",
+      "article-title": "A pilot randomized controlled trial of smoking cessation in an outpatient respirology clinic",
+      "volume": "22",
+      "author": "Pakhale",
+      "year": "2015",
+      "journal-title": "Canadian Respiratory Journal [Revue Canadienne de Pneumologie]"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0013|cit13",
+      "doi-asserted-by": "crossref",
+      "first-page": "e000366",
+      "DOI": "10.1136/bmjopen-2011-000366",
+      "article-title": "A randomised controlled pilot study of standardised counselling and cost-free pharmacotherapy for smoking cessation among stroke and TIA patients",
+      "volume": "1",
+      "author": "Papadakis",
+      "year": "2011",
+      "journal-title": "BMJ Open"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0014|cit14",
+      "doi-asserted-by": "crossref",
+      "first-page": "A197",
+      "DOI": "10.1016/S1098-3015(10)72962-4",
+      "article-title": "Effect of nicotine gum price on medication acquisition and smoking cessation in an over-the-counter setting",
+      "volume": "13",
+      "author": "Patel",
+      "year": "2010",
+      "journal-title": "Value in Health"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0015|cit15",
+      "doi-asserted-by": "crossref",
+      "first-page": "291",
+      "DOI": "10.1016/S0091-7435(02)00052-X",
+      "article-title": "The impact of financial incentives and a patient registry on preventive care quality: increasing provider adherence to evidence-based smoking cessation practice guidelines",
+      "volume": "36",
+      "author": "Roski",
+      "year": "2003",
+      "journal-title": "Preventive Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0016|cit16",
+      "doi-asserted-by": "crossref",
+      "first-page": "175",
+      "DOI": "10.1136/tc.10.2.175",
+      "article-title": "Variations in treatment benefits influence smoking cessation: results of a randomised controlled trial",
+      "volume": "10",
+      "author": "Schauffler",
+      "year": "2001",
+      "journal-title": "Tobacco Control"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0017|cit17",
+      "doi-asserted-by": "crossref",
+      "first-page": "433",
+      "DOI": "10.1186/1471-2458-14-433",
+      "article-title": "A pragmatic, randomized, controlled study evaluating the impact of access to smoking cessation pharmacotherapy coverage on the proportion of successful quitters in a Canadian population of smokers motivated to quit (ACCESSATION)",
+      "volume": "14",
+      "author": "Selby",
+      "year": "2014",
+      "journal-title": "BMC Public Health"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0018|cit18",
+      "doi-asserted-by": "crossref",
+      "first-page": "230",
+      "DOI": "10.1001/archinternmed.2008.556",
+      "article-title": "Cost-effective primary care-based strategies to improve smoking cessation: more value for money",
+      "volume": "169",
+      "author": "Salize",
+      "year": "2009",
+      "journal-title": "Archives of Internal Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0019|cit19",
+      "doi-asserted-by": "crossref",
+      "first-page": "15",
+      "DOI": "10.1136/tc.2006.016253",
+      "article-title": "Effects of practitioner education, practitioner payment and reimbursement of patients' drug costs on smoking cessation in primary care: a cluster randomised trial",
+      "volume": "16",
+      "author": "Twardella",
+      "year": "2007",
+      "journal-title": "Tobacco Control"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0020|cit20",
+      "doi-asserted-by": "crossref",
+      "first-page": "602",
+      "DOI": "10.1111/j.1360-0443.2012.04089.x",
+      "article-title": "Population impact of reimbursement for smoking cessation: a natural experiment in the Netherlands",
+      "volume": "108",
+      "author": "Willemsen",
+      "year": "2013",
+      "journal-title": "Addiction (Abingdon, England)"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0021|cit21",
+      "doi-asserted-by": "crossref",
+      "first-page": "1763",
+      "DOI": "10.1016/j.addbeh.2004.04.007",
+      "article-title": "The influence of offering free transdermal nicotine patches on quit rates in a local health department's smoking cessation program",
+      "volume": "29",
+      "author": "Alberg",
+      "year": "2004",
+      "journal-title": "Addictive Behaviors"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0022|cit22",
+      "doi-asserted-by": "crossref",
+      "first-page": "3",
+      "DOI": "10.1136/tobaccocontrol-2011-050048",
+      "article-title": "Effectiveness of providing financial incentives to healthcare professionals for smoking cessation activities: systematic review",
+      "volume": "22",
+      "author": "Hamilton",
+      "year": "2013",
+      "journal-title": "Tobacco Control"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0023|cit23",
+      "doi-asserted-by": "crossref",
+      "first-page": "120",
+      "DOI": "10.1111/j.1600-0528.2012.00743.x",
+      "article-title": "Impact of educational intervention on implementation of tobacco counselling among oral health professionals: a cluster-randomized community trial",
+      "volume": "41",
+      "author": "Amemori",
+      "year": "2013",
+      "journal-title": "Community Dentistry and Oral Epidemiology"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0024|cit24",
+      "first-page": "59",
+      "article-title": "Paying for quality improvement: compliance with tobacco cessation guidelines",
+      "volume": "29",
+      "author": "Amundson",
+      "year": "2003",
+      "journal-title": "Joint Committee Journal on Quality and Safety"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0025|cit25",
+      "doi-asserted-by": "crossref",
+      "first-page": "1198-205",
+      "DOI": "10.1007/s11606-016-3781-4",
+      "article-title": "Effect of gaining insurance coverage on smoking cessation in community health centers: a cohort study",
+      "volume": "31",
+      "author": "Bailey",
+      "year": "2016",
+      "journal-title": "Journal of General Internal Medicine"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0026|cit26",
+      "doi-asserted-by": "crossref",
+      "first-page": "1051",
+      "DOI": "10.1001/jama.2013.277353",
+      "article-title": "Effect of pay-for-performance incentives on quality of care in small practices with electronic health records: a randomized trial",
+      "volume": "310",
+      "author": "Bardach",
+      "year": "2013",
+      "journal-title": "JAMA"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0027|cit27",
+      "doi-asserted-by": "crossref",
+      "first-page": "17 (1) (no pagi",
+      "DOI": "10.1186/s13063-016-1401-6",
+      "article-title": "An organisational change intervention for increasing the delivery of smoking cessation support in addiction treatment centres: study protocol for a randomized controlled trial",
+      "volume": "17",
+      "author": "Bonevski",
+      "year": "2016",
+      "journal-title": "Trials"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0028|cit28",
+      "doi-asserted-by": "crossref",
+      "first-page": "183",
+      "DOI": "10.1136/tc.2007.021907",
+      "article-title": "Effects of financing smoking cessation outpatient services in Taiwan",
+      "volume": "17",
+      "author": "Chang",
+      "year": "2008",
+      "journal-title": "Tobacco Control"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0029|cit29",
+      "doi-asserted-by": "crossref",
+      "first-page": "435",
+      "DOI": "10.1136/bmj.323.7310.435",
+      "article-title": "Intervention study to evaluate pilot health promotion payment aimed at increasing general practitioners' antismoking advice to smokers",
+      "volume": "323",
+      "author": "Coleman",
+      "year": "2001",
+      "journal-title": "BMJ"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0030|cit30",
+      "doi-asserted-by": "crossref",
+      "first-page": "1602",
+      "DOI": "10.1111/add.12669",
+      "article-title": "A randomized clinical trial of a financial education intervention with nicotine replacement therapy (NRT) for low socio-economic status Australian smokers: a study protocol",
+      "volume": "109",
+      "author": "Courtney",
+      "year": "2014",
+      "journal-title": "Addiction (Abingdon, England)"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0031|cit31",
+      "first-page": "278",
+      "article-title": "Nicotine gum: does providing it free in a smoking cessation program alter success rates?",
+      "volume": "31",
+      "author": "Cox",
+      "year": "1990",
+      "journal-title": "Journal of Family Practice"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0032|cit32",
+      "doi-asserted-by": "crossref",
+      "first-page": "37",
+      "DOI": "10.1097/00124784-200601000-00009",
+      "article-title": "Reach, efficacy, and cost-effectiveness of free nicotine medication giveaway programs",
+      "volume": "12",
+      "author": "Cummings",
+      "year": "2006",
+      "journal-title": "Journal of Public Health Management & Practice"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0033|cit33",
+      "doi-asserted-by": "crossref",
+      "first-page": "318",
+      "DOI": "10.1037/0022-006X.59.2.318",
+      "article-title": "Evaluation of intrinsic and extrinsic motivation interventions with a self-help smoking cessation program",
+      "volume": "59",
+      "author": "Curry",
+      "year": "1991",
+      "journal-title": "Journal of Consulting and Clinical Psychology"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0034|cit34",
+      "doi-asserted-by": "crossref",
+      "first-page": "S19",
+      "DOI": "10.1080/14622200210128045",
+      "article-title": "Pilot study of enhanced tobacco-cessation services coverage for low-income smokers",
+      "volume": "4 Suppl 1",
+      "author": "Doescher",
+      "year": "2002",
+      "journal-title": "Nicotine & Tobacco Research"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0035|cit35",
+      "first-page": "Iii67",
+      "article-title": "Randomised controlled trial using social support and financial incentives for high risk pregnant smokers: significant other supporter (SOS) program",
+      "volume": "9 Suppl 3",
+      "author": "Donatelle",
+      "year": "2000",
+      "journal-title": "Tobacco Control"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0036|cit36",
+      "first-page": "68",
+      "article-title": "Helping Wisconsin women quit smoking: a successful collaboration",
+      "volume": "April",
+      "author": "Fiore",
+      "year": "2000",
+      "journal-title": "Wisconsin Medical Journal"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0037|cit37",
+      "doi-asserted-by": "crossref",
+      "first-page": "446",
+      "DOI": "10.1136/thoraxjnl-2015-207904",
+      "article-title": "Proactive tobacco treatment offering free nicotine replacement therapy and telephone counselling for socioeconomically disadvantaged smokers: a randomised clinical trial",
+      "volume": "71",
+      "author": "Fu",
+      "year": "2016",
+      "journal-title": "Thorax"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0038|cit38",
+      "doi-asserted-by": "crossref",
+      "first-page": "3",
+      "DOI": "10.1136/tobaccocontrol-2011-050048",
+      "article-title": "Effectiveness of providing financial incentives to healthcare professionals for smoking cessation activities: systematic review",
+      "volume": "22",
+      "author": "Hamilton",
+      "year": "2013",
+      "journal-title": "Tobacco Control"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0039|cit39",
+      "doi-asserted-by": "crossref",
+      "first-page": "447",
+      "DOI": "10.1186/s13063-015-0977-6",
+      "article-title": "Evaluating a collaborative smoking cessation intervention in primary care (ENTER): study protocol for a cluster-randomized controlled trial",
+      "volume": "16",
+      "author": "Harter",
+      "year": "2015",
+      "journal-title": "Trials"
+    },
+    {
+      "issue": "11",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0040|cit40",
+      "doi-asserted-by": "crossref",
+      "first-page": "1701",
+      "DOI": "10.2105/AJPH.89.11.1701",
+      "article-title": "Over-the-counter nicotine patch therapy for smoking cessation: results from randomized, double-blind, placebo-controlled, and open label trials",
+      "volume": "89",
+      "author": "Hays",
+      "year": "1999",
+      "journal-title": "American Journal of Public Health"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0041|cit41",
+      "doi-asserted-by": "crossref",
+      "first-page": "596",
+      "DOI": "10.1016/j.amepre.2012.02.019",
+      "article-title": "Healthcare costs around the time of smoking cessation",
+      "volume": "42",
+      "author": "Hockenberry",
+      "year": "2012",
+      "journal-title": "American Journal of Preventive Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0042|cit42",
+      "doi-asserted-by": "crossref",
+      "first-page": "1760",
+      "DOI": "10.2105/AJPH.86.12.1760",
+      "article-title": "An adolescent tobbaco-use prevention trial in orthodontic offices",
+      "volume": "86",
+      "author": "Hovell",
+      "year": "1996",
+      "journal-title": "American Journal of Public Health"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0043|cit43",
+      "doi-asserted-by": "crossref",
+      "first-page": "344",
+      "DOI": "10.1016/j.amepre.2009.11.010",
+      "article-title": "Patient costs as a barrier to intensive health behavior counseling",
+      "volume": "38",
+      "author": "Krist",
+      "year": "2010",
+      "journal-title": "American Journal of Preventive Medicine"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0044|cit44",
+      "first-page": "554",
+      "article-title": "Healthcare system effects of pay-for-performance for smoking status documentation",
+      "volume": "19",
+      "author": "Kruse",
+      "year": "2013",
+      "journal-title": "American Journal of Managed Care"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0045|cit45",
+      "doi-asserted-by": "publisher",
+      "first-page": "e9770",
+      "DOI": "10.1371/journal.pone.0009770",
+      "article-title": "Medicaid overage for tobacco dependence treatments in Massachusetts and associated decreases in smoking prevalence",
+      "volume": "5",
+      "author": "Land",
+      "year": "2010",
+      "journal-title": "PloS ONE"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0046|cit46",
+      "doi-asserted-by": "crossref",
+      "first-page": "S25",
+      "DOI": "10.1093/ntr/4.Suppl_1.S25",
+      "article-title": "Smoking cessation in pregnancy: failure of an HMO pilot project to improve guideline implementation",
+      "volume": "4 Suppl 1",
+      "author": "Latts",
+      "year": "2002",
+      "journal-title": "Nicotine & Tobacco Research"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0047|cit47",
+      "first-page": "261",
+      "article-title": "Evaluation of a health promotion demonstration program for the rural elderly",
+      "volume": "31",
+      "author": "Lave",
+      "year": "1996",
+      "journal-title": "Health Services Research"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0048|cit48",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0123349",
+      "DOI": "10.1371/journal.pone.0123349",
+      "article-title": "Effect of pay-for-outcomes and encouraging new providers on National Health Service smoking cessation services in England: a cluster controlled study",
+      "volume": "10",
+      "author": "McLeod",
+      "year": "2015",
+      "journal-title": "PloS One"
+    },
+    {
+      "issue": "12",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0049|cit49",
+      "doi-asserted-by": "crossref",
+      "first-page": "1705",
+      "DOI": "10.1503/cmaj.061556",
+      "article-title": "Impact of a pay-for-performance incentive on support for smoking cessation and on smoking prevalence among people with diabetes",
+      "volume": "176",
+      "author": "Millett",
+      "year": "2007",
+      "journal-title": "Canadian Medical Association Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0050|cit50",
+      "doi-asserted-by": "crossref",
+      "first-page": "70",
+      "DOI": "10.1016/j.ypmed.2016.01.019",
+      "article-title": "Online smoking cessation program for Korean Americans: randomized trial to test effects of incentives for program completion and interim surveys",
+      "volume": "86",
+      "author": "Moskowitz",
+      "year": "2016",
+      "journal-title": "Preventive Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0051|cit51",
+      "first-page": "179",
+      "article-title": "The efficacy of nicotine gum in group-centred smoking cessation therapy in a family practice",
+      "volume": "27",
+      "author": "Oswald",
+      "year": "1988",
+      "journal-title": "Journal of Family Practice"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0052|cit52",
+      "unstructured": "Pardell H Faixedas MT Salto E Valverde A Tresserras Taberner JL Influence of an economical incentive on smoking cessation at community level Society for Research on Nicotine and Tobacco 5th European Meeting November 20-22 2003 Padua 2003"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0053|cit53",
+      "doi-asserted-by": "crossref",
+      "first-page": "54",
+      "DOI": "10.1016/j.cct.2016.07.016",
+      "article-title": "Integrating tobacco treatment into cancer care: study protocol for a randomized controlled comparative effectiveness trial",
+      "volume": "50",
+      "author": "Park",
+      "year": "2016",
+      "journal-title": "Contemporary Clinical Trials"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0054|cit54",
+      "first-page": "65",
+      "article-title": "Tobacco cessation counseling among underserved patients: a report from CaReNet",
+      "volume": "51",
+      "author": "Parnes",
+      "year": "2002",
+      "journal-title": "Journal of Family Practice"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0055|cit55",
+      "doi-asserted-by": "crossref",
+      "first-page": "367",
+      "DOI": "10.1002/ajim.10129",
+      "article-title": "Smoking cessation in a blue-collar population: results from an evidence-based pilot program",
+      "volume": "42",
+      "author": "Ringen",
+      "year": "2002",
+      "journal-title": "American Journal of Industrial Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0056|cit56",
+      "doi-asserted-by": "crossref",
+      "first-page": "13",
+      "DOI": "10.1006/pmed.1999.0495",
+      "article-title": "Counseling youth in tobacco-use prevention: determinants of clinician compliance",
+      "volume": "29",
+      "author": "Russos",
+      "year": "1999",
+      "journal-title": "Preventive Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0057|cit57",
+      "unstructured": "Shaw JW Muramoto M Moore JR Horrace WC Leischow SJ A conceptual model of the effects of nicotine gum price on self-medication and cigarette consumption in an over the-counter setting Society for Research on Nicotine and Tobacco 5th European Meeting November 20-22 2003 Padua 2003"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0058|cit58",
+      "first-page": "735",
+      "article-title": "The effects of feedback and reimbursement on physicians' rates of counseling about smoking: a controlled trial (POS2-028)",
+      "volume": "6",
+      "author": "Silverman",
+      "year": "2004",
+      "journal-title": "Nicotine & Tobacco Research"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0059|cit59",
+      "doi-asserted-by": "crossref",
+      "first-page": "160",
+      "DOI": "10.1016/S0749-3797(02)00493-2",
+      "article-title": "Physician smoking-cessation actions: are they dependent on insurance coverage or on patients?",
+      "volume": "23",
+      "author": "Solberg",
+      "year": "2002",
+      "journal-title": "American Journal of Preventive Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0060|cit60",
+      "first-page": "78",
+      "article-title": "Health care system and insurer support for smoking cessation guideline implementation",
+      "volume": "29",
+      "author": "Stone",
+      "year": "2002",
+      "journal-title": "Journal of Health Care Financing"
+    },
+    {
+      "issue": "12",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0061|cit61",
+      "doi-asserted-by": "crossref",
+      "first-page": "2183",
+      "DOI": "10.1111/add.12289",
+      "article-title": "An increase in primary care prescriptions of stop-smoking medication as a result of health insurance coverage in the Netherlands: population based study",
+      "volume": "108",
+      "author": "Verbiest",
+      "year": "2013",
+      "journal-title": "Addiction (Abingdon, England)"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0062|cit62",
+      "doi-asserted-by": "crossref",
+      "first-page": "12",
+      "DOI": "10.1158/1055-9965.EPI-05-0314",
+      "article-title": "A randomized controlled trial of financial incentives for smoking cessation",
+      "volume": "15",
+      "author": "Volpp",
+      "year": "2006",
+      "journal-title": "Cancer Epidemiology, Biomarkers & Prevention"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0063|cit63",
+      "doi-asserted-by": "crossref",
+      "first-page": "602",
+      "DOI": "10.14219/jada.archive.2012.0239",
+      "article-title": "The effect of training on the use of tobacco-use cessation guidelines in dental settings",
+      "volume": "143",
+      "author": "Walsh",
+      "year": "2012",
+      "journal-title": "Journal of the American Dental Association (1939)"
+    },
+    {
+      "issue": "5 Suppl 3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0064|cit64",
+      "doi-asserted-by": "crossref",
+      "first-page": "S237",
+      "DOI": "10.1016/j.amepre.2012.07.034",
+      "article-title": "Influencing Taft-Hartley Funds to provide tobacco cessation benefits",
+      "volume": "43",
+      "author": "Weisman",
+      "year": "2012",
+      "journal-title": "American Journal of Preventive Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0065|cit65",
+      "unstructured": "NCT00962988 Efficacy and cost-effectiveness of cost-free pharmacotherapy for smoking cessation for high-risk smokers with cerebrovascular disease clinicaltrials.gov/show/NCT00962988"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0066|cit66",
+      "doi-asserted-by": "crossref",
+      "first-page": "25",
+      "DOI": "10.1186/1748-5908-9-25",
+      "article-title": "Dentists United to Extinguish Tobacco (DUET): a study protocol for a cluster randomized, controlled trial for enhancing implementation of clinical practice guidelines for treating tobacco dependence in dental care settings",
+      "volume": "9",
+      "author": "Ostroff",
+      "year": "2014",
+      "journal-title": "Implementation Science"
+    },
+    {
+      "issue": "7611",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0067|cit67",
+      "doi-asserted-by": "crossref",
+      "first-page": "37",
+      "DOI": "10.1136/bmj.39252.591806.47",
+      "article-title": "Managing smoking cessation",
+      "volume": "335",
+      "author": "Aveyard",
+      "year": "2007",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0068|cit68",
+      "doi-asserted-by": "crossref",
+      "first-page": "307",
+      "DOI": "10.4278/0890-1171-12.5.307",
+      "article-title": "The use and impact of incentives in population-based smoking cessation programs: a review",
+      "volume": "12",
+      "author": "Bains",
+      "year": "1998",
+      "journal-title": "American Journal of Health Promotion"
+    },
+    {
+      "issue": "4Suppl 1",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0069|cit69",
+      "doi-asserted-by": "crossref",
+      "first-page": "S3",
+      "DOI": "10.1016/j.amjmed.2008.01.015",
+      "article-title": "Neurobiology of nicotine addiction: implications for smoking cessation treatment",
+      "volume": "121",
+      "author": "Benowitz",
+      "year": "2008",
+      "journal-title": "American Journal of Medicine"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0070|cit70",
+      "doi-asserted-by": "crossref",
+      "first-page": "864",
+      "DOI": "10.1007/s11606-007-0180-x",
+      "article-title": "Patients at-risk for cost-related medication nonadherence: a review of the literature",
+      "volume": "22",
+      "author": "Briesacher",
+      "year": "2007",
+      "journal-title": "Journal of general internal medicine: official journal of the Society for Research and Education in Primary Care Internal Medicine"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0071|cit71",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD003440",
+      "article-title": "Workplace interventions for smoking cessation",
+      "author": "Cahill",
+      "year": "2014",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0072|cit72",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD004307.pub5",
+      "article-title": "Incentives for smoking cessation",
+      "author": "Cahill",
+      "year": "2015",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0073|cit73",
+      "doi-asserted-by": "crossref",
+      "first-page": "271",
+      "DOI": "10.1006/pmed.1996.0126",
+      "article-title": "Economic evaluations of smoking interventions",
+      "volume": "26",
+      "author": "Cheung",
+      "year": "1997",
+      "journal-title": "Preventive Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0074|cit74",
+      "doi-asserted-by": "crossref",
+      "first-page": "272",
+      "DOI": "10.1186/1472-6963-11-272",
+      "article-title": "Pay-for-performance in disease management: a systematic review of the literature",
+      "volume": "11",
+      "author": "Bruin",
+      "year": "2011",
+      "journal-title": "BMC Health Services Research"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0075|cit75",
+      "volume-title": "Methods for the Economic Evaluation of Health Care Programmes",
+      "author": "Drummond",
+      "year": "2015"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0076|cit76",
+      "doi-asserted-by": "crossref",
+      "first-page": "512",
+      "DOI": "10.1016/j.addbeh.2013.10.036",
+      "article-title": "Prevalence of unassisted quit attempts in population-based studies: a systematic review of the literature",
+      "volume": "39",
+      "author": "Edwards",
+      "year": "2014",
+      "journal-title": "Addictive Behaviors"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0077|cit77",
+      "doi-asserted-by": "crossref",
+      "first-page": "240",
+      "DOI": "10.1017/S0266462305050324",
+      "article-title": "Criteria list for assessment of methodological quality of economic evaluations: consensus on Health Economic Criteria",
+      "volume": "21",
+      "author": "Evers",
+      "year": "2005",
+      "journal-title": "International Journal of Technology Assessment in Health Care"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0078|cit78",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD009255",
+      "article-title": "An overview of reviews evaluating the effectiveness of financial incentives in changing healthcare professional behaviours and patient outcomes",
+      "author": "Flodgren",
+      "year": "2011",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0079|cit79",
+      "doi-asserted-by": "crossref",
+      "first-page": "571",
+      "DOI": "10.1111/j.1368-5031.2006.00955.x",
+      "article-title": "The neurobiological basis for partial agonist treatment of nicotine dependence: varenicline",
+      "volume": "60",
+      "author": "Foulds",
+      "year": "2006",
+      "journal-title": "International Journal of Clinical Practice"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0080|cit80",
+      "unstructured": "Gencarelli DM Medicaid prescription drug coverage: state efforts to control costs NHPF issue brief No. 790. National Health Policy Forum, George Washington University 2003"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0081|cit81",
+      "doi-asserted-by": "crossref",
+      "first-page": "336",
+      "DOI": "10.1136/tc.2006.019281",
+      "article-title": "Discrete choice experiment of smoking cessation behaviour in Japan",
+      "volume": "16",
+      "author": "Goto",
+      "year": "2007",
+      "journal-title": "Tobacco Control"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0082|cit82",
+      "doi-asserted-by": "crossref",
+      "first-page": "380",
+      "DOI": "10.1016/j.jclinepi.2010.09.011",
+      "article-title": "GRADE guidelines: a new series of articles in the Journal of Clinical Epidemiology",
+      "volume": "64",
+      "author": "Guyatt",
+      "year": "2011",
+      "journal-title": "Journal of Clinical Epidemiology"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0083|cit83",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Hall SM Humfleet GL Reus VI Munoz RF Hartz DT Maude-Griffin R Psychological intervention and antidepressant treatment in smoking cessation Archives of General Psychiatry 2002 930 6",
+      "DOI": "10.1001/archpsyc.59.10.930"
+    },
+    {
+      "issue": "7414",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0084|cit84",
+      "doi-asserted-by": "crossref",
+      "first-page": "557",
+      "DOI": "10.1136/bmj.327.7414.557",
+      "article-title": "Measuring inconsistency in meta-analyses",
+      "volume": "327",
+      "author": "Higgins",
+      "year": "2003",
+      "journal-title": "BMJ (Clinical research ed.)"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0085|cit85",
+      "unstructured": "Higgins JPT Altman DG Sterne JAC (editors) Chapter 8: Assessing risk of bias in included studies. In: Higgins JPT, Green S (editors). Cochrane Handbook for Systematic Reviews of Interventions Version 5.1.0 (updated March 2011). The Cochrane Collaboration, 2011 Available from handbook.cochrane.org"
+    },
+    {
+      "issue": "18",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0086|cit86",
+      "doi-asserted-by": "crossref",
+      "first-page": "2028",
+      "DOI": "10.1001/jama.2011.1630",
+      "article-title": "Financial incentives and the art of payment reform",
+      "volume": "306",
+      "author": "Hollenbeck",
+      "year": "2011",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0087|cit87",
+      "doi-asserted-by": "crossref",
+      "first-page": "13",
+      "DOI": "10.1080/1462220031000070552",
+      "article-title": "Measures of abstinence in clinical trials: issues and recommendations",
+      "volume": "5",
+      "author": "Hughes",
+      "year": "2003",
+      "journal-title": "Nicotine & Tobacco Research"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0088|cit88",
+      "doi-asserted-by": "crossref",
+      "first-page": "1012",
+      "DOI": "10.1111/j.1360-0443.2005.01097.x",
+      "article-title": "Reimbursement for smoking cessation treatment may double the abstinence rate: results of a randomized trial",
+      "volume": "100",
+      "author": "Kaper",
+      "year": "2005",
+      "journal-title": "Addiction"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0089|cit89",
+      "doi-asserted-by": "crossref",
+      "first-page": "453",
+      "DOI": "10.2165/00019053-200624050-00004",
+      "article-title": "Encouraging smokers to quit: the cost effectiveness of reimbursing the costs of smoking cessation treatment",
+      "volume": "24",
+      "author": "Kaper",
+      "year": "2006",
+      "journal-title": "PharmacoEconomics"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0090|cit90",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD001292.pub3",
+      "article-title": "Individual behavioural counselling for smoking cessation",
+      "author": "Lancaster",
+      "year": "2017",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0091|cit91",
+      "doi-asserted-by": "crossref",
+      "first-page": "220",
+      "DOI": "10.1016/j.pupt.2005.10.012",
+      "article-title": "Pharmacological approaches to smoking cessation",
+      "volume": "20",
+      "author": "Mitrouska",
+      "year": "2007",
+      "journal-title": "Pulmonary Pharmacology & Therapeutics"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0092|cit92",
+      "doi-asserted-by": "publisher",
+      "first-page": "e1000097",
+      "DOI": "10.1371/journal.pmed1000097",
+      "article-title": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses: the PRISMA Statement",
+      "volume": "6",
+      "author": "Moher",
+      "year": "2009",
+      "journal-title": "PLos Medicine"
+    },
+    {
+      "issue": "4 suppl 1",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0093|cit93",
+      "doi-asserted-by": "crossref",
+      "first-page": "S20",
+      "DOI": "10.1016/j.amjmed.2008.01.016",
+      "article-title": "Update on pharmacologic options for smoking cessation treatment",
+      "volume": "121",
+      "author": "Nides",
+      "year": "2008",
+      "journal-title": "American Journal of Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0094|cit94",
+      "doi-asserted-by": "crossref",
+      "first-page": "947",
+      "DOI": "10.1136/bmj.328.7445.947",
+      "article-title": "ABC of smoking cessation: economics of smoking cessation",
+      "volume": "328",
+      "author": "Parrot",
+      "year": "2004",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0095|cit95",
+      "first-page": "111",
+      "article-title": "Pay for performance schemes in primary care: what have we learnt?",
+      "volume": "18",
+      "author": "Peckham",
+      "year": "2010",
+      "journal-title": "Quality in Primary Care"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0096|cit96",
+      "unstructured": "Nordic Cochrane Centre, The Cochrane Collaboration Review Manager 5 (RevMan 5) 2014"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0097|cit97",
+      "doi-asserted-by": "crossref",
+      "first-page": "437",
+      "DOI": "10.1177/0272989X05278431",
+      "article-title": "Systematic review of economic evaluations of smoking cessation: standardizing the cost-effectiveness",
+      "volume": "25",
+      "author": "Ronckers",
+      "year": "2005",
+      "journal-title": "Medical Decision Making"
+    },
+    {
+      "issue": "10041",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0098|cit98",
+      "doi-asserted-by": "crossref",
+      "first-page": "268",
+      "DOI": "10.1016/S0140-6736(16)00276-2",
+      "article-title": "Long-term evidence for the effect of pay-for-performance in primary care on mortality in the UK: a population study",
+      "volume": "388",
+      "author": "Ryan",
+      "year": "2016",
+      "journal-title": "The Lancet"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0099|cit99",
+      "doi-asserted-by": "crossref",
+      "first-page": "230",
+      "DOI": "10.1001/archinternmed.2008.556",
+      "article-title": "Cost-effective primary care-based strategies to improve smoking cessation: more value for money",
+      "volume": "169",
+      "author": "Salize",
+      "year": "2009",
+      "journal-title": "Archives of Internal Medicine"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0100|cit100",
+      "doi-asserted-by": "crossref",
+      "first-page": "w1171",
+      "DOI": "10.1377/hlthaff.28.6.w1171",
+      "article-title": "A survey of primary care physicians in eleven countries, 2009: perspectives on care, costs and experiences",
+      "volume": "28",
+      "author": "Schoen",
+      "year": "2009",
+      "journal-title": "Health Affairs (Millwood)"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0101|cit101",
+      "unstructured": "Schünemann HJ Oxman AD Higgins JPT Vist GE Glasziou P Guyatt GH Chapter 11: Presenting results and ‘Summary of findings' tables. In: Higgins JPT, Green S (editors), Cochrane Handbook for Systematic Reviews of Interventions Version 5.1.0 (updated March 2011). The Cochrane Collaboration, 2011 Available from handbook.cochrane.org"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0102|cit102",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD008451.pub2",
+      "article-title": "The effect of financial incentives on the quality of health care provided by primary care physicians",
+      "author": "Scott",
+      "year": "2011",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0103|cit103",
+      "doi-asserted-by": "crossref",
+      "first-page": "599",
+      "DOI": "10.1080/14622200410001734067",
+      "article-title": "Recommendation for the assessment of tobacco craving and withdrawal in smoking cessation trials",
+      "volume": "6",
+      "author": "Shiffman",
+      "year": "2004 Aug",
+      "journal-title": "Nicotine & Tobacco Research"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0104|cit104",
+      "doi-asserted-by": "crossref",
+      "first-page": "149",
+      "DOI": "10.1080/14622200210123581",
+      "article-title": "Biochemical verification of tobacco use and cessation",
+      "volume": "4",
+      "author": "SRNT Subcommittee on Biochemical Verification",
+      "year": "2002",
+      "journal-title": "Nicotine & Tobacco Research"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0105|cit105",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD001007.pub3",
+      "article-title": "Group behaviour therapy programmes for smoking cessation",
+      "author": "Stead",
+      "year": "2017",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0106|cit106",
+      "first-page": "449",
+      "article-title": "Quality of clinical primary care and targeted incentive payments: an observational study",
+      "volume": "57",
+      "author": "Steel",
+      "year": "2007",
+      "journal-title": "British Journal of General Practice"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0107|cit107",
+      "doi-asserted-by": "crossref",
+      "first-page": "247",
+      "DOI": "10.1186/1472-6963-10-247",
+      "article-title": "Systematic review: effects, design choices, and context of pay-for-performance in health care",
+      "volume": "10",
+      "author": "Herck",
+      "year": "2010",
+      "journal-title": "BMC Health Services Research"
+    },
+    {
+      "key": "10.1002/14651858.CD004305.pub5-BIB0108|cit108",
+      "doi-asserted-by": "crossref",
+      "first-page": "987",
+      "DOI": "10.1136/thorax.55.12.987",
+      "article-title": "Smoking cessation guidelines for health care professionals: an update",
+      "volume": "55",
+      "author": "West",
+      "year": "2000",
+      "journal-title": "Thorax"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0109|cit109",
+      "doi-asserted-by": "crossref",
+      "first-page": "299",
+      "DOI": "10.1111/j.1360-0443.2004.00995.x",
+      "article-title": "Outcome criteria in smoking cessation trials: proposal for a common standard",
+      "volume": "100",
+      "author": "West",
+      "year": "2005",
+      "journal-title": "Addiction"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0110|cit110",
+      "doi-asserted-by": "crossref",
+      "first-page": "1388",
+      "DOI": "10.1111/add.12998",
+      "article-title": "Health-care interventions to promote and assist tobacco cessation: a review of efficacy, effectiveness and affordability for use in national guideline development",
+      "volume": "110",
+      "author": "West",
+      "year": "2015",
+      "journal-title": "Addiction"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0111|cit111",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD004305",
+      "article-title": "Healthcare financing systems for increasing the use of tobacco dependence treatment",
+      "author": "Kaper",
+      "year": "2005",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD004305.pub5-BIB0112|cit112",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD004305.pub3",
+      "article-title": "Healthcare financing systems for increasing the use of tobacco dependence treatment",
+      "author": "Reda",
+      "year": "2009",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    }
+  ],
+  "container-title": [
+    "Cochrane Database of Systematic Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://onlinelibrary.wiley.com/doi/full/10.1002/14651858.CD004305.pub5",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        7,
+        25
+      ]
+    ],
+    "date-time": "2023-07-25T01:32:42Z",
+    "timestamp": 1690248762000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://doi.wiley.com/10.1002/14651858.CD004305.pub5"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "name": "Cochrane Tobacco Addiction Group",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "editor"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2017,
+        9,
+        12
+      ]
+    ]
+  },
+  "references-count": 112,
+  "journal-issue": {
+    "issue": "9",
+    "published-online": {
+      "date-parts": [
+        [
+          2017,
+          9
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1002/14651858.cd004305.pub5",
+  "relation": {},
+  "ISSN": [
+    "1465-1858"
+  ],
+  "issn-type": [
+    {
+      "value": "1465-1858",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2017,
+        9,
+        12
+      ]
+    ]
+  }
+}

@@ -1,0 +1,497 @@
+{
+  "institution": [
+    {
+      "name": "medRxiv"
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        24
+      ]
+    ],
+    "date-time": "2026-09-24T16:19:54Z",
+    "timestamp": 1790266794604,
+    "version": "4.1.0"
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2020,
+        8,
+        16
+      ]
+    ]
+  },
+  "group-title": "Epidemiology",
+  "reference-count": 44,
+  "publisher": "openRxiv",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "accepted": {
+    "date-parts": [
+      [
+        2020,
+        8,
+        15
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                <jats:p>Several countries use shutdown strategies to contain the spread of the COVID-19 epidemic, at the expense of massive economic costs. While this suggests a conflict between health protection and economic objectives, we examine whether the economically optimal exit strategy can be reconciled with the containment of the epidemic. We use a novel combination of epidemiological and economic simulations for scenario calculations based on empirical evidence from Germany. Our findings suggest that a prudent opening is economically optimal, whereas costs are higher for a more extensive opening process. This rejects the view that there is a conflict with health protection. Instead, it is in the common interest of public health and the economy to relax non-pharmaceutical interventions in a manner that keeps the epidemic under control.</jats:p>",
+  "DOI": "10.1101/2020.08.14.20175224",
+  "type": "posted-content",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        8,
+        16
+      ]
+    ],
+    "date-time": "2020-08-16T08:20:12Z",
+    "timestamp": 1597566012000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 11,
+  "title": [
+    "The Common Interests of Health Protection and the Economy: Evidence from Scenario Calculations of COVID-19 Containment Policies"
+  ],
+  "prefix": "10.64898",
+  "author": [
+    {
+      "given": "Florian",
+      "family": "Dorn",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sahamoddin",
+      "family": "Khailaie",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Marc",
+      "family": "Stoeckli",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sebastian C.",
+      "family": "Binder",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Berit",
+      "family": "Lange",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Stefan",
+      "family": "Lautenbacher",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Andreas",
+      "family": "Peichl",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Patrizio",
+      "family": "Vanella",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Timo",
+      "family": "Wollmershäuser",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Clemens",
+      "family": "Fuest",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Michael",
+      "family": "Meyer-Hermann",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "54368",
+  "reference": [
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.1",
+      "unstructured": "Ferguson, N. et al. Report 9: Impact of non-pharmaceutical interventions (NPIs) to reduce COVID19 mortality and healthcare demand. (Imperial College London, 2020)."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.abb9789"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.3",
+      "unstructured": "Dorn, F. et al. The economic costs of the coronavirus shutdown for selected European countries: A scenario calculation. EconPol Policy Brief 25 (2020)."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.4",
+      "unstructured": "IMF. World Economic Outlook, April 2020: The Great Lockdown. (International Monetary Fund, 2020)."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.5",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Eichenbaum, M. S. , Rebelo, S. & Trabandt, M. The macroeconomics of epidemics. NBER Working Paper 26882 (2020).",
+      "DOI": "10.3386/w26882"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.6",
+      "unstructured": "The Economist. A grim calculus: Covid-19 presents stark choices between life, death and the economy. The Economist, April 2nd (2020)."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.7",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1016/j.jhealeco.2014.03.005",
+      "article-title": "The impact of the 1918 Spanish flu epidemic on economic performance in Sweden: An investigation into the consequences of an extraordinary mortality shock",
+      "volume": "36",
+      "year": "2014",
+      "journal-title": "Journal of Health Economics"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.8",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Correia, S. , Luck, S. & Verner, E. Pandemics depress the economy, public health interventions do not: evidence from the 1918 Flu. SSRN (2020).",
+      "DOI": "10.2139/ssrn.3561560"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.9",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Barro, R. J. , Ursua, J. e. F. & Weng, J. The coronavirus and the great influenza epidemic –Lessons from the “Spanish Flu” for the coronavirus’s potential effects on mortality and economic activity. CESifo Working Paper 8166 (2020).",
+      "DOI": "10.3386/w26866"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.10",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jordà, Ò. , Singh, S. R. & Taylor, A. M. Longer-run economic consequences of pandemics. NBER Working Paper 26934 (2020).",
+      "DOI": "10.3386/w26934"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.11",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ma, C. , Rogers, J. H. & Zhou, S. Global economic and financial effects of 21st century pandemics and epidemics. SSRN (2020).",
+      "DOI": "10.2139/ssrn.3565646"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.12",
+      "unstructured": "Abele-Brehm, A. et al. Making the fight against the Coronavirus pandemic sustainable. (ifo Institute, 2020)."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.13",
+      "unstructured": "Holtemöller, O. Integrated assessment of epidemic and economic dynamics. IWH Discussion Papers 4/2020 (2020)."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.14",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Khailaie, S. et al. Estimate of the development of the epidemic reproduction number Rt from Coronavirus SARS-CoV-2 case data and implications for political measures based on prognostics. medRxiv (2020).",
+      "DOI": "10.1101/2020.04.04.20053637"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.15",
+      "unstructured": "Sauer, S. & Wohlrabe, K. ifo Handbuch der Konjunkturumfragen. (ifo Beiträge zur Wirtschaftsforschung, 2020)."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.16",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Lehmann, R. The Forecasting Power of the ifo Business Survey. CESifo Working Paper 8291 (2020).",
+      "DOI": "10.2139/ssrn.3603848"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.17",
+      "unstructured": "Federal Statistical Office. Volkswirtschaftliche Gesamtrechnungen. Input-Output-Rechnung nach 12 Gutergruppen / Wirtschafts-und Produktionsbereichen. (Federal Statistical Office of Germany, 2020)."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.18",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1001/jama.298.6.644"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.19",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.abc6197"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.20",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Mitze, T. , Kosfeld, R. , Rode, J. & Wälde, Klaus . Face Masks Considerably Reduce COVID-19 Cases in Germany: A Synthetic Control Method Approach. IZA Discussion Paper 13319 (2020).",
+      "DOI": "10.1101/2020.06.21.20128181"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.21",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Barro, R. J. , Ursua, J. F. , & Weng, J. (2020). The coronavirus and the great influenza epidemic – lessons from the “spanish flu” for the coronavirus’s potential effects on mortality and economic activity. CESifo Working Paper, 8166.",
+      "DOI": "10.3386/w26866"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.22",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Correia, S. , Luck, S. , & Verner, E. (2020). Pandemics depress the economy, public health interventions do not: Evidence from the 1918 flu. SSRN. https://dx.doi.org/10.2139/ssrn.3561560",
+      "DOI": "10.2139/ssrn.3561560"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.23",
+      "unstructured": "Dorn, F. , Fuest, C. , Göttert, M. , Krolage, C. , Lautenbacher, S. , Lehmann, R. , Link, S. , Möhrle, S. , Peichl, A. , Reif, M. , Et al. (2020). The economic costs of the coronavirus shutdown for selected European countries: A scenario calculation. EconPol Policy Brief, 25."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.24",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Eichenbaum, M. S. , Rebelo, S. , & Trabandt, M. (2020). The macroeconomics of epidemics. NBER Working Paper, 26882.",
+      "DOI": "10.3386/w26882"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.25",
+      "unstructured": "Federal Statistical Office. (2020). Volkswirtschaftliche Gesamtrechnungen. Input-Output-Rechnung nach 12 Gütergruppen / Wirtschafts-und Produktionsbereichen. Federal Statistical Office of Germany."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.26",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Grimm, V. , Mengel, F. , & Schmidt, M. (2020). Extensions of the SEIR model for the analysis of tailored social distancing and tracing approaches to cope with COVID-19. medRxiv. https://www.medrxiv.org/content/10.1101/2020.04.24.20078113v1",
+      "DOI": "10.1101/2020.04.24.20078113"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.27",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Hoertel, N. , Blachier, M. , Blanco, C. , Olfson, M. , Massetti, M. , Rico, M. S. , Limosin, F. , & Leleu, H. (2020). A stochastic agent-based model of the SARS-CoV-2 epidemic in france. Nature Medicine, 1–5.",
+      "DOI": "10.1038/s41591-020-1001-6"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.28",
+      "unstructured": "Holtemöller, O. (2020). Integrated assessment of epidemic and economic dynamics. IWH Discussion Papers, 4/2020."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.29",
+      "unstructured": "Human Mortality Database. (2020a). Sweden, Population size (abridged). Retrieved January 9, 2020, from https://www.mortality.org/hmd/SWE/STATS/Population.txt"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.30",
+      "unstructured": "Human Mortality Database. (2020b). The United States of America, Population size (abridged). Retrieved October 2, 2019, from https://www.mortality.org/hmd/GBR_NP/STATS/Population.txt"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.31",
+      "unstructured": "Human Mortality Database. (2020c). United Kingdom, Population size (abridged). Retrieved July 11, 2020, from https://www.mortality.org/hmd/GBR_NP/STATS/Population.txt"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.32",
+      "unstructured": "IMF. (2020). World economic outlook, april 2020: The great lockdown. International Monetary Fund."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.33",
+      "unstructured": "Johns Hopkins University. (2020). COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU). Retrieved July 30, 2020, from https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.34",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jordà, Ò. , Singh, S. R. , & Taylor, A. M. (2020). Longer-run economic consequences of pandemics. NBER Working Paper, 26934.",
+      "DOI": "10.3386/w26934"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.35",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1016/j.jhealeco.2014.03.005",
+      "article-title": "The impact of the 1918 spanish flu epidemic on economic performance in Sweden: An investigation into the consequences of an extraordinary mortality shock",
+      "volume": "36",
+      "year": "2014",
+      "journal-title": "Journal of Health Economics"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.36",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Lehmann, R. (2020). The forecasting power of the ifo business survey. CESifo Working Paper, 8291.",
+      "DOI": "10.2139/ssrn.3603848"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.37",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ma, C. , Rogers, J. H. , & Zhou, S. (2020). Global economic and financial effects of 21st century pandemics and epidemics. SSRN. http://dx.doi.org/10.2139/ssrn.3565646",
+      "DOI": "10.2139/ssrn.3565646"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.38",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Mitze, T. , Kosfeld, R. , Rode, J. , & Wälde, K. (2020). Face masks considerably reduce COVID-19 cases in germany: A synthetic control method approach. IZA Discussion Paper, 13319.",
+      "DOI": "10.1101/2020.06.21.20128181"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.39",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.abc6197"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.40",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Prem, K. , Liu, Y. , Russell, T. W. , Kucharski, A. J. , Eggo, R. M. , Davies, N. , Flasche, S. , Clifford, S. , Pearson, C. A. , Munday, J. D. , Et al. (2020). The effect of control strategies to reduce social mixing on outcomes of the covid-19 epidemic in wuhan, china: A modelling study. The Lancet Public Health, e261–e270.",
+      "DOI": "10.1016/S2468-2667(20)30073-6"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.41",
+      "unstructured": "Robert Koch Institute, (2020). Corona virus disease 2019 (COVID-19) daily situation report of the Robert Koch Institute. Robert Koch Institut. Retrieved June 19, 2020, from https://www.rki.de/DE/Content/InfAZ/N/NeuartigesCoronavirus/Situationsberichte/2020-06-17-en.pdf?_blob=publicationFile"
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.42",
+      "unstructured": "Sauer, S. , & Wohlrabe, K. (2020). Ifo Handbuch der Konjunkturumfragen. ifo Beiträge zur Wirtschaftsforschung."
+    },
+    {
+      "key": "2021012701350766000_2020.08.14.20175224v1.43",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Vanella, P. , Wiessner, C. , Holz, A. , Krause, G. , Moehl, A. , Wiegel, S. , Lange, B. , & Becher, H. (2020). The role of age distribution, time lag between reporting and death and healthcare system capacity on case fatality estimates of COVID-19. ResearchSquare. https://doi.org/10.21203/rs.3.rs-38592/v1",
+      "DOI": "10.1101/2020.05.16.20104117"
+    },
+    {
+      "issue": "1",
+      "key": "2021012701350766000_2020.08.14.20175224v1.44",
+      "first-page": "3",
+      "article-title": "ifo Konjunkturprognose Sommer 2020: Deutsche Wirtschaft–es geht wieder aufwärts",
+      "volume": "73",
+      "year": "2020",
+      "journal-title": "ifo Schnelldienst"
+    }
+  ],
+  "container-title": [],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://syndication.highwire.org/content/doi/10.1101/2020.08.14.20175224",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        15
+      ]
+    ],
+    "date-time": "2026-01-15T13:51:36Z",
+    "timestamp": 1768485096000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://medrxiv.org/lookup/doi/10.1101/2020.08.14.20175224"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2020,
+        8,
+        16
+      ]
+    ]
+  },
+  "references-count": 44,
+  "URL": "https://doi.org/10.1101/2020.08.14.20175224",
+  "relation": {
+    "is-preprint-of": [
+      {
+        "id-type": "doi",
+        "id": "10.1007/s10198-022-01452-y",
+        "asserted-by": "subject"
+      }
+    ]
+  },
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2020,
+        8,
+        16
+      ]
+    ]
+  },
+  "subtype": "preprint"
+}

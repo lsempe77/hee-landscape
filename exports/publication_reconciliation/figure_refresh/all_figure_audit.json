@@ -1,0 +1,491 @@
+{
+  "eligible_count": 41610,
+  "gallery_figures_checked": 43,
+  "remaining_static_figures_rebuilt": 15,
+  "figures": [
+    {
+      "gallery_key": "fig_growth.webp",
+      "shown_file": "fig_growth_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "a76d89b60644125c6498ae5cac84cd843eb0f82a7a793c4bc256f3f48cc0a13b",
+      "caption": "Base: 41,610 included records. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. The reference is descriptive, not a forecast."
+    },
+    {
+      "gallery_key": "fig_method_stream_v2.svg",
+      "shown_file": "fig_method_stream_v2.svg",
+      "builder": "build_eval_type_figures.py",
+      "eligible_count": 41610,
+      "sha256": "1702409e3ffd0dfdc6293412fd9ff1f6c2b2bdda737d5e7aa6825029f55707b1",
+      "caption": "Studies by publication year and evaluation type, 2010\u20132025 (2026 partial, left out): 37,199 studies with an evaluation type and 1,810 reviews that report no evaluation of their own, shown as a separate grey band and excluded from type shares. Reviews that also report the authors' own evaluation keep its type. Cost-utility rose from 43.6% to 51.4% of typed studies; cost-effectiveness fell from 31.2% to 23.6%."
+    },
+    {
+      "gallery_key": "fig_disease_circular.webp",
+      "shown_file": "fig_disease_circular_gbd.webp",
+      "builder": "build_gbd_figures.py",
+      "eligible_count": 41610,
+      "sha256": "dcd12e1db6d2c8566e72bbc2f7069ec5c6e4e7d2fa37bad102d5c9c23f26f64b",
+      "caption": "Share of the 36,446 studies that name a disease (of 41,610) by GBD 2023 cause group; cancers (neoplasms) (22%), cardiovascular (11%) and diabetes & kidney (7%) lead. Colour shows whether a group's research leans toward low- and middle-income or high-income countries (single-country studies). A study can name several groups. Disease groups coded from titles and abstracts to GBD 2023 causes. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "fig_transition.webp",
+      "shown_file": "fig_transition_gbd.webp",
+      "builder": "build_gbd_figures.py",
+      "eligible_count": 41610,
+      "sha256": "b0831ad6b38eed0d9d9766c531417c104eeeac2359558d45f4b51292d3f8ed5e",
+      "caption": "Disease mix of studies about low- and middle-income countries by GBD 2023 level 1, 2010\u20132025, against those countries' 2010 and 2023 burden. Communicable, maternal, neonatal and nutritional conditions fell from 47% of the research in 2010 to 27% in 2025 (burden 37% in 2010, 28% in 2023); non-communicable research rose to 68% (burden 61%); injuries stayed at 4% (burden 11%). A study with causes in two groups counts in both. Burden: GBD 2023-round DALYs. Income group: the World Bank group of each country, as classified on 1 January of the publication year (for studies) or the burden year (for burden). For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "paper04.webp",
+      "shown_file": "paper04_gbd.webp",
+      "builder": "build_gbd_figures.py",
+      "eligible_count": 41610,
+      "sha256": "2a5333d8b4a3b8763bd1d8dc7572d854eae8585253c3f8a027e720c2263598dd",
+      "caption": "Disease mix of single-country studies by period (2010\u20132017, 2018\u20132026) and income setting, on GBD 2023 cause groups. In low- and middle-income research, HIV/AIDS & STIs (14% \u2192 5%); maternal & neonatal (5% \u2192 3%) fall while cancers (neoplasms) (15% \u2192 26%) rise. Falling or rising: non-overlapping 95% intervals. Bars are 95% intervals; point size is the number of studies. Disease groups coded from titles and abstracts. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "paper05.webp",
+      "shown_file": "paper05_gbd.webp",
+      "builder": "build_gbd_figures.py",
+      "eligible_count": 41610,
+      "sha256": "0aa65f233bd610db174a9a509de91e9ccc539009e8838bb4c5b6af1a566e53b8",
+      "caption": "Percentage of each income group's disease-coded studies that name each GBD 2023 cause group (22 level-2 causes plus studies naming an infection or injury without its cause), grouped by GBD level 1. Malaria and neglected tropical diseases (19% of low-income studies vs 0% of high-income) and HIV/AIDS (21% vs 3%) concentrate in low-income research; cancers in upper-middle- and high-income research (29%, 23%). A study naming several groups or countries appears in each, so columns sum above 100%. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "fig_intervention_map.webp",
+      "shown_file": "fig_intervention_map_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "0a37e92133985b42d966f0740ad3d34ae7586afe3e99594f092a26d00f30dfe0",
+      "caption": "Base: 41,583 eligible records with frozen topic coordinates; 27 included records have no coordinates. Grey points are HDBSCAN noise or missing intervention labels. LMIC shares are computed among 27,897 single-country records with known publication-year income, by primary intervention class. Coordinates were filtered, not refitted. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups."
+    },
+    {
+      "gallery_key": "fig_theme_rank.webp",
+      "shown_file": "fig_theme_rank_pubyear.webp",
+      "builder": "build_income_pubyear_figures.py",
+      "eligible_count": 41610,
+      "sha256": "73b5144a093619b0f8a892481de1035694def51682b062f2f881511587152034",
+      "caption": "The 15 most-LMIC and 15 most-high-income of 73 research topics (found by clustering title-and-abstract embeddings) (all themes: 28%  LMIC). The high-income panel is shown first, plotted as each theme's high-income share (dementia leads at 93%); the LMIC panel as its LMIC share (malaria and dengue leads at 86%): 36%\u201386% LMIC vs 7%\u201316% LMIC. n per theme = single-country studies whose country studied had a World Bank income group on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "fig_intervention_mix.webp",
+      "shown_file": "fig_intervention_mix_pubyear.webp",
+      "builder": "build_income_pubyear_figures.py",
+      "eligible_count": 41610,
+      "sha256": "c96c3e65b16f5ba1b74d39a888ee2ea6d373bebc11065cec04c05473243aa655",
+      "caption": "Share of each income group's eligible single-country studies whose primary intervention class is the given type (the optional secondary class is not folded in). Pharmaceuticals peak in upper-middle-income settings (46.6%) and fall to 17.9% at low income, where they stay narrowly ahead of care-model and organisational studies (17.4%); vaccines rise steadily with lower income (4.7% \u2192 13.9%) while surgery (13.8% \u2192 7.7%) and devices (8.5% \u2192 3.0%) fall. Base: 27,897 eligible single-country studies whose country studied had a World Bank income group on 1 January of the publication year. Intervention classes were assigned by a large language model from each abstract (one pass), checked against a keyword list, the topic clusters and a second model; they have not been checked by people. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "paper01.webp",
+      "shown_file": "fig_selection_reconciled.svg",
+      "builder": "reconcile_publication_methods.py",
+      "eligible_count": 41610,
+      "sha256": "4b199af3ca62859787b9350d3afa2f27fa4a573c103eac60069347f8b7a0685a",
+      "caption": "Study-selection flow after publication reconciliation: 72,845 extracted; 31,235 excluded; 41,610 included. Review classification: 1,856 systematic reviews, 796 non-systematic reviews and 38,958 records not identified as reviews. Original screening counts are unchanged; the audit adds 44 redundant reports, two registrations without results and one retracted paper to exclusions."
+    },
+    {
+      "gallery_key": "fig_metric.webp",
+      "shown_file": "fig_metric_pubyear.webp",
+      "builder": "build_income_pubyear_figures.py",
+      "eligible_count": 41610,
+      "sha256": "bf781d87df15087de24b35c6b803ab945040a700bfbbbf92abb6fea6463621a0",
+      "caption": "Share of eligible studies reporting each comparable metric. The metric flips with income: high-income research reports QALYs (54%) and almost no DALYs (1%); low-income research does the reverse (39% DALYs, 8% QALYs) \u2014 so rich and poor settings are measured in different units. Base: 41,610 eligible studies (income shown for single-country studies, by the World Bank group of the country studied on 1 January of the publication year); a study may report neither, one, or both. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "paper02.webp",
+      "shown_file": "paper02_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "df6fa3a64ec018aa1ea4b3cfc664076bd2d0cd9ee9fbc9c5ff7be81452637c76",
+      "caption": "Base: 40,054 included records with a model-use flag. Generic outcomes are QALYs or DALYs; a record reporting both counts once. Abstract reporting does not establish methodological quality."
+    },
+    {
+      "gallery_key": "fig_intervention_decision.webp",
+      "shown_file": "fig_intervention_decision_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "d1cfa6e61822a280e2800ebd2589e20ee5f2e6bd92049a8ca9fd640cd97e5a19",
+      "caption": "Base: 41,610 included records; intervention rows use the included records within each class. Primary intervention class only; residual Other omitted. All columns use the full row denominator, including records with an unavailable flag; model-based is the share positively identified as model-based. Signals are abstract keyword flags, not a full-text quality assessment. \"Not reported\" does not mean \"not done\"."
+    },
+    {
+      "gallery_key": "fig_dotmap.svg",
+      "shown_file": "fig_dotmap_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "a9075b8a2d618955a1314755a34d3d6b1262e59d75e31353b007931cc525426b",
+      "caption": "Each bubble represents a country; area is the number of unique included records naming it. Colour uses July 2026 income, grey where unavailable. Locations are study settings, not author affiliations. 31,740 study-country pairs across 187 named countries; locations without a matched map polygon have no bubble. Robinson projection."
+    },
+    {
+      "gallery_key": "fig_worldmap.webp",
+      "shown_file": "fig_worldmap_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "13a36959f266db65ad37f055d8bd2364ec4f8bc59532388290562014fe4a4db9",
+      "caption": "Shading uses the 155 country website list with population data. Grey includes countries with no recorded study or no population in this list. 31,740 study-country pairs across 187 named countries in the full geography. Natural Earth medium-resolution polygons; Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country."
+    },
+    {
+      "gallery_key": "paper03.webp",
+      "shown_file": "paper03_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "c3422d47d344a70baa4c33b062139e12557d3c3e0e5d66d5b48573d0aaec1761",
+      "caption": "Base: 153 countries with at least one study, population and income classification from the 155 country website list. Zero-study countries are omitted from the log axis. Dashed lines are within-group medians. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups."
+    },
+    {
+      "gallery_key": "fig_authorship_pattern_v2.svg",
+      "shown_file": "fig_authorship_pattern_v2.svg",
+      "builder": "build_authorship_figures.py",
+      "eligible_count": 41610,
+      "sha256": "5401d2f83cfd7908eef3301749745910ec84e7a61eea65f80a158e9bb612dacc",
+      "caption": "Panel A: 24,000 studies about a single country with at least one known author location and an income group at publication (of 27,899 single-country studies). Panel B: the 22,678 of these with a local author, by the income groups of the other authors' countries in the year of publication. 10 studies had a co-author country without a World Bank group; those countries are left out of the mix. Author locations come from institutional affiliations; study countries come from the study text, so a study cannot count as local through its affiliations alone."
+    },
+    {
+      "gallery_key": "fig_forest_v2.svg",
+      "shown_file": "fig_forest_v2.svg",
+      "builder": "build_authorship_figures.py",
+      "eligible_count": 41610,
+      "sha256": "585236c7776c3c3c329d68f08b8f3137ca1c5fd6ae2a0940d21bf1eb05a52b8c",
+      "caption": "Base: 24,002 studies about a single country with at least one known author location (of 27,899 single-country studies); 'local' = at least one author affiliation in the country studied. Regions are WHO regions (Taiwan and Hong Kong take the region of their UN sub-region); regions with fewer than 50 such studies would be left out, and none are. Uncertainty ranges are 95% Wilson intervals. Income groups are the World Bank group in force at publication."
+    },
+    {
+      "gallery_key": "paper06_v2.svg",
+      "shown_file": "paper06_v2.svg",
+      "builder": "build_authorship_figures.py",
+      "eligible_count": 41610,
+      "sha256": "739011d3acae49bd9226fad892de25c00cb769acd117c247ca8c2d97c8f797b6",
+      "caption": "Share of single-country studies with at least one author based in the country studied, by income group at publication (point and 95% Wilson interval). n = 516 low income, 1,413 lower middle income, 4,010 upper middle income, 18,061 high income studies. Author locations come from institutional affiliations and are known for 35,362 of 41,610 studies, 2010\u20132026."
+    },
+    {
+      "gallery_key": "fig_collab_chord_v2.svg",
+      "shown_file": "fig_collab_chord_v2.svg",
+      "builder": "build_authorship_figures.py",
+      "eligible_count": 41610,
+      "sha256": "21143cc6c93f4e0c8b2febdec9eb075abe0b7dfc43f7b344f6dcedcbc0ad2533",
+      "caption": "Base: 35,361 of 41,610 studies with at least one author country that has a World Bank income group in the year of publication. Ribbons link pairs of income groups among a study's author countries; a study with authors in three groups adds a ribbon for each pair. 14 studies had an author country without an income group; that country is left out. Author locations come from institutional affiliations."
+    },
+    {
+      "gallery_key": "fig_research_burden_ratio.svg",
+      "shown_file": "fig_research_burden_ratio.svg",
+      "builder": "build_research_burden_ratio.py",
+      "eligible_count": 41610,
+      "sha256": "8b4e622cb98156f6237fdf7d71a45e570acb8b6e59ceb339b2dee682355c124e",
+      "caption": "Base: 154 countries with positive burden data; 31,437 study-country counts. 1 country excluded because burden is unavailable. Eritrea and Mauritius have no identified studies. Studies published 2010\u20132026 (final year partial); GBD 2023 all-cause DALYs. A study naming multiple countries counts once for each country. Ratios compare shares, so countries well above proportional push others below it. Proportional is a reference point, not a measure of adequacy. Horizontal position within a group is random jitter. Full country values: research_burden_ratios.csv."
+    },
+    {
+      "gallery_key": "paper07.webp",
+      "shown_file": "paper07_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "93319d2a1d2940237ab1b84cea7be2c88a808381485aae3e0d632ec71aedc65a",
+      "caption": "Base: 152 countries with studies and non-missing GBD 2023 all-cause DALYs and income classification. Countries with zero studies are omitted from the log scale. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups."
+    },
+    {
+      "gallery_key": "fig_burden_disease_companion.webp",
+      "shown_file": "fig_burden_disease_companion_gbd.webp",
+      "builder": "build_gbd_figures.py",
+      "eligible_count": 41610,
+      "sha256": "ee8349290caeab294bd5b2b1170848c61936bcc0f9b742ed74077e6c8de0e32f",
+      "caption": "Each GBD 2023 level-2 cause's share of studies against its share of disease burden (DALYs), in low- and middle-income and in high-income countries. The widest lower-income shortfalls: cardiovascular (8% of studies vs 16% of burden), mental disorders (2% of studies vs 6% of burden), maternal & neonatal (4% of studies vs 8% of burden). Studies naming an infection or injury without its cause are left out. Burden: GBD 2023 DALYs. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "paper08.webp",
+      "shown_file": "paper08_gbd.webp",
+      "builder": "build_gbd_figures.py",
+      "eligible_count": 41610,
+      "sha256": "80e8fce8480c01abdd2aaff605547d24a7c0eed38d093d24d12200e757a1e8ac",
+      "caption": "Research share divided by disease-burden share for the 22 GBD 2023 level-2 causes, in low- and middle-income and in high-income countries; left of 1, a cause has a smaller share of research than of burden. The largest lower-income gaps: transport injuries (0.018\u00d7), self-harm & violence (0.065\u00d7), mental disorders (0.37\u00d7); maternal & neonatal runs 0.54\u00d7 its burden share in lower-income settings and 2\u00d7 in high-income ones. Disease groups coded from titles and abstracts to the same GBD causes as the burden, so no crosswalk is needed; studies naming an injury without its cause are left out, so injury ratios are lower bounds. Burden: GBD 2023 DALYs. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "fig_deficit.webp",
+      "shown_file": "fig_deficit_checked.svg",
+      "builder": "build_denominator_audit.py",
+      "eligible_count": 41610,
+      "sha256": "6286e12fd34a18a0c99b896e513417f8a9207a67cc707acfe86e8a8c949cfc9d",
+      "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,592 unique study\u2013country pairs. Expected studies = this pair total \u00d7 the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,437 pairs). Country colours use July 2026 income groups. Studies published 2010\u20132026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point."
+    },
+    {
+      "gallery_key": "fig_injustice.webp",
+      "shown_file": "fig_injustice_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "87b321a2ad2ce44a987c65354d067c960ecb9625b93d970011492ae5694d87d0",
+      "caption": "Base: 152 countries plotted; 154 countries contribute to the burden-proportional reference, including zero-study countries. 31,437 study-country pairs. Dashed line: the pair total multiplied by the burden share of each country. Proportionality is a reference point, not an adequacy target. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country."
+    },
+    {
+      "gallery_key": "fig_inequality.webp",
+      "shown_file": "fig_inequality_checked.svg",
+      "builder": "build_denominator_audit.py",
+      "eligible_count": 41610,
+      "sha256": "cfee59a561075575ea44324d0d106bd46d36e4eb1e4bf12b38c1b166a7d067b6",
+      "caption": "Base: 106 LMIC countries with GBD 2023 all-cause DALYs; 8,725 study\u2013country pairs; 2 countries have no study. Countries ordered by studies per DALY. The first 41 countries crossing 50% of burden carry 53.9% of burden and 1,454 pairs (16.7%); the marker is at these actual coordinates. The five countries with the greatest burden (India, China, Nigeria, Indonesia, Pakistan) instead carry 51.7% of burden and 48.1% of evidence. Gini = 0.49. Country grouping uses July 2026 income classifications; studies span 2010\u20132026, final year partial. Each multi-country study counts once per country."
+    },
+    {
+      "gallery_key": "fig_openaccess.webp",
+      "shown_file": "fig_openaccess_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "17093ba97781c71f142ab6d502fae4a4d01ffb79e0bd242b37f5180ac7f1af2b",
+      "caption": "Base: 22,954 single-country included records, 2010-2025, with known publication-year income and known open-access status. All three lines use this same base; 2026 is excluded as partial. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups."
+    },
+    {
+      "gallery_key": "fig_funder_funders.svg",
+      "shown_file": "fig_funder_funders.svg",
+      "builder": "build_wellcome_analysis_gbd_v2.py",
+      "eligible_count": 41610,
+      "sha256": "f7dbd5470f23b075d71df2ee3239efcd25ec1e02d121c638a553e6529fc97a39",
+      "caption": "Top 15 recorded funders by unique eligible studies. 11,149 of 41,610 studies report a funder. Blue/coral identify single-country studies by the income group of the country studied; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts."
+    },
+    {
+      "gallery_key": "fig_map_burden.webp",
+      "shown_file": "fig_map_burden_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "3e4a331847682eef770c05791aef2ee843bc0114ae6c024f40825e41944cae02",
+      "caption": "183 of 204 national GBD 2023 locations have at least one study; 21 have burden but no study. Median among locations with studies: 0.67 studies per 100,000 DALYs. Grey means no study or no matched national burden row. Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country."
+    },
+    {
+      "gallery_key": "fig_map_openaccess.webp",
+      "shown_file": "fig_map_openaccess_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "258eed2c9ef1c6fdee39bb46b688f208d73f564cd9b6073c836ff5f89463e730",
+      "caption": "Base: 133 countries with at least five unique included records with known open-access status. Grey: fewer than five known-status records or no matching country. Study settings are extracted from titles/abstracts; Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country."
+    },
+    {
+      "gallery_key": "fig_map_growth.webp",
+      "shown_file": "fig_map_growth_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "d321c718386252735da91d3b0e06b359fab4ffda800cea2a36afb3ac314bd741",
+      "caption": "Base: 138 countries with at least five included records. Colour is the share published in 2018-2026; 2026 is partial. This is the age composition of the evidence, not an estimated annual growth rate. Grey: fewer than five records. Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country."
+    },
+    {
+      "gallery_key": "fig_map_authorship_v2.svg",
+      "shown_file": "fig_map_authorship_v2.svg",
+      "builder": "build_authorship_figures.py",
+      "eligible_count": 41610,
+      "sha256": "a95d89ce6e90d86e1120a4c4b28a3a4ead605076e75fd1ed5d3e4cff3c438d51",
+      "caption": "Share of each WHO region's single-country studies with at least one author based in the country studied. Africa is lowest at 76.9%, Western Pacific highest at 97.5%. Base: 24,002 single-country studies with known author locations. Taiwan and Hong Kong take the WHO region of their UN sub-region."
+    },
+    {
+      "gallery_key": "fig_map_model.webp",
+      "shown_file": "fig_map_model_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "5879c0b83411249ae05c29c2f3caa4f446cf48851a18c9cec6b1398f1c2c9ee9",
+      "caption": "Base: 30,602 unique study-country pairs with known model status. Regions with at least 100 pairs are shown. Dashed reference: 64 %, calculated across all pairs, so this differs from the study-level Overview share. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country."
+    },
+    {
+      "gallery_key": "fig_equity_time.webp",
+      "shown_file": "fig_equity_time_pubyear.webp",
+      "builder": "build_income_pubyear_figures.py",
+      "eligible_count": 41610,
+      "sha256": "93f0d6dd2bedab6fbde6f812f53ab0fb0a1433dca784dc7803d4a5f05ab3e744",
+      "caption": "Share of each year's single-country studies about low- and middle-income countries (LMICs): 17% in 2010 \u2192 35% in 2025, against the 83% of global disease burden (GBD 2023 all-cause DALYs) those countries carry (dashed line). Studies naming a single country with a known income group (26,093); 2026 is partial and left out. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year (World Bank historical classifications). For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "fig_reach_time.webp",
+      "shown_file": "fig_reach_time_checked.svg",
+      "builder": "build_denominator_audit.py",
+      "eligible_count": 41610,
+      "sha256": "5148736d086af055e2c0e7eea3045cbfa25a72b4f3c94f8c71130013ced81250",
+      "caption": "Cumulative reach through each publication year. Countries are grouped by the World Bank classification in force on 1 January of that year; the denominator excludes unavailable country-year groups. Taiwan uses the recorded high-income override. A country is reached once any eligible study has named it by that year, including studies from its earlier income groups. In 2025, solid lines cover 154 classified countries from the 155-country website list (2 unreached); dashed lines cover 197 classified/overridden Natural Earth Sovereign country/Country entities (21 unreached), with no population floor. Denominators vary by year; 197 is not a fixed count of all World Bank economies. 2026 is partial and omitted, so the Ethiopia/Venezuela 2026 fallback does not affect these lines."
+    },
+    {
+      "gallery_key": "fig_decision_time_v2.svg",
+      "shown_file": "fig_decision_time_v2.svg",
+      "builder": "build_eval_type_figures.py",
+      "eligible_count": 41610,
+      "sha256": "30a571c3e1895923706c70ded9357888d3306c66495efae0df7359535e12abb2",
+      "caption": "Base: 27,462 cost-utility and cost-effectiveness studies (of 37,199 studies with an evaluation type, 2010\u20132025; 2026 partial, left out). Reviews that report no evaluation of their own are excluded; reviews that also report the authors' own evaluation keep its type. Only these two types report thresholds and incremental ratios. Keyword matches on the abstract. The cost-effectiveness threshold rose most, 16% \u2192 36%."
+    },
+    {
+      "gallery_key": "fig_funder_opportunity.webp",
+      "shown_file": "fig_funder_opportunity_gbd.webp",
+      "builder": "build_gbd_figures.py",
+      "eligible_count": 41610,
+      "sha256": "1d6bb26b22324dfa173c7fdf878223619f76444239f976074a20f5ab7ce64dc8",
+      "caption": "Research share divided by disease-burden share for each GBD 2023 level-2 cause and World Bank income group (single-country studies). The thinnest evidence relative to burden: mental disorders in upper-middle-income countries (0.24\u00d7); unintentional injuries in upper-middle-income countries (0.35\u00d7); substance use in upper-middle-income countries (0.36\u00d7); unintentional injuries in lower-middle-income countries (0.38\u00d7). Cells with fewer than 15 studies are grey. Studies naming an infection or injury without its cause are left out, so injury ratios are lower bounds. Burden: GBD 2023 DALYs by income group (classification on 1 January 2023). Matching research to burden is a reference point, not a target. Income group of studies: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "fig_funder_scorecard_v2.svg",
+      "shown_file": "fig_funder_scorecard_v2.svg",
+      "builder": "build_funder_scorecard.py",
+      "eligible_count": 41610,
+      "sha256": "1b15654c385750f38fa44e62d9a02e3f65943828d4bafa79fdc92b63aa2e88e2",
+      "caption": "Share of studies examining each country, divided by that country's share of global disease burden (GBD 2023 all-cause DALYs), so country size does not drive the ranking. Base: 154 countries with GBD 2023 burden data; 152 with at least one identified study are plotted and ranked. Eritrea and Mauritius have no identified studies. 31,437 study-country counts: a study naming several countries counts once for each. Ratios resting on few studies are less stable; study counts are shown on each bar. Proportional is a reference point, not a measure of adequacy. Full country values: fig_funder_scorecard_v2.csv."
+    },
+    {
+      "gallery_key": "fig_funder_capacity.webp",
+      "shown_file": "fig_funder_capacity_reconciled.webp",
+      "builder": "scripts/build_remaining_figures_reconciled.R",
+      "eligible_count": 41610,
+      "sha256": "8136ec149d9a1292ca518bcd03d6ff02fe6a11f85ddd055a88716379f5dc031b",
+      "caption": "Base: 105 countries with at least five single-country studies with known author locations, publication-year income, and a GBD 2023 burden value. Local authorship means an affiliation in the country studied; it is a proxy, not a full measure of capacity. Point area is the number of studies with known author locations. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups."
+    },
+    {
+      "gallery_key": "fig_funder_trajectory.webp",
+      "shown_file": "fig_funder_trajectory_gbd.webp",
+      "builder": "build_gbd_figures.py",
+      "eligible_count": 41610,
+      "sha256": "3b9eb3094372584b3e9c9e4dee66d118071bb92b91b4cbbfe407e7ffd72e1b45",
+      "caption": "Lower-income countries' share of studies divided by their share of burden, for each GBD 2023 level-2 cause, 2010\u20132017 vs 2018\u20132026. Below burden and not closing: mental disorders, unintentional injuries, substance use, maternal & neonatal, cardiovascular, enteric (diarrhoeal) infections, eye and ear, nutritional deficiencies. Below burden but closing: chronic respiratory, neurological, musculoskeletal. Closing means the 2018\u20132026 ratio is at least 5% above the 2010\u20132017 ratio. Burden: GBD 2023 DALYs in low- and middle-income countries, a fixed reference for both periods. Past publication trends describe what happened, not future research needs. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+    },
+    {
+      "gallery_key": "fig_wellcome_priorities.svg",
+      "shown_file": "fig_wellcome_priorities.svg",
+      "builder": "build_wellcome_analysis_gbd_v2.py",
+      "eligible_count": 41610,
+      "sha256": "e3327e1fadcc8863851b0fddc54bd16ea8e66d4c44d18c5bce4888d5947910f5",
+      "caption": "Studies reporting Wellcome Trust as a funder in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses GBD 2023 disease codes from titles and abstracts and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."
+    },
+    {
+      "gallery_key": "wellcome_analysis.html",
+      "shown_file": "wellcome_analysis.html",
+      "builder": "build_wellcome_analysis_gbd_v2.py",
+      "eligible_count": 41610,
+      "sha256": "cd0384910699bdaaa55f61f3c2b5a210ed47cb9053dec06d596aba487109319a",
+      "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health is a reviewed title-and-abstract screen and is small because few economic evaluations address climate."
+    },
+    {
+      "gallery_key": "schmallenbach2025\\main_fig2a_16causes.png",
+      "shown_file": "schmallenbach2025\\main_fig2a_16causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "f11ae6706c112206644e89531cf5549007f976c746a0d6c802853e717d8c4a5b",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\main_fig3_16causes.png",
+      "shown_file": "schmallenbach2025\\main_fig3_16causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "fa0a07f5ba1e589b908f602d194c86a44686c7e02d5926e72a234e6432e50ca9",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\main_fig4_16causes.png",
+      "shown_file": "schmallenbach2025\\main_fig4_16causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "e02f0426d917f94f96ce631731fc12475c183d4087ef726ae8e0074750ed72cf",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\original_fig2a.png",
+      "shown_file": "schmallenbach2025\\original_fig2a.png",
+      "builder": "Published reference figure",
+      "eligible_count": null,
+      "sha256": "b1aab63b1b9e04b55fc401cee9110a96caedfcb9e91b27c490d5659477d4d7af",
+      "caption": "Published paper comparison"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\original_fig3.png",
+      "shown_file": "schmallenbach2025\\original_fig3.png",
+      "builder": "Published reference figure",
+      "eligible_count": null,
+      "sha256": "d52664c4959f879905e84fbac02635fef960404e119fefc972084b437700d413",
+      "caption": "Published paper comparison"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig2a_20causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig2a_20causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "9d1a4d8e2ffe0a14238831c4e71696a7d3317826c27e92f90a49f47d1576301e",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig2a_hic_16causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig2a_hic_16causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "a86f1bc3c393be1be7a0a5dc5b2c2f29479256a6d3b4e8af0d9714b13ea3c199",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig2a_hic_20causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig2a_hic_20causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "ab257d19059bf2b80d112e0a85042827ea685245cb0b44d1f085e1e0bb3f26f0",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig2a_rare_causes_excluded_16causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig2a_rare_causes_excluded_16causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "0ea0ad51deafd320a93176edc6e50541f261746abd5ebb050c3516a20b41dbef",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig3_20causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig3_20causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "ddfb687e5d2c05cbf70d8705f18072ca5537001644f625a4e2ee61a64038d00f",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig3_hic_16causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig3_hic_16causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "1775299e501c9b006a82e0c1887de273910619131351e6ba8525d23b9b510b7e",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig3_hic_20causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig3_hic_20causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "6edc16be8b8aeb599d14d337b6ad1660a818491a2a9b8bddb904dd9c5468d4f9",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig4_20causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig4_20causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "f11331952e467977300f62be537b1d66da7a32cc1d9364c48e32e350f4ab080f",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig4_hic_16causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig4_hic_16causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "7cd87b3f85ee798fc8188e096ec29f8005184ad1a0edf3028a501cc294b0aba9",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "schmallenbach2025\\supp_fig4_hic_20causes.png",
+      "shown_file": "schmallenbach2025\\supp_fig4_hic_20causes.png",
+      "builder": "build_kld_replication_v2.py",
+      "eligible_count": 41610,
+      "sha256": "709c96c9cee19ac7a9725e20a96ad9ea06d5c32d6918da5509b8f985c5b7bdc2",
+      "caption": "Latest kld_followup rebuild; captions in app.js"
+    },
+    {
+      "gallery_key": "fig_glance_regions_who_v4.html",
+      "shown_file": "fig_glance_regions_who_v4.html",
+      "builder": "build_glance_regions_who_v4.py",
+      "eligible_count": 41610,
+      "sha256": "6f7e40b3d06000c63cc68d8a4ed26cc5763c897d0da54cfacd8bf698437a6933",
+      "caption": "Interactive/alternate figure included in current gallery"
+    },
+    {
+      "gallery_key": "fig_funder_treemap.svg",
+      "shown_file": "fig_funder_treemap.svg",
+      "builder": "build_wellcome_analysis_gbd_v2.py",
+      "eligible_count": 41610,
+      "sha256": "31125ef7e362e287427f24617dffbba865159c6632eebc07b53cca5bdf9e0993",
+      "caption": "Interactive/alternate figure included in current gallery"
+    }
+  ],
+  "backup": "exports\\publication_reconciliation\\figure_refresh\\presentation_backups\\20261014T161628Z",
+  "deployment": "Local workspace; deployment not performed",
+  "master_sha256": "fb0bc6dfb116080f0df3db5414a35284a9d864b764e3a9c027984b974be275d5",
+  "independent_openaccess_base_check": "Passed: 22,954; independently calculated by income_pubyear_figure_data.py"
+}

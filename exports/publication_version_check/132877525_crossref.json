@@ -1,0 +1,208 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        5,
+        4
+      ]
+    ],
+    "date-time": "2026-05-04T21:11:47Z",
+    "timestamp": 1777929107340,
+    "version": "3.51.4"
+  },
+  "reference-count": 0,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2018,
+            11,
+            29
+          ]
+        ],
+        "date-time": "2018-11-29T00:00:00Z",
+        "timestamp": 1543449600000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2018,
+            11,
+            29
+          ]
+        ],
+        "date-time": "2018-11-29T00:00:00Z",
+        "timestamp": 1543449600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Int J Clin Pharm"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2019,
+        2,
+        15
+      ]
+    ]
+  },
+  "DOI": "10.1007/s11096-018-0759-9",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2018,
+        11,
+        29
+      ]
+    ],
+    "date-time": "2018-11-29T01:15:26Z",
+    "timestamp": 1543454126000
+  },
+  "page": "289-383",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 15,
+  "title": [
+    "47th ESCP symposium on clinical pharmacy Personalised pharmacy care. 24–26 October 2018, Belfast, Northern Ireland"
+  ],
+  "prefix": "10.1007",
+  "volume": "41",
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2018,
+        11,
+        29
+      ]
+    ]
+  },
+  "container-title": [
+    "International Journal of Clinical Pharmacy"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://link.springer.com/article/10.1007/s11096-018-0759-9/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://link.springer.com/content/pdf/10.1007/s11096-018-0759-9.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://link.springer.com/content/pdf/10.1007/s11096-018-0759-9.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        4,
+        9
+      ]
+    ],
+    "date-time": "2025-04-09T04:00:53Z",
+    "timestamp": 1744171253000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://link.springer.com/10.1007/s11096-018-0759-9"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2018,
+        11,
+        29
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "1",
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          2,
+          15
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "759"
+  ],
+  "URL": "https://doi.org/10.1007/s11096-018-0759-9",
+  "relation": {},
+  "ISSN": [
+    "2210-7703",
+    "2210-7711"
+  ],
+  "issn-type": [
+    {
+      "value": "2210-7703",
+      "type": "print"
+    },
+    {
+      "value": "2210-7711",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2018,
+        11,
+        29
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "29 November 2018",
+      "order": 1,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    }
+  ]
+}

@@ -1,0 +1,400 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        7
+      ]
+    ],
+    "date-time": "2026-10-07T18:18:25Z",
+    "timestamp": 1791397105639,
+    "version": "4.3.3"
+  },
+  "reference-count": 22,
+  "publisher": "Frontiers Media SA",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            2,
+            24
+          ]
+        ],
+        "date-time": "2021-02-24T00:00:00Z",
+        "timestamp": 1614124800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "frontiersin.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Front. Oncol."
+  ],
+  "abstract": "<jats:sec><jats:title>Background</jats:title><jats:p>Currently, approved first-line treatment options of metastatic hormone-sensitive prostate cancer (mHSPC) include (1) androgen deprivation therapy (ADT) alone, ADT plus one of the following: (2) docetaxel, (3) abiraterone, (4) enzalutamide, and (5) apalutamide. The high cost of novel androgen receptor pathway inhibitors warrants an understanding of the combinations’ value by considering both efficacy and cost.</jats:p></jats:sec><jats:sec><jats:title>Objective</jats:title><jats:p>This study aimed to compare the cost-effectiveness of these five treatment options in mHSPC from the US payer perspective to guide treatment sequence.</jats:p></jats:sec><jats:sec><jats:title>Methods</jats:title><jats:p>A Markov model was developed to compare the lifetime cost and effectiveness of these five first-line treatment options for mHSPC using outcomes data from published literature. Health outcomes were measured in life-years and quality-adjusted life-years (QALYs). Drug costs were obtained from the Veterans Affairs Pharmaceutical Catalog. We extrapolated survival beyond closure of the trials.</jats:p></jats:sec><jats:sec><jats:title>Outcome Measurements and Statistical Analysis</jats:title><jats:p>Life-years, QALYs, lifetime costs, and incremental cost-effectiveness ratios (ICERs) were estimated. Univariable, 2-way, and probabilistic sensitivity analyses were performed to evaluate parameter uncertainty. A willingness-to-pay (WTP) threshold of US$100,000 per QALY was used.</jats:p></jats:sec><jats:sec><jats:title>Results</jats:title><jats:p>Compared to ADT alone, docetaxel plus ADT provided a 0.28 QALY gain at an ICER of US$12,870 per QALY. Abiraterone plus ADT provided an additional 1.70 QALYs against docetaxel plus ADT, with an ICER of US$38,897 per QALY. Compared to abiraterone plus ADT, enzalutamide plus ADT provided an additional 0.87 QALYs at an ICER of US$509,813 per QALY. Apalutamide plus ADT was strongly dominated by enzalutamide plus ADT. Given the WTP threshold of US$100,000 per QALY, abiraterone plus ADT represented high-value health care.</jats:p></jats:sec><jats:sec><jats:title>Conclusions</jats:title><jats:p>Abiraterone plus ADT is the preferred treatment option for men with mHSPC at a WTP threshold of US$100,000 per QALY.</jats:p></jats:sec>",
+  "DOI": "10.3389/fonc.2021.627083",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        2,
+        24
+      ]
+    ],
+    "date-time": "2021-02-24T05:35:55Z",
+    "timestamp": 1614144955000
+  },
+  "update-policy": "https://doi.org/10.3389/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 26,
+  "title": [
+    "A Cost-Effectiveness Analysis of Systemic Therapy for Metastatic Hormone-Sensitive Prostate Cancer"
+  ],
+  "prefix": "10.3389",
+  "volume": "11",
+  "author": [
+    {
+      "given": "Winnie W. Y.",
+      "family": "Sung",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Horace C. W.",
+      "family": "Choi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Peter H. Y.",
+      "family": "Luk",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Tsz Him",
+      "family": "So",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "1965",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        2,
+        24
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "B1",
+      "doi-asserted-by": "publisher",
+      "first-page": "7",
+      "DOI": "10.3322/caac.21551",
+      "article-title": "Cancer statistics, 2019",
+      "volume": "69",
+      "author": "Siegel",
+      "year": "2019",
+      "journal-title": "CA Cancer J Clin"
+    },
+    {
+      "key": "B2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/pcan.2016.30",
+      "article-title": "Increasing incidence of metastatic prostate cancer in the United States (2004-2013)",
+      "volume": "19",
+      "author": "Weiner",
+      "year": "2016",
+      "journal-title": "Prostate Cancer Prostatic Dis"
+    },
+    {
+      "key": "B3",
+      "article-title": "Cancer Stat Facts: Prostate Cancer",
+      "year": "2020"
+    },
+    {
+      "key": "B4",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0140-6736(15)01037-5",
+      "article-title": "Addition of docetaxel, zoledronic acid, or both to first-line long-term hormone therapy in prostate cancer (STAMPEDE): survival results from an adaptive, multiarm, multistage, platform randomised controlled trial",
+      "volume": "387",
+      "author": "James",
+      "year": "2016",
+      "journal-title": "Lancet"
+    },
+    {
+      "key": "B5",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMoa1503747",
+      "article-title": "Chemohormonal Therapy in Metastatic Hormone-Sensitive Prostate Cancer",
+      "volume": "373",
+      "author": "Sweeney",
+      "year": "2015",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "B6",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMoa1704174",
+      "article-title": "Abiraterone plus Prednisone in Metastatic, Castration-Sensitive Prostate Cancer",
+      "volume": "377",
+      "author": "Fizazi",
+      "year": "2017",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "B7",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMoa1702900",
+      "article-title": "Abiraterone for Prostate Cancer Not Previously Treated with Hormone Therapy",
+      "volume": "377",
+      "author": "James",
+      "year": "2017",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "B8",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMoa1903835",
+      "article-title": "Enzalutamide with Standard First-Line Therapy in Metastatic Prostate Cancer",
+      "volume": "381",
+      "author": "Davis",
+      "year": "2019",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "B9",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JCO.19.00799",
+      "article-title": "ARCHES: A Randomized, Phase III Study of Androgen Deprivation Therapy With Enzalutamide or Placebo in Men With Metastatic Hormone-Sensitive Prostate Cancer",
+      "volume": "37",
+      "author": "Armstrong",
+      "year": "2019",
+      "journal-title": "J Clin Oncol"
+    },
+    {
+      "key": "B10",
+      "doi-asserted-by": "publisher",
+      "first-page": "13",
+      "DOI": "10.1056/NEJMoa1903307",
+      "article-title": "Apalutamide for Metastatic, Castration-Sensitive Prostate Cancer",
+      "volume": "381",
+      "author": "Chi",
+      "year": "2019",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "B11",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.eururo.2019.09.004",
+      "article-title": "Indirect Comparisons of Efficacy between Combination Approaches in Metastatic Hormone-sensitive Prostate Cancer: A Systematic Review and Network Meta-analysis",
+      "volume": "77",
+      "author": "Sathianathen",
+      "year": "2020",
+      "journal-title": "Eur Urol"
+    },
+    {
+      "key": "B12",
+      "doi-asserted-by": "publisher",
+      "first-page": "ix69",
+      "DOI": "10.1093/annonc/mdz424.002",
+      "article-title": "202PWhat is the best first-line therapy for metastatic castration-sensitive prostate cancer in 2019? A network meta-analysis",
+      "author": "So",
+      "year": "2019",
+      "journal-title": "Ann Oncol"
+    },
+    {
+      "key": "B13",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.euo.2019.01.004",
+      "article-title": "A Cost-effectiveness Analysis of Systemic Therapy for Metastatic Hormone-sensitive Prostate Cancer",
+      "volume": "2",
+      "author": "Sathianathen",
+      "year": "2019",
+      "journal-title": "Eur Urol Oncol"
+    },
+    {
+      "key": "B14",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMp1405158",
+      "article-title": "Updating Cost-Effectiveness — The Curious Resilience of the $50,000-per-QALY Threshold",
+      "volume": "371",
+      "author": "Neumann",
+      "year": "2014",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "B15",
+      "unstructured": "WardZJ\n          Amua: An open source modeling framework2019"
+    },
+    {
+      "key": "B16",
+      "unstructured": "National Acquisition Center Contract Catalog Search Tool"
+    },
+    {
+      "key": "B17",
+      "doi-asserted-by": "publisher",
+      "first-page": "75s",
+      "DOI": "10.1200/JOP.2011.000469",
+      "article-title": "Health care costs for patients with cancer at the end of life",
+      "volume": "8",
+      "author": "Chastek",
+      "year": "2012",
+      "journal-title": "J Oncol Pract"
+    },
+    {
+      "key": "B18",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JCO.2017.75.3335",
+      "article-title": "Quality of Life During Treatment With Chemohormonal Therapy: Analysis of E3805 Chemohormonal Androgen Ablation Randomized Trial in Prostate Cancer",
+      "volume": "36",
+      "author": "Morgans",
+      "year": "2018",
+      "journal-title": "J Clin Oncol"
+    },
+    {
+      "key": "B19",
+      "doi-asserted-by": "publisher",
+      "first-page": "78",
+      "DOI": "10.1016/j.ejca.2018.08.010",
+      "article-title": "Survival benefit, disease progression and quality-of-life outcomes of abiraterone acetate plus prednisone versus docetaxel in metastatic hormone-sensitive prostate cancer: A network meta-analysis",
+      "volume": "103",
+      "author": "Feyerabend",
+      "year": "2018",
+      "journal-title": "Eur J Cancer"
+    },
+    {
+      "key": "B20",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jval.2015.08.012",
+      "article-title": "Health-Related Quality of Life and Health Utilities in Metastatic Castrate-Resistant Prostate Cancer: A Survey Capturing Experiences from a Diverse Sample of UK Patients",
+      "volume": "18",
+      "author": "Lloyd",
+      "year": "2015",
+      "journal-title": "Value Health"
+    },
+    {
+      "key": "B21",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JCO.2019.37.15_suppl.5044",
+      "article-title": "Health-related quality of life (HRQoL) and pain progression with enzalutamide (ENZ) in metastatic hormone-sensitive prostate cancer (mHSPC) from the ARCHES study",
+      "volume": "37",
+      "author": "Stenzl",
+      "year": "2019",
+      "journal-title": "J Clin Oncol"
+    },
+    {
+      "key": "B22",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/annonc/mdz248.008",
+      "article-title": "851PD - Patient-reported outcomes (PROs) from TITAN: A phase III, randomized, double-blind study of apalutamide (APA) versus placebo (PBO) added to androgen deprivation therapy (ADT) in patients (pts) with metastatic castration-sensitive prostate cancer (mCSPC)",
+      "volume": "30",
+      "author": "Agarwal",
+      "year": "2019",
+      "journal-title": "Ann Oncol"
+    }
+  ],
+  "container-title": [
+    "Frontiers in Oncology"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://www.frontiersin.org/articles/10.3389/fonc.2021.627083/full",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2021,
+        2,
+        24
+      ]
+    ],
+    "date-time": "2021-02-24T05:36:04Z",
+    "timestamp": 1614144964000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.frontiersin.org/articles/10.3389/fonc.2021.627083/full"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        2,
+        24
+      ]
+    ]
+  },
+  "references-count": 22,
+  "alternative-id": [
+    "10.3389/fonc.2021.627083"
+  ],
+  "URL": "https://doi.org/10.3389/fonc.2021.627083",
+  "relation": {},
+  "ISSN": [
+    "2234-943X"
+  ],
+  "issn-type": [
+    {
+      "value": "2234-943X",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        2,
+        24
+      ]
+    ]
+  },
+  "article-number": "627083"
+}

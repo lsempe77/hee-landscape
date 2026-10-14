@@ -1,0 +1,617 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        31
+      ]
+    ],
+    "date-time": "2025-12-31T02:22:10Z",
+    "timestamp": 1767147730028,
+    "version": "build-2238731810"
+  },
+  "update-to": [
+    {
+      "DOI": "10.1016/j.jbo.2019.100217",
+      "type": "retraction",
+      "label": "Retraction",
+      "source": "retraction-watch",
+      "updated": {
+        "date-parts": [
+          [
+            2019,
+            4,
+            1
+          ]
+        ],
+        "date-time": "2019-04-01T00:00:00Z",
+        "timestamp": 1554076800000
+      },
+      "record-id": "20399"
+    },
+    {
+      "DOI": "10.1016/j.jbo.2019.100217",
+      "type": "retraction",
+      "label": "Retraction",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2019,
+            4,
+            1
+          ]
+        ],
+        "date-time": "2019-04-01T00:00:00Z",
+        "timestamp": 1554076800000
+      }
+    }
+  ],
+  "reference-count": 28,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            4,
+            1
+          ]
+        ],
+        "date-time": "2019-04-01T00:00:00Z",
+        "timestamp": 1554076800000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            4,
+            1
+          ]
+        ],
+        "date-time": "2019-04-01T00:00:00Z",
+        "timestamp": 1554076800000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            1,
+            18
+          ]
+        ],
+        "date-time": "2019-01-18T00:00:00Z",
+        "timestamp": 1547769600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "clinicalkey.com",
+      "clinicalkey.com.au",
+      "clinicalkey.es",
+      "clinicalkey.fr",
+      "clinicalkey.jp",
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Journal of Bone Oncology"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2019,
+        4
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.jbo.2019.100217",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2019,
+        1,
+        27
+      ]
+    ],
+    "date-time": "2019-01-27T06:17:55Z",
+    "timestamp": 1548569875000
+  },
+  "page": "100217",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 12,
+  "special_numbering": "C",
+  "title": [
+    "RETRACTED: Denosumab versus zoledronic acid in cases of surgically unsalvageable giant cell tumor of bone: A randomized clinical trial"
+  ],
+  "prefix": "10.1016",
+  "volume": "15",
+  "author": [
+    {
+      "given": "Shenglong",
+      "family": "Li",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Peng",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Qiankun",
+      "family": "Yang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0001",
+      "doi-asserted-by": "crossref",
+      "first-page": "637",
+      "DOI": "10.2478/folmed-2018-0067",
+      "article-title": "Neoadjuvant and adjuvant treatment with denosumab in aggressive giant-cell tumor of bone in the proximal fibula: a case report",
+      "volume": "60",
+      "author": "Marinova",
+      "year": "2018",
+      "journal-title": "Folia Med."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0002",
+      "doi-asserted-by": "crossref",
+      "first-page": "1092",
+      "DOI": "10.1016/j.biopha.2018.04.100",
+      "article-title": "Norcantharidin modulates the miR-30a/Metadherin/AKT signaling axis to suppress proliferation and metastasis of stromal tumor cells in giant cell tumor of bone",
+      "volume": "103",
+      "author": "Chen",
+      "year": "2018",
+      "journal-title": "Biomed. Pharmacother."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0003",
+      "doi-asserted-by": "crossref",
+      "first-page": "475",
+      "DOI": "10.5799/ahinjs.01.2014.03.0445",
+      "article-title": "Giant cell tumor of bone: current review of morphological, clinical, radiological, and therapeutic characteristics",
+      "volume": "5",
+      "author": "Georgiev",
+      "year": "2014",
+      "journal-title": "J. Clin. Exp. Invest."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0004",
+      "doi-asserted-by": "crossref",
+      "first-page": "218",
+      "DOI": "10.1016/S1470-2045(10)70027-9",
+      "article-title": "Denosumab: a breakthrough in treatment of giant-cell tumour of bone?",
+      "volume": "11",
+      "author": "Balke",
+      "year": "2010",
+      "journal-title": "Lancet Oncol."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0005",
+      "doi-asserted-by": "crossref",
+      "first-page": "801",
+      "DOI": "10.1016/S1470-2045(13)70291-2",
+      "article-title": "Denosumab treatment of giant cell tumour of bone",
+      "volume": "14",
+      "author": "Balke",
+      "year": "2013",
+      "journal-title": "Lancet Oncol."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0006",
+      "doi-asserted-by": "crossref",
+      "first-page": "901",
+      "DOI": "10.1016/S1470-2045(13)70277-8",
+      "article-title": "Safety and efficacy of denosumab for adults and skeletally mature adolescents with giant cell tumour of bone: interim analysis of an open-label, parallel-group, phase 2 study",
+      "volume": "14",
+      "author": "Chawla",
+      "year": "2013",
+      "journal-title": "Lancet Oncol."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0007",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1186/1471-2407-10-462",
+      "article-title": "Bisphosphonate treatment of aggressive primary, recurrent and metastatic Giant Cell Tumour of Bone",
+      "volume": "10",
+      "author": "Balke",
+      "year": "2010",
+      "journal-title": "BMC Cancer"
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0008",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1186/s13569-016-0056-0",
+      "article-title": "Current status and unanswered questions on the use of Denosumab in giant cell tumor of bone",
+      "volume": "6",
+      "author": "Gaston",
+      "year": "2016",
+      "journal-title": "Clin. Sarcoma Res."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0009",
+      "doi-asserted-by": "crossref",
+      "first-page": "879",
+      "DOI": "10.1016/S1470-2045(15)00147-3",
+      "article-title": "The growing problem of benign connective tissue tumours",
+      "volume": "16",
+      "author": "Thomas",
+      "year": "2015",
+      "journal-title": "Lancet Oncol."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0010",
+      "doi-asserted-by": "crossref",
+      "first-page": "621",
+      "DOI": "10.18553/jmcp.2011.17.8.621",
+      "article-title": "Economic evaluation of denosumab compared with zoledronic acid in hormone-refractory prostate cancer patients with bone metastases",
+      "volume": "17",
+      "author": "Xie",
+      "year": "2011",
+      "journal-title": "J. Manag. Care Pharm."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0011",
+      "doi-asserted-by": "crossref",
+      "first-page": "1785",
+      "DOI": "10.1007/s00520-013-1790-y",
+      "article-title": "Comparing cost-effectiveness analyses of denosumab versus zoledronic acid for the treatment of bone metastases",
+      "volume": "21",
+      "author": "Koo",
+      "year": "2013",
+      "journal-title": "Support Care Cancer"
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0012",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1186/1472-6947-13-72",
+      "article-title": "Appraisal of the Karnofsky Performance Status and proposal of a simple algorithmic system for its evaluation",
+      "volume": "13",
+      "author": "Peus",
+      "year": "2013",
+      "journal-title": "BMC Med. Inform Decis. Mak."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0013",
+      "unstructured": "Amgen Technology (Ireland) Unlimited Company, I. Highlights of prescribing information XGEVA®. https://pi.amgen.com/∼/media/amgen/repositorysites/pi-amgen-com/xgeva/xgeva_pi.pdf. Accessed 1 Jan 2015."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0014",
+      "unstructured": "Beijing Novartis Pharma Co., Ltd., Beijing, China. Highlights of prescribing information for Zometa®. https://www.pharma.us.novartis.com/sites/www.pharma.us.novartis.com/files/zometa.pdf. Accessed 1 Jan 2015."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0015",
+      "doi-asserted-by": "crossref",
+      "first-page": "68",
+      "DOI": "10.1016/j.bone.2007.08.038",
+      "article-title": "Bisphosphonates reduce local recurrence in extremity giant cell tumor of bone: a case-control study",
+      "volume": "42",
+      "author": "Tse",
+      "year": "2008",
+      "journal-title": "Bone"
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0016",
+      "doi-asserted-by": "crossref",
+      "first-page": "2264",
+      "DOI": "10.1016/j.ejca.2013.02.036",
+      "article-title": "Re: Superiority of denosumab to zoledronic acid for prevention of skeletal-related events: a combined analysis of three pivotal, randomised, phase 3 trials",
+      "volume": "49",
+      "author": "Araki",
+      "year": "2013",
+      "journal-title": "Eur. J. Cancer"
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0017",
+      "doi-asserted-by": "crossref",
+      "first-page": "275",
+      "DOI": "10.1016/S1470-2045(10)70010-3",
+      "article-title": "Denosumab in patients with giant-cell tumour of bone: an open-label, phase 2 study",
+      "volume": "11",
+      "author": "Thomas",
+      "year": "2010",
+      "journal-title": "Lancet Oncol."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0018",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1186/s12957-018-1478-3",
+      "article-title": "Assessment of denosumab treatment effects and imaging response in patients with giant cell tumor of bone",
+      "volume": "16",
+      "author": "Engellau",
+      "year": "2018",
+      "journal-title": "World J. Surg. Oncol."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0019",
+      "doi-asserted-by": "crossref",
+      "first-page": "228",
+      "DOI": "10.1016/j.ejca.2008.10.026",
+      "article-title": "New response evaluation criteria in solid tumours: revised RECIST guideline (version 1.1)",
+      "volume": "49",
+      "author": "Eisenhauer",
+      "year": "2009",
+      "journal-title": "Eur. J. Cancer"
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0020",
+      "unstructured": "U.S. Department of Health and Human Services, National Institutes of Health, National Cancer Institute. Common Terminology Criteria for Adverse Events (CTCAE) v5.0. https://ctep.cancer.gov/protocolDevelopment/electronic_applications/docs/CTCAE_v5_Quick_Reference_8.5x11.pdf. Accessed 11 Nov 2018."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0021",
+      "doi-asserted-by": "crossref",
+      "first-page": "679",
+      "DOI": "10.1007/s00520-013-2022-1",
+      "article-title": "Delaying skeletal-related events in a randomized phase 3 study of denosumab versus zoledronic acid in patients with advanced cancer: an analysis of data from patients with solid tumors",
+      "volume": "22",
+      "author": "Henry",
+      "year": "2014",
+      "journal-title": "Support Care Cancer"
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0022",
+      "first-page": "173",
+      "article-title": "The study of chloramphenicol for ophthalmic formulation",
+      "volume": "7",
+      "author": "Ashara",
+      "year": "2018",
+      "journal-title": "IJSRR"
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0023",
+      "article-title": "In vitro study of the effects of Denosumab on giant cell tumor of bone: comparison with zoledronic acid",
+      "author": "Shibuya",
+      "year": "2017",
+      "journal-title": "Pathol. Oncol. Res."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0024",
+      "doi-asserted-by": "crossref",
+      "first-page": "4415",
+      "DOI": "10.1158/1078-0432.CCR-12-0578",
+      "article-title": "Denosumab induces tumor reduction and bone formation in patients with giant-cell tumor of bone",
+      "volume": "18",
+      "author": "Branstetter",
+      "year": "2012",
+      "journal-title": "Clin. Cancer Res."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0025",
+      "doi-asserted-by": "crossref",
+      "first-page": "1112",
+      "DOI": "10.1200/JCO.2010.31.3304",
+      "article-title": "Randomized, double-blind study of denosumab versus zoledronic acid in the treatment of bone metastases in patients with advanced cancer (excluding breast and prostate cancer) or multiple myeloma",
+      "volume": "29",
+      "author": "Henry",
+      "year": "2011",
+      "journal-title": "J. Clin. Oncol."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0026",
+      "unstructured": "Amgen Europe B.V., the Netherlands. Package leaflet: Information for the user: Prolia® 60 mg solution for injection in pre-filled syringe Denosumab. https://www.prolia.com/about/. Accessed 1 Jan 2015."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0027",
+      "doi-asserted-by": "crossref",
+      "first-page": "514",
+      "DOI": "10.1016/S1470-2045(10)70076-0",
+      "article-title": "RANK and RANKL expression in giant-cell tumour of bone",
+      "volume": "11",
+      "author": "Roux",
+      "year": "2010",
+      "journal-title": "Lancet Oncol."
+    },
+    {
+      "key": "10.1016/j.jbo.2019.100217_bib0028",
+      "doi-asserted-by": "crossref",
+      "first-page": "3082",
+      "DOI": "10.1016/j.ejca.2012.08.002",
+      "article-title": "Superiority of denosumab to zoledronic acid for prevention of skeletal-related events: a combined analysis of 3 pivotal, randomised, phase 3 trials",
+      "volume": "48",
+      "author": "Lipton",
+      "year": "2012",
+      "journal-title": "Eur. J. Cancer"
+    }
+  ],
+  "updated-by": [
+    {
+      "DOI": "10.1016/j.jbo.2019.100217",
+      "type": "retraction",
+      "label": "Retraction",
+      "source": "retraction-watch",
+      "updated": {
+        "date-parts": [
+          [
+            2019,
+            4,
+            1
+          ]
+        ],
+        "date-time": "2019-04-01T00:00:00Z",
+        "timestamp": 1554076800000
+      },
+      "record-id": "20399"
+    },
+    {
+      "DOI": "10.1016/j.jbo.2019.100217",
+      "type": "retraction",
+      "label": "Retraction",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2019,
+            4,
+            1
+          ]
+        ],
+        "date-time": "2019-04-01T00:00:00Z",
+        "timestamp": 1554076800000
+      }
+    },
+    {
+      "DOI": "10.1016/j.jbo.2020.100284",
+      "type": "erratum",
+      "label": "Erratum",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2020,
+            4,
+            1
+          ]
+        ],
+        "date-time": "2020-04-01T00:00:00Z",
+        "timestamp": 1585699200000
+      }
+    }
+  ],
+  "container-title": [
+    "Journal of Bone Oncology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S2212137418303427?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S2212137418303427?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        31
+      ]
+    ],
+    "date-time": "2025-10-31T20:17:26Z",
+    "timestamp": 1761941846000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2212137418303427"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2019,
+        4
+      ]
+    ]
+  },
+  "references-count": 28,
+  "alternative-id": [
+    "S2212137418303427"
+  ],
+  "URL": "https://doi.org/10.1016/j.jbo.2019.100217",
+  "relation": {},
+  "ISSN": [
+    "2212-1374"
+  ],
+  "issn-type": [
+    {
+      "value": "2212-1374",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2019,
+        4
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "RETRACTED: Denosumab versus zoledronic acid in cases of surgically unsalvageable giant cell tumor of bone: A randomized clinical trial",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Journal of Bone Oncology",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.jbo.2019.100217",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2019 The Authors. Published by Elsevier GmbH.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ],
+  "article-number": "100217"
+}

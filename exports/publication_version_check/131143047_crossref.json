@@ -1,0 +1,582 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        7
+      ]
+    ],
+    "date-time": "2026-10-07T18:18:25Z",
+    "timestamp": 1791397105594,
+    "version": "4.3.3"
+  },
+  "reference-count": 27,
+  "publisher": "Elsevier BV",
+  "issue": "6",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2019-11-01T00:00:00Z",
+        "timestamp": 1572566400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2019-11-01T00:00:00Z",
+        "timestamp": 1572566400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "euoncology.europeanurology.com",
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "European Urology Oncology"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2019,
+        11
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.euo.2019.01.004",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2019,
+        1,
+        30
+      ]
+    ],
+    "date-time": "2019-01-30T09:59:58Z",
+    "timestamp": 1548842398000
+  },
+  "page": "649-655",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 50,
+  "title": [
+    "A Cost-effectiveness Analysis of Systemic Therapy for Metastatic Hormone-sensitive Prostate Cancer"
+  ],
+  "prefix": "10.1016",
+  "volume": "2",
+  "author": [
+    {
+      "given": "Niranjan J.",
+      "family": "Sathianathen",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Fernando",
+      "family": "Alarid-Escudero",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Karen M.",
+      "family": "Kuntz",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Nathan",
+      "family": "Lawrentschuk",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Damien M.",
+      "family": "Bolton",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Declan G.",
+      "family": "Murphy",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Simon P.",
+      "family": "Kim",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Badrinath R.",
+      "family": "Konety",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0140",
+      "doi-asserted-by": "crossref",
+      "first-page": "2054",
+      "DOI": "10.1001/jama.2015.14905",
+      "article-title": "Prostate cancer incidence and PSA testing patterns in relation to USPSTF screening recommendations",
+      "volume": "314",
+      "author": "Jemal",
+      "year": "2015",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0145",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Dalela D, Sun M, Diaz M, et al. Contemporary trends in the incidence of metastatic prostate cancer among US men: results from nationwide analyses. Eur Urol Focus. In press. https://doi.org/10.1016/j.euf.2017.04.012.",
+      "DOI": "10.1016/j.euf.2017.04.012"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0150",
+      "doi-asserted-by": "crossref",
+      "first-page": "1591",
+      "DOI": "10.1001/jama.281.17.1591",
+      "article-title": "Natural history of progression after PSA elevation following radical prostatectomy",
+      "volume": "281",
+      "author": "Pound",
+      "year": "1999",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0155",
+      "doi-asserted-by": "crossref",
+      "first-page": "1163",
+      "DOI": "10.1016/S0140-6736(15)01037-5",
+      "article-title": "Addition of docetaxel, zoledronic acid, or both to first-line long-term hormone therapy in prostate cancer (STAMPEDE): survival results from an adaptive, multiarm, multistage, platform randomised controlled trial",
+      "volume": "387",
+      "author": "James",
+      "year": "2016",
+      "journal-title": "Lancet"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0160",
+      "doi-asserted-by": "crossref",
+      "first-page": "737",
+      "DOI": "10.1056/NEJMoa1503747",
+      "article-title": "Chemohormonal therapy in metastatic hormone-sensitive prostate cancer",
+      "volume": "373",
+      "author": "Sweeney",
+      "year": "2015",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0165",
+      "doi-asserted-by": "crossref",
+      "first-page": "352",
+      "DOI": "10.1056/NEJMoa1704174",
+      "article-title": "Abiraterone plus prednisone in metastatic, castration-sensitive prostate cancer",
+      "volume": "377",
+      "author": "Fizazi",
+      "year": "2017",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0170",
+      "doi-asserted-by": "crossref",
+      "first-page": "338",
+      "DOI": "10.1056/NEJMoa1702900",
+      "article-title": "Abiraterone for prostate cancer not previously treated with hormone therapy",
+      "volume": "377",
+      "author": "James",
+      "year": "2017",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0175",
+      "doi-asserted-by": "crossref",
+      "first-page": "834",
+      "DOI": "10.1016/j.eururo.2017.10.002",
+      "article-title": "Comparison of abiraterone acetate and docetaxel with androgen deprivation therapy in high-risk and metastatic hormone-naive prostate cancer: a systematic review and network meta-analysis",
+      "volume": "73",
+      "author": "Wallis",
+      "year": "2018",
+      "journal-title": "Eur Urol"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0180",
+      "doi-asserted-by": "crossref",
+      "first-page": "110",
+      "DOI": "10.1038/pcan.2016.62",
+      "article-title": "Skeletal-related events significantly impact health-related quality of life in metastatic castration-resistant prostate cancer: data from PREVAIL and AFFIRM trials",
+      "volume": "20",
+      "author": "Saad",
+      "year": "2017",
+      "journal-title": "Prostate Cancer Prostat Dis"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0185",
+      "doi-asserted-by": "crossref",
+      "first-page": "149",
+      "DOI": "10.1016/S1470-2045(12)70560-0",
+      "article-title": "Androgen-deprivation therapy alone or with docetaxel in non-castrate metastatic prostate cancer (GETUG-AFU 15): a randomised, open-label, phase 3 trial",
+      "volume": "14",
+      "author": "Gravis",
+      "year": "2013",
+      "journal-title": "Lancet Oncol"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0190",
+      "doi-asserted-by": "crossref",
+      "first-page": "1093",
+      "DOI": "10.1001/jama.2016.12195",
+      "article-title": "Recommendations for conduct, methodological practices, and reporting of cost-effectiveness analyses: second panel on cost-effectiveness in health and medicine",
+      "volume": "316",
+      "author": "Sanders",
+      "year": "2016",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0195",
+      "first-page": "CD160128",
+      "article-title": "Taxane-based chemohormonal therapy for metastatic hormone-sensitive prostate cancer",
+      "volume": "2018",
+      "author": "Sathianathen",
+      "year": "2018",
+      "journal-title": "Cochrane Database Syst Rev"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0200",
+      "doi-asserted-by": "crossref",
+      "first-page": "23",
+      "DOI": "10.1016/j.jgo.2014.09.183",
+      "article-title": "Efficacy and toxicity of abiraterone and docetaxel in octogenarians with metastatic castration-resistant prostate cancer",
+      "volume": "6",
+      "author": "Leibowitz-Amit",
+      "year": "2015",
+      "journal-title": "J Geriatr Oncol"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0205",
+      "unstructured": "Sathianathen NJ, Dahm P, Brown SJ, et al. Immediate abiraterone acetate in combination with androgen deprivation therapy compared to androgen deprivation therapy only for metastatic hormone-sensitive prostate cancer. Cochrane Database Syst Rev. In press."
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0210",
+      "series-title": "Red book",
+      "author": "Micromedex",
+      "year": "2017"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0215",
+      "doi-asserted-by": "crossref",
+      "first-page": "75",
+      "DOI": "10.1200/JOP.2011.000469",
+      "article-title": "Health care costs for patients with cancer at the end of life",
+      "volume": "8",
+      "author": "Chastek",
+      "year": "2012",
+      "journal-title": "J Oncol Pract"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0220",
+      "doi-asserted-by": "crossref",
+      "first-page": "1088",
+      "DOI": "10.1200/JCO.2017.75.3335",
+      "article-title": "Quality of life during treatment with chemohormonal therapy: analysis of E3805 Chemohormonal Androgen Ablation Randomized Trial in prostate cancer",
+      "volume": "36",
+      "author": "Morgans",
+      "year": "2018",
+      "journal-title": "J Clin Oncol"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0225",
+      "doi-asserted-by": "crossref",
+      "first-page": "194",
+      "DOI": "10.1016/S1470-2045(17)30911-7",
+      "article-title": "Patient-reported outcomes following abiraterone acetate plus prednisone added to androgen deprivation therapy in patients with newly diagnosed metastatic castration-naive prostate cancer (LATITUDE): an international, randomised phase 3 trial",
+      "volume": "19",
+      "author": "Chi",
+      "year": "2018",
+      "journal-title": "Lancet Oncol"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0230",
+      "doi-asserted-by": "crossref",
+      "first-page": "796",
+      "DOI": "10.1056/NEJMp1405158",
+      "article-title": "Updating cost-effectiveness—the curious resilience of the $50,000-per-QALY threshold",
+      "volume": "371",
+      "author": "Neumann",
+      "year": "2014",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0235",
+      "doi-asserted-by": "crossref",
+      "first-page": "349",
+      "DOI": "10.1097/MLR.0b013e31815c31a7",
+      "article-title": "What does the value of modern medicine say about the $50,000 per quality-adjusted life-year decision rule?",
+      "volume": "46",
+      "author": "Braithwaite",
+      "year": "2008",
+      "journal-title": "Med Care"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0240",
+      "doi-asserted-by": "crossref",
+      "first-page": "449",
+      "DOI": "10.1016/j.euo.2018.06.004",
+      "article-title": "Addition of docetaxel to first-line long-term hormone therapy in prostate cancer (STAMPEDE): modelling to estimate long-term survival, quality-adjusted survival, and cost-effectiveness",
+      "volume": "1",
+      "author": "Woods",
+      "year": "2018",
+      "journal-title": "Eur Urol Oncol"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0245",
+      "doi-asserted-by": "crossref",
+      "first-page": "256",
+      "DOI": "10.1016/j.eururo.2015.11.005",
+      "article-title": "Androgen deprivation therapy (ADT) plus docetaxel versus ADT alone in metastatic non castrate prostate cancer: impact of metastatic burden and long-term survival analysis of the randomized phase 3 GETUG-AFU15 trial",
+      "volume": "70",
+      "author": "Gravis",
+      "year": "2016",
+      "journal-title": "Eur Urol"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0250",
+      "doi-asserted-by": "crossref",
+      "first-page": "774",
+      "DOI": "10.1016/j.jamcollsurg.2012.12.036",
+      "article-title": "Does enrollment in cancer trials improve survival?",
+      "volume": "216",
+      "author": "Chow",
+      "year": "2013",
+      "journal-title": "J Am Coll Surg"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0255",
+      "doi-asserted-by": "crossref",
+      "first-page": "847",
+      "DOI": "10.1016/j.eururo.2018.02.001",
+      "article-title": "Burden of metastatic castrate naive prostate cancer patients, to identify men more likely to benefit from early docetaxel: further analyses of CHAARTED and GETUG-AFU15 studies",
+      "volume": "73",
+      "author": "Gravis",
+      "year": "2018",
+      "journal-title": "Eur Urol"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0260",
+      "doi-asserted-by": "crossref",
+      "first-page": "19",
+      "DOI": "10.6004/jnccn.2016.0004",
+      "article-title": "Prostate cancer, version 1.2016",
+      "volume": "14",
+      "author": "Mohler",
+      "year": "2016",
+      "journal-title": "J Natl Compr Cancer Netw"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0265",
+      "first-page": "844",
+      "article-title": "Analysis of costs associated with administration of intravenous single-drug therapies in metastatic breast cancer in a U.S. population",
+      "volume": "14",
+      "author": "Kruse",
+      "year": "2008",
+      "journal-title": "J Manage Care Pharm"
+    },
+    {
+      "key": "10.1016/j.euo.2019.01.004_bib0270",
+      "doi-asserted-by": "crossref",
+      "first-page": "595",
+      "DOI": "10.1056/NEJMoa1201637",
+      "article-title": "Quality-of-life effects of prostate-specific antigen screening",
+      "volume": "367",
+      "author": "Heijnsdijk",
+      "year": "2012",
+      "journal-title": "N Engl J Med"
+    }
+  ],
+  "container-title": [
+    "European Urology Oncology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S2588931119300057?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S2588931119300057?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        11,
+        11
+      ]
+    ],
+    "date-time": "2025-11-11T15:45:48Z",
+    "timestamp": 1762875948000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2588931119300057"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2019,
+        11
+      ]
+    ]
+  },
+  "references-count": 27,
+  "journal-issue": {
+    "issue": "6",
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          11
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S2588931119300057"
+  ],
+  "URL": "https://doi.org/10.1016/j.euo.2019.01.004",
+  "relation": {},
+  "ISSN": [
+    "2588-9311"
+  ],
+  "issn-type": [
+    {
+      "value": "2588-9311",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2019,
+        11
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "A Cost-effectiveness Analysis of Systemic Therapy for Metastatic Hormone-sensitive Prostate Cancer",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "European Urology Oncology",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.euo.2019.01.004",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2019 European Association of Urology. Published by Elsevier B.V. All rights reserved.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ]
+}

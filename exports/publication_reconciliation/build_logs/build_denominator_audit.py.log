@@ -1,0 +1,56 @@
+{
+  "counts": {
+    "countries_known_oa_at_least_5": 133,
+    "countries_at_least_5": 138,
+    "website_burden_and_studies": 152,
+    "website_with_studies": 153,
+    "website_with_burden": 154,
+    "website_country_list": 155,
+    "full_geography_countries": 187,
+    "full_geography_pairs": 31744,
+    "website_pairs": 31586,
+    "website_burden_pairs": 31441,
+    "national_gbd_country_list": 204,
+    "national_gbd_pairs": 31596,
+    "national_gbd_countries_with_studies": 183
+  },
+  "inequality": {
+    "countries": 106,
+    "pairs": 8726,
+    "top_study_countries": [
+      "CHN",
+      "IND",
+      "BRA",
+      "THA",
+      "ZAF"
+    ],
+    "top_study_evidence_share": 0.5785010314004125,
+    "top_study_burden_share": 0.4332863899566732,
+    "top_burden_countries": [
+      "IND",
+      "CHN",
+      "NGA",
+      "IDN",
+      "PAK"
+    ],
+    "top_burden_evidence_share": 0.4807471922988769,
+    "top_burden_burden_share": 0.5172795362071521,
+    "least_served_countries_crossing_half": 41,
+    "least_served_burden_share": 0.5389155519626327,
+    "least_served_evidence_share": 0.16662846665138667,
+    "least_served_pairs": 1454,
+    "interpolated_evidence_share_at_half": 0.14711074281315073,
+    "gini": 0.4936114705008866
+  },
+  "reach_2025": {
+    "Natural Earth countries, no population floor": {
+      "countries": 197,
+      "unreached": 21
+    },
+    "Website country list": {
+      "countries": 154,
+      "unreached": 2
+    }
+  }
+}
+

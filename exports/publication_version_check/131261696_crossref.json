@@ -1,0 +1,809 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        11
+      ]
+    ],
+    "date-time": "2026-10-11T11:28:45Z",
+    "timestamp": 1791718125709,
+    "version": "4.3.4"
+  },
+  "reference-count": 134,
+  "publisher": "American Economic Association",
+  "issue": "8",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "American Economic Review"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2021,
+        8,
+        1
+      ]
+    ]
+  },
+  "abstract": "<jats:p>This paper estimates the long-run effects of childhood Medicaid eligibility on adult health and economic outcomes using the program’s original introduction ( 1966–1970) and its mandated coverage of welfare recipients. The design compares cohorts born in different years relative to Medicaid implementation, in states with different preexisting welfare-based eligibility. Early childhood Medicaid eligibility reduces mortality and disability, increases employment, and reduces receipt of disability transfer programs up to 50 years later. Medicaid has saved the government more than its original cost and saved more than 10 million quality adjusted life years. (JEL H51, I12, I18, I32, I38, J13)</jats:p>",
+  "DOI": "10.1257/aer.20171671",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        7,
+        28
+      ]
+    ],
+    "date-time": "2021-07-28T08:21:11Z",
+    "timestamp": 1627460471000
+  },
+  "page": "2550-2593",
+  "source": "Crossref",
+  "is-referenced-by-count": 166,
+  "title": [
+    "The Long-Run Effects of Childhood Insurance Coverage: Medicaid Implementation, Adult Health, and Labor Market Outcomes"
+  ],
+  "prefix": "10.1257",
+  "volume": "111",
+  "author": [
+    {
+      "given": "Andrew",
+      "family": "Goodman-Bacon",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Opportunity and Inclusive Growth Institute, Federal Reserve Bank of Minneapolis (email: )"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "11",
+  "reference": [
+    {
+      "key": "p_1",
+      "author": "Adamy Janet",
+      "year": "2010",
+      "journal-title": "Wall Street Journal. http://www.wsj.com/articles/SB10001424052748704444304575628603406482936."
+    },
+    {
+      "key": "p_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/rest_a_00822"
+    },
+    {
+      "key": "p_3",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/ecoj.12550"
+    },
+    {
+      "key": "p_4",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/aer.20140529"
+    },
+    {
+      "key": "p_5",
+      "unstructured": "Alling, Elizabeth, and Agnes Leisy. 1950. Aid to Dependent Children in a Postwar Year: Characteristics of Families Receiving ADC, June 1948. Washington, DC: Bureau of Public Assistance."
+    },
+    {
+      "key": "p_6",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/507154"
+    },
+    {
+      "key": "p_7",
+      "unstructured": "Almond, Douglas, and Kenneth Chay. 2006. \"The Long-Run and Intergenerational Impact of Poor Infant Health: Evidence from Cohorts Born During the Civil Rights Era.\" Unpublished."
+    },
+    {
+      "key": "p_8",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/REST_a_00089"
+    },
+    {
+      "key": "p_9",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1017/S002205070003360X"
+    },
+    {
+      "key": "p_10",
+      "unstructured": "American Hospital Association. 1932-1993. Guide Issue. Chicago, IL. https://catalog.hathitrust.org/ Record/000052161."
+    },
+    {
+      "key": "p_11",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Angrist, Joshua D., and Jörn-Steffen Pischke. 2009. Mostly Harmless Econometrics: An Empiricist's Companion. Princeton, NJ: Princeton University Press.",
+      "DOI": "10.1515/9781400829828"
+    },
+    {
+      "key": "p_12",
+      "unstructured": "Antos, Joseph, and James C. Capretta. 2014. \"A Health Reform Framework: Breaking Out of the Medicaid Model.\" Health Affairs Blog. https://www.healthaffairs.org/do/10.1377/ hblog20140710.040053/full/."
+    },
+    {
+      "issue": "148",
+      "key": "p_13",
+      "first-page": "1",
+      "volume": "2",
+      "author": "Arias Elizabeth",
+      "year": "2008",
+      "journal-title": "Vital and Health Statistics"
+    },
+    {
+      "key": "p_14",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Arthi, Vellore, Brian Beach, and W. Walker Hanlon. 2017. \"Estimating the Recession-Mortality Relationship When Migration Matters.\" NBER Working Paper 23507.",
+      "DOI": "10.3386/w23507"
+    },
+    {
+      "key": "p_15",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/jep.20.3.71"
+    },
+    {
+      "key": "p_16",
+      "first-page": "1915",
+      "author": "Bailey Martha",
+      "year": "2018",
+      "journal-title": "County-Level Natality and Mortality Data"
+    },
+    {
+      "key": "p_17",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/aer.20120070"
+    },
+    {
+      "key": "p_18",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1353/jhr.2010.0027"
+    },
+    {
+      "key": "p_19",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Beach, Brian, Joseph Ferrie, Martin Saavedra, and Werner Troesken. 2014. \"Typhoid Fever, Water Quality, and Human Capital Formation.\" NBER Working Paper 20279.",
+      "DOI": "10.3386/w20279"
+    },
+    {
+      "key": "p_20",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/260536"
+    },
+    {
+      "key": "p_21",
+      "unstructured": "Bell, Winifred. 1965. Aid to Dependent Children. New York: Columbia University Press."
+    },
+    {
+      "key": "p_22",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/003465398557762"
+    },
+    {
+      "key": "p_23",
+      "unstructured": "Bhalotra, Sonia, and Atheendar Venkataramani. 2015. \"Shadows of the Captain of the Men of Death: Early Life Health, Human Capital Investment, and Institutions.\" Unpublished."
+    },
+    {
+      "key": "p_24",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/aer.103.5.1862"
+    },
+    {
+      "key": "p_25",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/restud/rdt013"
+    },
+    {
+      "key": "p_26",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bitler, Marianne, and Janet Currie. 2004. \"Medicaid at Birth, WIC Take Up, and Children's Outcomes.\" RAND Working Paper WR-172.",
+      "DOI": "10.7249/WR172"
+    },
+    {
+      "key": "p_27",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/aer.20120642"
+    },
+    {
+      "key": "p_28",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/qjec.121.1.73"
+    },
+    {
+      "key": "p_29",
+      "unstructured": "Blewett, Lynn A., Julia A. Rivera Drew, Miriam L. King, and Kari C. W. Williams. 2019. \"IPUMS Health Surveys: National Health Interview Survey, Version 6.4 [dataset].\" Integrated Public Use Microdata Series, University of Minnesota, Minneapolis, MN. https://doi.org/10.18128/D070.V6.4."
+    },
+    {
+      "key": "p_30",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/pol.6.4.34"
+    },
+    {
+      "key": "p_31",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jhealeco.2015.11.001"
+    },
+    {
+      "issue": "3",
+      "key": "p_32",
+      "first-page": "482",
+      "volume": "79",
+      "author": "Bound John",
+      "year": "1989",
+      "journal-title": "American Economic Review"
+    },
+    {
+      "key": "p_33",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/209949"
+    },
+    {
+      "key": "p_34",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/1468-0009.t01-1-00063"
+    },
+    {
+      "key": "p_35",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/restud/rdz039"
+    },
+    {
+      "key": "p_36",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jhealeco.2016.08.002"
+    },
+    {
+      "key": "p_37",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/qjec.2008.123.1.177"
+    },
+    {
+      "key": "p_38",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.1518393112"
+    },
+    {
+      "key": "p_39",
+      "unstructured": "Center for Health Administration Studies (CHAS), and National Opinion Research Center (NORC). 1984. \"Survey of Health Services Utilization and Expenditures, 1963.\" Inter-university Consortium for Political and Social Research [distributor]."
+    },
+    {
+      "key": "p_40",
+      "unstructured": "Centers for Medicare and Medicaid Services (CMS). 2013. Medicare and Medicaid Statistical Supplement. 2013 ed. https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/MedicareMedicaidStatSupp/2013.html."
+    },
+    {
+      "key": "p_41",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Chay, Kenneth Y., Jonathan Guryan, and Bhashkar Mazumder. 2009. \"Birth Cohort and the Black-White Achievement Gap: The Roles of Access and Health Soon After Birth.\" NBER Working Paper 15078.",
+      "DOI": "10.3386/w15078"
+    },
+    {
+      "key": "p_42",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Chay, Kenneth Y., Jonathan Guryan, and Bhashkar Mazumder. 2014. \"Early Life Environment and Racial Inequality in Education and Earnings in the United States.\" NBER Working Paper 20539.",
+      "DOI": "10.3386/w20539"
+    },
+    {
+      "key": "p_43",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/qje/qjr041"
+    },
+    {
+      "key": "p_44",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/aer.104.5.141"
+    },
+    {
+      "key": "p_45",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/REST_a_00654"
+    },
+    {
+      "key": "p_46",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3368/jhr.51.3.1014-6688R1"
+    },
+    {
+      "key": "p_47",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.0501470103"
+    },
+    {
+      "key": "p_48",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3982/ECTA6551"
+    },
+    {
+      "key": "p_49",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jhealeco.2008.07.002"
+    },
+    {
+      "key": "p_50",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/2946684"
+    },
+    {
+      "key": "p_51",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/262059"
+    },
+    {
+      "key": "p_52",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0047-2727(00)00140-7"
+    },
+    {
+      "key": "p_53",
+      "unstructured": "Cutler, David M. 2004. Your Money or Your Life: Strong Medicine for America's Health Care System. New York: Oxford University Press."
+    },
+    {
+      "key": "p_54",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Cutler, David M., and Elizabeth Richardson. 1999. \"Your Money and Your Life: The Value of Health and What Affects It.\" NBER Working Paper 6895.",
+      "DOI": "10.3386/w6895"
+    },
+    {
+      "key": "p_55",
+      "unstructured": "Derenoncourt, Ellora. 2019. \"Can You Move to Opportunity? Evidence from the Great Migration.\" Unpublished."
+    },
+    {
+      "key": "p_56",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Duggan, Mark G., and Scott Imberman. 2009. \"Why Are the Disability Rolls Skyrocketing? The Contribution of Population Characteristics, Economic Conditions, and Program Generosity.\" In Health at Older Ages: The Causes and Consequences of Declining Disability among the Elderly, edited by David M. Cutler and David A. Wise, 337-380. Chicago: University of Chicago Press.",
+      "DOI": "10.7208/chicago/9780226132327.003.0012"
+    },
+    {
+      "key": "p_57",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Evans, William N., Craig Garthwaite, and Timothy J. Moore. 2018. \"Guns and Violence: The Enduring Impact of Crack Cocaine Markets on Young Black Males.\" NBER Working Paper 24819.",
+      "DOI": "10.3386/w24819"
+    },
+    {
+      "key": "p_58",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/3325474"
+    },
+    {
+      "key": "p_59",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/702238"
+    },
+    {
+      "key": "p_60",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/aer.20171455"
+    },
+    {
+      "key": "p_61",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/qje/qjs020"
+    },
+    {
+      "key": "p_62",
+      "unstructured": "Flood, Sarah, Miriam King, Steven Ruggles, and J. Robert Warren. 2015. \"Integrated Public Use Microdata Series, Current Population Survey: Version 4.0. [Machine-readable database].\" University of Minnesota, Minneapolis, MN. https://doi.org/10.18128/D030.V8.0."
+    },
+    {
+      "key": "p_63",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Fogel, Robert. 1997. \"Economic Growth, Population Theory, and Physiology: The Bearing of Long-Term Processes on the Making of Economic Policy.\" In Nobel Lectures: Economic Sciences 1991-1995, edited by Torsten Persson, 72-106. Singapore: World Scienti c Publishing Co.",
+      "DOI": "10.3386/w4638"
+    },
+    {
+      "key": "p_64",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/jahist/jav758"
+    },
+    {
+      "key": "p_65",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1377/hlthaff.2015.1247"
+    },
+    {
+      "key": "p_66",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/pol.6.2.291"
+    },
+    {
+      "key": "p_67",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Goodman-Bacon, Andrew. 2018a. \"Difference-in-Differences with Variation in Treatment Timing.\" NBER Working Paper 25018.",
+      "DOI": "10.3386/w25018"
+    },
+    {
+      "key": "p_68",
+      "unstructured": "Goodman-Bacon, Andrew. 2018b. \"The Long-Run Effects of Childhood Insurance Coverage: Medicaid Implementation, Adult Health, and Labor Market Outcomes.\" Unpublished."
+    },
+    {
+      "key": "p_69",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/695528"
+    },
+    {
+      "key": "p_70",
+      "unstructured": "Goodman-Bacon, Andrew. 2021. \"Replication Data for: Effects of Childhood Insurance Coverage: Medicaid Implementation, Adult Health, and Labor Market Outcomes.\" American Economic Association [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E127621V1."
+    },
+    {
+      "key": "p_71",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMp1615696"
+    },
+    {
+      "key": "p_72",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jpubeco.2020.104174"
+    },
+    {
+      "key": "p_73",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/250096"
+    },
+    {
+      "key": "p_74",
+      "first-page": "1790",
+      "author": "Haines Michael R",
+      "year": "2010",
+      "journal-title": "Demographic, Economic, and Social Data: The United States"
+    },
+    {
+      "key": "p_75",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1468-0262.2005.00594.x"
+    },
+    {
+      "key": "p_76",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/685593"
+    },
+    {
+      "key": "p_77",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/qje/qjaa006"
+    },
+    {
+      "key": "p_78",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/aer.20130375"
+    },
+    {
+      "key": "p_79",
+      "unstructured": "Johnson, Lyndon. 1967. \"Special Message to the Congress Recommending a 12-Point Program for America's Children and Youth, February 8, 1967.\" Online by Gerhard Peters and John T. Woolley, The American Presidency Project. https://www.presidency.ucsb.edu/node/237655."
+    },
+    {
+      "key": "p_80",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/pol.20180510"
+    },
+    {
+      "key": "p_81",
+      "unstructured": "Kaiser Family Foundation. 2012. Medicaid Spending per Enrollee (Full or Partial Benefit), FY 2011. http://kff.org/medicaid/state-indicator/medicaid-spending-per-enrollee/."
+    },
+    {
+      "key": "p_82",
+      "unstructured": "Kishore, Sanjay. 2014. \"What Health Care Advocates Should Know About Recent Findings From the Oregon Medicaid Study.\" Families USA blog. http://familiesusa.org/blog/2014/01/what-healthcare-advocates-should-know-about-recent-findings-oregon-medicaid-study (last accessed 2015)."
+    },
+    {
+      "key": "p_83",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jpubeco.2006.03.006"
+    },
+    {
+      "key": "p_84",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/rest.91.4.766"
+    },
+    {
+      "key": "p_85",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Lee, Jin Young, and Gary Solon. 2011. \"The Fragility of Estimated Effects of Unilateral Divorce Laws on Divorce Rates.\" NBER Working Paper 16773.",
+      "DOI": "10.3386/w16773"
+    },
+    {
+      "key": "p_86",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Leininger, Lindsey, Helen Levy, and Diane Schanzenbach. 2010. \"Consequences of SCHIP Expansions for Household Well-Being.\" Forum for Health Economics and Policy 13 (1).",
+      "DOI": "10.2202/1558-9544.1201"
+    },
+    {
+      "key": "p_87",
+      "unstructured": "Lesser, Arthur Jacques, United States Public Health Service, United States Welfare Administration, and United States Office of Education. 1964. Health of Children of School Age. Vol. 427. Washington, DC: US Government Printing Of ce."
+    },
+    {
+      "key": "p_88",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Levine, Phillip B., and Diane Whitmore Schanzenbach. 2009. \"The Impact of Children's Public Health Insurance Expansions on Educational Outcomes.\" NBER Working Paper 14671.",
+      "DOI": "10.3386/w14671"
+    },
+    {
+      "key": "p_89",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/jep.29.2.123"
+    },
+    {
+      "key": "p_90",
+      "unstructured": "Loewenstein, Regina. 1971. Effect of Medicaid on Health Care of Low-Income Persons. Tables: Report of Contracts WA-406, SRS-ORDT-68-01, SRS-69-50. New York: Columbia University School of Public Health and Administrative Medicine."
+    },
+    {
+      "key": "p_91",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/qjec.122.1.159"
+    },
+    {
+      "key": "p_92",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/aer.103.5.1797"
+    },
+    {
+      "key": "p_93",
+      "unstructured": "Manton, Kenneth G., and Eric Stallard. 1984. Recent Trends in Mortality Analysis: Studies in Population. Orlando: Academic Press."
+    },
+    {
+      "key": "p_94",
+      "unstructured": "March of Dimes. 1957a. Poliomyletis Vaccine Shipments to States, Territories, and Export as of August 30, 1957. White Plains, NY: United States Public Health Service."
+    },
+    {
+      "key": "p_95",
+      "unstructured": "March of Dimes. 1957b. Poliomyletis Vaccine Shipments to States, Territories, and Export as of March 22, 1957. White Plains, NY: United States Public Health Service."
+    },
+    {
+      "key": "p_96",
+      "unstructured": "March of Dimes. n.d. Five Year Averages 1951-1955, 1952-1956 and Annual Number of Poliomyelitis Cases Reported and Case Rate per 100,000 Population, By State, 1953, 1954, 1955, and 1956. White Plains, NY: United States Public Health Service."
+    },
+    {
+      "key": "p_97",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0047-2727(90)90001-X"
+    },
+    {
+      "key": "p_98",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3368/jhr.54.3.0816.8173R1"
+    },
+    {
+      "key": "p_99",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3368/jhr.XLII.1.117"
+    },
+    {
+      "key": "p_100",
+      "unstructured": "Morgan, James N., Martin H. David, Wilbur J. Cohen, and Harvey E. Brazer. 1962. Income and Welfare in the United States, A Study by the Survey Research Center, Institute for Social Research, University of Michigan. New York: McGraw-Hill."
+    },
+    {
+      "key": "p_101",
+      "unstructured": "Mugge, Robert. 1960. Characteristics and Financial Circumstances of Families Receiving Aid to Dependent Children, Late 1958. Washington, DC. https://hdl.handle.net/2027/osu.32435063336473."
+    },
+    {
+      "key": "p_102",
+      "unstructured": "National Center for Health Statistics (NCHS). 1965. Vital and Health Statistics, Series 22: Data from the National Vital Statistics System. Washington, DC: US Department of Health, Education, and Welfare."
+    },
+    {
+      "key": "p_103",
+      "unstructured": "National Center for Health Statistics (NCHS). 1991. \"Public Use Data Tape Documentation, Multiple Cause of Death for ICD-9 1988 Data.\" Public Health Service US Department of Health and Human Services, Centers for Disease Control, National Center for Health Statistics, Hyattsville, MD."
+    },
+    {
+      "key": "p_104",
+      "unstructured": "Norton, Douglas. 2007. \"Data on Infant Mortality and Births, 1920-1945.\" National Center for Health Statistics. National Bureau of Economic Research."
+    },
+    {
+      "key": "p_105",
+      "unstructured": "President's Task Force on Manpower Conservation. 1964. One-Third of a Nation: A Report on Young Men Found Unqualified for Military Service. Washington, DC: US Department of Health, Education and Welfare, Of ce of Education."
+    },
+    {
+      "key": "p_106",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1001/jama.2013.3792"
+    },
+    {
+      "key": "p_107",
+      "unstructured": "Roy, Avik. 2014. \"New Oregon Data: Expanding Medicaid Increases Usage of Emergency Rooms, Undermining Central Rationale for Obamacare.\" Apothecary. https://www.forbes.com/sites/ theapothecary/2014/01/02/new-oregon-data-expanding-medicaid-increases-usage-of-emergencyrooms-undermining-central-rationale-for-obamacare/?sh=1e10029511e2."
+    },
+    {
+      "key": "p_108",
+      "unstructured": "Ruggles, Steven, J. Trent Alexander, Katie Genadek, Ronald Goeken, Matthew B. Schroeder, and Matthew Sobek. 2021. \"Integrated Public Use Microdata Series: Version 11.0 [Machine-readable database]\". University of Minnesota, Minneapolis, MN. https://doi.org/10.18128/D010.V11.0."
+    },
+    {
+      "key": "p_109",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/3558997"
+    },
+    {
+      "key": "p_110",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Skocpol, Theda. 1992. Protecting Soldiers and Mothers: The Political Origins of Social Policy in the United States. Cambridge, MA: Belknap Press.",
+      "DOI": "10.4159/9780674043725"
+    },
+    {
+      "key": "p_111",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/rest.91.3.478"
+    },
+    {
+      "key": "p_112",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/515734"
+    },
+    {
+      "key": "p_113",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.socscimed.2017.01.043"
+    },
+    {
+      "key": "p_114",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMsa1202099"
+    },
+    {
+      "key": "p_115",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1257/aer.104.6.1777"
+    },
+    {
+      "key": "p_116",
+      "unstructured": "Stevens, Robert Bocking, and Rosemary Stevens. 1974. Welfare Medicine in America: A Case Study of Medicaid. New York: Free Press."
+    },
+    {
+      "key": "p_117",
+      "unstructured": "Surveillance, Epidemiology, and End Results. 2013. \"Surveillance, Epidemiology, and End Results (SEER) Program Populations (1969-2011).\" DCCPS National Cancer Institute, Surveillance Research Program, Surveillance Systems Branch."
+    },
+    {
+      "key": "p_118",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jhealeco.2016.12.003"
+    },
+    {
+      "key": "p_119",
+      "unstructured": "US Bureau of Economic Analysis. 2015. \"SAINC1 - Personal Income Summary: Personal Income, Population, Per Capita Personal Income.\""
+    },
+    {
+      "key": "p_120",
+      "unstructured": "US Bureau of Labor Statistics. 2019. \"Local Area Unemployment Statistics (LA).\" US Department of Labor."
+    },
+    {
+      "key": "p_121",
+      "unstructured": "US Census Bureau. 1996. \"Resident Population of States (by Single Year to 85+ and Sex): April 1, 1980 Census.\" Population Distribution Branch and Population Estimates Branch."
+    },
+    {
+      "key": "p_122",
+      "unstructured": "US Census Bureau. 2011. Annual Survey of State Government Finances and Census of Governments (1942-1980)."
+    },
+    {
+      "key": "p_123",
+      "unstructured": "US Department of Health, Education and Welfare (USDHEW). 1955. Characteristics of Families Receiving Aid to Dependent Children, November 1953. Washington, DC: Bureau of Public Assistance Division of Program Statistics and Analysis, Social Security Administration."
+    },
+    {
+      "key": "p_124",
+      "unstructured": "US Department of Health, Education and Welfare (USDHEW). 1963. Characteristics of Families Receiving Aid to Families with Dependent Children, November-December 1961. Washington, DC: Bureau of Public Assistance Division of Program Statistics and Analysis, Welfare Administration."
+    },
+    {
+      "key": "p_125",
+      "unstructured": "US Department of Health, Education and Welfare (USDHEW). 1976. Medicaid State Tables Fiscal Year 1976: Recipients, Payments, and Services. Washington DC."
+    },
+    {
+      "key": "p_126",
+      "unstructured": "US Department of Health, Education and Welfare (USDHEW). 2000. AFDC Data for Assistance Units and Persons, 1979. Washington, DC: US Department of Health and Human Services, Of ce of the Assistant Secretary for Planning and Evaluation."
+    },
+    {
+      "key": "p_127",
+      "unstructured": "US Department of Health, Education and Welfare (USDHEW). 2011. Surveys of Recipients of Aid to Families with Dependent Children, 1967-1977. Washington, DC: National Center for Social Statistics Social and Rehabilitation Service, Population Surveys Branch, National Archives and Records Administration. Social Security Agency."
+    },
+    {
+      "key": "p_128",
+      "unstructured": "United States Department of Health and Human Services (USDHHS). 2009. \"Multiple Cause of Death, Various Years.\" National Center for Health Statistics. Inter-university Consortium for Political and Social Research [distributor]."
+    },
+    {
+      "key": "p_129",
+      "unstructured": "United States Department of Health and Human Services (USDHHS). 2013. \"AFDC Quality Control Data.\" Of ce of Family Assistance and Administration for Children and Families."
+    },
+    {
+      "key": "p_130",
+      "first-page": "1963",
+      "author": "United States Department of Health and Human Services (USDHHS), and National Center for Health Statistics (NCHS).",
+      "year": "1991",
+      "journal-title": "Cycle"
+    },
+    {
+      "key": "p_131",
+      "unstructured": "University of Michigan Survey Research Center. 2016. \"Panel Study of Income Dynamics, Public Use Dataset.\" Ann Arbor, MI: University of Michigan, Institute for Social Research."
+    },
+    {
+      "key": "p_132",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3368/jhr.51.3.0913-5918R1"
+    },
+    {
+      "key": "p_133",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1162/REST_a_00677"
+    },
+    {
+      "key": "p_134",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/1191310"
+    }
+  ],
+  "container-title": [
+    "American Economic Review"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20171671",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        1,
+        5
+      ]
+    ],
+    "date-time": "2023-01-05T14:09:22Z",
+    "timestamp": 1672927762000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20171671"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        8,
+        1
+      ]
+    ]
+  },
+  "references-count": 134,
+  "journal-issue": {
+    "issue": "8",
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          1
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1257/aer.20171671"
+  ],
+  "URL": "https://doi.org/10.1257/aer.20171671",
+  "relation": {},
+  "ISSN": [
+    "0002-8282"
+  ],
+  "issn-type": [
+    {
+      "value": "0002-8282",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        8,
+        1
+      ]
+    ]
+  }
+}

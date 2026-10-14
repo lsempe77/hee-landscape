@@ -1,0 +1,663 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        27
+      ]
+    ],
+    "date-time": "2025-10-27T10:56:03Z",
+    "timestamp": 1761562563182,
+    "version": "3.41.2"
+  },
+  "reference-count": 86,
+  "publisher": "The Journal of Health Economics and Outcomes Research",
+  "issue": "1",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "JHEOR"
+  ],
+  "abstract": "<jats:p>Background: Recent international, randomized, placebo-controlled clinical trials (SPRINT-2; RESPOND-2) demonstrated that the triple combination of peginterferon (PEG), ribavirin (RBV) and boceprevir (BOC) was more efficacious than the standard dual therapy of PEG and RBV in treatment of patients chronically infected with genotype 1 hepatitis C virus (HCV) infection. The objective of this study was to evaluate the cost-effectiveness of triple therapy in both treatment-naive and treatment-experienced patients in Hungary. Methods: A Markov model was developed to evaluate the long-term clinical benefits and the costeffectiveness of the triple therapy from the Hungarian payer perspective. Model states were fibrosis (F0–F4, defined using METAVIR fibrosis scores), decompensated cirrhosis (DC), hepatocellular carcinoma (HCC), liver transplantation (LT), and liver-related deaths (LD). Efficacy was estimated from SPRINT-2 and RESPOND-2 studies. Disease progression rates and health state utilities used in the model were obtained from published studies. Estimates of probability of liver transplantation and cost were based on an analysis of the Hungarian Sick Fund database. All cost and benefits were discounted at 5% per year. Results: Compared to dual therapy, triple therapy was projected to increase the life expectancy by 0.98 and 2.42 life years and increase the quality-adjusted life years (QALY) by 0.59 and 1.13 in treatment-naive and treatment-experienced patients, respectively. The corresponding incremental cost-effectiveness ratios were HUF7,747,962 (€26,717) and HUF5,888,240 (€20,304) per QALY. The lifetime incidence of severe liver disease events (DC, HCC, LT, LD) were projected to decrease by 45% and 61% in treatment-naïve and treatment-experienced patients treated with triple therapy groups in comparison with PEG-RBV treatment. Conclusion: The addition of boceprevir to standard therapy for the treatment of patients with genotype 1 chronic HCV infection in Hungary is projected to be cost-effective using a commonly used willingness to pay threshold of HUF 8.46 million (3 times gross domestic product per capita).</jats:p>",
+  "DOI": "10.36469/9854",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2019,
+        10,
+        21
+      ]
+    ],
+    "date-time": "2019-10-21T16:02:33Z",
+    "timestamp": 1571673753000
+  },
+  "page": "62-82",
+  "source": "Crossref",
+  "is-referenced-by-count": 2,
+  "title": [
+    "Economic Evaluation of Boceprevir for the Treatment of Patients with Genotype 1 Chronic Hepatitis C Virus Infection in Hungary"
+  ],
+  "prefix": "10.36469",
+  "volume": "1",
+  "author": [
+    {
+      "given": "Raymond",
+      "family": "Odhiambo",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "MSD Pharma Hungary Kft., Hungary"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Jagpreet",
+      "family": "Chhatwal",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Pittsburgh, Pittsburgh, PA, USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Shannon Allen",
+      "family": "Ferrante",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Merck Sharp &amp; Dohme Corp., Whitehouse Station, NJ, USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Antoine",
+      "family": "El Khoury",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Pittsburgh, Pittsburgh, PA, USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Elamin",
+      "family": "Elbasha",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Pittsburgh, Pittsburgh, PA, USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "22273",
+  "published-online": {
+    "date-parts": [
+      [
+        2013,
+        6,
+        5
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "ref0",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Dienstag JL, McHutchinson JG: American Gastroenterological Association medical position statement on the management of hepatitis C.Gastroenterology. 2006;130(1):225-30.",
+      "DOI": "10.1053/j.gastro.2005.11.011"
+    },
+    {
+      "key": "ref1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ghany MG, Strader DB, Thomas DL et al.Diagnosis, management, and treatment of hepatitis C: an update. Hepatology. 2009;49(4):1335-74.",
+      "DOI": "10.1002/hep.22759"
+    },
+    {
+      "key": "ref2",
+      "unstructured": "World Health Organization: Hepatitis C, Fact sheet No.164. http://www.who.int/mediacentre/factsheets/fs164/en/index.html. Accessed October 19, 2011."
+    },
+    {
+      "key": "ref3",
+      "doi-asserted-by": "publisher",
+      "unstructured": "El Khoury AC, Klimack WK, Wallace C, et al.Economic burden of hepatitis C-associated diseases in the United States.J Viral Hepat. 2012;19:153-60.",
+      "DOI": "10.1111/j.1365-2893.2011.01563.x"
+    },
+    {
+      "key": "ref4",
+      "doi-asserted-by": "crossref",
+      "unstructured": "El Khoury AC, Wallace C, Klimack WK, et alEconomic burden of hepatitis C-associated diseases: Europe, Asia Pacific, and the Americas. J Med Econ. 2012;15(5):8877-96.",
+      "DOI": "10.3111/13696998.2012.681332"
+    },
+    {
+      "key": "ref5",
+      "unstructured": "World Hepatitis Alliance: World Hepatitis Day. http://www.worldhepatitisalliance.org/worldhepatitisday2011.aspx. Accessed November 2, 2011."
+    },
+    {
+      "key": "ref6",
+      "unstructured": "European Parlament: Written Declaration on hepatitis C, 2007. http://www.europarl.europa.eu/sides/getDoc.do?reference=P6_TA(2007)0102&language=EN. Accessed February 20, 2012."
+    },
+    {
+      "key": "ref7",
+      "unstructured": "Országos Egészségbiztosítási Pénztár – Elemzési, Orvosszakértői és Szakmai Ellenőrzési Főosztály: Hepatitis C virus okozta krónikus májgyulladás diagnosztikája és terápiájának finanszírozási protokollja. http://site.oep.hu/steam/downloads/finprot/17_Hepatitis_C_finanszirozasi_protokollja.pdf. Accessed September 13, 2011."
+    },
+    {
+      "key": "ref8",
+      "unstructured": "McHutchinson JG, Bacon BR: Chronic hepatitis C: an age wave of disease burden.Am J Manag Care.2005;11(10 Supp):S286-95."
+    },
+    {
+      "key": "ref9",
+      "unstructured": "Országos Egészségbiztosítási Pénztár; Hatályos finanszírozási Protokollok: Hepatitis C vírus okozta krónikus májgyulladás diagnosztikája és terápiájának finanszírozási protokollja. http://www.oep.hu/portal/page?_pageid=35,31793613&_dad=portal&_schema=PORTAL>. Accessed May 16, 2011."
+    },
+    {
+      "key": "ref10",
+      "unstructured": "Dr.Dósa Ágnes: A hepatitis C-fertőzés miatt megítélt kártérítés.LAM 2003;13(3):244-5."
+    },
+    {
+      "key": "ref11",
+      "unstructured": "Makara Mihály: Lappangó vírusok, panaszmentes májbetegek. MedicalOnline, Professional Publishing. http://www.medicalonline.hu/cikk/lappango_virusok__panaszmentes_majbetegek; 2011. Accessed March 17, 2012."
+    },
+    {
+      "key": "ref12",
+      "unstructured": "Wilkins T, Malcolm JK, Raina D. et alHepatitis C: diagnosis and treatmnet.Am Fam Physician.2010;81(11):1351-7."
+    },
+    {
+      "key": "ref13",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Yu JW, Sun LJ, Kang B, et al. Efficacy and factors influencing treatment with peginterferon alpha-2a and ribavirin in elderly patients with chronic hepatitis C.Hepatobiliary Pancreat Dis Int.2012;11(2):185-92.",
+      "DOI": "10.1016/s1499-3872(12)60146-5"
+    },
+    {
+      "key": "ref14",
+      "doi-asserted-by": "publisher",
+      "unstructured": "McHutchison J Lawitz EJ, Shiffman ML, et al. Peginterferon alfa-2b or alfa-2a with ribavirin for treatmnet of hepatitis c infection. N Engl J Med 2009;361:580-93.",
+      "DOI": "10.1056/nejmx090031"
+    },
+    {
+      "key": "ref15",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Poynard T, Colombo M, Bruix J, et al.Peginterferon alfa-2b and ribavirin: effective in patients with hepatitis C who failed interferon alfa/ribavirin therapy.Gastroenterology 2009;136:1618-8.",
+      "DOI": "10.1053/j.gastro.2009.01.039"
+    },
+    {
+      "key": "ref16",
+      "unstructured": "De Bruijne J, Buster EHCJ, Gelderblom HC, et al.Treatmnet of chronic hepatitis C virus infection – Dutch national guidelines.Neth J Med. 2008;66(7):311-22."
+    },
+    {
+      "key": "ref17",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Alsio A, Rembeck K, Askarieh G, et al.Impact of obesity on the bioavailability of peginterferon-α2a and ribavirin and treatmnet outcome for chronic hepatitis C genotype 2 or 3.PLoS ONE.7(5):e37521. doi:10.1371/journal.pone.0037521",
+      "DOI": "10.1371/journal.pone.0037521"
+    },
+    {
+      "key": "ref18",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Charlton MR, Pockros PJ, Harrison SA: Impact of obesity on treatment of chronic hepatitis C. Hepatology 2006;43:1177-86.",
+      "DOI": "10.1002/hep.21239"
+    },
+    {
+      "key": "ref19",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Hagymási K, Fehér J: A testsúlycsökkentés hatása a kombinált interferon-alfa-2a + ribavirin kezelésre adott válaszra idült HCV-hepatitiszben.Orv Hetil 2008;149(46):2189-92.",
+      "DOI": "10.1556/OH.2008.28493"
+    },
+    {
+      "key": "ref20",
+      "doi-asserted-by": "publisher",
+      "unstructured": "McHutchison J, Lawitz EJ, Shiffman ML et alPeginterferon alfa-2b or alfa 2a with ribavirin treatment of hepatitis C infection.N Engl J Med 2009;361:580-93.",
+      "DOI": "10.1056/nejmx090031"
+    },
+    {
+      "key": "ref21",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Poynard T, Colombo M, Bruix J, et al.Peginterferon alfa-2b and ribavirin: effective in patients with hepatitis C who failed interferon alfa/ribavirin therapy.Gastroenterology 2009;136:1618-28.",
+      "DOI": "10.1053/j.gastro.2009.01.039"
+    },
+    {
+      "key": "ref22",
+      "unstructured": "European Commission. Community Register of medicinal products. http://ec.europa.eu/health/documents/community-register/html/alfregister.htm. Accessed May 15, 2012."
+    },
+    {
+      "key": "ref23",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Poordad F, McCone J, Bacon BR, et al. Boceprevir for untreated chronic HCV genotype 1 infection.N Engl J Med 2011;364:1195-206.",
+      "DOI": "10.1056/NEJMoa1010494"
+    },
+    {
+      "key": "ref24",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bacon BR, Gordon SC, Lawitz E, et al. Boceprevir for previously treated chronic HCV genotype 1 infection.N Engl J Med 2011;364:1207-17.",
+      "DOI": "10.1056/NEJMoa1009482"
+    },
+    {
+      "key": "ref25",
+      "unstructured": "European Public Assessment Reports: Victrelis. European Medicines Agency. http://www.emea.europa.eu/ema/index.jsp?curl=pages%2Fmedicines%2Flanding%2Fepar_search. Accessed April 11, 2012."
+    },
+    {
+      "key": "ref26",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Sullivan SD, Craxi A, Albertiy A, et al.Cost effectiveness of peginterferon α-2a plus ribavirin versus interferon α-2b plus ribavirin as initial therapy for treatment naive chronic hepatitis C. Pharmacoeconomics 2004;22(4):257-265.",
+      "DOI": "10.2165/00019053-200422070-00005"
+    },
+    {
+      "key": "ref27",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Younossi ZM, Singer ME, McHutchison JG, et al. Cost effectiveness of interferon α2b combined with ribavirin for the treatment of chronic hepatitis C.Hepatology 1999;30:1318-24.",
+      "DOI": "10.1002/hep.510300518"
+    },
+    {
+      "key": "ref28",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Salomon JA, Weinstein MC, Hammitt JK, et al.Cost-effectiveness of treatment for chronic hepatitis C infection in an evolving patient population.JAMA. 2003;290:228-37.",
+      "DOI": "10.1001/jama.290.2.228"
+    },
+    {
+      "key": "ref29",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Siebert U, Sroczynski G, Aidelsburger P, et al. Clinical effectiveness and cost effectiveness of tailoring chronic hepatitis C treatment with peginterferon alpha-2b plus ribavirin to HCV genotype and early viral response. A decision analysis based on German guidelines.Pharmacoeconomics 2009;27(4):341-54.",
+      "DOI": "10.2165/00019053-200927040-00006"
+    },
+    {
+      "key": "ref30",
+      "unstructured": "Population Census 2011: Questions on private individuals, Census topics. http://www.nepszamlalas.hu/index.php?menu=1279&langcode=en. Accessed June 21, 2012."
+    },
+    {
+      "key": "ref31",
+      "unstructured": "National Central Statistical Office. ‘Persons naturalised in Hungary’ and ‘Foreign citizens reside in Hungary’, International migration. http://statinfo.ksh.hu/Statinfo/themeSelector.jsp?page=2&szst=WNVN. Accessed June 21, 2012."
+    },
+    {
+      "key": "ref32",
+      "unstructured": "Országos Egészségbiztosítási Pénztár: Kijelölt intézmények listája. http://www.oep.hu/portal/page?_pageid=35,21339700&_dad=portal&_schema=PORTAL. Accessed June 8, 2012."
+    },
+    {
+      "key": "ref33",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Thein HH, Yi Q, Dore GJ, et al.Estimation of stage specific fibrosis progression rates in chronic hepatitis C virus infection: A meta analysis and meta regression. Hepatology. 2008;48(2):418-31.",
+      "DOI": "10.1002/hep.22375"
+    },
+    {
+      "key": "ref34",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Yoshida H, Shiratori Y, Moriyama M, et al: Interferon therapy reduces the risk for hepatocellular carcinoma: national surveillance program of cirrhotic and noncirrhotic patients with chronic hepatitis C in Japan.Ann Intern Med. 1999;131:174-81.",
+      "DOI": "10.7326/0003-4819-131-3-199908030-00003"
+    },
+    {
+      "key": "ref35",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Tateyama M, Yatsuhashi H, Taura N et al: Alpha-fetoprotein above normal levels as a risk factor for the development of hepatocellular carcinoma in patients infected with hepatitis C virus. J Gastroenterol 2011;46:92-100.",
+      "DOI": "10.1007/s00535-010-0293-6"
+    },
+    {
+      "key": "ref36",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Miura Y, Shibuya A, Adachi S, et al:Occult hepatitis B virus infection as a risk factor for hepatocellular carcinoma in patients with chronic hepatitis C in whom viral eradication fails.Hepatol Res2008;38(6):546-56.",
+      "DOI": "10.1111/j.1872-034x.2007.00316.x"
+    },
+    {
+      "key": "ref37",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Fattovich, G, Giustina G, Degos F, et al.Morbidity and mortality in compensated cirrhosis type C: a retrospective follow-up study of 384 patients. Gastroenterology 1997;112(2):463-72.",
+      "DOI": "10.1053/gast.1997.v112.pm9024300"
+    },
+    {
+      "key": "ref38",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Benvegnu L, Noventa F, Bernardinello E, et al.Evidence for an association between the aetiology of cirrhosis and pattern of hepatocellular carcinoma development.Gut 2011;48:110.",
+      "DOI": "10.1136/gut.48.1.110"
+    },
+    {
+      "key": "ref39",
+      "unstructured": "Gentilini P, Laffi G, La Villa G, et al.Long course and prognostic factors of virus-induced cirrhosis of the liver.Am J Gastroenterol 1997;92:66-72."
+    },
+    {
+      "key": "ref40",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Sangiovanni A, Prati GM, Fasani P, et al.The natural history of compensated cirrhosis due to hepatitis C virus: A 17 year cohort study of 214 patients.Hepatology 2006;43:1303-10.",
+      "DOI": "10.1002/hep.21176"
+    },
+    {
+      "key": "ref41",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Serfaty L et al:Determinants of outcome of compensated hepatitis C virus-related cirrhosis. Hepatolology 1998;27:1435-40.",
+      "DOI": "10.1002/hep.510270535"
+    },
+    {
+      "key": "ref42",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Bruno S, Silini E, Crosignani A, et al. Hepatitis C virus genotypes and risk of hepatocellular carcinoma in cirrhosis: a prospective study. Hepatology 1997;25:754-8.",
+      "DOI": "10.1002/hep.510250344"
+    },
+    {
+      "key": "ref43",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Tsukuma H, Hiyama T, Tanaka S, et al.Risk factors for hepatocellular carcinoma among patients with chronic liver disease.N Engl J Med 1993;328:1797.",
+      "DOI": "10.1056/nejm199306243282501"
+    },
+    {
+      "key": "ref44",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Planas R, Balleste B, Alvarez MA, et al:Natural history of decompensated hepatitis C virus-related cirrhosis. A study of 200 patients.J Hepatol 2004;40(5):823-30",
+      "DOI": "10.1016/j.jhep.2004.01.005"
+    },
+    {
+      "key": "ref45",
+      "unstructured": "National Health Insurance Fund. Database research and analysis, Feb - June 2011."
+    },
+    {
+      "key": "ref46",
+      "unstructured": "Hungarian Life Table 2003. Központi Statisztikai Hivatal, 2004. http://www.lifetable.de/cgi-bin/Country.plx?Country=Hungary. Accessed July 26, 2011."
+    },
+    {
+      "key": "ref47",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Wolfe R, Roys E, Merion R: Trends in Organ donation and transplantation in the United States, 1999-2008.Am J Transplantation. 2010;10(4p2):961-72.",
+      "DOI": "10.1111/j.1600-6143.2010.03021.x"
+    },
+    {
+      "key": "ref48",
+      "doi-asserted-by": "publisher",
+      "unstructured": "D’Amico G, Morabito A, Pagliaro L, et al.Survival and prognostic indicators in compensated and decompensated cirrhosis.Dig Dis Sci 1986;31:468-75.",
+      "DOI": "10.1007/bf01320309"
+    },
+    {
+      "key": "ref49",
+      "unstructured": "Salerno F, Borroni G, Moser P, et al.Survival and prognostic factors of cirrhotic patients with ascites: a study of 134 outpatients. Am J Gastroenterol 1993;88:514-9."
+    },
+    {
+      "key": "ref50",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Chong CAKY, Gulamhussein A, Heathcote EJ, et al.Health-state utilities and quality of life in hepatitis C patients.Am J Gastroenterol. 2003;98(3):630-8.",
+      "DOI": "10.1111/j.1572-0241.2003.07332.x"
+    },
+    {
+      "key": "ref51",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Wright M, Grieve R, Roberts J, et al.Health benefits of antiviral therapy for mild chronic hepatitis C: randomised controlled trial and economic evaluation.Health Technology Assessment. 2006;10(21):1-130.",
+      "DOI": "10.3310/hta10210"
+    },
+    {
+      "key": "ref52",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Wilson J, Yao GL, Raftery J, et al. A systematic review and economic evaluation of epoetin alfa, epoetin beta and darbepoetin alfa in anaemia associated with cancer, especially that attributable to cancer treatment.Health Technology Assessment. http://www.hta.ac.uk/execsumm/summ1113.htm. Accessed September 3, 2011.",
+      "DOI": "10.3310/hta11130"
+    },
+    {
+      "key": "ref53",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Wong JB, Bennett WG, Koff RS, et al.Pretreatmnet evaluation of chronic hepatitis C: Risks, benefits, and costs.JAMA 1998;280:2088-93.",
+      "DOI": "10.1001/jama.280.24.2088"
+    },
+    {
+      "key": "ref54",
+      "unstructured": "Gaál P: Health care systems in transition: Hungary. Copenhagen, WHO Regional Office for Europe on behalf of the European Observatory on Health Systems and Policies, 2004. http://www.euro.who.int/__data/assets/pdf_file/0008/80783/E84926.pdf. Accessed June 6, 2012."
+    },
+    {
+      "key": "ref55",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Makara M, Horvath G, Gervain J, et al.Ajánlás a B-, a C- és a D-vírus hepatitisek diagnosztikájára és antivirális kezelésére.Orv Hetil. 2012;153:375–94.",
+      "DOI": "10.1556/OH.2012.29338"
+    },
+    {
+      "key": "ref56",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Poordad F, Lawitz EJ, Reddy KR, et al. A randomized trial comapring ribavirin dose reduction versus erythropoietin for anemia management in previously untreated patients with chronic hepatitis C receiving boceprevir plus peginterferon/ribavirin. Presented at the 47th Annual Meeting of the European Association for the Study of the Liver, April 18-22, 2012, Barcelona, Spain.",
+      "DOI": "10.1016/s0168-8278(12)61430-5"
+    },
+    {
+      "key": "ref57",
+      "unstructured": "World Health Organization – Choosing Intervetions that are Cost Effective (WHO-CHOICE): ‘Cost-effectiveness thresholds’. http://www.who.int/choice/costs/CER_thresholds/en/index.html. Accessed September 26, 2011."
+    },
+    {
+      "key": "ref58",
+      "unstructured": "Központi Statisztikai Hivatal (KSH): Bruttó hazai termék (GDP) végső felhasználás folyó áron’ és ‘Népesség, Népmozgalom. http://portal.ksh.hu/pls/ksh/docs/hun/xsadat_eves/i_wnt001b.html. Accessed September 26, 2011."
+    },
+    {
+      "key": "ref59",
+      "unstructured": "Az Egészségügyi Minisztérium szakmai irányelve – az egészség-gazdaságtani elemzések készítéséhez. http://www.eum.hu/egeszsegpolitika/minosegfejlesztes/modszertani-segedanyagok. Accessed March 19, 2012."
+    },
+    {
+      "key": "ref60",
+      "unstructured": "Belgian Health care Knowledge Center (KCE). Guidelines for pharmacoeconomic evaluations in Belgium (2008). https://kce.fgov.be/sites/default/files/pag_documents/d20081027327.pdf. Accessed April 18, 2012."
+    },
+    {
+      "key": "ref61",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Institute für Qualitat und Wirtschaftlichkeit im Gesundheitswesen (IQWIG). General methods for the assessment of the relations of benefits to costs. https://www.iqwig.de/download/General_Methods_for_the_Assessment_of_the_Relation_of_Benefits_to_Costs.pdf. Accessed April 17, 2012.",
+      "DOI": "10.1016/j.zefq.2017.09.006"
+    },
+    {
+      "key": "ref62",
+      "unstructured": "National Institute for Clinical Excellence (NICE). Guide to the methods of technology appraisals (2008). http://www.nice.org.uk/aboutnice/howwework/devnicetech/technologyappraisalprocessguides/?domedia=1&mid=B52851A3-19B9-E0B5-D48284D172BD8459. Accessed April 18, 2012."
+    },
+    {
+      "key": "ref63",
+      "unstructured": "Agencja Oceny Technologii Medycznych (AOTM). Guidelines for conducting Health Technology Assessment (2009). http://www.aotm.gov.pl/index.php?id=401. Accessed April 18, 2012."
+    },
+    {
+      "key": "ref64",
+      "unstructured": "General guidelines for economic evaluations from the Pharmaceutical Benefits Board (2003).http://www.tlv.se/in-english-old/medicines-new/pricing-and-reimbursement-of-medicines/. Accessed April 18, 2012."
+    },
+    {
+      "key": "ref65",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Guidance to manufactureres for completition of new product assessment form (2007), Scottish Medicines Consortium. http://www.scottishmedicines.org.uk/Submission_Process/Submission_Guidance_and_Templates_for_Industry/Templates-Guidance-for-Submission/Templates-Guidance-for-Submission. Accessed April 18, 2012.",
+      "DOI": "10.2172/911759"
+    },
+    {
+      "key": "ref66",
+      "unstructured": "Instituto Nacional da Farmácia e do Medicamento. Guidelines for Economic Drug Evaluation Studies. http://www.infarmed.pt/portal/page/portal/INFARMED/ENGLISH/PCAEC04_vering.pdf. Accessed April 18, 2012."
+    },
+    {
+      "key": "ref67",
+      "unstructured": "College des Economistes de la Santé (CES). French guidelines for the economic evaluation of health care technologies (2004). http://www.ces-asso.org/docs/France_Guidelines_HE_Evaluation.PDF. Accessed April 18, 2012."
+    },
+    {
+      "key": "ref68",
+      "unstructured": "Rácz J és Ritter I: Az injekciós droghasználat felmérése agyors helyzetfelmérés és válasz (RAR) módszerével Magyarországon.Addiktológia (Addictologia Hungarica). 2003;3-4:305-45"
+    },
+    {
+      "key": "ref69",
+      "unstructured": "Országos Vérellátó Szolgálat: Transzplantációs koordinátori hálózat bővítése Magyarországon, Szervdonációs Minőségbiztosítási Program (egy éves pilot). 2011. http://www.ovsz.hu/sites/ovsz.hu/files/szervadomanyozas_dokumentum/2011-08-02-hatteranyag.pdf. Accessed July 10, 2012."
+    },
+    {
+      "key": "ref70",
+      "unstructured": "Nemzeti Erőforrás Minisztérium: Idén mintegy 350 szervátültetés történt. http://www.eum.hu/archivum/hirek/iden-mintegy-350. Accessed June 10, 2012."
+    },
+    {
+      "key": "ref71",
+      "unstructured": "Donor Info: Májátültetés. http://dnr.hu/tetudod/atultetes_beultetes_donacio_transzplantacio/majatultetes_majtranszplantacio/. Accessed July 6, 2012."
+    },
+    {
+      "key": "ref72",
+      "unstructured": "Gerlei Zsuzsa: Májtranszplantáció felnôttkorban. Kinek indokolt, és hogyan juthat hozzá Magyarországon? LAM 2008;18(1):43–5."
+    },
+    {
+      "key": "ref73",
+      "unstructured": "EuroTransplant International Foundation. http://www.eurotransplant.org/cms/index.php?page=home. Accessed July 10, 2012."
+    },
+    {
+      "key": "ref74",
+      "unstructured": "Eurotransplant. Eurotransplant starts cooperation with Hungary, http://www.eurotransplant.org/cms/index.php?page=newsitems&action=viewitem&oid=458&id=1696. Accessed July 11, 2012."
+    },
+    {
+      "key": "ref75",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Raghuraman S, Park H, Osburn WO, et al.Spontaneous clearance of chronic hepatitis C virus infection is associated with apperance of neutraliting antibodies and reversal of T-cell exhaustion.J Infect Dis 2012;205:763-71.",
+      "DOI": "10.1093/infdis/jir835"
+    },
+    {
+      "key": "ref76",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Watanabe H, Saito T, Shinzawa H, et al. Spontaneous elimination of serum hepatitis C virus (HCV) RNA in chronic HCV carriers: A population-based cohort study.J Med Virol 2003;71:56-61.",
+      "DOI": "10.1002/jmv.10448"
+    },
+    {
+      "key": "ref77",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Scott JD, McMahon J, Bruden D, et al.High rate of spontaneous negativity for hepatitis C virus RNA after establishment of chronic infection in Alaska Natives. Clin Infect Dis 2006;42:945-52",
+      "DOI": "10.1086/500938"
+    },
+    {
+      "key": "ref78",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Trapero-Marugán M, Mendoza J, Chaparro M, et al.Lond-term outcome of chronic hepatitis C patients with sustained virological response to peginterferon plus ribavirin.World J Gastroenterol 2011;17(4):493-8.",
+      "DOI": "10.3748/wjg.v17.i4.493"
+    },
+    {
+      "key": "ref79",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Reichard O, Glaumann H, Frydén A, et al.Long-term follow-up of chronic hepatitis C patients with sustained virological response to alpha-interferon.J Hepatology 1999;30:783-7.",
+      "DOI": "10.1016/s0168-8278(99)80129-9"
+    },
+    {
+      "key": "ref80",
+      "doi-asserted-by": "publisher",
+      "unstructured": "George S, Bacon B, Brunt E, et al:Clinical, virologic, histologic, and biochemical outcomes after successful HCV therapy: A 5-year follow-up of 150 patients.Hepatology 2009;49:729-38.",
+      "DOI": "10.1002/hep.22694"
+    },
+    {
+      "key": "ref81",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Swain MG, Lai MY, Shiffman ML, et al:A sustained virologic response is durable in patients with chronic hepatitis C treated with peginterferon alfa-2a and ribavirin. Gastroenterology 2010;139:1593-601.",
+      "DOI": "10.1053/j.gastro.2010.07.009"
+    },
+    {
+      "key": "ref82",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Desmond CP, Roberts SK, Dudley F, et al:Sustained virological response rates and durability of the response to interferon-based therapies in hepatitis C patients treated in the clinical setting. J Viral Hepatitis. 2006;13:311-5.",
+      "DOI": "10.1111/j.1365-2893.2005.00685.x"
+    },
+    {
+      "key": "ref83",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Lau DTY, Kleiner DE, Ghany MG, et al:10-year follow-up after interferon-α therapy for chronic hepatitis C.Hepatology 1998;28:1121-7.",
+      "DOI": "10.1002/hep.510280430"
+    },
+    {
+      "key": "ref84",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Cardoso AC, Moucari1 R, Figueiredo-Mende C, et al:Impact of peginterferon and ribavirin therapy on hepatocellular carcinoma: incidence and survival in hepatitis C patients with advanced fibrosis.J Hepatol 2010;52:652-7.",
+      "DOI": "10.1016/j.jhep.2009.12.028"
+    },
+    {
+      "key": "ref85",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Fleming KM, Aithal GP, Card TR, West J: All-cause mortality in people with cirrhosis compared with the general population: a population-based cohort study.Liver Int 2012;32(1):79-84.",
+      "DOI": "10.1111/j.1478-3231.2011.02517.x"
+    }
+  ],
+  "container-title": [
+    "Journal of Health Economics and Outcomes Research"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://pmc.ncbi.nlm.nih.gov/articles/pmid/37664146/",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        2
+      ]
+    ],
+    "date-time": "2025-06-02T14:40:07Z",
+    "timestamp": 1748875207000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://jheor.org/article/9854"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2013,
+        6,
+        5
+      ]
+    ]
+  },
+  "references-count": 86,
+  "journal-issue": {
+    "issue": "1",
+    "published-online": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.36469/9854",
+  "archive": [
+    "Portico",
+    "Portico",
+    "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+    "2327-2236"
+  ],
+  "issn-type": [
+    {
+      "type": "electronic",
+      "value": "2327-2236"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2013,
+        6,
+        5
+      ]
+    ]
+  },
+  "article-number": "9854"
+}

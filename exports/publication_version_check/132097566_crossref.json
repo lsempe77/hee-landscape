@@ -1,0 +1,840 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        25
+      ]
+    ],
+    "date-time": "2026-06-25T05:03:17Z",
+    "timestamp": 1782363797362,
+    "version": "3.54.5"
+  },
+  "update-to": [
+    {
+      "DOI": "10.1002/14651858.cd007293.pub3",
+      "type": "new_version",
+      "label": "New version",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2019,
+            1,
+            8
+          ]
+        ],
+        "date-time": "2019-01-08T00:00:00Z",
+        "timestamp": 1546905600000
+      }
+    }
+  ],
+  "reference-count": 59,
+  "publisher": "Wiley",
+  "issue": "1",
+  "content-domain": {
+    "domain": [
+      "wiley.com",
+      "cochranelibrary.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "DOI": "10.1002/14651858.cd007293.pub4",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2019,
+        1,
+        8
+      ]
+    ],
+    "date-time": "2019-01-08T21:29:29Z",
+    "timestamp": 1546982969000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 23,
+  "title": [
+    "Routine preoperative medical testing for cataract surgery"
+  ],
+  "prefix": "10.1002",
+  "volume": "2019",
+  "author": [
+    {
+      "given": "Lisa",
+      "family": "Keay",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "The University of Sydney; The George Institute for Global Health; Level 24, Maritime Trade Towers 207 Kent Street Sydney NSW Australia 2000"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Kristina",
+      "family": "Lindsley",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Johns Hopkins Bloomberg School of Public Health; Department of Epidemiology; 615 North Wolfe Street, Mail Room E6132 Baltimore Maryland USA 21205"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "James",
+      "family": "Tielsch",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "George Washington University; Department of Global Health, Milken Institute of Public Health; 950 New Hampshire Avenue, NW, Suite 400 Washington DC USA 20052"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Joanne",
+      "family": "Katz",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Johns Hopkins Bloomberg School of Public Health; Department of International Health; 615 N. Wolfe Street Baltimore Maryland USA 21209"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Oliver",
+      "family": "Schein",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Johns Hopkins University School of Medicine; Wilmer Eye Institute; 600 N. Wolfe Street, Wilmer 116 Baltimore Maryland USA 21287-9019"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2019,
+        1,
+        8
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0001|cit1",
+      "doi-asserted-by": "crossref",
+      "first-page": "369",
+      "DOI": "10.1177/112067210401400502",
+      "article-title": "Impact of preoperative testing on ophthalmologic and systemic outcomes in cataract surgery",
+      "volume": "14",
+      "author": "Cavallini",
+      "year": "2004",
+      "journal-title": "European Journal of Ophthalmology"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0002|cit2",
+      "doi-asserted-by": "crossref",
+      "first-page": "303",
+      "DOI": "10.1590/S0102-311X2004000100048",
+      "article-title": "Waste of medical tests in preoperative evaluation for cataract surgery",
+      "volume": "20",
+      "author": "Arieta",
+      "year": "2004",
+      "journal-title": "Cadernos de Saude Publica"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0004|cit3",
+      "unstructured": "Lira RP Preoperative tests in ambulatory cataract surgery in adults: is a routine necessary? Tese de Doutorado (Doctoral Thesis); Campinas: Faculdade de Ciências Médicas da UNICAMP 2002"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0003|cit4",
+      "doi-asserted-by": "crossref",
+      "first-page": "13",
+      "DOI": "10.1590/S1020-49892001000700003",
+      "article-title": "Are routine preoperative medical tests needed with cataract surgery?",
+      "volume": "10",
+      "author": "Lira",
+      "year": "2001",
+      "journal-title": "Pan American Journal of Public Health"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0005|cit5",
+      "doi-asserted-by": "crossref",
+      "first-page": "213",
+      "DOI": "10.1590/S0004-27492005000200011",
+      "article-title": "Predictive value of preoperative fasting glucose test of diabetic patients regarding surgical outcome in cataract surgery",
+      "volume": "68",
+      "author": "Nascimento",
+      "year": "2005",
+      "journal-title": "Arquivos Brasileiros de Oftalmologia"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0006|cit6",
+      "doi-asserted-by": "crossref",
+      "first-page": "285",
+      "DOI": "10.1076/ceyr.28.4.285.27832",
+      "article-title": "Are routine preoperative medical tests needed with cataract surgery? Study of visual acuity outcome",
+      "volume": "28",
+      "author": "Nascimento",
+      "year": "2004",
+      "journal-title": "Current Eye Research"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0007|cit7",
+      "doi-asserted-by": "crossref",
+      "first-page": "1784",
+      "DOI": "10.1016/S0161-6420(03)00785-1",
+      "article-title": "Risks and benefits of anticoagulant and antiplatelet medication use before cataract surgery",
+      "volume": "110",
+      "author": "Katz",
+      "year": "2003",
+      "journal-title": "Ophthalmology"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0008|cit8",
+      "doi-asserted-by": "crossref",
+      "first-page": "101",
+      "DOI": "10.3109/09286589709057102",
+      "article-title": "Effects of randomizing second eyes in a trial to evaluate preoperative medical testing for cataract surgery",
+      "volume": "4",
+      "author": "Katz",
+      "year": "1997",
+      "journal-title": "Ophthalmic Epidemiology"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0009|cit9",
+      "doi-asserted-by": "crossref",
+      "first-page": "599",
+      "DOI": "10.1016/S0002-9394(02)02236-5",
+      "article-title": "A self-administered health questionnaire for the preoperative risk stratification of patients undergoing cataract surgery",
+      "volume": "135",
+      "author": "Reeves",
+      "year": "2003",
+      "journal-title": "American Journal of Ophthalmology"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0010|cit10",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Schein OD Katz J Bass EB Tielsch JM Lubomski LH Feldman MA The value of preoperative medical testing for cataract surgery American Academy of Ophthalmology 1999 256",
+      "DOI": "10.1016/S0002-9394(00)00443-8"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0011|cit11",
+      "doi-asserted-by": "crossref",
+      "first-page": "168",
+      "DOI": "10.1056/NEJM200001203420304",
+      "article-title": "The value of routine preoperative medical testing before cataract surgery. Study of Medical Testing for Cataract Surgery",
+      "volume": "342",
+      "author": "Schein",
+      "year": "2000",
+      "journal-title": "New England Journal of Medicine"
+    },
+    {
+      "issue": "8473",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0012|cit12",
+      "doi-asserted-by": "crossref",
+      "first-page": "139",
+      "DOI": "10.1016/S0140-6736(86)92271-3",
+      "article-title": "Evaluation of a protocol for selective ordering of preoperative tests",
+      "volume": "1",
+      "author": "Blery",
+      "year": "1986",
+      "journal-title": "Lancet"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0013|cit13",
+      "doi-asserted-by": "crossref",
+      "first-page": "186",
+      "DOI": "10.1097/00132578-200107000-00029",
+      "article-title": "The value of routine preoperative medical testing before cataract surgery",
+      "volume": "2",
+      "author": "Brown",
+      "year": "2001",
+      "journal-title": "Evidence-Based Eye Care"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0014|cit14",
+      "doi-asserted-by": "crossref",
+      "first-page": "1547",
+      "DOI": "10.1093/clinchem/47.8.1547",
+      "article-title": "Laboratory-related outcomes in healthcare",
+      "volume": "47",
+      "author": "Bruns",
+      "year": "2001",
+      "journal-title": "Clinical Chemistry"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0015|cit15",
+      "doi-asserted-by": "crossref",
+      "first-page": "599",
+      "DOI": "10.1016/S0002-9394(02)01652-5",
+      "article-title": "Applying evidence-based medicine in ophthalmic practice",
+      "volume": "134",
+      "author": "Coleman",
+      "year": "2002",
+      "journal-title": "American Journal of Ophthalmology"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0016|cit16",
+      "unstructured": "Dessy A Mayro E Bailey R Wisner D Koka A Hark L A proposed intervention to decrease resident-performed cataract surgery cancellation Investigative Ophthalmology and Visual Science 2017 5054"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0017|cit17",
+      "doi-asserted-by": "crossref",
+      "first-page": "888",
+      "DOI": "10.1111/j.1365-2044.1996.tb12631.x",
+      "article-title": "Postoperative morbidity following cataract surgery",
+      "volume": "51",
+      "author": "Francis",
+      "year": "1996",
+      "journal-title": "Anaesthesia"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0018|cit18",
+      "first-page": "522",
+      "article-title": "Clinical value of preoperative comprehensive evaluation of cataract surgery in age-related cataract",
+      "volume": "42",
+      "author": "Gao",
+      "year": "2006",
+      "journal-title": "Chinese Journal of Ophthalmology"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0019|cit19",
+      "doi-asserted-by": "crossref",
+      "first-page": "151",
+      "DOI": "10.1136/ebm.5.5.151",
+      "article-title": "Routine testing before cataract surgery did not reduce medical adverse events",
+      "volume": "5",
+      "author": "Gibson",
+      "year": "2000",
+      "journal-title": "Evidence-Based Medicine"
+    },
+    {
+      "issue": "12",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0020|cit20",
+      "first-page": "487",
+      "article-title": "The value of medical testing before cataract surgery",
+      "volume": "21",
+      "author": "Gimbel",
+      "year": "2003",
+      "journal-title": "Clinical and Surgical Ophthalmology"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0021|cit21",
+      "first-page": "166",
+      "article-title": "The value of medical testing before cataract surgery",
+      "volume": "18",
+      "author": "Gimbel",
+      "year": "2000",
+      "journal-title": "Ophthalmic Practice"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0022|cit22",
+      "doi-asserted-by": "crossref",
+      "first-page": "246",
+      "DOI": "10.1007/BF03017792",
+      "article-title": "Elimination of routine testing in patients undergoing cataract surgery allows substantial savings in laboratory costs. A brief report",
+      "volume": "50",
+      "author": "Imasogie",
+      "year": "2003",
+      "journal-title": "Canadian Journal of Anaesthesia"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0023|cit23",
+      "first-page": "639",
+      "article-title": "Are routine preoperative laboratory screening tests necessary to evaluate ambulatory surgical patients?",
+      "volume": "104",
+      "author": "Johnson",
+      "year": "1988",
+      "journal-title": "Surgery"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0024|cit24",
+      "doi-asserted-by": "crossref",
+      "first-page": "203",
+      "DOI": "10.1007/s12009-002-0024-6",
+      "article-title": "Influence of preoperative testing on cancellation of ambulatory cataract surgery in adults",
+      "volume": "34",
+      "author": "Lira",
+      "year": "2002",
+      "journal-title": "Annals of Ophthalmology"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0025|cit25",
+      "doi-asserted-by": "crossref",
+      "first-page": "289",
+      "DOI": "10.1016/S0025-7125(16)30252-8",
+      "article-title": "Preoperative laboratory testing: should any tests be \"routine\" before surgery?",
+      "volume": "77",
+      "author": "Macpherson",
+      "year": "1993",
+      "journal-title": "Medical Clinics of North America"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0026|cit26",
+      "first-page": "519",
+      "article-title": "Preadmission evaluation and elective cataract surgery",
+      "volume": "78",
+      "author": "Maltzman",
+      "year": "1981",
+      "journal-title": "Journal of the Medical Society of New Jersey"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0027|cit27",
+      "unstructured": "NCT02903485 Bypassing anesthesiologist assessment before cataract surgery: a non inferiority study (CATARIDE) clinicaltrials.gov/ct2/show/NCT02903485"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0028|cit28",
+      "doi-asserted-by": "crossref",
+      "first-page": "190",
+      "DOI": "10.1097/00132578-200310000-00004",
+      "article-title": "A self-administered health questionnaire for the preoperative risk stratification of patients undergoing cataract surgery",
+      "volume": "4",
+      "author": "Smithen",
+      "year": "2003",
+      "journal-title": "Evidence-Based Eye Care"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0029|cit29",
+      "doi-asserted-by": "crossref",
+      "first-page": "633",
+      "DOI": "10.1590/S0004-27492007000400014",
+      "article-title": "Preoperative evaluation and cataract surgery",
+      "volume": "70",
+      "author": "Tallo",
+      "year": "2007",
+      "journal-title": "Arquivos Brasileiros de Oftalmologia"
+    },
+    {
+      "issue": "Pt 6",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0030|cit30",
+      "doi-asserted-by": "crossref",
+      "first-page": "847",
+      "DOI": "10.1038/eye.1997.217",
+      "article-title": "The value of pre-operative investigations in local anaesthetic ophthalmic surgery",
+      "volume": "11",
+      "author": "Walters",
+      "year": "1997",
+      "journal-title": "Eye"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0031|cit31",
+      "unstructured": "American Academy of Ophthalmology Cataract in the adult eye preferred practice pattern www.aao.org/preferred-practice-pattern/cataract-in-adult-eye-ppp-2016"
+    },
+    {
+      "issue": "22",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0032|cit32",
+      "doi-asserted-by": "crossref",
+      "first-page": "2373",
+      "DOI": "10.1016/j.jacc.2014.07.945",
+      "article-title": "2014 ACC/AHA guideline on perioperative cardiovascular evaluation and management of patients undergoing noncardiac surgery: executive summary",
+      "volume": "64",
+      "author": "Fleisher",
+      "year": "2014",
+      "journal-title": "Journal of the American College of Cardiology"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0033|cit33",
+      "doi-asserted-by": "crossref",
+      "first-page": "522",
+      "DOI": "10.1097/ALN.0b013e31823c1067",
+      "article-title": "Practice advisory for preanesthesia evaluation: an updated report by the American Society of Anesthesiologists Task Force on Preanesthesia Evaluation",
+      "volume": "116",
+      "author": "American Society of Anesthesiologists Task Force on Preanesthesia Evaluation",
+      "year": "2012",
+      "journal-title": "Anesthesiology"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0034|cit34",
+      "doi-asserted-by": "crossref",
+      "first-page": "1248",
+      "DOI": "10.1001/archopht.1995.01100100036025",
+      "article-title": "Do ophthalmologists, anesthesiologists, and internists agree about preoperative testing in healthy patients undergoing cataract surgery?",
+      "volume": "113",
+      "author": "Bass",
+      "year": "1995",
+      "journal-title": "Archives of Ophthalmology"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0035|cit35",
+      "first-page": "111",
+      "article-title": "Preoperative testing for cataract surgery",
+      "volume": "29",
+      "author": "Bellan",
+      "year": "1994",
+      "journal-title": "Canadian Journal of Ophthalmology"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0036|cit36",
+      "first-page": "237",
+      "article-title": "Refractive error blindness",
+      "volume": "79",
+      "author": "Dandona",
+      "year": "2001",
+      "journal-title": "Bulletin of the World Health Organization"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0037|cit37",
+      "doi-asserted-by": "crossref",
+      "first-page": "893",
+      "DOI": "10.1136/bjo.83.8.893",
+      "article-title": "Profile of patients presenting for cataract surgery in the UK: national data collection",
+      "volume": "83",
+      "author": "Desai",
+      "year": "1999",
+      "journal-title": "British Journal of Ophthalmology"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0038|cit38",
+      "doi-asserted-by": "crossref",
+      "first-page": "26",
+      "DOI": "10.1016/S0002-9394(99)80231-1",
+      "article-title": "The Madurai Intraocular Lens Study. III: Visual functioning and quality of life outcomes",
+      "volume": "125",
+      "author": "Fletcher",
+      "year": "1998",
+      "journal-title": "American Journal of Ophthalmology"
+    },
+    {
+      "issue": "34",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0039|cit39",
+      "first-page": "17",
+      "article-title": "Vision 2020: the cataract challenge",
+      "volume": "13",
+      "author": "Foster",
+      "year": "2007",
+      "journal-title": "Community Eye Health Journal"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0040|cit40",
+      "first-page": "130",
+      "article-title": "How to identify randomized controlled trials in MEDLINE: ten years on",
+      "volume": "94",
+      "author": "Glanville",
+      "year": "2006",
+      "journal-title": "Journal of the Medical Library Association"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0041|cit41",
+      "unstructured": "McMaster University (developed by Evidence Prime) GRADEpro GDT 2015"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0042|cit42",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD006291.pub3",
+      "article-title": "Sub-Tenon's anaesthesia versus topical anaesthesia for cataract surgery",
+      "author": "Guay",
+      "year": "2015",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0043|cit43",
+      "unstructured": "Higgins JPT Deeks JJ (editors) Chapter 7: Selecting studies and collecting data. In: Higgins JPT, Green S (editors). Cochrane Handbook for Systematic Reviews of Interventions Version 5.1.0 (updated March 2011). The Cochrane Collaboration, 2011 Available from handbook.cochrane.org"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0044|cit44",
+      "unstructured": "Higgins JPT Altman DG Sterne JAC (editors) Chapter 8: Assessing risk of bias in included studies. In: Higgins JPT, Churchill R, Chandler J, Cumpston MS (editors), Cochrane Handbook for Systematic Reviews of Interventions version 5.2.0 (updated June 2017), Cochrane, 2017 Available from www.training.cochrane.org/handbook"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0045|cit45",
+      "doi-asserted-by": "crossref",
+      "first-page": "356",
+      "DOI": "10.1046/j.1532-5415.2003.51109.x",
+      "article-title": "Visual risk factors for hip fracture in older people",
+      "volume": "51",
+      "author": "Ivers",
+      "year": "2003",
+      "journal-title": "Journal of the American Geriatrics Society"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0046|cit46",
+      "doi-asserted-by": "crossref",
+      "first-page": "1721",
+      "DOI": "10.1016/S0161-6420(01)00704-7",
+      "article-title": "Adverse intraoperative medical events and their association with anesthesia management strategies in cataract surgery",
+      "volume": "108",
+      "author": "Katz",
+      "year": "2001",
+      "journal-title": "Ophthalmology"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0047|cit47",
+      "doi-asserted-by": "crossref",
+      "first-page": "275",
+      "DOI": "10.1038/sj.eye.6701987",
+      "article-title": "Patient safety in cataract surgery",
+      "volume": "20",
+      "author": "Kelly",
+      "year": "2006",
+      "journal-title": "Eye"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0048|cit48",
+      "unstructured": "National Institute for Health and Care Excellence Cataracts in adults: management www.nice.org.uk/guidance/ng77"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0049|cit49",
+      "unstructured": "The Royal College of Ophthalmologists Cataract surgery guidelines www.rcophth.ac.uk/wp-content/uploads/2014/12/2010-SCI-069-Cataract-Surgery-Guidelines-2010-SEPTEMBER-2010.pdf"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0050|cit50",
+      "doi-asserted-by": "crossref",
+      "first-page": "599",
+      "DOI": "10.1016/S0002-9394(02)02236-5",
+      "article-title": "A self-administered health questionnaire for the preoperative risk stratification of patients undergoing cataract surgery",
+      "volume": "135",
+      "author": "Reeves",
+      "year": "2003",
+      "journal-title": "American Journal of Ophthalmology"
+    },
+    {
+      "key": "10.1002/14651858.CD007293.pub4-BIB0051|cit51",
+      "unstructured": "Nordic Cochrane Centre, The Cochrane Collaboration Review Manager 5 (RevMan 5) 2014"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0052|cit52",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD001323.pub2",
+      "article-title": "Surgical interventions for age-related cataract",
+      "author": "Riaz",
+      "year": "2006",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0053|cit53",
+      "doi-asserted-by": "crossref",
+      "first-page": "185",
+      "DOI": "10.1136/bjo.86.2.185",
+      "article-title": "The Auckland Cataract Study: co-morbidity, surgical techniques, and clinical outcomes in a public hospital service",
+      "volume": "86",
+      "author": "Riley",
+      "year": "2002",
+      "journal-title": "British Journal of Ophthalmology"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0054|cit54",
+      "doi-asserted-by": "crossref",
+      "first-page": "1129",
+      "DOI": "10.1001/archopht.1996.01100140331014",
+      "article-title": "Assessing what we do: the example of preoperative medical testing",
+      "volume": "114",
+      "author": "Schein",
+      "year": "1996",
+      "journal-title": "Archives of Ophthalmology"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0055|cit55",
+      "doi-asserted-by": "crossref",
+      "first-page": "7",
+      "DOI": "10.1016/S0025-7125(02)00147-5",
+      "article-title": "The case against routine preoperative laboratory testing",
+      "volume": "87",
+      "author": "Smetana",
+      "year": "2003",
+      "journal-title": "Medical Clinics of North America"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0056|cit56",
+      "doi-asserted-by": "crossref",
+      "first-page": "272",
+      "DOI": "10.1136/bjo.2005.080986",
+      "article-title": "The economic impact and cost of visual impairment in Australia",
+      "volume": "90",
+      "author": "Taylor",
+      "year": "2006",
+      "journal-title": "British Journal of Ophthalmology"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0057|cit57",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD007293",
+      "article-title": "Preoperative medical testing for cataract surgery",
+      "author": "Keay",
+      "year": "2008",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0058|cit58",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD007293.pub2",
+      "article-title": "Routine preoperative medical testing for cataract surgery",
+      "author": "Keay",
+      "year": "2009",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007293.pub4-BIB0059|cit59",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD007293.pub3",
+      "article-title": "Routine preoperative medical testing for cataract surgery",
+      "author": "Keay",
+      "year": "2012",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    }
+  ],
+  "container-title": [
+    "Cochrane Database of Systematic Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD007293.pub4/epdf/full",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        5
+      ]
+    ],
+    "date-time": "2025-12-05T01:47:43Z",
+    "timestamp": 1764899263000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://doi.wiley.com/10.1002/14651858.CD007293.pub4"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "name": "Cochrane Eyes and Vision Group",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "editor"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2019,
+        1,
+        8
+      ]
+    ]
+  },
+  "references-count": 59,
+  "journal-issue": {
+    "issue": "1",
+    "published-online": {
+      "date-parts": [
+        [
+          2019,
+          1
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1002/14651858.cd007293.pub4",
+  "relation": {},
+  "ISSN": [
+    "1465-1858"
+  ],
+  "issn-type": [
+    {
+      "value": "1465-1858",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2019,
+        1,
+        8
+      ]
+    ]
+  }
+}

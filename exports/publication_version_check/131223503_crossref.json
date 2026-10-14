@@ -1,0 +1,2371 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        25
+      ]
+    ],
+    "date-time": "2026-07-25T00:55:22Z",
+    "timestamp": 1784940922005,
+    "version": "3.55.0"
+  },
+  "reference-count": 175,
+  "publisher": "National Institute for Health and Care Research",
+  "issue": "19",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2021-03-01T00:00:00Z",
+        "timestamp": 1614556800000
+      },
+      "content-version": "unspecified",
+      "delay-in-days": 0,
+      "URL": "http://www.nationalarchives.gov.uk/doc/non-commercial-government-licence/non-commercial-government-licence.htm"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100000664",
+      "name": "Health Technology Assessment programme",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "10/50/02"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "10/50/02"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100000664",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "journalslibrary.nihr.ac.uk"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Health Technol Assess"
+  ],
+  "abstract": "<jats:sec id=\"abs1-1\"><jats:title>Background</jats:title><jats:p>Assistive technology and telecare have been promoted to manage the risks associated with independent living for people with dementia, but there is limited evidence of their effectiveness.</jats:p></jats:sec><jats:sec id=\"abs1-2\"><jats:title>Objectives</jats:title><jats:p>This trial aimed to establish whether or not assistive technology and telecare assessments and interventions extend the time that people with dementia can continue to live independently at home and whether or not they are cost-effective. Caregiver burden, the quality of life of caregivers and of people with dementia and whether or not assistive technology and telecare reduce safety risks were also investigated.</jats:p></jats:sec><jats:sec id=\"abs1-3\"><jats:title>Design</jats:title><jats:p>This was a pragmatic, randomised controlled trial. Blinding was not undertaken as it was not feasible to do so. All consenting participants were included in an intention-to-treat analysis.</jats:p></jats:sec><jats:sec id=\"abs1-4\"><jats:title>Setting</jats:title><jats:p>This trial was set in 12 councils in England with adult social services responsibilities.</jats:p></jats:sec><jats:sec id=\"abs1-5\"><jats:title>Participants</jats:title><jats:p>Participants were people with dementia living in the community who had an identified need that might benefit from assistive technology and telecare.</jats:p></jats:sec><jats:sec id=\"abs1-6\"><jats:title>Interventions</jats:title><jats:p>Participants were randomly assigned to receive either assistive technology and telecare recommended by a health or social care professional to meet their assessed needs (a full assistive technology and telecare package) or a pendant alarm, non-monitored smoke and carbon monoxide detectors and a key safe (a basic assistive technology and telecare package).</jats:p></jats:sec><jats:sec id=\"abs1-7\"><jats:title>Main outcome measures</jats:title><jats:p>The primary outcomes were time to admission to care and cost-effectiveness. Secondary outcomes assessed caregivers using the 10-item Center for Epidemiological Studies Depression Scale, the State–Trait Anxiety Inventory 6-item scale and the Zarit Burden Interview.</jats:p></jats:sec><jats:sec id=\"abs1-8\"><jats:title>Results</jats:title><jats:p>Of 495 participants, 248 were randomised to receive full assistive technology and telecare and 247 received the limited control. Comparing the assistive technology and telecare group with the control group, the hazard ratio for institutionalisation was 0.76 (95% confidence interval 0.58 to 1.01;<jats:italic>p</jats:italic> = 0.054). After adjusting for an imbalance in the baseline activities of daily living score between trial arms, the hazard ratio was 0.84 (95% confidence interval 0.63 to 1.12;<jats:italic>p</jats:italic> = 0.20). At 104 weeks, there were no significant differences between groups in health and social care resource use costs (intervention group – control group difference: mean –£909, 95% confidence interval –£5336 to £3345) or in societal costs (intervention group – control group difference: mean –£3545; 95% confidence interval –£13,914 to £6581). At 104 weeks, based on quality-adjusted life-years derived from the participant-rated EuroQol-5 Dimensions questionnaire, the intervention group had 0.105 (95% confidence interval –0.204 to –0.007) fewer quality-adjusted life-years than the control group. The number of quality-adjusted life-years derived from the proxy-rated EuroQol-5 Dimensions questionnaire did not differ between groups. Caregiver outcomes did not differ between groups over 24 weeks.</jats:p></jats:sec><jats:sec id=\"abs1-9\"><jats:title>Limitations</jats:title><jats:p>Compliance with the assigned trial arm was variable, as was the quality of assistive technology and telecare needs assessments. Attrition from assessments led to data loss additional to that attributable to care home admission and censoring events.</jats:p></jats:sec><jats:sec id=\"abs1-10\"><jats:title>Conclusions</jats:title><jats:p>A full package of assistive technology and telecare did not increase the length of time that participants with dementia remained in the community, and nor did it decrease caregiver burden, depression or anxiety, relative to a basic package of assistive technology and telecare. Use of the full assistive technology and telecare package did not increase participants’ health and social care or societal costs. Quality-adjusted life-years based on participants’ EuroQol-5 Dimensions questionnaire responses were reduced in the intervention group compared with the control group; groups did not differ in the number of quality-adjusted life-years based on the proxy-rated EuroQol-5 Dimensions questionnaire.</jats:p></jats:sec><jats:sec id=\"abs1-11\"><jats:title>Future work</jats:title><jats:p>Future work could examine whether or not improved assessment that is more personalised to an individual is beneficial.</jats:p></jats:sec><jats:sec id=\"abs1-12\"><jats:title>Trial registration</jats:title><jats:p>Current Controlled Trials ISRCTN86537017.</jats:p></jats:sec><jats:sec id=\"abs1-13\"><jats:title>Funding</jats:title><jats:p>This project was funded by the National Institute for Health Research (NIHR) Health Technology Assessment programme and will be published in full in<jats:italic>Health Technology Assessment</jats:italic>; Vol. 25, No. 19. See the NIHR Journals Library website for further project information.</jats:p></jats:sec>",
+  "DOI": "10.3310/hta25190",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        3,
+        23
+      ]
+    ],
+    "date-time": "2021-03-23T16:30:56Z",
+    "timestamp": 1616517056000
+  },
+  "page": "1-156",
+  "update-policy": "https://doi.org/10.3310/crossmarkpolicy",
+  "source": "Crossref",
+  "is-referenced-by-count": 51,
+  "title": [
+    "Assistive technology and telecare to maintain independent living at home for people with dementia: the ATTILA RCT"
+  ],
+  "prefix": "10.3310",
+  "volume": "25",
+  "clinical-trial-number": [
+    {
+      "clinical-trial-number": "isrctn86537017",
+      "registry": "10.18810/isrctn",
+      "type": "results"
+    }
+  ],
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-6380-2655",
+      "authenticated-orcid": true,
+      "given": "Rebecca",
+      "family": "Gathercole",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Department of Old Age Psychiatry, King’s College London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-0758-4905",
+      "authenticated-orcid": true,
+      "given": "Rosie",
+      "family": "Bradley",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medical Research Council Population Health Research Unit, University of Oxford, Oxford, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-5651-6258",
+      "authenticated-orcid": true,
+      "given": "Emma",
+      "family": "Harper",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medical Research Council Population Health Research Unit, University of Oxford, Oxford, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-6632-7215",
+      "authenticated-orcid": true,
+      "given": "Lucy",
+      "family": "Davies",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medical Research Council Population Health Research Unit, University of Oxford, Oxford, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-6398-6565",
+      "authenticated-orcid": true,
+      "given": "Lynn",
+      "family": "Pank",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medical Research Council Population Health Research Unit, University of Oxford, Oxford, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-8591-444X",
+      "authenticated-orcid": true,
+      "given": "Natalie",
+      "family": "Lam",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medical Research Council Population Health Research Unit, University of Oxford, Oxford, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-0743-6547",
+      "authenticated-orcid": true,
+      "given": "Anna",
+      "family": "Davies",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Health Sciences, City, University of London, London, UK"
+        },
+        {
+          "name": "Population Health Sciences, University of Bristol, Bristol, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-7614-9683",
+      "authenticated-orcid": true,
+      "given": "Emma",
+      "family": "Talbot",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Norfolk and Suffolk NHS Foundation Trust, Stowmarket, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-4059-6035",
+      "authenticated-orcid": true,
+      "given": "Emma",
+      "family": "Hooper",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Lancashire Care NHS Foundation Trust, Preston, UK"
+        },
+        {
+          "name": "Faculty of Biology, Medicine and Health, University of Manchester, Manchester, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Rachel",
+      "family": "Winson",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Cambridgeshire and Peterborough NHS Foundation Trust, Cambridge, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-0456-2556",
+      "authenticated-orcid": true,
+      "given": "Bethany",
+      "family": "Scutt",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Old Age Psychiatry, King’s College London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-3500-1922",
+      "authenticated-orcid": true,
+      "given": "Victoria Ordonez",
+      "family": "Montano",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Hertfordshire Community NHS Trust, Watford, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2853-9652",
+      "authenticated-orcid": true,
+      "given": "Samantha",
+      "family": "Nunn",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Cambridgeshire Community Services NHS Trust, Cambridge, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-3768-1797",
+      "authenticated-orcid": true,
+      "given": "Grace",
+      "family": "Lavelle",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Old Age Psychiatry, King’s College London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-6901-3115",
+      "authenticated-orcid": true,
+      "given": "Matthew",
+      "family": "Lariviere",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Centre for International Research on Care, Labour and Equalities, University of Sheffield, Sheffield, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1577-8806",
+      "authenticated-orcid": true,
+      "given": "Shashivadan",
+      "family": "Hirani",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Health Sciences, City, University of London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1909-1796",
+      "authenticated-orcid": true,
+      "given": "Stefano",
+      "family": "Brini",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Health Sciences, City, University of London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2547-5921",
+      "authenticated-orcid": true,
+      "given": "Andrew",
+      "family": "Bateman",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Health and Social Care, University of Essex, Colchester, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6443-3353",
+      "authenticated-orcid": true,
+      "given": "Peter",
+      "family": "Bentham",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Birmingham and Solihull Mental Health NHS Foundation Trust, Birmingham, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-9837-0645",
+      "authenticated-orcid": true,
+      "given": "Alistair",
+      "family": "Burns",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Faculty of Biology, Medicine and Health, University of Manchester, Manchester, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6363-5009",
+      "authenticated-orcid": true,
+      "given": "Barbara",
+      "family": "Dunk",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "South London and Maudsley NHS Foundation Trust, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6732-1699",
+      "authenticated-orcid": true,
+      "given": "Kirsty",
+      "family": "Forsyth",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Health Sciences, Queen Margaret University, Edinburgh, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-9480-5704",
+      "authenticated-orcid": true,
+      "given": "Chris",
+      "family": "Fox",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Norwich Medical School, University of East Anglia, Norwich, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-4340-4702",
+      "authenticated-orcid": true,
+      "given": "Catherine",
+      "family": "Henderson",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Care Policy and Evaluation Centre, London School of Economics and Political Science, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-1427-0215",
+      "authenticated-orcid": true,
+      "given": "Martin",
+      "family": "Knapp",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Care Policy and Evaluation Centre, London School of Economics and Political Science, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-1822-3643",
+      "authenticated-orcid": true,
+      "given": "Iracema",
+      "family": "Leroi",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Global Brain Health Institute, Trinity College Dublin, Dublin, Ireland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-6712-6079",
+      "authenticated-orcid": true,
+      "given": "Stanton",
+      "family": "Newman",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Health Sciences, City, University of London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-0837-5080",
+      "authenticated-orcid": true,
+      "given": "John",
+      "family": "O’Brien",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Psychiatry, University of Cambridge, Cambridge, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-0003-6911",
+      "authenticated-orcid": true,
+      "given": "Fiona",
+      "family": "Poland",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Health Sciences, University of East Anglia, Norwich, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-3128-7756",
+      "authenticated-orcid": true,
+      "given": "John",
+      "family": "Woolham",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Institute for Health Research (NIHR) Health & Social Care Workforce Research Unit, King’s College London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-4440-574X",
+      "authenticated-orcid": true,
+      "given": "Richard",
+      "family": "Gray",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medical Research Council Population Health Research Unit, University of Oxford, Oxford, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-3071-2338",
+      "authenticated-orcid": true,
+      "given": "Robert",
+      "family": "Howard",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Psychiatry, University College London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "6221",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        3
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "key20210319155341712_ref1-bib1",
+      "doi-asserted-by": "crossref",
+      "first-page": "349",
+      "DOI": "10.1186/1745-6215-14-349",
+      "article-title": "Does telecare prolong community living in dementia? A study protocol for a pragmatic, randomised controlled trial",
+      "volume": "14",
+      "author": "Leroi",
+      "year": "2013",
+      "journal-title": "Trials"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib2",
+      "doi-asserted-by": "crossref",
+      "first-page": "afaa284",
+      "DOI": "10.1093/ageing/afaa284",
+      "article-title": "The effectiveness and cost-effectiveness of assistive technology and telecare for independent living in dementia: a randomised controlled trial",
+      "author": "Howard",
+      "year": "2021",
+      "journal-title": "Age Ageing"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib3",
+      "unstructured": "Knapp M, Prince M, Albanese E, Banerjee S, Dhanasiri S, Fernandez JL, et al. Dementia UK: The Full Report. A Report into the Prevalence and Economic Cost of Dementia in the UK Produced by King’s College London and the London School of Economics. London: Alzheimer’s Society; 2007."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib4",
+      "volume-title": "The Trajectory of Dementia in the UK – Making a Difference",
+      "author": "Lewis",
+      "year": "2014"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib5",
+      "volume-title": "Securing Good Care for Older People. Taking a Long-term View",
+      "author": "Wanless",
+      "year": "2006"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib6",
+      "volume-title": "The Government’s Expenditure Plans. Departmental Report 2003",
+      "author": "Department of Health and Social Care"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib7",
+      "volume-title": "Care Homes for Older People: Volume 2. Admissions, Needs and Outcomes. The 1995/96 National Longitudinal Survey of Publicly-Funded Admissions",
+      "author": "Bebbington",
+      "year": "2001"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib8",
+      "unstructured": "Department of Health and Social Care. Living Well with Dementia: A National Dementia Strategy. London: Department of Health and Social Care; 2009."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib9",
+      "volume-title": "The Safe at Home Project",
+      "author": "Woolham",
+      "year": "2002"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib10",
+      "first-page": "91",
+      "volume-title": "Dementia Topics for the Millennium and Beyond",
+      "author": "Woolham",
+      "year": "2002"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib11",
+      "doi-asserted-by": "publisher",
+      "first-page": "408",
+      "DOI": "10.4017/gt.2010.09.03.006.00",
+      "article-title": "Assistive devices caregivers use and find helpful to manage problem behaviors of dementia",
+      "volume": "9",
+      "author": "Gitlin",
+      "year": "2010",
+      "journal-title": "Gerontechnology"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib12",
+      "volume-title": "Safe at Home: The Effectiveness of Assistive Technology in Supporting the Independence of People with Dementia: The Safe at Home Project",
+      "author": "Woolham",
+      "year": "2006"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib13",
+      "unstructured": "Department of Health and Social Care. Building Telecare in England. London: Department of Health and Social Care; 2005."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib14",
+      "unstructured": "Audit Commission. Assistive Technology: Independence and Well-being 4. London: Audit Commission; 2004."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib15",
+      "doi-asserted-by": "publisher",
+      "first-page": "455",
+      "DOI": "10.1093/ageing/30.6.455",
+      "article-title": "Assistive technology in elderly care",
+      "volume": "30",
+      "author": "Miskelly",
+      "year": "2001",
+      "journal-title": "Age Ageing"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib16",
+      "doi-asserted-by": "publisher",
+      "first-page": "571",
+      "DOI": "10.1093/ageing/afh190",
+      "article-title": "Can adapting the homes of older people and providing assistive technology pay its way?",
+      "volume": "33",
+      "author": "Lansley",
+      "year": "2004",
+      "journal-title": "Age and Ageing"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib17",
+      "volume-title": "An Evaluation of Falkirk’s Mobile Community Alarms Service",
+      "author": "Mitchell",
+      "year": "1996"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib18",
+      "volume-title": "At Home with AT (Assistive Technology). An Evaluation of the Practical and Ethical Implications of Assistive Technology and Devices to Support People with Dementia and their Carers",
+      "author": "Cash",
+      "year": "2004"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib19",
+      "doi-asserted-by": "publisher",
+      "first-page": "31",
+      "DOI": "10.1108/14717794200100006",
+      "article-title": "Practical solutions for the integration of community alarms, assistive technologies and telecare",
+      "volume": "2",
+      "author": "Doughty",
+      "year": "2001",
+      "journal-title": "Qual Ageing Older Adults"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib20",
+      "doi-asserted-by": "publisher",
+      "first-page": "88",
+      "DOI": "10.1097/JGP.0b013e318187dde5",
+      "article-title": "Intelligent assistive technology applications to dementia care: current capabilities, limitations, and future challenges",
+      "volume": "17",
+      "author": "Bharucha",
+      "year": "2009",
+      "journal-title": "Am J Geriatr Psychiatry"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib21",
+      "unstructured": "Barlow J. Building an Evidence Base for Successful Telecare Implementation. Updated Report of the Evidence Working Group of the Telecare Policy Collaborative Chaired by James Barlow. London: Care Services Improvement Partnership; 2006."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib22",
+      "volume-title": "ASTRID: A Social and Technological Response to Meeting the Needs of Individuals with Dementia and their Carers; A Guide to Using Technology Within Dementia Care",
+      "author": "Marshall",
+      "year": "2000"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib23",
+      "first-page": "11",
+      "article-title": "Building a local infrastructure that supports the use of assistive technology in the care of people with dementia",
+      "volume": "20",
+      "author": "Frisby",
+      "year": "2002",
+      "journal-title": "Res Policy Plan"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib24",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.2307/j.ctt1t8951n",
+      "volume-title": "Social Alarms to Telecare: Older People’s Services in Transition",
+      "author": "Fisk",
+      "year": "2003"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib25",
+      "first-page": "149",
+      "article-title": "Assistive technology, telecare, and dementia: some implications of current policies and guidance",
+      "volume": "24",
+      "author": "Woolham",
+      "year": "2006",
+      "journal-title": "Res Policy Plan"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib26",
+      "unstructured": "Department of Health and Social Care. Transforming Adult Social Care. London: Department of Health and Social Care; 2009."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib27",
+      "volume-title": "Wanless Social Care Review: Telecare and Older People",
+      "author": "Poole",
+      "year": "2006"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib28",
+      "volume-title": "Perspectives on Telehealth and Telecare: Learning from the 12 Whole System Demonstrator Action Network (WSDAN) Sites. WSDAN Briefing Paper",
+      "author": "Girodano",
+      "year": "2010"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib29",
+      "doi-asserted-by": "publisher",
+      "first-page": "184",
+      "DOI": "10.1186/1472-6963-11-184",
+      "article-title": "A comprehensive evaluation of the impact of telemonitoring in patients with long-term conditions and social care needs: protocol for the whole systems demonstrator cluster randomised trial",
+      "volume": "11",
+      "author": "Bower",
+      "year": "2011",
+      "journal-title": "BMC Health Serv Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib30",
+      "doi-asserted-by": "publisher",
+      "first-page": "f653",
+      "DOI": "10.1136/bmj.f653",
+      "article-title": "Effect of telehealth on quality of life and psychological outcomes over 12 months (Whole Systems Demonstrator telehealth questionnaire study): nested study of patient reported outcomes in a pragmatic, cluster randomised controlled trial",
+      "volume": "346",
+      "author": "Cartwright",
+      "year": "2013",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib31",
+      "doi-asserted-by": "publisher",
+      "first-page": "f1035",
+      "DOI": "10.1136/bmj.f1035",
+      "article-title": "Cost effectiveness of telehealth for patients with long term conditions (Whole Systems Demonstrator telehealth questionnaire study): nested economic evaluation in a pragmatic, cluster randomised controlled trial",
+      "volume": "346",
+      "author": "Henderson",
+      "year": "2013",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib32",
+      "doi-asserted-by": "publisher",
+      "first-page": "e3874",
+      "DOI": "10.1136/bmj.e3874",
+      "article-title": "Effect of telehealth on use of secondary care and mortality: findings from the Whole System Demonstrator cluster randomised trial",
+      "volume": "344",
+      "author": "Steventon",
+      "year": "2012",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib33",
+      "doi-asserted-by": "publisher",
+      "first-page": "334",
+      "DOI": "10.1093/ageing/aft185",
+      "article-title": "The effect of telecare on the quality of life and psychological well-being of elderly recipients of social care over a 12-month period: the Whole Systems Demonstrator cluster randomised trial",
+      "volume": "43",
+      "author": "Hirani",
+      "year": "2014",
+      "journal-title": "Age Ageing"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib34",
+      "doi-asserted-by": "publisher",
+      "first-page": "501",
+      "DOI": "10.1093/ageing/aft008",
+      "article-title": "Effect of telecare on use of health and social care services: findings from the Whole Systems Demonstrator cluster randomised trial",
+      "volume": "42",
+      "author": "Steventon",
+      "year": "2013",
+      "journal-title": "Age Ageing"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib35",
+      "doi-asserted-by": "publisher",
+      "first-page": "794",
+      "DOI": "10.1093/ageing/afu067",
+      "article-title": "Cost-effectiveness of telecare for people with social care needs: the Whole Systems Demonstrator cluster randomised trial",
+      "volume": "43",
+      "author": "Henderson",
+      "year": "2014",
+      "journal-title": "Age Ageing"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib36",
+      "doi-asserted-by": "publisher",
+      "first-page": "12",
+      "DOI": "10.1108/17549450200900030",
+      "article-title": "Measuring the ‘success’ of telehealth interventions",
+      "volume": "3",
+      "author": "Brownsell",
+      "year": "2009",
+      "journal-title": "J Assistive Technol"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib37",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD009627.pub2",
+      "article-title": "Assistive technology for memory support in dementia",
+      "volume": "6",
+      "author": "Van der Roest",
+      "year": "2017",
+      "journal-title": "Cochrane Database Syst Rev"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib38",
+      "volume-title": "The Case for Investment in Technology to Manage the Global Costs of Dementia",
+      "author": "Knapp",
+      "year": "2015"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib39",
+      "unstructured": "Department for Constitutional Affairs. Mental Capacity Act 2005: Code of Practice. London: The Stationery Office; 2007."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib40",
+      "doi-asserted-by": "publisher",
+      "first-page": "1727",
+      "DOI": "10.1007/s11136-011-9903-x",
+      "article-title": "Development and preliminary testing of the new five-level version of EQ-5D (EQ-5D-5L)",
+      "volume": "20",
+      "author": "Herdman",
+      "year": "2011",
+      "journal-title": "Qual Life Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib41",
+      "doi-asserted-by": "publisher",
+      "first-page": "1717",
+      "DOI": "10.1007/s11136-012-0322-4",
+      "article-title": "Measurement properties of the EQ-5D-5L compared to the EQ-5D-3L across eight patient groups: a multi-country study",
+      "volume": "22",
+      "author": "Janssen",
+      "year": "2013",
+      "journal-title": "Qual Life Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib42",
+      "unstructured": "NHS Improvement. Reference Cost Collection: National Schedule of Reference Costs, 2016–17 – NHS Trusts and NHS Foundation Trusts. London: NHS Improvement; 2017."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib43",
+      "volume-title": "Unit Costs of Health and Social Care 2017",
+      "author": "Curtis",
+      "year": "2017"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib44",
+      "first-page": "200",
+      "volume-title": "Measuring Mental Health Needs",
+      "author": "Beecham",
+      "year": "2001",
+      "edition": "2nd"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib45",
+      "doi-asserted-by": "publisher",
+      "first-page": "76",
+      "DOI": "10.1093/geront/gnq055",
+      "article-title": "Stress and burden among caregivers of patients with Lewy body dementia",
+      "volume": "51",
+      "author": "Leggett",
+      "year": "2011",
+      "journal-title": "Gerontologist"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib46",
+      "doi-asserted-by": "publisher",
+      "first-page": "460",
+      "DOI": "10.1177/1357633X16649531",
+      "article-title": "Quantifying beliefs regarding telehealth: development of the Whole Systems Demonstrator Service User Technology Acceptability Questionnaire",
+      "volume": "23",
+      "author": "Hirani",
+      "year": "2017",
+      "journal-title": "J Telemed Telecare"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib47",
+      "doi-asserted-by": "crossref",
+      "first-page": "452",
+      "DOI": "10.1007/978-0-387-79948-3_1929",
+      "volume-title": "Encyclopedia of Clinical Neuropsychology",
+      "author": "Fish",
+      "year": "2011"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib48",
+      "doi-asserted-by": "publisher",
+      "first-page": "2105",
+      "DOI": "10.1016/S0140-6736(04)16499-4",
+      "article-title": "Long-term donepezil treatment in 565 patients with Alzheimer’s disease (AD2000): randomised double-blind trial",
+      "volume": "363",
+      "author": "Courtney",
+      "year": "2004",
+      "journal-title": "Lancet"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib49",
+      "doi-asserted-by": "publisher",
+      "first-page": "1448",
+      "DOI": "10.1136/bmj.313.7070.1448a",
+      "article-title": "Declaration of Helsinki (1964)",
+      "volume": "313",
+      "author": "World Medical Assembly",
+      "year": "1996",
+      "journal-title": "Br Med J"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib50",
+      "unstructured": "International Conference on Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use – Good Clinical Practice. Code of Federal Regulations & Guidelines Vol. 1. International Committee on Harmonization. Philadelphia, PA: Barnett International/PAREXEL; 1997."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib51",
+      "doi-asserted-by": "publisher",
+      "first-page": "420",
+      "DOI": "10.1016/j.trci.2019.07.010",
+      "article-title": "Assessment of need and practice for assistive technology and telecare for people with dementia – The ATTILA (Assistive Technology and Telecare to maintain Independent Living At home for people with dementia) trial",
+      "volume": "5",
+      "author": "Forsyth",
+      "year": "2019",
+      "journal-title": "Alzheimers Dement"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib52",
+      "doi-asserted-by": "publisher",
+      "first-page": "a1655",
+      "DOI": "10.1136/bmj.a1655",
+      "article-title": "Developing and evaluating complex interventions: the new Medical Research Council guidance",
+      "volume": "337",
+      "author": "Craig",
+      "year": "2008",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib53",
+      "doi-asserted-by": "publisher",
+      "first-page": "g1687",
+      "DOI": "10.1136/bmj.g1687",
+      "article-title": "Better reporting of interventions: template for intervention description and replication (TIDieR) checklist and guide",
+      "volume": "348",
+      "author": "Hoffmann",
+      "year": "2014",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib54",
+      "volume-title": "Qualitative Research Practice : A Guide for Social Science Students and Researchers",
+      "author": "Ritchie",
+      "year": "2003"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib55",
+      "doi-asserted-by": "publisher",
+      "first-page": "306",
+      "DOI": "10.1016/j.techfore.2014.08.002",
+      "article-title": "Market adoption barriers of multi-stakeholder technology: smart homes for the aging population",
+      "volume": "89",
+      "author": "Ehrenhard",
+      "year": "2014",
+      "journal-title": "Technol Forecast Soc Change"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib56",
+      "doi-asserted-by": "publisher",
+      "first-page": "344",
+      "DOI": "10.1258/jtt.2010.006009",
+      "article-title": "Deployment of e-health services – a business model engineering strategy",
+      "volume": "16",
+      "author": "Kijl",
+      "year": "2010",
+      "journal-title": "J Telemed Telecare"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib57",
+      "volume-title": "User’s Manual for the Model of Human Occupation Screening Tool (MOHOST)",
+      "author": "Parkinson",
+      "year": "2002"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib58",
+      "volume-title": "Nonparametric Statistics for the Behavioral Sciences",
+      "author": "Siegel",
+      "year": "1956"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib59",
+      "doi-asserted-by": "publisher",
+      "first-page": "139",
+      "DOI": "10.1097/01.JGP.0000192478.82189.a8",
+      "article-title": "Mapping scores onto stages: mini-mental state examination and clinical dementia rating",
+      "volume": "14",
+      "author": "Perneczky",
+      "year": "2006",
+      "journal-title": "Am J Geriatr Psychiatry"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib60",
+      "doi-asserted-by": "publisher",
+      "first-page": "1763",
+      "DOI": "10.1213/ANE.0000000000002864",
+      "article-title": "Correlation coefficients: appropriate use and interpretation",
+      "volume": "126",
+      "author": "Schober",
+      "year": "2018",
+      "journal-title": "Anesth Analg"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib61",
+      "doi-asserted-by": "publisher",
+      "first-page": "708",
+      "DOI": "10.1016/j.jval.2012.02.008",
+      "article-title": "Interim scoring for the EQ-5D-5L: mapping the EQ-5D-5L to EQ-5D-3L value sets",
+      "volume": "15",
+      "author": "van Hout",
+      "year": "2012",
+      "journal-title": "Value Health"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib62",
+      "doi-asserted-by": "publisher",
+      "first-page": "1095",
+      "DOI": "10.1097/00005650-199711000-00002",
+      "article-title": "Modeling valuations for EuroQol health states",
+      "volume": "35",
+      "author": "Dolan",
+      "year": "1997",
+      "journal-title": "Med Care"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib63",
+      "volume-title": "Position Statement on Use of the EQ-5D-5L Valuation Set for England (Updated November 2018)",
+      "author": "National Institute for Health and Care Excellence"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib64",
+      "unstructured": "HM Treasury. The Green Book: Appraisal and Evaluation in Central Government. London: HM Treasury; 2015."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib65",
+      "doi-asserted-by": "publisher",
+      "first-page": "385",
+      "DOI": "10.3233/JAD-122392",
+      "article-title": "The GERAS Study: a prospective observational study of costs and resource use in community dwellers with Alzheimer’s disease in three European countries – study design and baseline findings",
+      "volume": "36",
+      "author": "Wimo",
+      "year": "2013",
+      "journal-title": "J Alzheimers Dis"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib66",
+      "unstructured": "Office for National Statistics. Annual Survey of Hours and Earnings: 2017 Provisional Results. Newport: Office for National Statistics; 2017."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib67",
+      "doi-asserted-by": "publisher",
+      "first-page": "269",
+      "DOI": "10.2165/00019053-200826040-00001",
+      "article-title": "An overview of methods and applications to value informal care in economic evaluations of healthcare",
+      "volume": "26",
+      "author": "Koopmanschap",
+      "year": "2008",
+      "journal-title": "PharmacoEconomics"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib68",
+      "volume-title": "Consortium Procurement",
+      "author": "Northern Housing Consortium"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib69",
+      "doi-asserted-by": "publisher",
+      "first-page": "25",
+      "DOI": "10.1191/0962280202sm269ra",
+      "article-title": "Simultaneous analysis of quality of life and survival data",
+      "volume": "11",
+      "author": "Billingham",
+      "year": "2002",
+      "journal-title": "Stat Methods Med Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib70",
+      "volume-title": "Applied Methods of Cost-effectiveness Analysis in Health Care",
+      "author": "Gray",
+      "year": "2011"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib71",
+      "doi-asserted-by": "publisher",
+      "first-page": "329",
+      "DOI": "10.1093/biomet/87.2.329",
+      "article-title": "Estimating medical costs with censored data",
+      "volume": "87",
+      "author": "Bang",
+      "year": "2000",
+      "journal-title": "Biometrika"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib72",
+      "doi-asserted-by": "publisher",
+      "first-page": "1010",
+      "DOI": "10.1002/hec.1640",
+      "article-title": "Estimating lifetime or episode-of-illness costs under censoring",
+      "volume": "19",
+      "author": "Basu",
+      "year": "2010",
+      "journal-title": "Health Econ"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib73",
+      "volume-title": "Multilevel and Longitudinal Modeling Using Stata",
+      "author": "Rabe-Hesketh",
+      "year": "2011",
+      "edition": "3rd"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib74",
+      "volume-title": "Handling Missing Data by Maximum Likelihood. Paper 312-2012. SAS Global Forum",
+      "author": "Allison",
+      "year": "2012"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib75",
+      "doi-asserted-by": "publisher",
+      "first-page": "415",
+      "DOI": "10.1002/hec.678",
+      "article-title": "Something old, something new, something borrowed, something blue: a framework for the marriage of health econometrics and cost-effectiveness analysis",
+      "volume": "11",
+      "author": "Hoch",
+      "year": "2002",
+      "journal-title": "Health Econ"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib76",
+      "volume-title": "Methods for the Economic Evaluation of Health Care Programmes",
+      "author": "Drummond",
+      "year": "2015",
+      "edition": "4th"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib77",
+      "unstructured": "National Institute for Health and Care Excellence. Guide to the Methods of Technology Appraisal 2013. London: NICE; 2013."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib78",
+      "doi-asserted-by": "publisher",
+      "first-page": "141",
+      "DOI": "10.2165/11539450-000000000-00000",
+      "article-title": "A systematic review to assess the policy-making relevance of dementia cost-of-illness studies in the US and Canada",
+      "volume": "29",
+      "author": "Oremus",
+      "year": "2011",
+      "journal-title": "PharmacoEconomics"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib79",
+      "doi-asserted-by": "publisher",
+      "first-page": "1523",
+      "DOI": "10.1007/s11136-004-7713-0",
+      "article-title": "Comparison of the minimally important difference for two health state utility measures: EQ-5D and SF-6D",
+      "volume": "14",
+      "author": "Walters",
+      "year": "2005",
+      "journal-title": "Qual Life Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib80",
+      "volume-title": "Economic Evaluation in Clinical Trials",
+      "author": "Glick",
+      "year": "2007"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib81",
+      "doi-asserted-by": "publisher",
+      "first-page": "390",
+      "DOI": "10.1016/j.jval.2010.08.002",
+      "article-title": "EQ-5D as a quality of life measure in people with dementia and their carers: evidence and key issues",
+      "volume": "14",
+      "author": "Hounsome",
+      "year": "2011",
+      "journal-title": "Value Health"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib82",
+      "doi-asserted-by": "publisher",
+      "first-page": "45",
+      "DOI": "10.1007/s11136-015-1065-9",
+      "article-title": "How does the EQ-5D perform when measuring quality of life in dementia against two other dementia-specific outcome measures?",
+      "volume": "25",
+      "author": "Aguirre",
+      "year": "2016",
+      "journal-title": "Qual Life Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib83",
+      "volume-title": "Women and Dementia: A Marginalised Majority",
+      "author": "Alzheimer’s Research UK"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib84",
+      "volume-title": "Key Facts About Carers and the People They Care For",
+      "author": "Trust"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib85",
+      "doi-asserted-by": "crossref",
+      "first-page": "217",
+      "DOI": "10.31887/DCNS.2009.11.2/hbrodaty",
+      "article-title": "Family caregivers of people with dementia",
+      "volume": "11",
+      "author": "Brodaty",
+      "year": "2009",
+      "journal-title": "Dialogues Clin Neurosci"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib86",
+      "volume-title": "Personal Social Services Survey of Adult Carers in England 2016–17",
+      "author": "NHS Digital"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib87",
+      "doi-asserted-by": "publisher",
+      "first-page": "123",
+      "DOI": "10.1016/j.neubiorev.2016.12.006",
+      "article-title": "A systematic review of the psychobiological burden of informal caregiving for patients with dementia: Focus on cognitive and biological markers of chronic stress",
+      "volume": "73",
+      "author": "Allen",
+      "year": "2017",
+      "journal-title": "Neurosci Biobehav Rev"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib88",
+      "volume-title": "State of Caring 2018",
+      "author": "Carers"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib89",
+      "doi-asserted-by": "publisher",
+      "first-page": "795",
+      "DOI": "10.1097/00019442-200509000-00008",
+      "article-title": "Anxiety and depression in family caregivers of people with Alzheimer disease: the LASER-AD study",
+      "volume": "13",
+      "author": "Mahoney",
+      "year": "2005",
+      "journal-title": "Am J Geriatr Psychiatry"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib90",
+      "doi-asserted-by": "publisher",
+      "first-page": "346",
+      "DOI": "10.1016/j.jalz.2012.01.012",
+      "article-title": "Predictors and outcomes for caregivers of people with mild cognitive impairment: a systematic literature review",
+      "volume": "9",
+      "author": "Seeher",
+      "year": "2013",
+      "journal-title": "Alzheimers Dement"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib91",
+      "doi-asserted-by": "publisher",
+      "first-page": "391",
+      "DOI": "10.1093/geront/gnu093",
+      "article-title": "The growing costs and burden of family caregiving of older adults: a review of paid sick leave and family leave policies",
+      "volume": "56",
+      "author": "Chen",
+      "year": "2016",
+      "journal-title": "Gerontologist"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib92",
+      "doi-asserted-by": "publisher",
+      "first-page": "S219",
+      "DOI": "10.1093/geronb/56.4.s219",
+      "article-title": "Informal costs of dementia care: estimates from the National Longitudinal Caregiver Study",
+      "volume": "56",
+      "author": "Moore",
+      "year": "2001",
+      "journal-title": "J Gerontol B Psychol Sci Soc Sci"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib93",
+      "doi-asserted-by": "publisher",
+      "first-page": "444",
+      "DOI": "10.1093/geront/gnu078",
+      "article-title": "Does dementia caregiving accelerate frailty? Findings from the health and retirement study",
+      "volume": "56",
+      "author": "Dassel",
+      "year": "2016",
+      "journal-title": "Gerontologist"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib94",
+      "doi-asserted-by": "publisher",
+      "first-page": "946",
+      "DOI": "10.1037/0033-2909.129.6.946",
+      "article-title": "Is caregiving hazardous to one’s physical health? A meta-analysis",
+      "volume": "129",
+      "author": "Vitaliano",
+      "year": "2003",
+      "journal-title": "Psychol Bull"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib95",
+      "doi-asserted-by": "publisher",
+      "first-page": "325",
+      "DOI": "10.1016/j.jalz.2017.02.001",
+      "article-title": "2017 Alzheimer’s disease facts and figures",
+      "volume": "13",
+      "author": "Alzheimer’s Association",
+      "year": "2017",
+      "journal-title": "Alzheimer Dement"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib96",
+      "volume-title": "Dementia UK: Update",
+      "author": "Prince",
+      "year": "2014",
+      "edition": "2nd"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib97",
+      "doi-asserted-by": "publisher",
+      "first-page": "98",
+      "DOI": "10.1016/j.jalz.2010.01.010",
+      "article-title": "The worldwide societal costs of dementia: estimates for 2009",
+      "volume": "6",
+      "author": "Wimo",
+      "year": "2010",
+      "journal-title": "Alzheimers Dement"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib98",
+      "doi-asserted-by": "publisher",
+      "first-page": "260",
+      "DOI": "10.1093/geront/26.3.260",
+      "article-title": "Subjective burden of husbands and wives as caregivers: a longitudinal study",
+      "volume": "26",
+      "author": "Zarit",
+      "year": "1986",
+      "journal-title": "Gerontologist"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib99",
+      "doi-asserted-by": "publisher",
+      "first-page": "340",
+      "DOI": "10.1111/inr.12194",
+      "article-title": "Caregiver burden for informal caregivers of patients with dementia: a systematic review",
+      "volume": "62",
+      "author": "Chiao",
+      "year": "2015",
+      "journal-title": "Int Nurs Rev"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib100",
+      "volume-title": "Family Caregivers: Disability, Illness and Ageing",
+      "author": "Schofield",
+      "year": "1998"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib101",
+      "doi-asserted-by": "publisher",
+      "first-page": "355",
+      "DOI": "10.1017/S0144686X98006965",
+      "article-title": "Carers of people aged over 50 with physical impairment, memory loss and dementia: a comparative study",
+      "volume": "18",
+      "author": "Schofield",
+      "year": "1998",
+      "journal-title": "Ageing Soc"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib102",
+      "doi-asserted-by": "publisher",
+      "first-page": "50",
+      "DOI": "10.1046/j.1365-2524.2000.00221.x",
+      "article-title": "‘Time and space’: carers’ views about respite care",
+      "volume": "8",
+      "author": "Ashworth",
+      "year": "2000",
+      "journal-title": "Health Soc Care Community"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib103",
+      "doi-asserted-by": "publisher",
+      "first-page": "946",
+      "DOI": "10.1176/appi.ajp.2012.11101529",
+      "article-title": "Meta-analysis of nonpharmacological interventions for neuropsychiatric symptoms of dementia",
+      "volume": "169",
+      "author": "Brodaty",
+      "year": "2012",
+      "journal-title": "Am J Psychiatry"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib104",
+      "doi-asserted-by": "publisher",
+      "first-page": "120",
+      "DOI": "10.1080/713650019",
+      "article-title": "Psychosocial interventions for caregivers of people with dementia: a systematic review",
+      "volume": "5",
+      "author": "Cooke",
+      "year": "2001",
+      "journal-title": "Aging Ment Health"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib105",
+      "doi-asserted-by": "publisher",
+      "first-page": "210",
+      "DOI": "10.1093/geront/gnu123",
+      "article-title": "Translating evidence-based dementia caregiving interventions into practice: state-of-the-science and next steps",
+      "volume": "55",
+      "author": "Gitlin",
+      "year": "2015",
+      "journal-title": "Gerontologist"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib106",
+      "doi-asserted-by": "publisher",
+      "first-page": "461829",
+      "DOI": "10.1155/2013/461829",
+      "article-title": "Using information and communication technology in home care for communication between patients, family members, and healthcare professionals: a systematic review",
+      "volume": "2013",
+      "author": "Lindberg",
+      "year": "2013",
+      "journal-title": "Int J Telemed Appl"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib107",
+      "volume-title": "Information and Communication Technologies: A World Bank Group Strategy",
+      "author": "Schware",
+      "year": "2002"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib108",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1016/j.trci.2018.11.003",
+      "article-title": "The effects of information and communication technologies on informal caregivers of persons living with dementia: a systematic review",
+      "volume": "5",
+      "author": "Lucero",
+      "year": "2019",
+      "journal-title": "Alzheimers Dement"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib109",
+      "doi-asserted-by": "publisher",
+      "first-page": "582",
+      "DOI": "10.1111/hsc.12035",
+      "article-title": "Systematic review of the effects of telecare provided for a person with social care needs on outcomes for their informal carers",
+      "volume": "21",
+      "author": "Davies",
+      "year": "2013",
+      "journal-title": "Health Soc Care Community"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib110",
+      "doi-asserted-by": "publisher",
+      "first-page": "192",
+      "DOI": "10.1109/titb.2005.855552",
+      "article-title": "Impact of monitoring technology in assisted living: outcome pilot",
+      "volume": "10",
+      "author": "Alwan",
+      "year": "2006",
+      "journal-title": "IEEE Trans Inf Technol Biomed"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib111",
+      "volume-title": "Service User and Carer Views of Telecare in Derbyshire",
+      "author": "Mellors",
+      "year": "2009"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib112",
+      "volume-title": "Enabling Technologies for People with Dementia: National Report on Results from Norway",
+      "author": "Holthe",
+      "year": "2004"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib113",
+      "volume-title": "The Safe at Home Project: Using Technology to Help People with Dementia Remain Living in their Own Homes in Northampton",
+      "author": "Woolham",
+      "year": "2005"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib114",
+      "doi-asserted-by": "publisher",
+      "first-page": "102",
+      "DOI": "10.1176/ajp.148.1.102",
+      "article-title": "Reliability of a Standardized Mini-Mental State Examination compared with the traditional Mini-Mental State Examination",
+      "volume": "148",
+      "author": "Molloy",
+      "year": "1991",
+      "journal-title": "Am J Psychiatry"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib115",
+      "doi-asserted-by": "publisher",
+      "first-page": "649",
+      "DOI": "10.1093/geront/20.6.649",
+      "article-title": "Relatives of the impaired elderly: correlates of feelings of burden",
+      "volume": "20",
+      "author": "Zarit",
+      "year": "1980",
+      "journal-title": "Gerontologist"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib116",
+      "doi-asserted-by": "publisher",
+      "first-page": "301",
+      "DOI": "10.1111/j.2044-8260.1992.tb00997.x",
+      "article-title": "The development of a six-item short-form of the state scale of the Spielberger State-Trait Anxiety Inventory (STAI)",
+      "volume": "31",
+      "author": "Marteau",
+      "year": "1992",
+      "journal-title": "Br J Clin Psychol"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib117",
+      "doi-asserted-by": "publisher",
+      "first-page": "292",
+      "DOI": "10.1177/0049124189018002004",
+      "article-title": "The analysis of social science data with missing values",
+      "volume": "18",
+      "author": "Little",
+      "year": "1989",
+      "journal-title": "Soc Methods Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib118",
+      "doi-asserted-by": "publisher",
+      "first-page": "543",
+      "DOI": "10.2307/2289460",
+      "article-title": "The calculation of posterior distributions by data augmentation: comment: a noniterative sampling/importance resampling alternative to the data augmentation algorithm for creating a few imputations when fractions of missing information are modest: the SIR algorithm",
+      "volume": "82",
+      "author": "Rubin",
+      "year": "1987",
+      "journal-title": "J Am Stat Assoc"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib119",
+      "doi-asserted-by": "publisher",
+      "first-page": "3",
+      "DOI": "10.1177/096228029900800102",
+      "article-title": "Multiple imputation: a primer",
+      "volume": "8",
+      "author": "Schafer",
+      "year": "1999",
+      "journal-title": "Stat Methods Med Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib120",
+      "doi-asserted-by": "publisher",
+      "first-page": "1160",
+      "DOI": "10.1017/S1041610208007564",
+      "article-title": "Measurement of informal care time in a study of patients with dementia",
+      "volume": "20",
+      "author": "Neubauer",
+      "year": "2008",
+      "journal-title": "Int Psychogeriatr"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib121",
+      "doi-asserted-by": "publisher",
+      "first-page": "293",
+      "DOI": "10.1016/j.jagp.2014.05.005",
+      "article-title": "The two-year incidence of depression and anxiety disorders in spousal caregivers of persons with dementia: who is at the greatest risk?",
+      "volume": "23",
+      "author": "Joling",
+      "year": "2015",
+      "journal-title": "Am J Geriatr Psychiatry"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib122",
+      "doi-asserted-by": "publisher",
+      "first-page": "247",
+      "DOI": "10.1093/geront/38.2.247",
+      "article-title": "Factors associated with symptoms of depression among informal caregivers of demented elders in the community",
+      "volume": "38",
+      "author": "Meshefedjian",
+      "year": "1998",
+      "journal-title": "Gerontologist"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib123",
+      "doi-asserted-by": "publisher",
+      "first-page": "191",
+      "DOI": "10.1016/j.maturitas.2010.02.009",
+      "article-title": "Factors determining the impact of care-giving on caregivers of elderly patients with dementia. A systematic literature review",
+      "volume": "66",
+      "author": "Schoenmakers",
+      "year": "2010",
+      "journal-title": "Maturitas"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib124",
+      "doi-asserted-by": "publisher",
+      "first-page": "12",
+      "DOI": "10.1016/j.ijchp.2018.07.004",
+      "article-title": "Empathy in informal dementia caregivers and its relationship with depression, anxiety, and burden",
+      "volume": "19",
+      "author": "Jütten",
+      "year": "2019",
+      "journal-title": "Int J Clin Health Psychol"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib125",
+      "doi-asserted-by": "publisher",
+      "first-page": "e0116622",
+      "DOI": "10.1371/journal.pone.0116622",
+      "article-title": "Effectiveness of an Internet intervention for family caregivers of people with dementia: results of a randomized controlled trial",
+      "volume": "10",
+      "author": "Blom",
+      "year": "2015",
+      "journal-title": "PLOS ONE"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib126",
+      "doi-asserted-by": "publisher",
+      "first-page": "374",
+      "DOI": "10.1093/fampra/cmw009",
+      "article-title": "Psychological distress in informal caregivers of patients with dementia in primary care: course and determinants",
+      "volume": "33",
+      "author": "Borsje",
+      "year": "2016",
+      "journal-title": "Fam Pract"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib127",
+      "doi-asserted-by": "publisher",
+      "first-page": "356",
+      "DOI": "10.1093/geront/42.3.356",
+      "article-title": "How effective are interventions with caregivers? An updated meta-analysis",
+      "volume": "42",
+      "author": "Sörensen",
+      "year": "2002",
+      "journal-title": "Gerontologist"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib128",
+      "doi-asserted-by": "publisher",
+      "first-page": "137",
+      "DOI": "10.1111/j.1744-1609.2008.00090.x",
+      "article-title": "Effectiveness of interventions that assist caregivers to support people with dementia living in the community: a systematic review",
+      "volume": "6",
+      "author": "Parker",
+      "year": "2008",
+      "journal-title": "Int J Evid Based Healthc"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib129",
+      "doi-asserted-by": "publisher",
+      "first-page": "18",
+      "DOI": "10.1186/1471-2318-7-18",
+      "article-title": "Systematic review of information and support interventions for caregivers of people with dementia",
+      "volume": "7",
+      "author": "Thompson",
+      "year": "2007",
+      "journal-title": "BMC Geriatr"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib130",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD005318.pub2",
+      "article-title": "Cognitive reframing for carers of people with dementia",
+      "volume": "11",
+      "author": "Vernooij-Dassen",
+      "year": "2011",
+      "journal-title": "Cochrane Database Syst Rev"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib131",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD009126.pub2",
+      "article-title": "Efficacy and experiences of telephone counselling for informal carers of people with dementia",
+      "volume": "9",
+      "author": "Lins",
+      "year": "2014",
+      "journal-title": "Cochrane Database Syst Rev"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib132",
+      "doi-asserted-by": "publisher",
+      "first-page": "161",
+      "DOI": "10.1159/000316119",
+      "article-title": "Nonpharmacological therapies in Alzheimer’s disease: a systematic review of efficacy",
+      "volume": "30",
+      "author": "Olazarán",
+      "year": "2010",
+      "journal-title": "Dement Geriatr Cogn Disord"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib133",
+      "doi-asserted-by": "publisher",
+      "first-page": "1109",
+      "DOI": "10.3233/JAD-160852",
+      "article-title": "Factors underpinning caregiver burden in frontotemporal dementia differ in spouses and their children",
+      "volume": "56",
+      "author": "Kaizik",
+      "year": "2017",
+      "journal-title": "J Alzheimers Dis"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib134",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1177/0046958017750432",
+      "article-title": "Depression among caregivers of patients with dementia",
+      "volume": "55",
+      "author": "Alfakhri",
+      "year": "2018",
+      "journal-title": "Inquiry"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib135",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.4324/9780203944769",
+      "volume-title": "Ethnography: Principles in Practice",
+      "author": "Hammersley",
+      "year": "2007"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib136",
+      "doi-asserted-by": "publisher",
+      "first-page": "65",
+      "DOI": "10.1186/s13063-015-1150-y",
+      "article-title": "Community occupational therapy for people with dementia and family carers (COTiD-UK) versus treatment as usual (Valuing Active Life in Dementia [VALID] programme): study protocol for a randomised controlled trial",
+      "volume": "17",
+      "author": "Wenborn",
+      "year": "2016",
+      "journal-title": "Trials"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib137",
+      "doi-asserted-by": "publisher",
+      "first-page": "398",
+      "DOI": "10.1177/1466138110393786",
+      "article-title": "Being embedded: a way forward for ethnographic research",
+      "volume": "12",
+      "author": "Lewis",
+      "year": "2011",
+      "journal-title": "Ethnography"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib138",
+      "doi-asserted-by": "publisher",
+      "first-page": "351",
+      "DOI": "10.1002/symb.66",
+      "article-title": "Short-term ethnography: intense routes to knowing",
+      "volume": "36",
+      "author": "Pink",
+      "year": "2013",
+      "journal-title": "Symb Interact"
+    },
+    {
+      "issue": "3",
+      "key": "key20210319155341712_ref1-bib139",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.17169/fqs-6.3.20",
+      "article-title": "Focused ethnography",
+      "volume": "6",
+      "author": "Knoblauch",
+      "year": "2005",
+      "journal-title": "Forum Qual Social Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib140",
+      "doi-asserted-by": "publisher",
+      "first-page": "4",
+      "DOI": "10.1111/0735-2751.00040",
+      "article-title": "The extended case method",
+      "volume": "16",
+      "author": "Burawoy",
+      "year": "1998",
+      "journal-title": "Soc Theory"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib141",
+      "doi-asserted-by": "crossref",
+      "first-page": "129",
+      "DOI": "10.1016/B978-0-08-023693-3.50011-9",
+      "volume-title": "The Craft of Social Anthropology",
+      "author": "Van Velsen",
+      "year": "1979"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib142",
+      "doi-asserted-by": "crossref",
+      "first-page": "75",
+      "DOI": "10.1007/BF02766777",
+      "article-title": "Criteria for assessing the trustworthiness of naturalistic inquiries",
+      "volume": "29",
+      "author": "Guba",
+      "year": "1981",
+      "journal-title": "Educ Commun Technol J"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib143",
+      "first-page": "105",
+      "article-title": "Competing Paradigms in Qualitative Research",
+      "volume-title": "Handbook of Qualitative Research",
+      "author": "Guba",
+      "year": "1994"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib144",
+      "unstructured": "Office for National Statistics. Towns and cities analysis, England and Wales, March 2016. Newport: Office for National Statistics; 2016."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib145",
+      "doi-asserted-by": "publisher",
+      "first-page": "2502",
+      "DOI": "10.1017/S0144686X18000661",
+      "article-title": "Personalisation, customisation and bricolage: how people with dementia and their families make assistive technology work for them",
+      "volume": "39",
+      "author": "Gibson",
+      "year": "2019",
+      "journal-title": "Ageing Soc"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib146",
+      "doi-asserted-by": "publisher",
+      "first-page": "86",
+      "DOI": "10.1016/j.socscimed.2013.05.036",
+      "article-title": "What matters to older people with assisted living needs? A phenomenological analysis of the use and non-use of telehealth and telecare",
+      "volume": "93",
+      "author": "Greenhalgh",
+      "year": "2013",
+      "journal-title": "Soc Sci Med"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib147",
+      "doi-asserted-by": "publisher",
+      "first-page": "438",
+      "DOI": "10.1111/hex.12109",
+      "article-title": "Ethical implications of home telecare for older people: a framework derived from a multisited participative study",
+      "volume": "18",
+      "author": "Mort",
+      "year": "2015",
+      "journal-title": "Health Expect"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib148",
+      "doi-asserted-by": "publisher",
+      "first-page": "220",
+      "DOI": "10.1186/1472-6963-12-220",
+      "article-title": "Exploring barriers to participation and adoption of telehealth and telecare within the Whole System Demonstrator trial: a qualitative study",
+      "volume": "12",
+      "author": "Sanders",
+      "year": "2012",
+      "journal-title": "BMC Health Serv Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib149",
+      "doi-asserted-by": "publisher",
+      "first-page": "104",
+      "DOI": "10.1016/j.jalz.2017.10.006",
+      "article-title": "Home is where the future is: the BrightFocus Foundation consensus panel on dementia care",
+      "volume": "14",
+      "author": "Samus",
+      "year": "2018",
+      "journal-title": "Alzheimers Dement"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib150",
+      "doi-asserted-by": "publisher",
+      "first-page": "378",
+      "DOI": "10.1080/13607863.2011.614594",
+      "article-title": "Community-dwelling persons with dementia: what do they need? What do they demand? What do they do? A systematic review on the subjective experiences of persons with dementia",
+      "volume": "16",
+      "author": "von Kutzleben",
+      "year": "2012",
+      "journal-title": "Aging Ment Health"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib151",
+      "unstructured": "Department of Health and Social Care. Prime Minister’s Challenge on Dementia 2020: Implementation Plan. London: Department of Health and Social Care; 2016."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib152",
+      "doi-asserted-by": "publisher",
+      "first-page": "487",
+      "DOI": "10.1080/13607860802607314",
+      "article-title": "Symbolic meaning of relocation to a residential care facility for persons with dementia",
+      "volume": "13",
+      "author": "Aminzadeh",
+      "year": "2009",
+      "journal-title": "Aging Ment Health"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib153",
+      "doi-asserted-by": "publisher",
+      "first-page": "251",
+      "DOI": "10.1159/000351863",
+      "article-title": "Preventing and managing indoor falls with home-based technologies in mild and moderate Alzheimer’s disease patients: pilot study in a community dwelling",
+      "volume": "36",
+      "author": "Tchalla",
+      "year": "2013",
+      "journal-title": "Dementia and geriatric cognitive disorders"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib154",
+      "doi-asserted-by": "publisher",
+      "first-page": "942",
+      "DOI": "10.1080/13607863.2018.1455805",
+      "article-title": "Effectiveness of assistive technology in improving the safety of people with dementia: a systematic review and meta-analysis",
+      "volume": "23",
+      "author": "Brims",
+      "year": "2019",
+      "journal-title": "Aging and Mental Health"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib155",
+      "volume-title": "Dementia Statistics",
+      "author": "Alzheimer’s Disease International"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib156",
+      "doi-asserted-by": "publisher",
+      "first-page": "379",
+      "DOI": "10.7326/0003-4819-148-5-200803040-00009",
+      "article-title": "Effectiveness of cholinesterase inhibitors and memantine for treating dementia: evidence review for a clinical practice guideline",
+      "volume": "148",
+      "author": "Raina",
+      "year": "2008",
+      "journal-title": "Ann Intern Med"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib157",
+      "doi-asserted-by": "publisher",
+      "first-page": "754",
+      "DOI": "10.1080/17483107.2017.1373151",
+      "article-title": "Benefits and burdens: family caregivers’ experiences of assistive technology (AT) in everyday life with persons with young-onset dementia (YOD)",
+      "volume": "13",
+      "author": "Holthe",
+      "year": "2018",
+      "journal-title": "Disabil Rehabil Assist Technol"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib158",
+      "doi-asserted-by": "publisher",
+      "first-page": "909",
+      "DOI": "10.1177/1471301216674816",
+      "article-title": "Assistive technologies at home for people with a memory disorder",
+      "volume": "17",
+      "author": "Nauha",
+      "year": "2018",
+      "journal-title": "Dementia"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib159",
+      "doi-asserted-by": "publisher",
+      "first-page": "510",
+      "DOI": "10.1111/1440-1630.12434",
+      "article-title": "Intelligent assistive technology for people living with dementia is a rapidly growing and changing area requiring clinical consideration",
+      "volume": "64",
+      "author": "Liddle",
+      "year": "2017",
+      "journal-title": "Aust Occup Ther J"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib160",
+      "doi-asserted-by": "publisher",
+      "first-page": "636",
+      "DOI": "10.1016/j.trci.2018.10.002",
+      "article-title": "User experience and clinical effectiveness with two wearable global positioning system devices in home dementia care",
+      "volume": "4",
+      "author": "Megges",
+      "year": "2018",
+      "journal-title": "Alzheimers Dement"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib161",
+      "doi-asserted-by": "publisher",
+      "first-page": "681",
+      "DOI": "10.1177/1471301214532643",
+      "article-title": "The provision of assistive technology products and services for people with dementia in the United Kingdom",
+      "volume": "15",
+      "author": "Gibson",
+      "year": "2016",
+      "journal-title": "Dementia"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib162",
+      "unstructured": "Momanyi K. Enhancing Quality in Social Care Through Economic Analysis. PhD thesis. Aberdeen: University of Aberdeen; 2018."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib163",
+      "volume-title": "Costing Community Care: Theory and Practice",
+      "author": "Allen",
+      "year": "1993"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib164",
+      "volume-title": "Unit Costs – Not Exactly Child’s Play",
+      "author": "Beecham",
+      "year": "2000"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib165",
+      "volume-title": "Unit Costs of Health and Social Care 2013",
+      "author": "Curtis",
+      "year": "2013"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib166",
+      "volume-title": "Unit Costs of Health and Social Care 2014",
+      "author": "Curtis",
+      "year": "2014"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib167",
+      "volume-title": "Evaluation of the East Sussex Carers’ Breaks Demonstrator Site",
+      "author": "Banks",
+      "year": "2011"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib168",
+      "volume-title": "GOS Sight Test Fees",
+      "author": "Federation of (Ophthalmic and Dispensing) Opticians (FODO)",
+      "year": "2018"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib169",
+      "unstructured": "Department of Health and Social Care. General Ophthalmic Services: NHS Sight Test Fee, Increases to NHS Optical Voucher Values, Payments for Continuing Education and Training and Pre-registration Supervisors Grant. London: Department of Health and Social Care; 2016."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib170",
+      "unstructured": "Department of Health and Social Care. General Ophthalmic Services – Increases to NHS Sight Test Fee, Continuing Education and Training Payment and Pre-registration Supervisors Grant. London: Department of Health and Social Care; 2015."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib171",
+      "doi-asserted-by": "publisher",
+      "first-page": "211",
+      "DOI": "10.1016/j.jad.2010.07.026",
+      "article-title": "Treatment and prevention of depression after surgery for hip fracture in older people: cost-effectiveness analysis",
+      "volume": "128",
+      "author": "Romeo",
+      "year": "2011",
+      "journal-title": "J Affect Disord"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib172",
+      "volume-title": "Consumer Prices Index including owner occupiers’ housing costs (CPIH)",
+      "author": "Office for National Statistics (ONS)",
+      "year": "2019"
+    },
+    {
+      "issue": "3",
+      "key": "key20210319155341712_ref1-bib173",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3310/pgfar03030",
+      "article-title": "Changing practice in dementia care in the community: developing and testing evidence-based interventions, from timely diagnosis to end of life (EVIDEM)",
+      "volume": "3",
+      "author": "Iliffe",
+      "year": "2015",
+      "journal-title": "Programme Grants Appl Res"
+    },
+    {
+      "key": "key20210319155341712_ref1-bib174",
+      "unstructured": "NHS Digital. Prescription Cost Analysis England 2017. Leeds: NHS Digital; 2018."
+    },
+    {
+      "key": "key20210319155341712_ref1-bib175",
+      "volume-title": "Mileage Calculator",
+      "author": "Automobile Association"
+    }
+  ],
+  "container-title": [
+    "Health Technology Assessment"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://njl-admin.nihr.ac.uk/document/download/2036233",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.journalslibrary.nihr.ac.uk/publications/hta25190/hta25190.xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://njl-admin.nihr.ac.uk/document/download/2036233",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        8,
+        15
+      ]
+    ],
+    "date-time": "2023-08-15T15:38:06Z",
+    "timestamp": 1692113886000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.journalslibrary.nihr.ac.uk/hta/hta25190"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        3
+      ]
+    ]
+  },
+  "references-count": 175,
+  "journal-issue": {
+    "issue": "19",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          3
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.3310/hta25190"
+  ],
+  "URL": "https://doi.org/10.3310/hta25190",
+  "relation": {},
+  "ISSN": [
+    "1366-5278",
+    "2046-4924"
+  ],
+  "issn-type": [
+    {
+      "value": "1366-5278",
+      "type": "print"
+    },
+    {
+      "value": "2046-4924",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        3
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "This content has been made freely available to all.",
+      "name": "free",
+      "label": "Free to read"
+    },
+    {
+      "value": "1-2013",
+      "name": "contractual_start_date",
+      "label": "Contractual start date",
+      "group": {
+        "name": "article_history",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "9-2019",
+      "name": "editorial_review_begun",
+      "label": "Editorial review begun",
+      "group": {
+        "name": "article_history",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "12-2019",
+      "name": "accepted_for_publication",
+      "label": "Accepted for publication",
+      "group": {
+        "name": "article_history",
+        "label": "Article History"
+      }
+    }
+  ]
+}

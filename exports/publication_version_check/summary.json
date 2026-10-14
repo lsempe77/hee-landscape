@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-14",
+  "original_groups": 57,
+  "original_records": 118,
+  "original_excess_records": 61,
+  "pairwise_comparisons": 71,
+  "crossref_records_retrieved": 103,
+  "original_excess_record_breakdown": {
+    "distinct_evaluations": 10,
+    "linked_reports_strong": 38,
+    "review_update": 8,
+    "unresolved_overlap": 1,
+    "registry_and_results_probable": 1,
+    "linked_reports_probable": 2,
+    "registry_and_results_strong": 1
+  },
+  "additional_links": 6,
+  "additional_included_records": 5,
+  "total_records_examined": 123,
+  "master_changed": false,
+  "caveat": "Linked study reporting is not automatically a duplicate economic evaluation. Counts are analyst assessments, not an independent dual-review adjudication."
+}

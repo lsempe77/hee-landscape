@@ -1,0 +1,299 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2024,
+        7,
+        10
+      ]
+    ],
+    "date-time": "2024-07-10T16:09:53Z",
+    "timestamp": 1720627793347
+  },
+  "reference-count": 0,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2015,
+            5,
+            1
+          ]
+        ],
+        "date-time": "2015-05-01T00:00:00Z",
+        "timestamp": 1430438400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Physiotherapy"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2015,
+        5
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.physio.2015.03.3701",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2015,
+        6,
+        5
+      ]
+    ],
+    "date-time": "2015-06-05T17:26:43Z",
+    "timestamp": 1433525203000
+  },
+  "page": "e814-e815",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "special_numbering": "S1",
+  "title": [
+    "Sarah: strengthening and stretching for people with rheumatoid arthritis of the hands: a randomised controlled trial"
+  ],
+  "prefix": "10.1016",
+  "volume": "101",
+  "author": [
+    {
+      "given": "E.",
+      "family": "Williamson",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "M.",
+      "family": "Williams",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "P.",
+      "family": "Heine",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "J.",
+      "family": "Adams",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "S.",
+      "family": "Dosanjh",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "D.",
+      "family": "Melina",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "M.",
+      "family": "Glover",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "J.",
+      "family": "Lord",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "C.",
+      "family": "McConkey",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "V.",
+      "family": "Nichols",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "A.",
+      "family": "Rahman",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "M.",
+      "family": "Underwood",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "S.",
+      "family": "Lamb",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "container-title": [
+    "Physiotherapy"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0031940615037347?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0031940615037347?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2018,
+        9,
+        21
+      ]
+    ],
+    "date-time": "2018-09-21T23:32:47Z",
+    "timestamp": 1537572767000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0031940615037347"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2015,
+        5
+      ]
+    ]
+  },
+  "references-count": 0,
+  "alternative-id": [
+    "S0031940615037347"
+  ],
+  "URL": "https://doi.org/10.1016/j.physio.2015.03.3701",
+  "relation": {},
+  "ISSN": [
+    "0031-9406"
+  ],
+  "issn-type": [
+    {
+      "value": "0031-9406",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2015,
+        5
+      ]
+    ]
+  }
+}

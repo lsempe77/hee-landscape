@@ -1,0 +1,376 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        2,
+        13
+      ]
+    ],
+    "date-time": "2026-02-13T13:57:46Z",
+    "timestamp": 1770991066556,
+    "version": "3.50.1"
+  },
+  "reference-count": 25,
+  "publisher": "American Society of Clinical Oncology (ASCO)",
+  "issue": "2",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "JOP"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2014,
+        3
+      ]
+    ]
+  },
+  "abstract": "<jats:p> The authors conclude that this survivorship care plan would be costly to introduce and would not be a cost-effective use of scarce health care resources. </jats:p>",
+  "DOI": "10.1200/jop.2013.001142",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2014,
+        3,
+        14
+      ]
+    ],
+    "date-time": "2014-03-14T22:27:45Z",
+    "timestamp": 1394836065000
+  },
+  "page": "e86-e92",
+  "source": "Crossref",
+  "is-referenced-by-count": 35,
+  "title": [
+    "Cost Effectiveness of a Survivorship Care Plan for Breast Cancer Survivors"
+  ],
+  "prefix": "10.1200",
+  "volume": "10",
+  "author": [
+    {
+      "given": "Doug",
+      "family": "Coyle",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "University of Ottawa; Ottawa Hospital Research Institute; Applied Health Economics Research Unit, Ottawa; Ontario Institute for Cancer Research; University of Toronto, Toronto; Ontario Clinical Oncology Group; McMaster University; and Juravinski Regional Cancer Centre, Hamilton, Ontario, Canada"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Eva",
+      "family": "Grunfeld",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Ottawa; Ottawa Hospital Research Institute; Applied Health Economics Research Unit, Ottawa; Ontario Institute for Cancer Research; University of Toronto, Toronto; Ontario Clinical Oncology Group; McMaster University; and Juravinski Regional Cancer Centre, Hamilton, Ontario, Canada"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Kathryn",
+      "family": "Coyle",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Ottawa; Ottawa Hospital Research Institute; Applied Health Economics Research Unit, Ottawa; Ontario Institute for Cancer Research; University of Toronto, Toronto; Ontario Clinical Oncology Group; McMaster University; and Juravinski Regional Cancer Centre, Hamilton, Ontario, Canada"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Gregory",
+      "family": "Pond",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Ottawa; Ottawa Hospital Research Institute; Applied Health Economics Research Unit, Ottawa; Ontario Institute for Cancer Research; University of Toronto, Toronto; Ontario Clinical Oncology Group; McMaster University; and Juravinski Regional Cancer Centre, Hamilton, Ontario, Canada"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Jim A.",
+      "family": "Julian",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Ottawa; Ottawa Hospital Research Institute; Applied Health Economics Research Unit, Ottawa; Ontario Institute for Cancer Research; University of Toronto, Toronto; Ontario Clinical Oncology Group; McMaster University; and Juravinski Regional Cancer Centre, Hamilton, Ontario, Canada"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Mark N.",
+      "family": "Levine",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Ottawa; Ottawa Hospital Research Institute; Applied Health Economics Research Unit, Ottawa; Ontario Institute for Cancer Research; University of Toronto, Toronto; Ontario Clinical Oncology Group; McMaster University; and Juravinski Regional Cancer Centre, Hamilton, Ontario, Canada"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "233",
+  "reference": [
+    {
+      "key": "B1",
+      "volume-title": "From Cancer Patient to Cancer Survivor: Lost in Transition",
+      "author": "Hewitt M",
+      "year": "2006"
+    },
+    {
+      "key": "B2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JOP.0723601"
+    },
+    {
+      "key": "B3",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JCO.2005.03.2235"
+    },
+    {
+      "key": "B4",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JCO.2011.36.8373"
+    },
+    {
+      "key": "B5",
+      "volume-title": "Canadian cancer statistics 2013",
+      "author": "Canadian Cancer Society",
+      "year": "2013"
+    },
+    {
+      "key": "B7",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1023/A:1008292128615"
+    },
+    {
+      "key": "B8",
+      "volume-title": "Guidelines for Economic Evaluation of Pharmaceuticals in Canada",
+      "author": "Canadian Agency for Drugs and Technologies",
+      "year": "2006",
+      "edition": "3"
+    },
+    {
+      "key": "B9",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/biostatistics/1.1.35"
+    },
+    {
+      "key": "B10",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1136/bmj.305.6846.160"
+    },
+    {
+      "key": "B11",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jhealeco.2006.09.002"
+    },
+    {
+      "key": "B12",
+      "first-page": "879",
+      "volume": "54",
+      "author": "Kharroubi S",
+      "year": "2005",
+      "journal-title": "Appl Stat"
+    },
+    {
+      "key": "B13",
+      "first-page": "81",
+      "volume": "17",
+      "author": "Walker M",
+      "year": "2006",
+      "journal-title": "Ann Oncol"
+    },
+    {
+      "key": "B16",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1503/cmaj.090845"
+    },
+    {
+      "key": "B19",
+      "first-page": "E20",
+      "volume": "27",
+      "author": "Coyle D",
+      "year": "2007",
+      "journal-title": "Med Decis Making"
+    },
+    {
+      "key": "B21",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0167-6296(94)00044-5"
+    },
+    {
+      "key": "B22",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00520-006-0035-8"
+    },
+    {
+      "key": "B23",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/qjmed/92.3.177"
+    },
+    {
+      "key": "B24",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2165/00019053-200017050-00006"
+    },
+    {
+      "key": "B25",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JCO.2012.41.7667"
+    },
+    {
+      "key": "B26",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/cncr.28068"
+    },
+    {
+      "key": "B27",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1177/0272989X09347016"
+    },
+    {
+      "key": "B28",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1524-4733.2006.00108.x"
+    },
+    {
+      "key": "B29",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/hec.1093"
+    },
+    {
+      "key": "B30",
+      "first-page": "102",
+      "volume": "24",
+      "author": "Evans WK",
+      "year": "2003",
+      "journal-title": "Chronic Dis Can"
+    },
+    {
+      "key": "B31",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2165/00019053-199814040-00003"
+    }
+  ],
+  "container-title": [
+    "Journal of Oncology Practice"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://ascopubs.org/doi/pdfdirect/10.1200/JOP.2013.001142",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2022,
+        5,
+        25
+      ]
+    ],
+    "date-time": "2022-05-25T22:11:50Z",
+    "timestamp": 1653516710000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://ascopubs.org/doi/10.1200/JOP.2013.001142"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2014,
+        3
+      ]
+    ]
+  },
+  "references-count": 25,
+  "journal-issue": {
+    "issue": "2",
+    "published-print": {
+      "date-parts": [
+        [
+          2014,
+          3
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1200/JOP.2013.001142"
+  ],
+  "URL": "https://doi.org/10.1200/jop.2013.001142",
+  "relation": {},
+  "ISSN": [
+    "1554-7477",
+    "1935-469X"
+  ],
+  "issn-type": [
+    {
+      "value": "1554-7477",
+      "type": "print"
+    },
+    {
+      "value": "1935-469X",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2014,
+        3
+      ]
+    ]
+  }
+}

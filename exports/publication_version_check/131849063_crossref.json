@@ -1,0 +1,451 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        4
+      ]
+    ],
+    "date-time": "2026-01-04T02:51:16Z",
+    "timestamp": 1767495076930
+  },
+  "reference-count": 20,
+  "publisher": "Oxford University Press (OUP)",
+  "issue": "4",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "European Journal of Cardio-Thoracic Surgery"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2014,
+        4,
+        1
+      ]
+    ]
+  },
+  "DOI": "10.1093/ejcts/ezt445",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2013,
+        9,
+        13
+      ]
+    ],
+    "date-time": "2013-09-13T04:07:59Z",
+    "timestamp": 1379045279000
+  },
+  "page": "693-698",
+  "source": "Crossref",
+  "is-referenced-by-count": 15,
+  "title": [
+    "Results of Li-Tho trial: a prospective randomized study on effectiveness of LigaSure(R) in lung resections"
+  ],
+  "prefix": "10.1093",
+  "volume": "45",
+  "author": [
+    {
+      "given": "L.",
+      "family": "Bertolaccini",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "A.",
+      "family": "Viti",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "A.",
+      "family": "Cavallo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "A.",
+      "family": "Terzi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "286",
+  "published-online": {
+    "date-parts": [
+      [
+        2013,
+        9,
+        12
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "3",
+      "key": "1_37628537",
+      "doi-asserted-by": "publisher",
+      "first-page": "365",
+      "DOI": "10.1016/j.thorsurg.2010.04.002",
+      "volume": "20",
+      "author": "Balsara",
+      "year": "2010",
+      "journal-title": "Thoracic surgery clinics",
+      "ISSN": "http://id.crossref.org/issn/1547-4127",
+      "issn-type": "print"
+    },
+    {
+      "issue": "12",
+      "key": "2_17929399",
+      "doi-asserted-by": "publisher",
+      "first-page": "1493",
+      "DOI": "10.1002/bjs.4362",
+      "volume": "90",
+      "author": "Lee",
+      "year": "2003",
+      "journal-title": "The British journal of surgery",
+      "ISSN": "http://id.crossref.org/issn/0007-1323",
+      "issn-type": "print"
+    },
+    {
+      "issue": "3",
+      "key": "3_17525486",
+      "doi-asserted-by": "publisher",
+      "first-page": "466",
+      "DOI": "10.1007/s00464-002-8536-0",
+      "volume": "17",
+      "author": "Dubuc-Lissoir",
+      "year": "2003",
+      "journal-title": "Surgical endoscopy",
+      "ISSN": "http://id.crossref.org/issn/0930-2794",
+      "issn-type": "print"
+    },
+    {
+      "issue": "2",
+      "key": "4_41167296",
+      "doi-asserted-by": "publisher",
+      "first-page": "226",
+      "DOI": "10.1016/j.ejcts.2005.11.017",
+      "volume": "29",
+      "year": "2006",
+      "journal-title": "European Journal of Cardio-Thoracic Surgery",
+      "ISSN": "http://id.crossref.org/issn/1010-7940",
+      "issn-type": "print"
+    },
+    {
+      "issue": "1",
+      "key": "5_40964425",
+      "doi-asserted-by": "publisher",
+      "first-page": "11",
+      "DOI": "10.1510/icvts.2008.199307",
+      "volume": "9",
+      "year": "2009",
+      "journal-title": "Interactive CardioVascular and Thoracic Surgery",
+      "ISSN": "http://id.crossref.org/issn/1569-9293",
+      "issn-type": "print"
+    },
+    {
+      "issue": "5",
+      "key": "6_38155042",
+      "doi-asserted-by": "publisher",
+      "first-page": "1168",
+      "DOI": "10.1016/j.jtcvs.2010.06.064",
+      "volume": "140",
+      "author": "Schuchert",
+      "year": "2010",
+      "journal-title": "The Journal of Thoracic and Cardiovascular Surgery",
+      "ISSN": "http://id.crossref.org/issn/0022-5223",
+      "issn-type": "print"
+    },
+    {
+      "issue": "4",
+      "key": "8_5715475",
+      "first-page": "233",
+      "volume": "42",
+      "author": "Craig",
+      "year": "1997",
+      "journal-title": "Journal of the Royal College of Surgeons of Edinburgh",
+      "ISSN": "http://id.crossref.org/issn/0035-8835",
+      "issn-type": "print"
+    },
+    {
+      "issue": "4",
+      "key": "9_10767357",
+      "doi-asserted-by": "publisher",
+      "first-page": "751",
+      "DOI": "10.1016/S0022-5223(99)70296-5",
+      "volume": "117",
+      "author": "Macchiarini",
+      "year": "1999",
+      "journal-title": "The Journal of Thoracic and Cardiovascular Surgery",
+      "ISSN": "http://id.crossref.org/issn/0022-5223",
+      "issn-type": "print"
+    },
+    {
+      "issue": "3",
+      "key": "10_40656964",
+      "doi-asserted-by": "publisher",
+      "first-page": "1062",
+      "DOI": "10.1016/j.athoracsur.2011.04.033",
+      "volume": "92",
+      "author": "Rivera",
+      "year": "2011",
+      "journal-title": "The Annals of Thoracic Surgery",
+      "ISSN": "http://id.crossref.org/issn/0003-4975",
+      "issn-type": "print"
+    },
+    {
+      "issue": "11",
+      "key": "11_36838813",
+      "doi-asserted-by": "publisher",
+      "first-page": "726",
+      "DOI": "10.7326/0003-4819-152-11-201006010-00232",
+      "volume": "152",
+      "year": "2010",
+      "journal-title": "Annals of Internal Medicine",
+      "ISSN": "http://id.crossref.org/issn/0003-4819",
+      "issn-type": "print"
+    },
+    {
+      "issue": "2",
+      "key": "12_31816547",
+      "doi-asserted-by": "publisher",
+      "first-page": "233",
+      "DOI": "10.1080/02841860802251559",
+      "volume": "48",
+      "author": "Ottosson",
+      "year": "2009",
+      "journal-title": "Acta oncologica (Stockholm, Sweden)",
+      "ISSN": "http://id.crossref.org/issn/0284-186X",
+      "issn-type": "print"
+    },
+    {
+      "issue": "1",
+      "key": "13_41818319",
+      "doi-asserted-by": "publisher",
+      "first-page": "32",
+      "DOI": "10.4338/ACI-2009-12-RA-0023",
+      "volume": "1",
+      "author": "Wright",
+      "year": "2010",
+      "ISSN": "http://id.crossref.org/issn/1869-0327",
+      "issn-type": "print"
+    },
+    {
+      "issue": "1",
+      "key": "14_5109283",
+      "doi-asserted-by": "publisher",
+      "first-page": "40",
+      "DOI": "10.1177/0272989X8900900108",
+      "volume": "9",
+      "author": "Dolan",
+      "year": "1989",
+      "journal-title": "Medical Decision Making",
+      "ISSN": "http://id.crossref.org/issn/0272-989X",
+      "issn-type": "print"
+    },
+    {
+      "issue": "2",
+      "key": "15_17485104",
+      "doi-asserted-by": "publisher",
+      "first-page": "186",
+      "DOI": "10.1097/00000658-200302000-00007",
+      "volume": "237",
+      "author": "Emam",
+      "year": "2003",
+      "journal-title": "Annals of surgery",
+      "ISSN": "http://id.crossref.org/issn/0003-4932",
+      "issn-type": "print"
+    },
+    {
+      "issue": "3",
+      "key": "16_41168643",
+      "doi-asserted-by": "publisher",
+      "first-page": "482",
+      "DOI": "10.1016/j.ejcts.2006.11.038",
+      "volume": "31",
+      "year": "2007",
+      "journal-title": "European Journal of Cardio-Thoracic Surgery",
+      "ISSN": "http://id.crossref.org/issn/1010-7940",
+      "issn-type": "print"
+    },
+    {
+      "issue": "4",
+      "key": "17_32091576",
+      "doi-asserted-by": "publisher",
+      "first-page": "284",
+      "DOI": "10.1177/1553350608324933",
+      "volume": "15",
+      "year": "2008",
+      "journal-title": "Surgical Innovation",
+      "ISSN": "http://id.crossref.org/issn/1553-3506",
+      "issn-type": "print"
+    },
+    {
+      "key": "18_46480403",
+      "first-page": "430",
+      "volume": "22",
+      "year": "2001",
+      "journal-title": "The Journal of Thoracic and Cardiovascular Surgery",
+      "ISSN": "http://id.crossref.org/issn/0022-5223",
+      "issn-type": "print"
+    },
+    {
+      "issue": "6",
+      "key": "19_9466865",
+      "doi-asserted-by": "publisher",
+      "first-page": "901",
+      "DOI": "10.1016/0003-4975(91)91001-C",
+      "volume": "51",
+      "author": "Graeber",
+      "year": "1991",
+      "journal-title": "The Annals of Thoracic Surgery",
+      "ISSN": "http://id.crossref.org/issn/0003-4975",
+      "issn-type": "print"
+    },
+    {
+      "issue": "1",
+      "key": "20_40964425",
+      "doi-asserted-by": "crossref",
+      "first-page": "11",
+      "DOI": "10.1510/icvts.2008.199307",
+      "volume": "9",
+      "year": "2009",
+      "journal-title": "Interactive CardioVascular and Thoracic Surgery",
+      "ISSN": "http://id.crossref.org/issn/1569-9293",
+      "issn-type": "print"
+    },
+    {
+      "issue": "4",
+      "key": "21_18121091",
+      "doi-asserted-by": "publisher",
+      "first-page": "1415",
+      "DOI": "10.1016/S0003-4975(03)01054-3",
+      "volume": "77",
+      "author": "Shigemura",
+      "year": "2004",
+      "journal-title": "The Annals of Thoracic Surgery",
+      "ISSN": "http://id.crossref.org/issn/0003-4975",
+      "issn-type": "print"
+    }
+  ],
+  "container-title": [
+    "European Journal of Cardio-Thoracic Surgery"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://academic.oup.com/ejcts/article-pdf/45/4/693/1030953/ezt445.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2017,
+        8,
+        22
+      ]
+    ],
+    "date-time": "2017-08-22T23:56:56Z",
+    "timestamp": 1503446216000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://academic.oup.com/ejcts/article-lookup/doi/10.1093/ejcts/ezt445"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2013,
+        9,
+        12
+      ]
+    ]
+  },
+  "references-count": 20,
+  "journal-issue": {
+    "issue": "4",
+    "published-online": {
+      "date-parts": [
+        [
+          2014,
+          3,
+          17
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2014,
+          4,
+          1
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1093/ejcts/ezt445",
+  "relation": {},
+  "ISSN": [
+    "1010-7940",
+    "1873-734X"
+  ],
+  "issn-type": [
+    {
+      "value": "1010-7940",
+      "type": "print"
+    },
+    {
+      "value": "1873-734X",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2013,
+        9,
+        12
+      ]
+    ]
+  }
+}

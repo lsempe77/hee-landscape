@@ -1,0 +1,427 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        31
+      ]
+    ],
+    "date-time": "2025-10-31T14:07:51Z",
+    "timestamp": 1761919671672
+  },
+  "reference-count": 23,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1-2",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2013,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2013-01-01T00:00:00Z",
+        "timestamp": 1356998400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "http://www.springer.com/tdm"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Wien Klin Wochenschr"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2013,
+        1
+      ]
+    ]
+  },
+  "DOI": "10.1007/s00508-012-0307-x",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2013,
+        1,
+        4
+      ]
+    ],
+    "date-time": "2013-01-04T14:55:14Z",
+    "timestamp": 1357311314000
+  },
+  "page": "8-15",
+  "source": "Crossref",
+  "is-referenced-by-count": 20,
+  "title": [
+    "Ginkgo biloba extract EGb 761® in the treatment of dementia: a pharmacoeconomic analysis of the Austrian setting",
+    "Ginkgo-biloba-Extrakt EGb 761® in der Behandlung der Demenz: eine pharmakoökonomische Analyse bezogen auf Österreich"
+  ],
+  "prefix": "10.1007",
+  "volume": "125",
+  "author": [
+    {
+      "given": "Michael",
+      "family": "Rainer",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Hermann",
+      "family": "Mucke",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Sandra",
+      "family": "Schlaefke",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2013,
+        1,
+        5
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "4",
+      "key": "307_CR1",
+      "doi-asserted-by": "crossref",
+      "first-page": "352",
+      "DOI": "10.1111/j.1365-2125.1992.tb05642.x",
+      "volume": "34",
+      "author": "J Kleijnen",
+      "year": "1992",
+      "unstructured": "Kleijnen J, Knipschild P. Ginkgo biloba for cerebral insufficiency. Br J Clin Pharmacol. 1992;34(4):352–8.",
+      "journal-title": "Br J Clin Pharmacol."
+    },
+    {
+      "issue": "15–16",
+      "key": "307_CR2",
+      "doi-asserted-by": "crossref",
+      "first-page": "427",
+      "DOI": "10.1046/j.1563-258X.2002.02067.x",
+      "volume": "152",
+      "author": "R Hörr",
+      "year": "2002",
+      "unstructured": "Hörr R, Kieser M. Pharmaco-economic evaluation of Ginkgo special extract EGb 761® for dementias in Austria. Wien Med Wochenschr. 2002;152(15–16):427–31 (in German).",
+      "journal-title": "Wien Med Wochenschr."
+    },
+    {
+      "issue": "21–22",
+      "key": "307_CR3",
+      "doi-asserted-by": "crossref",
+      "first-page": "511",
+      "DOI": "10.1007/s10354-004-0116-6",
+      "volume": "154",
+      "author": "J Haan",
+      "year": "2004",
+      "unstructured": "Haan J, Hörr R. Delay in progression of dependency and need of care of dementia patients treated with Ginkgo special extract EGb 761®. Wien Med Wochenschr. 2004;154(21–22):511–4 (in German).",
+      "journal-title": "Wien Med Wochenschr."
+    },
+    {
+      "issue": "1",
+      "key": "307_CR4",
+      "first-page": "4",
+      "volume": "57",
+      "author": "O Napryeyenko",
+      "year": "2007",
+      "unstructured": "Napryeyenko O, Borzenko I, GINDEM-NP Study Group. Ginkgo biloba special extract in dementia with neuropsychiatric features. A randomised, placebo-controlled, double-blind clinical trial. Arzneimittelforschung. 2007;57(1):4–11.",
+      "journal-title": "Arzneimittelforschung."
+    },
+    {
+      "issue": "11",
+      "key": "307_CR5",
+      "doi-asserted-by": "crossref",
+      "first-page": "1186",
+      "DOI": "10.1002/gps.2662",
+      "volume": "26",
+      "author": "R Ihl",
+      "year": "2011",
+      "unstructured": "Ihl R, Bachinskaya N, Korczyn AD, Vakhapova V, et al. on behalf of the GOTADAY Study Group. Efficacy and safety of a once-daily formulation of Ginkgo biloba extract EGb 761® in dementia with neuropsychiatric features: a randomized controlled trial. Int J Geriatr Psychiatry. 2011;26(11):1186–94.",
+      "journal-title": "Int J Geriatr Psychiatry."
+    },
+    {
+      "issue": "3",
+      "key": "307_CR6",
+      "first-page": "713",
+      "volume": "46",
+      "author": "H Herrschaft",
+      "year": "2012",
+      "unstructured": "Herrschaft H, Nacu A, Likhachev S, Sholomov I, Hoerr R, Schlaefke S. Ginkgo biloba extract EGb 761® in dementia with neuropsychiatric features: a randomized, placebo-controlled trial to confirm the efficacy and safety of a daily dose of 240 mg. J Psychiatr Res. 2012;46(3):713–23.",
+      "journal-title": "J Psychiatr Res."
+    },
+    {
+      "key": "307_CR7",
+      "unstructured": "Institute for Quality and Efficiency in Health Care (IQWiG). Ginkgo in Alzheimer’s disease. Executive summary. IQWiG reports—Commission no. A05-19B. Version 1.0; Status: 29.09.2008."
+    },
+    {
+      "issue": "12",
+      "key": "307_CR8",
+      "doi-asserted-by": "crossref",
+      "first-page": "1213",
+      "DOI": "10.1001/archneur.1994.00540240057016",
+      "volume": "51",
+      "author": "L Bracco",
+      "year": "1994",
+      "unstructured": "Bracco L, Gallato R, Grigoletto F, et al. Factors affecting course and survival in Alzheimer’s disease. A 9-year longitudinal study. Arch Neurol. 1994;51(12):1213–9.",
+      "journal-title": "Arch Neurol."
+    },
+    {
+      "issue": "3",
+      "key": "307_CR9",
+      "doi-asserted-by": "crossref",
+      "first-page": "656",
+      "DOI": "10.1212/WNL.46.3.656",
+      "volume": "46",
+      "author": "A Heyman",
+      "year": "1996",
+      "unstructured": "Heyman A, Peterson B, Fillenbaum G, Pieper C. The consortium to establish a registry for Alzheimer’s disease (CERAD). Part XIV: Demographic and clinical predictors of survival in patients with Alzheimer’s disease. Neurology. 1996;46(3):656–60",
+      "journal-title": "Neurology."
+    },
+    {
+      "key": "307_CR10",
+      "unstructured": "Statistik Austria. Gesundheitsbefragung 2006/07. Compiled July 18, 2008. http://www.statistik.at/web_de/static/ambulante_versorgung_200607_022268.pdf. WebCite Archive URL: http://www.webcitation.org/66Niy7Nu2. Accessed 18 Dec 2012."
+    },
+    {
+      "key": "307_CR11",
+      "unstructured": "Versicherungsanstalt für Eisenbahnen und Bergbau. Information über das Bundespflegegeld (Stand: 1. Jänner 2012). https://www.sozialversicherung.at/mediaDB/633780_Infoblatt%20Bundespflegegeld%20%20Stand%201.1.2010.pdf%20-%20Adobe%20Acrobat%20Professional.pdf. WebCite Archive URL: http://www.webcitation.org/66NiPxD1l. Accessed 18 Dec 2012."
+    },
+    {
+      "issue": "11",
+      "key": "307_CR12",
+      "doi-asserted-by": "crossref",
+      "first-page": "1388",
+      "DOI": "10.1001/archneur.56.11.1388",
+      "volume": "56",
+      "author": "MS Mega",
+      "year": "1999",
+      "unstructured": "Mega MS, Masterman DM, O’Connor SM, et al. The spectrum of behavioral responses to cholinesterase inhibitor therapy in Alzheimer disease. Arch Neurol. 1999;56(11):1388–93.",
+      "journal-title": "Arch Neurol."
+    },
+    {
+      "issue": "Suppl. 2",
+      "key": "307_CR13",
+      "doi-asserted-by": "crossref",
+      "first-page": "S22",
+      "DOI": "10.1097/00002093-199700112-00004",
+      "volume": "11",
+      "author": "LS Schneider",
+      "year": "1997",
+      "unstructured": "Schneider LS, Olin JT, Doody RS, et al. Validity and reliability of the Alzheimer’s Disease Cooperative Study-Clinical Global Impression of Change. The Alzheimer’s Disease Cooperative Study. Alzheimer Dis Assoc Disord. 1997;11(Suppl. 2):S22–32.",
+      "journal-title": "Alzheimer Dis Assoc Disord."
+    },
+    {
+      "key": "307_CR14",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Birks J. Cholinesterase inhibitors for Alzheimer’s disease. Cochrane Database Syst Rev. 2006;1:CD005593. doi: 10.1002/14651858.CD005593.",
+      "DOI": "10.1002/14651858.CD005593"
+    },
+    {
+      "key": "307_CR15",
+      "unstructured": "Schünemann HJ, Oxman AD, Vist GE, Higgins JPT, Deeks JJ, Glasziou P, Guyatt GH, on behalf of the Cochrane Applicability and Recommendations Methods Group. Chapter 12: Interpreting results and drawing conclusions. Section 12.5.4.3. In: Higgins JPT, Green S, editors. Cochrane handbook for systematic reviews of interventions, version 5.1.0, updated March 2011. The Cochrane Collaboration. 2011. www.cochrane-handbook.org/. Accessed 1 Aug 2011."
+    },
+    {
+      "key": "307_CR16",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1186/1471-2288-2-1",
+      "volume": "2",
+      "author": "CJ Cates",
+      "year": "2002",
+      "unstructured": "Cates CJ. Simpson’s paradox and calculation of number needed to treat from metaanalysis. BMC Med Res Methodol. 2002;2:1.",
+      "journal-title": "BMC Med Res Methodol."
+    },
+    {
+      "key": "307_CR17",
+      "unstructured": "Österreichischer Apotheker-Verlag Warenverzeichnis I des Österreichischen Apotheker-Verlages. Wien: Österreichische Apotheker-Verlagsgesellschaft mbH, Mai 2012. http://warenverzeichnis.apoverlag.at. Accessed 31 May 2012."
+    },
+    {
+      "issue": "13–14",
+      "key": "307_CR18",
+      "doi-asserted-by": "crossref",
+      "first-page": "295",
+      "DOI": "10.1007/s10354-007-0427-5",
+      "volume": "157",
+      "author": "A Scripnikov",
+      "year": "2007",
+      "unstructured": "Scripnikov A, Khomenko A, Napryeyenko O, GINDEM-NP Study Group. Effects of Ginkgo biloba extract EGb 761® on neuropsychiatric symptoms of dementia: findings from a randomised controlled trial. Wien Med Wochenschr. 2007;157(13–14):295–300.",
+      "journal-title": "Wien Med Wochenschr."
+    },
+    {
+      "key": "307_CR19",
+      "first-page": "209",
+      "volume": "7",
+      "author": "N Bachinskaya",
+      "year": "2011",
+      "unstructured": "Bachinskaya N, Hoerr R, Ihl R. Alleviating neuropsychiatric symptoms in dementia: the effects of Ginkgo biloba extract EGb 761®. Findings from a randomized controlled trial. Neuropsychiatr Dis Treat. 2011;7:209–15.",
+      "journal-title": "Neuropsychiatr Dis Treat."
+    },
+    {
+      "issue": "4 Suppl. 1",
+      "key": "307_CR20",
+      "doi-asserted-by": "crossref",
+      "first-page": "S785",
+      "DOI": "10.1016/j.jalz.2011.05.2256",
+      "volume": "7",
+      "author": "A Nacu",
+      "year": "2011",
+      "unstructured": "Nacu A, Hörr R, Herrschaft H. Neuropsychiatric symptoms of dementia and related caregiver distress: effect of treatment by a once-daily formulation of Ginkgo biloba extract EGb 761®. Alzheimer’s & Dementia. 2011;7(4 Suppl. 1):S785.",
+      "journal-title": "Alzheimer’s &Dementia"
+    },
+    {
+      "issue": "6",
+      "key": "307_CR21",
+      "doi-asserted-by": "crossref",
+      "first-page": "1129",
+      "DOI": "10.1017/S0033291703001831",
+      "volume": "34",
+      "author": "DW Gilley",
+      "year": "2004",
+      "unstructured": "Gilley DW, Bienias JL, Wilson RS, et al. Influence of behavioral symptoms on rates of institutionalization for persons with Alzheimer’s disease. Psychol Med. 2004;34(6):1129–35.",
+      "journal-title": "Psychol Med."
+    },
+    {
+      "issue": "4",
+      "key": "307_CR22",
+      "doi-asserted-by": "crossref",
+      "first-page": "577",
+      "DOI": "10.1017/S1041610205002292",
+      "volume": "17",
+      "author": "ME de Vugt",
+      "year": "2005",
+      "unstructured": "de Vugt ME, Stevens F, Aalten P, et al. A prospective study of the effects of behavioral symptoms on the institutionalization of patients with dementia. Int Psychogeriatr. 2005;17(4):577–89.",
+      "journal-title": "Int Psychogeriatr."
+    },
+    {
+      "key": "307_CR23",
+      "unstructured": "Committee for Medicinal Products for Human Use (CHMP). Guideline on medicinal products for the treatment of Alzheimer’s disease and other dementias. Doc. Ref. CPMP/EWP/553/95 Rev. 1. London, 24 July 2008. Available at http://www.ema.europa.eu/docs/en_GB/document_library/Scientific_guideline/2009/09/WC500003562.pdf. Accessed 18 Dec 2012."
+    }
+  ],
+  "container-title": [
+    "Wiener klinische Wochenschrift"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s00508-012-0307-x.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/article/10.1007/s00508-012-0307-x/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s00508-012-0307-x",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        4
+      ]
+    ],
+    "date-time": "2024-05-04T08:42:05Z",
+    "timestamp": 1714812125000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/s00508-012-0307-x"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2013,
+        1
+      ]
+    ]
+  },
+  "references-count": 23,
+  "journal-issue": {
+    "issue": "1-2",
+    "published-print": {
+      "date-parts": [
+        [
+          2013,
+          1
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "307"
+  ],
+  "URL": "https://doi.org/10.1007/s00508-012-0307-x",
+  "relation": {},
+  "ISSN": [
+    "0043-5325",
+    "1613-7671"
+  ],
+  "issn-type": [
+    {
+      "value": "0043-5325",
+      "type": "print"
+    },
+    {
+      "value": "1613-7671",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2013,
+        1
+      ]
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2023,
+        9,
+        12
+      ]
+    ],
+    "date-time": "2023-09-12T07:04:14Z",
+    "timestamp": 1694502254668
+  },
+  "reference-count": 0,
+  "publisher": "Centro de Investigaciones y Publicaciones Farmaceuticas (CIPF)",
+  "issue": "Suppl 1",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Pharm Pract (Granada)"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2018,
+        6,
+        30
+      ]
+    ]
+  },
+  "DOI": "10.18549/pharmpract.2018.s1.1340",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2018,
+        8,
+        10
+      ]
+    ],
+    "date-time": "2018-08-10T17:58:10Z",
+    "timestamp": 1533923890000
+  },
+  "page": "1340",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+    "Poster Presentations"
+  ],
+  "prefix": "10.18549",
+  "volume": "16",
+  "member": "7838",
+  "published-online": {
+    "date-parts": [
+      [
+        2018,
+        6,
+        30
+      ]
+    ]
+  },
+  "container-title": [
+    "Pharmacy Practice"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://www.pharmacypractice.org/journal/index.php/pp/article/view/1340/639",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2018,
+        8,
+        10
+      ]
+    ],
+    "date-time": "2018-08-10T17:58:14Z",
+    "timestamp": 1533923894000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.pharmacypractice.org/journal/index.php/pp/article/view/1340"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2018,
+        6,
+        30
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "Suppl 1",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          6,
+          30
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          6,
+          30
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.18549/pharmpract.2018.s1.1340",
+  "relation": {},
+  "ISSN": [
+    "1885-642X",
+    "1886-3655"
+  ],
+  "issn-type": [
+    {
+      "value": "1885-642X",
+      "type": "print"
+    },
+    {
+      "value": "1886-3655",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2018,
+        6,
+        30
+      ]
+    ]
+  }
+}

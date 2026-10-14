@@ -1,0 +1,10 @@
+{
+  "fig_intervention_decision.webp": {
+    "file": "fig_intervention_decision_reconciled.webp",
+    "title": "What abstracts report for healthcare decisions",
+    "caption": "Base: 41,610 included records; intervention rows use the included records within each class. Primary intervention class only; residual Other omitted. All columns use the full row denominator, including records with an unavailable flag; model-based is the share positively identified as model-based. Signals are abstract keyword flags, not a full-text quality assessment. \"Not reported\" does not mean \"not done\".",
+    "summary": "What abstracts report for healthcare decisions",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  }
+}

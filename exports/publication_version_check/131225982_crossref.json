@@ -1,0 +1,964 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        10
+      ]
+    ],
+    "date-time": "2026-06-10T14:09:05Z",
+    "timestamp": 1781100545003,
+    "version": "3.54.1"
+  },
+  "reference-count": 59,
+  "publisher": "Becaris Publishing Limited",
+  "issue": "2",
+  "funder": [
+    {
+      "DOI": "10.13039/100004374",
+      "name": "Medtronic",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/100004374",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "J. Comp. Eff. Res."
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2021,
+        2
+      ]
+    ]
+  },
+  "abstract": "<jats:p>\n            <jats:bold>Background:</jats:bold>\n            We assessed cost–effectiveness of insertable cardiac monitors (ICMs) in a US cryptogenic stroke population.\n            <jats:bold>Materials &amp; methods:</jats:bold>\n            We modelled lifetime costs and quality-adjusted life years for three monitoring strategies post cryptogenic stroke: ICM starting immediately, ICM starting after Holter monitoring (delayed ICM) and standard of care involving intermittent ECG and Holter monitoring. Patient characteristics and detection efficacy were based on the CRYSTAL-AF trial. AF detection altered the modelled anticoagulation therapy and subsequent stroke and bleed risks.\n            <jats:bold>Results &amp; conclusion:</jats:bold>\n            Immediate ICM was found to be cost-effective versus standard of care and cost-saving versus delayed ICM. Results were robust to sensitivity analyses. ICMs are a cost-effective diagnostic tool for the prevention of recurrent stroke in a US cryptogenic stroke population.\n          </jats:p>",
+  "DOI": "10.2217/cer-2020-0224",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        12,
+        10
+      ]
+    ],
+    "date-time": "2020-12-10T12:00:40Z",
+    "timestamp": 1607601640000
+  },
+  "page": "127-141",
+  "source": "Crossref",
+  "is-referenced-by-count": 23,
+  "title": [
+    "Cost–effectiveness of an insertable cardiac monitor to detect atrial fibrillation in patients with cryptogenic stroke"
+  ],
+  "prefix": "10.57264",
+  "volume": "10",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-0854-6222",
+      "authenticated-orcid": false,
+      "given": "Laura M",
+      "family": "Sawyer",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Symmetron Limited, 8 Devonshire Square, London, EC2M 4PL, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Klaus K",
+      "family": "Witte",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Leeds Institute for Cardiovascular &amp; Metabolic Medicine, University of Leeds, Leeds, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Matthew R",
+      "family": "Reynolds",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Baim Institute for Clinical Research, Boston, MA &amp; Lahey Hospital &amp; Medical Center, Burlington, MA 02215-1212, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Suneet",
+      "family": "Mittal",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "The Snyder Center for Comprehensive Atrial Fibrillation, the Valley Health System, Ridgewood, NJ 07652, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-2766-5347",
+      "authenticated-orcid": false,
+      "given": "Frank W",
+      "family": "Grimsey Jones",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Symmetron Limited, 8 Devonshire Square, London, EC2M 4PL, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sarah C",
+      "family": "Rosemas",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medtronic, Mounds View, MN 55112, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Paul D",
+      "family": "Ziegler",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medtronic, Mounds View, MN 55112, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Rachelle E",
+      "family": "Kaplon",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medtronic, Mounds View, MN 55112, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Shadi",
+      "family": "Yaghi",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Neurology, New York Langone Hospital, Brooklyn, NY 11220, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "36897",
+  "reference": [
+    {
+      "issue": "5",
+      "key": "e_1_3_5_3_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "359",
+      "DOI": "10.1016/S0002-9343(02)01236-6",
+      "article-title": "A population-based study of the long-term risks associated with atrial fibrillation: 20-year follow-up of the Renfrew/Paisley study",
+      "volume": "113",
+      "author": "Stewart S",
+      "year": "2002",
+      "unstructured": "Stewart S, Hart CL, Hole DJ, Mcmurray JJ. A population-based study of the long-term risks associated with atrial fibrillation: 20-year follow-up of the Renfrew/Paisley study. Am. J. Med. 113(5), 359–364 (2002).",
+      "journal-title": "Am. J. Med."
+    },
+    {
+      "issue": "8",
+      "key": "e_1_3_5_4_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "983",
+      "DOI": "10.1161/01.STR.22.8.983",
+      "article-title": "Atrial fibrillation as an independent risk factor for stroke: the Framingham Study",
+      "volume": "22",
+      "author": "Wolf PA",
+      "year": "1991",
+      "unstructured": "Wolf PA, Abbott RD, Kannel WB. Atrial fibrillation as an independent risk factor for stroke: the Framingham Study. Stroke 22(8), 983–988 (1991).",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "11",
+      "key": "e_1_3_5_5_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2559",
+      "DOI": "10.1161/hs1101.098524",
+      "article-title": "Risk factors, outcome and treatment in subtypes of ischemic stroke: the German stroke data bank",
+      "volume": "32",
+      "author": "Grau AJ",
+      "year": "2001",
+      "unstructured": "Grau AJ, Weimar C, Buggle F Risk factors, outcome and treatment in subtypes of ischemic stroke: the German stroke data bank. Stroke 32(11), 2559–2566 (2001).",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "1",
+      "key": "e_1_3_5_6_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "35",
+      "DOI": "10.1161/01.STR.24.1.35",
+      "article-title": "Classification of subtype of acute ischemic stroke. Definitions for use in a multicenter clinical trial. TOAST. Trial of Org 10172 in Acute Stroke Treatment",
+      "volume": "24",
+      "author": "Adams HP",
+      "year": "1993",
+      "unstructured": "Adams HP Jr, Bendixen BH, Kappelle LJ Classification of subtype of acute ischemic stroke. Definitions for use in a multicenter clinical trial. TOAST. Trial of Org 10172 in Acute Stroke Treatment. Stroke 24(1), 35–41 (1993).",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "3",
+      "key": "e_1_3_5_7_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "870",
+      "DOI": "10.1161/STR.0b013e318284056a",
+      "article-title": "Guidelines for the early management of patients with acute ischemic stroke: a guideline for healthcare professionals from the American Heart Association/American Stroke Association",
+      "volume": "44",
+      "author": "Jauch EC",
+      "year": "2013",
+      "unstructured": "Jauch EC, Saver JL, Adams HP Jr Guidelines for the early management of patients with acute ischemic stroke: a guideline for healthcare professionals from the American Heart Association/American Stroke Association. Stroke 44(3), 870–947 (2013).",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "23",
+      "key": "e_1_3_5_8_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2191",
+      "DOI": "10.1056/NEJMoa1802686",
+      "article-title": "Rivaroxaban for stroke prevention after embolic stroke of undetermined source",
+      "volume": "378",
+      "author": "Hart RG",
+      "year": "2018",
+      "unstructured": "Hart RG, Sharma M, Mundl H Rivaroxaban for stroke prevention after embolic stroke of undetermined source. N. Engl. J. Med. 378(23), 2191–2201 (2018).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "20",
+      "key": "e_1_3_5_9_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1906",
+      "DOI": "10.1056/NEJMoa1813959",
+      "article-title": "Dabigatran for prevention of stroke after embolic stroke of undetermined source",
+      "volume": "380",
+      "author": "Diener H-C",
+      "year": "2019",
+      "unstructured": "Diener H-C, Sacco RL, Easton JD Dabigatran for prevention of stroke after embolic stroke of undetermined source. N. Engl. J. Med. 380(20), 1906–1917 (2019).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "2",
+      "key": "e_1_3_5_10_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "120",
+      "DOI": "10.1056/NEJMoa1105575",
+      "article-title": "Subclinical atrial fibrillation and the risk of stroke",
+      "volume": "366",
+      "author": "Healey JS",
+      "year": "2012",
+      "unstructured": "Healey JS, Connolly SJ, Gold MR Subclinical atrial fibrillation and the risk of stroke. N. Engl. J. Med. 366(2), 120–129 (2012).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "2",
+      "key": "e_1_3_5_11_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "270",
+      "DOI": "10.1016/j.amjcard.2012.03.021",
+      "article-title": "Usefulness of continuous electrocardiographic monitoring for atrial fibrillation",
+      "volume": "110",
+      "author": "Camm AJ",
+      "year": "2012",
+      "unstructured": "Camm AJ, Corbucci G, Padeletti L. Usefulness of continuous electrocardiographic monitoring for atrial fibrillation. Am. J. Cardiol. 110(2), 270–276 (2012).",
+      "journal-title": "Am. J. Cardiol."
+    },
+    {
+      "issue": "1",
+      "key": "e_1_3_5_12_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "45",
+      "DOI": "10.1080/17434440.2018.1557046",
+      "article-title": "Insertable cardiac monitors: current indications and devices",
+      "volume": "16",
+      "author": "Sakhi R",
+      "year": "2019",
+      "unstructured": "Sakhi R, Theuns DaMJ, Szili-Torok T, Yap S-C. Insertable cardiac monitors: current indications and devices. Expert Rev. Med. Dev. 16(1), 45–55 (2019).",
+      "journal-title": "Expert Rev. Med. Dev."
+    },
+    {
+      "issue": "26",
+      "key": "e_1_3_5_13_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2478",
+      "DOI": "10.1056/NEJMoa1313600",
+      "article-title": "Cryptogenic stroke and underlying atrial fibrillation",
+      "volume": "370",
+      "author": "Sanna T",
+      "year": "2014",
+      "unstructured": "Sanna T, Diener HC, Passman RS Cryptogenic stroke and underlying atrial fibrillation. N. Engl. J. Med. 370(26), 2478–2486 (2014).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "4",
+      "key": "e_1_3_5_14_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1186",
+      "DOI": "10.1161/STROKEAHA.113.003720",
+      "article-title": "Evaluation of cryptogenic stroke with advanced diagnostic techniques",
+      "volume": "45",
+      "author": "Bang OY",
+      "year": "2014",
+      "unstructured": "Bang OY, Ovbiagele B, Kim JS. Evaluation of cryptogenic stroke with advanced diagnostic techniques. Stroke 45(4), 1186–1194 (2014).",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "26",
+      "key": "e_1_3_5_15_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2467",
+      "DOI": "10.1056/NEJMoa1311376",
+      "article-title": "Atrial fibrillation in patients with cryptogenic stroke",
+      "volume": "370",
+      "author": "Gladstone DJ",
+      "year": "2014",
+      "unstructured": "Gladstone DJ, Spring M, Dorian P Atrial fibrillation in patients with cryptogenic stroke. N. Engl. J. Med. 370(26), 2467–2477 (2014).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "6",
+      "key": "e_1_3_5_16_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "889",
+      "DOI": "10.1016/j.amjcard.2015.06.012",
+      "article-title": "A comparison of atrial fibrillation monitoring strategies after cryptogenic stroke (from the Cryptogenic Stroke and Underlying AF Trial)",
+      "volume": "116",
+      "author": "Choe WC",
+      "year": "2015",
+      "unstructured": "Choe WC, Passman RS, Brachmann J A comparison of atrial fibrillation monitoring strategies after cryptogenic stroke (from the Cryptogenic Stroke and Underlying AF Trial). Am. J. Cardiol. 116(6), 889–893 (2015).",
+      "journal-title": "Am. J. Cardiol."
+    },
+    {
+      "key": "e_1_3_5_17_2",
+      "unstructured": "ICER. ICER's reference case for economic evaluations: principles and rationale (2018). https://icer-review.org/wp-content/uploads/2018/07/ICER_Reference_Case_July-2018.pdf"
+    },
+    {
+      "key": "e_1_3_5_18_2",
+      "unstructured": "ICER. Rhythm control and stroke prevention strategies for patients with atrial fibrillation (2010). https://icer-review.org/wp-content/uploads/2016/02/Atrial-Fibrillation-Final-09-24-10.pdf"
+    },
+    {
+      "issue": "1",
+      "key": "e_1_3_5_19_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "104",
+      "DOI": "10.1016/j.jacc.2019.01.011",
+      "article-title": "2019 AHA/ACC/HRS focused update of the 2014 AHA/ACC/HRS guideline for the management of patients with atrial fibrillation",
+      "volume": "74",
+      "author": "January Craig T",
+      "year": "2019",
+      "unstructured": "January Craig T, Wann LS, Calkins H 2019 AHA/ACC/HRS focused update of the 2014 AHA/ACC/HRS guideline for the management of patients with atrial fibrillation. J. Am. Coll. Cardiol. 74(1), 104–132 (2019).",
+      "journal-title": "J. Am. Coll. Cardiol."
+    },
+    {
+      "issue": "16",
+      "key": "e_1_3_5_20_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2287",
+      "DOI": "10.1161/01.CIR.0000145172.55640.93",
+      "article-title": "Selecting patients with atrial fibrillation for anticoagulation: stroke risk stratification in patients taking aspirin",
+      "volume": "110",
+      "author": "Gage BF",
+      "year": "2004",
+      "unstructured": "Gage BF, Van Walraven C, Pearce L Selecting patients with atrial fibrillation for anticoagulation: stroke risk stratification in patients taking aspirin. Circulation 110(16), 2287–2292 (2004).",
+      "journal-title": "Circulation"
+    },
+    {
+      "issue": "9",
+      "key": "e_1_3_5_21_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1012",
+      "DOI": "10.1136/jnnp.2008.170456",
+      "article-title": "Frequency and predictors for the risk of stroke recurrence up to 10 years after stroke: the South London Stroke Register",
+      "volume": "80",
+      "author": "Mohan KM",
+      "year": "2009",
+      "unstructured": "Mohan KM, Crichton SL, Grieve AP, Rudd AG, Wolfe CD, Heuschmann PU. Frequency and predictors for the risk of stroke recurrence up to 10 years after stroke: the South London Stroke Register. J. Neurol. Neurosurg. Psych. 80(9), 1012–1018 (2009).",
+      "journal-title": "J. Neurol. Neurosurg. Psych."
+    },
+    {
+      "issue": "12",
+      "key": "e_1_3_5_22_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "3298",
+      "DOI": "10.1161/STROKEAHA.112.673558",
+      "article-title": "Nonvitamin-K-antagonist oral anticoagulants in patients with atrial fibrillation and previous stroke or transient ischemic attack: a systematic review and meta-analysis of randomized controlled trials",
+      "volume": "43",
+      "author": "Ntaios G",
+      "year": "2012",
+      "unstructured": "Ntaios G, Papavasileiou V, Diener HC, Makaritsis K, Michel P. Nonvitamin-K-antagonist oral anticoagulants in patients with atrial fibrillation and previous stroke or transient ischemic attack: a systematic review and meta-analysis of randomized controlled trials. Stroke 43(12), 3298–3304 (2012).",
+      "journal-title": "Stroke"
+    },
+    {
+      "key": "e_1_3_5_23_2",
+      "first-page": "93",
+      "article-title": "Systematic review and network meta-analysis of stroke prevention treatments in patients with atrial fibrillation",
+      "volume": "8",
+      "author": "Tawfik A",
+      "year": "2016",
+      "unstructured": "Tawfik A, Bielecki JM, Krahn M Systematic review and network meta-analysis of stroke prevention treatments in patients with atrial fibrillation. Clin. Pharmacol. 8, 93–107 (2016).",
+      "journal-title": "Clin. Pharmacol."
+    },
+    {
+      "issue": "3",
+      "key": "e_1_3_5_24_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "225",
+      "DOI": "10.1016/S1474-4422(12)70017-0",
+      "article-title": "Apixaban versus aspirin in patients with atrial fibrillation and previous stroke or transient ischaemic attack: a predefined subgroup analysis from AVERROES, a randomised trial",
+      "volume": "11",
+      "author": "Diener HC",
+      "year": "2012",
+      "unstructured": "Diener HC, Eikelboom J, Connolly SJ Apixaban versus aspirin in patients with atrial fibrillation and previous stroke or transient ischaemic attack: a predefined subgroup analysis from AVERROES, a randomised trial. Lancet Neurol. 11(3), 225–231 (2012).",
+      "journal-title": "Lancet Neurol."
+    },
+    {
+      "issue": "28",
+      "key": "e_1_3_5_25_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1897",
+      "DOI": "10.1093/eurheartj/ehu006",
+      "article-title": "cost–effectiveness of apixaban vs. current standard of care for stroke prevention in patients with atrial fibrillation",
+      "volume": "35",
+      "author": "Dorian P",
+      "year": "2014",
+      "unstructured": "Dorian P, Kongnakorn T, Phatak H cost–effectiveness of apixaban vs. current standard of care for stroke prevention in patients with atrial fibrillation. Eur. Heart J. 35(28), 1897–1906 (2014).",
+      "journal-title": "Eur. Heart J."
+    },
+    {
+      "issue": "12",
+      "key": "e_1_3_5_26_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1139",
+      "DOI": "10.1056/NEJMoa0905561",
+      "article-title": "Dabigatran versus warfarin in patients with atrial fibrillation",
+      "volume": "361",
+      "author": "Connolly SJ",
+      "year": "2009",
+      "unstructured": "Connolly SJ, Ezekowitz MD, Yusuf S Dabigatran versus warfarin in patients with atrial fibrillation. N. Engl. J. Med. 361(12), 1139–1151 (2009).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "10",
+      "key": "e_1_3_5_27_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "883",
+      "DOI": "10.1056/NEJMoa1009638",
+      "article-title": "Rivaroxaban versus warfarin in nonvalvular atrial fibrillation",
+      "volume": "365",
+      "author": "Patel MR",
+      "year": "2011",
+      "unstructured": "Patel MR, Mahaffey KW, Garg J Rivaroxaban versus warfarin in nonvalvular atrial fibrillation. N. Engl. J. Med. 365(10), 883–891 (2011).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "22",
+      "key": "e_1_3_5_28_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2093",
+      "DOI": "10.1056/NEJMoa1310907",
+      "article-title": "Edoxaban versus warfarin in patients with atrial fibrillation",
+      "volume": "369",
+      "author": "Giugliano RP",
+      "year": "2013",
+      "unstructured": "Giugliano RP, Ruff CT, Braunwald E Edoxaban versus warfarin in patients with atrial fibrillation. N. Engl. J. Med. 369(22), 2093–2104 (2013).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "9",
+      "key": "e_1_3_5_29_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "806",
+      "DOI": "10.1056/NEJMoa1007432",
+      "article-title": "Apixaban in patients with atrial fibrillation",
+      "volume": "364",
+      "author": "Connolly SJ",
+      "year": "2011",
+      "unstructured": "Connolly SJ, Eikelboom J, Joyner C Apixaban in patients with atrial fibrillation. N. Engl. J. Med. 364(9), 806–817 (2011).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "2",
+      "key": "e_1_3_5_30_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "192",
+      "DOI": "10.1016/j.clinthera.2013.12.011",
+      "article-title": "cost–effectiveness of apixaban versus other new oral anticoagulants for stroke prevention in atrial fibrillation",
+      "volume": "36",
+      "author": "Lip GY",
+      "year": "2014",
+      "unstructured": "Lip GY, Kongnakorn T, Phatak H cost–effectiveness of apixaban versus other new oral anticoagulants for stroke prevention in atrial fibrillation. Clin. Ther. 36(2), 192–210 e120 (2014).",
+      "journal-title": "Clin. Ther."
+    },
+    {
+      "issue": "10",
+      "key": "e_1_3_5_31_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2289",
+      "DOI": "10.1253/circj.CJ-12-1036",
+      "article-title": "Stroke and thromboembolism in atrial fibrillation",
+      "volume": "76",
+      "author": "Pisters R",
+      "year": "2012",
+      "unstructured": "Pisters R, Lane DA, Marin F, Camm AJ, Lip GY. Stroke and thromboembolism in atrial fibrillation. Circ. J. 76(10), 2289–2304 (2012).",
+      "journal-title": "Circ. J."
+    },
+    {
+      "issue": "8",
+      "key": "e_1_3_5_32_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2060",
+      "DOI": "10.1161/01.STR.0000080678.09344.8D",
+      "article-title": "Risk factors for intracerebral hemorrhage in the general population: a systematic review",
+      "volume": "34",
+      "author": "Ariesen MJ",
+      "year": "2003",
+      "unstructured": "Ariesen MJ, Claus SP, Rinkel GJ, Algra A. Risk factors for intracerebral hemorrhage in the general population: a systematic review. Stroke 34(8), 2060–2065 (2003).",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "2",
+      "key": "e_1_3_5_33_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "141",
+      "DOI": "10.1161/CIRCEP.109.877852",
+      "article-title": "Performance of a new leadless implantable cardiac monitor in detecting and quantifying atrial fibrillation: results of the XPECT trial",
+      "volume": "3",
+      "author": "Hindricks G",
+      "year": "2010",
+      "unstructured": "Hindricks G, Pokushalov E, Urban L Performance of a new leadless implantable cardiac monitor in detecting and quantifying atrial fibrillation: results of the XPECT trial. Circ. Arrhythm Electrophysiol. 3(2), 141–147 (2010).",
+      "journal-title": "Circ. Arrhythm Electrophysiol."
+    },
+    {
+      "issue": "6",
+      "key": "e_1_3_5_34_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "503",
+      "DOI": "10.1016/S1474-4422(12)70092-3",
+      "article-title": "Apixaban compared with warfarin in patients with atrial fibrillation and previous stroke or transient ischaemic attack: a subgroup analysis of the ARISTOTLE trial",
+      "volume": "11",
+      "author": "Easton JD",
+      "year": "2012",
+      "unstructured": "Easton JD, Lopes RD, Bahit MC Apixaban compared with warfarin in patients with atrial fibrillation and previous stroke or transient ischaemic attack: a subgroup analysis of the ARISTOTLE trial. Lancet Neurol. 11(6), 503–511 (2012).",
+      "journal-title": "Lancet Neurol."
+    },
+    {
+      "issue": "11",
+      "key": "e_1_3_5_35_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "981",
+      "DOI": "10.1056/NEJMoa1107039",
+      "article-title": "Apixaban versus warfarin in patients with atrial fibrillation",
+      "volume": "365",
+      "author": "Granger CB",
+      "year": "2011",
+      "unstructured": "Granger CB, Alexander JH, Mcmurray JJ Apixaban versus warfarin in patients with atrial fibrillation. N. Engl. J. Med. 365(11), 981–992 (2011).",
+      "journal-title": "N. Engl. J. Med."
+    },
+    {
+      "issue": "4",
+      "key": "e_1_3_5_36_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "315",
+      "DOI": "10.1016/S1474-4422(12)70042-X",
+      "article-title": "Rivaroxaban compared with warfarin in patients with atrial fibrillation and previous stroke or transient ischaemic attack: a subgroup analysis of ROCKET AF",
+      "volume": "11",
+      "author": "Hankey GJ",
+      "year": "2012",
+      "unstructured": "Hankey GJ, Patel MR, Stevens SR Rivaroxaban compared with warfarin in patients with atrial fibrillation and previous stroke or transient ischaemic attack: a subgroup analysis of ROCKET AF. Lancet Neurol. 11(4), 315–322 (2012).",
+      "journal-title": "Lancet Neurol."
+    },
+    {
+      "issue": "10",
+      "key": "e_1_3_5_37_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1313",
+      "DOI": "10.1001/archneur.65.10.1313",
+      "article-title": "Restarting anticoagulation therapy after warfarin-associated intracerebral hemorrhage",
+      "volume": "65",
+      "author": "Claassen DO",
+      "year": "2008",
+      "unstructured": "Claassen DO, Kazemi N, Zubkov AY, Wijdicks EF, Rabinstein AA. Restarting anticoagulation therapy after warfarin-associated intracerebral hemorrhage. Arch. Neurol. 65(10), 1313–1318 (2008).",
+      "journal-title": "Arch. Neurol."
+    },
+    {
+      "issue": "6",
+      "key": "e_1_3_5_38_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1064",
+      "DOI": "10.1016/j.ahj.2009.03.022",
+      "article-title": "Cost–effectiveness of warfarin: trial versus “real-world” stroke prevention in atrial fibrillation",
+      "volume": "157",
+      "author": "Sorensen SV",
+      "year": "2009",
+      "unstructured": "Sorensen SV, Dewilde S, Singer DE, Goldhaber SZ, Monz BU, Plumb JM. Cost–effectiveness of warfarin: trial versus “real-world” stroke prevention in atrial fibrillation. Am. Heart J. 157(6), 1064–1073 (2009).",
+      "journal-title": "Am. Heart J."
+    },
+    {
+      "issue": "2",
+      "key": "e_1_3_5_39_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "379",
+      "DOI": "10.1161/STROKEAHA.116.014735",
+      "article-title": "Cost–effectiveness of Solitaire stent retriever thrombectomy for acute ischemic stroke: results from the SWIFT-PRIME trial (Solitaire With the Intention for Thrombectomy as Primary Endovascular Treatment for Acute Ischemic Stroke)",
+      "volume": "48",
+      "author": "Shireman TI",
+      "year": "2017",
+      "unstructured": "Shireman TI, Wang K, SWIFT-PRIME Investigators . Cost–effectiveness of Solitaire stent retriever thrombectomy for acute ischemic stroke: results from the SWIFT-PRIME trial (Solitaire With the Intention for Thrombectomy as Primary Endovascular Treatment for Acute Ischemic Stroke). Stroke 48(2), 379–387 (2017).",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "10",
+      "key": "e_1_3_5_40_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2854",
+      "DOI": "10.1161/STROKEAHA.113.001584",
+      "article-title": "Population-based study of disability and institutionalization after transient ischemic attack and stroke: 10-year results of the Oxford Vascular Study",
+      "volume": "44",
+      "author": "Luengo-Fernandez R",
+      "year": "2013",
+      "unstructured": "Luengo-Fernandez R, Paul NL, Gray AM Population-based study of disability and institutionalization after transient ischemic attack and stroke: 10-year results of the Oxford Vascular Study. Stroke 44(10), 2854–2861 (2013).",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "18",
+      "key": "e_1_3_5_41_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1588",
+      "DOI": "10.1212/WNL.0b013e3182a9f45f",
+      "article-title": "Quality of life after TIA and stroke: ten-year results of the Oxford Vascular Study",
+      "volume": "81",
+      "author": "Luengo-Fernandez R",
+      "year": "2013",
+      "unstructured": "Luengo-Fernandez R, Gray AM, Bull L Quality of life after TIA and stroke: ten-year results of the Oxford Vascular Study. Neurology 81(18), 1588–1595 (2013).",
+      "journal-title": "Neurology"
+    },
+    {
+      "key": "e_1_3_5_42_2",
+      "unstructured": "Reveal LINQ Registry. https://clinicaltrials.gov/ct2/show/NCT02746471"
+    },
+    {
+      "key": "e_1_3_5_43_2",
+      "unstructured": "Centers for Disease Control (CDC). Deaths: final data for 2017 (2017). https://www.cdc.gov/nchs/data/nvsr/nvsr68/nvsr68_09-508.pdf"
+    },
+    {
+      "key": "e_1_3_5_44_2",
+      "unstructured": "United States mortality database (2019). https://usa.mortality.org/"
+    },
+    {
+      "issue": "7",
+      "key": "e_1_3_5_45_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "736",
+      "DOI": "10.1097/01.mlr.0000172050.67085.4f",
+      "article-title": "A national catalog of preference-based scores for chronic conditions in the United States",
+      "volume": "43",
+      "author": "Sullivan PW",
+      "year": "2005",
+      "unstructured": "Sullivan PW, Lawrence WF, Ghushchyan V. A national catalog of preference-based scores for chronic conditions in the United States. Med. Care 43(7), 736–749 (2005).",
+      "journal-title": "Med. Care"
+    },
+    {
+      "key": "e_1_3_5_46_2",
+      "unstructured": "Centers for Medicare & Medicaid Services. Physician fee schedule. https://www.cms.gov/apps/physician-fee-schedule/license-agreement.aspx"
+    },
+    {
+      "key": "e_1_3_5_47_2",
+      "unstructured": "ICER. ICER's reference case for economic evaluations: principles and rationale (2018). https://icer-review.org/methodology/icers-methods/icer_reference_case_july-2018/"
+    },
+    {
+      "issue": "21",
+      "key": "e_1_3_5_48_2",
+      "first-page": "2304",
+      "article-title": "ACC/AHA statement on cost/value methodology in clinical practice guidelines and performance measures: a report of the American College of Cardiology/American Heart Association Task Force on Performance Measures and Task Force on Practice Guidelines",
+      "volume": "63",
+      "author": "Anderson JL",
+      "year": "2014",
+      "unstructured": "Anderson JL, Heidenreich PA, Barnett PG ACC/AHA statement on cost/value methodology in clinical practice guidelines and performance measures: a report of the American College of Cardiology/American Heart Association Task Force on Performance Measures and Task Force on Practice Guidelines. J. Am. Coll. Cardiol. 63(21), 2304–2322 (2014).",
+      "journal-title": "J. Am. Coll. Cardiol."
+    },
+    {
+      "key": "e_1_3_5_49_2",
+      "unstructured": "ICER. Overview of the ICER value assessment framework and update for 2017–2019 (2018). https://icer-review.org/wp-content/uploads/2018/03/ICER-value-assessment-framework-update-FINAL-062217.pdf"
+    },
+    {
+      "key": "e_1_3_5_50_2",
+      "unstructured": "Optum. Electronic Health Record de-identified database (2007–2017). https://www.optum.com/business/solutions/government/federal/data-analytics-federal/clinical-data.html"
+    },
+    {
+      "issue": "6",
+      "key": "e_1_3_5_51_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1692",
+      "DOI": "10.1016/j.jstrokecerebrovasdis.2018.01.028",
+      "article-title": "A simple score that predicts paroxysmal atrial fibrillation on outpatient cardiac monitoring after embolic stroke of unknown source",
+      "volume": "27",
+      "author": "Ricci B",
+      "year": "2018",
+      "unstructured": "Ricci B, Chang AD, Hemendinger M A simple score that predicts paroxysmal atrial fibrillation on outpatient cardiac monitoring after embolic stroke of unknown source. J. Stroke Cerebrovasc. Dis. 27(6), 1692–1696 (2018).",
+      "journal-title": "J. Stroke Cerebrovasc. Dis."
+    },
+    {
+      "issue": "4",
+      "key": "e_1_3_5_52_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "282",
+      "DOI": "10.1016/S1474-4422(17)30002-9",
+      "article-title": "Holter-electrocardiogram-monitoring in patients with acute ischaemic stroke (Find-AFRANDOMISED): an open-label randomised controlled trial",
+      "volume": "16",
+      "author": "Wachter R",
+      "year": "2017",
+      "unstructured": "Wachter R, Gröschel K, Gelbrich G ; Find-AF (randomised) Investigators and Coordinators. Holter-electrocardiogram-monitoring in patients with acute ischaemic stroke (Find-AFRANDOMISED): an open-label randomised controlled trial. Lancet Neurol. 16(4), 282–290 (2017).",
+      "journal-title": "Lancet Neurol."
+    },
+    {
+      "issue": "1",
+      "key": "e_1_3_5_53_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "e001037",
+      "DOI": "10.1136/openhrt-2019-001037",
+      "article-title": "Cost–effectiveness of an insertable cardiac monitor in a high-risk population in the UK",
+      "volume": "6",
+      "author": "Rinciog CI",
+      "year": "2019",
+      "unstructured": "Rinciog CI, Sawyer LM, Diamantopoulos A Cost–effectiveness of an insertable cardiac monitor in a high-risk population in the UK. Open Heart 6(1), e001037 (2019).",
+      "journal-title": "Open Heart"
+    },
+    {
+      "key": "e_1_3_5_54_2",
+      "unstructured": "National Institute for Healthcare Excellence. Implantable cardiac monitors to detect atrial fibrillation after cryptogenic stroke (2020). https://www.nice.org.uk/guidance/dg41"
+    },
+    {
+      "issue": "1",
+      "key": "e_1_3_5_55_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "315",
+      "DOI": "10.1016/S0735-1097(20)30942-6",
+      "article-title": "Cost–effectiveness of extended ECG monitoring for detection of occult atrial fibrillation in patients with cryptogenic stroke",
+      "volume": "75",
+      "author": "Chew D",
+      "year": "2020",
+      "unstructured": "Chew D, Rennert-May E, Quinn FR, Spackman E, Manns B, Exner D. Cost–effectiveness of extended ECG monitoring for detection of occult atrial fibrillation in patients with cryptogenic stroke. J. Am. Coll. Cardiol. 75(1 Suppl. 11), 315 (2020).",
+      "journal-title": "J. Am. Coll. Cardiol."
+    },
+    {
+      "issue": "7",
+      "key": "e_1_3_5_56_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "2244",
+      "DOI": "10.1161/STROKEAHA.120.029340",
+      "article-title": "Cost–effectiveness of extended electrocardiogram monitoring for atrial fibrillation after stroke",
+      "volume": "51",
+      "author": "Chew Derek S",
+      "year": "2020",
+      "unstructured": "Chew Derek S, Rennert-May E, Spackman E, Mark Daniel B, Exner Derek V. Cost–effectiveness of extended electrocardiogram monitoring for atrial fibrillation after stroke. Stroke 51(7), 2244–2248 (2020).",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "11",
+      "key": "e_1_3_5_57_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1221",
+      "DOI": "10.1080/13696998.2019.1663355",
+      "article-title": "Use of insertable cardiac monitors for the detection of atrial fibrillation in patients with cryptogenic stroke in the United States is cost-effective",
+      "volume": "22",
+      "author": "Maervoet J",
+      "year": "2019",
+      "unstructured": "Maervoet J, Bossers N, Borge RP, Hilpert ST, Van Engen A, Smala A. Use of insertable cardiac monitors for the detection of atrial fibrillation in patients with cryptogenic stroke in the United States is cost-effective. J. Med. Econ. 22(11), 1221–1234 (2019).",
+      "journal-title": "J. Med. Econ."
+    },
+    {
+      "key": "e_1_3_5_58_2",
+      "unstructured": "ClinicalTrials.gov Identifier: NCT02700945. Rate of Atrial Fibrillation Through 12 Months in Patients with Recent Ischemic Stroke of Presumed Known Origin. https://clinicaltrials.gov/ct2/show/NCT02700945"
+    },
+    {
+      "issue": "3",
+      "key": "e_1_3_5_59_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "175",
+      "DOI": "10.1159/000439063",
+      "article-title": "Real-world experience with insertable cardiac monitors to find atrial fibrillation in cryptogenic stroke",
+      "volume": "40",
+      "author": "Ziegler PD",
+      "year": "2015",
+      "unstructured": "Ziegler PD, Rogers JD, Ferreira SW Real-world experience with insertable cardiac monitors to find atrial fibrillation in cryptogenic stroke. Cerebrovasc. Dis. 40(3–4), 175–181 (2015).",
+      "journal-title": "Cerebrovasc. Dis."
+    },
+    {
+      "issue": "7",
+      "key": "e_1_3_5_60_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "e006274",
+      "DOI": "10.1161/CIRCEP.118.006274",
+      "article-title": "Thirty-second gold standard definition of atrial fibrillation and its relationship with subsequent arrhythmia patterns: analysis of a large prospective device database",
+      "volume": "11",
+      "author": "Steinberg JS",
+      "year": "2018",
+      "unstructured": "Steinberg JS, O'connell H, Li S, Ziegler PD. Thirty-second gold standard definition of atrial fibrillation and its relationship with subsequent arrhythmia patterns: analysis of a large prospective device database. Circ. Arrhythm Electrophysiol. 11(7), e006274 (2018).",
+      "journal-title": "Circ. Arrhythm Electrophysiol."
+    },
+    {
+      "issue": "1",
+      "key": "e_1_3_5_61_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "e003333",
+      "DOI": "10.1161/CIRCEP.115.003333",
+      "article-title": "Uncovering atrial fibrillation beyond short-term monitoring in cryptogenic stroke patients: three-year results from the Cryptogenic Stroke and Underlying Atrial Fibrillation Trial",
+      "volume": "9",
+      "author": "Brachmann J",
+      "year": "2016",
+      "unstructured": "Brachmann J, Morillo CA, Sanna T Uncovering atrial fibrillation beyond short-term monitoring in cryptogenic stroke patients: three-year results from the Cryptogenic Stroke and Underlying Atrial Fibrillation Trial. Circ. Arrhythm Electrophysiol. 9(1), e003333 (2016).",
+      "journal-title": "Circ. Arrhythm Electrophysiol."
+    }
+  ],
+  "container-title": [
+    "Journal of Comparative Effectiveness Research"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://becarispublishing.com/doi/pdf/10.2217/cer-2020-0224",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        3,
+        19
+      ]
+    ],
+    "date-time": "2023-03-19T12:43:24Z",
+    "timestamp": 1679229804000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://becarispublishing.com/doi/10.2217/cer-2020-0224"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        2
+      ]
+    ]
+  },
+  "references-count": 59,
+  "journal-issue": {
+    "issue": "2",
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          2
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.2217/cer-2020-0224"
+  ],
+  "URL": "https://doi.org/10.2217/cer-2020-0224",
+  "relation": {},
+  "ISSN": [
+    "2042-6305",
+    "2042-6313"
+  ],
+  "issn-type": [
+    {
+      "value": "2042-6305",
+      "type": "print"
+    },
+    {
+      "value": "2042-6313",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        2
+      ]
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "records_examined": 123,
+  "excluded": 47,
+  "exclusion_reasons": {
+    "redundant_publication": 44,
+    "retracted_publication": 1,
+    "trial_registration_without_results": 2
+  },
+  "retained": 76,
+  "pending_records": 0,
+  "pending_families": [],
+  "eligible_before": 41657,
+  "eligible_after": 41610,
+  "preference": "Newest full research journal article; full research ahead of later conference/translation/synopsis",
+  "extra_full_reports_reconciled": [
+    50,
+    51,
+    53,
+    54,
+    57
+  ],
+  "extra_full_report_pending": []
+}

@@ -75,6 +75,9 @@ def main():
     added_dois = added_urls = 0
     for update in updates:
         row = by_id[update["record_id"]]
+        # Reviewed report-level corrections override earlier RIS/harvest matches.
+        if row.get("metadata_correction_note"):
+            continue
         assert title_key(row["title"]) == title_key(update["title"]), "Title mismatch for record ID"
         assert row["year"] == update["year"], "Year mismatch for record ID"
         recovered_doi = doi(update["ris_doi"])

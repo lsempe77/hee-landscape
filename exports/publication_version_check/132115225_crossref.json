@@ -1,0 +1,560 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2026-10-08T00:25:50Z",
+    "timestamp": 1791419150949,
+    "version": "4.3.3"
+  },
+  "reference-count": 33,
+  "publisher": "Oxford University Press (OUP)",
+  "issue": "2",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            29
+          ]
+        ],
+        "date-time": "2023-05-29T00:00:00Z",
+        "timestamp": 1685318400000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://academic.oup.com/journals/pages/open_access/funder_policies/chorus/standard_publication_model"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        4,
+        3
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>We estimate the impact of increased access to telemedicine following widespread adoption during the March–April 2020 COVID-19 lockdown period. We focus on the post-lockdown period, which was characterized by near-complete reopening. Using a difference-in-differences framework, we compare primary care episodes before and after the lockdown between patients with high and low access to telemedicine, as defined by their primary care physician adoption. Our results show that access to telemedicine leads to slightly more primary care visits but lower spending. Visits involve fewer prescriptions and more follow-ups, but we find no evidence of missed diagnoses or adverse outcomes. Results suggest that telemedicine does not compromise care quality or raise costs.</jats:p>",
+  "DOI": "10.1093/jeea/jvad035",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        5,
+        29
+      ]
+    ],
+    "date-time": "2023-05-29T21:16:20Z",
+    "timestamp": 1685394980000
+  },
+  "page": "712-750",
+  "source": "Crossref",
+  "is-referenced-by-count": 35,
+  "title": [
+    "The Impact of Increased Access to Telemedicine"
+  ],
+  "prefix": "10.1093",
+  "volume": "22",
+  "author": [
+    {
+      "given": "Dan",
+      "family": "Zeltzer",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "School of Economics, Tel Aviv University , Israel"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Liran",
+      "family": "Einav",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Economics, Stanford University , USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Joseph",
+      "family": "Rashba",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Clalit Innovation, Clalit Health Services , Israel"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ran D",
+      "family": "Balicer",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Clalit Innovation, Clalit Health Services and Epidemiology Department, Ben Gurion University , Israel"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "286",
+  "published-online": {
+    "date-parts": [
+      [
+        2023,
+        5,
+        29
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "12",
+      "key": "2024040316443874900_bib1",
+      "doi-asserted-by": "crossref",
+      "first-page": "3730",
+      "DOI": "10.1257/aer.20140260",
+      "article-title": "“The Determinants of Productivity in Medical Testing: Intensity and Allocation of Care.”",
+      "volume": "106",
+      "author": "Abaluck",
+      "year": "2016",
+      "journal-title": "American Economic Review"
+    },
+    {
+      "key": "2024040316443874900_bib2",
+      "doi-asserted-by": "crossref",
+      "first-page": "e2021476",
+      "DOI": "10.1001/jamanetworkopen.2020.21476",
+      "article-title": "“Use and Content of Primary Care Office-Based vs Telemedicine Care Visits during the COVID-19 Pandemic in the US.”",
+      "volume": "3",
+      "author": "Alexander",
+      "year": "2020",
+      "journal-title": "JAMA Network Open"
+    },
+    {
+      "key": "2024040316443874900_bib3",
+      "doi-asserted-by": "crossref",
+      "first-page": "485",
+      "DOI": "10.1377/hlthaff.2016.1130",
+      "article-title": "“Direct-to-Consumer Telehealth May Increase Access to Care but Does Not Decrease Spending.”",
+      "volume": "36",
+      "author": "Ashwood",
+      "year": "2017",
+      "journal-title": "Health Affairs"
+    },
+    {
+      "key": "2024040316443874900_bib4",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.3386/w26467",
+      "article-title": "“Selection with Variation in Diagnostic Skill: Evidence from Radiologists.”",
+      "author": "Chan",
+      "year": "2019"
+    },
+    {
+      "key": "2024040316443874900_bib5",
+      "volume-title": "Patients Love Telehealth—Physicians Are Not So Sure",
+      "author": "Cordine",
+      "year": "2022"
+    },
+    {
+      "key": "2024040316443874900_bib6",
+      "doi-asserted-by": "crossref",
+      "first-page": "2003",
+      "DOI": "10.1001/jama.2020.7242",
+      "article-title": "“The Business of Medicine in the Era of COVID-19.”",
+      "volume": "323",
+      "author": "Cutler",
+      "year": "2020",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "2024040316443874900_bib7",
+      "article-title": "“Defying Distance? The Provision of Services in the Digital Age.”",
+      "author": "Dahlstrand",
+      "year": "2021"
+    },
+    {
+      "key": "2024040316443874900_bib8",
+      "doi-asserted-by": "crossref",
+      "first-page": "154",
+      "DOI": "10.1056/NEJMra1601705",
+      "article-title": "“State of Telehealth.”",
+      "volume": "375",
+      "author": "Dorsey",
+      "year": "2016",
+      "journal-title": "New England Journal of Medicine"
+    },
+    {
+      "key": "2024040316443874900_bib9",
+      "doi-asserted-by": "crossref",
+      "first-page": "859",
+      "DOI": "10.1016/S0140-6736(20)30424-4",
+      "article-title": "“Telemedicine 2020 and the Next Decade.”",
+      "volume": "395",
+      "author": "Dorsey",
+      "year": "2020",
+      "journal-title": "The Lancet"
+    },
+    {
+      "key": "2024040316443874900_bib10",
+      "article-title": "“An App Call a Day Keeps the Patient Away? Substitution of Online and In-Person Doctor Consultations among Young Adults.”",
+      "author": "Ellegård Lina",
+      "year": "2021"
+    },
+    {
+      "key": "2024040316443874900_bib11",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.ijindorg.2023.102956",
+      "article-title": "“Telemedicine Competition, Pricing, and Technology Adoption: Evidence from Talk Therapists.”",
+      "author": "Goetz",
+      "year": ""
+    },
+    {
+      "key": "2024040316443874900_bib12",
+      "doi-asserted-by": "crossref",
+      "first-page": "e228954",
+      "DOI": "10.1001/jamanetworkopen.2022.8954",
+      "article-title": "“Outcomes of In-Person and Telehealth Ambulatory Encounters during COVID-19 within a Large Commercially Insured Cohort.”",
+      "volume": "5",
+      "author": "Hatef",
+      "year": "2022",
+      "journal-title": "JAMA Network Open"
+    },
+    {
+      "key": "2024040316443874900_bib13",
+      "article-title": "“HHS News: HHS to Deliver Value-Based Transformation in Primary Care.”",
+      "author": "HHS",
+      "year": "2019"
+    },
+    {
+      "key": "2024040316443874900_bib14",
+      "doi-asserted-by": "crossref",
+      "first-page": "1679",
+      "DOI": "10.1056/NEJMp2003539",
+      "article-title": "“Virtually Perfect? Telemedicine for COVID-19.”",
+      "volume": "382",
+      "author": "Hollander",
+      "year": "2020",
+      "journal-title": "New England Journal of Medicine"
+    },
+    {
+      "key": "2024040316443874900_bib15",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1186/s12913-021-06833-2",
+      "article-title": "“The Rural Tax: Comprehensive Out-of-Pocket Costs Associated with Patient Travel in British Columbia.”",
+      "volume": "21",
+      "author": "Kornelsen",
+      "year": "2021",
+      "journal-title": "BMC Health Services Research"
+    },
+    {
+      "key": "2024040316443874900_bib16",
+      "doi-asserted-by": "crossref",
+      "first-page": "596",
+      "DOI": "10.1377/hlthaff.2020.01741",
+      "article-title": "“Direct-to-Consumer Telemedicine Visits for Acute Respiratory Infections Linked to More Downstream Visits: Study Examines the Association between Telemedicine and Downstream Health Care Utilization.”",
+      "volume": "40",
+      "author": "Li",
+      "year": "2021",
+      "journal-title": "Health Affairs"
+    },
+    {
+      "key": "2024040316443874900_bib17",
+      "article-title": "“The Impact of the COVID-19 Pandemic on Outpatient Care: Visits Return to Prepandemic Levels, but Not for All Providers and Patients.”",
+      "author": "Mehrotra",
+      "year": "2020"
+    },
+    {
+      "key": "2024040316443874900_bib18",
+      "article-title": "“The Impact of the COVID-19 Pandemic on Outpatient Visits: A Rebound Emerges.”",
+      "author": "Mehrotra",
+      "year": "2020"
+    },
+    {
+      "key": "2024040316443874900_bib19",
+      "article-title": "“A Machine Learning Approach to Low-Value Health Care: Wasted Tests, Missed Heart Attacks, and Mis-Predictions.”",
+      "author": "Mullainathan",
+      "year": "2019"
+    },
+    {
+      "key": "2024040316443874900_bib20",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1787/ae3016b9-en",
+      "volume-title": "Health at a Glance 2021: OECD Indicators",
+      "author": "OECD",
+      "year": "2021"
+    },
+    {
+      "key": "2024040316443874900_bib21",
+      "doi-asserted-by": "crossref",
+      "first-page": "388",
+      "DOI": "10.1001/jamainternmed.2020.5928",
+      "article-title": "“Trends in Outpatient Care Delivery and Telemedicine During the COVID-19 Pandemic in the US.”",
+      "volume": "181",
+      "author": "Patel",
+      "year": "2020",
+      "journal-title": "JAMA Internal Medicine"
+    },
+    {
+      "key": "2024040316443874900_bib22",
+      "doi-asserted-by": "crossref",
+      "first-page": "349",
+      "DOI": "10.1377/hlthaff.2020.01786",
+      "article-title": "“Variation in Telemedicine Use and Outpatient Care during the COVID-19 Pandemic in the United States: Study Examines Variation in Total US Outpatient Visits and Telemedicine Use across Patient Demographics, Specialties, and Conditions During the COVID-19 Pandemic.”",
+      "volume": "40",
+      "author": "Patel",
+      "year": "2021",
+      "journal-title": "Health Affairs"
+    },
+    {
+      "key": "2024040316443874900_bib23",
+      "doi-asserted-by": "crossref",
+      "first-page": "2024",
+      "DOI": "10.1377/hlthaff.2018.05122",
+      "article-title": "“Electronic Visits for Common Acute Conditions: Evaluation of a Recently Established Program.”",
+      "volume": "37",
+      "author": "Player",
+      "year": "2018",
+      "journal-title": "Health Affairs"
+    },
+    {
+      "key": "2024040316443874900_bib24",
+      "volume-title": "Redefining Health Care: Creating Value-Based Competition on Results",
+      "author": "Porter",
+      "year": "2006"
+    },
+    {
+      "key": "2024040316443874900_bib25",
+      "doi-asserted-by": "crossref",
+      "first-page": "e20182491",
+      "DOI": "10.1542/peds.2018-2491",
+      "article-title": "“Antibiotic Prescribing during Pediatric Direct-to-Consumer Telemedicine Visits.”",
+      "volume": "143",
+      "author": "Ray",
+      "year": "2019",
+      "journal-title": "Pediatrics"
+    },
+    {
+      "key": "2024040316443874900_bib26",
+      "article-title": "“Research Brief: Travel and Wait Times Are Longest for Health Care Services and Result in an Annual Opportunity Cost of $89 Billion.”",
+      "author": "Rhyan",
+      "year": "2022"
+    },
+    {
+      "key": "2024040316443874900_bib27",
+      "article-title": "“2021 Year-End Digital Health Funding Seismic Shifts Beneath the Surface.”",
+      "author": "Rock Health",
+      "year": "2021"
+    },
+    {
+      "key": "2024040316443874900_bib28",
+      "doi-asserted-by": "crossref",
+      "first-page": "2045",
+      "DOI": "10.1377/hlthaff.2018.05105",
+      "article-title": "“Virtual Visits Partially Replaced In-Person Visits in an ACO-Based Medical Specialty Practice.”",
+      "volume": "37",
+      "author": "Shah",
+      "year": "2018",
+      "journal-title": "Health Affairs"
+    },
+    {
+      "key": "2024040316443874900_bib29",
+      "doi-asserted-by": "crossref",
+      "first-page": "2014",
+      "DOI": "10.1377/hlthaff.2018.05091",
+      "article-title": "“Quality of Care for Acute Respiratory Infections during Direct-to-Consumer Telemedicine Visits for Adults.”",
+      "volume": "37",
+      "author": "Shi",
+      "year": "2018",
+      "journal-title": "Health Affairs"
+    },
+    {
+      "key": "2024040316443874900_bib30",
+      "doi-asserted-by": "crossref",
+      "first-page": "1975",
+      "DOI": "10.1377/hlthaff.2018.05132",
+      "article-title": "“The Current State of Telehealth Evidence: A Rapid Review.”",
+      "volume": "37",
+      "author": "Shigekawa",
+      "year": "2018",
+      "journal-title": "Health Affairs"
+    },
+    {
+      "key": "2024040316443874900_bib31",
+      "doi-asserted-by": "crossref",
+      "first-page": "95",
+      "DOI": "10.1111/1475-6773.13596",
+      "article-title": "“Disruptions in Preventive Care: Mammograms during the COVID-19 Pandemic.”",
+      "volume": "56",
+      "author": "Song",
+      "year": "2021",
+      "journal-title": "Health Services Research"
+    },
+    {
+      "key": "2024040316443874900_bib32",
+      "doi-asserted-by": "crossref",
+      "first-page": "1585",
+      "DOI": "10.1056/NEJMsr1503323",
+      "article-title": "“Telehealth.”",
+      "volume": "377",
+      "author": "Tuckson",
+      "year": "2017",
+      "journal-title": "New England Journal of Medicine"
+    },
+    {
+      "key": "2024040316443874900_bib33",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.3386/w27621",
+      "article-title": "“Effects of State COVID-19 Closure Policy on Non-COVID-19 Health Care Utilization.”",
+      "author": "Ziedan",
+      "year": "2020"
+    }
+  ],
+  "container-title": [
+    "Journal of the European Economic Association"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://academic.oup.com/jeea/advance-article-pdf/doi/10.1093/jeea/jvad035/50719391/jvad035.pdf",
+      "content-type": "application/pdf",
+      "content-version": "am",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://academic.oup.com/jeea/article-pdf/22/2/712/57146916/jvad035.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://academic.oup.com/jeea/article-pdf/22/2/712/57146916/jvad035.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        4,
+        3
+      ]
+    ],
+    "date-time": "2024-04-03T14:33:05Z",
+    "timestamp": 1712154785000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://academic.oup.com/jeea/article/22/2/712/7185823"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        5,
+        29
+      ]
+    ]
+  },
+  "references-count": 33,
+  "journal-issue": {
+    "issue": "2",
+    "published-online": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          29
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          4,
+          3
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1093/jeea/jvad035",
+  "relation": {},
+  "ISSN": [
+    "1542-4766",
+    "1542-4774"
+  ],
+  "issn-type": [
+    {
+      "value": "1542-4766",
+      "type": "print"
+    },
+    {
+      "value": "1542-4774",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published-other": {
+    "date-parts": [
+      [
+        2024,
+        4
+      ]
+    ]
+  },
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        5,
+        29
+      ]
+    ]
+  }
+}

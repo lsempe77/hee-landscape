@@ -1,0 +1,469 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        6
+      ]
+    ],
+    "date-time": "2026-10-06T23:33:52Z",
+    "timestamp": 1791329632051,
+    "version": "4.3.1"
+  },
+  "reference-count": 22,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "2",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2009,
+            12,
+            2
+          ]
+        ],
+        "date-time": "2009-12-02T00:00:00Z",
+        "timestamp": 1259712000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "http://www.springer.com/tdm"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Cell Tissue Bank"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2011,
+        5
+      ]
+    ]
+  },
+  "DOI": "10.1007/s10561-009-9165-9",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2009,
+        12,
+        1
+      ]
+    ],
+    "date-time": "2009-12-01T01:39:53Z",
+    "timestamp": 1259631593000
+  },
+  "page": "153-158",
+  "source": "Crossref",
+  "is-referenced-by-count": 10,
+  "title": [
+    "Cost-effectiveness of homograft heart valve replacement surgery: an introductory study"
+  ],
+  "prefix": "10.1007",
+  "volume": "12",
+  "author": [
+    {
+      "given": "Mohsen",
+      "family": "Yaghoubi",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Hamid Reza",
+      "family": "Aghayan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Babak",
+      "family": "Arjmand",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Seyed Hassan",
+      "family": "Emami-Razavi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2009,
+        12,
+        2
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "9165_CR1",
+      "doi-asserted-by": "crossref",
+      "first-page": "181",
+      "DOI": "10.1016/S0167-6296(01)00116-3",
+      "volume": "21",
+      "author": "A Blomqvist",
+      "year": "2002",
+      "unstructured": "Blomqvist A (2002) QALYs, standard gambles and the expected budget constraint. J Health Econ 21:181–195",
+      "journal-title": "J Health Econ"
+    },
+    {
+      "issue": "1",
+      "key": "9165_CR2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1067/mtc.2002.123705",
+      "volume": "124",
+      "author": "DR Clarke",
+      "year": "2002",
+      "unstructured": "Clarke DR (2002) Presidential address: value, viability and valves. J Thorac Cardiovasc Surg 124(1):1–6",
+      "journal-title": "J Thorac Cardiovasc Surg"
+    },
+    {
+      "issue": "6",
+      "key": "9165_CR3",
+      "first-page": "19",
+      "volume": "2",
+      "author": "A Dabbagh",
+      "year": "2003",
+      "unstructured": "Dabbagh A, Sarraf Zadegan N, Bani Fatemi V, Habibi HR, Rafiei M (2003) Costs of therapeutic modalities of cardiovascular patients in Isfahan university hospitals. HAKIM Res J 2(6):19–25",
+      "journal-title": "HAKIM Res J"
+    },
+    {
+      "issue": "4",
+      "key": "9165_CR4",
+      "doi-asserted-by": "crossref",
+      "first-page": "409",
+      "DOI": "10.1016/j.healun.2005.11.443",
+      "volume": "25",
+      "author": "JD Dayton",
+      "year": "2006",
+      "unstructured": "Dayton JD, Kanter KR, Vincent RN, Mahle WT (2006) Cost-effectiveness of pediatric heart transplantation. J Heart Lung Transplant 25(4):409–415",
+      "journal-title": "J Heart Lung Transplant"
+    },
+    {
+      "issue": "5",
+      "key": "9165_CR5",
+      "doi-asserted-by": "crossref",
+      "first-page": "518",
+      "DOI": "10.1111/j.1524-4733.2004.75003.x",
+      "volume": "7",
+      "author": "HG Eichler",
+      "year": "2004",
+      "unstructured": "Eichler HG, Kong SX, Gerth WC, Mavros P, Jönsson B (2004) Use of cost-effectiveness analysis in health-care resource allocation decision-making: how are cost-effectiveness thresholds expected to emerge? Value Health 7(5):518–528",
+      "journal-title": "Value Health"
+    },
+    {
+      "issue": "2",
+      "key": "9165_CR6",
+      "doi-asserted-by": "crossref",
+      "first-page": "S44",
+      "DOI": "10.1053/apmr.2002.36955",
+      "volume": "83",
+      "author": "RM Kaplan",
+      "year": "2002",
+      "unstructured": "Kaplan RM (2002) Quality of life: an outcomes perspective. Arch Phys Med Rehabil 83(2):S44–S50",
+      "journal-title": "Arch Phys Med Rehabil"
+    },
+    {
+      "issue": "2",
+      "key": "9165_CR7",
+      "doi-asserted-by": "crossref",
+      "first-page": "115",
+      "DOI": "10.1016/0168-8510(89)90066-3",
+      "volume": "13",
+      "author": "I Kawachi",
+      "year": "1989",
+      "unstructured": "Kawachi I (1989) QALYs and justice. Health Policy 13(2):115–120",
+      "journal-title": "Health Policy"
+    },
+    {
+      "key": "9165_CR8",
+      "doi-asserted-by": "crossref",
+      "first-page": "85",
+      "DOI": "10.1016/j.healthpol.2007.10.002",
+      "volume": "86",
+      "author": "N Kontodimopoulos",
+      "year": "2008",
+      "unstructured": "Kontodimopoulos N, Niakas D (2008) An estimate of lifelong costs and QALYs in renal replacement therapy based on patients’ life expectancy. Health Policy 86:85–96",
+      "journal-title": "Health Policy"
+    },
+    {
+      "issue": "6",
+      "key": "9165_CR9",
+      "first-page": "492",
+      "volume": "38",
+      "author": "CG Lever",
+      "year": "1995",
+      "unstructured": "Lever CG, Ross DB, Page LK, La Prairie A, Molyneaux M, Murphy DA (1995) Cost-effectiveness and efficacy of an on-site homograft heart valve bank. Can J Surg 38(6):492–496",
+      "journal-title": "Can J Surg"
+    },
+    {
+      "issue": "1",
+      "key": "9165_CR10",
+      "doi-asserted-by": "crossref",
+      "first-page": "2",
+      "DOI": "10.1093/oxfordjournals.eurheartj.a060041",
+      "volume": "13",
+      "author": "LA Levin",
+      "year": "1992",
+      "unstructured": "Levin LA, Jönsson B (1992) Cost-effectiveness of thrombolysis- a randomized study of intravenous rt-PA in suspected myocardial infarction. Eur Heart J 13(1):2–8",
+      "journal-title": "Eur Heart J"
+    },
+    {
+      "issue": "4",
+      "key": "9165_CR11",
+      "doi-asserted-by": "crossref",
+      "first-page": "299",
+      "DOI": "10.1016/0277-9536(89)90030-0",
+      "volume": "28",
+      "author": "G Loomes",
+      "year": "1989",
+      "unstructured": "Loomes G, McKenzie L (1989) The use of QALYs in health care decision making. Soc Sci Med 28(4):299–308",
+      "journal-title": "Soc Sci Med"
+    },
+    {
+      "issue": "5",
+      "key": "9165_CR12",
+      "doi-asserted-by": "crossref",
+      "first-page": "381",
+      "DOI": "10.1016/S0967-2109(03)00030-9",
+      "volume": "11",
+      "author": "MA Maliwa",
+      "year": "2003",
+      "unstructured": "Maliwa MA, Heijden MG, Bots ML, Hout BA, Casselman FP, Swieten HV, Vermeulen FEE (2003) Quality of life and NYHA class 30 years after mechanical aortic valve replacement. Cardiovasc Surg 11(5):381–387",
+      "journal-title": "Cardiovasc Surg"
+    },
+    {
+      "issue": "4",
+      "key": "9165_CR13",
+      "doi-asserted-by": "crossref",
+      "first-page": "278",
+      "DOI": "10.1016/0749-2081(90)90030-9",
+      "volume": "6",
+      "author": "PA Marshal",
+      "year": "1990",
+      "unstructured": "Marshal PA (1990) Cultural influences on perceived quality of life. Semin Oncol Nurs 6(4):278–284",
+      "journal-title": "Semin Oncol Nurs"
+    },
+    {
+      "issue": "4",
+      "key": "9165_CR14",
+      "first-page": "433",
+      "volume": "168",
+      "author": "M McGregor",
+      "year": "2003",
+      "unstructured": "McGregor M (2003) Cost-utility analysis: use QALYs only with great caution. CMAJ 168(4):433–434",
+      "journal-title": "CMAJ"
+    },
+    {
+      "key": "9165_CR15",
+      "volume-title": "Braunwald’s Heart Disease: A Textbook of Cardiovascular Medicine",
+      "author": "CM Otto",
+      "year": "2008",
+      "unstructured": "Otto CM, Bonow RO (2008) Valvular heart disease. 62th Chapter. In: Libby P, Bonow RO, MannZipes DP DL, Zipes DP (eds) Braunwald’s heart disease: a textbook of cardiovascular medicine, 8th edn. Elsevier Inc, Philadelphia, USA",
+      "edition": "8"
+    },
+    {
+      "issue": "33",
+      "key": "9165_CR16",
+      "first-page": "67",
+      "volume": "9",
+      "author": "A Parande",
+      "year": "2007",
+      "unstructured": "Parande A, SiratiNir M, Khaghanizadeh M, Karimizarchi AA (2007) Comparison the effect of training of conflict resolution and relaxation on quality of life’s spouses of war veterans affected Post traumatic stress disorder with major depression disorder. Q J Fundam Ment Health 9(33):67–76",
+      "journal-title": "Q J Fundam Ment Health"
+    },
+    {
+      "issue": "12",
+      "key": "9165_CR17",
+      "first-page": "77",
+      "volume": "1",
+      "author": "Z Rahnavard",
+      "year": "2006",
+      "unstructured": "Rahnavard Z, Zolfaghari M, Kazemnejad A, Hatamipour Kh (2006) An investigation of quality of life and factors affecting it in the patients with congestive heart failure. J Fac Nurs Midwifery 1(12):77–86",
+      "journal-title": "J Fac Nurs Midwifery"
+    },
+    {
+      "key": "9165_CR18",
+      "doi-asserted-by": "crossref",
+      "first-page": "30",
+      "DOI": "10.1177/021849230701500107",
+      "volume": "15",
+      "author": "M Salehi",
+      "year": "2007",
+      "unstructured": "Salehi M, Sattarzadeh R, Soleimani AA, Radmehr H, Mirhosseini J, Sanatkarfar M (2007) The ross operation: clinical results and echocardiographic findings. Asian Cardiovasc Thorac Ann 15:30–34",
+      "journal-title": "Asian Cardiovasc Thorac Ann"
+    },
+    {
+      "issue": "66",
+      "key": "9165_CR19",
+      "first-page": "257",
+      "volume": "4",
+      "author": "R Sattarzadeh",
+      "year": "2008",
+      "unstructured": "Sattarzadeh R, Radmehr H, Soleimani A, Salehi M (2008) Pulmonary allograft stenosis after ross procedure: risk factors. Tehran Univ Med J 4(66):257–261",
+      "journal-title": "Tehran Univ Med J"
+    },
+    {
+      "issue": "9",
+      "key": "9165_CR20",
+      "first-page": "63",
+      "volume": "34",
+      "author": "M Taghaddosi",
+      "year": "2005",
+      "unstructured": "Taghaddosi M, Abdar Esfahani M, Mousavi SG (2005) Difficulties of patients with replaced heart valve in Kashan, 2001. Feyz, Kashan Univ Med Sci Health Serv 34(9):63–69",
+      "journal-title": "Feyz, Kashan Univ Med Sci Health Serv"
+    },
+    {
+      "issue": "4",
+      "key": "9165_CR21",
+      "doi-asserted-by": "crossref",
+      "first-page": "330",
+      "DOI": "10.1367/1539-4409(2002)002<0330:CEAAEM>2.0.CO;2",
+      "volume": "2",
+      "author": "JM Tilford",
+      "year": "2002",
+      "unstructured": "Tilford JM (2002) Cost-effectiveness analysis and emergency medical services for children: issue and applications. Ambul Pediatr 2(4):330–336",
+      "journal-title": "Ambul Pediatr"
+    },
+    {
+      "key": "9165_CR22",
+      "doi-asserted-by": "crossref",
+      "first-page": "608",
+      "DOI": "10.1016/j.jtcvs.2006.10.044",
+      "volume": "133",
+      "author": "YX Wu",
+      "year": "2007",
+      "unstructured": "Wu YX, Jin R, Gao G, Grunkemeier GL, Starr A (2007) Cost-effectiveness of aortic valve replacement therapy in the elderly: an introductory study. J Thorac Cardiovasc Surg 133:608–613",
+      "journal-title": "J Thorac Cardiovasc Surg"
+    }
+  ],
+  "container-title": [
+    "Cell and Tissue Banking"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s10561-009-9165-9.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/article/10.1007/s10561-009-9165-9/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s10561-009-9165-9",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        5,
+        30
+      ]
+    ],
+    "date-time": "2019-05-30T17:32:42Z",
+    "timestamp": 1559237562000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/s10561-009-9165-9"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2009,
+        12,
+        2
+      ]
+    ]
+  },
+  "references-count": 22,
+  "journal-issue": {
+    "issue": "2",
+    "published-print": {
+      "date-parts": [
+        [
+          2011,
+          5
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "9165"
+  ],
+  "URL": "https://doi.org/10.1007/s10561-009-9165-9",
+  "relation": {},
+  "ISSN": [
+    "1389-9333",
+    "1573-6814"
+  ],
+  "issn-type": [
+    {
+      "value": "1389-9333",
+      "type": "print"
+    },
+    {
+      "value": "1573-6814",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2009,
+        12,
+        2
+      ]
+    ]
+  }
+}

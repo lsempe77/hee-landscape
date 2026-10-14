@@ -7,6 +7,7 @@ counts and the country sets used, without duplicating the external GBD export.
 import csv
 import hashlib
 import json
+import os
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -43,7 +44,9 @@ def write_json(path, value):
 def save(fig, stem, title, caption):
     fig.suptitle(title, x=.09, ha="left", fontsize=18, fontweight="bold", y=.96)
     fig.savefig(OUT / (stem + ".svg"), facecolor=BG)
-    fig.savefig(OUT / (stem + ".png"), facecolor=BG, dpi=130)
+    png_stage = OUT / (stem + ".refresh.tmp.png")
+    fig.savefig(png_stage, facecolor=BG, dpi=130)
+    os.replace(png_stage, OUT / (stem + ".png"))
     plt.close(fig)
     return {"file": stem + ".svg", "title": title, "caption": caption}
 
@@ -114,7 +117,7 @@ def main():
                        "Expected studies = this pair total × the country's share of DALYs across the same 204 locations. "
                        "Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export "
                        "and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. "
-                       "This larger country set differs from the 154-country website burden analysis (31,471 pairs). "
+                       f"This larger country set differs from the {totals['website_with_burden']}-country website burden analysis ({totals['website_burden_pairs']:,} pairs). "
                        "Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; "
                        "GBD 2023 all-cause DALYs. Proportionality is a reference point.")
     fig.text(.09, .035, textwrap.fill(deficit_caption, 138), va="bottom", fontsize=9, linespacing=1.5)

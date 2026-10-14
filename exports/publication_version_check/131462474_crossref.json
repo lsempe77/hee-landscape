@@ -1,0 +1,298 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        21
+      ]
+    ],
+    "date-time": "2025-12-21T08:26:14Z",
+    "timestamp": 1766305574702,
+    "version": "3.48.0"
+  },
+  "reference-count": 0,
+  "publisher": "Elsevier BV",
+  "issue": "1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2024-01-01T00:00:00Z",
+        "timestamp": 1704067200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2024-01-01T00:00:00Z",
+        "timestamp": 1704067200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "ajog.org",
+      "clinicalkey.com",
+      "clinicalkey.com.au",
+      "clinicalkey.es",
+      "clinicalkey.fr",
+      "clinicalkey.jp",
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "American Journal of Obstetrics and Gynecology"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        1
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.ajog.2023.11.454",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        1,
+        20
+      ]
+    ],
+    "date-time": "2024-01-20T22:54:17Z",
+    "timestamp": 1705791257000
+  },
+  "page": "S236-S237",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "special_numbering": "S",
+  "title": [
+    "428 Cost-effectiveness of BRCA1 testing at time of obstetrical prenatal carrier screening for cancer prevention"
+  ],
+  "prefix": "10.1016",
+  "volume": "230",
+  "author": [
+    {
+      "given": "Shayan",
+      "family": "Dioun",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Luiza",
+      "family": "Perez",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Ravi",
+      "family": "Sharaf",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "June",
+      "family": "Hou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Jason D.",
+      "family": "Wright",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Malavika",
+      "family": "Prabhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Melissa",
+      "family": "Frey",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "container-title": [
+    "American Journal of Obstetrics and Gynecology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0002937823012565?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0002937823012565?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        21
+      ]
+    ],
+    "date-time": "2025-12-21T08:22:48Z",
+    "timestamp": 1766305368000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0002937823012565"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        1
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "1",
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          1
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S0002937823012565"
+  ],
+  "URL": "https://doi.org/10.1016/j.ajog.2023.11.454",
+  "relation": {},
+  "ISSN": [
+    "0002-9378"
+  ],
+  "issn-type": [
+    {
+      "type": "print",
+      "value": "0002-9378"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        1
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "428 Cost-effectiveness of BRCA1 testing at time of obstetrical prenatal carrier screening for cancer prevention",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "American Journal of Obstetrics and Gynecology",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.ajog.2023.11.454",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "simple-article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "Copyright © 2024 Published by Mosby, Inc.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ]
+}

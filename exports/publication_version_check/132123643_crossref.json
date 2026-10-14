@@ -1,0 +1,128 @@
+{
+  "institution": [
+    {
+      "name": "National Bureau of Economic Research",
+      "acronym": [
+        "NBER"
+      ],
+      "place": [
+        "Cambridge, MA"
+      ]
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        19
+      ]
+    ],
+    "date-time": "2026-09-19T14:09:58Z",
+    "timestamp": 1789826998594,
+    "version": "4.0.1"
+  },
+  "publisher-location": "Cambridge, MA",
+  "reference-count": 0,
+  "publisher": "National Bureau of Economic Research",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "DOI": "10.3386/w30608",
+  "type": "report",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        31
+      ]
+    ],
+    "date-time": "2022-10-31T19:47:41Z",
+    "timestamp": 1667245661000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 33,
+  "title": [
+    "The Productivity of Professions: Evidence from the Emergency Department"
+  ],
+  "prefix": "10.3386",
+  "author": [
+    {
+      "given": "David",
+      "family": "Chan",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yiqun",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "1960",
+  "published-online": {
+    "date-parts": [
+      [
+        2022,
+        10
+      ]
+    ]
+  },
+  "container-title": [],
+  "original-title": [],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        19
+      ]
+    ],
+    "date-time": "2026-09-19T13:35:02Z",
+    "timestamp": 1789824902000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://www.nber.org/papers/w30608.pdf"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2022,
+        10
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.3386/w30608",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2022,
+        10
+      ]
+    ]
+  }
+}

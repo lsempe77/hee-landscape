@@ -1,0 +1,228 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2026-10-08T04:11:43Z",
+    "timestamp": 1791432703210,
+    "version": "4.3.3"
+  },
+  "reference-count": 2,
+  "publisher": "FapUNIFESP (SciELO)",
+  "issue": "1",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Sao Paulo Med. J."
+  ],
+  "DOI": "10.1590/1516-3180.20161341t2",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        17
+      ]
+    ],
+    "date-time": "2016-01-17T04:58:08Z",
+    "timestamp": 1453006688000
+  },
+  "page": "93-94",
+  "source": "Crossref",
+  "is-referenced-by-count": 28,
+  "title": [
+    "Effectiveness and cost-effectiveness of home palliative care services for adults with advanced illness and their caregivers"
+  ],
+  "prefix": "10.1590",
+  "volume": "134",
+  "author": [
+    {
+      "given": "Barbara",
+      "family": "Gomes",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Natalia",
+      "family": "Calanzani",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Vito",
+      "family": "Curiale",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Paul",
+      "family": "McCrone P.",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Irene J.",
+      "family": "Higginson",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Maja de",
+      "family": "Brito",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "530",
+  "published-online": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        19
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "6",
+      "key": "ref1",
+      "first-page": "CD007760",
+      "article-title": "Effectiveness and cost-effectiveness of home palliative care services for adults with advanced illness and their caregivers",
+      "author": "Gomes B",
+      "year": "2013",
+      "journal-title": "Cochrane Database Syst Rev"
+    },
+    {
+      "key": "ref2",
+      "first-page": "269",
+      "article-title": "Resolução CFM no 1.995, de 9 de agosto de 2012. Dispõe sobre as diretivas antecipadas de vontade dos pacientes",
+      "year": "2012",
+      "journal-title": "Diário Oficial da União"
+    }
+  ],
+  "container-title": [
+    "Sao Paulo Medical Journal"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "http://www.scielo.br/pdf/spmj/v134n1/1516-3180-spmj-_20161341T2.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2018,
+        3,
+        6
+      ]
+    ],
+    "date-time": "2018-03-06T01:09:05Z",
+    "timestamp": 1520298545000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1516-31802016000100093&lng=en&tlng=en"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        19
+      ]
+    ]
+  },
+  "references-count": 2,
+  "journal-issue": {
+    "issue": "1",
+    "published-online": {
+      "date-parts": [
+        [
+          2016,
+          2
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S1516-31802016000100093"
+  ],
+  "URL": "https://doi.org/10.1590/1516-3180.20161341t2",
+  "relation": {},
+  "ISSN": [
+    "1806-9460",
+    "1516-3180"
+  ],
+  "issn-type": [
+    {
+      "value": "1806-9460",
+      "type": "electronic"
+    },
+    {
+      "value": "1516-3180",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        19
+      ]
+    ]
+  }
+}

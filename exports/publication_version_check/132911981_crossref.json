@@ -1,0 +1,204 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        30
+      ]
+    ],
+    "date-time": "2026-07-30T06:11:23Z",
+    "timestamp": 1785391883640,
+    "version": "3.55.0"
+  },
+  "reference-count": 0,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "S1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2021-07-01T00:00:00Z",
+        "timestamp": 1625097600000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            7,
+            1
+          ]
+        ],
+        "date-time": "2021-07-01T00:00:00Z",
+        "timestamp": 1625097600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "J GEN INTERN MED"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2021,
+        7
+      ]
+    ]
+  },
+  "DOI": "10.1007/s11606-021-06830-5",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        7,
+        23
+      ]
+    ],
+    "date-time": "2021-07-23T14:02:52Z",
+    "timestamp": 1627048972000
+  },
+  "page": "1-469",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 117,
+  "title": [
+    "Abstracts from the 2021 Annual Meeting of the Society of General Internal Medicine"
+  ],
+  "prefix": "10.1007",
+  "volume": "36",
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        7,
+        23
+      ]
+    ]
+  },
+  "container-title": [
+    "Journal of General Internal Medicine"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://link.springer.com/content/pdf/10.1007/s11606-021-06830-5.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://link.springer.com/article/10.1007/s11606-021-06830-5/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://link.springer.com/content/pdf/10.1007/s11606-021-06830-5.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        4,
+        9
+      ]
+    ],
+    "date-time": "2025-04-09T06:53:01Z",
+    "timestamp": 1744181581000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://link.springer.com/10.1007/s11606-021-06830-5"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        7
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "S1",
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          7
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "6830"
+  ],
+  "URL": "https://doi.org/10.1007/s11606-021-06830-5",
+  "relation": {},
+  "ISSN": [
+    "0884-8734",
+    "1525-1497"
+  ],
+  "issn-type": [
+    {
+      "value": "0884-8734",
+      "type": "print"
+    },
+    {
+      "value": "1525-1497",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        7
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "23 July 2021",
+      "order": 1,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    }
+  ]
+}

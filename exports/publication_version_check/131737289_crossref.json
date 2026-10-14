@@ -1,0 +1,678 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        25
+      ]
+    ],
+    "date-time": "2026-08-25T14:03:48Z",
+    "timestamp": 1787666628951,
+    "version": "build-2736575974"
+  },
+  "reference-count": 30,
+  "publisher": "XMLink",
+  "issue": "3",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2019-01-01T00:00:00Z",
+        "timestamp": 1546300800000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by-nc/4.0"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100003725",
+      "name": "National Research Foundation of Korea",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/501100003725",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100003625",
+      "name": "Ministry of Health and Welfare",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "HC15C1200"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "HC15C1200"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100003625",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "synapse.koreamed.org"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Korean Circ J"
+  ],
+  "DOI": "10.4070/kcj.2018.0220",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2018,
+        11,
+        8
+      ]
+    ],
+    "date-time": "2018-11-08T06:12:55Z",
+    "timestamp": 1541657575000
+  },
+  "page": "252",
+  "update-policy": "https://doi.org/10.4070/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 17,
+  "title": [
+    "Cost-Effectiveness of Rivaroxaban Compared to Warfarin for Stroke Prevention in Atrial Fibrillation"
+  ],
+  "prefix": "10.4070",
+  "volume": "49",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-7006-1656",
+      "authenticated-orcid": false,
+      "given": "Hyunmee",
+      "family": "Kim",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Department of Preventive Medicine, Institute of Human Complexity and Systems Science, Yonsei University College of Medicine, Seoul, Korea."
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5030-952X",
+      "authenticated-orcid": false,
+      "given": "Hyeongsoo",
+      "family": "Kim",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Cardiology, Department of Internal Medicine, Severance Cardiovascular Hospital, Yonsei University College of Medicine, Seoul, Korea."
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-8524-2732",
+      "authenticated-orcid": false,
+      "given": "Seong-Kyung",
+      "family": "Cho",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Preventive Medicine, Institute of Human Complexity and Systems Science, Yonsei University College of Medicine, Seoul, Korea."
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-0293-0901",
+      "authenticated-orcid": false,
+      "given": "Jin-Bae",
+      "family": "Kim",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Cardiology, Department of Internal Medicine, Kyung Hee University Hospital, Kyung Hee University, Seoul, Korea."
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-9036-7225",
+      "authenticated-orcid": false,
+      "given": "Boyoung",
+      "family": "Joung",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Cardiology, Department of Internal Medicine, Severance Cardiovascular Hospital, Yonsei University College of Medicine, Seoul, Korea."
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5940-5649",
+      "authenticated-orcid": false,
+      "given": "Changsoo",
+      "family": "Kim",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Preventive Medicine, Institute of Human Complexity and Systems Science, Yonsei University College of Medicine, Seoul, Korea."
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "18617",
+  "published-online": {
+    "date-parts": [
+      [
+        2019
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "10.4070/kcj.2018.0220_ref1",
+      "doi-asserted-by": "crossref",
+      "first-page": "56",
+      "DOI": "10.4070/kcj.2016.0045",
+      "volume": "47",
+      "author": "Lee",
+      "year": "2017",
+      "journal-title": "Korean Circ J"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1524",
+      "DOI": "10.1161/STROKEAHA.117.016926",
+      "volume": "48",
+      "author": "Kim",
+      "year": "2017",
+      "journal-title": "Stroke"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref3",
+      "doi-asserted-by": "crossref",
+      "first-page": "857",
+      "DOI": "10.7326/0003-4819-146-12-200706190-00007",
+      "volume": "146",
+      "author": "Hart",
+      "year": "2007",
+      "journal-title": "Ann Intern Med"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref4",
+      "doi-asserted-by": "crossref",
+      "first-page": "129",
+      "DOI": "10.2147/JMDH.S33045",
+      "volume": "5",
+      "author": "Decker",
+      "year": "2012",
+      "journal-title": "J Multidiscip Healthc"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref5",
+      "doi-asserted-by": "crossref",
+      "first-page": "1139",
+      "DOI": "10.1056/NEJMoa0905561",
+      "volume": "361",
+      "author": "Connolly",
+      "year": "2009",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref6",
+      "doi-asserted-by": "crossref",
+      "first-page": "883",
+      "DOI": "10.1056/NEJMoa1009638",
+      "volume": "365",
+      "author": "Patel",
+      "year": "2011",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref7",
+      "doi-asserted-by": "crossref",
+      "first-page": "981",
+      "DOI": "10.1056/NEJMoa1107039",
+      "volume": "365",
+      "author": "Granger",
+      "year": "2011",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref8",
+      "doi-asserted-by": "crossref",
+      "first-page": "2093",
+      "DOI": "10.1056/NEJMoa1310907",
+      "volume": "369",
+      "author": "Giugliano",
+      "year": "2013",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref9",
+      "doi-asserted-by": "crossref",
+      "first-page": "2461",
+      "DOI": "10.1185/03007995.2014.933577",
+      "volume": "30",
+      "author": "Nelson",
+      "year": "2014",
+      "journal-title": "Curr Med Res Opin"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref10",
+      "doi-asserted-by": "crossref",
+      "first-page": "2719",
+      "DOI": "10.1093/eurheartj/ehs253",
+      "volume": "33",
+      "author": "Camm",
+      "year": "2012",
+      "journal-title": "Eur Heart J"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref11",
+      "doi-asserted-by": "crossref",
+      "first-page": "e1",
+      "DOI": "10.1016/j.jacc.2014.03.022",
+      "volume": "64",
+      "author": "January",
+      "year": "2014",
+      "journal-title": "J Am Coll Cardiol"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref12",
+      "doi-asserted-by": "crossref",
+      "first-page": "20",
+      "DOI": "10.1016/j.ahj.2018.04.017",
+      "volume": "202",
+      "author": "Kim",
+      "year": "2018",
+      "journal-title": "Am Heart J"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref13",
+      "first-page": "heartjnl-2017-312930",
+      "author": "Kim",
+      "year": "2018",
+      "journal-title": "Heart"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref14",
+      "doi-asserted-by": "crossref",
+      "first-page": "e004705",
+      "DOI": "10.1161/JAHA.116.004705",
+      "volume": "6",
+      "author": "Baek",
+      "year": "2017",
+      "journal-title": "J Am Heart Assoc"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref15",
+      "doi-asserted-by": "crossref",
+      "first-page": "12716",
+      "DOI": "10.1038/s41598-017-13061-4",
+      "volume": "7",
+      "author": "Lee",
+      "year": "2017",
+      "journal-title": "Sci Rep"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref16",
+      "doi-asserted-by": "crossref",
+      "first-page": "359",
+      "DOI": "10.1177/027298902400448920",
+      "volume": "22",
+      "author": "Ades",
+      "year": "2002",
+      "journal-title": "Med Decis Making"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref17",
+      "doi-asserted-by": "crossref",
+      "first-page": "2893",
+      "DOI": "10.1093/eurheartj/ehw210",
+      "volume": "37",
+      "author": "Kirchhof",
+      "year": "2016",
+      "journal-title": "Eur Heart J"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref18",
+      "volume-title": "Korean life expectation",
+      "author": "Korean Statistical Information Service (KOSIS)",
+      "year": "2016"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref19",
+      "first-page": "ehy565.P2904",
+      "volume": "39",
+      "author": "Kim",
+      "year": "2018",
+      "journal-title": "Stroke"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref20",
+      "doi-asserted-by": "crossref",
+      "first-page": "699",
+      "DOI": "10.1001/jama.293.6.699",
+      "volume": "293",
+      "author": "O'Brien",
+      "year": "2005",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref21",
+      "doi-asserted-by": "crossref",
+      "first-page": "897",
+      "DOI": "10.7326/0003-4819-120-11-199406010-00001",
+      "volume": "120",
+      "author": "Hylek",
+      "year": "1994",
+      "journal-title": "Ann Intern Med"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref22",
+      "doi-asserted-by": "crossref",
+      "first-page": "92",
+      "DOI": "10.1377/hlthaff.19.2.92",
+      "volume": "19",
+      "author": "Neumann",
+      "year": "2000",
+      "journal-title": "Health Aff (Millwood)"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref23",
+      "doi-asserted-by": "crossref",
+      "first-page": "410",
+      "DOI": "10.1177/0272989X06290495",
+      "volume": "26",
+      "author": "Sullivan",
+      "year": "2006",
+      "journal-title": "Med Decis Making"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref24",
+      "doi-asserted-by": "crossref",
+      "first-page": "278",
+      "DOI": "10.1016/j.thromres.2014.05.027",
+      "volume": "134",
+      "author": "Lanitis",
+      "year": "2014",
+      "journal-title": "Thromb Res"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref25",
+      "doi-asserted-by": "crossref",
+      "first-page": "1140",
+      "DOI": "10.1016/j.ahj.2015.09.011",
+      "volume": "170",
+      "author": "Magnuson",
+      "year": "2015",
+      "journal-title": "Am Heart J"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref26",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.7326/0003-4819-154-1-201101040-00289",
+      "volume": "154",
+      "author": "Freeman",
+      "year": "2011",
+      "journal-title": "Ann Intern Med"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref27",
+      "doi-asserted-by": "crossref",
+      "first-page": "908",
+      "DOI": "10.1160/TH11-02-0089",
+      "volume": "105",
+      "author": "Sorensen",
+      "year": "2011",
+      "journal-title": "Thromb Haemost"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref28",
+      "doi-asserted-by": "crossref",
+      "first-page": "d6333",
+      "DOI": "10.1136/bmj.d6333",
+      "volume": "343",
+      "author": "Pink",
+      "year": "2011",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref29",
+      "doi-asserted-by": "crossref",
+      "first-page": "845",
+      "DOI": "10.1016/j.amjcard.2012.05.011",
+      "volume": "110",
+      "author": "Lee",
+      "year": "2012",
+      "journal-title": "Am J Cardiol"
+    },
+    {
+      "key": "10.4070/kcj.2018.0220_ref30",
+      "doi-asserted-by": "crossref",
+      "first-page": "j5058",
+      "DOI": "10.1136/bmj.j5058",
+      "volume": "359",
+      "author": "López-López",
+      "year": "2017",
+      "journal-title": "BMJ"
+    }
+  ],
+  "container-title": [
+    "Korean Circulation Journal"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://synapse.koreamed.org/pdf/10.4070/kcj.2018.0220",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://synapse.koreamed.org/DOIx.php?id=10.4070/kcj.2018.0220",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://e-kcj.org/DOIx.php?id=10.4070/kcj.2018.0220",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2020,
+        5,
+        15
+      ]
+    ],
+    "date-time": "2020-05-15T07:18:55Z",
+    "timestamp": 1589527135000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://e-kcj.org/DOIx.php?id=10.4070/kcj.2018.0220"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2019
+      ]
+    ]
+  },
+  "references-count": 30,
+  "journal-issue": {
+    "issue": "3",
+    "published-online": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.4070/kcj.2018.0220",
+  "relation": {},
+  "ISSN": [
+    "1738-5520",
+    "1738-5555"
+  ],
+  "issn-type": [
+    {
+      "value": "1738-5520",
+      "type": "print"
+    },
+    {
+      "value": "1738-5555",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2019
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "https://synapse.koreamed.org/DOIx.php?id=10.4070/kcj.2018.0220",
+      "URL": "https://synapse.koreamed.org/DOIx.php?id=10.4070/kcj.2018.0220",
+      "name": "synapse",
+      "label": "Synapse",
+      "group": {
+        "name": "multiple_resolution",
+        "label": "Full text available at:"
+      }
+    },
+    {
+      "value": "https://e-kcj.org/DOIx.php?id=10.4070/kcj.2018.0220",
+      "URL": "https://e-kcj.org/DOIx.php?id=10.4070/kcj.2018.0220",
+      "name": "the_journal",
+      "label": "the Journal",
+      "group": {
+        "name": "multiple_resolution",
+        "label": "Full text available at:"
+      }
+    },
+    {
+      "value": "2018-07-03",
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2018-09-07",
+      "name": "revised",
+      "label": "Revised",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2018-10-23",
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2018-11-14",
+      "name": "published_online",
+      "label": "Published online",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "Copyright © 2019. The Korean Society of Cardiology",
+      "name": "copyright",
+      "label": "Copyright",
+      "group": {
+        "name": "Copyright_and_licensing",
+        "label": "Copyright and Licensing"
+      }
+    },
+    {
+      "value": "This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (https://creativecommons.org/licenses/by-nc/4.0) which permits unrestricted noncommercial use, distribution, and reproduction in any medium, provided the original work is properly cited.",
+      "name": "license",
+      "label": "License",
+      "explanation": {
+        "URL": "https://creativecommons.org/licenses/by-nc/4.0"
+      },
+      "group": {
+        "name": "Copyright_and_licensing",
+        "label": "Copyright and Licensing"
+      }
+    }
+  ]
+}

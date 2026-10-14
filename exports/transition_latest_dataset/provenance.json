@@ -1,0 +1,44 @@
+{
+  "included_records": 41610,
+  "research_period": [
+    2010,
+    2025
+  ],
+  "burden_years": [
+    2010,
+    2023
+  ],
+  "master_sha256": "fb0bc6dfb116080f0df3db5414a35284a9d864b764e3a9c027984b974be275d5",
+  "research_endpoint_shares": {
+    "2010": {
+      "cmnn": 0.47297297297297297,
+      "ncd": 0.49324324324324326,
+      "inj": 0.033783783783783786
+    },
+    "2025": {
+      "cmnn": 0.27490996398559425,
+      "ncd": 0.6818727490996399,
+      "inj": 0.04321728691476591
+    }
+  },
+  "burden_shares": {
+    "2010": {
+      "cmnn": 0.37031204583429944,
+      "ncd": 0.5087690529157213,
+      "inj": 0.12091890124997934
+    },
+    "2023": {
+      "cmnn": 0.2755903319291297,
+      "ncd": 0.6114415866156394,
+      "inj": 0.11296808145523086
+    }
+  },
+  "research_endpoint_n": {
+    "2010": 146,
+    "2025": 821
+  },
+  "counting": "Unique study\u2013GBD level-1 class links, normalised over class links within year; a study spanning classes contributes once per class. Matches the current GBD transition calculation.",
+  "geography": "Country studied; publication-year World Bank groups for research and burden-year groups for DALYs. A mixed-income study may enter the LMIC set.",
+  "coding": "Latest title/abstract GBD coding; CMNN includes neonatal conditions despite the abbreviated legend. Not the earlier MeSH crosswalk.",
+  "map_changed": false
+}

@@ -1,0 +1,345 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2025-10-08T13:11:27Z",
+    "timestamp": 1759929087573,
+    "version": "build-2065373602"
+  },
+  "reference-count": 0,
+  "publisher": "Wiley",
+  "issue": "S7",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            1,
+            9
+          ]
+        ],
+        "date-time": "2025-01-09T00:00:00Z",
+        "timestamp": 1736380800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 39,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "alz-journals.onlinelibrary.wiley.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Alzheimer's &amp;amp; Dementia"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title><jats:sec><jats:title>Background</jats:title><jats:p>The Maintain Your Brain (MYB) randomised controlled trial (RCT) examined the effect of a multi‐domain internet‐based dementia prevention program against a control group (information only) over three years among Australians aged 55‐77 years. A cost‐effective analysis (CEA) quantified the differences in costs (direct healthcare and program costs) and effectiveness outcomes between the intervention and control groups from a health care sector perspective.</jats:p></jats:sec><jats:sec><jats:title>Method</jats:title><jats:p>An economic evaluation was conducted alongside the MYB trial. The intervention comprised a personalised schedule of online coaching in physical activity, nutrition, cognitive activity, and depression or anxiety. MYB trial data were linked to the 45 and Up Study and administrative health data using uniquely assigned identifiers to obtain healthcare utilisation and costs data. The two effectiveness outcomes were global cognition composite (GCC) scores and the Australian‐National University Alzheimer’s Disease Risk Index (ANU‐ADRI) short form questionnaire scores. Costs analysed included MYB program costs and the direct healthcare costs of MYB participants. All costs were reported on actual nominal values in Australian dollars ($AUD) during the trial period. The time horizon of this analysis was 3 years follow‐up after randomization. Incremental cost effectiveness ratio (ICERs) between the intervention and the control were calculated for GCC and ANU‐ADRI and compared using bootstrapped means and bias corrected and accelerated 95% Confidence Intervals.</jats:p></jats:sec><jats:sec><jats:title>Result</jats:title><jats:p>There were 3025 in the intervention group and 3033 in the control with available linked healthcare data. The average program cost per person was $1,572 for the intervention group and $538 for the control. Incremental cost‐effectiveness ratios at three years were calculated by comparing the average marginal difference in costs to a mean difference in z score of 0.18 (95%CI: 0.13, 0.23) and in ANU‐ADRI of ‐0.57 (95%CI: ‐0.95, ‐0.24) for the intervention versus control. The base case ICERs calculated were $2568 per 1 standard deviation in Z score and $823 per reduction of 1 ADRI point. After 1000 bootstrapped replications, the scatter‐plots of ICER ellipses suggests that the MYB intervention was effective and relatively cost‐neutral.</jats:p></jats:sec><jats:sec><jats:title>Conclusion</jats:title><jats:p>The MYB program showed potential cost‐effectiveness for preventing dementia. Longer‐term follow‐up is needed to confirm our initial findings.</jats:p></jats:sec>",
+  "DOI": "10.1002/alz.088790",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        9
+      ]
+    ],
+    "date-time": "2025-01-09T06:46:42Z",
+    "timestamp": 1736405202000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Cost‐effectiveness of an online randomised controlled trial for dementia prevention, Maintain Your Brain, to improve cognition and lower dementia risk after 3 years"
+  ],
+  "prefix": "10.1002",
+  "volume": "20",
+  "author": [
+    {
+      "given": "Heidi",
+      "family": "Welberry",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "UNSW Sydney, Sydney, NSW Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Li‐Jung Elizabeth",
+      "family": "Ku",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "National Cheng Kung University, Tainan Taiwan"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Sophy TF",
+      "family": "Shih",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "UNSW Sydney, Sydney, NSW Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Louisa",
+      "family": "Jorm",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of New South Wales, Sydney, NSW Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Maria A. Fiatarone",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Sydney, Sydney, NSW Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Michael",
+      "family": "Valenzuela",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of New South Wales, Sydney, NSW Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Jeewani Anupama",
+      "family": "Ginige",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Western Sydney University, Penrith, NSW Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Megan",
+      "family": "Heffernan",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "George Institute, University of New South Wales, Sydney, NSW Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Tiffany",
+      "family": "Chau",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Centre for Healthy Brain Ageing (CHeBA), UNSW Sydney, Sydney, NSW Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Henry",
+      "family": "Brodaty",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of New South Wales (UNSW), Sydney, NSW Australia"
+        },
+        {
+          "name": "University of New South Wales, Sydney Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        9
+      ]
+    ]
+  },
+  "container-title": [
+    "Alzheimer's &amp; Dementia"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/pdf/10.1002/alz.088790",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2025-10-08T12:39:26Z",
+    "timestamp": 1759927166000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.088790"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "S7",
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1002/alz.088790"
+  ],
+  "URL": "https://doi.org/10.1002/alz.088790",
+  "archive": [
+    "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+    "1552-5260",
+    "1552-5279"
+  ],
+  "issn-type": [
+    {
+      "type": "print",
+      "value": "1552-5260"
+    },
+    {
+      "type": "electronic",
+      "value": "1552-5279"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2025-01-09",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ],
+  "article-number": "e088790"
+}

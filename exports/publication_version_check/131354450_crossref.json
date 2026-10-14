@@ -1,0 +1,607 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        20
+      ]
+    ],
+    "date-time": "2026-09-20T20:32:35Z",
+    "timestamp": 1789936355633,
+    "version": "4.0.1"
+  },
+  "reference-count": 36,
+  "publisher": "Frontiers Media SA",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            10,
+            7
+          ]
+        ],
+        "date-time": "2022-10-07T00:00:00Z",
+        "timestamp": 1665100800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "frontiersin.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Front. Public Health"
+  ],
+  "abstract": "<jats:sec><jats:title>Background</jats:title><jats:p>Since 2011, through the Community-Based Colorectal Cancer Screening Program in Shanghai, China (SHcsp), residents aged &amp;gt;50 years were offered initial colorectal cancer screening using the fecal immunochemical test (FIT) and risk assessment questionnaire (RAQ) for free. Colonoscopy was then recommended for positive results.</jats:p></jats:sec><jats:sec><jats:title>Objective</jats:title><jats:p>To evaluate the cost-effectiveness of the Community-Based Colorectal Cancer Screening Program in Shanghai, China from the payer perspective.</jats:p></jats:sec><jats:sec><jats:title>Methods</jats:title><jats:p>This analysis estimated the long-term cost and effectiveness of the 2014–2016 SHcsp based on real-world follow-up data from the SHcsp database, Shanghai Cancer Registry System, vital statistics from Shanghai Municipal Center for Disease Control and Prevention and inpatient CRC expense data from hospitals. A decision-tree model and Markov model were constructed to simulate the 25-year health outcomes. The screening branch was the cohort with a definite diagnosis of adenoma, advanced adenoma, and CRC. The other branch was residents who were neither screened nor treated until CRC symptoms appeared. A payer prospective was adopted to measure direct costs and effectiveness by life years (LYs) and quality-adjusted life years (QALYs) gained, and were discounted by 3%. Stimulation robustness was tested by one-way sensitivity analysis.</jats:p></jats:sec><jats:sec><jats:title>Results</jats:title><jats:p>Of 1,097,656 residents, 13,250 were diagnosed with adenoma, advanced adenoma, or CRC. Assuming those had not been found through screening, SHcsp resulted in 1,570.1 LYs and 13,984.3 QALYs gained at an extra cost of USD9.96 million. The incremental cost-effectiveness ratio (ICER) was USD6,342.02 per LY and USD712.08 per QALY obtained, far below the threshold of USD59,598 of three-time GDP per capita in Shanghai.</jats:p></jats:sec><jats:sec><jats:title>Conclusion</jats:title><jats:p>The SHcsp was cost-effective than no screening strategy. The results were generalisable to the Chinese population for mass CRC screening.</jats:p></jats:sec>",
+  "DOI": "10.3389/fpubh.2022.986728",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        7
+      ]
+    ],
+    "date-time": "2022-10-07T14:15:51Z",
+    "timestamp": 1665152151000
+  },
+  "update-policy": "https://doi.org/10.3389/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 13,
+  "title": [
+    "Cost-effectiveness analysis of a community-based colorectal cancer screening program in Shanghai, China"
+  ],
+  "prefix": "10.3389",
+  "volume": "10",
+  "author": [
+    {
+      "given": "Hongli",
+      "family": "Jiang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Peng",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Kai",
+      "family": "Gu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yangming",
+      "family": "Gong",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Peng",
+      "family": "Peng",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yan",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Dashan",
+      "family": "Ai",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Wen",
+      "family": "Chen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Chen",
+      "family": "Fu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "1965",
+  "published-online": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        7
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "B1",
+      "volume-title": "2017 China Cancer Register Annual Report",
+      "author": "Hao",
+      "year": "2018"
+    },
+    {
+      "key": "B2",
+      "doi-asserted-by": "publisher",
+      "first-page": "1908",
+      "DOI": "10.1002/ijc.25530",
+      "article-title": "Colorectal cancer screening comparing no screening, immunochemical and guaiac fecal occult blood tests: a cost-effectiveness analysis",
+      "volume": "128",
+      "author": "Van Rossum",
+      "year": "2011",
+      "journal-title": "Int J Cancer."
+    },
+    {
+      "key": "B3",
+      "doi-asserted-by": "publisher",
+      "first-page": "123",
+      "DOI": "10.1002/cncr.30518",
+      "article-title": "Comparative effectiveness of screening strategies for colorectal cancer",
+      "volume": "9",
+      "author": "Barzi",
+      "year": "2017",
+      "journal-title": "Cancer."
+    },
+    {
+      "key": "B4",
+      "doi-asserted-by": "publisher",
+      "first-page": "48",
+      "DOI": "10.1017/S0266462309990808",
+      "article-title": "Cost-effectiveness analysis of the optimal threshold of an automated immunochemical test for colorectal cancer screening: performances of immunochemical colorectal cancer screening",
+      "volume": "26",
+      "author": "Berchi",
+      "year": "2010",
+      "journal-title": "Int J Technol Assess."
+    },
+    {
+      "key": "B5",
+      "doi-asserted-by": "publisher",
+      "first-page": "227",
+      "DOI": "10.1002/hec.819",
+      "article-title": "Cost-effectiveness analysis of two strategies for mass screening for colorectal cancer in France",
+      "volume": "13",
+      "author": "Berchi",
+      "year": "2004",
+      "journal-title": "Health Econ."
+    },
+    {
+      "key": "B6",
+      "doi-asserted-by": "publisher",
+      "first-page": "544",
+      "DOI": "10.1002/cncr.24760",
+      "article-title": "Annual report to the nation on the status of cancer, 1975-2006, featuring colorectal cancer trends and impact of interventions (risk factors, screening, and treatment) to reduce future rates",
+      "volume": "116",
+      "author": "Edwards",
+      "year": "2010",
+      "journal-title": "Cancer."
+    },
+    {
+      "key": "B7",
+      "volume-title": "Malignant tumor report of Shanghai, 2012",
+      "year": "2012"
+    },
+    {
+      "key": "B8",
+      "volume-title": "Surveillance, Epidemiology, and End Results Program",
+      "year": "2012"
+    },
+    {
+      "key": "B9",
+      "doi-asserted-by": "publisher",
+      "first-page": "1734",
+      "DOI": "10.1038/bjc.2014.469",
+      "article-title": "Guaiac faecal occult blood test performance at initial and repeat screens in the English Bowel Cancer Screening Programme",
+      "volume": "111",
+      "author": "Kearns",
+      "year": "2014",
+      "journal-title": "Brit J Cancer."
+    },
+    {
+      "key": "B10",
+      "doi-asserted-by": "publisher",
+      "first-page": "99",
+      "DOI": "10.1053/j.gastro.2018.03.062",
+      "article-title": "Effectiveness of colorectal cancer screening in detecting earlier-stage disease—a Nationwide Cohort Study in Denmark",
+      "volume": "155",
+      "author": "Larsen",
+      "year": "2018",
+      "journal-title": "Gastroenterology."
+    },
+    {
+      "key": "B11",
+      "doi-asserted-by": "publisher",
+      "first-page": "959",
+      "DOI": "10.1016/j.canep.2013.07.008",
+      "article-title": "Colorectal cancer screening by guaiac faecal occult blood test in France: evaluation of the programme two years after launching",
+      "volume": "37",
+      "author": "Leuraud",
+      "year": "2013",
+      "journal-title": "Cancer Epidemiol."
+    },
+    {
+      "key": "B12",
+      "doi-asserted-by": "publisher",
+      "first-page": "1460",
+      "DOI": "10.1053/j.gastro.2012.03.022",
+      "article-title": "Efficacy of a nationwide screening colonoscopy program for colorectal cancer",
+      "volume": "142",
+      "author": "Pox",
+      "year": "2012",
+      "journal-title": "Gastroenterology"
+    },
+    {
+      "key": "B13",
+      "doi-asserted-by": "publisher",
+      "first-page": "767",
+      "DOI": "10.1053/j.gastro.2016.11.022",
+      "article-title": "Real-time monitoring of results during first year of dutch colorectal cancer screening program and optimization by altering fecal immunochemical test cut-off levels",
+      "volume": "152",
+      "author": "Toes-Zoutendijk",
+      "year": "2017",
+      "journal-title": "Gastroenterology"
+    },
+    {
+      "key": "B14",
+      "doi-asserted-by": "publisher",
+      "first-page": "2804",
+      "DOI": "10.1038/s41598-017-03134-9",
+      "article-title": "Fecal occult blood test results of the national colorectal cancer screening program in South Korea (2006–2013)",
+      "volume": "1",
+      "author": "Rim",
+      "year": "2017",
+      "journal-title": "Sci Rep."
+    },
+    {
+      "key": "B15",
+      "doi-asserted-by": "publisher",
+      "first-page": "3825",
+      "DOI": "10.3748/wjg.v20.i14.3825",
+      "article-title": "Colorectal cancer screening: 20 years of development and recent progress",
+      "volume": "20",
+      "author": "Zavoral",
+      "year": "2014",
+      "journal-title": "World J Gastroenterol."
+    },
+    {
+      "key": "B16",
+      "doi-asserted-by": "publisher",
+      "first-page": "86",
+      "DOI": "10.1155/2012/846985",
+      "article-title": "Research and practice of screening for colorectal cancer in population of Shanghai",
+      "volume": "2",
+      "author": "Zheng",
+      "year": "2013",
+      "journal-title": "China Cancer."
+    },
+    {
+      "key": "B17",
+      "first-page": "181",
+      "article-title": "Early diagnosis and early treatment of colorectal cancer in the target population of 40~74 years old in Haining city",
+      "volume": "3",
+      "author": "Cao",
+      "year": "2017",
+      "journal-title": "China Cancer."
+    },
+    {
+      "key": "B18",
+      "doi-asserted-by": "publisher",
+      "first-page": "928",
+      "DOI": "10.1634/theoncologist.2017-0451",
+      "article-title": "The implementation and first-round results of a community-based colorectal cancer screening program in Shanghai, China",
+      "volume": "23",
+      "author": "Gong",
+      "year": "2018",
+      "journal-title": "Oncologist"
+    },
+    {
+      "key": "B19",
+      "first-page": "91",
+      "article-title": "Study and practice of the first round of colorectal cancer screening in Heping District, Tianjin",
+      "volume": "2",
+      "author": "Yuan",
+      "year": "2017",
+      "journal-title": "Contin Med Educ."
+    },
+    {
+      "key": "B20",
+      "first-page": "257",
+      "article-title": "Cost analysis of colorectal cancer screening program in Guangzhou 2015-2017",
+      "volume": "4",
+      "author": "Zhou",
+      "year": "2019",
+      "journal-title": "China Cancer."
+    },
+    {
+      "key": "B21",
+      "doi-asserted-by": "publisher",
+      "first-page": "72",
+      "DOI": "10.1016/j.ejim.2016.03.031",
+      "article-title": "Cost-effectiveness and budget impact analysis of a population-based screening program for colorectal cancer",
+      "volume": "32",
+      "author": "Pil",
+      "year": "2016",
+      "journal-title": "Eur J Intern Med"
+    },
+    {
+      "key": "B22",
+      "doi-asserted-by": "publisher",
+      "first-page": "e017186",
+      "DOI": "10.1136/bmjopen-2017-017186",
+      "article-title": "Cost-effectiveness of the faecal immunochemical test at a range of positivity thresholds compared with the guaiac faecal occult blood test in the NHS Bowel Cancer Screening Programme in England",
+      "volume": "10",
+      "author": "Murphy",
+      "year": "2017",
+      "journal-title": "BMJ Open"
+    },
+    {
+      "key": "B23",
+      "doi-asserted-by": "publisher",
+      "first-page": "e109150",
+      "DOI": "10.1371/journal.pone.0109150",
+      "article-title": "Cost-effectiveness of colorectal cancer screening protocols in urban Chinese populations",
+      "volume": "9",
+      "author": "Huang",
+      "year": "2014",
+      "journal-title": "PLoS ONE."
+    },
+    {
+      "key": "B24",
+      "volume-title": "Malignant tumor report of Shanghai, 2018",
+      "year": "2018"
+    },
+    {
+      "key": "B25",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1186/s12885-015-1730-y",
+      "article-title": "Cost-effectiveness simulation and analysis of colorectal cancer screening in Hong Kong Chinese population: comparison amongst colonoscopy, guaiac and immunologic fecal occult blood testing",
+      "volume": "15",
+      "author": "Wong",
+      "year": "2015",
+      "journal-title": "BMC Cancer."
+    },
+    {
+      "key": "B26",
+      "first-page": "S4",
+      "article-title": "Health-related quality of life in patients with colorectal neoplasm and cost-effectiveness of colorectal cancer screening in Hong Kong",
+      "volume": "21",
+      "author": "Lam",
+      "year": "2015",
+      "journal-title": "Hong Kong Med J."
+    },
+    {
+      "key": "B27",
+      "doi-asserted-by": "publisher",
+      "first-page": "24",
+      "DOI": "10.3760/cma.j.issn.0529-5815.2017.01.007",
+      "article-title": "From traditional population-based approach to individualized precision medicine: the interpretation of update on The AJCC Colorectal Cancer Staging System, Eighth Edition",
+      "volume": "55",
+      "author": "Hongwei",
+      "year": "2017",
+      "journal-title": "Chin J Surg."
+    },
+    {
+      "key": "B28",
+      "doi-asserted-by": "publisher",
+      "first-page": "136",
+      "DOI": "10.1186/1471-2407-6-136",
+      "article-title": "Cost-effectiveness analysis of colorectal cancer screening with stool DNA testing in intermediate-incidence countries",
+      "volume": "6",
+      "author": "Wu",
+      "year": "2006",
+      "journal-title": "BMC Cancer"
+    },
+    {
+      "key": "B29",
+      "doi-asserted-by": "publisher",
+      "first-page": "116",
+      "DOI": "10.1093/jjco/hyv186",
+      "article-title": "Optimal use of colonoscopy and fecal immunochemical test for population-based colorectal cancer screening: a cost-effectiveness analysis using Japanese data",
+      "volume": "2",
+      "author": "Sekiguchi",
+      "year": "2016",
+      "journal-title": "Jpn J Clin Oncol."
+    },
+    {
+      "key": "B30",
+      "doi-asserted-by": "publisher",
+      "first-page": "253",
+      "DOI": "10.3760/cma.j.issn.0254-6450.2017.02.024",
+      "article-title": "Systematic review of worldwide natural history models of colorectal cancer: classification transition rate and a recommendation for developing Chinese population-specific model",
+      "volume": "2",
+      "author": "Li",
+      "year": "2017",
+      "journal-title": "Chin J Epidemiol."
+    },
+    {
+      "key": "B31",
+      "doi-asserted-by": "publisher",
+      "first-page": "677",
+      "DOI": "10.1136/gut.2006.095109",
+      "article-title": "Option appraisal of population-based colorectal cancer screening programmes in England",
+      "volume": "56",
+      "author": "Tappenden",
+      "year": "2007",
+      "journal-title": "Gut."
+    },
+    {
+      "key": "B32",
+      "volume-title": "SEER Cancer Statistics Review",
+      "author": "Altekruse",
+      "year": "2010"
+    },
+    {
+      "key": "B33",
+      "doi-asserted-by": "publisher",
+      "first-page": "2213",
+      "DOI": "10.1002/cncr.22668",
+      "article-title": "Cost-effectiveness of colorectal cancer screening with computed tomography colonography",
+      "volume": "109",
+      "author": "Pickhardt",
+      "year": "2007",
+      "journal-title": "Cancer."
+    },
+    {
+      "key": "B34",
+      "doi-asserted-by": "publisher",
+      "first-page": "237",
+      "DOI": "10.1016/j.cgh.2006.11.003",
+      "article-title": "The management of small polyps found by virtual colonoscopy: results of a decision analysis",
+      "volume": "5",
+      "author": "Hur",
+      "year": "2007",
+      "journal-title": "Clin Gastroenterol Hepatol."
+    },
+    {
+      "key": "B35",
+      "volume-title": "Births and Deaths Monitoring Report of Shanghai in 2014",
+      "year": "2014"
+    },
+    {
+      "key": "B36",
+      "doi-asserted-by": "publisher",
+      "first-page": "925",
+      "DOI": "10.2471/BLT.15.164418",
+      "article-title": "Cost-effectiveness thresholds: pros and cons",
+      "volume": "12",
+      "author": "Bertram",
+      "year": "2016",
+      "journal-title": "B World Health Organ."
+    }
+  ],
+  "container-title": [
+    "Frontiers in Public Health"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://www.frontiersin.org/articles/10.3389/fpubh.2022.986728/full",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        7
+      ]
+    ],
+    "date-time": "2022-10-07T14:16:13Z",
+    "timestamp": 1665152173000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.frontiersin.org/articles/10.3389/fpubh.2022.986728/full"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        7
+      ]
+    ]
+  },
+  "references-count": 36,
+  "alternative-id": [
+    "10.3389/fpubh.2022.986728"
+  ],
+  "URL": "https://doi.org/10.3389/fpubh.2022.986728",
+  "relation": {},
+  "ISSN": [
+    "2296-2565"
+  ],
+  "issn-type": [
+    {
+      "value": "2296-2565",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        7
+      ]
+    ]
+  },
+  "article-number": "986728"
+}

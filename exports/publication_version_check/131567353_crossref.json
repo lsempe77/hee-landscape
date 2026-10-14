@@ -1,0 +1,243 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        3
+      ]
+    ],
+    "date-time": "2026-08-03T19:48:10Z",
+    "timestamp": 1785786490004,
+    "version": "3.56.0"
+  },
+  "reference-count": 0,
+  "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+  "issue": "3",
+  "content-domain": {
+    "domain": [
+      "lww.com",
+      "ovid.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        3
+      ]
+    ]
+  },
+  "abstract": "<jats:p>\n                    (Abstracted from\n                    <jats:italic toggle=\"yes\">Am J Obstet Gynecol</jats:italic>\n                    2024;231:330.e1–330.e14)\n                  </jats:p>\n                  <jats:p>\n                    <jats:italic toggle=\"yes\">BRCA1</jats:italic>\n                    gene mutations significantly increase the risk of breast, ovarian, and pancreatic cancer. Early interventions, such as screening, chemoprevention, and risk-reducing surgeries—including bilateral mastectomy (RRBM) and salpingo-oophorectomy (rrBSO)—have been shown to lower cancer risk and mortality.\n                  </jats:p>",
+  "DOI": "10.1097/01.ogx.0001110356.31970.23",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        3,
+        20
+      ]
+    ],
+    "date-time": "2025-03-20T19:47:17Z",
+    "timestamp": 1742500037000
+  },
+  "page": "152-153",
+  "update-policy": "https://doi.org/10.1097/lww.0000000000001000",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Cost-Effectiveness of BRCA1 Testing at Time of Obstetrical Prenatal Carrier Screening for Cancer Prevention"
+  ],
+  "prefix": "10.1097",
+  "volume": "80",
+  "author": [
+    {
+      "given": "Shayan M.",
+      "family": "Dioun",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Luiza R.",
+      "family": "Perez",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Malavika",
+      "family": "Prabhu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jesse T.",
+      "family": "Brewer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Muhammad D.",
+      "family": "Ahsan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "June Y.",
+      "family": "Hou",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ravi N.",
+      "family": "Sharaf",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jason D.",
+      "family": "Wright",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Melissa K.",
+      "family": "Frey",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "276",
+  "container-title": [
+    "Obstetrical &amp; Gynecological Survey"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.ovid.com/10.1097/01.ogx.0001110356.31970.23",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        3
+      ]
+    ],
+    "date-time": "2026-08-03T18:53:39Z",
+    "timestamp": 1785783219000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.ovid.com/10.1097/01.ogx.0001110356.31970.23"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        3
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "3",
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1097/01.ogx.0001110356.31970.23",
+  "relation": {},
+  "ISSN": [
+    "1533-9866",
+    "0029-7828"
+  ],
+  "issn-type": [
+    {
+      "value": "1533-9866",
+      "type": "electronic"
+    },
+    {
+      "value": "0029-7828",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "fig_growth.webp": {
+    "file": "fig_growth_reconciled.webp",
+    "title": "Growth of the economic-evaluation evidence base",
+    "caption": "Base: 41,610 included records. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. The reference is descriptive, not a forecast.",
+    "summary": "Growth of the economic-evaluation evidence base",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "paper02.webp": {
+    "file": "paper02_reconciled.webp",
+    "title": "Generic outcome reporting differs by model use",
+    "caption": "Base: 40,054 included records with a model-use flag. Generic outcomes are QALYs or DALYs; a record reporting both counts once. Abstract reporting does not establish methodological quality.",
+    "summary": "Generic outcome reporting differs by model use",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_intervention_decision.webp": {
+    "file": "fig_intervention_decision_reconciled.webp",
+    "title": "What abstracts report for healthcare decisions",
+    "caption": "Base: 41,610 included records; intervention rows use the included records within each class. Primary intervention class only; residual Other omitted. All columns use the full row denominator, including records with an unavailable flag; model-based is the share positively identified as model-based. Signals are abstract keyword flags, not a full-text quality assessment. \"Not reported\" does not mean \"not done\".",
+    "summary": "What abstracts report for healthcare decisions",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_intervention_map.webp": {
+    "file": "fig_intervention_map_reconciled.webp",
+    "title": "What kinds of healthcare does the research cover?",
+    "caption": "Base: 41,583 eligible records with frozen topic coordinates; 27 included records have no coordinates. Grey points are HDBSCAN noise or missing intervention labels. LMIC shares are computed among 27,897 single-country records with known publication-year income, by primary intervention class. Coordinates were filtered, not refitted. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+    "summary": "What kinds of healthcare does the research cover?",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_openaccess.webp": {
+    "file": "fig_openaccess_reconciled.webp",
+    "title": "How access to economic evidence has changed",
+    "caption": "Base: 22,954 single-country included records, 2010-2025, with known publication-year income and known open-access status. All three lines use this same base; 2026 is excluded as partial. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+    "summary": "How access to economic evidence has changed",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "paper03.webp": {
+    "file": "paper03_reconciled.webp",
+    "title": "Research availability relative to population",
+    "caption": "Base: 153 countries with at least one study, population and income classification from the 155 country website list. Zero-study countries are omitted from the log axis. Dashed lines are within-group medians. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+    "summary": "Research availability relative to population",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "paper07.webp": {
+    "file": "paper07_reconciled.webp",
+    "title": "Research intensity relative to disease burden",
+    "caption": "Base: 152 countries with studies and non-missing GBD 2023 all-cause DALYs and income classification. Countries with zero studies are omitted from the log scale. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+    "summary": "Research intensity relative to disease burden",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_injustice.webp": {
+    "file": "fig_injustice_reconciled.webp",
+    "title": "How research attention compares with disease burden",
+    "caption": "Base: 152 countries plotted; 154 countries contribute to the burden-proportional reference, including zero-study countries. 31,437 study-country pairs. Dashed line: the pair total multiplied by the burden share of each country. Proportionality is a reference point, not an adequacy target. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+    "summary": "How research attention compares with disease burden",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_funder_capacity.webp": {
+    "file": "fig_funder_capacity_reconciled.webp",
+    "title": "Local authorship and potential research-capacity gaps",
+    "caption": "Base: 105 countries with at least five single-country studies with known author locations, publication-year income, and a GBD 2023 burden value. Local authorship means an affiliation in the country studied; it is a proxy, not a full measure of capacity. Point area is the number of studies with known author locations. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+    "summary": "Local authorship and potential research-capacity gaps",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_map_model.webp": {
+    "file": "fig_map_model_reconciled.webp",
+    "title": "Model use across study regions",
+    "caption": "Base: 30,602 unique study-country pairs with known model status. Regions with at least 100 pairs are shown. Dashed reference: 64 %, calculated across all pairs, so this differs from the study-level Overview share. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+    "summary": "Model use across study regions",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_worldmap.webp": {
+    "file": "fig_worldmap_reconciled.webp",
+    "title": "Studies examining each country, relative to population",
+    "caption": "Shading uses the 155 country website list with population data. Grey includes countries with no recorded study or no population in this list. 31,740 study-country pairs across 187 named countries in the full geography. Natural Earth medium-resolution polygons; Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+    "summary": "Studies examining each country, relative to population",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_dotmap.svg": {
+    "file": "fig_dotmap_reconciled.webp",
+    "title": "Where economic evaluation studies are conducted",
+    "caption": "Each bubble represents a country; area is the number of unique included records naming it. Colour uses July 2026 income, grey where unavailable. Locations are study settings, not author affiliations. 31,740 study-country pairs across 187 named countries; locations without a matched map polygon have no bubble. Robinson projection.",
+    "summary": "Where economic evaluation studies are conducted",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_map_burden.webp": {
+    "file": "fig_map_burden_reconciled.webp",
+    "title": "Research intensity relative to disease burden, by country",
+    "caption": "183 of 204 national GBD 2023 locations have at least one study; 21 have burden but no study. Median among locations with studies: 0.67 studies per 100,000 DALYs. Grey means no study or no matched national burden row. Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+    "summary": "Research intensity relative to disease burden, by country",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_map_openaccess.webp": {
+    "file": "fig_map_openaccess_reconciled.webp",
+    "title": "Where studies are available to read for free",
+    "caption": "Base: 133 countries with at least five unique included records with known open-access status. Grey: fewer than five known-status records or no matching country. Study settings are extracted from titles/abstracts; Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+    "summary": "Where studies are available to read for free",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  },
+  "fig_map_growth.webp": {
+    "file": "fig_map_growth_reconciled.webp",
+    "title": "Where the evidence base contains more recent studies",
+    "caption": "Base: 138 countries with at least five included records. Colour is the share published in 2018-2026; 2026 is partial. This is the age composition of the evidence, not an estimated annual growth rate. Grey: fewer than five records. Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+    "summary": "Where the evidence base contains more recent studies",
+    "builder": "scripts/build_remaining_figures_reconciled.R",
+    "eligible_count": 41610
+  }
+}

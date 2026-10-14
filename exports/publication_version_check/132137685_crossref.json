@@ -1,0 +1,164 @@
+{
+  "institution": [
+    {
+      "name": "National Bureau of Economic Research",
+      "acronym": [
+        "NBER"
+      ],
+      "place": [
+        "Cambridge, MA"
+      ]
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        19
+      ]
+    ],
+    "date-time": "2026-09-19T14:05:19Z",
+    "timestamp": 1789826719795,
+    "version": "4.0.1"
+  },
+  "publisher-location": "Cambridge, MA",
+  "reference-count": 0,
+  "publisher": "National Bureau of Economic Research",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "DOI": "10.3386/w27570",
+  "type": "report",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        8,
+        11
+      ]
+    ],
+    "date-time": "2020-08-11T22:19:28Z",
+    "timestamp": 1597184368000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 6,
+  "title": [
+    "Expanding Access to Clean Water for the Rural Poor: Experimental Evidence from Malawi"
+  ],
+  "prefix": "10.3386",
+  "author": [
+    {
+      "given": "Pascaline",
+      "family": "Dupas",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Basimenye",
+      "family": "Nhlema",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Zachary",
+      "family": "Wagner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Aaron",
+      "family": "Wolf",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Emily",
+      "family": "Wroe",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "1960",
+  "published-online": {
+    "date-parts": [
+      [
+        2020,
+        7
+      ]
+    ]
+  },
+  "container-title": [],
+  "original-title": [],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        19
+      ]
+    ],
+    "date-time": "2026-09-19T13:16:04Z",
+    "timestamp": 1789823764000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://www.nber.org/papers/w27570.pdf"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2020,
+        7
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.3386/w27570",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2020,
+        7
+      ]
+    ]
+  }
+}

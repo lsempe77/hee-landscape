@@ -1,0 +1,18 @@
+[16causes] resampling draws (per window and group) with a cause left empty: 597 of 36,000; observed windows with an empty cause: none
+== 16causes: change in KLD 2010-12 -> 2017-19 (% of base), 95% CI
+  all   base KLD 0.210 | observed -20% (-32, -6) | only DALYs change -25% (-27, -22) | only research changes +7% (-8, 25)
+        rare causes excluded (Nutritional deficiencies; Substance use disorders): 0.159, 0.151, 0.152, 0.147, 0.152, 0.147, 0.149, 0.133, 0.137, 0.137, 0.138, 0.134
+  lmic  base KLD 0.267 | observed -5% (-34, 25) | only DALYs change +9% (3, 15) | only research changes -9% (-36, 20)
+        rare causes excluded (Chronic respiratory diseases; Skin and subcutaneous diseases; Substance use disorders): 0.206, 0.212, 0.189, 0.167, 0.146, 0.135, 0.157, 0.167, 0.176, 0.177, 0.196, 0.210
+  hic   base KLD 0.160 | observed -21% (-39, -2) | only DALYs change +10% (7, 13) | only research changes -30% (-45, -12)
+        rare causes excluded (Enteric infections; Neglected tropical diseases and malaria; HIV/AIDS and sexually transmitted infections; Nutritional deficiencies): 0.168, 0.143, 0.123, 0.119, 0.131, 0.136, 0.144, 0.132, 0.121, 0.117, 0.125, 0.134
+[20causes] resampling draws (per window and group) with a cause left empty: 18,670 of 36,000; observed windows with an empty cause: ['2010�12: Transport injuries', '2011�13: Transport injuries', '2012�14: Transport injuries', '2012�14: Transport injuries, Self-harm and interpersonal violence', '2013�15: Transport injuries', '2013�15: Transport injuries, Self-harm and interpersonal violence', '2014�16: Transport injuries', '2015�17: Transport injuries', '2016�18: Transport injuries', '2021�23: Transport injuries']
+== 20causes: change in KLD 2010-12 -> 2017-19 (% of base), 95% CI
+  all   base KLD 0.382 | observed -23% (-34, -9) | only DALYs change -14% (-15, -13) | only research changes -8% (-21, 7)
+        rare causes excluded (Nutritional deficiencies; Substance use disorders; Transport injuries; Self-harm and interpersonal violence): 0.084, 0.074, 0.071, 0.067, 0.072, 0.069, 0.070, 0.059, 0.067, 0.070, 0.073, 0.071
+  lmic  base KLD 0.426 | observed -4% (-28, 18) | only DALYs change +3% (0, 7) | only research changes -5% (-28, 17)
+        rare causes excluded (Chronic respiratory diseases; Skin and subcutaneous diseases; Substance use disorders; Transport injuries; Self-harm and interpersonal violence): 0.178, 0.186, 0.164, 0.145, 0.119, 0.089, 0.105, 0.116, 0.131, 0.135, 0.157, 0.183
+  hic   base KLD 0.282 | observed -28% (-42, -13) | only DALYs change -4% (-5, -2) | only research changes -25% (-40, -9)
+        rare causes excluded (Enteric infections; Neglected tropical diseases and malaria; HIV/AIDS and sexually transmitted infections; Nutritional deficiencies; Substance use disorders; Transport injuries; Self-harm and interpersonal violence): 0.093, 0.076, 0.044, 0.039, 0.039, 0.054, 0.055, 0.055, 0.042, 0.037, 0.038, 0.045
+wrote exports\publication_reconciliation\kld
+

@@ -1,0 +1,554 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2025,
+        11,
+        4
+      ]
+    ],
+    "date-time": "2025-11-04T09:18:09Z",
+    "timestamp": 1762247889389,
+    "version": "build-2065373602"
+  },
+  "reference-count": 34,
+  "publisher": "Informa UK Limited",
+  "issue": "3",
+  "content-domain": {
+    "domain": [
+      "www.tandfonline.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "The European Journal of Contraception &amp; Reproductive Health Care"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2016,
+        5,
+        3
+      ]
+    ]
+  },
+  "DOI": "10.3109/13625187.2015.1135897",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2016,
+        3,
+        17
+      ]
+    ],
+    "date-time": "2016-03-17T12:40:08Z",
+    "timestamp": 1458218408000
+  },
+  "page": "198-200",
+  "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+  "source": "Crossref",
+  "is-referenced-by-count": 10,
+  "title": [
+    "Proposal to inform European institutions regarding the regulation of          conscientious objection to abortion"
+  ],
+  "prefix": "10.3109",
+  "volume": "21",
+  "author": [
+    {
+      "given": "Roberto",
+      "family": "Lertxundi",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Clínica Euskalduna",
+          "place": [
+            "Bilbao, Spain"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Oliver",
+      "family": "Ibarrondo",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "AP-OSI Research Unit, Alto Deba Hospital",
+          "place": [
+            "Mondragón, Gipuzkoa, Spain"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Gabriele S.",
+      "family": "Merki-Feld",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division for Family Planning, University Hospital Zürich",
+          "place": [
+            "Zürich, Switzerland"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Modesto",
+      "family": "Rey-Novoa",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Gynaecology and Obstetrics, Burgos University Hospital",
+          "place": [
+            "Burgos, Spain"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Sam",
+      "family": "Rowlands",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Faculty of Health and Social Sciences, Bournemouth University",
+          "place": [
+            "Bournemouth, UK"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Javier",
+      "family": "Mar",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Health Services Research on Chronic Patients Network (REDISSEC)",
+          "place": [
+            "Bilbao, Spain"
+          ]
+        },
+        {
+          "name": "Clinical Management Unit, Alto Deba Hospital",
+          "place": [
+            "Mondragón, Gipuzkoa, Spain"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "301",
+  "published-online": {
+    "date-parts": [
+      [
+        2016,
+        3,
+        17
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_3_2_2_1",
+      "first-page": "9",
+      "article-title": "Professionals, conformity and conscience.",
+      "volume": "35",
+      "author": "Dresser R.",
+      "year": "2005",
+      "unstructured": "Dresser R. Professionals, conformity and conscience. Hastings Cent Rep. 2005;35:9–10.",
+      "journal-title": "Hastings Cent Rep"
+    },
+    {
+      "key": "e_1_3_2_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.woman.2014.03.001"
+    },
+    {
+      "key": "e_1_3_2_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0020-7292(13)60002-8"
+    },
+    {
+      "key": "e_1_3_2_5_1",
+      "unstructured": "Committee on Women’s Rights and Gender Equality European Parliament. Report on sexual and reproductive health and rights (2013/2040(INI)); [cited 2015 Dec 7] [Internet]. Available from: http://www.europarl.europa.eu/sides/getDoc.do?pubRef=-%2F%2FEP%2F%2FNONSGML%2BCOMPARL%2BPE-513.082%2B01%2BDOC%2BPDF%2BV0%2F%2FEN."
+    },
+    {
+      "key": "e_1_3_2_6_1",
+      "first-page": "S34",
+      "article-title": "A global view of conscientious objection in abortion care\n            provision.",
+      "volume": "19",
+      "author": "Rowlands S.",
+      "year": "2014",
+      "unstructured": "Rowlands S. A global view of conscientious objection in abortion care provision. Eur J Contracept Reprod Health Care. 2014;19(Suppl.):S34.",
+      "journal-title": "Eur J Contracept Reprod Health Care"
+    },
+    {
+      "issue": "1",
+      "key": "e_1_3_2_7_1",
+      "first-page": "S34",
+      "article-title": "Conscientious objection is an unethical refusal to treat.",
+      "volume": "19",
+      "author": "Fiala C",
+      "year": "2014",
+      "unstructured": "Fiala C, Arthur J. Conscientious objection is an unethical refusal to treat. Eur J Contracept Reprod Health Care. 2014;19(Supp1.):S34–S35.",
+      "journal-title": "Eur J Contracept Reprod Health Care"
+    },
+    {
+      "issue": "1",
+      "key": "e_1_3_2_8_1",
+      "first-page": "S35",
+      "article-title": "Conscientious objection is a human right in ethically laden\n            issues.",
+      "volume": "19",
+      "author": "Lertxundi R.",
+      "year": "2014",
+      "unstructured": "Lertxundi R. Conscientious objection is a human right in ethically laden issues. Eur J Contracept Reprod Health Care. 2014;19(Supp1.):S35–S36.",
+      "journal-title": "Eur J Contracept Reprod Health Care"
+    },
+    {
+      "key": "e_1_3_2_9_1",
+      "unstructured": "International Covenant on Civil and Political Rights adopted Dec. 16 1966 G.A. Res. 2200A (XXI) U.N. GAOR 21st Sess. Supp. No. 16 at 52 U.N. Doc. A/6316 (1966) 999 U.N.T.S. 171 (entered into force 23 March 1976)."
+    },
+    {
+      "key": "e_1_3_2_10_1",
+      "first-page": "232",
+      "volume-title": "Qualitative research design: an interactive approach",
+      "author": "Maxwell JA.",
+      "year": "2012",
+      "unstructured": "Maxwell JA. Qualitative research design: an interactive approach. 3rd ed. London: Sage 2012: 232.",
+      "edition": "3"
+    },
+    {
+      "key": "e_1_3_2_11_1",
+      "volume-title": "Introduction to phenomenology",
+      "author": "Sokolowski R.",
+      "year": "2000",
+      "unstructured": "Sokolowski R. Introduction to phenomenology. Cambridge: Cambridge University Press 2000."
+    },
+    {
+      "key": "e_1_3_2_12_1",
+      "first-page": "51",
+      "volume-title": "A practical guide to research methods",
+      "author": "Smith JA",
+      "year": "2003",
+      "unstructured": "Smith JA, Osborn M, Smith JA. Interpretative phenomenological analysis. In Quality psychology. A practical guide to research methods. London: Sage 2003;51–80."
+    },
+    {
+      "key": "e_1_3_2_13_1",
+      "volume-title": "Qualitative data analysis: an expanded sourcebook",
+      "author": "Miles MB",
+      "year": "1994",
+      "unstructured": "Miles MB, Huberman AM. Qualitative data analysis: an expanded sourcebook. 2nd ed. London: Sage 1994.",
+      "edition": "2"
+    },
+    {
+      "key": "e_1_3_2_14_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/1742-4755-11-16"
+    },
+    {
+      "key": "e_1_3_2_15_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1590/S0034-89102011005000047"
+    },
+    {
+      "key": "e_1_3_2_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0020-7292(13)60004-1"
+    },
+    {
+      "key": "e_1_3_2_17_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0020-7292(13)00601-2"
+    },
+    {
+      "key": "e_1_3_2_18_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ijgo.2014.11.001"
+    },
+    {
+      "key": "e_1_3_2_19_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0020-7292(13)60003-X"
+    },
+    {
+      "key": "e_1_3_2_20_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1136/jme.22.2.115"
+    },
+    {
+      "key": "e_1_3_2_21_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0968-8080(11)38585-0"
+    },
+    {
+      "key": "e_1_3_2_22_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/1472-6939-15-15"
+    },
+    {
+      "key": "e_1_3_2_23_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0968-8080(11)38574-6"
+    },
+    {
+      "key": "e_1_3_2_24_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1590/S0102-311X2013001300002"
+    },
+    {
+      "key": "e_1_3_2_25_1",
+      "first-page": "330",
+      "article-title": "Conscientious refusal in family medicine residency\n            training.",
+      "volume": "43",
+      "author": "Frank JE.",
+      "year": "2011",
+      "unstructured": "Frank JE. Conscientious refusal in family medicine residency training. Fam Med. 2011;43:330–333.",
+      "journal-title": "Fam Med"
+    },
+    {
+      "issue": "71",
+      "key": "e_1_3_2_26_1",
+      "first-page": "61",
+      "article-title": "[Freedom of conscience. Biojuridical conflicts at multicultural\n            societies].",
+      "volume": "21",
+      "author": "Albert Márquez M.",
+      "year": "2010",
+      "unstructured": "Albert Márquez M. [Freedom of conscience. Biojuridical conflicts at multicultural societies]. Cuad Bioet. 2010;21(71):61–77.",
+      "journal-title": "Cuad Bioet"
+    },
+    {
+      "issue": "67",
+      "key": "e_1_3_2_27_1",
+      "first-page": "459",
+      "article-title": "[Ethical relativism and the modern concept of tolerance].",
+      "volume": "19",
+      "author": "Laffitte J.",
+      "year": "2008",
+      "unstructured": "Laffitte J. [Ethical relativism and the modern concept of tolerance]. Cuad Bioet. 2008;19(67):459–478.",
+      "journal-title": "Cuad Bioet"
+    },
+    {
+      "issue": "77",
+      "key": "e_1_3_2_28_1",
+      "first-page": "25",
+      "article-title": "[From crime to law. The decline of the legal protection of\n            life].",
+      "volume": "23",
+      "author": "Sánchez Cámara I.",
+      "year": "2012",
+      "unstructured": "Sánchez Cámara I. [From crime to law. The decline of the legal protection of life]. Cuad Bioet. 2012;23(77):25–36.",
+      "journal-title": "Cuad Bioet"
+    },
+    {
+      "key": "e_1_3_2_29_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1783/147118907782102011"
+    },
+    {
+      "key": "e_1_3_2_30_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ijgo.2013.05.002"
+    },
+    {
+      "key": "e_1_3_2_31_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0020-7292(13)60005-3"
+    },
+    {
+      "key": "e_1_3_2_32_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1136/bmj.332.7536.294"
+    },
+    {
+      "key": "e_1_3_2_33_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMsa065316"
+    },
+    {
+      "key": "e_1_3_2_34_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3109/13625187.2013.819848"
+    },
+    {
+      "key": "e_1_3_2_35_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3109/00016349409013438"
+    }
+  ],
+  "container-title": [
+    "The European Journal of Contraception &amp; Reproductive Health Care"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.tandfonline.com/doi/pdf/10.3109/13625187.2015.1135897",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        11,
+        4
+      ]
+    ],
+    "date-time": "2025-11-04T09:14:03Z",
+    "timestamp": 1762247643000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.tandfonline.com/doi/full/10.3109/13625187.2015.1135897"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2016,
+        3,
+        17
+      ]
+    ]
+  },
+  "references-count": 34,
+  "journal-issue": {
+    "issue": "3",
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          5,
+          3
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.3109/13625187.2015.1135897"
+  ],
+  "URL": "https://doi.org/10.3109/13625187.2015.1135897",
+  "relation": {},
+  "ISSN": [
+    "1362-5187",
+    "1473-0782"
+  ],
+  "issn-type": [
+    {
+      "type": "print",
+      "value": "1362-5187"
+    },
+    {
+      "type": "electronic",
+      "value": "1473-0782"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2016,
+        3,
+        17
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+      "order": 1,
+      "name": "peerreview_statement",
+      "label": "Peer Review Statement"
+    },
+    {
+      "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=iejc20",
+      "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=iejc20",
+      "order": 2,
+      "name": "aims_and_scope_url",
+      "label": "Aim & Scope"
+    },
+    {
+      "value": "2015-07-17",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2015-12-14",
+      "order": 1,
+      "name": "revised",
+      "label": "Revised",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2015-12-19",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2016-03-17",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

@@ -1,0 +1,599 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        10
+      ]
+    ],
+    "date-time": "2026-06-10T14:09:12Z",
+    "timestamp": 1781100552839,
+    "version": "3.54.1"
+  },
+  "reference-count": 50,
+  "publisher": "SAGE Publications",
+  "issue": "3",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2016,
+            1,
+            6
+          ]
+        ],
+        "date-time": "2016-01-06T00:00:00Z",
+        "timestamp": 1452038400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "journals.sagepub.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "International Journal of Stroke"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2016,
+        4
+      ]
+    ]
+  },
+  "abstract": "<jats:sec>\n                    <jats:title>Background and aims</jats:title>\n                    <jats:p>Documentation of atrial fibrillation is required to initiate oral anticoagulation therapy for recurrent stroke prevention. Atrial fibrillation often goes undetected with traditional electrocardiogram monitoring techniques. We evaluated whether atrial fibrillation detection using continuous long-term monitoring with an insertable cardiac monitor is cost-effective for preventing recurrent stroke in patients with cryptogenic stroke, in comparison to the standard of care.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>\n                      A lifetime Markov model was developed to estimate the cost-effectiveness of insertable cardiac monitors from a UK National Health Service perspective using data from the randomized CRYSTAL-AF trial and other published literature. We also conducted scenario analyses (CHADS\n                      <jats:sub>2</jats:sub>\n                      score) and probabilistic sensitivity analyses. All costs and benefits were discounted at 3.5%.\n                    </jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Monitoring cryptogenic stroke patients with an insertable cardiac monitor was associated with fewer recurrent strokes and increased quality-adjusted life years compared to the standard of care (7.37 vs 7.22). Stroke-related costs were reduced in insertable cardiac monitor patients, but overall costs remained higher than the standard of care (£19,631 vs £17,045). The incremental cost-effectiveness ratio was £17,175 per quality-adjusted life years gained, compared to standard of care in the base-case scenario, which is below established quality-adjusted life years willingness-to-pay thresholds. When warfarin replaced non-vitamin-K oral anticoagulants as the main anticoagulation therapy, the incremental cost-effectiveness ratio was £13,296 per quality-adjusted life years gained.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>Insertable cardiac monitors are a cost-effective diagnostic tool for the prevention of recurrent stroke in patients with cryptogenic stroke. The cost-effectiveness results have relevance for the UK and across value-based healthcare systems that assess costs relative to outcomes.</jats:p>\n                  </jats:sec>",
+  "DOI": "10.1177/1747493015620803",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        6
+      ]
+    ],
+    "date-time": "2016-01-06T22:09:15Z",
+    "timestamp": 1452118155000
+  },
+  "page": "302-312",
+  "update-policy": "https://doi.org/10.1177/sage-journals-update-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 68,
+  "title": [
+    "Cost-effectiveness of an insertable cardiac monitor to detect atrial fibrillation in patients with cryptogenic stroke"
+  ],
+  "prefix": "10.1177",
+  "volume": "11",
+  "author": [
+    {
+      "given": "Alex",
+      "family": "Diamantopoulos",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Symmetron Limited, Kinetic Centre, Elstree, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Laura M.",
+      "family": "Sawyer",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Symmetron Limited, Kinetic Centre, Elstree, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gregory YH",
+      "family": "Lip",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Birmingham Institute of Cardiovascular Sciences, City Hospital, Birmingham, UK"
+        },
+        {
+          "name": "Department of Clinical Medicine, Aalborg Thrombosis Research Unit, Aalborg University, Aalborg, Denmark"
+        },
+        {
+          "name": "Lahey Hospital & Medical Center, Burlington, MA, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Klaus K",
+      "family": "Witte",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Leeds Institute for Cardiovascular and Metabolic Medicine, University of Leeds, Leeds, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Matthew R",
+      "family": "Reynolds",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Economics and Quality of Life Research, Harvard Clinical Research Institute, Boston, MA, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Laurent",
+      "family": "Fauchier",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Service de Cardiologie, Centre Hospitalier Universitaire Trousseau et Faculté de Médecine, Université François Rabelais, Tours, France"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Vincent",
+      "family": "Thijs",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Neurology, Austin Health and Florey Institute of Neuroscience and Mental Health, University of Melbourne, Heidelberg, Australia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ben",
+      "family": "Brown",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medtronic, Tolochenaz, Switzerland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Maria E",
+      "family": "Quiroz Angulo",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medtronic, Mounds View, MN, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Hans-Christoph",
+      "family": "Diener",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Neurology and Stroke Center, University Hospital Essen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "179",
+  "published-online": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        6
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "bibr1-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/01.STR.22.8.983"
+    },
+    {
+      "key": "bibr2-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0002-9343(02)01236-6"
+    },
+    {
+      "key": "bibr3-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/hs1101.098524"
+    },
+    {
+      "key": "bibr4-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/01.STR.24.1.35"
+    },
+    {
+      "key": "bibr5-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/STR.0000000000000024"
+    },
+    {
+      "key": "bibr6-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/europace/eus305"
+    },
+    {
+      "key": "bibr7-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/STR.0b013e318284056a"
+    },
+    {
+      "key": "bibr8-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMoa1105575"
+    },
+    {
+      "key": "bibr9-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.amjcard.2012.03.021"
+    },
+    {
+      "key": "bibr10-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/STROKEAHA.113.003720"
+    },
+    {
+      "key": "bibr11-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMoa1313600"
+    },
+    {
+      "key": "bibr12-1747493015620803",
+      "author": "National Institute for Health and Care Excellence (NICE)",
+      "year": "2013",
+      "journal-title": "NICE"
+    },
+    {
+      "key": "bibr13-1747493015620803",
+      "author": "National Institute for Health and Care Excellence (NICE)",
+      "year": "2012",
+      "journal-title": "NICE"
+    },
+    {
+      "key": "bibr14-1747493015620803",
+      "author": "National Institute for Health and Care Excellence (NICE)",
+      "year": "2012",
+      "journal-title": "NICE"
+    },
+    {
+      "key": "bibr15-1747493015620803",
+      "unstructured": "National Institute for Health and Care Excellence (NICE) Technology Appraisal Guidance 275 2013. Apixaban for preventing stroke and systemic embolism in people with nonvalvular atrial fibrillation. NICE, 2013."
+    },
+    {
+      "key": "bibr16-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1253/circj.CJ-12-1036"
+    },
+    {
+      "key": "bibr17-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/01.STR.0000080678.09344.8D"
+    },
+    {
+      "key": "bibr18-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/CIRCEP.109.877852"
+    },
+    {
+      "key": "bibr19-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S1474-4422(12)70017-0"
+    },
+    {
+      "key": "bibr20-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S1474-4422(12)70092-3"
+    },
+    {
+      "key": "bibr21-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/01.CIR.0000145172.55640.93"
+    },
+    {
+      "key": "bibr22-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1136/jnnp.2008.170456"
+    },
+    {
+      "key": "bibr23-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/STROKEAHA.112.673558"
+    },
+    {
+      "key": "bibr24-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/eurheartj/ehu006"
+    },
+    {
+      "key": "bibr25-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.clinthera.2013.12.011"
+    },
+    {
+      "key": "bibr26-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMoa1107039"
+    },
+    {
+      "key": "bibr27-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S1474-4422(12)70042-X"
+    },
+    {
+      "key": "bibr28-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1056/NEJMoa0905561"
+    },
+    {
+      "key": "bibr29-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1001/archneur.65.10.1313"
+    },
+    {
+      "key": "bibr30-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ahj.2009.03.022"
+    },
+    {
+      "key": "bibr31-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1212/WNL.0b013e3182a9f45f"
+    },
+    {
+      "key": "bibr32-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/STROKEAHA.113.001584"
+    },
+    {
+      "key": "bibr33-1747493015620803",
+      "unstructured": "Department of Health 2013.\n                      NHS reference costs 2012 to 2013\n                      .\n                      GOV.UK\n                      ."
+    },
+    {
+      "key": "bibr34-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1177/0272989X11401031"
+    },
+    {
+      "key": "bibr35-1747493015620803",
+      "unstructured": "Curtis L.\n                      Unit costs of health and social care 2013\n                      .\n                      PSSRU.AC.UK\n                      , 2013."
+    },
+    {
+      "key": "bibr36-1747493015620803",
+      "unstructured": "Monthly index of medical specialties (June–August 2014).\n                      MIMS\n                      , 2014."
+    },
+    {
+      "key": "bibr37-1747493015620803",
+      "unstructured": "Office for National Statistics.\n                      National life tables, 2011–2013\n                      .\n                      ONS\n                      , 2014."
+    },
+    {
+      "key": "bibr38-1747493015620803",
+      "unstructured": "Office for National Statistics.\n                      Mortality statistics: Deaths registered in England and Wales (Series DR), 2012–2013\n                      .\n                      ONS\n                      , 2012."
+    },
+    {
+      "key": "bibr39-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1524-4733.2010.00700.x"
+    },
+    {
+      "key": "bibr40-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/STROKEAHA.110.582437"
+    },
+    {
+      "key": "bibr41-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00392-013-0601-2"
+    },
+    {
+      "key": "bibr42-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/ene.12400"
+    },
+    {
+      "key": "bibr43-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1212/WNL.0b013e31828f1828"
+    },
+    {
+      "key": "bibr44-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/STROKEAHA.111.676189"
+    },
+    {
+      "key": "bibr45-1747493015620803",
+      "doi-asserted-by": "crossref",
+      "first-page": "251",
+      "DOI": "10.33588/rn.5706.2013187",
+      "volume": "57",
+      "author": "Rojo-Martinez E",
+      "year": "2013",
+      "journal-title": "Rev Neurol"
+    },
+    {
+      "key": "bibr46-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1159/000439063"
+    },
+    {
+      "key": "bibr47-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.7326/0003-4819-154-1-201101040-00289"
+    },
+    {
+      "key": "bibr48-1747493015620803",
+      "unstructured": "Bayer. Rivaroxaban versus aspirin in secondary prevention of stroke and prevention of systemic embolism in patients with recent embolic stroke of undetermined source (ESUS) (NAVIGATE ESUS).\n                      ClinicalTrials.gov\n                      , NLM Identifier: NCT02313909 https://clinicaltrials.gov/ct2/show/NCT02313909 (2015, accessed 19 November 2015)."
+    },
+    {
+      "key": "bibr49-1747493015620803",
+      "unstructured": "Boehringer Ingelheim. Dabigatran Etexilate for secondary stroke prevention in patients with embolic stroke of undetermined source (RE-SPECT ESUS).\n                      ClinicalTrials.gov\n                      ., NLM Identifier: NCT02239120 https://clinicaltrials.gov/ct2/show/NCT02239120 (2015, accessed 19 November 2015)."
+    },
+    {
+      "key": "bibr50-1747493015620803",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1161/STROKEAHA.113.003433"
+    }
+  ],
+  "container-title": [
+    "International Journal of Stroke"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://journals.sagepub.com/doi/pdf/10.1177/1747493015620803",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://journals.sagepub.com/doi/full-xml/10.1177/1747493015620803",
+      "content-type": "application/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://journals.sagepub.com/doi/pdf/10.1177/1747493015620803",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        5,
+        2
+      ]
+    ],
+    "date-time": "2026-05-02T07:13:19Z",
+    "timestamp": 1777705999000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://journals.sagepub.com/doi/10.1177/1747493015620803"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        6
+      ]
+    ]
+  },
+  "references-count": 50,
+  "journal-issue": {
+    "issue": "3",
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          4
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1177/1747493015620803"
+  ],
+  "URL": "https://doi.org/10.1177/1747493015620803",
+  "relation": {},
+  "ISSN": [
+    "1747-4930",
+    "1747-4949"
+  ],
+  "issn-type": [
+    {
+      "value": "1747-4930",
+      "type": "print"
+    },
+    {
+      "value": "1747-4949",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2016,
+        1,
+        6
+      ]
+    ]
+  }
+}

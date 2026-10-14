@@ -1,0 +1,872 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        21
+      ]
+    ],
+    "date-time": "2026-09-21T04:24:32Z",
+    "timestamp": 1789964672535,
+    "version": "4.0.1"
+  },
+  "reference-count": 56,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2014,
+            12,
+            1
+          ]
+        ],
+        "date-time": "2014-12-01T00:00:00Z",
+        "timestamp": 1417392000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2014,
+            12,
+            1
+          ]
+        ],
+        "date-time": "2014-12-01T00:00:00Z",
+        "timestamp": 1417392000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2015,
+            12,
+            10
+          ]
+        ],
+        "date-time": "2015-12-10T00:00:00Z",
+        "timestamp": 1449705600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 374,
+      "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100010114",
+      "name": "Yrjö Jahnssonin Säätiö",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/100010114",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100002341",
+      "name": "Academy of Finland",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/501100002341",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Food Policy"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2014,
+        12
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.foodpol.2014.07.001",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2014,
+        8,
+        28
+      ]
+    ],
+    "date-time": "2014-08-28T07:30:18Z",
+    "timestamp": 1409211018000
+  },
+  "page": "196-206",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 28,
+  "special_numbering": "P1",
+  "title": [
+    "The welfare effects of health-based food tax policy"
+  ],
+  "prefix": "10.1016",
+  "volume": "49",
+  "author": [
+    {
+      "given": "Tommi",
+      "family": "Härkänen",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Kaisa",
+      "family": "Kotakorpi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Pirjo",
+      "family": "Pietinen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jukka",
+      "family": "Pirttilä",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Heli",
+      "family": "Reinivuo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ilpo",
+      "family": "Suoniemi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0005",
+      "doi-asserted-by": "crossref",
+      "first-page": "309",
+      "DOI": "10.1016/j.diabres.2010.04.012",
+      "article-title": "The magnitude of association between overweight and obesity and risk of diabetes: a meta-analysis of prospective cohort studies",
+      "volume": "89",
+      "author": "Abdullah",
+      "year": "2010",
+      "journal-title": "Diabetes Res. Clin. Pract."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0010",
+      "doi-asserted-by": "crossref",
+      "first-page": "228",
+      "DOI": "10.1093/ajae/aap004",
+      "article-title": "The effects of a fat tax on French households’ purchases: a nutritional approach",
+      "volume": "92",
+      "author": "Allais",
+      "year": "2010",
+      "journal-title": "Am. J. Agric. Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0020",
+      "series-title": "Health and functional capacity in Finland. Baseline Results of the Health 2000 Health Examination Survey",
+      "author": "Aromaa",
+      "year": "2004"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0025",
+      "doi-asserted-by": "crossref",
+      "first-page": "527",
+      "DOI": "10.1162/003465397557015",
+      "article-title": "Quadratic Engel curves and consumer demand",
+      "volume": "79",
+      "author": "Banks",
+      "year": "1997",
+      "journal-title": "Rev. Econ. Stat."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0030",
+      "first-page": "570",
+      "article-title": "What do we learn about consumer demand patterns from micro-data?",
+      "volume": "83",
+      "author": "Blundell",
+      "year": "1993",
+      "journal-title": "Am. Econ. Rev."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0035",
+      "doi-asserted-by": "crossref",
+      "first-page": "637",
+      "DOI": "10.1007/s00394-012-0380-y",
+      "article-title": "Critical review: vegetables and fruit in the prevention of chronic diseases",
+      "volume": "51",
+      "author": "Boeing",
+      "year": "2012",
+      "journal-title": "Eur. J. Nutr."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0040",
+      "doi-asserted-by": "crossref",
+      "first-page": "1720",
+      "DOI": "10.1001/archinte.167.16.1720",
+      "article-title": "Association of overweight with increased risk of coronary heart disease partly independent of blood pressure and cholesterol levels",
+      "volume": "167",
+      "author": "Bogers",
+      "year": "2007",
+      "journal-title": "Arch. Intern. Med."
+    },
+    {
+      "issue": "347",
+      "key": "10.1016/j.foodpol.2014.07.001_b0045",
+      "doi-asserted-by": "crossref",
+      "first-page": "f6189",
+      "DOI": "10.1136/bmj.f6189",
+      "article-title": "Overall and income specific effect on prevalence of overweight and obesity of 20% sugar sweetened drink tax in UK: econometric and comparative risk assessment modelling study",
+      "volume": "2013",
+      "author": "Briggs",
+      "year": "2013",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0050",
+      "doi-asserted-by": "crossref",
+      "first-page": "551",
+      "DOI": "10.1111/j.1468-0327.2009.00226.x",
+      "article-title": "The rise of obesity",
+      "volume": "59",
+      "author": "Brunello",
+      "year": "2009",
+      "journal-title": "Econ. Policy"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0055",
+      "doi-asserted-by": "crossref",
+      "first-page": "757",
+      "DOI": "10.1016/S0140-6736(89)90828-3",
+      "article-title": "Effect of changes in fat, fish and fibre intakes on death and myocardial infarction trial (DART)",
+      "volume": "2",
+      "author": "Burr",
+      "year": "1989",
+      "journal-title": "Lancet"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0060",
+      "first-page": "167",
+      "article-title": "Fat taxes and thin subsidies: prices, diet, and health outcomes",
+      "volume": "2",
+      "author": "Cash",
+      "year": "2005",
+      "journal-title": "Acta Agric. Scand Sect. C"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.foodpol.2014.07.001_b0065",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.2202/1558-9544.1071",
+      "article-title": "Fat taxes: big money for small change",
+      "volume": "10",
+      "author": "Chouinard",
+      "year": "2007",
+      "journal-title": "Forum Health Econ. Policy"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0070",
+      "doi-asserted-by": "crossref",
+      "first-page": "412",
+      "DOI": "10.4278/ajhp.080930-QUAN-226",
+      "article-title": "Potential health benefits and medical cost savings from calorie, sodium, and saturated fat reductions in the American diet",
+      "volume": "23",
+      "author": "Dall",
+      "year": "2009",
+      "journal-title": "Am. J. Health Promot."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0080",
+      "doi-asserted-by": "crossref",
+      "first-page": "2588",
+      "DOI": "10.1093/jn/136.10.2588",
+      "article-title": "Fruit and vegetable consumption and risk of coronary heart disease: a meta-analysis of cohort studies",
+      "volume": "136",
+      "author": "Dauchet",
+      "year": "2006",
+      "journal-title": "J. Nutr."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0075",
+      "doi-asserted-by": "crossref",
+      "first-page": "599",
+      "DOI": "10.1038/nrcardio.2009.131",
+      "article-title": "Fruits, vegetables and coronary heart disease",
+      "volume": "6",
+      "author": "Dauchet",
+      "year": "2009",
+      "journal-title": "Nat. Rev. Cardiol."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0085",
+      "first-page": "1767",
+      "article-title": "Demand analysis",
+      "volume": "vol. III",
+      "author": "Deaton",
+      "year": "1985"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0090",
+      "doi-asserted-by": "crossref",
+      "first-page": "7",
+      "DOI": "10.1016/0304-4076(87)90041-8",
+      "article-title": "Estimation of own- and cross-price elasticities from household survey data",
+      "volume": "36",
+      "author": "Deaton",
+      "year": "1987",
+      "journal-title": "J. Economet."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0095",
+      "doi-asserted-by": "crossref",
+      "first-page": "59",
+      "DOI": "10.1016/0047-2727(84)90067-7",
+      "article-title": "Statistical models for zero expenditures in household budgets",
+      "volume": "23",
+      "author": "Deaton",
+      "year": "1984",
+      "journal-title": "J. Public Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0100",
+      "doi-asserted-by": "crossref",
+      "first-page": "669",
+      "DOI": "10.1002/hec.1738",
+      "article-title": "Intended and unintended consequences of a proposed national tax on sugar sweetened beverages to combat the US obesity problem",
+      "volume": "21",
+      "author": "Dharmasena",
+      "year": "2012",
+      "journal-title": "Health Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0105",
+      "series-title": "Methodology Report. Health 2000 Survey",
+      "first-page": "182",
+      "article-title": "Weighting and statistical analysis",
+      "author": "Djerf",
+      "year": "2008"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0110",
+      "doi-asserted-by": "crossref",
+      "first-page": "e1001353",
+      "DOI": "10.1371/journal.pmed.1001353",
+      "article-title": "Food pricing strategies, population diets, and non-communicable disease: a systematic review of simulation studies",
+      "volume": "9",
+      "author": "Eyles",
+      "year": "2012",
+      "journal-title": "PLoS Med."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0115",
+      "doi-asserted-by": "crossref",
+      "first-page": "219",
+      "DOI": "10.1016/j.jhealeco.2012.10.005",
+      "article-title": "Implications of a sugar-sweetened beverage (SSB) tax when substitutions to non-beverage items are considered",
+      "volume": "32",
+      "author": "Finkelstein",
+      "year": "2013",
+      "journal-title": "J. Health Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0120",
+      "doi-asserted-by": "crossref",
+      "first-page": "967",
+      "DOI": "10.1016/j.jpubeco.2010.09.005",
+      "article-title": "The effects of soft drink taxes on child and adolescent consumption and weight outcomes",
+      "volume": "94",
+      "author": "Fletcher",
+      "year": "2010",
+      "journal-title": "J. Public Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0125",
+      "series-title": "Bayesian Data Analysis",
+      "author": "Gelman",
+      "year": "1995"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0130",
+      "doi-asserted-by": "crossref",
+      "first-page": "447",
+      "DOI": "10.1016/S0140-6736(99)07072-5",
+      "article-title": "Dietary supplementation with n-3 polyunsaturated fatty acids and vitamin E after myocardial infarction: results of GISSI-Prevenzione trial",
+      "volume": "354",
+      "author": "GISSI-Prevenzione Investigators",
+      "year": "1999",
+      "journal-title": "Lancet"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0135",
+      "unstructured": "Griffith, R., Nesheim, L., O’Connell, M., 2010. Empirical estimates of the effects of a fat tax. CEMMAP Working Paper CWP37/10."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0140",
+      "doi-asserted-by": "crossref",
+      "first-page": "1959",
+      "DOI": "10.1016/j.jpubeco.2003.06.001",
+      "article-title": "Tax incidence when individuals are time-inconsistent: the case of cigarette excise taxes",
+      "volume": "88",
+      "author": "Gruber",
+      "year": "2004",
+      "journal-title": "J. Public Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0145",
+      "doi-asserted-by": "crossref",
+      "first-page": "707",
+      "DOI": "10.1080/00036840802599776",
+      "article-title": "The effects of taxes on purchases of sugar-sweetened carbonated soft drinks: a quantile regression approach",
+      "volume": "43",
+      "author": "Gustavsen",
+      "year": "2011",
+      "journal-title": "Appl. Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0150",
+      "doi-asserted-by": "crossref",
+      "first-page": "88",
+      "DOI": "10.1016/j.foodpol.2013.07.001",
+      "article-title": "Adjusting VAT rates to promote healthier diets in Norway. A censored quantile regression approach",
+      "volume": "42",
+      "author": "Gustavsen",
+      "year": "2013",
+      "journal-title": "Food Policy"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0155",
+      "doi-asserted-by": "crossref",
+      "first-page": "996",
+      "DOI": "10.1001/archinte.161.7.996",
+      "article-title": "Risk factors for congestive heart failure in US men and women: NHANES I epidemiologic follow-up study",
+      "volume": "161",
+      "author": "He",
+      "year": "2001",
+      "journal-title": "Arch. Intern. Med."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0160",
+      "series-title": "Methodology Report. Health 2000 Survey",
+      "year": "2008"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0165",
+      "doi-asserted-by": "crossref",
+      "first-page": "293",
+      "DOI": "10.1111/j.1574-0862.2010.00441.x",
+      "article-title": "Modelling physical quantities of food and nutrients consumed from aggregate data – with an application to Finland",
+      "volume": "41",
+      "author": "Irz",
+      "year": "2010",
+      "journal-title": "Agric. Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0170",
+      "series-title": "The Cost of Diabetes in Finland 1998–2007 (in Finnish)",
+      "author": "Jarvala",
+      "year": "2010"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0180",
+      "doi-asserted-by": "crossref",
+      "first-page": "18",
+      "DOI": "10.1016/j.foodpol.2013.06.004",
+      "article-title": "The Danish tax on saturated fat – short run effects on consumption, substitution patterns and consumer prices of fats",
+      "volume": "42",
+      "author": "Jensen",
+      "year": "2013",
+      "journal-title": "Food Policy"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b9000",
+      "doi-asserted-by": "crossref",
+      "first-page": "277",
+      "DOI": "10.1002/jae.3950010305",
+      "article-title": "Zero expenditures and the estimation of Engel curves",
+      "volume": "1",
+      "author": "Keen",
+      "year": "1986",
+      "journal-title": "J. Appl. Econom."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0175",
+      "series-title": "Analysis of Health Surveys",
+      "author": "Korn",
+      "year": "1999"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0185",
+      "doi-asserted-by": "crossref",
+      "first-page": "95",
+      "DOI": "10.1016/j.econlet.2007.04.012",
+      "article-title": "The incidence of sin taxes",
+      "volume": "98",
+      "author": "Kotakorpi",
+      "year": "2008",
+      "journal-title": "Econ. Lett."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0190",
+      "unstructured": "Laaksonen, M., 2005. Model-based estimation of Population Attributed Risk (PAR). Master’s thesis, Jyväskylä University."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0195",
+      "series-title": "Methodology Report. Health 2000 Survey",
+      "first-page": "13",
+      "article-title": "Sampling design",
+      "author": "Laiho",
+      "year": "2008"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0200",
+      "doi-asserted-by": "crossref",
+      "first-page": "1367",
+      "DOI": "10.1002/hec.1789",
+      "article-title": "When do fat taxes increase consumer welfare?",
+      "volume": "21",
+      "author": "Lusk",
+      "year": "2012",
+      "journal-title": "Health Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0205",
+      "series-title": "Methodology Report. Health 2000 Survey",
+      "first-page": "121",
+      "article-title": "Dietary questionnaire",
+      "author": "Männistö",
+      "year": "2008"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0210",
+      "doi-asserted-by": "crossref",
+      "first-page": "375",
+      "DOI": "10.1111/j.1574-0862.2008.00307.x",
+      "article-title": "Regional obesity determinants in the united states: a model of myopic addictive behavior in food consumption",
+      "volume": "38",
+      "author": "Miljkovic",
+      "year": "2008",
+      "journal-title": "Agric. Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0215",
+      "doi-asserted-by": "crossref",
+      "first-page": "48",
+      "DOI": "10.1016/j.foodpol.2007.05.003",
+      "article-title": "Economic factors affecting the increase in obesity in the United States: differential response to price",
+      "volume": "33",
+      "author": "Miljkovic",
+      "year": "2008",
+      "journal-title": "Food Policy"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0220",
+      "doi-asserted-by": "crossref",
+      "first-page": "1885",
+      "DOI": "10.1001/jama.296.15.1885",
+      "article-title": "Fish intake, contaminants, and human health. Evaluating the risk and benefits",
+      "volume": "296",
+      "author": "Mozaffarian",
+      "year": "2006",
+      "journal-title": "J. Am. Med. Assoc."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0225",
+      "doi-asserted-by": "crossref",
+      "first-page": "689",
+      "DOI": "10.1136/jech.2006.047746",
+      "article-title": "Could targeted food taxes improve health?",
+      "volume": "61",
+      "author": "Mytton",
+      "year": "2007",
+      "journal-title": "J. Epidemiol. Community Health"
+    },
+    {
+      "issue": "344",
+      "key": "10.1016/j.foodpol.2014.07.001_b0230",
+      "doi-asserted-by": "crossref",
+      "first-page": "e2931",
+      "DOI": "10.1136/bmj.e2931",
+      "article-title": "Taxing unhealthy food and drinks to improve health",
+      "volume": "2012",
+      "author": "Mytton",
+      "year": "2012",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0235",
+      "doi-asserted-by": "crossref",
+      "first-page": "1324",
+      "DOI": "10.1093/ije/dyp214",
+      "article-title": "Modelling income group differences in the health and economic impacts of targeted food taxes and subsidies",
+      "volume": "38",
+      "author": "Nnoaham",
+      "year": "2009",
+      "journal-title": "Int. J. Epidemiol."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0240",
+      "doi-asserted-by": "crossref",
+      "first-page": "622",
+      "DOI": "10.1016/j.jhealeco.2009.02.005",
+      "article-title": "The impact of tax reforms designed to encourage healthier grain consumption",
+      "volume": "28",
+      "author": "Nordström",
+      "year": "2009",
+      "journal-title": "J. Health Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0245",
+      "doi-asserted-by": "crossref",
+      "first-page": "259",
+      "DOI": "10.1016/j.foodpol.2010.11.023",
+      "article-title": "Can targeted food taxes and subsidies improve the diet? Distributional effects among income groups",
+      "volume": "36",
+      "author": "Nordström",
+      "year": "2011",
+      "journal-title": "Food Policy"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0250",
+      "doi-asserted-by": "crossref",
+      "first-page": "1825",
+      "DOI": "10.1016/j.jpubeco.2006.03.001",
+      "article-title": "Optimal sin taxes",
+      "volume": "90",
+      "author": "O’Donoghue",
+      "year": "2006",
+      "journal-title": "J. Public Econ."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0255",
+      "doi-asserted-by": "crossref",
+      "first-page": "115",
+      "DOI": "10.1093/biostatistics/kxi044",
+      "article-title": "Estimation in regression models with externally estimated parameters",
+      "volume": "7",
+      "author": "Ogden",
+      "year": "2006",
+      "journal-title": "Biostatistics"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0260",
+      "doi-asserted-by": "crossref",
+      "first-page": "229",
+      "DOI": "10.1111/j.1468-0009.2009.00554.x",
+      "article-title": "Food prices and obesity: evidence and policy implications for taxes and subsidies",
+      "volume": "87",
+      "author": "Powell",
+      "year": "2009",
+      "journal-title": "Milbank Q."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0265",
+      "doi-asserted-by": "crossref",
+      "first-page": "620",
+      "DOI": "10.1053/euhj.2001.2842",
+      "article-title": "Coronary heart disease risk factors ranked by importance for the individual and community – a 21 year follow-up of 12,000 men and women from The Copenhagen City Heart Study",
+      "volume": "23",
+      "author": "Schnohr",
+      "year": "2002",
+      "journal-title": "Eur. Heart J."
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0270",
+      "doi-asserted-by": "crossref",
+      "first-page": "624",
+      "DOI": "10.1016/j.foodpol.2007.03.002",
+      "article-title": "Socio-economic characteristics and the effect of taxation as a health policy instrument",
+      "volume": "32",
+      "author": "Smed",
+      "year": "2007",
+      "journal-title": "Food Policy"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0275",
+      "first-page": "571",
+      "article-title": "Point and interval estimates of partial population attributable risks in cohort studies: examples and software",
+      "volume": "18",
+      "author": "Spiegelman",
+      "year": "2007",
+      "journal-title": "Cancer Causes Control"
+    },
+    {
+      "key": "10.1016/j.foodpol.2014.07.001_b0280",
+      "doi-asserted-by": "crossref",
+      "first-page": "427",
+      "DOI": "10.1038/ejcn.2010.281",
+      "article-title": "The public health impacts of a fat tax",
+      "volume": "65",
+      "author": "Tiffin",
+      "year": "2011",
+      "journal-title": "Eur. J. Clin. Nutr."
+    }
+  ],
+  "container-title": [
+    "Food Policy"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0306919214001080?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0306919214001080?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        5
+      ]
+    ],
+    "date-time": "2025-10-05T18:56:16Z",
+    "timestamp": 1759690576000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0306919214001080"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2014,
+        12
+      ]
+    ]
+  },
+  "references-count": 56,
+  "alternative-id": [
+    "S0306919214001080"
+  ],
+  "URL": "https://doi.org/10.1016/j.foodpol.2014.07.001",
+  "relation": {},
+  "ISSN": [
+    "0306-9192"
+  ],
+  "issn-type": [
+    {
+      "value": "0306-9192",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2014,
+        12
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "The welfare effects of health-based food tax policy",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Food Policy",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.foodpol.2014.07.001",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "Copyright © 2014 Elsevier Ltd.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ]
+}

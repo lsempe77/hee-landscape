@@ -1,0 +1,24 @@
+{
+  "included": 41610,
+  "excluded_after_extraction": 31235,
+  "review_counts": {
+    "Systematic review": 1856,
+    "Not identified as a review": 38958,
+    "Review (non-systematic)": 796
+  },
+  "generic_outcome_records": 19515,
+  "gbd_group_records": 36446,
+  "named_country_records": 29104,
+  "interpretable_language_records": 32853,
+  "english_records": 32792,
+  "topic_coordinates": 41583,
+  "posted_content": 806,
+  "manuscript_backup": "exports\\publication_reconciliation\\manuscript_backups\\20261014T154501Z",
+  "remaining_items": [
+    "protocol reference",
+    "search dates",
+    "World Bank access date",
+    "standalone preprint/non-article eligibility decision"
+  ],
+  "figure1": "docs/figures/fig_selection_reconciled.svg"
+}

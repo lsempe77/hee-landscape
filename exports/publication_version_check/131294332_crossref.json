@@ -1,0 +1,2861 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        2,
+        24
+      ]
+    ],
+    "date-time": "2026-02-24T05:54:51Z",
+    "timestamp": 1771912491553,
+    "version": "3.50.1"
+  },
+  "update-to": [
+    {
+      "DOI": "10.1002/14651858.cd009261.pub4",
+      "type": "new_version",
+      "label": "New version",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2020,
+            5,
+            1
+          ]
+        ],
+        "date-time": "2020-05-01T00:00:00Z",
+        "timestamp": 1588291200000
+      }
+    }
+  ],
+  "reference-count": 298,
+  "publisher": "Wiley",
+  "content-domain": {
+    "domain": [
+      "wiley.com",
+      "cochranelibrary.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "DOI": "10.1002/14651858.cd009261.pub5",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        5,
+        1
+      ]
+    ],
+    "date-time": "2020-05-01T07:03:52Z",
+    "timestamp": 1588316632000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 20,
+  "title": [
+    "Negative pressure wound therapy for surgical wounds healing by primary closure"
+  ],
+  "prefix": "10.1002",
+  "author": [
+    {
+      "given": "Gill",
+      "family": "Norman",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Nursing, Midwifery and Social Work, School of Health Sciences, Faculty of Biology, Medicine and Health; University of Manchester, Manchester Academic Health Science Centre; Manchester UK"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "En Lin",
+      "family": "Goh",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Oxford Trauma; Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences; Oxford UK"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Jo C",
+      "family": "Dumville",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Nursing, Midwifery and Social Work, School of Health Sciences, Faculty of Biology, Medicine and Health; University of Manchester, Manchester Academic Health Science Centre; Manchester UK"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Chunhu",
+      "family": "Shi",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Division of Nursing, Midwifery and Social Work, School of Health Sciences, Faculty of Biology, Medicine and Health; University of Manchester, Manchester Academic Health Science Centre; Manchester UK"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Zhenmi",
+      "family": "Liu",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "West China School of Public Health and West China Fourth Hospital; Sichuan University; Chengdu China"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Laura",
+      "family": "Chiverton",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "NIHR Clinical Research Facility; Great Ormond Street Hospital; London UK"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Monica",
+      "family": "Stankiewicz",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Chermside Community Health Centre; Community and Oral Health Directorate; Brisbane Australia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Adam",
+      "family": "Reid",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Biological Sciences; Faculty of Biology, Medicine & Health; Manchester UK"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2020,
+        5,
+        1
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "Supplement 4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0001|cit1",
+      "first-page": "56",
+      "article-title": "Effect of closed incision negative pressure wound therapy on incidence rate of surgical site infection after stoma reversal: a preliminary report",
+      "volume": "20",
+      "author": "Bobkiewicz",
+      "year": "2018",
+      "journal-title": "Colorectal Disease"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0002|cit2",
+      "doi-asserted-by": "crossref",
+      "first-page": "417",
+      "DOI": "10.3390/healthcare2040417",
+      "article-title": "Negative pressure wound therapy on surgical site infections in women undergoing elective caesarean sections: a pilot RCT",
+      "volume": "30",
+      "author": "Chaboyer",
+      "year": "2014",
+      "journal-title": "Healthcare"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0003|cit3",
+      "unstructured": "Crist BD Khazzam M Della Rocca GJ Murtha Y Stannard JP Role of acute negative pressure wound therapy over primarily closed surgical incisions in hip, pelvis, and acetabular fracture surgery - a prospective randomized trial Pelvis & Acetabulum (Orthopaedic Trauma Association Annual Meeting) 2014 Paper 65; p 270"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0004|cit4",
+      "doi-asserted-by": "crossref",
+      "first-page": "1518",
+      "DOI": "10.1016/j.injury.2017.04.055",
+      "article-title": "Role of acute negative pressure wound therapy over primarily closed surgical incisions in acetabular fracture ORIF: a prospective randomized trial",
+      "volume": "48",
+      "author": "Crist",
+      "year": "2017",
+      "journal-title": "Injury"
+    },
+    {
+      "issue": "6S",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0005|cit5",
+      "doi-asserted-by": "crossref",
+      "first-page": "133S",
+      "DOI": "10.1016/j.jvs.2017.03.250",
+      "article-title": "A randomized study evaluating negative-pressure therapy to decrease vascular groin wound complications",
+      "volume": "65",
+      "author": "DiMuzio",
+      "year": "2017",
+      "journal-title": "Journal of Vascular Surgery"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0006|cit6",
+      "doi-asserted-by": "publisher",
+      "first-page": "327",
+      "DOI": "10.1111/iwj.12848",
+      "article-title": "Closed-incision negative pressure therapy to reduce groin wound infections in vascular surgery: a randomised controlled trial",
+      "volume": "15",
+      "author": "Engelhardt",
+      "year": "2018",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0007|cit7",
+      "unstructured": "Engelhardt M Willy C Beck T Negative pressure wound dressing for reduction of surgical site infections in the groin in vascular surgery European Society of Vascular Medicine Conference, May 2016 Rome 2016 10"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0008|cit8",
+      "doi-asserted-by": "crossref",
+      "first-page": "e1560",
+      "DOI": "10.1097/GOX.0000000000001560",
+      "article-title": "Incisional negative pressure wound therapy for prevention of wound healing complications following reduction mammaplasty",
+      "volume": "6",
+      "author": "Galiano",
+      "year": "2018",
+      "journal-title": "Plastic and Reconstructive Surgery Global Open"
+    },
+    {
+      "issue": "6 (2)",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0009|cit9",
+      "first-page": "e1720",
+      "article-title": "Incisional negative pressure wound therapy for prevention of wound healing complications following reduction mammaplasty: erratum",
+      "volume": "23",
+      "author": "Galiano",
+      "year": "2018",
+      "journal-title": "Plastic & Reconstructive Surgery Global Open"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0010|cit10",
+      "doi-asserted-by": "crossref",
+      "first-page": "520",
+      "DOI": "10.12968/jowc.2018.27.8.520",
+      "article-title": "Postoperative wound management with negative pressure wound therapy in knee and hip surgery: a randomised control trial",
+      "volume": "27",
+      "author": "Giannini",
+      "year": "2018",
+      "journal-title": "Journal of Wound Care"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0011|cit11",
+      "doi-asserted-by": "crossref",
+      "first-page": "488",
+      "DOI": "10.1177/1553350615573583",
+      "article-title": "Use of negative-pressure wound dressings to prevent surgical site complications after primary hip arthroplasty: a pilot RCT",
+      "volume": "22",
+      "author": "Gillespie",
+      "year": "2015",
+      "journal-title": "Surgical Innovation"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0012|cit12",
+      "doi-asserted-by": "crossref",
+      "first-page": "442",
+      "DOI": "10.1016/j.ejvs.2018.05.018",
+      "article-title": "Closed incision negative pressure therapy reduces surgical site infections in vascular surgery: a prospective randomised trial (AIMS trial)",
+      "volume": "56",
+      "author": "Gombert",
+      "year": "2018",
+      "journal-title": "European Journal of Vascular and Endovascular Surgery"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0013|cit13",
+      "doi-asserted-by": "crossref",
+      "first-page": "542",
+      "DOI": "10.1007/s00772-017-0332-1",
+      "article-title": "Incision management systems for reduction of inguinal wound complications in vascular surgery",
+      "volume": "22",
+      "author": "Gombert",
+      "year": "2017",
+      "journal-title": "Gefasschirurgie"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0014|cit14",
+      "doi-asserted-by": "crossref",
+      "first-page": "e151",
+      "DOI": "10.1055/s-0037-1603956",
+      "article-title": "Closed-incision negative-pressure therapy in obese patients undergoing cesarean delivery: a randomized controlled trial",
+      "volume": "7",
+      "author": "Gunatilake",
+      "year": "2017",
+      "journal-title": "American Journal of Perinatology Reports"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0015|cit15",
+      "doi-asserted-by": "crossref",
+      "first-page": "79",
+      "DOI": "10.1016/j.jtv.2016.06.001",
+      "article-title": "Cost-effectiveness analysis alongside a pilot study of prophylactic negative pressure wound therapy",
+      "volume": "26",
+      "author": "Heard",
+      "year": "2017",
+      "journal-title": "Journal of Tissue Viability"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0016|cit16",
+      "doi-asserted-by": "crossref",
+      "first-page": "612",
+      "DOI": "10.1016/j.jss.2015.02.008",
+      "article-title": "Cost-utility analysis of negative pressure wound therapy in high-risk cesarean section wounds",
+      "volume": "195",
+      "author": "Tuffaha",
+      "year": "2015",
+      "journal-title": "Journal of Surgical Research"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0017|cit17",
+      "doi-asserted-by": "crossref",
+      "first-page": "176",
+      "DOI": "10.1097/BCO.0b013e31820b3e21",
+      "article-title": "Blister formation with negative pressure dressings after total knee arthroplasty",
+      "volume": "22",
+      "author": "Howell",
+      "year": "2011",
+      "journal-title": "Current Orthopaedic Practice"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0018|cit18",
+      "doi-asserted-by": "crossref",
+      "first-page": "S35",
+      "DOI": "10.1016/j.ajog.2017.10.456",
+      "article-title": "A randomized trial of closed incision negative pressure therapy in morbidly obese women undergoing cesarean delivery",
+      "volume": "218",
+      "author": "Hussamy",
+      "year": "2018",
+      "journal-title": "American Journal of Obstetrics and Gynecology"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0019|cit19",
+      "doi-asserted-by": "crossref",
+      "first-page": "619",
+      "DOI": "10.1111/1471-0528.15573",
+      "article-title": "Cost-effectiveness of incisional negative pressure wound therapy compared with standard care after caesarean section in obese women: a trial-based economic evaluation",
+      "volume": "126",
+      "author": "Hyldig",
+      "year": "2019",
+      "journal-title": "BJOG: An International Journal of Obstetrics and Gynaecology"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0020|cit20",
+      "unstructured": "Hyldig N Vinter CA Kruse M Lamont RF Sørensen JA Mogensen O Prevention of surgical wound infection in obese women undergoing cesarean section: a randomised controlled trial portal.findresearcher.sdu.dk/en/publications/prevention-of-surgical-wound-infection-in-obese-women-undergoing- 2016"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0021|cit21",
+      "volume-title": "Incisional Negative Pressure Wound Therapy: The Clinical Effect on Post-Caesarean Wound Complications in Obese Women [PhD Thesis]",
+      "author": "Hyldig",
+      "year": "2016"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0022|cit22",
+      "unstructured": "Jørgensen JS Hyldig N The happy belly study. Prevention of postoperative surgical site infection following caesarean section in women with BMI ≥ 30 glademaver.dk/uploads/HappyBellyStudy_protocol.pdf"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0023|cit23",
+      "doi-asserted-by": "crossref",
+      "first-page": "628",
+      "DOI": "10.1111/1471-0528.15413",
+      "article-title": "Prophylactic incisional negative pressure wound therapy reduces the risk of surgical site infection after caesarean section in obese women: a pragmatic randomised clinical trial",
+      "volume": "126",
+      "author": "Hyldig",
+      "year": "2019",
+      "journal-title": "BJOG: An International Journal of Obstetrics & Gynaecology"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0024|cit24",
+      "first-page": "10",
+      "article-title": "Negative pressure wound therapy for surgical-site infections: a randomized trial",
+      "volume": "10",
+      "author": "Javed",
+      "year": "2018",
+      "journal-title": "Annals of Surgery"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0025|cit25",
+      "doi-asserted-by": "crossref",
+      "first-page": "328",
+      "DOI": "10.1302/2046-3758.58.BJR-2016-0022.R1",
+      "article-title": "Incisional negative pressure wound therapy dressings (iNPWTd) in routine primary hip and knee arthroplasties: a randomised controlled trial",
+      "volume": "5",
+      "author": "Karlakki",
+      "year": "2016",
+      "journal-title": "Bone & Joint Research"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0026|cit26",
+      "doi-asserted-by": "crossref",
+      "first-page": "723",
+      "DOI": "10.1016/j.arth.2018.12.008",
+      "article-title": "Incisional negative pressure wound therapy devices improve short-term wound complications, but not long-term infection rate following hip and knee arthroplasty",
+      "volume": "34",
+      "author": "Keeney",
+      "year": "2019",
+      "journal-title": "Journal of Arthroplasty"
+    },
+    {
+      "issue": "5 Suppl 1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0027|cit27",
+      "doi-asserted-by": "crossref",
+      "first-page": "S1273",
+      "DOI": "10.1016/S0016-5085(17)34243-9",
+      "article-title": "Effect of negative pressure wound therapy on wound complications following pancreatectomy",
+      "volume": "152",
+      "author": "Kuncewitch",
+      "year": "2017",
+      "journal-title": "Gastroenterology"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0028|cit28",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1177/000313481908500102",
+      "article-title": "Effect of negative pressure wound therapy on wound complications post-pancreatectomy",
+      "volume": "85",
+      "author": "Kuncewitch",
+      "year": "2019",
+      "journal-title": "American Surgeon"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0029|cit29",
+      "doi-asserted-by": "crossref",
+      "first-page": "1744",
+      "DOI": "10.1016/j.jvs.2018.05.224",
+      "article-title": "A randomized clinical trial evaluating negative pressure therapy to decrease vascular groin incision complications",
+      "volume": "68",
+      "author": "Kwon",
+      "year": "2018",
+      "journal-title": "Journal of Vascular Surgery"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0030|cit30",
+      "first-page": "324",
+      "article-title": "Safety and efficacy of prophylactic negative pressure wound therapy following open saphenous vein harvest in cardiac surgery: a feasibility study",
+      "volume": "24",
+      "author": "Lee",
+      "year": "2017",
+      "journal-title": "Interactive Cardiovascular and Thoracic Surgery"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0031|cit31",
+      "doi-asserted-by": "crossref",
+      "first-page": "1814",
+      "DOI": "10.1016/j.jvs.2017.06.084",
+      "article-title": "Randomized clinical trial of negative pressure wound therapy for high-risk groin wounds in lower extremity revascularization",
+      "volume": "66",
+      "author": "Lee",
+      "year": "2017",
+      "journal-title": "Journal of Vascular Surgery"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0032|cit32",
+      "doi-asserted-by": "crossref",
+      "first-page": "504",
+      "DOI": "10.1186/s13063-015-1026-1",
+      "article-title": "Negative pressure wound therapy for high-risk wounds in lower extremity revascularization: study protocol for a randomized controlled trial",
+      "volume": "6",
+      "author": "Murphy",
+      "year": "2015",
+      "journal-title": "Trials"
+    },
+    {
+      "issue": "Suppl 1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0033|cit33",
+      "first-page": "7",
+      "article-title": "Negative pressure therapy to reduce SSI in open colorectal surgery: prospective, randomised and multicenter study",
+      "volume": "18",
+      "author": "Leon",
+      "year": "2016",
+      "journal-title": "Colorectal Disease"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0034|cit34",
+      "doi-asserted-by": "crossref",
+      "first-page": "512",
+      "DOI": "10.1177/000313481708300528",
+      "article-title": "Surgical site infection rate drops to 0% using a vacuum-assisted closure in contaminated/dirty infected laparotomy wounds",
+      "volume": "83",
+      "author": "Lozano-Balderas",
+      "year": "2017",
+      "journal-title": "American Surgeon"
+    },
+    {
+      "issue": "11",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0035|cit35",
+      "doi-asserted-by": "crossref",
+      "first-page": "2487",
+      "DOI": "10.1016/j.arth.2016.04.016",
+      "article-title": "Closed incision negative pressure wound therapy vs conventional dry dressings after primary knee arthroplasty: a randomized controlled study",
+      "volume": "31",
+      "author": "Manoharan",
+      "year": "2016",
+      "journal-title": "Journal of Arthroplasty"
+    },
+    {
+      "issue": "Supplement 1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0036|cit36",
+      "doi-asserted-by": "crossref",
+      "first-page": "S26",
+      "DOI": "10.1016/j.hpb.2019.03.041",
+      "article-title": "Negative-pressure therapy for hepatectomy and pancreatectomy: a randomized trial for surgical site infection prevention",
+      "volume": "21",
+      "author": "Martin",
+      "year": "2019",
+      "journal-title": "Hepato Pancreato Biliary Journal"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0037|cit37",
+      "doi-asserted-by": "crossref",
+      "first-page": "1043",
+      "DOI": "10.1097/SLA.0b013e3182501bae",
+      "article-title": "Negative pressure wound therapy for at-risk surgical closures in patients with multiple comorbidities: a prospective randomized controlled study",
+      "volume": "255",
+      "author": "Masden",
+      "year": "2012",
+      "journal-title": "Annals of Surgery"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0038|cit38",
+      "doi-asserted-by": "crossref",
+      "first-page": "322",
+      "DOI": "10.1186/s13063-015-0817-8",
+      "article-title": "Negative pressure wound therapy use to decrease surgical nosocomial events in colorectal resections (NEPTUNE): study protocol for a randomized controlled trial",
+      "volume": "16",
+      "author": "Chadi",
+      "year": "2015",
+      "journal-title": "Trials"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0039|cit39",
+      "doi-asserted-by": "crossref",
+      "first-page": "38",
+      "DOI": "10.1097/SLA.0000000000003111",
+      "article-title": "Negative pressure wound therapy use to decrease surgical nosocomial events in colorectal resections (NEPTUNE): a randomized controlled trial",
+      "volume": "270",
+      "author": "Murphy",
+      "year": "2019",
+      "journal-title": "Annals of Surgery"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0040|cit40",
+      "doi-asserted-by": "crossref",
+      "first-page": "554",
+      "DOI": "10.1016/j.arth.2018.11.017",
+      "article-title": "Use of closed incisional negative pressure wound therapy after revision total hip and knee arthroplasty in patients at high risk for infection: a prospective, randomized clinical trial",
+      "volume": "34",
+      "author": "Newman",
+      "year": "2019",
+      "journal-title": "Journal of Arthroplasty"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0041|cit41",
+      "doi-asserted-by": "crossref",
+      "first-page": "474",
+      "DOI": "10.1111/wrr.12530",
+      "article-title": "Cost-effectiveness analysis of single-use negative pressure wound therapy dressings (sNPWT) to reduce surgical site complications (SSC) in routine primary hip and knee replacements",
+      "volume": "25",
+      "author": "Nherera",
+      "year": "2017",
+      "journal-title": "Wound Repair and Regeneration"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0042|cit42",
+      "doi-asserted-by": "crossref",
+      "first-page": "103",
+      "DOI": "10.1186/s13019-018-0786-6",
+      "article-title": "Cost-effectiveness analysis of single use negative pressure wound therapy dressings (sNPWT) compared to standard of care in reducing surgical site complications (SSC) in patients undergoing coronary artery bypass grafting surgery",
+      "volume": "13",
+      "author": "Nherera",
+      "year": "2018",
+      "journal-title": "Journal of Cardiothoracic Surgery"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0043|cit43",
+      "doi-asserted-by": "crossref",
+      "first-page": "1176",
+      "DOI": "10.1111/iwj.12436",
+      "article-title": "Negative pressure wound therapy for seroma prevention and surgical incision treatment in spinal fracture care",
+      "volume": "13",
+      "author": "Nordmeyer",
+      "year": "2016",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0044|cit44",
+      "first-page": "S111",
+      "article-title": "A randomised controlled trial of negative pressure wound therapy at primary closure of midline laparotomy wounds",
+      "volume": "185",
+      "author": "Carter",
+      "year": "2016",
+      "journal-title": "Irish Journal of Medical Science"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0045|cit45",
+      "doi-asserted-by": "crossref",
+      "first-page": "1082",
+      "DOI": "10.1097/SLA.0000000000002098",
+      "article-title": "Prophylactic negative pressure dressing use in closed laparotomy wounds following abdominal operations: a randomized, controlled, open-label trial: the P.I.C.O. trial",
+      "volume": "265",
+      "author": "O'Leary",
+      "year": "2017",
+      "journal-title": "Annals of Surgery"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0046|cit46",
+      "doi-asserted-by": "crossref",
+      "first-page": "719",
+      "DOI": "10.1007/s00264-011-1321-8",
+      "article-title": "Negative pressure wound therapy to prevent seromas and treat surgical incisions after total hip arthroplasty",
+      "volume": "36",
+      "author": "Pachowsky",
+      "year": "2012",
+      "journal-title": "International Orthopaedics"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0047|cit47",
+      "doi-asserted-by": "crossref",
+      "first-page": "663",
+      "DOI": "10.1111/iwj.12344",
+      "article-title": "Incisional negative pressure wound therapy after hemiarthroplasty for femoral neck fractures - reduction of wound complications",
+      "volume": "13",
+      "author": "Pauser",
+      "year": "2016",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0048|cit48",
+      "doi-asserted-by": "crossref",
+      "first-page": "75",
+      "DOI": "10.1111/iwj.12836",
+      "article-title": "Reduction of groin wound complications in vascular surgery patients using closed incision negative pressure therapy (ciNPT): a prospective, randomised, single-institution study",
+      "volume": "15",
+      "author": "Pleger",
+      "year": "2018",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "issue": "1 Suppl 1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0049|cit49",
+      "doi-asserted-by": "crossref",
+      "first-page": "S34",
+      "DOI": "10.1016/j.ajog.2016.11.017",
+      "article-title": "PROphylactic wound VACuum therapy after cesarean section to prevent wound complications in the obese population: a randomised controlled trial (the PROVAC study)",
+      "volume": "216",
+      "author": "Ruhstaller",
+      "year": "2017",
+      "journal-title": "American Journal of Obstetrics and Gynecology"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0050|cit50",
+      "doi-asserted-by": "crossref",
+      "first-page": "94S",
+      "DOI": "10.1016/j.jvs.2016.03.099",
+      "article-title": "Prophylactic negative pressure therapy for femoral incision in vascular surgery: preliminary results of a prospective randomised trial",
+      "volume": "63",
+      "author": "Sabat",
+      "year": "2016",
+      "journal-title": "Journal of Vascular Surgery"
+    },
+    {
+      "issue": "2 suppl",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0051|cit51",
+      "doi-asserted-by": "crossref",
+      "first-page": "e51",
+      "DOI": "10.1016/S1569-9056(18)30888-1",
+      "article-title": "Results of the first interim analysis of the PräVAC trial: prevention of wound complications following inguinal lymph node dissection in patients with penile cancer using epidermal vacuum-assisted wound closure",
+      "volume": "17",
+      "author": "Schmid",
+      "year": "2018",
+      "journal-title": "European Urology"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0052|cit52",
+      "doi-asserted-by": "crossref",
+      "first-page": "726",
+      "DOI": "10.1016/j.jamcollsurg.2016.12.028",
+      "article-title": "Phase II randomized trial of negative-pressure wound therapy to decrease surgical site infection in patients undergoing laparotomy for gastrointestinal, pancreatic, and peritoneal surface malignancies",
+      "volume": "224",
+      "author": "Shen",
+      "year": "2017",
+      "journal-title": "Journal of the American College of Surgeons"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0053|cit53",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1155/2018/3629643",
+      "article-title": "A role for postoperative negative pressure wound therapy in multitissue hand injuries",
+      "volume": "2018",
+      "author": "Shim",
+      "year": "2018",
+      "journal-title": "Biomed Research International"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0054|cit54",
+      "doi-asserted-by": "crossref",
+      "first-page": "37",
+      "DOI": "10.1097/BOT.0b013e318216b1e5",
+      "article-title": "Incisional negative pressure wound therapy after high-risk lower extremity fractures",
+      "volume": "26",
+      "author": "Stannard",
+      "year": "2012",
+      "journal-title": "Journal of Orthopaedic Trauma"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0055|cit55",
+      "doi-asserted-by": "publisher",
+      "first-page": "927",
+      "DOI": "10.1007/s00266-018-1095-0",
+      "article-title": "Randomized controlled study comparing disposable negative-pressure wound therapy with standard care in bilateral breast reduction mammoplasty evaluating surgical site complications and scar quality",
+      "volume": "42",
+      "author": "Tanaydin",
+      "year": "2018",
+      "journal-title": "Aesthetic Plastic Surgery"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0056|cit56",
+      "first-page": "Erratum in: Aes",
+      "article-title": "Randomized controlled study comparing disposable negative-pressure wound therapy with standard care in bilateral breast reduction mammoplasty evaluating surgical site complications and scar quality",
+      "volume": "42",
+      "author": "Tanaydin",
+      "year": "2018",
+      "journal-title": "Aesthetic Plastic Surgery"
+    },
+    {
+      "issue": "1 Suppl 1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0057|cit57",
+      "doi-asserted-by": "crossref",
+      "first-page": "S245",
+      "DOI": "10.1016/j.ajog.2016.11.670",
+      "article-title": "Pilot randomized trial of prophylactic negative pressure wound therapy in obese women after cesarean delivery",
+      "volume": "216",
+      "author": "Tuuli",
+      "year": "2017",
+      "journal-title": "American Journal of Obstetrics and Gynecology"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0058|cit58",
+      "doi-asserted-by": "crossref",
+      "first-page": "e022115",
+      "DOI": "10.1136/bmjopen-2018-022115",
+      "article-title": "Standard wound management versus negative-pressure wound therapy in the treatment of adult patients having surgical incisions for major trauma to the lower limb - a two-arm parallel group superiority randomised controlled trial: protocol for wound healing in surgery for trauma (WHIST)",
+      "volume": "8",
+      "author": "Achten",
+      "year": "2018",
+      "journal-title": "BMJ Open"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0059|cit59",
+      "doi-asserted-by": "crossref",
+      "first-page": "519",
+      "DOI": "10.1001/jama.2020.0059",
+      "article-title": "Effect of incisional negative pressure wound therapy vs standard wound dressing on deep surgical site infection after surgery for lower limb fractures associated with major trauma. The WHIST randomized clinical trial",
+      "volume": "323",
+      "author": "Costa",
+      "year": "2020",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0060|cit60",
+      "unstructured": "Costa ML Achten J Knight R Png ME Bruce J Dutton S Standard wound management versus negative pressure wound therapy following surgical treatment of major trauma to the lower limb: the WHiST randomised controlled trial HTA Monograph"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0061|cit61",
+      "doi-asserted-by": "crossref",
+      "first-page": "186",
+      "DOI": "10.1186/s13063-019-3282-y",
+      "article-title": "Wound healing in surgery for trauma (WHIST): statistical analysis plan for a randomised controlled trial comparing standard wound management with negative pressure wound therapy",
+      "volume": "20",
+      "author": "Knight",
+      "year": "2019",
+      "journal-title": "Trials"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0062|cit62",
+      "unstructured": "Costa ML Achten J Knight R Png ME Bruce J Dutton S Standard wound management versus negative pressure wound therapy following surgical treatment of major trauma to the lower limb: the WHiST randomised controlled trial HTA Monograph"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0063|cit63",
+      "doi-asserted-by": "crossref",
+      "first-page": "377",
+      "DOI": "10.1097/AOG.0000000000002744",
+      "article-title": "Prophylactic negative pressure wound therapy and wound complication after cesarean delivery in women with class II or III obesity: a randomized controlled trial",
+      "volume": "132",
+      "author": "Wihbey",
+      "year": "2018",
+      "journal-title": "Obstetrics and Gynecology"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0064|cit64",
+      "first-page": "456",
+      "article-title": "Preliminary outcome of treatment of postoperative primarily closed sternotomy wounds treated using negative pressure wound therapy",
+      "volume": "86",
+      "author": "Witt-Majchrzac",
+      "year": "2015",
+      "journal-title": "Polski Przeglad Chirurgiczny"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0065|cit65",
+      "doi-asserted-by": "crossref",
+      "first-page": "259",
+      "DOI": "10.1097/WON.0b013e3182487a50",
+      "article-title": "Do patient and nurse outcome differences exist between 2 negative pressure wound therapy systems?",
+      "volume": "39",
+      "author": "Albert",
+      "year": "2012",
+      "journal-title": "Journal of Wound Ostomy and Continence Nursing"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0066|cit66",
+      "doi-asserted-by": "crossref",
+      "first-page": "75",
+      "DOI": "10.1159/000052996",
+      "article-title": "Value of subcutaneous drainage system in obese females undergoing cesarean section using Pfannenstiel incision",
+      "volume": "53",
+      "author": "Al-Inany",
+      "year": "2002",
+      "journal-title": "Gynecologic and Obstetric Investigation"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0067|cit67",
+      "first-page": "23",
+      "article-title": "The use of negative pressure wound therapy dressing in obese women undergoing caesarean section: a pilot study",
+      "volume": "12",
+      "author": "Anderson",
+      "year": "2014",
+      "journal-title": "Evidence-Based Midwifery"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0068|cit68",
+      "doi-asserted-by": "crossref",
+      "first-page": "e19",
+      "DOI": "10.1097/SLA.0000000000002413",
+      "article-title": "Prophylactic negative pressure dressing use in closed laparotomy wounds after abdominal operations",
+      "volume": "268",
+      "author": "Athanasiou",
+      "year": "2018",
+      "journal-title": "Annals of Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0069|cit69",
+      "doi-asserted-by": "crossref",
+      "first-page": "371",
+      "DOI": "10.2478/pjs-2013-0056",
+      "article-title": "Portable VAC therapy improve the results of the treatment of the pilonidal sinus - randomized prospective study",
+      "volume": "85",
+      "author": "Banasiewicz",
+      "year": "2013",
+      "journal-title": "Polski Przeglad Chirurgiczny"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0070|cit70",
+      "doi-asserted-by": "crossref",
+      "first-page": "116",
+      "DOI": "10.1016/j.ijom.2017.02.407",
+      "article-title": "Application of modified negative-pressure drainage nursing in neck dissection patients: a randomised controlled trial",
+      "volume": "46",
+      "author": "Bi",
+      "year": "2017",
+      "journal-title": "International Journal of Oral and Maxillofacial Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0071|cit71",
+      "doi-asserted-by": "crossref",
+      "first-page": "64",
+      "DOI": "10.12968/jowc.2011.20.2.72",
+      "article-title": "Clinical efficacy of a new variant of a foam-based NWPT system",
+      "volume": "20",
+      "author": "Bondokji",
+      "year": "2011",
+      "journal-title": "Journal of Wound Care"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0072|cit72",
+      "doi-asserted-by": "crossref",
+      "first-page": "390",
+      "DOI": "10.1097/01.prs.0000227675.63744.af",
+      "article-title": "The clinical efficacy and cost effectiveness of the vacuum-assisted closure technique in the management of acute and chronic wounds: a randomized controlled trial",
+      "volume": "118",
+      "author": "Braakenburg",
+      "year": "2006",
+      "journal-title": "Plastic and Reconstructive Surgery"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0073|cit73",
+      "doi-asserted-by": "crossref",
+      "first-page": "42",
+      "DOI": "10.1097/PRS.0000000000004471",
+      "article-title": "Discussion: comparison between negative-pressure fixation and film dressing in wound management after tissue expansion: a randomized controlled trial",
+      "volume": "142",
+      "author": "Chang",
+      "year": "2018",
+      "journal-title": "Plastic and Reconstructive Surgery"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0074|cit74",
+      "doi-asserted-by": "crossref",
+      "first-page": "564",
+      "DOI": "10.1016/j.jvs.2017.02.050",
+      "article-title": "Effects of topical negative pressure therapy on tissue oxygenation and wound healing in vascular foot wounds",
+      "volume": "66",
+      "author": "Chiang",
+      "year": "2017",
+      "journal-title": "Journal of Vascular Surgery"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0075|cit75",
+      "doi-asserted-by": "crossref",
+      "first-page": "174",
+      "DOI": "10.1016/j.otohns.2009.11.003",
+      "article-title": "A randomized, prospective, controlled study of forearm donor site healing when using a vacuum dressing",
+      "volume": "142",
+      "author": "Chio",
+      "year": "2010",
+      "journal-title": "Otolaryngology - Head and Neck Surgery"
+    },
+    {
+      "issue": "Supplement 1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0076|cit76",
+      "first-page": "P283 (page 107)",
+      "article-title": "Using photographic images to aid wound assessment within a randomised controlled trial of standard wound management versus negative pressure wound therapy: UK WOLLF trial",
+      "volume": "18",
+      "author": "Bruce",
+      "year": "2017",
+      "journal-title": "Trials"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0077|cit77",
+      "first-page": "k4411",
+      "article-title": "Negative pressure dressings are no better than standard dressings for open fractures",
+      "volume": "364",
+      "author": "Cook",
+      "year": "2019",
+      "journal-title": "BMJ Open"
+    },
+    {
+      "issue": "73",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0078|cit78",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.3310/hta22730",
+      "article-title": "Negative-pressure wound therapy versus standard dressings for adults with an open lower limb fracture: the WOLLF RCT",
+      "volume": "22",
+      "author": "Costa",
+      "year": "2018",
+      "journal-title": "Health Technology Assessment"
+    },
+    {
+      "issue": "22",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0079|cit79",
+      "doi-asserted-by": "crossref",
+      "first-page": "2280",
+      "DOI": "10.1001/jama.2018.6452",
+      "article-title": "Effect of negative pressure wound therapy vs standard wound management on 12-month disability among adults with severe open fracture of the lower limb: the WOLLF randomized clinical trial",
+      "volume": "319",
+      "author": "Costa",
+      "year": "2018",
+      "journal-title": "JAMA"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0080|cit80",
+      "doi-asserted-by": "crossref",
+      "first-page": "79",
+      "DOI": "10.1097/SAP.0b013e318221286c",
+      "article-title": "A prospective randomized trial comparing subatmospheric wound therapy with a sealed gauze dressing and the standard vacuum-assisted closure device",
+      "volume": "69",
+      "author": "Dorafshar",
+      "year": "2011",
+      "journal-title": "Annals of Plastic Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0081|cit81",
+      "doi-asserted-by": "crossref",
+      "first-page": "640",
+      "DOI": "10.1016/j.bjps.2011.11.037",
+      "article-title": "Negative pressure wound therapy reduces the ischaemia/reperfusion-associated inflammatory response in free muscle flaps",
+      "volume": "65",
+      "author": "Eisenhardt",
+      "year": "2012",
+      "journal-title": "Journal of Plastic, Reconstructive & Aesthetic Surgery"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0082|cit82",
+      "doi-asserted-by": "crossref",
+      "first-page": "804",
+      "DOI": "10.1055/s-0037-1615297",
+      "article-title": "Closed suction drainage after primary total knee arthroplasty: a prospective randomized trial",
+      "volume": "31",
+      "author": "Erne",
+      "year": "2018",
+      "journal-title": "Journal of Knee Surgery"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0083|cit83",
+      "doi-asserted-by": "crossref",
+      "first-page": "75",
+      "DOI": "10.1016/j.jhin.2017.10.022",
+      "article-title": "Routine use of PICO dressings may reduce overall groin wound complication rates following peripheral vascular surgery",
+      "volume": "99",
+      "author": "Fleming",
+      "year": "2018",
+      "journal-title": "Journal of Hospital Infection"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0084|cit84",
+      "doi-asserted-by": "crossref",
+      "first-page": "507",
+      "DOI": "10.1016/j.jamcollsurg.2017.12.008",
+      "article-title": "Open vs closed negative pressure wound therapy for contaminated and dirty surgical wounds: a prospective randomized comparison",
+      "volume": "226",
+      "author": "Frazee",
+      "year": "2018",
+      "journal-title": "Journal of the American College of Surgeons"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0085|cit85",
+      "doi-asserted-by": "crossref",
+      "first-page": "1387",
+      "DOI": "10.1016/j.jtcvs.2012.09.040",
+      "article-title": "Prevention of poststernotomy wound infections in obese patients by negative pressure wound therapy",
+      "volume": "145",
+      "author": "Grauhan",
+      "year": "2013",
+      "journal-title": "Journal of Thoracic and Cardiovascular Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0086|cit86",
+      "first-page": "253",
+      "article-title": "A comparative study of the clinical effects between two kinds of negative-pressure wound therapy",
+      "volume": "24",
+      "author": "Hu",
+      "year": "2009",
+      "journal-title": "Zhonghua Shao Shang Za Zhi"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0087|cit87",
+      "doi-asserted-by": "crossref",
+      "first-page": "361",
+      "DOI": "10.1080/17453670710015265",
+      "article-title": "Comparison of vacuum-formed removable rigid dressing with conventional rigid dressing after transtibial amputation: similar outcome in a randomized controlled trial involving 27 patients",
+      "volume": "97",
+      "author": "Johannesson",
+      "year": "2008",
+      "journal-title": "Acta Orthopaedica"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0088|cit88",
+      "doi-asserted-by": "crossref",
+      "first-page": "210",
+      "DOI": "10.1007/s00053-015-0015-x",
+      "article-title": "Use of vacuum therapy in pilondal sinus: a randomized controlled study comparing negative pressure wound therapy versus standard wound care after surgical excision",
+      "volume": "37",
+      "author": "Joos",
+      "year": "2015",
+      "journal-title": "Coloproctology"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0089|cit89",
+      "doi-asserted-by": "crossref",
+      "first-page": "536",
+      "DOI": "10.1097/01.sap.0000245121.32831.47",
+      "article-title": "Efficacy of negative pressure therapy to enhance take of 1-stage allodermis and a split-thickness graft",
+      "volume": "58",
+      "author": "Kim",
+      "year": "2007",
+      "journal-title": "Annals of Plastic Surgery"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0090|cit90",
+      "doi-asserted-by": "crossref",
+      "first-page": "1201",
+      "DOI": "10.1016/j.athoracsur.2011.12.060",
+      "article-title": "Closed suction drainage improves clinical outcome in patients undergoing endoscopic vein harvesting for coronary artery bypass grafting",
+      "volume": "93",
+      "author": "Krishnamoorthy",
+      "year": "2012",
+      "journal-title": "Annals of Thoracic Surgery"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0091|cit91",
+      "doi-asserted-by": "crossref",
+      "first-page": "189",
+      "DOI": "10.1177/1457496916668681",
+      "article-title": "Reducing surgical site infection with negative-pressure wound therapy after open abdominal surgery: a prospective randomized controlled study",
+      "volume": "106",
+      "author": "Li",
+      "year": "2016",
+      "journal-title": "Scandanavian Journal of Surgery"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0092|cit92",
+      "doi-asserted-by": "crossref",
+      "first-page": "700-5",
+      "DOI": "10.1097/01.sla.0000217745.56657.e5",
+      "article-title": "Effectiveness of negative pressure closure in the integration of split thickness skin grafts. A randomized, double-masked, controlled trial",
+      "volume": "244",
+      "author": "Llanos",
+      "year": "2006",
+      "journal-title": "Annals of Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0093|cit93",
+      "doi-asserted-by": "crossref",
+      "first-page": "917",
+      "DOI": "10.1097/01.PRS.0000133168.57199.E1",
+      "article-title": "A prospective, blinded, randomized, controlled clinical trial of topical negative pressure use in skin grafting",
+      "volume": "114",
+      "author": "Moisidis",
+      "year": "2004",
+      "journal-title": "Plastic and Reconstructive Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0094|cit94",
+      "unstructured": "Mouës CM Van Den Bemd GJ Heule F Hovius SE A prospective randomized trial comparing vacuum therapy to conventional moist gauze therapy Second World Union of Wound Healing Societies Meeting; 2004 July 8-13; Paris 2004 6"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0095|cit95",
+      "unstructured": "Mouës CM Van Den Bemd GJ Meerding WJ Hovius SE Cost analysis comparing vacuum-assisted closure wound therapy to conventional moist gauze therapy Second World Union of Wound Healing Societies Meeting; 2004 July 8-13; Paris 2004 87"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0096|cit96",
+      "unstructured": "Mouës CM Vos MC Van den Bemd GJ Stijnen T Hovius SE Bacterial load in relation to vacuum-assisted closure wound therapy 13th Conference of the European Wound Management Association; 2003 May 22-24; Pisa, Italy 2003 69"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0097|cit97",
+      "doi-asserted-by": "crossref",
+      "first-page": "11",
+      "DOI": "10.1111/j.1067-1927.2004.12105.x",
+      "article-title": "Bacterial load in relation to vacuum-assisted closure wound therapy: a prospective randomized trial",
+      "volume": "12",
+      "author": "Mouës",
+      "year": "2004",
+      "journal-title": "Wound Repair and Regeneration"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0098|cit98",
+      "doi-asserted-by": "crossref",
+      "first-page": "672",
+      "DOI": "10.1016/j.bjps.2006.01.041",
+      "article-title": "Comparing conventional gauze therapy to vacuum-assisted closure wound therapy: a prospective randomised trial",
+      "volume": "60",
+      "author": "Mouës",
+      "year": "2007",
+      "journal-title": "Journal of Plastic, Reconstructive & Aesthetic Surgery"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0099|cit99",
+      "doi-asserted-by": "crossref",
+      "first-page": "262",
+      "DOI": "10.1016/j.jtv.2018.08.005",
+      "article-title": "The effect of postoperative closed incision negative pressure therapy on the incidence of donor site wound dehiscence in breast reconstruction patients: DEhiscence PREvention Study (DEPRES), pilot randomized controlled trial",
+      "volume": "27",
+      "author": "Muller-Sloof",
+      "year": "2018",
+      "journal-title": "Journal of Tissue Viability"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0100|cit100",
+      "doi-asserted-by": "crossref",
+      "first-page": "204",
+      "DOI": "10.1177/1553350613496906",
+      "article-title": "Effects of a new pocket device for negative pressure wound therapy on surgical wounds of patients affected with Crohn's disease: a pilot trial",
+      "volume": "21",
+      "author": "Pellino",
+      "year": "2014",
+      "journal-title": "Surgical Innovation"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0101|cit101",
+      "doi-asserted-by": "crossref",
+      "first-page": "579",
+      "DOI": "10.1007/s00238-012-0698-y",
+      "article-title": "Vacuum closure as a skin-graft dressing: a comparison against conventional dressing",
+      "volume": "35",
+      "author": "Petkar",
+      "year": "2012",
+      "journal-title": "European Journal of Plastic Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0102|cit102",
+      "first-page": "573",
+      "article-title": "A novel option in negative pressure wound therapy (NPWT) for chronic and acute wound care",
+      "volume": "38",
+      "author": "Rahmanian-Schwarz",
+      "year": "2012",
+      "journal-title": "Handchirurgie Mikrochirurgie Plastiche Chirurgie"
+    },
+    {
+      "issue": "S2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0103|cit103",
+      "first-page": "152",
+      "article-title": "Coming-of-age in management of post-caesarean surgical-site infections: an ingenious vacuum assisted closure!",
+      "volume": "123",
+      "author": "Sinha",
+      "year": "2016",
+      "journal-title": "BJOG: An International Journal of Obstetrics and Gynaecology"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0104|cit104",
+      "first-page": "1301",
+      "article-title": "Negative pressure wound therapy to treat hematomas and surgical incisions following high-energy trauma",
+      "volume": "6",
+      "author": "Stannard",
+      "journal-title": "Journal of Trauma"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0105|cit105",
+      "doi-asserted-by": "crossref",
+      "first-page": "77",
+      "DOI": "10.1111/wrr.12615",
+      "article-title": "Evaluation of inguinal vascular surgical scars treated with closed incisional negative pressure wound therapy using three-dimensional digital imaging - a randomized controlled trial on bilateral incisions",
+      "volume": "26",
+      "author": "Svensson-Bjork",
+      "year": "2018",
+      "journal-title": "Wound Repair and Regeneration"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0106|cit106",
+      "doi-asserted-by": "crossref",
+      "first-page": "205",
+      "DOI": "10.1016/j.jse.2018.10.014",
+      "article-title": "Short-term outcomes associated with drain use in shoulder arthroplasties: a prospective, randomized controlled trial",
+      "volume": "28",
+      "author": "Trofa",
+      "year": "2019",
+      "journal-title": "Journal of Shoulder and Elbow Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0107|cit107",
+      "doi-asserted-by": "crossref",
+      "first-page": "849",
+      "DOI": "10.1016/j.jpedsurg.2017.01.035",
+      "article-title": "Applying vacuum to accomplish reduced wound infections in laparoscopic pediatric surgery",
+      "volume": "52",
+      "author": "Visser",
+      "year": "2017",
+      "journal-title": "Journal of Pediatric Surgery"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0108|cit108",
+      "doi-asserted-by": "crossref",
+      "first-page": "438",
+      "DOI": "10.1016/j.bjps.2017.11.013",
+      "article-title": "A prospective, randomized-controlled pilot study comparing closed suction versus negative pressure drains for panniculectomy patients",
+      "volume": "71",
+      "author": "Walker",
+      "year": "2018",
+      "journal-title": "Journal of Plastic, Reconstructive and Aesthetic Surgery"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0109|cit109",
+      "doi-asserted-by": "crossref",
+      "first-page": "e5925",
+      "DOI": "10.1097/MD.0000000000005925",
+      "article-title": "Bilayered negative-pressure wound therapy preventing leg incision morbidity in coronary artery bypass graft patients: a randomized controlled trial",
+      "volume": "96",
+      "author": "Yu",
+      "year": "2017",
+      "journal-title": "Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0110|cit110",
+      "doi-asserted-by": "crossref",
+      "first-page": "187",
+      "DOI": "10.1093/icvts/ivv204.187",
+      "article-title": "Negative pressure wound therapy in a potentially infected wound after empyema surgery",
+      "volume": "21",
+      "author": "Zotes",
+      "year": "2015",
+      "journal-title": "Interactive CardioVascular and Thoracic Surgery"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0111|cit111",
+      "doi-asserted-by": "crossref",
+      "first-page": "37",
+      "DOI": "10.1097/PRS.0000000000004470",
+      "article-title": "Comparison between negative-pressure fixation and film dressing in wound management after tissue expansion: a randomized controlled trial",
+      "volume": "142",
+      "author": "Nagata",
+      "year": "2018",
+      "journal-title": "Plastic and Reconstructive Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0112|cit112",
+      "unstructured": "NCT00654641 Prevention of wound complications after cesarean delivery in obese women utilizing negative pressure wound therapy clinicaltrials.gov/show/NCT00654641"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0113|cit113",
+      "unstructured": "NCT00724750 Comparison of two methods of negative pressure wound therapy clinicaltrials.gov/ct2/show/NCT00724750"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0114|cit114",
+      "unstructured": "ACTRN12615000175572 Do suction assisted negative pressure dressings reduce the incidence of surgical site infections after abdominal surgery: a randomized controlled trial anzctr.org.au/Trial/Registration/TrialReview.aspx?ACTRN=12615000175572"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0115|cit115",
+      "unstructured": "ACTRN12618000026224p [provisional] Negative pressure dressing in pilonidal surgery www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=373010"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0116|cit116",
+      "unstructured": "ACTRN12618001611213 2018 Does the use of negative pressure wound therapy reduce the rate of post operative wound infection after bowel surgery. The effect of PICO dressings on surgical site infection following bowel resection: a randomised controlled trial apps.who.int/trialsearch/Trial2.aspx?TrialID=ACTRN12618001611213"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0117|cit117",
+      "unstructured": "ACTRN12618002006224 Testing the effectiveness of negative pressure wound therapy in the at risk obstetric population for the prevention of surgical wound complications: the CYGNUS Trial apps.who.int/trialsearch/Trial2.aspx?TrialID=ACTRN12618002006224"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0118|cit118",
+      "unstructured": "ChiCTR-IOR-15006439 Prevention surgical site infection with using negative pressure wound therapy in abdominal incision www.chictr.org.cn/showproj.aspx?proj=11034"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0119|cit119",
+      "unstructured": "DRKS00006199 Postoperative negative pressure incision therapy following open colorectal surgery: a randomized-controlled trial www.drks.de/drks_web/navigate.do?navigationId=trial.HTML&TRIAL_ID=DRKS00006199"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0120|cit120",
+      "unstructured": "DRKS00011033 Evaluation of negative pressure incisional therapy in urgent gastro-intestinal surgery for reduction of superficial surgical site infections compared to non-occlusive conventional plaster - a prospective, randomized, controlled, multicenter clinical trial www.drks.de/drks_web/navigate.do?navigationId=trial.HTML&TRIAL_ID=DRKS00011033"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0121|cit121",
+      "unstructured": "DRKS00015136 Negative pressure wound therapy (NPWT) on closed incisions to prevent surgical site infection in HPB-surgery apps.who.int/trialsearch/Trial2.aspx?TrialID=DRKS00015136"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0122|cit122",
+      "unstructured": "ACTRN12615000286549 Negative pressure wound therapy versus standard care dressing to prevent surgical site infections in obese women undergoing caesarean section www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=368069"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0123|cit123",
+      "doi-asserted-by": "crossref",
+      "first-page": "e010287",
+      "DOI": "10.1136/bmjopen-2015-010287",
+      "article-title": "ADding negative pRESSure to improve healING (the DRESSING trial): a RCT protocol",
+      "volume": "6",
+      "author": "Gillespie",
+      "year": "2016",
+      "journal-title": "BMJ Open"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0124|cit124",
+      "unstructured": "ISRCTN12702354 Wound healing in surgical trauma www.isrctn.com/ISRCTN12702354"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0125|cit125",
+      "unstructured": "ISRCTN31224450 Negative pressure therapy in large incisional hernia surgery www.isrctn.com/ISRCTN31224450"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0126|cit126",
+      "unstructured": "ISRCTN55305726 WHITE 7 - WHISH - wound healing in surgery for hip fractures www.isrctn.com/ISRCTN55305726"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0127|cit127",
+      "doi-asserted-by": "crossref",
+      "first-page": "441",
+      "DOI": "10.1186/s13063-018-2757-6",
+      "article-title": "Prevention of seroma following inguinal lymph node dissection with prophylactic, incisional, negative-pressure wound therapy (SEROMA trial): study protocol for a randomized controlled trial",
+      "volume": "19",
+      "author": "Jorgensen",
+      "year": "2018",
+      "journal-title": "Trials"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0128|cit128",
+      "unstructured": "JPRN-UMIN000030936 A randomized phase II study to evaluate efficacy of negative pressure wound therapy on prophylaxis of the incisional hernia after reversal of temporaly diverting stoma upload.umin.ac.jp/cgi-open-bin/icdr_e/ctr_view.cgi?recptno=R000035332"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0129|cit129",
+      "unstructured": "KCT0004063 The effectiveness of negative pressure wound dressing for the wound healing after stoma closure cris.nih.go.kr/cris/en/search/search_result_st01.jsp?seq=14206"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0130|cit130",
+      "doi-asserted-by": "crossref",
+      "first-page": "e020632",
+      "DOI": "10.1136/bmjopen-2017-020632",
+      "article-title": "Randomised controlled feasibility trial of standard wound management versus negative-pressure wound therapy in the treatment of adult patients having surgical incisions for hip fractures",
+      "volume": "8",
+      "author": "Masters",
+      "year": "2018",
+      "journal-title": "BMJ Open"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0131|cit131",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1186/s13063-015-0995-4",
+      "article-title": "Postoperative negative-pressure incision therapy following open colorectal surgery (Poniy): study protocol for a randomized controlled trial",
+      "volume": "16",
+      "author": "Mihaljevic",
+      "year": "2015",
+      "journal-title": "Trials"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0132|cit132",
+      "unstructured": "NCT01450631 The use of the Prevena™ incision management system on post-surgical cesarean section incisions clinicaltrials.gov/ct2/show/NCT01450631"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0133|cit133",
+      "unstructured": "NCT01770067 Prophylactic treatment of high-risk patients with cardiovascular implantable electronic devices (CIED) with continuous in-situ ultra high-dose antibiotics (CITA) under regulated negative pressure-assisted wound therapy (RNPT) clinicaltrials.gov/ct2/show/record/NCT01770067"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0134|cit134",
+      "unstructured": "NCT01891006 Intervention for postpartum infections following caesarean section (APIPICS) clinicaltrials.gov/ct2/show/NCT01891006"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0135|cit135",
+      "unstructured": "NCT01905397 Negative pressure wound therapy to reduce surgical site infection clinicaltrials.gov/show/NCT01905397"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0136|cit136",
+      "unstructured": "NCT01913132 PICO above incisions after vascular surgery clinicaltrials.gov/ct2/show/NCT01913132"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0137|cit137",
+      "unstructured": "NCT02020018 Negative pressure wound therapy for prevention of poststernotomy infection clinicaltrials.gov/ct2/show/NCT02020018"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0138|cit138",
+      "unstructured": "NCT02064270 Study to compare negative pressure wound therapy or standard dressings after orthopedic surgery (PICO) clinicaltrials.gov/ct2/show/NCT02064270"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0139|cit139",
+      "unstructured": "Stannard JP PICO: a prospective, randomized, controlled clinical study to assess the prevention of postsurgical incision healing complications in patients undergoing primary or revision knee arthroplasty (KA) or total hip arthroplasty (THA), treated with either single-use negative pressure wound therapy (NPWT) or standard postsurgical dressings clinicaltrials.gov/ProvidedDocs/70/NCT02064270/Prot_SAP_001.pdf 2016"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0140|cit140",
+      "unstructured": "NCT02118558 Negative pressure wound therapy - PREVENA - in prevention of infections after total knee arthroplasty (TKA) clinicaltrials.gov/ct2/show/NCT02118558"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0141|cit141",
+      "unstructured": "NCT02127281 Evaluation of wound management with negative pressure dressing versus standard dressing after revision arthroplasty clinicaltrials.gov/ct2/show/NCT02127281"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0142|cit142",
+      "unstructured": "NCT02302222 The management of closed surgical incisions resulting from incisional hernia repair and/or functional panniculectomy using the Prevena Customizable dressing clinicaltrials.gov/ct2/show/NCT02302222"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0143|cit143",
+      "unstructured": "NCT02309944 Negative pressure wound therapy in obese gynecologic oncology patients clinicaltrials.gov/ct2/show/NCT02309944"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0144|cit144",
+      "unstructured": "NCT02331485 Randomised control study to assess the role of negative pressure wound therapy (NPWT) in the management of wound in surgical patient clinicaltrials.gov/ct2/show/NCT02331485"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0145|cit145",
+      "unstructured": "NCT02348034 A randomized controlled trial exploring the ability of negative pressure wound therapy (NPWT) to reduce colorectal surgical site infections (SSI) clinicaltrials.gov/ct2/show/NCT02348034"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0146|cit146",
+      "unstructured": "NCT02389023 Comparison of Prevena negative pressure incision management system vs. standard dressing after vascular surgery clinicaltrials.gov/ct2/show/NCT02389023"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0147|cit147",
+      "unstructured": "NCT02408835 Negative pressure wound therapy in groin dissection clinicaltrials.gov/ct2/show/record/NCT02408835"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0148|cit148",
+      "unstructured": "NCT02492854 Standard versus PICO dressings in lower-extremity bypass patients (PICO-LEB) clinicaltrials.gov/ct2/show/NCT02492854"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0149|cit149",
+      "unstructured": "NCT02509260 Prevena incisional negative pressure wound therapy in re-operative colorectal surgery clinicaltrials.gov/ct2/show/NCT02509260"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0150|cit150",
+      "unstructured": "NCT02558764 Effects of preventive negative pressure wound therapy with PICO on surgical wounds of kidney transplant patients clinicaltrials.gov/ct2/show/NCT02558764"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0151|cit151",
+      "unstructured": "NCT02578745 Prophylactic incisional care in obese women at cesarean (PICO-C) clinicaltrials.gov/ct2/show/NCT02578745"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0152|cit152",
+      "unstructured": "NCT02664168 A comparative study to assess the prevention of surgical site infection (SSI's) in revision total joint arthroplasty patients treated with single-use negative pressure wound therapy (PICO) or standard care dressings (AQUACEL Ag surgical dressing) clinicaltrials.gov/ct2/show/NCT02664168"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0153|cit153",
+      "unstructured": "NCT02682316 Negative pressure wound therapy in post-operative incision management clinicaltrials.gov/ct2/show/NCT02682316"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0154|cit154",
+      "unstructured": "NCT02790385 Negative pressure wound therapy - a multi-centered randomized control trial (NPWT) clinicaltrials.gov/ct2/show/NCT02790385"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0155|cit155",
+      "unstructured": "NCT02799667 Do single use negative pressure dressings reduce wound complications in obese women after cesarean delivery? clinicaltrials.gov/ct2/show/NCT02799667"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0156|cit156",
+      "unstructured": "NCT02892435 Prevena incision management system vs conventional management for wound healing clinicaltrials.gov/ct2/show/NCT02892435"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0157|cit157",
+      "unstructured": "NCT02901405 NPWT in soft tissue sarcoma surgery clinicaltrials.gov/ct2/show/NCT02901405"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0158|cit158",
+      "unstructured": "NCT02901613 Prophylactic post-cesarean incisional negative-pressure wound therapy in morbidly obese patients clinicaltrials.gov/ct2/show/NCT02901613"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0159|cit159",
+      "unstructured": "NCT02926924 Prophylactic application of an incisional wound vac to prevent wound complications in obese spine surgery patients clinicaltrials.gov/ct2/show/NCT02926924"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0160|cit160",
+      "unstructured": "NCT02954835 Negative pressure therapy for groin wounds clinicaltrials.gov/ct2/show/NCT02954835"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0161|cit161",
+      "unstructured": "NCT02967627 VAC dressings for colorectal resections (VACCRR) clinicaltrials.gov/ct2/show/record/NCT02967627"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0162|cit162",
+      "unstructured": "NCT03000010 Wound Vac bandage comparison after spinal fusion (WV) clinicaltrials.gov/ct2/show/NCT03000010"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0163|cit163",
+      "unstructured": "NCT03009110 Preventing adverse incisional outcomes at cesarean multicenter trial (Prevena-C) clinicaltrials.gov/ct2/show/NCT03009110"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0164|cit164",
+      "unstructured": "NCT03010137 Incisional negative pressure wound therapy in high risk patients undergoing panniculectomy: a prospective randomized controlled trial clinicaltrials.gov/ct2/show/NCT03010137"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0165|cit165",
+      "unstructured": "NCT03021668 Comparison between wound vacuum dressing and standard closure to reduce rates of surgical site infections clinicaltrials.gov/ct2/show/NCT03021668"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0166|cit166",
+      "unstructured": "NCT03061903 Closed incision negative pressure therapy vs standard of care (Prevena) clinicaltrials.gov/ct2/show/NCT03061903"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0167|cit167",
+      "unstructured": "NCT03069885 iNPWT in immediate breast reconstruction clinicaltrials.gov/ct2/show/record/NCT03069885"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0168|cit168",
+      "unstructured": "NCT03082664 Negative pressure wound therapy to prevent wound complications following cesarean section in high risk patients clinicaltrials.gov/ct2/show/NCT03082664"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0169|cit169",
+      "unstructured": "NCT03144726 RCT on NPWT for incisions following major lower-limb amputation to reduce surgical site infection clinicaltrials.gov/ct2/show/NCT03144726"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0170|cit170",
+      "unstructured": "NCT03175718 INPWT on wound complications & clinical outcomes after lower extremity sarcoma surgery preop radiation therapy patients (VAC) clinicaltrials.gov/ct2/show/NCT03175718"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0171|cit171",
+      "unstructured": "NCT03180346 A prospective, randomized, comparative study to assess the prevention of surgical site infection (SSIs) in revision total joint arthroplasty patients treated with single-use negative pressure wound therapy (PICO) or standard care dressings (AQUACEL Ag surgical dressing) clinicaltrials.gov/ct2/show/NCT03180346"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0172|cit172",
+      "unstructured": "NCT03250442 Evaluating the outcomes for incisional application of negative pressure for nontraumatic amputations clinicaltrials.gov/ct2/show/NCT03250442"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0173|cit173",
+      "unstructured": "NCT03269968 Use of negative pressure wound therapy in morbidly obese women after cesarean delivery clinicaltrials.gov/ct2/show/record/NCT03269968"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0174|cit174",
+      "unstructured": "NCT03274466 Closed incision negative pressure therapy versus standard of care surgical dressing in revision total knee arthroplasty (PROMISES) clinicaltrials.gov/ct2/show/NCT03274466"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0175|cit175",
+      "unstructured": "NCT03321799 Comparison of negative pressure wound therapy versus conventional dressings for the prevention of wound complications after revision THA clinicaltrials.gov/ct2/show/NCT03321799"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0176|cit176",
+      "unstructured": "NCT03345771 Antimicrobial barrier dressing versus closed-incision negative pressure therapy in the obese primary total joint arthroplasty clinicaltrials.gov/ct2/show/NCT03345771"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0177|cit177",
+      "unstructured": "NCT03346694 Reducing surgical site infection rates using an alternative sternal dressing clinicaltrials.gov/ct2/show/NCT03346694"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0178|cit178",
+      "unstructured": "NCT03395613 Negative pressure incision management system in infrainguinal vascular surgery clinicaltrials.gov/ct2/show/NCT03395613"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0179|cit179",
+      "unstructured": "NCT03402945 Prevention of infections in cardiac surgery (PICS) Prevena study (PICS-Prevena) clinicaltrials.gov/ct2/show/NCT03402945"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0180|cit180",
+      "unstructured": "NCT03414762 PICO negative pressure wound therapy in obese women undergoing elective cesarean delivery clinicaltrials.gov/ct2/show/NCT03414762"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0181|cit181",
+      "unstructured": "NCT03458663 Randomized trial comparing Prevena and ActiV.A.C. system to conventional care after Bascom's cleft lift surgery clinicaltrials.gov/ct2/show/NCT03458663"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0182|cit182",
+      "unstructured": "NCT03460262 Negative pressure wound therapy for prevention of groin infection following vascular surgery (PICO) clinicaltrials.gov/ct2/show/NCT03460262"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0183|cit183",
+      "unstructured": "NCT03512470 Clinical study on the prevention of surgical wound complications for aneurysmal thoracic-abdominal aortic pathology using the \"PREVENA\" system (TVAC) clinicaltrials.gov/ct2/show/NCT03512470"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0184|cit184",
+      "unstructured": "NCT03576222 Preventive PICO on surgical wounds after large incisional hernia repair clinicaltrials.gov/ct2/show/NCT03576222"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0185|cit185",
+      "unstructured": "NCT03632005 Negative pressure wound therapy vs. sterile dressing for patients undergoing thoracolumbar spine surgery ClinicalTrials.gov/show/NCT03632005"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0186|cit186",
+      "unstructured": "NCT03688438 WoundVac in obese patients undergoing lumbar surgery ClinicalTrials.gov/show/NCT03688438"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0187|cit187",
+      "unstructured": "NCT03700086 Efficacy of a disposable negative wound pressure device in reducing the incidence of wound infection after HPB surgery ClinicalTrials.gov/show/NCT03700086"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0188|cit188",
+      "unstructured": "NCT03716687 Prophylactic negative pressure wound therapy for high risk laparotomy wounds. A randomized prospective clinical trial clinicaltrials.gov/ct2/show/NCT03716687"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0189|cit189",
+      "unstructured": "NCT03773575 Evaluation of closed incision negative pressure dressing (PREVENA) to prevent lower extremity amputation wound complications ClinicalTrials.gov/show/NCT03773575"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0190|cit190",
+      "unstructured": "NCT03781206 Negative pressure wound therapy for wound healing after stoma reversal ClinicalTrials.gov/show/NCT03781206"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0191|cit191",
+      "unstructured": "NCT03816293 SUpPress SSI - single use negative pressure wound therapy (NPWT) to reduce surgical site infections clinicaltrials.gov/ct2/show/NCT03816293"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0192|cit192",
+      "unstructured": "NCT03820219 Incisional negative pressure wound therapy in patients undergoing spine surgery ClinicalTrials.gov/show/NCT03820219"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0193|cit193",
+      "unstructured": "NCT03871023 Prophylactic negative wound therapy in laparotomy wounds clinicaltrials.gov/show/nct03871023"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0194|cit194",
+      "unstructured": "NCT03886818 Efficacy of negative pressure wound therapy after total ankle arthroplasty ClinicalTrials.gov/show/NCT03886818"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0195|cit195",
+      "unstructured": "NCT03900078 Incisional negative pressure wound therapy for resection of soft tissue tumors clinicaltrials.gov/ct2/show/NCT03900078"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0196|cit196",
+      "unstructured": "NCT03905213 Prevention of surgical wound infection clinicaltrials.gov/show/nct03905213"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0197|cit197",
+      "unstructured": "NCT03935659 Negative pressure wound therapy for surgical site infection prevention in common femoral artery exposure ClinicalTrials.gov/show/NCT03935659"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0198|cit198",
+      "unstructured": "NCT03948412 Negative pressure wound therapy (PREVENA) versus standard dressings for incision management after renal transplant incision management with Prevena after renal transplant (IMPART) trial clinicaltrials.gov/ct2/show/NCT03948412"
+    },
+    {
+      "issue": "Suppl 1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0199|cit199",
+      "first-page": "S226",
+      "article-title": "Incisional negative pressure wound therapy following colorectal resection: preliminary report from a single site, prospective, randomized control trial",
+      "volume": "31",
+      "author": "Nguyen",
+      "year": "2017",
+      "journal-title": "Surgical Endoscopy"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0200|cit200",
+      "unstructured": "NTR6675 PREventing surgical site occurrences using negative preSSURE wound therapy? The PRESSURE trial www.trialregister.nl/trialreg/admin/rctview.asp?TC=6675"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0201|cit201",
+      "unstructured": "NTR6481 Randomized controlled clinical trial incisional NPWT versus sterile surgical dressing for surgical wounds after arterial vascular surgery www.trialregister.nl/trialreg/admin/rctview.asp?TC=6481"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0202|cit202",
+      "unstructured": "ACTRN12612001275853 Effectiveness of negative pressure wound therapy (NPWT) in the prevention of post-operative surgical wound dehiscence in at risk patients following abdominal surgery; a multicentre randomised control trial www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=362626"
+    },
+    {
+      "issue": "SuP 2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0203|cit203",
+      "doi-asserted-by": "crossref",
+      "first-page": "S23",
+      "DOI": "10.12968/jowc.2017.26.Sup2.S23",
+      "article-title": "Prevention of postsurgical wound dehiscence after abdominal surgery with NPWT: a multicentre randomised controlled trial protocol",
+      "volume": "26",
+      "author": "Sandy-Hodgetts",
+      "year": "2017",
+      "journal-title": "Journal of Wound Care"
+    },
+    {
+      "issue": "Suppl 2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0204|cit204",
+      "first-page": "14",
+      "article-title": "Single use negative pressure dressing for reduction in surgical site infections following emergency laparotomy - the SUNRRISE trial",
+      "volume": "19",
+      "author": "SUNRRISE study group",
+      "year": "2017",
+      "journal-title": "Colorectal Disease"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0205|cit205",
+      "unstructured": "TCTR20170331001 Antiseptic dressing versus negative pressure dressing techniques for uncomplicated pediatric appendicitis, randomized controlled trial www.who.int/trialsearch/trial2.aspx?Trialid=tctr20170331001"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0206|cit206",
+      "unstructured": "Australian Bureau of Statistics (ABS) 3101.0 - Australian Demographic Statistics, Jun 2014 www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/3101.0Main+Features1Jun%202014?OpenDocument"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0207|cit207",
+      "doi-asserted-by": "crossref",
+      "first-page": "e75",
+      "DOI": "10.1002/bjs.10403",
+      "article-title": "Negative-pressure wound therapy for prevention and treatment of surgical-site infections after vascular surgery",
+      "volume": "104",
+      "author": "Acosta",
+      "year": "2017",
+      "journal-title": "British Journal of Surgery"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0208|cit208",
+      "doi-asserted-by": "crossref",
+      "first-page": "65",
+      "DOI": "10.1097/PSN.0b013e318219778b",
+      "article-title": "Navigating new technologies in negative pressure wound therapy",
+      "volume": "31",
+      "author": "Allen",
+      "year": "2011",
+      "journal-title": "Plastic Surgical Nursing"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0209|cit209",
+      "doi-asserted-by": "crossref",
+      "first-page": "260",
+      "DOI": "10.1111/codi.13384",
+      "article-title": "Risk factors for wound complications after abdominoperineal excision: analysis of the ACS NSQIP database",
+      "volume": "18",
+      "author": "Althumairi",
+      "year": "2016",
+      "journal-title": "Colorectal Disease"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0210|cit210",
+      "doi-asserted-by": "crossref",
+      "first-page": "711",
+      "DOI": "10.1016/j.ajic.2010.03.017",
+      "article-title": "Patients' experiences of acquiring a deep surgical site infection: an interview study",
+      "volume": "38",
+      "author": "Andersson",
+      "year": "2010",
+      "journal-title": "American Journal of Infection Control"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0211|cit211",
+      "first-page": "158",
+      "article-title": "Pain and basic functional activities in a group of patients with cutaneous wounds under V.A.C therapy in hospital setting",
+      "volume": "61",
+      "author": "Apostoli",
+      "year": "2008",
+      "journal-title": "Professioni Infermieristiche"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0212|cit212",
+      "doi-asserted-by": "crossref",
+      "first-page": "22",
+      "DOI": "10.12968/jowc.2003.12.1.26451",
+      "article-title": "Topical negative pressure (TNP): the evolution of a novel wound therapy",
+      "volume": "12",
+      "author": "Banwell",
+      "year": "2003",
+      "journal-title": "Journal of Wound Care"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0213|cit213",
+      "volume-title": "Wound Care Essentials. Practice and Principles",
+      "author": "Baronski",
+      "year": "2008"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0214|cit214",
+      "doi-asserted-by": "crossref",
+      "first-page": "784",
+      "DOI": "10.1001/jamasurg.2017.0904",
+      "article-title": "Centers for Disease Control and Prevention guideline for the prevention of surgical site infection, 2017",
+      "volume": "152",
+      "author": "Berríos-Torres",
+      "year": "2017",
+      "journal-title": "JAMA Surgery"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0215|cit215",
+      "doi-asserted-by": "crossref",
+      "first-page": "480",
+      "DOI": "10.1111/j.1742-481X.2010.00728.x",
+      "article-title": "Retrospective evaluation of clinical outcomes in subjects with split-thickness skin graft: comparing V.A.C.® therapy and conventional therapy in foot and ankle reconstructive surgeries",
+      "volume": "7",
+      "author": "Blume",
+      "year": "2010",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0216|cit216",
+      "doi-asserted-by": "crossref",
+      "first-page": "851",
+      "DOI": "10.1097/01.mlr.0000135827.18610.0d",
+      "article-title": "The estimation of a preference-based measure of health from the SF-12",
+      "volume": "42",
+      "author": "Brazier",
+      "year": "2004",
+      "journal-title": "Medical Care"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0217|cit217",
+      "doi-asserted-by": "crossref",
+      "first-page": "1513",
+      "DOI": "10.1111/jcmm.13080",
+      "article-title": "Circulating fibrocyte mobilization in negative pressure wound therapy",
+      "volume": "21",
+      "author": "Chen",
+      "year": "2017",
+      "journal-title": "Journal of Cellular and Molecular Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0218|cit218",
+      "doi-asserted-by": "crossref",
+      "first-page": "1511",
+      "DOI": "10.1007/s00402-010-1091-6",
+      "article-title": "Rare complication after VAC-therapy in the treatment of deep sore ulcers in a paraplegic patient",
+      "volume": "130",
+      "author": "Citak",
+      "year": "2010",
+      "journal-title": "Archives of Orthopaedic Trauma Surgery"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0219|cit219",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD004287.pub3",
+      "article-title": "Tissue adhesives for closure of surgical incisions",
+      "author": "Coulthard",
+      "year": "2010",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0220|cit220",
+      "doi-asserted-by": "crossref",
+      "first-page": "793-803",
+      "DOI": "10.1177/0272989X13482524",
+      "article-title": "US valuation of the SF-6D",
+      "volume": "33",
+      "author": "Craig",
+      "year": "2013",
+      "journal-title": "Medical Decision Making"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0221|cit221",
+      "unstructured": "Centre for Reviews and Dissemination NHS EED search filters www.crd.york.ac.uk/crdweb/s"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0222|cit222",
+      "doi-asserted-by": "crossref",
+      "first-page": "387",
+      "DOI": "10.1016/j.ajic.2008.12.010",
+      "article-title": "Surgical site infection: incidence and impact on hospital utilization and treatment costs",
+      "volume": "37",
+      "author": "De Lissovoy",
+      "year": "2009",
+      "journal-title": "American Journal of Infection Control"
+    },
+    {
+      "issue": "36",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0223|cit223",
+      "doi-asserted-by": "crossref",
+      "first-page": "e4673",
+      "DOI": "10.1097/MD.0000000000004673",
+      "article-title": "A systematic review and meta-analysis including GRADE qualification of the risk of surgical site infections after prophylactic negative pressure wound therapy compared with conventional dressings in clean and contaminated surgery",
+      "volume": "95",
+      "author": "De Vries",
+      "year": "2016",
+      "journal-title": "Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0224|cit224",
+      "doi-asserted-by": "crossref",
+      "first-page": "299",
+      "DOI": "10.1053/j.jfas.2010.01.002",
+      "article-title": "Negative-pressure wound therapy applied to high-risk surgical incisions",
+      "volume": "49",
+      "author": "DeCarbo",
+      "year": "2010",
+      "journal-title": "Journal of Foot and Ankle Surgery"
+    },
+    {
+      "issue": "11",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0225|cit225",
+      "doi-asserted-by": "publisher",
+      "first-page": "1781",
+      "DOI": "10.1007/s11695-010-0328-3",
+      "article-title": "Wide topical negative pressure wound dressing treatment for patients undergoing abdominal dermolipectomy following massive weight loss",
+      "volume": "21",
+      "author": "Dragu",
+      "year": "2011",
+      "journal-title": "Obesity Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0226|cit226",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1093/oso/9780198529446.001.0001",
+      "volume-title": "Methods for the Economic Evaluation of Health Care Programs",
+      "author": "Drummond",
+      "year": "2005"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0227|cit227",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD011278.pub2",
+      "article-title": "Negative pressure wound therapy for treating surgical wounds healing by secondary intention",
+      "author": "Dumville",
+      "year": "2015",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "Suppl 1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0228|cit228",
+      "doi-asserted-by": "crossref",
+      "first-page": "S76",
+      "DOI": "10.1002/dmrr.852",
+      "article-title": "The value of debridement and vacuum-assisted closure (V.A.C.) therapy in diabetic foot ulcers",
+      "volume": "24",
+      "author": "Eneroth",
+      "year": "2008",
+      "journal-title": "Diabetes/Metabolism Research and Reviews"
+    },
+    {
+      "issue": "Suppl 4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0229|cit229",
+      "first-page": "1",
+      "article-title": "Vacuum assisted closure: recommendations for use. A consensus document",
+      "volume": "5",
+      "author": "Expert Working Group",
+      "year": "2008",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0230|cit230",
+      "unstructured": "US Food and Drug Administration (FDA) Negative pressure wound devices draw FDA notice, advice. Consumer health information. December 2009 www.medpagetoday.com/upload/2009/12/11/UCM193750.pdf"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0231|cit231",
+      "unstructured": "US Food and Drug Administration (FDA) Serious complications associated with negative pressure wound therapy systems. Preliminary public health notification. November 2009 www.o-wm.com/content/rare-be-aware-serious-complications-associated-with-negative-pressure-wound-therapy-systems"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0232|cit232",
+      "doi-asserted-by": "crossref",
+      "first-page": "301",
+      "DOI": "10.1007/s001130050123",
+      "article-title": "Treatment of infection by vacuum sealing",
+      "volume": "100",
+      "author": "Fleischmann",
+      "year": "1997",
+      "journal-title": "Unfallchirurg"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0233|cit233",
+      "first-page": "75",
+      "article-title": "New advances in instillation therapy in wounds at risk for compromised healing",
+      "volume": "24",
+      "author": "Gabriel",
+      "year": "2014",
+      "journal-title": "Surgical Technology International"
+    },
+    {
+      "issue": "13",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0234|cit234",
+      "doi-asserted-by": "crossref",
+      "first-page": "1627",
+      "DOI": "10.1002/bjs.9636",
+      "article-title": "Systematic review of molecular mechanism of action of negative-pressure wound therapy",
+      "volume": "101",
+      "author": "Glass",
+      "year": "2014",
+      "journal-title": "British Journal of Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0235|cit235",
+      "doi-asserted-by": "crossref",
+      "first-page": "189",
+      "DOI": "10.1001/archsurg.2007.54",
+      "article-title": "Negative pressure wound therapy: a vacuum of evidence?",
+      "volume": "143",
+      "author": "Gregor",
+      "year": "2008",
+      "journal-title": "Archives of Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0236|cit236",
+      "doi-asserted-by": "crossref",
+      "first-page": "159",
+      "DOI": "10.1111/iwj.12452",
+      "article-title": "Clinical recommendations and practical guide for negative pressure wound therapy with instillation",
+      "volume": "13",
+      "author": "Gupta",
+      "year": "2016",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "issue": "7193",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0237|cit237",
+      "doi-asserted-by": "crossref",
+      "first-page": "314",
+      "DOI": "10.1038/nature07039",
+      "article-title": "Wound repair and regeneration",
+      "volume": "453",
+      "author": "Gurtner",
+      "year": "2008",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0238|cit238",
+      "doi-asserted-by": "crossref",
+      "first-page": "406",
+      "DOI": "10.12968/jowc.2005.14.9.26834",
+      "article-title": "Extraperitoneal bladder leakage after provision of topical negative therapy: a case report",
+      "volume": "14",
+      "author": "Heuser",
+      "year": "2005",
+      "journal-title": "Journal of Wound Care"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0239|cit239",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0173600",
+      "DOI": "10.1371/journal.pone.0173600",
+      "article-title": "A systematic review of economic evaluations of population-based sodium reduction interventions",
+      "volume": "12",
+      "author": "Hope",
+      "year": "2017",
+      "journal-title": "PLOS One"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0240|cit240",
+      "first-page": "30",
+      "article-title": "Use of a portable, single-use negative pressure wound therapy device in home care patients with low to moderately exuding wounds: a case series",
+      "volume": "60",
+      "author": "Hurd",
+      "year": "2014",
+      "journal-title": "Ostomy/Wound Management"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0241|cit241",
+      "doi-asserted-by": "crossref",
+      "first-page": "117",
+      "DOI": "10.1017/S0266462313000160",
+      "article-title": "Consolidated Health Economic Evaluation Reporting Standards (CHEERS) statement",
+      "volume": "29",
+      "author": "Husereau",
+      "year": "2013",
+      "journal-title": "International Journal of Technology Assessment in Health Care"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0242|cit242",
+      "doi-asserted-by": "crossref",
+      "first-page": "477",
+      "DOI": "10.1002/bjs.10084",
+      "article-title": "Meta-analysis of negative-pressure wound therapy for closed surgical incisions",
+      "volume": "103",
+      "author": "Hyldig",
+      "year": "2016",
+      "journal-title": "British Journal of Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0243|cit243",
+      "first-page": "e49",
+      "article-title": "Does the application of incisional negative pressure therapy to high-risk wounds prevent surgical site complications? A systematic review",
+      "volume": "13",
+      "author": "Ingargiola",
+      "year": "2013",
+      "journal-title": "Eplasty"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0244|cit244",
+      "doi-asserted-by": "crossref",
+      "first-page": "601",
+      "DOI": "10.1097/PRS.0b013e318196b97b",
+      "article-title": "Negative-pressure wound therapy II: negative-pressure wound therapy and increased perfusion. Just an illusion?",
+      "volume": "123",
+      "author": "Kairinos",
+      "year": "2009",
+      "journal-title": "Plastic and Reconstructive Surgery"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0245|cit245",
+      "doi-asserted-by": "crossref",
+      "first-page": "1178",
+      "DOI": "10.1097/PRS.0000000000000130",
+      "article-title": "The influence manufacturers have on negative-pressure wound therapy research",
+      "volume": "133",
+      "author": "Kairinos",
+      "year": "2014",
+      "journal-title": "Plastic and Reconstructive Surgery"
+    },
+    {
+      "issue": "Suppl 5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0246|cit246",
+      "first-page": "S9",
+      "article-title": "The efficacy of negative pressure wound therapy in the management of lower extremity trauma: review of clinical evidence",
+      "volume": "38",
+      "author": "Kanakaris",
+      "year": "2007",
+      "journal-title": "Injury"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0247|cit247",
+      "doi-asserted-by": "crossref",
+      "first-page": "1623",
+      "DOI": "10.1016/j.burns.2016.06.011",
+      "article-title": "A review of negative-pressure wound therapy in the management of burn wounds",
+      "volume": "42",
+      "author": "Kantak",
+      "year": "2016",
+      "journal-title": "Burns"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0248|cit248",
+      "doi-asserted-by": "publisher",
+      "first-page": "289",
+      "DOI": "10.1111/iwj.12232",
+      "article-title": "Unexpected wound occurring following negative pressure wound therapy",
+      "volume": "13",
+      "author": "Karabacak",
+      "year": "2016",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0249|cit249",
+      "doi-asserted-by": "crossref",
+      "first-page": "276",
+      "DOI": "10.1302/2046-3758.212.2000190",
+      "article-title": "Negative pressure wound therapy for management of the surgical incision in orthopaedic surgery: a review of evidence and mechanisms for an emerging indication",
+      "volume": "2",
+      "author": "Karlakki",
+      "year": "2013",
+      "journal-title": "Bone & Joint Research"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0250|cit250",
+      "first-page": "565",
+      "article-title": "Risk factors for wound dehiscence after laparotomy - clinical control trial",
+      "volume": "84",
+      "author": "Kenig",
+      "year": "2012",
+      "journal-title": "Poliski Przeglad Chirurgiczny"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0251|cit251",
+      "doi-asserted-by": "crossref",
+      "first-page": "202",
+      "DOI": "10.1080/02844310802091586",
+      "article-title": "Vacuum-assisted closure of wounds and anxiety",
+      "volume": "42",
+      "author": "Keskin",
+      "year": "2008",
+      "journal-title": "Scandinavian Journal of Plastic and Reconstructive Surgery and Hand Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0252|cit252",
+      "doi-asserted-by": "crossref",
+      "first-page": "597",
+      "DOI": "10.1016/j.jhealeco.2006.09.002",
+      "article-title": "Modelling SF-6D health state preference data using a nonparametric Bayesian method",
+      "volume": "26",
+      "author": "Kharroubi",
+      "year": "2007",
+      "journal-title": "Journal of Health Economics"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0253|cit253",
+      "doi-asserted-by": "crossref",
+      "first-page": "226",
+      "DOI": "10.1097/00129334-200209000-00008",
+      "article-title": "5 questions and answers about negative pressure wound therapy",
+      "volume": "15",
+      "author": "Kloth",
+      "year": "2002",
+      "journal-title": "Advances in Skin and Wound Care"
+    },
+    {
+      "issue": "Suppl 1",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0254|cit254",
+      "doi-asserted-by": "crossref",
+      "first-page": "S1",
+      "DOI": "10.1016/S0020-1383(11)00041-6",
+      "article-title": "Evidence-based recommendations for the use of negative pressure wound therapy in traumatic wounds and reconstructive surgery: steps towards an international consensus",
+      "volume": "42",
+      "author": "Krug",
+      "year": "2011",
+      "journal-title": "Injury"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0255|cit255",
+      "unstructured": "Lancet Commission on Global Surgery Number of surgical procedures (per 100,000 population) data.worldbank.org/indicator/SH.SGR.PROC.P5"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0256|cit256",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Lefebvre C Glanville J Briscoe S Littlewood A Marshall C Metzendorf M-I Chapter 4: Searching for and selecting studies. In: Higgins JPT, Thomas J, Chandler J, Cumpston M, Li T, Page MJ, Welch VA (editors). Cochrane Handbook for Systematic Reviews of Interventions version 6.0 (updated July 2019). Cochrane, 2019 Available from www.training.cochrane.org/handbook",
+      "DOI": "10.1002/9781119536604.ch4"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0257|cit257",
+      "doi-asserted-by": "crossref",
+      "first-page": "3470",
+      "DOI": "10.1002/sim.3634",
+      "article-title": "The design and analysis of split-mouth studies: what statisticians and clinicians should know",
+      "volume": "28",
+      "author": "Lesaffre",
+      "year": "2009",
+      "journal-title": "Statistics in Medicine"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0258|cit258",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Li T Higgins JP Deeks JJ (editors) Chapter 5: Collecting data. In: Higgins JP, Thomas J, Chandler J, Cumpston M, Li T, Page MJ, Welch VA (editors). Cochrane Handbook for Systematic Reviews of Interventions version 6.0 (updated July 2019). Cochrane, 2019 Available from www.training.cochrane.org/handbook",
+      "DOI": "10.1002/9781119536604"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0259|cit259",
+      "doi-asserted-by": "crossref",
+      "first-page": "1060",
+      "DOI": "10.1007/s00595-017-1480-3",
+      "article-title": "Impact of intra-abdominal absorbable sutures on surgical site infection in gastrointestinal and hepato-biliary-pancreatic surgery: results of a multicenter, randomized, prospective, phase II clinical trial",
+      "volume": "47",
+      "author": "Maehara",
+      "year": "2017",
+      "journal-title": "Surgery Today"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0260|cit260",
+      "first-page": "e15",
+      "article-title": "Biological effects of a disposable canisterless negative pressure wound therapy system",
+      "volume": "14",
+      "author": "Malmsjö",
+      "year": "2014",
+      "journal-title": "Eplasty"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0261|cit261",
+      "doi-asserted-by": "crossref",
+      "first-page": "33",
+      "DOI": "10.12968/jowc.2007.16.1.26987",
+      "article-title": "Role of topical negative pressure in pressure ulcer management",
+      "volume": "16",
+      "author": "Mandal",
+      "year": "2007",
+      "journal-title": "Journal of Wound Care"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0262|cit262",
+      "doi-asserted-by": "crossref",
+      "first-page": "553",
+      "DOI": "10.1097/00000637-199706000-00001",
+      "article-title": "Vacuum-assisted closure: a new method for wound control and treatment: animal studies and basic foundation",
+      "volume": "38",
+      "author": "Morykwas",
+      "year": "1997",
+      "journal-title": "Annals of Plastic Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0263|cit263",
+      "doi-asserted-by": "crossref",
+      "first-page": "547",
+      "DOI": "10.1097/00000637-200111000-00013",
+      "article-title": "Effects of varying levels of subatmospheric pressure on the rate of granulation tissue formation in experimental wounds in swine",
+      "volume": "47",
+      "author": "Morykwas",
+      "year": "2001",
+      "journal-title": "Annals of Plastic Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0264|cit264",
+      "unstructured": "National Institute for Health and Care Excellence (NICE) Judging whether public health interventions offer value for money. Local government briefing [LGB10]. September 2013 www.nice.org.uk/advice/lgb10/chapter/judging-the-cost-effectiveness-of-public-health-activities"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0265|cit265",
+      "unstructured": "National Institute for Health and Care Excellence (NICE) Quality-adjusted life year (QALYS). NICE glossary www.nice.org.uk/glossary?letter=q"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0266|cit266",
+      "doi-asserted-by": "crossref",
+      "first-page": "907",
+      "DOI": "10.1016/j.athoracsur.2006.04.058",
+      "article-title": "Clinical outcomes of noninfectious sternal dehiscence after median sternotomy",
+      "volume": "82",
+      "author": "Olbrecht",
+      "year": "2006",
+      "journal-title": "Annals of Thoracic Surgery"
+    },
+    {
+      "issue": "Suppl",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0267|cit267",
+      "doi-asserted-by": "crossref",
+      "first-page": "S14",
+      "DOI": "10.12968/bjcn.2014.19.Sup3.S14",
+      "article-title": "Exploring portable negative pressure wound therapy devices in the community",
+      "volume": "19",
+      "author": "Ousey",
+      "year": "2014",
+      "journal-title": "British Journal of Community Nursing"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0268|cit268",
+      "doi-asserted-by": "crossref",
+      "first-page": "235",
+      "DOI": "10.1007/s13304-015-0298-z",
+      "article-title": "Prophylactic negative pressure wound therapy in colorectal surgery. Effects on surgical site events: current status and call to action",
+      "volume": "67",
+      "author": "Pellino",
+      "year": "2015",
+      "journal-title": "Updates in Surgery"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0269|cit269",
+      "doi-asserted-by": "crossref",
+      "first-page": "1133",
+      "DOI": "10.1016/j.jtcvs.2010.06.063",
+      "article-title": "Major complications during negative pressure wound therapy in poststernotomy mediastinitis after cardiac surgery",
+      "volume": "140",
+      "author": "Petzina",
+      "year": "2010",
+      "journal-title": "Journal of Thoracic and Cardiovascular Surgery"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0270|cit270",
+      "unstructured": "Nordic Cochrane Centre, The Cochrane Collaboration Review Manager 5 (RevMan 5) 2014"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0271|cit271",
+      "first-page": "647",
+      "article-title": "Skin wound healing modulation by macrophages",
+      "volume": "3",
+      "author": "Rodero",
+      "year": "2010",
+      "journal-title": "International Journal of Clinical and Experimental Pathology"
+    },
+    {
+      "issue": "11",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0272|cit272",
+      "doi-asserted-by": "crossref",
+      "first-page": "e183467",
+      "DOI": "10.1001/jamasurg.2018.3467",
+      "article-title": "Negative pressure wound therapy for closed laparotomy incisions in general and colorectal surgery: a systematic review and meta-analysis",
+      "volume": "153",
+      "author": "Sahebally",
+      "year": "2018",
+      "journal-title": "JAMA surgery"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0273|cit273",
+      "doi-asserted-by": "crossref",
+      "first-page": "265",
+      "DOI": "10.1111/iwj.12088",
+      "article-title": "Determining risk factors for surgical wound dehiscence: a literature review",
+      "volume": "12",
+      "author": "Sandy-Hodgetts",
+      "year": "2015",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0274|cit274",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Schünemann HJ Vist GE Higgins JP Santesso N Deeks JJ Glasziou P Chapter 15: Interpreting results and drawing conclusions. In: Higgins JP, Thomas J, Chandler J, Cumpston M, Li T, Page MJ, Welch VA (editors). Cochrane Handbook for Systematic Reviews of Interventions version 6.0 (updated July 2019). Cochrane, 2019 Available from www.training.cochrane.org/handbook",
+      "DOI": "10.1002/9781119536604.ch15"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0275|cit275",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Schünemann HJ Higgins JP Vist GE Glasziou P Akl EA Skoetz N Chapter 14: Completing ‘Summary of findings’ tables and grading the certainty of the evidence. In: Higgins JP, Thomas J, Chandler J, Cumpston M, Li T, Page MJ, Welch VA (editors). Cochrane Handbook for Systematic Reviews of Interventions version 6.0 (updated July 2019). Cochrane, 2019 Available from www.training.cochrane.org/handbook",
+      "DOI": "10.1002/9781119536604.ch14"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0276|cit276",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Shemilt I Aluko P Graybill E Craig D Henderson C Drummond M Campbell and Cochrane Economics Methods Group Chapter 20: Economic evidence. In: Higgins JP, Thomas J, Chandler J, Cumpston M, Li T, Page MJ, Welch VA (editors). Cochrane Handbook for Systematic Reviews of Interventions version 6.0 (updated July 2019). Cochrane, 2019 Available from www.training.cochrane.org/handbook",
+      "DOI": "10.1002/9781119536604.ch20"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0277|cit277",
+      "doi-asserted-by": "crossref",
+      "first-page": "122",
+      "DOI": "10.1177/0272989X9901900202",
+      "article-title": "Subjective health status and health values in the general population",
+      "volume": "19",
+      "author": "Shmueli",
+      "year": "1999",
+      "journal-title": "Medical Decision Making"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0278|cit278",
+      "unstructured": "Scottish Intercollegiate Guidelines Network (SIGN) Search filters www.sign.ac.uk/search-filters.html"
+    },
+    {
+      "issue": "12",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0279|cit279",
+      "doi-asserted-by": "crossref",
+      "first-page": "117",
+      "DOI": "10.1510/icvts.2010.252668",
+      "article-title": "Negative-pressure wound therapy following cardiac surgery: bleeding complications and 30-days mortality in 176 patients with deep sternal wound infection",
+      "volume": "12",
+      "author": "Sjogren",
+      "year": "2011",
+      "journal-title": "Interactive Cardiovascular and Thoracic Surgery"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0280|cit280",
+      "doi-asserted-by": "crossref",
+      "first-page": "552",
+      "DOI": "10.1097/BOT.0b013e3181a2e2b6",
+      "article-title": "Negative pressure wound therapy after severe open fractures: a prospective randomized study",
+      "volume": "23",
+      "author": "Stannard",
+      "year": "2009",
+      "journal-title": "Journal of Orthopaedic Trauma"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0281|cit281",
+      "first-page": "44",
+      "article-title": "Stomal mucocutaneous dehiscence as a complication of topical negative pressure used to treat an open abdomen: a case series",
+      "volume": "55",
+      "author": "Steenvoorde",
+      "year": "2009",
+      "journal-title": "Ostomy/Wound Management"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0282|cit282",
+      "doi-asserted-by": "crossref",
+      "first-page": "259",
+      "DOI": "10.1111/j.1742-481X.2009.00614.x",
+      "article-title": "Vacuum-assisted closure of laparotomy wounds: a critical review of the literature",
+      "volume": "6",
+      "author": "Stevens",
+      "year": "2009",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0283|cit283",
+      "doi-asserted-by": "crossref",
+      "first-page": "247",
+      "DOI": "10.1007/s00238-016-1200-z",
+      "article-title": "Negative pressure wound therapy induces early wound healing by increased and accelerated expression of vascular endothelial growth factor receptors",
+      "volume": "39",
+      "author": "Tanaka",
+      "year": "2016",
+      "journal-title": "European Journal of Plastic Surgery"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0284|cit284",
+      "doi-asserted-by": "crossref",
+      "first-page": "1394",
+      "DOI": "10.1016/j.jtcvs.2016.11.040",
+      "article-title": "Incidence of sternal wound infection after tracheostomy in patients undergoing cardiac surgery: a systematic review and meta-analysis",
+      "volume": "153",
+      "author": "Toeg",
+      "year": "2017",
+      "journal-title": "Journal of Thoracic and Cardiovascular Surgery"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0285|cit285",
+      "doi-asserted-by": "crossref",
+      "first-page": "612",
+      "DOI": "10.1016/j.jss.2015.02.008",
+      "article-title": "Cost-utility analysis of negative pressure wound therapy in high-risk cesarean section wounds",
+      "volume": "195",
+      "author": "Tuffaha",
+      "year": "2015",
+      "journal-title": "Journal of Surgical Research"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0286|cit286",
+      "doi-asserted-by": "crossref",
+      "first-page": "985",
+      "DOI": "10.1002/bjs.6238",
+      "article-title": "A systematic review of topical negative pressure therapy for acute and chronic wounds",
+      "volume": "95",
+      "author": "Ubbink",
+      "year": "2008",
+      "journal-title": "British Journal of Surgery"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0287|cit287",
+      "doi-asserted-by": "crossref",
+      "first-page": "438",
+      "DOI": "10.1016/j.ejvs.2008.06.010",
+      "article-title": "Negative pressure wound therapy: a systematic review on effectiveness and safety",
+      "volume": "36",
+      "author": "Vikatmaa",
+      "year": "2008",
+      "journal-title": "European Journal of Vascular and Endovascular Surgery"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0288|cit288",
+      "doi-asserted-by": "crossref",
+      "first-page": "381",
+      "DOI": "10.1016/j.jamcollsurg.2010.01.004",
+      "article-title": "Percent body fat and prediction of surgical site infection",
+      "volume": "210",
+      "author": "Waisbren",
+      "year": "2010",
+      "journal-title": "Journal of the American College of Surgeons"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0289|cit289",
+      "doi-asserted-by": "crossref",
+      "first-page": "167",
+      "DOI": "10.1016/j.ocl.2016.12.004",
+      "article-title": "The impact of negative pressure wound therapy on orthopaedic infection",
+      "volume": "48",
+      "author": "Webb",
+      "year": "2017",
+      "journal-title": "Orthopedic Clinics of North America"
+    },
+    {
+      "key": "10.1002/14651858.CD009261.pub5-BIB0290|cit290",
+      "unstructured": "World Health Organization (WHO) Chapter 4.19: Prophylactic negative pressure wound therapy. Global Guidelines for the Prevention of Surgical Site Infection. 2016 apps.who.int/iris/bitstream/10665/250680/1/9789241549882-eng.pdf?ua=1"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0291|cit291",
+      "doi-asserted-by": "crossref",
+      "first-page": "388",
+      "DOI": "10.1111/iwj.12612",
+      "article-title": "Closed incision negative pressure therapy: international multidisciplinary consensus recommendations",
+      "volume": "14",
+      "author": "Willy",
+      "year": "2017",
+      "journal-title": "International Wound Journal"
+    },
+    {
+      "issue": "8476",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0292|cit292",
+      "doi-asserted-by": "crossref",
+      "first-page": "311",
+      "DOI": "10.1016/S0140-6736(86)90838-X",
+      "article-title": "A scoring method (ASEPSIS) for postoperative wound infections for use in clinical trials of antibiotic prophylaxis",
+      "volume": "327",
+      "author": "Wilson",
+      "year": "1986",
+      "journal-title": "Lancet"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0293|cit293",
+      "doi-asserted-by": "crossref",
+      "first-page": "331",
+      "DOI": "10.1177/000313481608200418",
+      "article-title": "Obesity and the risk for surgical site infection in abdominal surgery",
+      "volume": "82",
+      "author": "Winfield",
+      "year": "2016",
+      "journal-title": "American Journal of Surgery"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0294|cit294",
+      "doi-asserted-by": "crossref",
+      "first-page": "1749",
+      "DOI": "10.3892/mmr.2014.1997",
+      "article-title": "Analysis of blood flow and local expression of angiogenesis-associated growth factors in infected wounds treated with negative pressure wound therapy",
+      "volume": "9",
+      "author": "Xia",
+      "year": "2014",
+      "journal-title": "Molecular Medicine Reports"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0295|cit295",
+      "doi-asserted-by": "crossref",
+      "first-page": "200",
+      "DOI": "10.1016/j.ajog.2017.09.017",
+      "article-title": "Prophylactic negative-pressure wound therapy after cesarean is associated with reduced risk of surgical site infection: a systematic review and meta-analysis",
+      "volume": "218",
+      "author": "Yu",
+      "year": "2018",
+      "journal-title": "American Journal of Obstetrics and Gynecology"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0296|cit296",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD009261.pub3",
+      "article-title": "Negative pressure wound therapy for skin grafts and surgical wounds healing by primary intention",
+      "author": "Webster",
+      "year": "2011",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "10",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0297|cit297",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD009261.pub3",
+      "article-title": "Negative pressure wound therapy for skin grafts and surgical wounds healing by primary intention",
+      "author": "Webster",
+      "year": "2014",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD009261.pub5-BIB0298|cit298",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD009261.pub4",
+      "article-title": "Negative pressure wound therapy for surgical wounds healing by primary closure",
+      "author": "Webster",
+      "year": "2019",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    }
+  ],
+  "updated-by": [
+    {
+      "DOI": "10.1002/14651858.cd009261.pub6",
+      "type": "new_version",
+      "label": "New version",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2020,
+            6,
+            15
+          ]
+        ],
+        "date-time": "2020-06-15T00:00:00Z",
+        "timestamp": 1592179200000
+      }
+    }
+  ],
+  "container-title": [
+    "Cochrane Database of Systematic Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        8,
+        5
+      ]
+    ],
+    "date-time": "2024-08-05T01:31:47Z",
+    "timestamp": 1722821507000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://doi.wiley.com/10.1002/14651858.CD009261.pub5"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "name": "Cochrane Wounds Group",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "editor",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2020,
+        5,
+        1
+      ]
+    ]
+  },
+  "references-count": 298,
+  "URL": "https://doi.org/10.1002/14651858.cd009261.pub5",
+  "relation": {
+    "new_version": [
+      {
+        "id-type": "doi",
+        "id": "10.1002/14651858.CD009261.pub6",
+        "asserted-by": "object"
+      }
+    ]
+  },
+  "ISSN": [
+    "1465-1858"
+  ],
+  "issn-type": [
+    {
+      "value": "1465-1858",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2020,
+        5,
+        1
+      ]
+    ]
+  }
+}

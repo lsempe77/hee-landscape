@@ -1,0 +1,644 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        3,
+        1
+      ]
+    ],
+    "date-time": "2026-03-01T12:00:12Z",
+    "timestamp": 1772366412923,
+    "version": "3.50.1"
+  },
+  "reference-count": 26,
+  "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+  "issue": "1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            2,
+            22
+          ]
+        ],
+        "date-time": "2024-02-22T00:00:00Z",
+        "timestamp": 1708560000000
+      },
+      "content-version": "unspecified",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "lww.com",
+      "ovid.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "abstract": "<jats:sec>\n            <jats:title>Objective:</jats:title>\n            <jats:p>This is a preplanned, health economic evaluation from the LIGRO trial. One hundred patients with colorectal liver metastases (CRLM) and standardized future liver remnant &lt;30% were randomized to associating liver partition and portal vein ligation for staged hepatectomy (ALPPS) or two-staged hepatectomy (TSH).</jats:p>\n          </jats:sec>\n          <jats:sec>\n            <jats:title>Summary Background Data:</jats:title>\n            <jats:p>TSH, is an established method in advanced CRLM. ALPPS has emerged providing improved resection rate and survival. The health care costs and health outcomes, combining health-related quality of life (HRQoL) and survival into quality-adjusted life years (QALYs), of ALPPS and TSH have not previously been evaluated and compared.</jats:p>\n          </jats:sec>\n          <jats:sec>\n            <jats:title>Methods:</jats:title>\n            <jats:p>Costs and QALYs were compared from treatment start up to 2 years. Costs are estimated from resource use, including all surgical interventions, length of stay after interventions, diagnostic procedures and chemotherapy, and applying Swedish unit costs. QALYs were estimated by combining survival and HRQoL data, the latter being assessed with EQ-5D 3L. Estimated costs and QALYs for each treatment strategy were combined into an incremental cost-effectiveness ratio (ICER). Nonparametric bootstrapping was used to assess the joint distribution of incremental costs and QALYs.</jats:p>\n          </jats:sec>\n          <jats:sec>\n            <jats:title>Results:</jats:title>\n            <jats:p>The mean cost difference between ALPPS and TSH was 12,662€, [95% confidence interval (CI): −10,728–36,051; <jats:italic toggle=\"yes\">P</jats:italic> = 0.283]. Corresponding mean difference in life years and QALYs was 0.1296 (95% CI: −0.12–0.38; <jats:italic toggle=\"yes\">P</jats:italic> = 0.314) and 0.1285 (95% CI: −0.11–0.36; <jats:italic toggle=\"yes\">P</jats:italic> = 0.28), respectively. The ICER was 93,186 and 92,414 for QALYs and life years as outcomes, respectively.</jats:p>\n          </jats:sec>\n          <jats:sec>\n            <jats:title>Conclusions:</jats:title>\n            <jats:p>Based on the 2-year data, the cost-effectiveness of ALPPS is uncertain. Further research, exploring cost and health outcomes beyond 2 years is needed.</jats:p>\n          </jats:sec>",
+  "DOI": "10.1097/as9.0000000000000367",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        2,
+        22
+      ]
+    ],
+    "date-time": "2024-02-22T15:00:49Z",
+    "timestamp": 1708614049000
+  },
+  "page": "e367",
+  "update-policy": "https://doi.org/10.1097/lww.0000000000001000",
+  "source": "Crossref",
+  "is-referenced-by-count": 2,
+  "title": [
+    "Health Economic Evaluation of Patients With Colorectal Liver Metastases Randomized to ALPPS or TSH: Analysis From the LIGRO Trial"
+  ],
+  "prefix": "10.1097",
+  "volume": "5",
+  "author": [
+    {
+      "given": "Kristina",
+      "family": "Hasselgren",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "From the Division of surgery, Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Martin",
+      "family": "Henriksson",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Centre for Medical Technology Assessment, Department of Medical and Health Sciences, Linköping University, Linköping, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Bård I.",
+      "family": "Røsok",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Hepato-Pancreato-Biliary Surgery, Oslo University Hospital, Oslo, Norway"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Peter N.",
+      "family": "Larsen",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Surgical Gastroenterology and Transplantation, Rigshospitalet, University of Copenhagen, Copenhagen, Denmark"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Ernesto",
+      "family": "Sparrelid",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Clinical Science, Intervention and Technology, Division of Surgery, Karolinska Institutet, Karolinska University Hospital, Stockholm, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Gert",
+      "family": "Lindell",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Surgery, Skane University Hospital, Lund, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Nicolai A.",
+      "family": "Schultz",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Surgical Gastroenterology and Transplantation, Rigshospitalet, University of Copenhagen, Copenhagen, Denmark"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Bjorn A.",
+      "family": "Bjørnbeth",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Hepato-Pancreato-Biliary Surgery, Oslo University Hospital, Oslo, Norway"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Bengt",
+      "family": "Isaksson",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Surgery, Akademiska University Hospital, Uppsala, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Magnus",
+      "family": "Rizell",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Transplantation and Liver Surgery, Sahlgrenska Academy, University of Gothenburg, Gothenburg, Sweden."
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Anna Lindhoff",
+      "family": "Larsson",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "From the Division of surgery, Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Per",
+      "family": "Sandström",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "From the Division of surgery, Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Bergthor",
+      "family": "Björnsson",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "From the Division of surgery, Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "276",
+  "published-online": {
+    "date-parts": [
+      [
+        2024,
+        2,
+        22
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "R1-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "1941",
+      "DOI": "10.1002/ijc.31937",
+      "article-title": "Estimating the global cancer incidence and mortality in 2018: GLOBOCAN sources and methods.",
+      "volume": "144",
+      "author": "Ferlay",
+      "year": "2019",
+      "journal-title": "Int J Cancer"
+    },
+    {
+      "key": "R2-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "1271",
+      "DOI": "10.1245/s10434-006-9045-5",
+      "article-title": "Improving resectability of hepatic colorectal metastases: expert consensus statement.",
+      "volume": "13",
+      "author": "Abdalla",
+      "year": "2006",
+      "journal-title": "Ann Surg Oncol"
+    },
+    {
+      "key": "R3-20250110",
+      "first-page": "763245",
+      "article-title": "Ten-year survival after liver resection for colorectal metastases: systematic review and meta-analysis.",
+      "volume": "2011",
+      "author": "Abbas",
+      "year": "2011",
+      "journal-title": "ISRN Oncol"
+    },
+    {
+      "key": "R4-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "1238",
+      "DOI": "10.1016/j.surg.2018.01.004",
+      "article-title": "Actual 10-year survival after hepatic resection of colorectal liver metastases: what factors preclude cure?.",
+      "volume": "163",
+      "author": "Creasy",
+      "year": "2018",
+      "journal-title": "Surgery"
+    },
+    {
+      "key": "R5-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "644",
+      "DOI": "10.1097/01.sla.0000141198.92114.f6",
+      "article-title": "Rescue surgery for unresectable colorectal liver metastases downstaged by chemotherapy: a model to predict long-term survival.",
+      "volume": "240",
+      "author": "Adam",
+      "year": "2004",
+      "journal-title": "Ann Surg"
+    },
+    {
+      "key": "R6-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "933",
+      "DOI": "10.1093/annonc/mdh217",
+      "article-title": "Neoadjuvant treatment of unresectable liver disease with irinotecan and 5-fluorouracil plus folinic acid in colorectal cancer patients.",
+      "volume": "15",
+      "author": "Pozzo",
+      "year": "2004",
+      "journal-title": "Ann Oncol"
+    },
+    {
+      "key": "R7-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "777",
+      "DOI": "10.1097/00000658-200012000-00006",
+      "article-title": "Two-stage hepatectomy: a planned strategy to treat irresectable liver tumors.",
+      "volume": "232",
+      "author": "Adam",
+      "year": "2000",
+      "journal-title": "Ann Surg"
+    },
+    {
+      "key": "R8-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "396",
+      "DOI": "10.1016/j.hpb.2017.01.008",
+      "article-title": "Feasibility, safety and efficacy of two-stage hepatectomy for bilobar liver metastases of colorectal cancer: a LiverMetSurvey analysis.",
+      "volume": "19",
+      "author": "Regimbeau",
+      "year": "2017",
+      "journal-title": "HPB (Oxford)"
+    },
+    {
+      "key": "R9-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "833",
+      "DOI": "10.1097/SLA.0000000000002511",
+      "article-title": "ALPPS improves resectability compared with conventional two-stage hepatectomy in patients with advanced colorectal liver metastasis: results from a scandinavian multicenter randomized controlled trial (LIGRO Trial).",
+      "volume": "267",
+      "author": "Sandstrom",
+      "year": "2018",
+      "journal-title": "Ann Surg"
+    },
+    {
+      "key": "R10-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "442",
+      "DOI": "10.1097/SLA.0000000000003701",
+      "article-title": "ALPPS improves survival compared with TSH in patients affected of CRLM: survival analysis from the randomized controlled trial LIGRO.",
+      "volume": "273",
+      "author": "Hasselgren",
+      "year": "2019",
+      "journal-title": "Ann Surg"
+    },
+    {
+      "key": "R11-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1016/j.ejim.2016.07.030",
+      "article-title": "The complex interface between economy and healthcare: an introductory overview for clinicians.",
+      "volume": "36",
+      "author": "Ottolini",
+      "year": "2016",
+      "journal-title": "Eur J Intern Med"
+    },
+    {
+      "key": "R12-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "199",
+      "DOI": "10.1016/0168-8510(90)90421-9",
+      "article-title": "EuroQol--a new facility for the measurement of health-related quality of life.",
+      "volume": "16",
+      "year": "1990",
+      "journal-title": "Health Policy"
+    },
+    {
+      "key": "R14-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "1007",
+      "DOI": "10.1002/bjs.5387",
+      "article-title": "Quality of life after surgical treatment of colorectal liver metastases.",
+      "volume": "93",
+      "author": "Langenhoff",
+      "year": "2006",
+      "journal-title": "Br J Surg"
+    },
+    {
+      "key": "R15-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "691",
+      "DOI": "10.1016/j.surg.2017.09.044",
+      "article-title": "Intermediate-term survival and quality of life outcomes in patients with advanced colorectal liver metastases undergoing associating liver partition and portal vein ligation for staged hepatectomy.",
+      "volume": "163",
+      "author": "Wanis",
+      "year": "2018",
+      "journal-title": "Surgery"
+    },
+    {
+      "key": "R16-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "388",
+      "DOI": "10.1002/bjs.9761",
+      "article-title": "Cost-utility analysis of operative versus non-operative treatment for colorectal liver metastases.",
+      "volume": "102",
+      "author": "Roberts",
+      "year": "2015",
+      "journal-title": "Br J Surg"
+    },
+    {
+      "key": "R17-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "544",
+      "DOI": "10.1097/01.SLA.0000059989.55280.33",
+      "article-title": "Cost-effectiveness of hepatic metastasectomy in patients with metastatic colorectal carcinoma: a state-transition monte carlo decision analysis.",
+      "volume": "237",
+      "author": "Gazelle",
+      "year": "2003",
+      "journal-title": "Ann Surg"
+    },
+    {
+      "key": "R18-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "1098",
+      "DOI": "10.1056/NEJM198710223171717",
+      "article-title": "Simplified calculation of body-surface area.",
+      "volume": "317",
+      "author": "Mosteller",
+      "year": "1987",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "R19-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "459",
+      "DOI": "10.1016/0167-6296(93)90005-Y",
+      "article-title": "On the decision rules of cost-effectiveness analysis.",
+      "volume": "12",
+      "author": "Johannesson",
+      "year": "1993",
+      "journal-title": "J Health Econ"
+    },
+    {
+      "key": "R20-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "205",
+      "DOI": "10.1097/01.sla.0000133083.54934.ae",
+      "article-title": "Classification of surgical complications: a new proposal with evaluation in a cohort of 6336 patients and results of a survey.",
+      "volume": "240",
+      "author": "Dindo",
+      "year": "2004",
+      "journal-title": "Ann Surg"
+    },
+    {
+      "key": "R21-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "53",
+      "DOI": "10.1016/0168-8510(96)00822-6",
+      "article-title": "EuroQol: the current state of play.",
+      "volume": "37",
+      "author": "Brooks",
+      "year": "1996",
+      "journal-title": "Health Policy"
+    },
+    {
+      "key": "R22-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "1095",
+      "DOI": "10.1097/00005650-199711000-00002",
+      "article-title": "Modeling valuations for EuroQol health states.",
+      "volume": "35",
+      "author": "Dolan",
+      "year": "1997",
+      "journal-title": "Med Care"
+    },
+    {
+      "key": "R23-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "3219",
+      "DOI": "10.1002/1097-0258(20001215)19:23<3219::AID-SIM623>3.0.CO;2-P",
+      "article-title": "Analysis of cost data in randomized trials: an application of the non-parametric bootstrap.",
+      "volume": "19",
+      "author": "Barber",
+      "year": "2000",
+      "journal-title": "Stat Med"
+    },
+    {
+      "key": "R24-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "909",
+      "DOI": "10.1016/j.surg.2016.10.032",
+      "article-title": "Survival after associating liver partition and portal vein ligation for staged hepatectomy (ALPPS) for advanced colorectal liver metastases: a case-matched comparison with palliative systemic therapy.",
+      "volume": "161",
+      "author": "Olthof",
+      "year": "2017",
+      "journal-title": "Surgery"
+    },
+    {
+      "key": "R25-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "763",
+      "DOI": "10.1097/00000658-200012000-00005",
+      "article-title": "Hepatic resection for colorectal liver metastases: a cost-effectiveness analysis.",
+      "volume": "232",
+      "author": "Beard",
+      "year": "2000",
+      "journal-title": "Ann Surg"
+    },
+    {
+      "key": "R26-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "323",
+      "DOI": "10.1177/0269216316670287",
+      "article-title": "What cost components are relevant for economic evaluations of palliative care, and what approaches are used to measure these costs? a systematic review.",
+      "volume": "31",
+      "author": "Gardiner",
+      "year": "2017",
+      "journal-title": "Palliat Med"
+    },
+    {
+      "key": "R27-20250110",
+      "doi-asserted-by": "crossref",
+      "first-page": "565",
+      "DOI": "10.1002/bjs.7365",
+      "article-title": "Long-term global quality of life in patients treated for colorectal liver metastases.",
+      "volume": "98",
+      "author": "Wiering",
+      "year": "2011",
+      "journal-title": "Br J Surg"
+    }
+  ],
+  "container-title": [
+    "Annals of Surgery Open"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://journals.lww.com/10.1097/AS9.0000000000000367",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        1,
+        10
+      ]
+    ],
+    "date-time": "2025-01-10T18:16:33Z",
+    "timestamp": 1736532993000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://journals.lww.com/10.1097/AS9.0000000000000367"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        2,
+        22
+      ]
+    ]
+  },
+  "references-count": 26,
+  "journal-issue": {
+    "issue": "1",
+    "published-online": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1097/as9.0000000000000367",
+  "relation": {},
+  "ISSN": [
+    "2691-3593"
+  ],
+  "issn-type": [
+    {
+      "value": "2691-3593",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        2,
+        22
+      ]
+    ]
+  }
+}

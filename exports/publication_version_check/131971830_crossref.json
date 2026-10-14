@@ -1,0 +1,883 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        14
+      ]
+    ],
+    "date-time": "2026-10-14T11:10:43Z",
+    "timestamp": 1791976243080,
+    "version": "4.4.0"
+  },
+  "update-to": [
+    {
+      "DOI": "10.1002/14651858.cd007491",
+      "type": "new_version",
+      "label": "New version",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2016,
+            9,
+            1
+          ]
+        ],
+        "date-time": "2016-09-01T00:00:00Z",
+        "timestamp": 1472688000000
+      }
+    }
+  ],
+  "reference-count": 62,
+  "publisher": "Wiley",
+  "issue": "9",
+  "content-domain": {
+    "domain": [
+      "wiley.com",
+      "cochranelibrary.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "DOI": "10.1002/14651858.cd007491.pub2",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2016,
+        9,
+        2
+      ]
+    ],
+    "date-time": "2016-09-02T09:30:24Z",
+    "timestamp": 1472808624000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 147,
+  "title": [
+    "Admission avoidance hospital at home"
+  ],
+  "prefix": "10.1002",
+  "volume": "2016",
+  "author": [
+    {
+      "given": "Sasha",
+      "family": "Shepperd",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "University of Oxford; Nuffield Department of Population Health; Rosemary Rue Building, Old Road Campus Headington Oxford Oxfordshire UK OX3 7LF"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Steve",
+      "family": "Iliffe",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University College London; Research Department of Primary Care and Population Health; London UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Helen A",
+      "family": "Doll",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "ICON Commercialisation and Outcomes; Clinical Outcomes Assessments; Dublin Ireland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Mike J",
+      "family": "Clarke",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Queen's University Belfast; Centre for Public Health; Institute of Clinical Sciences, Block B, Royal Victoria Hospital Grosvenor Road Belfast Northern Ireland UK BT12 6BJ"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Lalit",
+      "family": "Kalra",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Guy's, King's & St Thomas' School of Medicine; Department of Medicine; King's Denmark Hill Campus Bessemer Road London UK SE5 9PJ"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Andrew D",
+      "family": "Wilson",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Leicester; Department of Health Sciences; Leicester Leicestershire UK LE1 7RH"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Daniela C.",
+      "family": "Gonçalves-Bradley",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Oxford; Nuffield Department of Population Health; Rosemary Rue Building, Old Road Campus Headington Oxford Oxfordshire UK OX3 7LF"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2016,
+        9,
+        1
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "S1",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0001|cit1",
+      "first-page": "S29",
+      "article-title": "Can be the home care of the heart failure patients a better economic alternative?",
+      "volume": "10",
+      "author": "Andrei",
+      "year": "2011",
+      "journal-title": "European Journal of Heart Failure Supplements (Abstract)."
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0002|cit2",
+      "doi-asserted-by": "crossref",
+      "first-page": "305",
+      "DOI": "10.1111/j.1467-842X.2000.tb01573.x",
+      "article-title": "A randomised controlled trial of the costs of hospital as compared with hospital at home for acute medical patients",
+      "volume": "24",
+      "author": "Board",
+      "year": "2000",
+      "journal-title": "Australian and New Zealand Journal of Public Health"
+    },
+    {
+      "issue": "8",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0003|cit3",
+      "first-page": "1035",
+      "article-title": "Effect of hospital in the home treatment on physical and cognitive function: a randomized controlled trial",
+      "volume": "60",
+      "author": "Caplan",
+      "year": "2005",
+      "journal-title": "Journal of Gerontology"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0004|cit4",
+      "doi-asserted-by": "crossref",
+      "first-page": "156",
+      "DOI": "10.5694/j.1326-5377.1999.tb127711.x",
+      "article-title": "Hospital in the home: a randomised controlled trial",
+      "volume": "170",
+      "author": "Caplan",
+      "year": "1999",
+      "journal-title": "The Medical Journal of Australia"
+    },
+    {
+      "issue": "7483",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0005|cit5",
+      "doi-asserted-by": "crossref",
+      "first-page": "129",
+      "DOI": "10.1136/bmj.38309.447975.EB",
+      "article-title": "Randomised controlled trial of intravenous antibiotic treatment for cellulitis at home compared with hospital",
+      "volume": "330",
+      "author": "Corwin",
+      "year": "2005",
+      "journal-title": "BMJ"
+    },
+    {
+      "issue": "7271",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0006|cit6",
+      "doi-asserted-by": "crossref",
+      "first-page": "1265",
+      "DOI": "10.1136/bmj.321.7271.1265",
+      "article-title": "Hospital at home versus hospital care in patients with exacerbations of chronic obstructive pulmonary disease: prospective randomised controlled trial",
+      "volume": "321",
+      "author": "Davies",
+      "year": "2000",
+      "journal-title": "BMJ"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0007|cit7",
+      "doi-asserted-by": "crossref",
+      "first-page": "158",
+      "DOI": "10.1258/1355819054338988",
+      "article-title": "The effectiveness, acceptability and costs of a hospital-at-home service compared with acute hospital care: a randomised controlled trial",
+      "volume": "10",
+      "author": "Harris",
+      "year": "2005",
+      "journal-title": "Journal of Health Services and Research Policy"
+    },
+    {
+      "issue": "9233",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0008|cit8",
+      "doi-asserted-by": "crossref",
+      "first-page": "894",
+      "DOI": "10.1016/S0140-6736(00)02679-9",
+      "article-title": "Alternative strategies for stroke care: a prospective randomised controlled trial",
+      "volume": "356",
+      "author": "Kalra",
+      "year": "2000",
+      "journal-title": "The Lancet"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0009|cit9",
+      "doi-asserted-by": "crossref",
+      "first-page": "196",
+      "DOI": "10.1161/01.STR.0000105390.20430.9F",
+      "article-title": "Alternative strategies for stroke care: cost effectiveness and cost-utility analyses from a prospective randomized controlled trial",
+      "volume": "35",
+      "author": "Patel",
+      "year": "2004",
+      "journal-title": "Stroke"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0010|cit10",
+      "doi-asserted-by": "crossref",
+      "first-page": "1208",
+      "DOI": "10.1093/eurjhf/hfp143",
+      "article-title": "Hospital at home care model as an effective alternative in the management of decompensated chronic heart failure",
+      "volume": "11",
+      "author": "Mendoza",
+      "year": "2009",
+      "journal-title": "European Journal of Heart Failure"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0011|cit11",
+      "doi-asserted-by": "crossref",
+      "first-page": "181",
+      "DOI": "10.1071/AH010181",
+      "article-title": "Cost comparison of hospital- and home-based treatment models for acute chronic obstructive pulmonary disease",
+      "volume": "24",
+      "author": "Nicholson",
+      "year": "2001",
+      "journal-title": "Australian Health Review"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0012|cit12",
+      "doi-asserted-by": "crossref",
+      "first-page": "278",
+      "DOI": "10.1111/j.1532-5415.2004.52069.x",
+      "article-title": "Home hospitalization service for acute uncomplicated first ischemic stroke in elderly patients: a randomized trial",
+      "volume": "52",
+      "author": "Ricauda",
+      "year": "2004",
+      "journal-title": "Journal of the American Geriatrics Society"
+    },
+    {
+      "issue": "Suppl 6",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0013|cit13",
+      "doi-asserted-by": "crossref",
+      "first-page": "17",
+      "DOI": "10.1016/S0167-4943(98)80003-4",
+      "article-title": "Feasibility of an acute stroke home care service for elderly patients",
+      "volume": "26",
+      "author": "Ricauda",
+      "year": "1998",
+      "journal-title": "Archives of Gerontology and Geriatrics"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0014|cit14",
+      "doi-asserted-by": "crossref",
+      "first-page": "493",
+      "DOI": "10.1111/j.1532-5415.2007.01562.x",
+      "article-title": "Substitutive hospital at home versus inpatient care for elderly patients with exacerbations of chronic obstructive pulmonary disease: a prospective randomised controlled trial",
+      "volume": "56",
+      "author": "Ricauda",
+      "year": "2008",
+      "journal-title": "Journal of the American Geriatrics Society"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0015|cit15",
+      "doi-asserted-by": "crossref",
+      "first-page": "235",
+      "DOI": "10.5694/j.1326-5377.2005.tb07026.x",
+      "article-title": "Home management of mild to moderately severe community-acquired pneumonia: a randomised controlled trial",
+      "volume": "183",
+      "author": "Richards",
+      "year": "2005",
+      "journal-title": "The Medical Journal of Australia"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0016|cit16",
+      "doi-asserted-by": "crossref",
+      "first-page": "3984",
+      "DOI": "10.1200/JCO.2011.35.1247",
+      "article-title": "Costs of home versus inpatient treatment for fever and neutropenia: analysis of a multicenter randomized trial",
+      "volume": "29",
+      "author": "Hendricks",
+      "year": "2011",
+      "journal-title": "Journal of Clinical Oncology"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0017|cit17",
+      "doi-asserted-by": "crossref",
+      "first-page": "3977",
+      "DOI": "10.1200/JCO.2011.35.0884",
+      "article-title": "Safety of early discharge for low risk patients with febrile neutropenia: A multicentre randomised controlled trial",
+      "volume": "29",
+      "author": "Talcott",
+      "year": "2011",
+      "journal-title": "Journal of Clinical Oncology"
+    },
+    {
+      "issue": "9",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0018|cit18",
+      "doi-asserted-by": "crossref",
+      "first-page": "431",
+      "DOI": "10.1016/j.archger.2004.04.055",
+      "article-title": "A randomized controlled trial of a home hospital intervention for frail elderly demented patients: behavioral disturbances and caregiver's stress",
+      "volume": "38",
+      "author": "Tibaldi",
+      "year": "2004",
+      "journal-title": "Archives of Gerontology and Geriatrics - Supplement"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0019|cit19",
+      "doi-asserted-by": "crossref",
+      "first-page": "1569",
+      "DOI": "10.1001/archinternmed.2009.267",
+      "article-title": "Hospital at home for elderly patients with acute decompensation of chronic heart failure: a prospective randomized controlled trial",
+      "volume": "169",
+      "author": "Tibaldi",
+      "year": "2009",
+      "journal-title": "Archives of Internal Medicine"
+    },
+    {
+      "issue": "58",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0020|cit20",
+      "doi-asserted-by": "crossref",
+      "first-page": "2061",
+      "DOI": "10.4187/respcare.02501",
+      "article-title": "“Hospital at home” for neuromuscular disease patients with respiratory tract infection: a pilot study",
+      "volume": "12",
+      "author": "Vianello",
+      "year": "2013",
+      "journal-title": "Respiratory Care"
+    },
+    {
+      "issue": "7224",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0021|cit21",
+      "doi-asserted-by": "crossref",
+      "first-page": "1547",
+      "DOI": "10.1136/bmj.319.7224.1547",
+      "article-title": "Economic evaluation of hospital at home versus hospital care: cost minimisation analysis of data from randomised controlled trial",
+      "volume": "319",
+      "author": "Jones",
+      "year": "1999",
+      "journal-title": "BMJ"
+    },
+    {
+      "issue": "7224",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0022|cit22",
+      "doi-asserted-by": "crossref",
+      "first-page": "1542",
+      "DOI": "10.1136/bmj.319.7224.1542",
+      "article-title": "Randomised controlled trial of effectiveness of Leicester hospital at home scheme compared with hospital care",
+      "volume": "319",
+      "author": "Wilson",
+      "year": "1999",
+      "journal-title": "BMJ"
+    },
+    {
+      "issue": "474",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0023|cit23",
+      "first-page": "9",
+      "article-title": "Patient and carer satisfaction with 'hospital at home': quantitative and qualitative results from a randomised controlled trial",
+      "volume": "52",
+      "author": "Wilson",
+      "year": "2002",
+      "journal-title": "British Journal of General Practice"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0024|cit24",
+      "doi-asserted-by": "crossref",
+      "first-page": "557",
+      "DOI": "10.2190/CY03-EV15-K38Y-X4AA",
+      "article-title": "Home or hospital? An evaluation of the costs, preferences and outcomes of domiciliary chemotherapy",
+      "volume": "30",
+      "author": "King",
+      "year": "2000",
+      "journal-title": "International Journal of Health Services"
+    },
+    {
+      "issue": "8424",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0025|cit25",
+      "doi-asserted-by": "crossref",
+      "first-page": "323",
+      "DOI": "10.1016/S0140-6736(85)91091-8",
+      "article-title": "Controlled trial of a home-care service for acute stroke patients",
+      "volume": "1",
+      "author": "Wade",
+      "year": "1985",
+      "journal-title": "The Lancet"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0026|cit26",
+      "doi-asserted-by": "crossref",
+      "first-page": "563",
+      "DOI": "10.1191/0269215500cr362oa",
+      "article-title": "The effectiveness of community-based rehabilitation for stroke patients who remain at home: a pilot randomized trial",
+      "volume": "14",
+      "author": "Wolfe",
+      "year": "2000",
+      "journal-title": "Clinical Rehabilitation"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0027|cit27",
+      "unstructured": "ISRCTN29082260 A study comparing home treatment of COPD exacerbations to usual hospital care http://www.isrctn.com/ISRCTN29082260"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0028|cit28",
+      "unstructured": "ISRCTN60477865 A multi-centre randomised controlled trial to compare the effectiveness of admission avoidance hospital at home with comprehensive geriatric assessment vs. inpatient comprehensive geriatric assessment on the number of frail older people ‘living at home’ http://www.isrctn.com/ISRCTN60477865"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0029|cit29",
+      "doi-asserted-by": "crossref",
+      "first-page": "305-11[CRSREF:",
+      "DOI": "10.1111/j.1467-842X.2000.tb01573.x",
+      "article-title": "A randomised controlled trial of the costs of hospital as compared with hospital at home for acute medical patients",
+      "volume": "24.",
+      "author": "Board",
+      "year": "2000",
+      "journal-title": "Australian and New Zealand Journal of Public Health"
+    },
+    {
+      "issue": "2",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0030|cit30",
+      "doi-asserted-by": "crossref",
+      "first-page": "145-51; discuss",
+      "DOI": "10.1136/qshc.2002.003822",
+      "article-title": "Incidence of adverse events and negligence in hospitalized patients: results of the Harvard Medical Practice Study I. 1991",
+      "volume": "13",
+      "author": "Brennan",
+      "year": "2004",
+      "journal-title": "Quality and Safety in Health Care"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0031|cit31",
+      "doi-asserted-by": "crossref",
+      "first-page": "101",
+      "DOI": "10.2307/3001666",
+      "article-title": "The combination of estimates from different experiments",
+      "volume": "10",
+      "author": "Cochran",
+      "year": "1954",
+      "journal-title": "Biometrics"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0032|cit32",
+      "volume-title": "Continuity of Care for Older Hospital Patients: A Call for Action",
+      "author": "Cornwall",
+      "year": "2012"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0033|cit33",
+      "doi-asserted-by": "crossref",
+      "first-page": "51",
+      "DOI": "10.1046/j.1532-5415.2003.51152.x",
+      "article-title": "Loss of independence in activities of daily living in older adults hospitalised with medical illness: increased vulnerability with age",
+      "volume": "51",
+      "author": "Covinsky",
+      "year": "2003",
+      "journal-title": "Journal of the American Geriatrics Society"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0034|cit34",
+      "unstructured": "Deeks J Bradburn M Bilker W Localio R Berlin J Much ado about nothing: statistical methods for meta-analysis with rare events Proceedings of the Sixth Cochrane Colloquium; 1998 22-26 Oct; Baltimore, USA. Oxford 1998"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0035|cit35",
+      "doi-asserted-by": "crossref",
+      "first-page": "285",
+      "DOI": "10.1002/9780470693926.ch15",
+      "article-title": "Statistical methods for examining heterogeneity and combining results from several studies in meta-analysis",
+      "volume-title": "Systematic Reviews in Health Care. Meta-Analysis in Context",
+      "author": "Deeks",
+      "year": "2001"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0036|cit36",
+      "unstructured": "Effective Practice Organisation of Care (EPOC) Data collection form. EPOC Resources for review authors Oslo: Norwegian Knowledge Centre for the Health Services. Available at: http://epoc.cochrane.org/epoc-specific-resources-review-authors (accessed September 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0037|cit37",
+      "unstructured": "Effective Practice Organisation of Care (EPOC) Suggested risk of bias criteria for EPOC reviews. EPOC Resources for review authors. Oslo: Norwegian Knowledge Centre for the Health Services Available at: http://epoc.cochrane.org/epoc-specific-resources-review-authors (accessed September 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0038|cit38",
+      "unstructured": "Effective Practice Organisation of Care (EPOC) EPOC worksheets for preparing a Summary of Findings (SoF) table using GRADE. EPOC Resources for review authors Oslo: Norwegian Knowledge Centre for the Health Services. Available at: http://epoc.cochrane.org/epoc-specific-resources-review-authors (accessed September 2015)"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0039|cit39",
+      "doi-asserted-by": "crossref",
+      "first-page": "995",
+      "DOI": "10.1136/bmj.39490.551019.BE",
+      "article-title": "What is ‘quality of evidence’ and why is it important to clinicians?",
+      "volume": "336",
+      "author": "Guyatt",
+      "year": "2008",
+      "journal-title": "BMJ"
+    },
+    {
+      "issue": "7414",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0040|cit40",
+      "doi-asserted-by": "crossref",
+      "first-page": "557",
+      "DOI": "10.1136/bmj.327.7414.557",
+      "article-title": "Measuring inconsistency in meta-analyses",
+      "volume": "327",
+      "author": "Higgins",
+      "year": "2003",
+      "journal-title": "BMJ"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0041|cit41",
+      "unstructured": "Higgins JPT Green S (editors) Cochrane Handbook for Systematic Reviews of Interventions Version 5.1.0 [updated March 2011]. The Cochrane Collaboration, 2011 Available from www.cochrane-handbook.org"
+    },
+    {
+      "issue": "5",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0042|cit42",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD003573.pub2",
+      "article-title": "Hospital at home for acute exacerbations of chronic obstructive pulmonary disease",
+      "author": "Jeppesen",
+      "year": "2012",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0043|cit43",
+      "unstructured": "Standards for the reporting of new Cochrane Intervention Reviews http://editorial-unit.cochrane.org/sites/editorial-unit.cochrane.org/files/uploads/MECIR%20Reporting%20standards%201.1_17122012_2.pdf"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0044|cit44",
+      "unstructured": "Monitor: Making the health sector work for patients Moving healthcare closer to home: Literature review of clinical impacts https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/459268/Moving_healthcare_closer_to_home_clinical_review.pdf"
+    },
+    {
+      "issue": "8503",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0045|cit45",
+      "doi-asserted-by": "crossref",
+      "first-page": "383",
+      "DOI": "10.1016/S0140-6736(86)90065-6",
+      "article-title": "Home parenteral nutrition in the United Kingdom and Ireland",
+      "volume": "2",
+      "author": "Mughal",
+      "year": "1986",
+      "journal-title": "The Lancet"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0046|cit46",
+      "unstructured": "Naik G Portland hospital gives acutely ill a homecare option Wall Street Journal (http://www.wsj.com/articles/SB114540442717929396)"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0047|cit47",
+      "volume-title": "Caring for People With Chronic Conditions: A Health System Perspective",
+      "author": "Nolte",
+      "year": "2008"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0048|cit48",
+      "doi-asserted-by": "crossref",
+      "first-page": "196",
+      "DOI": "10.1161/01.STR.0000105390.20430.9F",
+      "article-title": "Alternative strategies for stroke care: cost effectiveness and cost utility analysis from a prospective randomised controlled trial",
+      "volume": "35",
+      "author": "Patel",
+      "year": "2004",
+      "journal-title": "Stroke"
+    },
+    {
+      "issue": "6",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0049|cit49",
+      "doi-asserted-by": "publisher",
+      "first-page": "e0129282",
+      "DOI": "10.1371/journal.pone.0129282",
+      "article-title": "Efficacy of hospital at home in patients with heart failure: A systematic review and meta-analysis",
+      "volume": "10",
+      "author": "Qaddoura",
+      "year": "2015",
+      "journal-title": "PLoS One"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0050|cit50",
+      "unstructured": "The Nordic Cochrane Centre, The Cochrane Collaboration Review Manager (RevMan) [Computer program]. Version 5.3 2014"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0051|cit51",
+      "unstructured": "Royal College of Physicians Hospitals on the edge? The time for action Royal College of Physicians 2012"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0052|cit52",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD000356.pub3",
+      "article-title": "Hospital at home early discharge",
+      "author": "Shepperd",
+      "year": "2009",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "7",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0053|cit53",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD009231",
+      "article-title": "Hospital at home: home-based end of life care",
+      "author": "Shepperd",
+      "year": "2011",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0054|cit54",
+      "unstructured": "SPSS Inc SPSS for Windows. Version 14.0 2006"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0055|cit55",
+      "unstructured": "StataCorp Stata Statistical Software: Release 9 2005"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0056|cit56",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD000197.pub2",
+      "article-title": "Organised inpatient (stroke unit) care after stroke",
+      "author": "Stroke Unit Trialists' Collaboration",
+      "year": "2007",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "8878",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0057|cit57",
+      "doi-asserted-by": "crossref",
+      "first-page": "1032",
+      "DOI": "10.1016/0140-6736(93)92884-V",
+      "article-title": "Comprehensive geriatric assessment: a meta-analysis of controlled trials",
+      "volume": "342",
+      "author": "Stuck",
+      "year": "1993",
+      "journal-title": "The Lancet"
+    },
+    {
+      "key": "10.1002/14651858.CD007491.pub2-BIB0058|cit58",
+      "first-page": "23",
+      "article-title": "Who cares? Geographic variation in unpaid caregiving in England and Wales: evidence from the 2001 census",
+      "volume": "120",
+      "author": "Young",
+      "year": "2005",
+      "journal-title": "Population Trends"
+    },
+    {
+      "issue": "7224",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0059|cit59",
+      "doi-asserted-by": "crossref",
+      "first-page": "1547",
+      "DOI": "10.1136/bmj.319.7224.1547",
+      "article-title": "Economic evaluation of hospital at home versus hospital care: cost minimisation analysis of data from randomised controlled trial",
+      "volume": "319",
+      "author": "Jones",
+      "year": "1999",
+      "journal-title": "BMJ"
+    },
+    {
+      "issue": "1",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0060|cit60",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD000356",
+      "article-title": "Effectiveness of hospital at home compared to in-patient hospital care",
+      "author": "Shepperd",
+      "year": "1998",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "3",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0061|cit61",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD000356.pub2",
+      "article-title": "Hospital at home versus in-patient hospital care",
+      "author": "Shepperd",
+      "year": "2005",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    },
+    {
+      "issue": "4",
+      "key": "10.1002/14651858.CD007491.pub2-BIB0062|cit62",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/14651858.CD007491",
+      "article-title": "Hospital at home admission avoidance",
+      "author": "Shepperd",
+      "year": "2008",
+      "journal-title": "Cochrane Database of Systematic Reviews"
+    }
+  ],
+  "updated-by": [
+    {
+      "DOI": "10.1002/14651858.cd007491.pub3",
+      "type": "new_version",
+      "label": "New version",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            5
+          ]
+        ],
+        "date-time": "2024-03-05T00:00:00Z",
+        "timestamp": 1709596800000
+      }
+    }
+  ],
+  "container-title": [
+    "Cochrane Database of Systematic Reviews"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://onlinelibrary.wiley.com/doi/full/10.1002/14651858.CD007491.pub2",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        7,
+        15
+      ]
+    ],
+    "date-time": "2023-07-15T14:17:56Z",
+    "timestamp": 1689430676000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://doi.wiley.com/10.1002/14651858.CD007491.pub2"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "name": "Cochrane Effective Practice and Organisation of Care Group",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "editor"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2016,
+        9,
+        1
+      ]
+    ]
+  },
+  "references-count": 62,
+  "journal-issue": {
+    "issue": "9",
+    "published-online": {
+      "date-parts": [
+        [
+          2016,
+          9
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1002/14651858.cd007491.pub2",
+  "relation": {},
+  "ISSN": [
+    "1465-1858"
+  ],
+  "issn-type": [
+    {
+      "value": "1465-1858",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2016,
+        9,
+        1
+      ]
+    ]
+  }
+}

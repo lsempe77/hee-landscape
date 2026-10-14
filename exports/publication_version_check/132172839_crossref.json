@@ -1,0 +1,164 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        12
+      ]
+    ],
+    "date-time": "2026-08-12T09:33:07Z",
+    "timestamp": 1786527187146,
+    "version": "build-2736575974"
+  },
+  "posted": {
+    "date-parts": [
+      [
+        2011
+      ]
+    ]
+  },
+  "group-title": "SSRN",
+  "reference-count": 0,
+  "publisher": "Elsevier BV",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "abstract": "<jats:p>This paper examines the effects of health-oriented food tax reforms on the distribution of tax payments, food demand and health outcomes. Unlike earlier work, we also take into account the uncertainty related to both demand estimation and health estimates and report the confidence intervals for the overall health effects instead of only point estimates. A sugar tax of 1 € / kg reduces the incidence of type 2 diabetes on average by 13% and it also leads to a reduction in coronary heart disease. The health effects appear to be most pronounced for low-income individuals, and the reforms may therefore reduce health inequality. This effect undermines the traditional regressivity argument against the heavy taxation of unhealthy food.</jats:p>",
+  "DOI": "10.2139/ssrn.1959273",
+  "type": "posted-content",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        11,
+        17
+      ]
+    ],
+    "date-time": "2021-11-17T06:38:03Z",
+    "timestamp": 1637131083000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 3,
+  "title": [
+    "The Welfare Effects of Health-Based Food Tax Policy"
+  ],
+  "prefix": "10.2139",
+  "author": [
+    {
+      "given": "Kaisa",
+      "family": "Kotakorpi",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Tommi",
+      "family": "Härkänen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Pirjo",
+      "family": "Pietinen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Heli",
+      "family": "Reinivuo",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ilpo",
+      "family": "Suoniemi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jukka",
+      "family": "Pirttila",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "container-title": [],
+  "original-title": [],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        12
+      ]
+    ],
+    "date-time": "2026-08-12T08:54:02Z",
+    "timestamp": 1786524842000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.ssrn.com/abstract=1959273"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2011
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.2139/ssrn.1959273",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2011
+      ]
+    ]
+  },
+  "subtype": "preprint"
+}

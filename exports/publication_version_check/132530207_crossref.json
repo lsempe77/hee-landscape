@@ -1,0 +1,860 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        2,
+        10
+      ]
+    ],
+    "date-time": "2026-02-10T16:35:14Z",
+    "timestamp": 1770741314464,
+    "version": "3.49.0"
+  },
+  "update-to": [
+    {
+      "DOI": "10.1053/j.gastro.2017.12.011",
+      "type": "withdrawal",
+      "label": "Withdrawal",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2017,
+            12,
+            27
+          ]
+        ],
+        "date-time": "2017-12-27T00:00:00Z",
+        "timestamp": 1514332800000
+      }
+    }
+  ],
+  "reference-count": 51,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2017,
+            12,
+            1
+          ]
+        ],
+        "date-time": "2017-12-01T00:00:00Z",
+        "timestamp": 1512086400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2017,
+            12,
+            1
+          ]
+        ],
+        "date-time": "2017-12-01T00:00:00Z",
+        "timestamp": 1512086400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "clinicalkey.com",
+      "clinicalkey.com.au",
+      "clinicalkey.es",
+      "clinicalkey.fr",
+      "clinicalkey.jp",
+      "gastrojournal.org",
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Gastroenterology"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2017,
+        12
+      ]
+    ]
+  },
+  "DOI": "10.1053/j.gastro.2017.12.011",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2017,
+        12,
+        27
+      ]
+    ],
+    "date-time": "2017-12-27T17:24:36Z",
+    "timestamp": 1514395476000
+  },
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 6,
+  "title": [
+    "WITHDRAWN: Cost Effectiveness of Screening Individuals With Cystic Fibrosis for Colorectal Cancer"
+  ],
+  "prefix": "10.1053",
+  "author": [
+    {
+      "given": "Andrea",
+      "family": "Gini",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Ann G.",
+      "family": "Zauber",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Dayna R.",
+      "family": "Cenin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Amir-Houshang",
+      "family": "Omidvari",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Sarah E.",
+      "family": "Hempstead",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Aliza K.",
+      "family": "Fink",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Albert B.",
+      "family": "Lowenfels",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Iris",
+      "family": "Lansdorp-Vogelaar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib1",
+      "doi-asserted-by": "crossref",
+      "first-page": "105",
+      "DOI": "10.1177/1753465810386051",
+      "article-title": "Changing epidemiology and clinical issues arising in an ageing cystic fibrosis population",
+      "volume": "5",
+      "author": "Parkins",
+      "year": "2011",
+      "journal-title": "Ther Adv Respir Dis"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib2",
+      "doi-asserted-by": "crossref",
+      "first-page": "450",
+      "DOI": "10.1016/j.jcf.2008.03.007",
+      "article-title": "The prevalence of cystic fibrosis in the European Union",
+      "volume": "7",
+      "author": "Farrell",
+      "year": "2008",
+      "journal-title": "J Cyst Fibros"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib3",
+      "doi-asserted-by": "crossref",
+      "first-page": "1173",
+      "DOI": "10.1513/AnnalsATS.201511-781OC",
+      "article-title": "The Cystic Fibrosis Foundation Patient Registry. Design and Methods of a National Observational Disease Registry",
+      "volume": "13",
+      "author": "Knapp",
+      "year": "2016",
+      "journal-title": "Ann Am Thorac Soc"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib4",
+      "unstructured": "Cystic Fibrosis Foundation Patient Registry 2015 Annual Data Report. Bethesda, MD: Cystic Fibrosis Foundation. https://www.cff.org/Our-Research/CF-Patient-Registry/2015-Patient-Registry-Annual-Data-Report.pdf. Published 2016. Accessed ▪▪▪."
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib5",
+      "doi-asserted-by": "crossref",
+      "first-page": "e85",
+      "DOI": "10.1097/MCG.0000000000000034",
+      "article-title": "Early colon screening of adult patients with cystic fibrosis reveals high incidence of adenomatous colon polyps",
+      "volume": "48",
+      "author": "Billings",
+      "year": "2014",
+      "journal-title": "J Clin Gastroenterol"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib6",
+      "doi-asserted-by": "crossref",
+      "first-page": "122",
+      "DOI": "10.1093/jnci/djs481",
+      "article-title": "Cancer risk in cystic fibrosis: a 20-year nationwide study from the United States",
+      "volume": "105",
+      "author": "Maisonneuve",
+      "year": "2013",
+      "journal-title": "J Natl Cancer Inst"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib7",
+      "doi-asserted-by": "crossref",
+      "first-page": "366",
+      "DOI": "10.1016/j.jcf.2011.05.003",
+      "article-title": "Colon cancer in lung transplant recipients with CF: increased risk and results of screening",
+      "volume": "10",
+      "author": "Meyer",
+      "year": "2011",
+      "journal-title": "J Cyst Fibros"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib8",
+      "doi-asserted-by": "crossref",
+      "first-page": "548",
+      "DOI": "10.1016/j.jcf.2016.01.002",
+      "article-title": "Colonoscopic screening shows increased early incidence and progression of adenomas in cystic fibrosis",
+      "volume": "15",
+      "author": "Niccum",
+      "year": "2016",
+      "journal-title": "J Cyst Fibros"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib9",
+      "doi-asserted-by": "crossref",
+      "first-page": "1624",
+      "DOI": "10.1016/S0140-6736(10)60551-X",
+      "article-title": "Once-only flexible sigmoidoscopy screening in prevention of colorectal cancer: a multicentre randomised controlled trial",
+      "volume": "375",
+      "author": "Atkin",
+      "year": "2010",
+      "journal-title": "Lancet"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib10",
+      "doi-asserted-by": "crossref",
+      "first-page": "1472",
+      "DOI": "10.1016/S0140-6736(96)03386-7",
+      "article-title": "Randomised controlled trial of faecal-occult-blood screening for colorectal cancer",
+      "volume": "348",
+      "author": "Hardcastle",
+      "year": "1996",
+      "journal-title": "Lancet"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib11",
+      "doi-asserted-by": "crossref",
+      "first-page": "29",
+      "DOI": "10.1136/gut.50.1.29",
+      "article-title": "A randomised study of screening for colorectal cancer using faecal occult blood testing: results after 13 years and seven biennial screening rounds",
+      "volume": "50",
+      "author": "Jorgensen",
+      "year": "2002",
+      "journal-title": "Gut"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib12",
+      "doi-asserted-by": "crossref",
+      "first-page": "2410",
+      "DOI": "10.1002/cncr.24256",
+      "article-title": "A novel hypothesis on the sensitivity of the fecal occult blood test: results of a joint analysis of 3 randomized controlled trials",
+      "volume": "115",
+      "author": "Lansdorp-Vogelaar",
+      "year": "2009",
+      "journal-title": "Cancer"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib13",
+      "doi-asserted-by": "crossref",
+      "first-page": "687",
+      "DOI": "10.1056/NEJMoa1100370",
+      "article-title": "Colonoscopic polypectomy and long-term prevention of colorectal-cancer deaths",
+      "volume": "366",
+      "author": "Zauber",
+      "year": "2012",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib14",
+      "doi-asserted-by": "crossref",
+      "first-page": "434",
+      "DOI": "10.1093/jnci/91.5.434",
+      "article-title": "Colorectal cancer mortality: effectiveness of biennial screening for fecal occult blood",
+      "volume": "91",
+      "author": "Mandel",
+      "year": "1999",
+      "journal-title": "J Natl Cancer Inst"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib15",
+      "doi-asserted-by": "crossref",
+      "first-page": "606",
+      "DOI": "10.1001/jama.2014.8266",
+      "article-title": "Effect of flexible sigmoidoscopy screening on colorectal cancer incidence and mortality: a randomized clinical trial",
+      "volume": "312",
+      "author": "Holme",
+      "year": "2014",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib16",
+      "doi-asserted-by": "crossref",
+      "first-page": "2345",
+      "DOI": "10.1056/NEJMoa1114635",
+      "article-title": "Colorectal-cancer incidence and mortality with screening flexible sigmoidoscopy",
+      "volume": "366",
+      "author": "Schoen",
+      "year": "2012",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib17",
+      "doi-asserted-by": "crossref",
+      "first-page": "1310",
+      "DOI": "10.1093/jnci/djr284",
+      "article-title": "Once-only sigmoidoscopy in colorectal cancer screening: Follow-up findings of the italian randomized controlled trial—SCORE",
+      "volume": "103",
+      "author": "Segnan",
+      "year": "2011",
+      "journal-title": "J Natl Cancer Inst"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib18",
+      "doi-asserted-by": "crossref",
+      "first-page": "844",
+      "DOI": "10.1053/j.gastro.2012.06.001",
+      "article-title": "Guidelines for colonoscopy surveillance after screening and polypectomy: a consensus update by the US Multi-Society Task Force on Colorectal Cancer",
+      "volume": "143",
+      "author": "Lieberman",
+      "year": "2012",
+      "journal-title": "Gastroenterology"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib19",
+      "unstructured": "Hadjiliadis D, Khoruts A, Zauber AG, Hempstead SE, Maisonneuve P, Lowenfels AB; for the CF Colorectal Cancer Screening Taskforce. Cystic Fibrosis Colorectal Cancer Screening Consensus Recommendations. ▪▪▪."
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib20",
+      "unstructured": "Vogelaar I, van Balegooijen M, Zauber AG, et al. Model profiler of the MISCAN-Colon miscosimulation model for colorectal cancer. Deparment of Public Health, Erasmus MC. http://cisnet.flexkb.net/mp/pub/cisnet_colorectal_sloankettering_profile.pdf. Published 2004. Accessed ▪▪▪."
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib21",
+      "doi-asserted-by": "crossref",
+      "first-page": "750",
+      "DOI": "10.7326/M13-2263",
+      "article-title": "Should colorectal cancer screening be considered in elderly persons without previous screening? A cost-effectiveness analysis",
+      "volume": "160",
+      "author": "van Hees",
+      "year": "2014",
+      "journal-title": "Ann Intern Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib22",
+      "doi-asserted-by": "crossref",
+      "first-page": "1806",
+      "DOI": "10.1093/jnci/djt299",
+      "article-title": "Secular trends in colon and rectal cancer relative survival",
+      "volume": "105",
+      "author": "Rutter",
+      "year": "2013",
+      "journal-title": "J Natl Cancer Inst"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib23",
+      "unstructured": "Surveillance, Epidemiology, and End Results (SEER) Program. SEER*Stat Database: Incidence—SEER 9 Regs Limited Use, Nov 2002 Sub (1973–2000). National Cancer Institute, DCCPS, Surveillance Research Program, Cancer Statistics Branch. Released April 2003, based on the November 2002 submission. Accessed ▪▪▪."
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib24",
+      "doi-asserted-by": "crossref",
+      "first-page": "249",
+      "DOI": "10.1007/BF02630528",
+      "article-title": "Incidence and distribution of adenomatous polyps of the colon and rectum based on 1,000 autopsy examinations",
+      "volume": "7",
+      "author": "Arminski",
+      "year": "1964",
+      "journal-title": "Dis Colon Rectum"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib25",
+      "doi-asserted-by": "crossref",
+      "first-page": "1472",
+      "DOI": "10.1002/1097-0142(19880401)61:7<1472::AID-CNCR2820610734>3.0.CO;2-E",
+      "article-title": "Polyps of the colon in Barcelona, Spain. An autopsy study",
+      "volume": "61",
+      "author": "Bombi",
+      "year": "1988",
+      "journal-title": "Cancer"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib26",
+      "doi-asserted-by": "crossref",
+      "first-page": "223",
+      "DOI": "10.1097/00000658-196302000-00007",
+      "article-title": "Adenomatous polypi of large intestine: incidence and distribution",
+      "volume": "157",
+      "author": "Chapman",
+      "year": "1963",
+      "journal-title": "Ann Surg"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib27",
+      "doi-asserted-by": "crossref",
+      "first-page": "179",
+      "DOI": "10.1002/ijc.2910360209",
+      "article-title": "Prevalence of polyps in an autopsy series from areas with varying incidence of large-bowel cancer",
+      "volume": "36",
+      "author": "Clark",
+      "year": "1985",
+      "journal-title": "Int J Cancer"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib28",
+      "doi-asserted-by": "crossref",
+      "first-page": "1508",
+      "DOI": "10.1136/gut.33.11.1508",
+      "article-title": "Predictors of presence, multiplicity, size and dysplasia of colorectal adenomas. A necropsy study in New Zealand",
+      "volume": "33",
+      "author": "Jass",
+      "year": "1992",
+      "journal-title": "Gut"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib29",
+      "doi-asserted-by": "crossref",
+      "first-page": "799",
+      "DOI": "10.3109/00365528909089217",
+      "article-title": "Polyps of the large intestine in Aarhus, Denmark. An autopsy study",
+      "volume": "24",
+      "author": "Johannsen",
+      "year": "1989",
+      "journal-title": "Scand J Gastroenterol"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib30",
+      "doi-asserted-by": "crossref",
+      "first-page": "277",
+      "DOI": "10.1007/BF02616606",
+      "article-title": "Polyps of the colon and rectum: incidence and distribution",
+      "volume": "4",
+      "author": "Blatt",
+      "year": "1961",
+      "journal-title": "Dis Colon Rectum"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib31",
+      "doi-asserted-by": "crossref",
+      "first-page": "1847",
+      "DOI": "10.1002/1097-0142(197905)43:5<1847::AID-CNCR2820430538>3.0.CO;2-L",
+      "article-title": "Adenomatous lesions of the large bowel: an autopsy survey",
+      "volume": "43",
+      "author": "Rickert",
+      "year": "1979",
+      "journal-title": "Cancer"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib32",
+      "doi-asserted-by": "crossref",
+      "first-page": "819",
+      "DOI": "10.1002/1097-0142(19820215)49:4<819::AID-CNCR2820490435>3.0.CO;2-D",
+      "article-title": "The prevalence of polyps of the large intestine in Oslo: an autopsy study",
+      "volume": "49",
+      "author": "Vatn",
+      "year": "1982",
+      "journal-title": "Cancer"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib33",
+      "doi-asserted-by": "crossref",
+      "first-page": "835",
+      "DOI": "10.1136/gut.23.10.835",
+      "article-title": "Polyps and cancer of the large bowel: a necropsy study in Liverpool",
+      "volume": "23",
+      "author": "Williams",
+      "year": "1982",
+      "journal-title": "Gut"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib34",
+      "doi-asserted-by": "crossref",
+      "first-page": "2595",
+      "DOI": "10.1001/jama.2016.6828",
+      "article-title": "Estimation of benefits, burden, and harms of colorectal cancer screening strategies: modeling study for the US Preventive Services Task Force",
+      "volume": "315",
+      "author": "Knudsen",
+      "year": "2016",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib35",
+      "doi-asserted-by": "crossref",
+      "first-page": "451",
+      "DOI": "10.1016/j.lungcan.2013.05.018",
+      "article-title": "Lung cancer following lung transplant: single institution 10 year experience",
+      "volume": "81",
+      "author": "Belli",
+      "year": "2013",
+      "journal-title": "Lung Cancer"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib36",
+      "doi-asserted-by": "crossref",
+      "first-page": "343",
+      "DOI": "10.1111/j.1572-0241.2006.00390.x",
+      "article-title": "Polyp miss rate determined by tandem colonoscopy: a systematic review",
+      "volume": "101",
+      "author": "van Rijn",
+      "year": "2006",
+      "journal-title": "Am J Gastroenterol"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib37",
+      "doi-asserted-by": "crossref",
+      "first-page": "1287",
+      "DOI": "10.1056/NEJMoa1311194",
+      "article-title": "Multitarget stool DNA testing for colorectal-cancer screening",
+      "volume": "370",
+      "author": "Imperiale",
+      "year": "2014",
+      "journal-title": "N Engl J Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib38",
+      "doi-asserted-by": "crossref",
+      "first-page": "230",
+      "DOI": "10.1093/jnci/95.3.230",
+      "article-title": "Risk of perforation after colonoscopy and sigmoidoscopy: a population-based study",
+      "volume": "95",
+      "author": "Gatto",
+      "year": "2003",
+      "journal-title": "J Natl Cancer Inst"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib39",
+      "doi-asserted-by": "crossref",
+      "first-page": "13",
+      "DOI": "10.7326/0003-4819-159-1-201307020-00004",
+      "article-title": "Prevalence of advanced colorectal neoplasia in white and black patients undergoing screening colonoscopy in a safety-net hospital",
+      "volume": "159",
+      "author": "Schroy",
+      "year": "2013",
+      "journal-title": "Ann Intern Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib40",
+      "doi-asserted-by": "crossref",
+      "first-page": "849",
+      "DOI": "10.7326/0003-4819-150-12-200906160-00008",
+      "article-title": "Adverse events after outpatient colonoscopy in the Medicare population",
+      "volume": "150",
+      "author": "Warren",
+      "year": "2009",
+      "journal-title": "Ann Intern Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib41",
+      "doi-asserted-by": "crossref",
+      "first-page": "1752",
+      "DOI": "10.1001/archinternmed.2010.373",
+      "article-title": "The incidence and cost of unexpected hospital use after scheduled outpatient endoscopy",
+      "volume": "170",
+      "author": "Leffler",
+      "year": "2010",
+      "journal-title": "Arch Intern Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib42",
+      "unstructured": "Bureau of Labor Statistics. Current Employment Statistics (National). www.bls.gov/web/empsit/ceseesummary.htm. Accessed August 16, 2016."
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib43",
+      "doi-asserted-by": "crossref",
+      "first-page": "630",
+      "DOI": "10.1093/jnci/djn103",
+      "article-title": "Cost of care for elderly cancer patients in the United States",
+      "volume": "100",
+      "author": "Yabroff",
+      "year": "2008",
+      "journal-title": "J Natl Cancer Inst"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib44",
+      "unstructured": "US Department of Labor. Bureau of Labor Statistics. Consumer Price Index. http://www.bls.gov/cpi/tables.htm. Accessed ▪▪▪."
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib45",
+      "doi-asserted-by": "crossref",
+      "first-page": "614",
+      "DOI": "10.1164/rccm.201001-0092OC",
+      "article-title": "Effects of gender and age at diagnosis on disease progression in long-term survivors of cystic fibrosis",
+      "volume": "182",
+      "author": "Nick",
+      "year": "2010",
+      "journal-title": "Am J Respir Crit Care Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib46",
+      "first-page": "451",
+      "article-title": "The polyp-cancer sequence in the large bowel",
+      "volume": "67",
+      "author": "Morson",
+      "year": "1974",
+      "journal-title": "Proc R Soc Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib47",
+      "doi-asserted-by": "crossref",
+      "first-page": "130",
+      "DOI": "10.3322/CA.2007.0018",
+      "article-title": "Screening and surveillance for the early detection of colorectal cancer and adenomatous polyps, 2008: a joint guideline from the American Cancer Society, the US Multi-Society Task Force on Colorectal Cancer, and the American College of Radiology",
+      "volume": "58",
+      "author": "Levin",
+      "year": "2008",
+      "journal-title": "CA Cancer J Clin"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib48",
+      "doi-asserted-by": "crossref",
+      "first-page": "1507",
+      "DOI": "10.1001/jama.296.12.1507",
+      "article-title": "Recommendations for the care of individuals with an inherited predisposition to Lynch syndrome: a systematic review",
+      "volume": "296",
+      "author": "Lindor",
+      "year": "2006",
+      "journal-title": "Jama"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib49",
+      "doi-asserted-by": "crossref",
+      "first-page": "2304",
+      "DOI": "10.1001/jama.2011.743",
+      "article-title": "Cancer risks associated with germline mutations in MLH1, MSH2, and MSH6 genes in Lynch syndrome",
+      "volume": "305",
+      "author": "Bonadona",
+      "year": "2011",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib50",
+      "doi-asserted-by": "crossref",
+      "first-page": "233",
+      "DOI": "10.7326/M13-0636",
+      "article-title": "Longevity of patients with cystic fibrosis in 2000 to 2010 and beyond: survival analysis of the Cystic Fibrosis Foundation patient registry",
+      "volume": "161",
+      "author": "MacKenzie",
+      "year": "2014",
+      "journal-title": "Ann Intern Med"
+    },
+    {
+      "key": "10.1053/j.gastro.2017.12.011_bib51",
+      "doi-asserted-by": "crossref",
+      "first-page": "1903",
+      "DOI": "10.1007/s10620-015-3546-7",
+      "article-title": "Gastrointestinal Manifestations of Cystic Fibrosis",
+      "volume": "60",
+      "author": "Kelly",
+      "year": "2015",
+      "journal-title": "Dig Dis Sci"
+    }
+  ],
+  "updated-by": [
+    {
+      "DOI": "10.1053/j.gastro.2017.12.011",
+      "type": "withdrawal",
+      "label": "Withdrawal",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2017,
+            12,
+            27
+          ]
+        ],
+        "date-time": "2017-12-27T00:00:00Z",
+        "timestamp": 1514332800000
+      }
+    }
+  ],
+  "container-title": [
+    "Gastroenterology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S001650851736715X?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S001650851736715X?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        9,
+        16
+      ]
+    ],
+    "date-time": "2025-09-16T10:43:16Z",
+    "timestamp": 1758019396000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S001650851736715X"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2017,
+        12
+      ]
+    ]
+  },
+  "references-count": 51,
+  "alternative-id": [
+    "S001650851736715X"
+  ],
+  "URL": "https://doi.org/10.1053/j.gastro.2017.12.011",
+  "relation": {
+    "withdrawal": [
+      {
+        "id-type": "doi",
+        "id": "10.1053/j.gastro.2017.12.011",
+        "asserted-by": "object"
+      }
+    ]
+  },
+  "ISSN": [
+    "0016-5085"
+  ],
+  "issn-type": [
+    {
+      "value": "0016-5085",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2017,
+        12
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "WITHDRAWN: Cost Effectiveness of Screening Individuals With Cystic Fibrosis for Colorectal Cancer",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Gastroenterology",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1053/j.gastro.2017.12.011",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2017 AGA Institute. Published by Elsevier Ltd. All rights reserved.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ]
+}

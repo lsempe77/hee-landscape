@@ -1,0 +1,425 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        10
+      ]
+    ],
+    "date-time": "2026-07-10T16:23:31Z",
+    "timestamp": 1783700611730,
+    "version": "3.55.0"
+  },
+  "reference-count": 0,
+  "publisher": "Wiley",
+  "issue": "S6",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            23
+          ]
+        ],
+        "date-time": "2025-12-23T00:00:00Z",
+        "timestamp": 1766448000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 22,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "alz-journals.onlinelibrary.wiley.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Alzheimer's &amp;amp; Dementia"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        12
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background</jats:title>\n                    <jats:p>A randomized controlled trial was conducted to evaluate the effectiveness of a tablet‐based application, SMART4MD, in improving or maintaining the quality of life for person with mild cognitive impairment (PwMCI) and their informal caregivers. The objective is to conduct an 18‐month economic evaluation of the SMART4MD app, in addition to standard care, compared to standard care alone in Sweden and Spain from a healthcare provider perspective.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Method</jats:title>\n                    <jats:p>A total of 345 dyads (173 received intervention; 172 received standard care) participated from Sweden, and 347 PwMCI (174 received intervention; 173 received standard care) participated from Spain. The primary outcome measure was quality‐adjusted life years (QALYs). The findings are reported as incremental cost‐effectiveness ratios (ICER).</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Result</jats:title>\n                    <jats:p>The intervention was dominated by standard care at the Swedish site, but at the Spanish site, the ICER was €3,337/QALY for PwMCI. For the informal caregivers at the Swedish site, the ICER was €78,000/QALY. However, neither costs nor QALYs were statistically significantly different for dyads or PwMCI in both sites.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>The difference in site‐specific results warrants further exploration of the use of the SMART4MD application for PwMCI in terms of cost‐effectiveness.</jats:p>\n                  </jats:sec>",
+  "DOI": "10.1002/alz70860_102860",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        23
+      ]
+    ],
+    "date-time": "2025-12-23T19:40:48Z",
+    "timestamp": 1766518848000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+    "Economic Evaluation of the Digital Application “Support, Monitoring and Reminder Technology for Mild Dementia” for People with Mild Cognitive Impairment and their Informal Caregivers"
+  ],
+  "prefix": "10.1002",
+  "volume": "21",
+  "author": [
+    {
+      "given": "Zartashia",
+      "family": "Ghani",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Applied Health Technology, Department of Health, Blekinge Institute of Technology, Karlskrona, Karlskrona, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Johan",
+      "family": "Jarl",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Lund University, Lund, Lund, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Peter",
+      "family": "Anderberg",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Health, Blekinge Institute of Technology, Karlskrona, Karlskrona, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Johan Sanmartin",
+      "family": "Berglund",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Health, Blekinge Institute of Technology (BTH), Karlskrona, Karlskrona, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Maria Quintana",
+      "family": "Aparicio",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Brain, Cognition and Behavior, Clinical Research. Consorci Sanitari de Terrassa‐ Hospital Universitari, Barcelona, Barcelona, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Pilar",
+      "family": "Barnestein‐Fonseca",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": ", Instituto CUDECA de Estudios e Investigación en Cuidados Paliativos, Fundación CUDECA, Av del Cosmos, Málaga, Malaga, Spain"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Selim",
+      "family": "Cellek",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Medical Technology Research Centre, Anglia Ruskin University, ARU Peterborough, University House, Bishop's Road, Peterborough, Peterborough, Peterborough, United Kingdom"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Fermín Mayoral",
+      "family": "Cleries",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Hospital Regional Universitario de Málaga U.G.C de Salud Mental, Malaga, Malaga, Spain"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "M",
+      "family": "Garoellda",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Consorci Sanitari Terressa, Terrassa, Barcelona, Spain"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gloria",
+      "family": "Guerrero‐Pertiñez",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Hospital Regional Universitario de Málaga U.G.C de Salud Mental, Malaga, Malaga, Spain"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Karen",
+      "family": "Hayden",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Anglia Ruskin Clinical Trials Unit, School of Medicine, Faculty of Health, Education Medicine and Social Care, Chelmsford, Chelmsford, United Kingdom"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Carmel",
+      "family": "Moore",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Anglia Ruskin Clinical Trials Unit, School of Medicine, Faculty of Health, Education Medicine and Social Care, Anglia Ruskin University, Bishops Hall Lane, Chelmsford, Chelmsford, Chelmsford, United Kingdom"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jufen",
+      "family": "Zhang",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Anglia Ruskin Clinical Trials Unit, School of Medicine, Faculty of Health, Education Medicine and Social Care, Anglia Ruskin University, Bishops Hall Lane, Chelmsford, Chelmsford, Chelmsford, United Kingdom"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Dominic",
+      "family": "Trepel",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Medicine and Global Brain Health Institute, Trinity College Dublin, Dublin, Ireland"
+        },
+        {
+          "name": "Trinity College Dublin, Dublin, Ireland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sanjib",
+      "family": "Saha",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Global Brain Health Institute, Dublin, Ireland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        23
+      ]
+    ]
+  },
+  "container-title": [
+    "Alzheimer's &amp; Dementia"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/pdf/10.1002/alz70860_102860",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        7
+      ]
+    ],
+    "date-time": "2026-01-07T21:53:07Z",
+    "timestamp": 1767822787000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz70860_102860"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        12
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "S6",
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1002/alz70860_102860"
+  ],
+  "URL": "https://doi.org/10.1002/alz70860_102860",
+  "archive": [
+    "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+    "1552-5260",
+    "1552-5279"
+  ],
+  "issn-type": [
+    {
+      "value": "1552-5260",
+      "type": "print"
+    },
+    {
+      "value": "1552-5279",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        12
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2025-12-23",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ],
+  "article-number": "e102860"
+}

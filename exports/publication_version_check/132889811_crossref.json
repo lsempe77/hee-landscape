@@ -1,0 +1,491 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        8
+      ]
+    ],
+    "date-time": "2026-01-08T02:45:38Z",
+    "timestamp": 1767840338170,
+    "version": "3.49.0"
+  },
+  "reference-count": 0,
+  "publisher": "Wiley",
+  "issue": "S6",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            23
+          ]
+        ],
+        "date-time": "2025-12-23T00:00:00Z",
+        "timestamp": 1766448000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 22,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "alz-journals.onlinelibrary.wiley.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Alzheimer's &amp;amp; Dementia"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        12
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background</jats:title>\n                    <jats:p>Cognitive frailty (CF) in older adults is linked to increased dementia risk, but is a potentially reversible syndrome that may benefit from lifestyle‐based multidomain interventions. The AGELESS randomized controlled trial (RCT) assessed the effect of a 2‐year multidomain intervention on cognitive, physical, vascular, dietary, and psychosocial outcomes, and its cost‐effectiveness, in a Low‐Middle‐Income Country (LMIC), Malaysia.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Method</jats:title>\n                    <jats:p>106 community‐dwellers from Klang‐Valley, Malaysia, aged 60+ years and meeting criteria for (pre)‐CF (≥ 1 Fried's criteria and Clinical Dementia Rating scale=0.5) were randomized 1:1 to a culturally adapted multidomain intervention ‐ physical activity, cognitive training, nutritional and psychological counselling, cardiovascular care – or to an educational module. Primary outcomes, assessed at baseline, 12 and 24 months, included the modified Neuropsychological Tests Battery (mNTB) and physical performance. Intervention costs were calculated to determine Incremental Cost‐Effectiveness Ratios (ICERs). An intention‐to‐treat analysis was conducted.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Result</jats:title>\n                    <jats:p>\n                      The trial occurred during the COVID‐19 pandemic, with a 50% drop‐out rate over 2‐years. Yet, adherence among participants was over 50% for all intervention components (range 53%‐91%). Significant intervention effects were observed in mNTB primary outcomes including verbal memory (verbal paired associates), visual memory (visual paired associates), attention and working memory (digit span test), lower body flexibility (chair sit and reach), walking speed (6 meter walk test), cardiovascular endurance (2‐minute step test) (for all measures\n                      <jats:italic>p</jats:italic>\n                       &lt;0.05 for interaction time*group in repeat‐measures ANOVA). Changes in (pre)‐CF status were not significantly different between intervention and control. Total cost of the AGELESS intervention for 2‐years was 356USD per subject (intervention arm) and 109USD in the control arm. The ICER computation showed that 2‐minute step test was the most cost effective (34USD), followed by chair sit and reach (63USD) and verbal paired associates delayed recall (113USD).\n                    </jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>Multidomain lifestyle‐based interventions can be cost‐effective, sustainable preventive approaches to promote healthy aging and reduce dementia risk. AGELESS is part of the Worl‐Wide‐FINGERS global network of multidomain interventions for dementia risk reduction, and offers a successful model to develop preventive interventions in LMICs, where there is a larger prevention potential due to prevalent lifestyle‐related risk factors.</jats:p>\n                  </jats:sec>",
+  "DOI": "10.1002/alz70860_106477",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        23
+      ]
+    ],
+    "date-time": "2025-12-23T19:40:48Z",
+    "timestamp": 1766518848000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "The cost effectiveness of a multidomain intervention on physical, cognitive, vascular, dietary and psychosocial outcomes among community dwelling older adults with cognitive frailty in Malaysia: The AGELESS Trial"
+  ],
+  "prefix": "10.1002",
+  "volume": "21",
+  "author": [
+    {
+      "given": "Pavapriya",
+      "family": "Ponvel",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Center of Wellness and Healthy Aging, Faculty of Health Sciences, Universiti Kebangsaan, Kuala Lumpur, NA, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Suzana",
+      "family": "Shahar",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Centre for Healthy Aging and Wellness, Faculty of Health Sciences, Universiti Kebangsaan Malaysia, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Devinder Kaur Ajit",
+      "family": "Singh",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Programme of Physiotherapy &amp; Centre for Healthy Ageing and Wellness (HCARE), Faculty of Health Sciences, Universiti Kebangsaan Malaysia, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Arimi Fitri Mat",
+      "family": "Ludin",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Programme of Biomedical Science &amp; Centre for Healthy Ageing and Wellness (HCARE), Faculty of Health Sciences, Universiti Kebangsaan Malaysia, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Ponnusamy",
+      "family": "Subramaniam",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Clinical Psychology Programme and Centre for Healthy Aging and Wellness, Faculty of Health Sciences, Universiti Kebangsaan Malaysia, Kuala Lumpur, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Norhayati",
+      "family": "Ibrahim",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Center of Wellness and Healthy Aging, Faculty of Health Sciences, Universiti Kebangsaan, Kuala Lumpur, NA, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Haron",
+      "family": "Hasnah",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Center of Wellness and Healthy Aging, Faculty of Health Sciences, Universiti Kebangsaan, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Aniza",
+      "family": "Ismail",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Public Health Medicine Faculty of Medicine, Universiti Kebangsaan, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Chin",
+      "family": "Ai‐Vyrn",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Medicine, Faculty of Medicine, Universiti Malaya, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Mazlyfarina",
+      "family": "Mohamad",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Centre for Diagnostic, Therapeutic &amp; Investigative Studies, Faculty of Health Sciences, Universiti Kebangsaan, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "NURUL HIDAYAH MD",
+      "family": "FADZIL",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Centre for Healthy Ageing and Wellness (H‐Care), Faculty of Health Science, National University of Malaysia, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Norhayati Mustafa",
+      "family": "Khalid",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Center of Wellness and Healthy Aging, Faculty of Health Sciences, Universiti Kebangsaan, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Aisyah Mohammad",
+      "family": "Safien",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Center of Wellness and Healthy Aging, Faculty of Health Sciences, Universiti Kebangsaan, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Jamilah Mohammad",
+      "family": "Hanipah",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Center of Wellness and Healthy Aging, Faculty of Health Sciences, Universiti Kebangsaan, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Azyana",
+      "family": "Ibrahim",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Center of Wellness and Healthy Aging, Faculty of Health Sciences, Universiti Kebangsaan, Kuala Lumpur, Malaysia"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Jenni",
+      "family": "Lehtisalo",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Institute of Public Health and Clinical Nutrition, University of Eastern Finland, Kuopio, Finland"
+        },
+        {
+          "name": "Finnish Institute for Health and Welfare, Helsinki, Finland"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Miia",
+      "family": "Kivipelto",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Karolinska University Hospital, Theme Inflammation and Aging, Stockholm, Sweden"
+        },
+        {
+          "name": "Department of Neurobiology, Care Sciences and Society, Karolinska Institutet, Stockholm, Sweden"
+        },
+        {
+          "name": "Institute of Public Health and Clinical Nutrition, University of Eastern Finland, Kuopio, Kuopio, Finland"
+        },
+        {
+          "name": "Imperial College London, London, United Kingdom"
+        },
+        {
+          "name": "FINGERS Brain Health Institute, Stockholm, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Francesca",
+      "family": "Mangialasche",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "FINGERS Brain Health Institute, Stockholm, Sweden"
+        },
+        {
+          "name": "Division of Clinical Geriatrics, Center for Alzheimer Research, Department of Neurobiology, Care Sciences and Society, Karolinska Institutet, Stockholm, Sweden"
+        },
+        {
+          "name": "Karolinska University Hospital, Theme Inflammation and Aging, Solna, Sweden"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        23
+      ]
+    ]
+  },
+  "container-title": [
+    "Alzheimer's &amp; Dementia"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/pdf/10.1002/alz70860_106477",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        7
+      ]
+    ],
+    "date-time": "2026-01-07T21:50:55Z",
+    "timestamp": 1767822655000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz70860_106477"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        12
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "S6",
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1002/alz70860_106477"
+  ],
+  "URL": "https://doi.org/10.1002/alz70860_106477",
+  "archive": [
+    "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+    "1552-5260",
+    "1552-5279"
+  ],
+  "issn-type": [
+    {
+      "value": "1552-5260",
+      "type": "print"
+    },
+    {
+      "value": "1552-5279",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        12
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2025-12-23",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ],
+  "article-number": "e106477"
+}

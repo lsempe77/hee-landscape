@@ -1,0 +1,230 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        2
+      ]
+    ],
+    "date-time": "2022-04-02T23:54:24Z",
+    "timestamp": 1648943664817
+  },
+  "reference-count": 0,
+  "publisher": "Elsevier BV",
+  "issue": "7",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2012,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2012-11-01T00:00:00Z",
+        "timestamp": 1351728000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2013,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2013-11-01T00:00:00Z",
+        "timestamp": 1383264000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 365,
+      "URL": "https://www.elsevier.com/open-access/userlicense/1.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Value in Health"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2012,
+        11
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.jval.2012.08.1099",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2012,
+        10,
+        29
+      ]
+    ],
+    "date-time": "2012-10-29T13:54:20Z",
+    "timestamp": 1351518860000
+  },
+  "page": "A390",
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+    "PIN32 Economic Evaluation of Boceprevir for the Treatment of Patients With Genotype 1 Chronic Hepatitis C Virus Infection in Hungary"
+  ],
+  "prefix": "10.1016",
+  "volume": "15",
+  "author": [
+    {
+      "given": "R.",
+      "family": "Odhiambo",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "J.",
+      "family": "Chhatwal",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "S.A.",
+      "family": "Ferrante",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "A.",
+      "family": "El Khoury",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "E.",
+      "family": "Elbasha",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "container-title": [
+    "Value in Health"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S1098301512028124?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S1098301512028124?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2018,
+        11,
+        19
+      ]
+    ],
+    "date-time": "2018-11-19T19:51:42Z",
+    "timestamp": 1542657102000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1098301512028124"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2012,
+        11
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "7",
+    "published-print": {
+      "date-parts": [
+        [
+          2012,
+          11
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S1098301512028124"
+  ],
+  "URL": "https://doi.org/10.1016/j.jval.2012.08.1099",
+  "relation": {},
+  "ISSN": [
+    "1098-3015"
+  ],
+  "issn-type": [
+    {
+      "value": "1098-3015",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2012,
+        11
+      ]
+    ]
+  }
+}

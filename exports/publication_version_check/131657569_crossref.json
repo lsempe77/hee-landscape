@@ -1,0 +1,604 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        24
+      ]
+    ],
+    "date-time": "2026-06-24T14:08:39Z",
+    "timestamp": 1782310119491,
+    "version": "3.54.5"
+  },
+  "reference-count": 43,
+  "publisher": "American Society of Clinical Oncology (ASCO)",
+  "issue": "2",
+  "content-domain": {
+    "domain": [
+      "ascopubs.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "J Clin Oncol"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        10
+      ]
+    ]
+  },
+  "abstract": "<jats:sec>\n                    <jats:title>PURPOSE</jats:title>\n                    <jats:p>Geriatric assessment and management (GAM) is a guideline-recommended strategy for optimizing cancer management among older adults. A recent cost-utility analysis of the Canadian 5C randomized controlled trial (RCT) found GAM to be cost effective for selected groups. This study aimed to assess the cost-utility of GAM plus usual care (UC) versus UC alone in older adults with cancer using a decision model and best available evidence from four international RCTs—GAIN, GAP70, INTEGERATE, and 5C.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>METHODS</jats:title>\n                    <jats:p>For the model, we used pooled data from four RCTs and peer-reviewed literature. Deterministic and probabilistic analyses were performed from the Canadian health care payer perspective, applying a 6-month time horizon. Sensitivity analyses included per-trial scenario analyses, 1-year time horizon, and US health care payer perspective. We reported costs per quality-adjusted life year (QALY) and incremental net monetary benefit (INMB).</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>RESULTS</jats:title>\n                    <jats:p>The base-case analysis indicated that GAM had an INMB of $599 in Canadian dollars (CAD; 95% credibility interval, –$3,428 to $4,742) with 60.9% probability of being cost effective at a threshold of $50,000 (CAD) per QALY. Trial-specific results varied, with the GAP70 and INTEGERATE trials yielding positive INMB ($2,231 [CAD] and $2,104 [CAD], respectively), suggesting cost-effectiveness, whereas 5C and GAIN resulted in negative INMB (–$489 [CAD] and –$234 [CAD], respectively). Chemotherapy and hospitalization costs were the main driver of costs in both strategies.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>CONCLUSION</jats:title>\n                    <jats:p>GAM is overall cost effective, with results varying across trial scenarios due to differences in chemotherapy dose intensity, hospitalization rates, and associated costs. Future research should prioritize identifying optimal core GAM components, delivery mode, and patient selection criteria to enhance its effectiveness and cost-effectiveness.</jats:p>\n                  </jats:sec>",
+  "DOI": "10.1200/jco-25-00248",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        21
+      ]
+    ],
+    "date-time": "2025-10-21T20:00:15Z",
+    "timestamp": 1761076815000
+  },
+  "page": "92-102",
+  "update-policy": "https://doi.org/10.1200/crossmark",
+  "source": "Crossref",
+  "is-referenced-by-count": 2,
+  "title": [
+    "Cost-Utility of Geriatric Assessment and Management in Older Adults With Cancer: Model-Based Economic Evaluation"
+  ],
+  "prefix": "10.1200",
+  "volume": "44",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-5851-0909",
+      "authenticated-orcid": true,
+      "given": "Selai",
+      "family": "Akseer",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Institute of Health Policy, Management and Evaluation (IHPME), University of Toronto, Toronto, ON, Canada"
+        },
+        {
+          "name": "Toronto General Hospital Research Institute, University Health Network, Toronto, ON, Canada"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-7620-8551",
+      "authenticated-orcid": true,
+      "given": "Shant Torkom",
+      "family": "Yeretzian",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Institute of Health Policy, Management and Evaluation (IHPME), University of Toronto, Toronto, ON, Canada"
+        },
+        {
+          "name": "Toronto General Hospital Research Institute, University Health Network, Toronto, ON, Canada"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-2788-4179",
+      "authenticated-orcid": true,
+      "given": "Lusine",
+      "family": "Abrahamyan",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Institute of Health Policy, Management and Evaluation (IHPME), University of Toronto, Toronto, ON, Canada"
+        },
+        {
+          "name": "Toronto General Hospital Research Institute, University Health Network, Toronto, ON, Canada"
+        },
+        {
+          "name": "Toronto Health Economics and Technology Assessment (THETA) Collaborative, University Health Network, Toronto, ON, Canada"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-0710-1854",
+      "authenticated-orcid": true,
+      "given": "Martine",
+      "family": "Puts",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Lawrence Bloomberg Faculty of Nursing, University of Toronto, Toronto, ON, Canada"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-2936-5794",
+      "authenticated-orcid": true,
+      "given": "Mostafa",
+      "family": "Mohamed",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Public Health Sciences, University of Rochester, Rochester, NY"
+        },
+        {
+          "name": "Department of Medicine, University of Rochester, Rochester, NY"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5774-9800",
+      "authenticated-orcid": true,
+      "given": "Wee Kheng",
+      "family": "Soo",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Eastern Health Clinical School, Monash University, Melbourne, VIC, Australia"
+        },
+        {
+          "name": "Aged Medicine Program, Eastern Health, Melbourne, VIC, Australia"
+        },
+        {
+          "name": "Cancer Services, Eastern Health, Melbourne, VIC, Australia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-7815-6046",
+      "authenticated-orcid": true,
+      "given": "Shabbir M.H.",
+      "family": "Alibhai",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Institute of Health Policy, Management and Evaluation (IHPME), University of Toronto, Toronto, ON, Canada"
+        },
+        {
+          "name": "Department of Medicine, University Health Network, Toronto, ON, Canada"
+        },
+        {
+          "name": "Department of Medicine, University of Toronto, Toronto, ON, Canada"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-7216-064X",
+      "authenticated-orcid": true,
+      "given": "Yeva",
+      "family": "Sahakyan",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Toronto General Hospital Research Institute, University Health Network, Toronto, ON, Canada"
+        },
+        {
+          "name": "Toronto Health Economics and Technology Assessment (THETA) Collaborative, University Health Network, Toronto, ON, Canada"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "233",
+  "reference": [
+    {
+      "key": "e_1_3_8_2_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3390/cancers13061400"
+    },
+    {
+      "key": "e_1_3_8_3_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/ijc.31664"
+    },
+    {
+      "key": "e_1_3_8_4_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jgo.2022.10.008"
+    },
+    {
+      "key": "e_1_3_8_5_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.6004/jnccn.2019.7342"
+    },
+    {
+      "key": "e_1_3_8_6_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.6004/jnccn.2021.0043"
+    },
+    {
+      "key": "e_1_3_8_7_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JCO.2018.78.8687"
+    },
+    {
+      "key": "e_1_3_8_8_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.critrevonc.2005.06.003"
+    },
+    {
+      "key": "e_1_3_8_9_2",
+      "first-page": "CD006211",
+      "article-title": "Comprehensive geriatric assessment for older adults admitted to hospital",
+      "volume": "9",
+      "author": "Ellis G",
+      "year": "2017",
+      "unstructured": "Ellis G, Gardner M, Tsiachristas A, et al: Comprehensive geriatric assessment for older adults admitted to hospital. Cochrane Database Syst Rev 9:CD006211, 2017",
+      "journal-title": "Cochrane Database Syst Rev"
+    },
+    {
+      "key": "e_1_3_8_10_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1001/jamaoncol.2021.4158"
+    },
+    {
+      "key": "e_1_3_8_11_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0140-6736(21)01789-X"
+    },
+    {
+      "key": "e_1_3_8_12_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S2666-7568(22)00169-6"
+    },
+    {
+      "key": "e_1_3_8_13_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/jnci/djad200"
+    },
+    {
+      "key": "e_1_3_8_14_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JCO.23.00930"
+    },
+    {
+      "key": "e_1_3_8_15_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jgo.2023.101504"
+    },
+    {
+      "key": "e_1_3_8_16_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3390/cancers14030789"
+    },
+    {
+      "key": "e_1_3_8_17_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JCO.22.01007"
+    },
+    {
+      "key": "e_1_3_8_18_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/s12916-021-02204-0"
+    },
+    {
+      "key": "e_1_3_8_19_2",
+      "unstructured": "Treeage Pro R1.1. Williamstown MA Treeage Software 2021"
+    },
+    {
+      "key": "e_1_3_8_20_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/bmb/ldq033"
+    },
+    {
+      "key": "e_1_3_8_21_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/cncr.30547"
+    },
+    {
+      "key": "e_1_3_8_22_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jgo.2014.02.001"
+    },
+    {
+      "key": "e_1_3_8_23_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jgo.2018.06.014"
+    },
+    {
+      "key": "e_1_3_8_24_2",
+      "first-page": "3",
+      "article-title": "The impact of ‘comprehensive geriatric assessment (CGA)’ implementation on the effectiveness and cost (CEA) of healthcare in an acute geriatric ward",
+      "volume": "40",
+      "author": "Soejono CH",
+      "year": "2008",
+      "unstructured": "Soejono CH: The impact of ‘comprehensive geriatric assessment (CGA)’ implementation on the effectiveness and cost (CEA) of healthcare in an acute geriatric ward. Acta Med Indones 40:3-10, 2008",
+      "journal-title": "Acta Med Indones"
+    },
+    {
+      "key": "e_1_3_8_25_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1001/jamanetworkopen.2023.56106"
+    },
+    {
+      "key": "e_1_3_8_26_2",
+      "unstructured": "U.S. Department of Health and Human Services: Common Terminology Criteria for Adverse Events (CTCAE) Version 5.0. 2017"
+    },
+    {
+      "key": "e_1_3_8_27_2",
+      "volume-title": "Schedule of Benefits: Physician Services Under the Health Insurance Act",
+      "author": "Ontario Ministry of Health",
+      "year": "2023",
+      "unstructured": "Ontario Ministry of Health: Schedule of Benefits: Physician Services Under the Health Insurance Act. Ottawa, ON, Ministry of Health, 2023"
+    },
+    {
+      "key": "e_1_3_8_28_2",
+      "unstructured": "Canadian Institute for Health Information: Canadian Management Information System Database metadata. 2024"
+    },
+    {
+      "key": "e_1_3_8_29_2",
+      "unstructured": "Canadian Institute for Health Information: National Ambulatory Care Reporting System (NACRS) metadata. 2024"
+    },
+    {
+      "key": "e_1_3_8_30_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jgo.2018.05.009"
+    },
+    {
+      "key": "e_1_3_8_31_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s40258-020-00620-6"
+    },
+    {
+      "key": "e_1_3_8_32_2",
+      "first-page": "1367",
+      "article-title": "Cost-effectiveness analysis of FOLFIRINOX vs gemcitabine with nab-paclitaxel as adjuvant treatment for resected pancreatic cancer in the United States based on PRODIGE-24 and APACT trials",
+      "volume": "27",
+      "author": "Kharat AA",
+      "year": "2021",
+      "unstructured": "Kharat AA, Nelson R, Au T, et al: Cost-effectiveness analysis of FOLFIRINOX vs gemcitabine with nab-paclitaxel as adjuvant treatment for resected pancreatic cancer in the United States based on PRODIGE-24 and APACT trials. J Manag Care Spec Pharm 27:1367-1375, 2021",
+      "journal-title": "J Manag Care Spec Pharm"
+    },
+    {
+      "key": "e_1_3_8_33_2",
+      "unstructured": "Statistics Canada: Table 18-10-0005-01 Consumer Price Index annual average not seasonally adjusted. 2024"
+    },
+    {
+      "key": "e_1_3_8_34_2",
+      "volume-title": "Physician Fee Schedule Search",
+      "author": "Centers for Medicare & Medicaid Services",
+      "year": "2024",
+      "unstructured": "Centers for Medicare & Medicaid Services: Physician Fee Schedule Search. 2024"
+    },
+    {
+      "key": "e_1_3_8_35_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1200/JOP.2015.006700"
+    },
+    {
+      "key": "e_1_3_8_36_2",
+      "volume-title": "Average Hospital Charges per Stay. Healthcare Cost and Utilization Project (HCUPnet)",
+      "author": "Agency for Healthcare Research and Quality",
+      "year": "2024",
+      "unstructured": "Agency for Healthcare Research and Quality: Average Hospital Charges per Stay. Healthcare Cost and Utilization Project (HCUPnet). 2024"
+    },
+    {
+      "key": "e_1_3_8_37_2",
+      "volume-title": "CPI Inflation Calculator",
+      "author": "U.S. Bureau of Labor Statistics",
+      "year": "2022",
+      "unstructured": "U.S. Bureau of Labor Statistics: CPI Inflation Calculator. 2022"
+    },
+    {
+      "key": "e_1_3_8_38_2",
+      "unstructured": "CCEMG-EPPI-Centre: CCEMG—EPPI-Centre cost converter 2024"
+    },
+    {
+      "key": "e_1_3_8_39_2",
+      "first-page": "26",
+      "volume-title": "The BOBYQA Algorithm for Bound Constrained Optimization Without Derivatives, Volume 26",
+      "author": "Powell MJ",
+      "year": "2009",
+      "unstructured": "Powell MJ. The BOBYQA Algorithm for Bound Constrained Optimization Without Derivatives, Volume 26. Cambridge, United Kingdom, University of Cambridge, 2009, pp 26-46. Cambridge NA Rep NA2009/06"
+    },
+    {
+      "key": "e_1_3_8_40_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jgo.2020.07.003"
+    },
+    {
+      "key": "e_1_3_8_41_2",
+      "volume-title": "Comprehensive Geriatric Assessment for Frail Older People in Acute Hospitals: The HoW-CGA Mixed-Methods Study, Volume 7",
+      "author": "Conroy SP",
+      "year": "2019",
+      "unstructured": "Conroy SP, Bardsley M, Smith P, et al: Comprehensive Geriatric Assessment for Frail Older People in Acute Hospitals: The HoW-CGA Mixed-Methods Study, Volume 7. Southampton, United Kingdom, Health Services and Delivery Research, 2019"
+    },
+    {
+      "key": "e_1_3_8_42_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/jgs.16085"
+    },
+    {
+      "key": "e_1_3_8_43_2",
+      "first-page": "CD012705",
+      "article-title": "Comprehensive Geriatric Assessment for community-dwelling, high-risk, frail, older people",
+      "volume": "5",
+      "author": "Briggs R",
+      "year": "2022",
+      "unstructured": "Briggs R, McDonough A, Ellis G, et al: Comprehensive Geriatric Assessment for community-dwelling, high-risk, frail, older people. Cochrane Database Syst Rev 5:CD012705, 2022",
+      "journal-title": "Cochrane Database Syst Rev"
+    },
+    {
+      "key": "e_1_3_8_44_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1524-4733.2008.00489.x"
+    }
+  ],
+  "container-title": [
+    "Journal of Clinical Oncology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://ascopubs.org/doi/pdfdirect/10.1200/JCO-25-00248",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        7
+      ]
+    ],
+    "date-time": "2026-01-07T22:59:46Z",
+    "timestamp": 1767826786000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://ascopubs.org/doi/10.1200/JCO-25-00248"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        10
+      ]
+    ]
+  },
+  "references-count": 43,
+  "journal-issue": {
+    "issue": "2",
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          10
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1200/JCO-25-00248"
+  ],
+  "URL": "https://doi.org/10.1200/jco-25-00248",
+  "relation": {},
+  "ISSN": [
+    "0732-183X",
+    "1527-7755"
+  ],
+  "issn-type": [
+    {
+      "value": "0732-183X",
+      "type": "print"
+    },
+    {
+      "value": "1527-7755",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        10
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2025-01-30",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2025-06-01",
+      "order": 1,
+      "name": "revised",
+      "label": "Revised",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2025-09-02",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2025-10-21",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

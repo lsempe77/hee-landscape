@@ -1,0 +1,92 @@
+{
+  "applied_at_utc": "20261014T132355Z",
+  "backup": "data\\raw\\publication_reconciliation\\backups\\before_publication_reconciliation_20261014T132355Z.zip",
+  "masters": [
+    {
+      "path": "data\\raw\\hee_analysis_master_v2.csv",
+      "rows": 72845,
+      "eligible_before": 41657,
+      "eligible_after": 41614,
+      "before_sha256": "39c4655138d36da5936b88e8e3d977e2ead11b1dcf7f6e804a38cf1de4c54222",
+      "after_sha256": "6b58b7c261852d1c84fd1dca9a58615342db47a1a06371eb7fed6948253a2d18"
+    },
+    {
+      "path": "data\\raw\\hee_analysis_master_v2_1.csv",
+      "rows": 72845,
+      "eligible_before": 41657,
+      "eligible_after": 41614,
+      "before_sha256": "ef834ec3417ca2aad7aba186e59d13dd8ac92215a09edc98b38fe4dbeccb7bf3",
+      "after_sha256": "7c06378e1e869349e7e119797f288c7e2498f45f5bf95cc2af58e0083f4485a6"
+    },
+    {
+      "path": "data\\raw\\hee_analysis_master_v2_who.csv",
+      "rows": 72845,
+      "eligible_before": 41657,
+      "eligible_after": 41614,
+      "before_sha256": "22ebccafe9ba1616fa70c14453f111393b3585ae68395c90b3d479507b1971dc",
+      "after_sha256": "15d39aebb904247ac50141700686503cabb39fd6e04f73cb74fdb65ba4e7c7d8"
+    },
+    {
+      "path": "data\\raw\\hee_analysis_master_with_review_explanations.csv",
+      "rows": 72845,
+      "eligible_before": 41657,
+      "eligible_after": 41614,
+      "before_sha256": "9c595ecae9ce8cde0b5d0d1f5cab684edf4010680e76d03a6e9900e5d69fa2eb",
+      "after_sha256": "208f065aff184e8eac1c9c4b7eefe41d9be4a5fabebdd30a407537044876f304"
+    },
+    {
+      "path": "data\\raw\\hee_share_v2_1\\hee_analysis_master.csv",
+      "rows": 72845,
+      "eligible_before": 41657,
+      "eligible_after": 41614,
+      "before_sha256": "098ca061bb5485dc92d0d5ac542c35bf4269eb96acafe74abde1d450e2aceadc",
+      "after_sha256": "91d02ee28f8f9e46b5be4e89d79a66bc5989a578faa154e82e53aaddb56fcd5a"
+    }
+  ],
+  "sites": [
+    {
+      "site": "docs",
+      "before": 41657,
+      "after": 41614,
+      "reindexed_drill_files": 153
+    },
+    {
+      "site": "docs\\v2",
+      "before": 41657,
+      "after": 41614,
+      "reindexed_drill_files": 153
+    },
+    {
+      "site": "docs\\v3",
+      "before": 41657,
+      "after": 41614,
+      "reindexed_drill_files": 153
+    }
+  ],
+  "excluded": 43,
+  "exclusion_reasons": {
+    "redundant_publication": 41,
+    "retracted_publication": 1,
+    "trial_registration_without_results": 1
+  },
+  "metadata_corrected": [
+    "131462474",
+    "132018093",
+    "132866626"
+  ],
+  "all_other_original_fields_verified_unchanged": true,
+  "pending_families": 3,
+  "pending_records": 7,
+  "eligible_after": 41614,
+  "verification": {
+    "eligible_count": 41614,
+    "five_master_checks": "passed",
+    "current_v2_v3_web_indices": "passed",
+    "pending_records_retained": 7,
+    "figure_file_check": "73 referenced; 0 problems",
+    "affected_builds": "passed",
+    "kld_draws": 1000,
+    "browser_check": "unavailable: runtime failed to start",
+    "manuscript_updated": false
+  }
+}

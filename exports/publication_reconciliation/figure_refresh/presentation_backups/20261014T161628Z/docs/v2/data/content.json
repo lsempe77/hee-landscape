@@ -1,0 +1,715 @@
+{
+  "gallery": [
+    {
+      "title": "Size & growth",
+      "blurb": "How much research is there, and what kind? 41,610 full economic evaluations\n             published 2010–2026 are included. These panels carry the headline:\n             the growth of the evidence base, and how its evaluation-method mix has shifted.",
+      "figs": [
+        {
+          "file": "fig_growth_reconciled.webp",
+          "title": "Growth of the economic-evaluation evidence base",
+          "caption": "Base: 41,610 included records. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. The reference is descriptive, not a forecast.",
+          "summary": "Growth of the economic-evaluation evidence base"
+        },
+        {
+          "file": "fig_method_stream_v2.svg",
+          "title": "How studies measure health benefits is changing",
+          "caption": "Studies by publication year and evaluation type, 2010–2025 (2026 partial, left out): 37,199 studies with an evaluation type and 1,810 reviews that report no evaluation of their own, shown as a separate grey band and excluded from type shares. Reviews that also report the authors' own evaluation keep its type. Cost-utility rose from 43.6% to 51.4% of typed studies; cost-effectiveness fell from 31.2% to 23.6%.",
+          "summary": "More studies now use measures that combine length and quality of life. These measures help compare health benefits across different diseases. Reviews that report no evaluation of their own are shown separately and not counted as an evaluation type. The 2026 count is incomplete and left out."
+        }
+      ]
+    },
+    {
+      "title": "Topics & diseases",
+      "blurb": "What the evidence is about: the 14 harmonised disease groups (MeSH 2026 vocabulary),\n             the epidemiological transition of LMIC research, and the emergent theme space — with\n             the journal-finish disease figures sitting beside their companions. The topic-model\n             figure ranks the emergent themes by income — from abstract embeddings (UMAP +\n             HDBSCAN), not MeSH. The section also shows what the studies evaluate: the research\n             space and the intervention mix by income group. Base declared on each figure.",
+      "figs": [
+        {
+          "file": "fig_disease_circular_gbd.webp",
+          "title": "Which diseases does the economic evidence focus on?",
+          "caption": "Share of the 36,446 studies that name a disease (of 41,610) by GBD 2023 cause group; cancers (neoplasms) (22%), cardiovascular (11%) and diabetes & kidney (7%) lead. Colour shows whether a group's research leans toward low- and middle-income or high-income countries (single-country studies). A study can name several groups. Disease groups coded from titles and abstracts to GBD 2023 causes. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "This chart shows which disease groups, as defined by the Global Burden of Disease study, receive the most research attention, and whether that research leans toward richer or poorer countries. A study can cover several groups, so the percentages can add up to more than 100%. Only studies that name a disease are included."
+        },
+        {
+          "file": "fig_transition_gbd.webp",
+          "title": "Research in lower-income countries is shifting towards long-term illnesses",
+          "caption": "Disease mix of studies about low- and middle-income countries by GBD 2023 level 1, 2010–2025, against those countries' 2010 and 2023 burden. Communicable, maternal, neonatal and nutritional conditions fell from 47% of the research in 2010 to 27% in 2025 (burden 37% in 2010, 28% in 2023); non-communicable research rose to 68% (burden 61%); injuries stayed at 4% (burden 11%). A study with causes in two groups counts in both. Burden: GBD 2023-round DALYs. Income group: the World Bank group of each country, as classified on 1 January of the publication year (for studies) or the burden year (for burden). For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Research about lower-income countries has moved from infections and maternal and child health towards non-communicable diseases, broadly in step with the changing disease burden; research on injuries stays well below their share of the burden."
+        },
+        {
+          "file": "paper04_gbd.webp",
+          "title": "Disease priorities are changing in lower-income countries",
+          "caption": "Disease mix of single-country studies by period (2010–2017, 2018–2026) and income setting, on GBD 2023 cause groups. In low- and middle-income research, HIV/AIDS & STIs (14% → 5%); maternal & neonatal (5% → 3%) fall while cancers (neoplasms) (15% → 26%) rise. Falling or rising: non-overlapping 95% intervals. Bars are 95% intervals; point size is the number of studies. Disease groups coded from titles and abstracts. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Compare the diseases studied in earlier and later years. In research about lower-income countries, HIV/AIDS & STIs and maternal & neonatal account for a smaller share, while cancers (neoplasms) account for more. Studies can cover several disease groups."
+        },
+        {
+          "file": "paper05_gbd.webp",
+          "title": "The diseases studied differ by country income",
+          "caption": "Percentage of each income group's disease-coded studies that name each GBD 2023 cause group (22 level-2 causes plus studies naming an infection or injury without its cause), grouped by GBD level 1. Malaria and neglected tropical diseases (19% of low-income studies vs 0% of high-income) and HIV/AIDS (21% vs 3%) concentrate in low-income research; cancers in upper-middle- and high-income research (29%, 23%). A study naming several groups or countries appears in each, so columns sum above 100%. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Malaria, HIV/AIDS and other infections feature more often in research about lower-income countries. Cancer and heart disease feature more often in higher-income settings. A study can appear in more than one disease group."
+        },
+        {
+          "file": "fig_intervention_map_reconciled.webp",
+          "title": "What kinds of healthcare does the research cover?",
+          "caption": "Base: 41,583 eligible records with frozen topic coordinates; 27 included records have no coordinates. Grey points are HDBSCAN noise or missing intervention labels. LMIC shares are computed among 27,897 single-country records with known publication-year income, by primary intervention class. Coordinates were filtered, not refitted. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "summary": "What kinds of healthcare does the research cover?"
+        },
+        {
+          "file": "fig_theme_rank_pubyear.webp",
+          "title": "Research topics differ between higher- and lower-income countries",
+          "caption": "The 15 most-LMIC and 15 most-high-income of 73 research topics (found by clustering title-and-abstract embeddings) (all themes: 28%  LMIC). The high-income panel is shown first, plotted as each theme's high-income share (dementia leads at 93%); the LMIC panel as its LMIC share (malaria and dengue leads at 86%): 36%–86% LMIC vs 7%–16% LMIC. n per theme = single-country studies whose country studied had a World Bank income group on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Compare the topics most concentrated in higher-income settings with those most concentrated in lower-income settings. These are the two ends of the topic range, rather than a list of the most commonly studied topics overall."
+        },
+        {
+          "file": "fig_intervention_mix_pubyear.webp",
+          "title": "What gets evaluated: types of healthcare by country income",
+          "caption": "Share of each income group's eligible single-country studies whose primary intervention class is the given type (the optional secondary class is not folded in). Pharmaceuticals peak in upper-middle-income settings (46.6%) and fall to 17.9% at low income, where they stay narrowly ahead of care-model and organisational studies (17.4%); vaccines rise steadily with lower income (4.7% → 13.9%) while surgery (13.8% → 7.7%) and devices (8.5% → 3.0%) fall. Base: 27,897 eligible single-country studies whose country studied had a World Bank income group on 1 January of the publication year. Intervention classes were assigned by a large language model from each abstract (one pass), checked against a keyword list, the topic clusters and a second model; they have not been checked by people. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Compare the share of studies evaluating medicines, vaccines, surgery and other types of healthcare. Each study is counted under its main intervention. The chart includes studies about one country with known income."
+        }
+      ]
+    },
+    {
+      "title": "Methods & metrics",
+      "blurb": "How the evidence base was built and how it measures outcomes: the study-selection\n             funnel (PRISMA), the field's comparable metric — the QALY or DALY that lets\n             cost-effectiveness be compared across diseases — how its use splits by income, and\n             how often model-based vs measured evaluations report one. It closes with\n             decision-usefulness by intervention type.",
+      "figs": [
+        {
+          "file": "fig_selection_reconciled.svg",
+          "title": "Study selection: 41,610 included records",
+          "caption": "Study-selection flow after publication reconciliation: 72,845 extracted; 31,235 excluded; 41,610 included. Review classification: 1,856 systematic reviews, 796 non-systematic reviews and 38,958 records not identified as reviews. Original screening counts are unchanged; the audit adds 44 redundant reports, two registrations without results and one retracted paper to exclusions.",
+          "summary": "The map includes 41,610 records. The current classification identifies 1,856 systematic reviews and 796 non-systematic reviews; 38,958 records are not identified as reviews. The diagram shows screening, extraction and subsequent publication reconciliation."
+        },
+        {
+          "file": "fig_metric_pubyear.webp",
+          "title": "How health benefits are measured differs by country income",
+          "caption": "Share of eligible studies reporting each comparable metric. The metric flips with income: high-income research reports QALYs (54%) and almost no DALYs (1%); low-income research does the reverse (39% DALYs, 8% QALYs) — so rich and poor settings are measured in different units. Base: 41,610 eligible studies (income shown for single-country studies, by the World Bank group of the country studied on 1 January of the publication year); a study may report neither, one, or both. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Studies use measures of healthy life gained or illness avoided. A QALY combines length and quality of life; a DALY measures healthy life lost to illness or early death. A study may report either, both or neither."
+        },
+        {
+          "file": "paper02_reconciled.webp",
+          "title": "Generic outcome reporting differs by model use",
+          "caption": "Base: 40,054 included records with a model-use flag. Generic outcomes are QALYs or DALYs; a record reporting both counts once. Abstract reporting does not establish methodological quality.",
+          "summary": "Generic outcome reporting differs by model use"
+        },
+        {
+          "file": "fig_intervention_decision_reconciled.webp",
+          "title": "What abstracts report for healthcare decisions",
+          "caption": "Base: 41,610 included records; intervention rows use the included records within each class. Primary intervention class only; residual Other omitted. Signals are abstract keyword flags, not a full-text quality assessment. \"Not reported\" does not mean \"not done\".",
+          "summary": "What abstracts report for healthcare decisions"
+        }
+      ]
+    },
+    {
+      "title": "Geography & authorship",
+      "blurb": "Where the research is about, and who leads it. Income-comparative figures use\n             extracted geography only (the affiliation proxy is income-biased in availability);\n             authorship figures use harvested affiliations and declare their denominator, including\n             the income-group local-authorship estimate with its confidence intervals.",
+      "figs": [
+        {
+          "file": "fig_dotmap_reconciled.webp",
+          "title": "Where economic evaluation studies are conducted",
+          "caption": "Each bubble represents a country; area is the number of unique included records naming it. Colour uses July 2026 income, grey where unavailable. Locations are study settings, not author affiliations. 31,740 study-country pairs across 187 named countries; locations without a matched map polygon have no bubble. Robinson projection.",
+          "summary": "Where economic evaluation studies are conducted"
+        },
+        {
+          "file": "fig_worldmap_reconciled.webp",
+          "title": "Studies examining each country, relative to population",
+          "caption": "Shading uses the 155 country website list with population data. Grey includes countries with no recorded study or no population in this list. 31,740 study-country pairs across 187 named countries in the full geography. Natural Earth medium-resolution polygons; Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+          "summary": "Studies examining each country, relative to population"
+        },
+        {
+          "file": "paper03_reconciled.webp",
+          "title": "Research availability relative to population",
+          "caption": "Base: 153 countries with at least one study, population and income classification from the 155 country website list. Zero-study countries are omitted from the log axis. Dashed lines are within-group medians. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "summary": "Research availability relative to population"
+        },
+        {
+          "file": "fig_authorship_pattern_v2.svg",
+          "title": "Are local researchers involved in studies about their countries?",
+          "caption": "Panel A: 24,000 studies about a single country with at least one known author location and an income group at publication (of 27,899 single-country studies). Panel B: the 22,678 of these with a local author, by the income groups of the other authors' countries in the year of publication. 10 studies had a co-author country without a World Bank group; those countries are left out of the mix. Author locations come from institutional affiliations; study countries come from the study text, so a study cannot count as local through its affiliations alone.",
+          "summary": "Compare studies with authors based in the country studied and studies involving authors based elsewhere. A third of studies about low-income countries have no author based there. Author location comes from recorded institutional affiliations, which are known for 85% of studies."
+        },
+        {
+          "file": "fig_forest_v2.svg",
+          "title": "Local authorship differs across regions",
+          "caption": "Base: 24,002 studies about a single country with at least one known author location (of 27,899 single-country studies); 'local' = at least one author affiliation in the country studied. Regions are WHO regions (Taiwan and Hong Kong take the region of their UN sub-region); regions with fewer than 50 such studies would be left out, and none are. Uncertainty ranges are 95% Wilson intervals. Income groups are the World Bank group in force at publication.",
+          "summary": "Most studies about a country include an author based there, but this happens less often in Africa (WHO region), at about three in four studies. Author location comes from recorded affiliations and does not establish who led the study."
+        },
+        {
+          "file": "paper06_v2.svg",
+          "title": "Some studies about lower-income countries have no locally based author",
+          "caption": "Share of single-country studies with at least one author based in the country studied, by income group at publication (point and 95% Wilson interval). n = 516 low income, 1,413 lower middle income, 4,010 upper middle income, 18,061 high income studies. Author locations come from institutional affiliations and are known for 35,362 of 41,610 studies, 2010–2026.",
+          "summary": "A third of studies about low-income countries have no author with a recorded affiliation there. Missing or incomplete affiliations can affect this estimate; local authorship does not necessarily mean local leadership."
+        },
+        {
+          "file": "fig_collab_chord_v2.svg",
+          "title": "How researchers collaborate across country income groups",
+          "caption": "Base: 35,361 of 41,610 studies with at least one author country that has a World Bank income group in the year of publication. Ribbons link pairs of income groups among a study's author countries; a study with authors in three groups adds a ribbon for each pair. 14 studies had an author country without an income group; that country is left out. Author locations come from institutional affiliations.",
+          "summary": "The connections show studies whose authors are based in different income groups. Almost all of these collaborations include an author based in a high-income country, while most studies have authors from only one income group. Recorded affiliations identify author locations, rather than funding or study leadership."
+        }
+      ]
+    },
+    {
+      "title": "Gaps vs disease burden",
+      "blurb": "The map's whole point: research against the burden of disease (GBD 2023 DALYs,\n             country totals and 22 Level-2 causes) — per unit of burden, against a\n             burden-proportional share, and within the LMIC group; the journal finishes sit beside\n             their companion figures.",
+      "figs": [
+        {
+          "file": "fig_research_burden_ratio.svg",
+          "title": "Lower-income countries have less economic evidence relative to their disease burden",
+          "caption": "Base: 154 countries with positive burden data; 31,437 study-country counts. 1 country excluded because burden is unavailable. Eritrea and Mauritius have no identified studies. Studies published 2010–2026 (final year partial); GBD 2023 all-cause DALYs. A study naming multiple countries counts once for each country. Ratios compare shares, so countries well above proportional push others below it. Proportional is a reference point, not a measure of adequacy. Horizontal position within a group is random jitter. Full country values: research_burden_ratios.csv.",
+          "summary": "Each dot is a country. Dots below the line have less research than their share of the world's illness and early death would suggest. A typical low-income country has about a tenth of that share; a typical high-income country has about twice its share. The line is a reference point, not a target."
+        },
+        {
+          "file": "paper07_reconciled.webp",
+          "title": "Research intensity relative to disease burden",
+          "caption": "Base: 152 countries with studies and non-missing GBD 2023 all-cause DALYs and income classification. Countries with zero studies are omitted from the log scale. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "summary": "Research intensity relative to disease burden"
+        },
+        {
+          "file": "fig_burden_disease_companion_gbd.webp",
+          "title": "Does research attention match the burden of different diseases?",
+          "caption": "Each GBD 2023 level-2 cause's share of studies against its share of disease burden (DALYs), in low- and middle-income and in high-income countries. The widest lower-income shortfalls: cardiovascular (8% of studies vs 16% of burden), mental disorders (2% of studies vs 6% of burden), maternal & neonatal (4% of studies vs 8% of burden). Studies naming an infection or injury without its cause are left out. Burden: GBD 2023 DALYs. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Compare each disease group's share of research with its share of illness and early death, in lower-income and high-income countries. This helps identify areas receiving relatively less research attention."
+        },
+        {
+          "file": "paper08_gbd.webp",
+          "title": "Some disease groups receive less research attention relative to their burden",
+          "caption": "Research share divided by disease-burden share for the 22 GBD 2023 level-2 causes, in low- and middle-income and in high-income countries; left of 1, a cause has a smaller share of research than of burden. The largest lower-income gaps: transport injuries (0.018×), self-harm & violence (0.065×), mental disorders (0.37×); maternal & neonatal runs 0.54× its burden share in lower-income settings and 2× in high-income ones. Disease groups coded from titles and abstracts to the same GBD causes as the burden, so no crosswalk is needed; studies naming an injury without its cause are left out, so injury ratios are lower bounds. Burden: GBD 2023 DALYs. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Injuries, especially self-harm, violence and road injuries, and mental disorders show the largest differences between research attention and disease burden. The comparison is a reference point, not a target."
+        },
+        {
+          "file": "fig_deficit_checked.svg",
+          "title": "Where are the largest differences between research and disease burden?",
+          "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,592 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,437 pairs). Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point.",
+          "summary": "This chart highlights the largest differences between the number of studies examining each country and that country's disease burden."
+        },
+        {
+          "file": "fig_injustice_reconciled.webp",
+          "title": "How research attention compares with disease burden",
+          "caption": "Base: 152 countries plotted; 154 countries contribute to the burden-proportional reference, including zero-study countries. 31,437 study-country pairs. Dashed line: the pair total multiplied by the burden share of each country. Proportionality is a reference point, not an adequacy target. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+          "summary": "How research attention compares with disease burden"
+        },
+        {
+          "file": "fig_inequality_checked.svg",
+          "title": "How research coverage varies with disease burden",
+          "caption": "Base: 106 LMIC countries with GBD 2023 all-cause DALYs; 8,725 study–country pairs; 2 countries have no study. Countries ordered by studies per DALY. The first 41 countries crossing 50% of burden carry 53.9% of burden and 1,454 pairs (16.7%); the marker is at these actual coordinates. The five countries with the greatest burden (India, China, Nigeria, Indonesia, Pakistan) instead carry 51.7% of burden and 48.1% of evidence. Gini = 0.49. Country grouping uses July 2026 income classifications; studies span 2010–2026, final year partial. Each multi-country study counts once per country.",
+          "summary": "Compare the amount of research available with the level of illness and early death. A low study count does not by itself show whether the evidence is sufficient or useful."
+        }
+      ]
+    },
+    {
+      "title": "Open access & funding",
+      "blurb": "How the evidence is packaged and reached. Open-access status covers 87% of the\n             eligible studies (post DOI-supplement harvest); the funder field covers ~27% and is a\n             floor, not a census.",
+      "figs": [
+        {
+          "file": "fig_openaccess_reconciled.webp",
+          "title": "How access to economic evidence has changed",
+          "caption": "Base: 22,954 single-country included records, 2010-2025, with known publication-year income and known open-access status. All three lines use this same base; 2026 is excluded as partial. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "summary": "How access to economic evidence has changed"
+        },
+        {
+          "file": "fig_funder_funders.svg",
+          "title": "Top funders: who funds economic evidence, and where?",
+          "caption": "Top 15 recorded funders by unique eligible studies. 11,149 of 41,610 studies report a funder. Blue/coral identify single-country studies by the income group of the country studied; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.",
+          "views": [
+            {
+              "label": "Funders as named",
+              "file": "fig_funder_funders.svg"
+            },
+            {
+              "label": "Grouped by organisation",
+              "file": "fig_funder_treemap.svg",
+              "title": "Top funders by organisation: who funds the most studies?",
+              "summary": "The same funders, with programmes and institutes counted under the organisation they belong to. NIHR (incl. HTA Programme: 844) is named in 1,666 studies, and the US NIH including its institutes in 1,093. Bigger box = more studies. Counts are studies that name a funder, not amounts of money.",
+              "caption": "NIHR includes its programmes (HTA, Public Health Research, HS&DR, Programme Grants for Applied Research, EME, Research for Patient Benefit), Biomedical Research Centres, ARCs/CLAHRCs and fellowships. US NIH includes its institutes and centres (e.g. NCI, NIAID, NIDA, NHLBI, NIMH, NCATS). Same-named bodies in other countries stay separate. Each study counts once per funder; other funders are counted as in the bar chart."
+            }
+          ],
+          "summary": "The bars show how many studies report each funder, rather than how much money they provided. Only about 27% of studies report a funder in the dataset, so this is an incomplete picture. Colours show the income group of the country studied; grey retains other settings and missing income information."
+        }
+      ]
+    },
+    {
+      "title": "Maps & regional charts",
+      "blurb": "Three world maps (research intensity vs burden, open access, and how recent each\n             country's evidence is) plus two regional bar charts (local authorship and model-based\n             share, by UN sub-region). Eligible-only counts; share maps and bars show only groups\n             with enough studies (grey/omitted below).",
+      "figs": [
+        {
+          "file": "fig_map_burden_reconciled.webp",
+          "title": "Research intensity relative to disease burden, by country",
+          "caption": "183 of 204 national GBD 2023 locations have at least one study; 21 have burden but no study. Median among locations with studies: 0.67 studies per 100,000 DALYs. Grey means no study or no matched national burden row. Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+          "summary": "Research intensity relative to disease burden, by country"
+        },
+        {
+          "file": "fig_map_openaccess_reconciled.webp",
+          "title": "Where studies are available to read for free",
+          "caption": "Base: 133 countries with at least five unique included records with known open-access status. Grey: fewer than five known-status records or no matching country. Study settings are extracted from titles/abstracts; Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+          "summary": "Where studies are available to read for free"
+        },
+        {
+          "file": "fig_map_growth_reconciled.webp",
+          "title": "Where the evidence base contains more recent studies",
+          "caption": "Base: 138 countries with at least five included records. Colour is the share published in 2018-2026; 2026 is partial. This is the age composition of the evidence, not an estimated annual growth rate. Grey: fewer than five records. Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+          "summary": "Where the evidence base contains more recent studies"
+        },
+        {
+          "file": "fig_map_authorship_v2.svg",
+          "title": "Where do studies include locally based authors?",
+          "caption": "Share of each WHO region's single-country studies with at least one author based in the country studied. Africa is lowest at 76.9%, Western Pacific highest at 97.5%. Base: 24,002 single-country studies with known author locations. Taiwan and Hong Kong take the WHO region of their UN sub-region.",
+          "summary": "This chart shows, for each WHO region, how often studies include an author based in the country studied. It uses recorded affiliations, which can be incomplete, and does not establish who led the research."
+        },
+        {
+          "file": "fig_map_model_reconciled.webp",
+          "title": "Model use across study regions",
+          "caption": "Base: 30,602 unique study-country pairs with known model status. Regions with at least 100 pairs are shown. Dashed reference: 64 %, calculated across all pairs, so this differs from the study-level Overview share. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+          "summary": "Model use across study regions"
+        }
+      ]
+    },
+    {
+      "title": "Trends over time",
+      "blurb": "Comparative time-series on the year dimension (2010–2025; 2026 partial, dropped).\n             Income-comparative panels use single-country extracted geography with a known income\n             group.",
+      "figs": [
+        {
+          "file": "fig_equity_time_pubyear.webp",
+          "title": "A growing share of research focuses on lower-income countries",
+          "caption": "Share of each year's single-country studies about low- and middle-income countries (LMICs): 17% in 2010 → 35% in 2025, against the 83% of global disease burden (GBD 2023 all-cause DALYs) those countries carry (dashed line). Studies naming a single country with a known income group (26,093); 2026 is partial and left out. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year (World Bank historical classifications). For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Track the share of studies about low- and middle-income countries over time. Publication counts show research attention, rather than funding amounts or evidence quality."
+        },
+        {
+          "file": "fig_reach_time_checked.svg",
+          "title": "More countries now have at least one study",
+          "caption": "Cumulative reach through each publication year. Countries are grouped by the World Bank classification in force on 1 January of that year; the denominator excludes unavailable country-year groups. Taiwan uses the recorded high-income override. A country is reached once any eligible study has named it by that year, including studies from its earlier income groups. In 2025, solid lines cover 154 classified countries from the 155-country website list (2 unreached); dashed lines cover 197 classified/overridden Natural Earth Sovereign country/Country entities (21 unreached), with no population floor. Denominators vary by year; 197 is not a fixed count of all World Bank economies. 2026 is partial and omitted, so the Ethiopia/Venezuela 2026 fallback does not affect these lines.",
+          "summary": "Track how many countries are mentioned in at least one included study. Having one study indicates some coverage; it does not mean there is enough evidence for all healthcare decisions."
+        },
+        {
+          "file": "fig_method_stream_v2.svg",
+          "title": "How studies measure health benefits is changing",
+          "caption": "Studies by publication year and evaluation type, 2010–2025 (2026 partial, left out): 37,199 studies with an evaluation type and 1,810 reviews that report no evaluation of their own, shown as a separate grey band and excluded from type shares. Reviews that also report the authors' own evaluation keep its type. Cost-utility rose from 43.6% to 51.4% of typed studies; cost-effectiveness fell from 31.2% to 23.6%.",
+          "summary": "More studies now use measures that combine length and quality of life. These measures help compare health benefits across different diseases. Reviews that report no evaluation of their own are shown separately and not counted as an evaluation type. The 2026 count is incomplete and left out."
+        },
+        {
+          "file": "fig_decision_time_v2.svg",
+          "title": "Studies increasingly report information that helps assess value for money",
+          "caption": "Base: 27,462 cost-utility and cost-effectiveness studies (of 37,199 studies with an evaluation type, 2010–2025; 2026 partial, left out). Reviews that report no evaluation of their own are excluded; reviews that also report the authors' own evaluation keep its type. Only these two types report thresholds and incremental ratios. Keyword matches on the abstract. The cost-effectiveness threshold rose most, 16% → 36%.",
+          "summary": "Track how often abstracts mention costs relative to health benefits, uncertainty and other information useful for decisions. These are abstract-based checks; an item may be addressed in the full paper even if it is absent from the abstract. Reviews that report no evaluation of their own are left out."
+        }
+      ]
+    },
+    {
+      "title": "Priority-setting for funders",
+      "blurb": "Built for a funder asking where the next pound buys the most missing evidence.\n             Ranked by gap, never by cost-to-close: there is no cost or research-funding-amount\n             data. Proportionality to burden is a reference point, not a target.",
+      "figs": [
+        {
+          "file": "fig_funder_opportunity_gbd.webp",
+          "title": "Evidence gaps: where is research scarce relative to health needs?",
+          "caption": "Research share divided by disease-burden share for each GBD 2023 level-2 cause and World Bank income group (single-country studies). The thinnest evidence relative to burden: mental disorders in upper-middle-income countries (0.24×); unintentional injuries in upper-middle-income countries (0.35×); substance use in upper-middle-income countries (0.36×); unintentional injuries in lower-middle-income countries (0.38×). Cells with fewer than 15 studies are grey. Studies naming an infection or injury without its cause are left out, so injury ratios are lower bounds. Burden: GBD 2023 DALYs by income group (classification on 1 January 2023). Matching research to burden is a reference point, not a target. Income group of studies: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Explore disease groups and income levels with relatively little evidence compared with disease burden. These comparisons help identify questions for further investigation; they do not estimate the cost or benefit of new research."
+        },
+        {
+          "file": "fig_funder_scorecard_v2.svg",
+          "title": "Evidence gaps: where is research coverage lowest relative to disease burden?",
+          "caption": "Share of studies examining each country, divided by that country's share of global disease burden (GBD 2023 all-cause DALYs), so country size does not drive the ranking. Base: 154 countries with GBD 2023 burden data; 152 with at least one identified study are plotted and ranked. Eritrea and Mauritius have no identified studies. 31,437 study-country counts: a study naming several countries counts once for each. Ratios resting on few studies are less stable; study counts are shown on each bar. Proportional is a reference point, not a measure of adequacy. Full country values: fig_funder_scorecard_v2.csv.",
+          "summary": "Compare the share of studies examining each country with that country's share of global disease burden. A study examining several countries counts for each. Because the comparison uses shares, large countries do not dominate the ranking. Ratios based on few studies are less stable."
+        },
+        {
+          "file": "fig_funder_capacity_reconciled.webp",
+          "title": "Local authorship and potential research-capacity gaps",
+          "caption": "Base: 105 countries with at least five single-country studies with known author locations, publication-year income, and a GBD 2023 burden value. Local authorship means an affiliation in the country studied; it is a proxy, not a full measure of capacity. Point area is the number of studies with known author locations. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "summary": "Local authorship and potential research-capacity gaps"
+        },
+        {
+          "file": "fig_funder_trajectory_gbd.webp",
+          "title": "Gap trends: which evidence gaps are narrowing over time?",
+          "caption": "Lower-income countries' share of studies divided by their share of burden, for each GBD 2023 level-2 cause, 2010–2017 vs 2018–2026. Below burden and not closing: mental disorders, unintentional injuries, substance use, maternal & neonatal, cardiovascular, enteric (diarrhoeal) infections, eye and ear, nutritional deficiencies. Below burden but closing: chronic respiratory, neurological, musculoskeletal. Closing means the 2018–2026 ratio is at least 5% above the 2010–2017 ratio. Burden: GBD 2023 DALYs in low- and middle-income countries, a fixed reference for both periods. Past publication trends describe what happened, not future research needs. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year. For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions.",
+          "summary": "Compare changes in research coverage over time. Past publication trends show what has happened, rather than predicting future research or funding needs."
+        },
+        {
+          "file": "fig_funder_funders.svg",
+          "title": "Top funders: who funds economic evidence, and where?",
+          "caption": "Top 15 recorded funders by unique eligible studies. 11,149 of 41,610 studies report a funder. Blue/coral identify single-country studies by the income group of the country studied; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.",
+          "views": [
+            {
+              "label": "Funders as named",
+              "file": "fig_funder_funders.svg"
+            },
+            {
+              "label": "Grouped by organisation",
+              "file": "fig_funder_treemap.svg",
+              "title": "Top funders by organisation: who funds the most studies?",
+              "summary": "The same funders, with programmes and institutes counted under the organisation they belong to. NIHR (incl. HTA Programme: 844) is named in 1,666 studies, and the US NIH including its institutes in 1,093. Bigger box = more studies. Counts are studies that name a funder, not amounts of money.",
+              "caption": "NIHR includes its programmes (HTA, Public Health Research, HS&DR, Programme Grants for Applied Research, EME, Research for Patient Benefit), Biomedical Research Centres, ARCs/CLAHRCs and fellowships. US NIH includes its institutes and centres (e.g. NCI, NIAID, NIDA, NHLBI, NIMH, NCATS). Same-named bodies in other countries stay separate. Each study counts once per funder; other funders are counted as in the bar chart."
+            }
+          ],
+          "summary": "The bars show how many studies report each funder, rather than how much money they provided. Only about 27% of studies report a funder in the dataset, so this is an incomplete picture. Colours show the income group of the country studied; grey retains other settings and missing income information."
+        }
+      ]
+    },
+    {
+      "title": "Wellcome priority themes",
+      "blurb": "A funder-specific view of economic evidence in Wellcome's three priority themes: Infectious Diseases, Mental Health and Climate & Health. It separates all evidence in each theme from studies that report Wellcome funding, ranks the funders reported within each theme, and sets out how each theme was defined.",
+      "figs": [
+        {
+          "file": "fig_wellcome_priorities.svg",
+          "title": "Wellcome-funded studies: which priority themes do they cover?",
+          "caption": "Studies reporting Wellcome Trust as a funder in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses GBD 2023 disease codes from titles and abstracts and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment.",
+          "summary": "This chart counts studies that report Wellcome Trust as a funder in each theme, with Wellcome's share of theme studies and its rank among reported funders. The grey bar shows studies outside all three themes. Disease groups provide broad theme indicators, and Climate & Health uses a reviewed title-and-abstract screen. Climate & Health is small because few studies in the map address climate. Themes can overlap; these counts are not a complete record of Wellcome grants."
+        },
+        {
+          "file": "wellcome_analysis.html",
+          "html": true,
+          "title": "Theme explorer: who funds each priority theme, and where?",
+          "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health is a reviewed title-and-abstract screen and is small because few economic evaluations address climate.",
+          "summary": "Explore the evidence and recorded funders within Wellcome's priority themes. The view separates all theme-related studies from Wellcome-funded studies. Theme coverage and funding records are incomplete. Climate & Health is a reviewed title-and-abstract screen, and is small because few studies in the map address climate."
+        }
+      ]
+    }
+  ],
+  "hero": [
+    {
+      "text": "This app maps the global evidence base of health economic evaluations — studies that\n             compare two or more ways of delivering care on both costs and consequences. ",
+      "strong": false,
+      "em": false
+    },
+    {
+      "text": "41,657",
+      "strong": true,
+      "em": false
+    },
+    {
+      "text": " full economic evaluations published 2010–2026 are included. The ",
+      "strong": false,
+      "em": false
+    },
+    {
+      "text": "Gallery",
+      "strong": false,
+      "em": true
+    },
+    {
+      "text": " presents the full figure catalogue by theme, the ",
+      "strong": false,
+      "em": false
+    },
+    {
+      "text": "Explorer",
+      "strong": false,
+      "em": true
+    },
+    {
+      "text": " crosses any variables in the corpus, the ",
+      "strong": false,
+      "em": false
+    },
+    {
+      "text": "Country profile",
+      "strong": false,
+      "em": true
+    },
+    {
+      "text": " opens a single setting, and ",
+      "strong": false,
+      "em": false
+    },
+    {
+      "text": "Methods",
+      "strong": false,
+      "em": true
+    },
+    {
+      "text": " explains how the map is built.",
+      "strong": false,
+      "em": false
+    }
+  ],
+  "glance_tiles": [
+    {
+      "label": "Eligible full evaluations",
+      "value": "41,657",
+      "theme": "primary",
+      "sub": null
+    },
+    {
+      "label": "Years covered",
+      "value": "2010–2026",
+      "theme": "secondary",
+      "sub": null
+    },
+    {
+      "label": "Countries studied",
+      "value": "169",
+      "theme": "info",
+      "sub": "named in extracted geography"
+    },
+    {
+      "label": "Journals",
+      "value": "3,944",
+      "theme": "secondary",
+      "sub": "of the harvested set"
+    },
+    {
+      "label": "Use QALYs",
+      "value": "44%",
+      "theme": "success",
+      "sub": null
+    },
+    {
+      "label": "Model-based",
+      "value": "54%",
+      "theme": "info",
+      "sub": null
+    },
+    {
+      "label": "Single-country studies",
+      "value": "67%",
+      "theme": "secondary",
+      "sub": null
+    }
+  ],
+  "funnel": [
+    {
+      "label": "Identified",
+      "records": "1,154,050",
+      "strong": false
+    },
+    {
+      "label": "Excluded — no abstract (unscreenable)",
+      "records": "−34,239",
+      "strong": false
+    },
+    {
+      "label": "Screened at title/abstract",
+      "records": "1,119,811",
+      "strong": false
+    },
+    {
+      "label": "Excluded at screening",
+      "records": "−1,021,746",
+      "strong": false
+    },
+    {
+      "label": "Advanced to extraction (45,792 confident + 52,273 unsure)",
+      "records": "98,065",
+      "strong": false
+    },
+    {
+      "label": "Excluded — no abstract to extract from",
+      "records": "−25,220",
+      "strong": false
+    },
+    {
+      "label": "Extracted",
+      "records": "72,845",
+      "strong": false
+    },
+    {
+      "label": "Excluded — partial evaluations",
+      "records": "−13,573",
+      "strong": false
+    },
+    {
+      "label": "Excluded — unclear at extraction",
+      "records": "−11,975",
+      "strong": false
+    },
+    {
+      "label": "Excluded — consequences not clinical",
+      "records": "−4,965",
+      "strong": false
+    },
+    {
+      "label": "Excluded — duplicate DOI or title",
+      "records": "−675",
+      "strong": false
+    },
+    {
+      "label": "Excluded — additional redundant publications",
+      "records": "−44",
+      "strong": false
+    },
+    {
+      "label": "Excluded — registrations without results",
+      "records": "−2",
+      "strong": false
+    },
+    {
+      "label": "Excluded — retracted paper",
+      "records": "−1",
+      "strong": false
+    },
+    {
+      "label": "Analysis population",
+      "records": "41,610",
+      "strong": true
+    },
+    {
+      "label": "of which systematic reviews",
+      "records": "1,856",
+      "strong": false
+    },
+    {
+      "label": "of which non-systematic reviews",
+      "records": "796",
+      "strong": false
+    }
+  ],
+  "paper01_caption": "Study-selection flow after publication reconciliation: 72,845 extracted; 31,235 excluded; 41,610 included. Review classification: 1,856 systematic reviews, 796 non-systematic reviews and 38,958 records not identified as reviews. Original screening counts are unchanged; the audit adds 44 redundant reports, two registrations without results and one retracted paper to exclusions.",
+  "registries": {
+    "trend_vars": [
+      {
+        "label": "Income group",
+        "column": "income"
+      },
+      {
+        "label": "UN region",
+        "column": "un_region"
+      },
+      {
+        "label": "Evaluation type",
+        "column": "econ_eval_type"
+      },
+      {
+        "label": "Design basis",
+        "column": "design_basis"
+      },
+      {
+        "label": "Model vs measured",
+        "column": "model_label"
+      },
+      {
+        "label": "Uses QALY",
+        "column": "qaly_label"
+      },
+      {
+        "label": "Open access",
+        "column": "oa_label"
+      },
+      {
+        "label": "Geographic scope",
+        "column": "geo_scope"
+      },
+      {
+        "label": "Nothing (total)",
+        "column": "none"
+      }
+    ],
+    "comp_vars": [
+      {
+        "label": "Evaluation type",
+        "column": "econ_eval_type"
+      },
+      {
+        "label": "Design basis",
+        "column": "design_basis"
+      },
+      {
+        "label": "Model vs measured",
+        "column": "model_label"
+      },
+      {
+        "label": "Uses QALY",
+        "column": "qaly_label"
+      },
+      {
+        "label": "Open access",
+        "column": "oa_label"
+      },
+      {
+        "label": "Geographic scope",
+        "column": "geo_scope"
+      },
+      {
+        "label": "Era",
+        "column": "era"
+      },
+      {
+        "label": "Topic domain",
+        "column": "topic_domain"
+      },
+      {
+        "label": "Disease group",
+        "column": "grp"
+      },
+      {
+        "label": "Reports an ICER",
+        "column": "icer_label"
+      },
+      {
+        "label": "Reports a threshold",
+        "column": "thresh_label"
+      }
+    ],
+    "stack_vars": [
+      {
+        "label": "None",
+        "column": ""
+      },
+      {
+        "label": "Era",
+        "column": "era"
+      },
+      {
+        "label": "Model vs measured",
+        "column": "model_label"
+      },
+      {
+        "label": "Uses QALY",
+        "column": "qaly_label"
+      },
+      {
+        "label": "Geographic scope",
+        "column": "geo_scope"
+      }
+    ],
+    "map_metrics": [
+      {
+        "label": "Studies",
+        "column": "studies"
+      },
+      {
+        "label": "Studies per 100k DALYs",
+        "column": "per100k"
+      },
+      {
+        "label": "Studies per US$1bn spending",
+        "column": "per_bn"
+      },
+      {
+        "label": "Studies per million people",
+        "column": "per_million"
+      }
+    ],
+    "scat_x": [
+      {
+        "label": "Total DALYs (GBD 2023)",
+        "column": "dalys"
+      },
+      {
+        "label": "Population",
+        "column": "pop"
+      },
+      {
+        "label": "Health spending, PPP US$bn (2022)",
+        "column": "total_spend_bn"
+      }
+    ],
+    "scat_y": [
+      {
+        "label": "Studies",
+        "column": "studies"
+      },
+      {
+        "label": "Studies per 100k DALYs",
+        "column": "per100k"
+      },
+      {
+        "label": "Studies per US$1bn spending",
+        "column": "per_bn"
+      },
+      {
+        "label": "Studies per million people",
+        "column": "per_million"
+      }
+    ],
+    "signal_metrics": [
+      "Model-based",
+      "Uses QALY",
+      "Reports ICER",
+      "Reports threshold",
+      "Open access"
+    ]
+  }
+}

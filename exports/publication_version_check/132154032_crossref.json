@@ -1,0 +1,116 @@
+{
+  "institution": [
+    {
+      "name": "National Bureau of Economic Research",
+      "acronym": [
+        "NBER"
+      ],
+      "place": [
+        "Cambridge, MA"
+      ]
+    }
+  ],
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        21
+      ]
+    ],
+    "date-time": "2026-09-21T11:32:47Z",
+    "timestamp": 1789990367382,
+    "version": "4.0.1"
+  },
+  "publisher-location": "Cambridge, MA",
+  "reference-count": 0,
+  "publisher": "National Bureau of Economic Research",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "DOI": "10.3386/w22899",
+  "type": "report",
+  "created": {
+    "date-parts": [
+      [
+        2016,
+        12,
+        5
+      ]
+    ],
+    "date-time": "2016-12-05T21:53:11Z",
+    "timestamp": 1480974791000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 17,
+  "title": [
+    "The Long-Run Effects of Childhood Insurance Coverage: Medicaid Implementation, Adult Health, and Labor Market Outcomes"
+  ],
+  "prefix": "10.3386",
+  "author": [
+    {
+      "given": "Andrew",
+      "family": "Goodman-Bacon",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "1960",
+  "published-online": {
+    "date-parts": [
+      [
+        2016,
+        12
+      ]
+    ]
+  },
+  "container-title": [],
+  "original-title": [],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        19
+      ]
+    ],
+    "date-time": "2026-09-19T12:16:54Z",
+    "timestamp": 1789820214000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://www.nber.org/papers/w22899.pdf"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2016,
+        12
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.3386/w22899",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2016,
+        12
+      ]
+    ]
+  }
+}
