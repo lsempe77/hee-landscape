@@ -43,7 +43,7 @@ def main():
         patches.Rectangle((.074,.054),.884,.749,transform=fig.transFigure,color='#f7f4ee',linewidth=0),
         patches.Rectangle((.037,.12),.011,.709,transform=fig.transFigure,color='#f4f1eb',linewidth=0),
         patches.Rectangle((0,.046),1,.008,transform=fig.transFigure,color='#b1d1ee',linewidth=0),
-        patches.Circle((.03,.05),.020,transform=fig.transFigure,color='#b1d1ee',linewidth=0)])
+        patches.Ellipse((.03,.05),.040,.071,transform=fig.transFigure,color='#b1d1ee',linewidth=0)])
     # Use the genuine logo and gradient assets from the user's 3ie presentation.
     axg=fig.add_axes([.040,.125,.006,.694],zorder=2);axg.imshow(mpimg.imread(OUT/'image3.png'),aspect='auto');axg.axis('off')
     axlogo=fig.add_axes([.0175,.018,.023,.060],zorder=5);axlogo.imshow(mpimg.imread(OUT/'image2.png'));axlogo.axis('off')

@@ -530,7 +530,37 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 /* "Who funds the evidence?" card: purple bars on a lavender track. */
 .funding-overview-card .metrics-overview-row { grid-template-columns: minmax(9.2rem, 1.25fr) minmax(5rem, 2fr) 3.2rem; }
 /* "Types of economic evaluation" card: room for labels such as "Cost-effectiveness (CEA)" and their "?". */
-.eval-types-card .metrics-overview-row { grid-template-columns: minmax(10.8rem, 1.4fr) minmax(4rem, 2fr) 3.2rem; }
+.eval-types-card { container-type: inline-size; }
+.eval-types-card .metrics-overview-chart {
+  grid-template-columns: max-content minmax(2rem, 1fr) max-content;
+  column-gap: .8rem;
+  row-gap: .45rem;
+}
+.eval-types-card .metrics-overview-row {
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  column-gap: inherit;
+}
+.eval-types-card .metrics-overview-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+}
+.eval-types-card .metrics-overview-label .metric-help-button {
+  flex-shrink: 0;
+  margin-left: 0;
+}
+@container (max-width: 22rem) {
+  .eval-types-card .metrics-overview-chart {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    row-gap: .65rem;
+  }
+  .eval-types-card .metrics-overview-row { row-gap: .3rem; }
+  .eval-types-card .metrics-overview-label {
+    grid-column: 1 / -1;
+    white-space: normal;
+  }
+}
 .funding-overview-card .metrics-overview-track { background: #e4dfea; }
 .funding-overview-card .metrics-overview-fill { background: linear-gradient(90deg, #a590b5, #705a84); }
 /* "Who funds the evidence?" card: link-style prompt to the funder figures. */
