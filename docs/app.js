@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-13-scorecard-text";
+const BUILD = "2026-10-14-publication-reconciliation";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -1063,7 +1063,9 @@ if (typeof document !== "undefined") {
   // Trends over time) moves to Methods & metrics only.
   const HIDDEN_SECTIONS = new Set(["Size & growth", "Maps & regional charts"]);
   // The selection flow is opened from the Overview's study-count card.
-  const HIDDEN_FIGURES = new Set(["paper01.webp"]);
+  // The Schmallenbach "which diseases moved" charts are hidden until they show uncertainty (kept in EXTRA_SECTIONS).
+  const HIDDEN_FIGURES = new Set(["paper01.webp", "schmallenbach2025/main_fig4_16causes.png",
+    "schmallenbach2025/supp_fig4_20causes.png", "schmallenbach2025/supp_fig4_hic_16causes.png"]);
   // Shown only as the section's index thumbnail; its interactive view already
   // carries the same numbers, so the section page shows that view alone.
   const THUMBNAIL_ONLY_FIGURES = new Set(["fig_wellcome_priorities.svg"]);
@@ -1748,9 +1750,9 @@ if (typeof document !== "undefined") {
   // 2026-10-11): studies with at least one outcome in the DALYs family, and with
   // at least one outcome in any family other than QALYs or DALYs. Update with
   // the export; if the study count changes, those two rows show "XX%".
-  const OUTCOME_STUDIES = 41657;
-  const DALY_STUDIES = 1435;
-  const OTHER_OUTCOME_STUDIES = 36332;
+  const OUTCOME_STUDIES = 41610;
+  const DALY_STUDIES = 1434;
+  const OTHER_OUTCOME_STUDIES = 36288;
 
   function outcomeMetricsCard() {
     const n = Math.max(1, db.nStudies);
