@@ -932,8 +932,14 @@ if (typeof document !== "undefined") {
   const KLD_NOTE = "Research–disease divergence is the Kullback–Leibler divergence (KLD) of the research mix from the " +
     "burden mix across GBD level-2 causes: the sum over causes of p·ln(p/q), where p is a cause's share of DALYs " +
     "(GBD 2023) and q its share of studies (a study naming several causes counts for each; add-one smoothing). " +
-    "0 = research spread across diseases exactly as burden is. Studies are placed by the country studied (the paper " +
-    "uses first-author country); income is the World Bank group in force at publication (studies) or in the burden " +
+    "0 = research spread across diseases exactly as burden is. Studies are placed by the country studied, where the " +
+    "paper uses first-author country. An economic evaluation is tied to its setting: its costs, prices, health-care " +
+    "delivery and value-for-money threshold are those of the country it examines, so it informs decisions there. " +
+    "Placing it by the country studied therefore tests whether the evidence available to each setting matches that " +
+    "setting's burden, which is the question here. Placing it by author country would count a high-income team's " +
+    "evaluation of a low-income country as high-income research, mixing up who produces evidence (shown separately " +
+    "in the authorship figures) with whom it serves. Author locations are also known for only 85% of studies. " +
+    "Income is the World Bank group in force at publication (studies) or in the burden " +
     "year (DALYs). 3-year rolling windows; solid = 2010–2019, dashed = windows reaching 2020–23 (COVID-19). " +
     "Shaded bands: 95% intervals from resampling studies (1,000 draws). Reference: Schmallenbach L et al. Nat Med " +
     "2025;31:3101–9, doi:10.1038/s41591-025-03923-0.";
@@ -942,9 +948,18 @@ if (typeof document !== "undefined") {
     "parts, each the average of fixing one side first, so they add up; % of 2010–12 divergence.";
   const KLD_FIG4_NOTE = " Shown as shares rather than the paper's per-cause KLD terms, which can be negative and so " +
     "misread single causes. 'Closer'/'further': whether the gap between a cause's research share and DALY share narrowed.";
+  // The paper's own figures, as tabs in the figure pop-up (CC BY 4.0; cropped from the published PDF).
+  const KLD_CREDIT = " Reproduced from Schmallenbach L, Bley M, Bärnighausen TW, Sugimoto CR, Lerchenmüller C, " +
+    "Lerchenmueller MJ. Global distribution of research efforts, disease burden, and impact of US public funding " +
+    "withdrawal. Nat Med 2025;31:3101–9, doi:10.1038/s41591-025-03923-0, under a CC BY 4.0 licence " +
+    "(https://creativecommons.org/licenses/by/4.0/). Changes: cropped from the published PDF; caption shortened.";
+  const kldViews = (ours, original) => [
+    { label: "Our replication (HEE map)", file: ours },
+    { label: "Original (Schmallenbach et al. 2025)", ...original }];
   const EXTRA_SECTIONS = [{
     title: "Schmallenbach et al 2025",
-    blurb: "Temporary placeholder. A replication of Schmallenbach et al. (2025, Nature Medicine) Fig. 2a and Fig. 3 for " +
+    blurb: "Temporary placeholder. A replication of Schmallenbach et al. (2025, Nature Medicine; " +
+      "https://doi.org/10.1038/s41591-025-03923-0) Fig. 2a and Fig. 3 for " +
       "health economic evaluations: is the mix of diseases studied moving closer to the mix of disease burden, and is " +
       "that because research changed or because burden changed? With and without high-income studies, plus " +
       "sensitivity and supplementary versions. Preliminary findings for discussion.",
@@ -952,14 +967,32 @@ if (typeof document !== "undefined") {
       { file: KLD_DIR + "main_fig2a_16causes.png", title: "Evolution of research–disease divergence (Fig. 2a)",
         summary: "How far the mix of diseases studied is from the mix of disease burden, over time, with and without " +
           "high-income studies. With them, the gap fell by about a fifth from 2010–12 to 2017–19; for studies of low- " +
-          "and middle-income countries it did not change overall.",
-        caption: "The paper's 16 GBD level-2 causes. " + KLD_NOTE },
+          "and middle-income countries it did not change overall. Open the figure to compare it with the paper's original.",
+        caption: "The paper's 16 GBD level-2 causes. " + KLD_NOTE,
+        views: kldViews(KLD_DIR + "main_fig2a_16causes.png", {
+          file: KLD_DIR + "original_fig2a.png", title: "Original: evolution of research–disease divergence (Schmallenbach et al. 2025, Fig. 2a)",
+          summary: "Across all life-science research, divergence between research and disease burden fell by about 48% " +
+            "from 1999 to 2019, and about 60% to 2021 once the COVID-19 years are added.",
+          caption: "Research–disease divergence (KLD) of global research share versus global DALY share for each disease " +
+            "category and each year, 1999–2021, based on 8.6 million disease-specific research articles across 16 level-2 " +
+            "disease causes; dashed line: 2020–21. Research is placed by first-author country." + KLD_CREDIT }) },
       { file: KLD_DIR + "main_fig3_16causes.png",
         title: "Contributions of research and disease burden to changes in divergence (Fig. 3)",
         summary: "With high-income studies, the fall in divergence comes from disease burden changing, not research, as " +
           "the paper found for health research overall. For low- and middle-income countries, burden changes alone " +
-          "would have widened the gap slightly; research shifts offset that, but their effect is uncertain.",
-        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG3_NOTE + " " + KLD_NOTE },
+          "would have widened the gap slightly; research shifts offset that, but their effect is uncertain. Open the " +
+          "figure to compare it with the paper's original.",
+        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG3_NOTE + " " + KLD_NOTE,
+        views: kldViews(KLD_DIR + "main_fig3_16causes.png", {
+          file: KLD_DIR + "original_fig3.png",
+          title: "Original: contributions of research and disease burden to changes in divergence (Schmallenbach et al. 2025, Fig. 3)",
+          summary: "The observed fall in divergence (blue) follows the line where research is held at its 1999 mix (green), " +
+            "while holding DALYs at 1999 (red) shows no fall: the paper concludes that changing disease burden, not " +
+            "changing research, narrowed the divergence.",
+          caption: "Research–disease divergence (KLD) of global research share versus global DALY share for each disease " +
+            "and each year (1999–2019), with observed data (blue line) and simulated distributions assuming constant 1999 " +
+            "research shares (green line) and constant 1999 DALY shares (red line), based on 7.4 million disease-specific " +
+            "articles across 16 level-2 disease causes." + KLD_CREDIT }) },
       { file: KLD_DIR + "main_fig4_16causes.png", title: "Which diseases moved, 2010–12 to 2017–19",
         summary: "Each disease's share of studies and share of burden, at the start and end. Research on low- and " +
           "middle-income countries moved a lot: HIV/AIDS fell from 18% to 10% of studies and cancer rose from 14% to " +
@@ -2102,6 +2135,23 @@ if (typeof document !== "undefined") {
   // Figures drawn at least this many pixels wide span two grid columns.
   const WIDE_FIGURE_MIN_PX = 2300;
 
+  // Plain text with any https:// URLs turned into links (text nodes only, never innerHTML).
+  function setTextWithLinks(node, text) {
+    node.textContent = "";
+    for (const part of text.split(/(https:\/\/[^\s)]+)/)) {
+      if (!part.startsWith("https://")) {
+        node.appendChild(document.createTextNode(part));
+        continue;
+      }
+      const a = el("a");
+      a.href = part;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = part;
+      node.appendChild(a);
+    }
+  }
+
   function showSection(i, returnTo = null, groupIndex = null) {
     const sec = GALLERY[i];
     const group = groupIndex == null ? null : sec.groups[groupIndex];
@@ -2114,7 +2164,7 @@ if (typeof document !== "undefined") {
     $("gal-index").style.display = "none";
     $("gal-section").style.display = "block";
     $("gal-sec-title").textContent = view.title;
-    $("gal-sec-blurb").textContent = view.blurb.replace(/\s+/g, " ").trim();
+    setTextWithLinks($("gal-sec-blurb"), view.blurb.replace(/\s+/g, " ").trim());
     const topics = $("gal-subsections");
     topics.textContent = "";
     topics.hidden = !sec.groups || !!group;

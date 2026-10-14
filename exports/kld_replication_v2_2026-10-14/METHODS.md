@@ -16,6 +16,11 @@ Reference: Schmallenbach L, et al. *Nature Medicine* 31, 3101–3109 (2025). doi
   - **without:** studies of low- and middle-income countries against LMIC DALYs.
 
   Studies of high-income countries against HIC DALYs are supplementary. Studies are placed by the country studied, and income is the World Bank group in force at publication.
+- **Why the country studied and not first-author country (the paper's choice).**
+  - **An economic evaluation is tied to its setting.** Its costs, prices, health-care delivery and value-for-money threshold are those of the country it examines, so it informs decisions there.
+  - **That matches our question.** Placing studies by the country studied tests whether the evidence available to each setting matches that setting's burden.
+  - **Author country would mix two things.** It would count a high-income team's evaluation of a low-income country as high-income research, confusing who produces evidence with whom it serves. Who produces evidence is covered separately in the map's authorship figures.
+  - **Coverage.** Author locations are known for only 85% of studies.
 - **Periods.** 3-year rolling windows, labelled 2010–12 to 2021–23.
   - **Main period:** windows within 2010–2019, as the paper stops its Fig. 3 at 2019.
   - **Extension:** windows reaching 2020–23 are shown dashed, because COVID-19 affects them.
