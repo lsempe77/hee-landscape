@@ -416,6 +416,13 @@ function studyCatGetter(db, varName, flt) {
 export function compCounts(db, flt, xv, sv, mode) {
   const pct = mode === "pct";
   const stacked = !!(sv && sv !== xv);
+  // OA percentages condition on known status, matching the overview card.
+  // Count mode retains Unknown so missingness remains inspectable.
+  const knownOaOnly = pct && (xv === "oa_label" || (stacked && sv === "oa_label"));
+  const unknownOa = db.codeOf.oa_label.get("Unknown");
+  const excludedUnknown = knownOaOnly
+    ? flt.studies.filter(s => db.studies.oa_label[s] === unknownOa).length : 0;
+  const eligibleOa = s => !knownOaOnly || db.studies.oa_label[s] !== unknownOa;
   const counts = new Map();
   const add = (cat, stk) => {
     if (cat == null) return;
@@ -434,13 +441,15 @@ export function compCounts(db, flt, xv, sv, mode) {
     const d = db.disease;
     for (let i = 0; i < d.s.length; i++) {
       const s = d.s[i];
-      if (!flt.mask[s]) continue;
+      if (!flt.mask[s] || !eligibleOa(s)) continue;
       add(db.disease_grps[d.g[i]], stacked ? stackOf(s) : null);
     }
   } else {
     const catOf = studyCatGetter(db, xv, flt);
     const stackOf = stacked ? studyCatGetter(db, sv, flt) : null;
-    for (const s of flt.studies) add(catOf(s), stacked ? stackOf(s) : null);
+    for (const s of flt.studies) {
+      if (eligibleOa(s)) add(catOf(s), stacked ? stackOf(s) : null);
+    }
   }
 
   const cmpStr = (a, b) => a < b ? -1 : a > b ? 1 : 0;
@@ -451,7 +460,7 @@ export function compCounts(db, flt, xv, sv, mode) {
     const total = rows.reduce((a, r) => a + r.n, 0);
     for (const r of rows) r.v = pct ? (total > 0 ? 100 * r.n / total : 0) : r.n;
     rows.sort((a, b) => b.v - a.v);
-    return { type: "simple", rows, total, pct };
+    return { type: "simple", rows, total, pct, knownOaOnly, excludedUnknown };
   }
 
   const cats = [...counts.keys()].sort(cmpStr);
@@ -476,7 +485,7 @@ export function compCounts(db, flt, xv, sv, mode) {
       values[c][k] = pct ? (totals.get(c) > 0 ? 100 * nn / totals.get(c) : 0) : nn;
     }
   }
-  return { type: "stacked", catOrder, stacks, counts: rawCounts, values, totals: Object.fromEntries(totals), pct };
+  return { type: "stacked", catOrder, stacks, counts: rawCounts, values, totals: Object.fromEntries(totals), pct, knownOaOnly, excludedUnknown };
 }
 
 export function byCountryTop(db, flt, k = 10) {
@@ -2741,7 +2750,9 @@ if (typeof document !== "undefined") {
     const res = compCounts(db, state.result, xv, sv, mode);
     const note = xv === "grp" ? " · a study can sit in several disease groups" : "";
     const annotation = {
-      text: label + note, xref: "paper", yref: "paper",
+      text: label + note + (res.knownOaOnly
+        ? "<br>Known open-access status only; " + fmtNum(res.excludedUnknown) + " unknown excluded (see Count mode)." : ""),
+      xref: "paper", yref: "paper",
       x: 0, y: 1.06, xanchor: "left", showarrow: false,
       font: { size: 11, color: "#6b7280" }
     };
@@ -2764,7 +2775,7 @@ if (typeof document !== "undefined") {
           automargin: true
         },
         xaxis: {
-          title: res.pct ? "share of filtered studies (%)" : "studies",
+          title: res.pct ? (res.knownOaOnly ? "share with known open-access status (%)" : "share of filtered studies (%)") : "studies",
           gridcolor: "#eeebe3",
           ticksuffix: res.pct ? "%" : ""
         }
@@ -2788,7 +2799,7 @@ if (typeof document !== "undefined") {
           automargin: true
         },
         xaxis: {
-          title: res.pct ? "share within category (%)" : "studies",
+          title: res.pct ? (res.knownOaOnly ? "share within category, known OA status (%)" : "share within category (%)") : "studies",
           gridcolor: "#eeebe3",
           range: res.pct ? [0, 100] : undefined,
           ticksuffix: res.pct ? "%" : ""
@@ -2797,7 +2808,7 @@ if (typeof document !== "undefined") {
     }
     window.Plotly.react("x-comp", traces, Object.assign({
       font: BASE_FONT,
-      margin: { t: 30, b: 70, l: 170, r: 20 },
+      margin: { t: res.knownOaOnly ? 55 : 30, b: 70, l: 170, r: 20 },
       legend: hLegend(-0.22),
       plot_bgcolor: "rgba(0,0,0,0)",
       paper_bgcolor: "rgba(0,0,0,0)",
