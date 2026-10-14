@@ -476,7 +476,7 @@ def render(v):
         q_intensity=help_btn("intensity"), q_ee_rate=help_btn("ee_rate"), q_disease=help_btn("disease"),
         q_top=help_btn("top_diseases"), q_utility=help_btn("utility_region"), q_global=help_btn("global_avg"),
         q_trend=help_btn("trend"),
-        n_map=len(v["map_rows"]), n_gbd=v["n_gbd"], trend_end=v["trend_end"],
+        n_map=len(v["map_rows"]), n_gbd=v["n_gbd"], trend_end=v["trend_end"], n_ee=fmt_int(len(v["ees"])),
     )
 
 
@@ -511,6 +511,8 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 .sec b {{ background:var(--ink); color:#fff; font-size:11px; width:20px; height:20px; display:inline-flex; align-items:center; justify-content:center; border-radius:3px; }}
 .sec h2 {{ font:800 20px/1 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; font-stretch:condensed; text-transform:uppercase; margin:0; }}
 .sec span {{ color:var(--muted); font-size:12px; }}
+.scope {{ display:flex; align-items:center; gap:12px; margin:30px 0 4px; color:var(--ink); font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; }}
+.scope::before, .scope::after {{ content:""; flex:1; border-top:1.5px solid var(--ink); }}
 #map {{ height:520px; }}
 .kpis {{ display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); border-top:1.5px solid var(--ink); border-bottom:1px solid var(--line); margin-top:8px; }}
 .kpis.k3 {{ grid-template-columns:repeat(3, minmax(0, 1fr)); }}
@@ -569,10 +571,11 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
   <div class="kh">The evidence at a glance</div>
   <div class="kpis">{study_kpis}</div>
 
+  <div class="scope">Full economic evaluations only ({n_ee})</div>
   <div class="sec"><b>A</b><h2>Look north for economic evidence (mostly)</h2><span>Research is concentrated in North America, Europe and higher-income parts of Asia and the Pacific</span>{q_ee_rate}</div>
   <div id="map"></div>
 
-  <div class="sec"><b>B</b><h2>Profile of studies by region</h2><span>Full economic evaluations only (reviews left out). Each card matches the black region tag on the map</span></div>
+  <div class="sec"><b>B</b><h2>Profile of studies by region</h2><span>Each card matches the black region tag on the map</span></div>
   <div class="kh">Health economic evaluations: study composition</div>
   <div class="kpis k3">{ee_kpis}</div>
 
