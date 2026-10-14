@@ -4,7 +4,7 @@ Version 4: version 3 (build_glance_regions_who_v3.py, kept) revised after
 reviewer comments: new title ("Health Economic Evaluations") and panel A title;
 the overview stats sit under the title, without the reviews share; the
 economic-evaluation stats sit under the regional profile; and the map and the
-region cards count full economic evaluations only (reviews left out), with
+region cards count full economic evaluations only (reviews that report no evaluation of their own left out), with
 top diseases from scripts/region_disease_themes_who_ee.json. Writes
 docs/figures/fig_glance_regions_who_v4.html.
 
@@ -96,7 +96,7 @@ PLOTLY_SRI = "sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEuln
 NOTES = {
     "full_ee": "Share of studies that are full economic evaluations: they compare both the costs and consequences of "
                "two or more alternative methods of delivering health care (i.e. cost-utility, cost-effectiveness, "
-               "cost-consequence or cost-benefit analyses). The rest are reviews (systematic or otherwise) that contain "
+               "cost-consequence or cost-benefit analyses). This includes {n_rev_eval} reviews that also report a full evaluation of the authors' own. The rest are reviews (systematic or otherwise) that contain "
                "evidence on cost-effectiveness or value for money.",
     "period": "2026 is a partial year: the literature searches ran until August 2026. "
               "Studies published later in 2026 are not included.",
@@ -108,20 +108,20 @@ NOTES = {
               "Many studies do not report funding, so this is a lower bound on the share that were funded.",
     "ee_rate": "Number of economic evaluations naming at least one country, divided by the combined disease burden of all "
                "countries on the map, including those with no evaluation. The disease burden is measured in disability-adjusted "
-               "life years (DALYs) as reported by IHME's 2023 Global Burden of Disease study. Reviews, and evaluations naming only "
+               "life years (DALYs) as reported by IHME's 2023 Global Burden of Disease study. Reviews that report no evaluation of their own, and evaluations naming only "
                "places without burden data (such as Hong Kong), are left out. Evaluations published over the whole period are "
                "divided by one year's burden. {n_ee_nocountry} economic evaluations ({pct_ee_nocountry}) did not specify a country. "
                "If these are included, the number of economic evaluations per 100,000 DALYs rises to {ee_rate_incl}.",
     "utility": "Share of economic evaluations that report a utility measure as an outcome: quality-adjusted life years "
-               "(QALYs) or disability-adjusted life years (DALYs). Reviews are left out.",
+               "(QALYs) or disability-adjusted life years (DALYs). Reviews that report no evaluation of their own are left out.",
     "model": "Share of economic evaluations that contain at least some modelled analysis (e.g. using decision trees, "
              "Markov/state-transition models or dynamic transmission models) rather than basing the analysis solely on trial "
-             "or real-world data. Reviews, and evaluations whose approach is unclear, are left out of the base.",
+             "or real-world data. Reviews that report no evaluation of their own, and evaluations whose approach is unclear, are left out of the base.",
     "intensity": "Economic evaluations naming at least one country in the region, divided by the region's disease burden: the healthy years of life lost to illness and early death (DALYs, Global Burden of Disease 2023), per 100,000 DALYs. "
-                 "Reviews, and evaluations naming only places without burden data (such as Hong Kong), are left out of this rate. "
+                 "Reviews that report no evaluation of their own, and evaluations naming only places without burden data (such as Hong Kong), are left out of this rate. "
                  "Evaluations published over the whole period are divided by one year's burden. "
                  "The marker sits on the same colour scale as the map.",
-    "disease": "Share of the region's disease-coded economic evaluations (reviews left out), split into the Global Burden of Disease (GBD 2023) top-level groups: "
+    "disease": "Share of the region's disease-coded economic evaluations (reviews that report no evaluation of their own left out), split into the Global Burden of Disease (GBD 2023) top-level groups: "
                "communicable, maternal, neonatal and nutritional conditions; non-communicable diseases; and injuries. "
                "Each study's diseases were coded to GBD causes from its title and abstract (the condition the evaluated intervention targets). "
                "An evaluation in several of these groups is split equally between them. About nine in ten studies name a disease.",
@@ -129,18 +129,18 @@ NOTES = {
                     "so this row uses research themes instead. A computer grouped all studies by the wording of their abstracts "
                     "into 73 themes (a 'topic model'), and we gave each theme that is about one disease a plain name, "
                     "such as HIV or breast cancer; themes about a procedure or setting rather than a disease are left out. "
-                    "The percentage is the share of the region's economic evaluations in that theme (reviews left out). Each study belongs to at most one theme, "
+                    "The percentage is the share of the region's economic evaluations in that theme (reviews that report no evaluation of their own left out). Each study belongs to at most one theme, "
                     "and about 14% of studies fit no theme, so these shares are a lower bound. The dot colour shows "
                     "communicable, non-communicable or injury, as in the disease focus row above.",
     "utility_region": "Share of the region's economic evaluations that report a utility measure (a QALY or a DALY) as an outcome. "
-                      "Reviews are left out. The red line is the global average.",
+                      "Reviews that report no evaluation of their own are left out. The red line is the global average.",
     "global_avg": "The global average is the share of all economic evaluations naming at least one country, in any region, "
                   "that report a QALY or a DALY. Each evaluation counts once, so larger regions weigh more; it is not a "
                   "simple average of the six regional figures. Evaluations naming no country are left out, as they "
                   "belong to no region; they report a utility measure less often, which is why the overall share in "
                   "the study composition row above is lower.",
     "trend": "Cumulative share of the region's countries and territories (all {n_gbd} with Global Burden of Disease 2023 data, "
-             "assigned to WHO regions) named by at least one economic evaluation, or by two or more, by each year (reviews left out). The grey line is the same for all regions combined. "
+             "assigned to WHO regions) named by at least one economic evaluation, or by two or more, by each year (reviews that report no evaluation of their own left out). The grey line is the same for all regions combined. "
              "The final, partial year of data is left out.",
 }
 
@@ -204,8 +204,13 @@ def main():
         return (sum(1 for s in pool if st[col][s] == code) / len(pool)) if pool else None
 
     # Economic evaluations (EEs): every study that is not a review.
+    # A full economic evaluation is any study with an evaluation type, as elsewhere on the site:
+    # reviews that also report their own evaluation keep its type and count (n_rev_eval of them).
+    no_type = lv["econ_eval_type"].index("Review (no evaluation type)")
+    is_ee = [c != no_type for c in st["econ_eval_type"]]
     not_review = lv["review_label"].index("Not a review")
-    is_ee = [c == not_review for c in st["review_label"]]
+    n_rev_eval = sum(1 for s in range(len(years)) if in_range[s] and is_ee[s] and st["review_label"][s] != not_review)
+    NOTES["full_ee"] = NOTES["full_ee"].format(n_rev_eval=fmt_int(n_rev_eval))
     ees = [s for s in studies if is_ee[s]]
     ee_share = len(ees) / n_studies
     review_share = 1 - ee_share
@@ -254,7 +259,7 @@ def main():
     # Red line on the region cards: the same pool as the regions (EEs naming a country).
     utility_linked = utility_share(linked)
 
-    # ---- Map: economic evaluations per 100k DALYs per country (reviews left out) ----
+    # ---- Map: economic evaluations per 100k DALYs per country (reviews that report no evaluation of their own left out) ----
     per_country = defaultdict(int)
     for s in linked:
         if not is_ee[s]:
@@ -601,7 +606,7 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
     <div>
       <p>Data: 3ie Health Economic Evaluation (HEE) Evidence Map, data as of {built}; studies published {period} {q_period}</p>
       <p>Regions: the WHO's six regions (AFR Africa, AMR Americas, SEAR South-East Asia, EUR Europe, EMR Eastern Mediterranean, WPR Western Pacific), with Indonesia in the Western Pacific since 2025. Taiwan and Hong Kong, which the WHO does not assign, are placed in the Western Pacific. The United States and Argentina left the WHO in 2026 but stay in the Americas region on the WHO's list. The map covers the {n_map} countries in the evidence map's country data that have disease-burden data. The country count and trend lines use all {n_gbd} countries and territories in the Global Burden of Disease; trends run to {trend_end}.</p>
-      <p>Disease burden: healthy years lost to illness and early death (DALYs), Global Burden of Disease 2023. Disease focus: diseases coded to Global Burden of Disease 2023 causes from each study's title and abstract, grouped into communicable (with maternal, neonatal and nutritional), non-communicable and injuries. Top three diseases: research topics found by grouping similar abstracts. Utility measure: a QALY or a DALY reported as an outcome, counting economic evaluations only (not reviews). The map and the regional profile count full economic evaluations only (reviews left out); the overview stats count all studies. Rates per 100,000 DALYs divide evaluations published over the whole period by one year's burden (2023). Grey on the map: no economic evaluation or no burden data.</p>
+      <p>Disease burden: healthy years lost to illness and early death (DALYs), Global Burden of Disease 2023. Disease focus: diseases coded to Global Burden of Disease 2023 causes from each study's title and abstract, grouped into communicable (with maternal, neonatal and nutritional), non-communicable and injuries. Top three diseases: research topics found by grouping similar abstracts. Utility measure: a QALY or a DALY reported as an outcome, counting economic evaluations only (not reviews). The map and the regional profile count full economic evaluations only (reviews that report no evaluation of their own left out); the overview stats count all studies. Rates per 100,000 DALYs divide evaluations published over the whole period by one year's burden (2023). Grey on the map: no economic evaluation or no burden data.</p>
     </div>
   </div>
 </div>

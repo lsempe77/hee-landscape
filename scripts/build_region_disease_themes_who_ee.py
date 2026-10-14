@@ -1,7 +1,7 @@
 """Top disease themes by WHO region, for the at-a-glance infographic (economic evaluations only).
 
 Copy of build_region_disease_themes_who.py (kept) that counts only full economic
-evaluations (studies whose review_label in docs/data/studies.json is "Not a review",
+evaluations (studies with an evaluation type in docs/data/studies.json, including reviews that report their own evaluation,
 the same definition build_glance_regions_who_v4.py uses), so the region cards can
 show economic evaluations only. Writes scripts/region_disease_themes_who_ee.json.
 
@@ -56,8 +56,9 @@ def main():
     with open(os.path.join(ROOT, "docs", "data", "studies.json"), encoding="utf-8") as f:
         st = json.load(f)
     with open(os.path.join(ROOT, "docs", "data", "dict.json"), encoding="utf-8") as f:
-        not_review = json.load(f)["levels"]["review_label"].index("Not a review")
-    ees = {str(rid) for rid, lab in zip(st["record_id"], st["review_label"]) if lab == not_review}
+        no_type = json.load(f)["levels"]["econ_eval_type"].index("Review (no evaluation type)")
+    # Any study with an evaluation type, incl. reviews that report their own evaluation (as on the glance page).
+    ees = {str(rid) for rid, et in zip(st["record_id"], st["econ_eval_type"]) if et != no_type}
     included &= ees
     cluster_of = {r["record_id"]: r["cluster"] for r in read_csv(os.path.join(args.raw, "topic_map.csv"))}
 

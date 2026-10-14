@@ -1428,27 +1428,35 @@ if (typeof document !== "undefined") {
     "Model-based": { sub: "Results estimated with a computer model rather than measured in patients" }
   };
   const PLACEHOLDER_PCT = "XX%";
-  // The web data has no review-type field. Counts are from the team export
-  // (hee_analysis_master_v2.csv `review_type`, 2026-10-12): an automated
-  // title-and-abstract screen of the included studies. Update with the export.
-  const REVIEW_COUNTS = { systematic: 1856, other: 797 };
+  // Review counts from the web data's review_label (an automated title-and-abstract
+  // screen); the fallback is the 2026-10-14 reconciled export, used only if the
+  // field is missing. withEval = reviews that also report their own evaluation
+  // (they keep its type and count as full economic evaluations).
+  function reviewCounts() {
+    if (!db || !db.codeOf.review_label) return { systematic: 1856, other: 796, withEval: 667 };
+    const systematic = countLevel("review_label", "Systematic review");
+    const other = countLevel("review_label", "Other review");
+    return { systematic, other, withEval: systematic + other - countLevel("econ_eval_type", "Review (no evaluation type)") };
+  }
   // paragraphs is a getter: it is read when the help opens, after the data
   // has loaded (db is still null while this block runs).
   const REVIEW_HELP = {
     title: "How are reviews counted?",
     get paragraphs() {
-      const reviewOnly = (db && db.dict.meta.review_only) || 1986;
+      const reviewOnly = (db && db.dict.meta.review_only) || 1985;
+      const rc = reviewCounts();
       return [
       "Reviews bring together the results of earlier studies. A systematic review searches for and appraises " +
       "studies using set, reported methods; other reviews (narrative, scoping or rapid reviews, or reviews that " +
       "do not describe themselves as systematic) are counted separately.",
       "These counts come from an automated screen of each study's title and abstract, so they are provisional. " +
-      "Some reviews also include the authors' own evaluation. The selection diagram uses the same " +
-      "current classification: 1,856 systematic and 796 non-systematic reviews.",
+      "The selection diagram uses the same classification: " + fmtNum(rc.systematic) + " systematic and " +
+      fmtNum(rc.other) + " non-systematic reviews.",
       "Charts of evaluation type (cost-benefit, cost-consequence, cost-effectiveness, cost-utility) do not count " +
       "the " + fmtNum(reviewOnly) + " reviews that report no evaluation of their own: they appear as a separate " +
-      "“Review (no evaluation type)” group, and type percentages leave them out. Reviews that also report " +
-      "the authors' own evaluation keep its type."
+      "“Review (no evaluation type)” group, and type percentages leave them out. The other " + fmtNum(rc.withEval) +
+      " reviews also report a full economic evaluation of the authors' own: they keep its type and count as full " +
+      "economic evaluations as well as reviews."
       ];
     }
   };
@@ -1541,12 +1549,13 @@ if (typeof document !== "undefined") {
 
     const stats = el("div", "studies-overview-stats");
     const journalsTile = tileByLabel.get("Journals");
-    const nReviews = REVIEW_COUNTS.systematic + REVIEW_COUNTS.other;
+    const rc = reviewCounts();
+    const nReviews = rc.systematic + rc.other;
     for (const [label, valueText, note, help] of [
       ["Journals", journalsTile ? journalsTile.value : "—",
         "Publishing the studies, among those with journal details available"],
       ["Reviews", fmtNum(nReviews),
-        fmtNum(REVIEW_COUNTS.systematic) + " systematic · " + fmtNum(REVIEW_COUNTS.other) +
+        fmtNum(rc.systematic) + " systematic · " + fmtNum(rc.other) +
         " other reviews of earlier studies", REVIEW_HELP]
     ]) {
       const stat = el("div", "studies-overview-stat");
@@ -1810,7 +1819,8 @@ if (typeof document !== "undefined") {
     rows.sort((a, b) => b[1] - a[1]);
     const reviews = countLevel("econ_eval_type", "Review (no evaluation type)");
     return barRowsCard("eval-types-card", "Types of economic evaluation", rows,
-      "Share of the " + fmtNum(typed) + " studies with an evaluation type; " + fmtNum(reviews) +
+      "Share of the " + fmtNum(typed) + " studies with an evaluation type, including " + fmtNum(reviewCounts().withEval) +
+      " reviews that also report their own full evaluation; " + fmtNum(reviews) +
       " reviews that report no evaluation of their own are left out.", {
         title: "How are the types counted?",
         paragraphs: [
