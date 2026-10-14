@@ -27,7 +27,7 @@ If the observed line follows the first, changing burden explains the trend. If i
 
 ## Differences from the paper
 
-1. **Geography.** Research is placed by the country studied, not the first author's country. This suits our question, which is whether evaluations of a setting track that setting's burden.
+1. **Geography.** The paper's Fig. 2a and Fig. 3 are global (all research vs global DALYs), so geography does not enter; our "all studies" group does the same. The income groups are our extension, and for them research is placed by the country studied. The paper's regional analyses use first-author country instead. Country studied suits our question, which is whether evaluations of a setting track that setting's burden.
 2. **Groups.** There are three groups, each compared with the matching burden:
    - **All studies against global DALYs.** This includes studies naming no country.
    - **Studies naming a low- or middle-income country against LMIC DALYs.**

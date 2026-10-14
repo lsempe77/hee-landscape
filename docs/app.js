@@ -932,8 +932,10 @@ if (typeof document !== "undefined") {
   const KLD_NOTE = "Research–disease divergence is the Kullback–Leibler divergence (KLD) of the research mix from the " +
     "burden mix across GBD level-2 causes: the sum over causes of p·ln(p/q), where p is a cause's share of DALYs " +
     "(GBD 2023) and q its share of studies (a study naming several causes counts for each; add-one smoothing). " +
-    "0 = research spread across diseases exactly as burden is. Studies are placed by the country studied, where the " +
-    "paper uses first-author country. An economic evaluation is tied to its setting: its costs, prices, health-care " +
+    "0 = research spread across diseases exactly as burden is. The paper's Fig. 2a and Fig. 3 compare global research " +
+    "with global burden, so geography does not enter; our 'with high-income studies' panels do the same (all studies " +
+    "vs global DALYs). The split by income is our extension. For it, studies are placed by the country studied (the " +
+    "paper's regional analyses use first-author country). An economic evaluation is tied to its setting: its costs, prices, health-care " +
     "delivery and value-for-money threshold are those of the country it examines, so it informs decisions there. " +
     "Placing it by the country studied therefore tests whether the evidence available to each setting matches that " +
     "setting's burden, which is the question here. Placing it by author country would count a high-income team's " +
@@ -975,7 +977,8 @@ if (typeof document !== "undefined") {
             "from 1999 to 2019, and about 60% to 2021 once the COVID-19 years are added.",
           caption: "Research–disease divergence (KLD) of global research share versus global DALY share for each disease " +
             "category and each year, 1999–2021, based on 8.6 million disease-specific research articles across 16 level-2 " +
-            "disease causes; dashed line: 2020–21. Research is placed by first-author country." + KLD_CREDIT }) },
+            "disease causes; dashed line: 2020–21. Global research vs global DALYs, so geography does not enter; the sample " +
+            "is limited to articles the authors could geolocate by first-author affiliation (about 89%)." + KLD_CREDIT }) },
       { file: KLD_DIR + "main_fig3_16causes.png",
         title: "Contributions of research and disease burden to changes in divergence (Fig. 3)",
         summary: "With high-income studies, the fall in divergence comes from disease burden changing, not research, as " +

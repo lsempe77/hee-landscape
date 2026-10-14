@@ -12,7 +12,10 @@ non-communicable, mental disorders and the three injury groups left out).
 Sensitivity set: those 16 plus mental disorders and the three injury groups (20).
 
 Differences from the paper, stated in the outputs:
-  - research is placed by the country studied, not the first author's country;
+  - the paper's Fig. 2a and Fig. 3 are global (all research vs global DALYs), so
+    geography does not enter; the "all" group here does the same. The income
+    groups are an extension, placing research by the country studied (the
+    paper's regional analyses use first-author country);
   - groups: all studies vs global DALYs; studies naming a low- or middle-income
     country vs LMIC DALYs; studies naming a high-income country vs HIC DALYs.
     Income: the World Bank group in force on 1 January of the publication year
