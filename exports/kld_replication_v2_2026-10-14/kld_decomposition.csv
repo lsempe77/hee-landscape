@@ -1,7 +1,7 @@
-cause_set,group,kld_2010_12,observed,research,burden,observed_lo,research_lo,burden_lo,observed_hi,research_hi,burden_hi
-16causes,all,0.2084,-20.0,6.0,-26.0,-31.7,-8.0,-28.5,-6.8,20.9,-23.2
-16causes,lmic,0.2466,-0.5,-7.0,6.5,-30.3,-35.0,2.2,35.7,27.8,10.1
-16causes,hic,0.159,-21.0,-30.3,9.3,-37.2,-45.4,7.4,-1.4,-11.4,11.2
-20causes,all,0.3545,-21.4,-6.2,-15.2,-31.6,-17.4,-16.4,-8.4,7.2,-13.8
-20causes,lmic,0.3628,-0.7,-3.1,2.4,-25.6,-28.1,0.1,23.3,20.4,4.6
-20causes,hic,0.26,-27.9,-25.2,-2.7,-40.3,-38.6,-3.9,-14.3,-11.1,-1.5
+cause_set,group,kld_2010_12,observed_change_pct,only_dalys_change_research_fixed_pct,only_research_changes_dalys_fixed_pct,observed_change_lo,only_dalys_change_research_fixed_lo,only_research_changes_dalys_fixed_lo,observed_change_hi,only_dalys_change_research_fixed_hi,only_research_changes_dalys_fixed_hi
+16causes,all,0.2109,-20.4,-24.6,6.8,-32.1,-26.6,-8.6,-7.4,-21.9,23.6
+16causes,lmic,0.266,-4.8,9.2,-8.5,-34.1,2.4,-35.8,30.3,14.7,25.0
+16causes,hic,0.1601,-21.4,9.9,-30.2,-37.8,7.1,-45.0,-1.6,12.5,-12.5
+20causes,all,0.3826,-23.4,-14.2,-8.7,-34.3,-15.3,-21.2,-8.8,-12.6,7.2
+20causes,lmic,0.425,-3.5,3.3,-4.5,-29.0,-0.3,-29.5,19.1,6.6,17.6
+20causes,hic,0.2823,-28.4,-3.5,-25.1,-42.9,-4.9,-41.1,-15.6,-1.8,-11.0

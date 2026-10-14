@@ -929,27 +929,46 @@ if (typeof document !== "undefined") {
   // sensitivity and supplementary versions (scripts/build_kld_replication_v2.py;
   // figures copied from exports/kld_replication_v2_2026-10-14).
   const KLD_DIR = "schmallenbach2025/";
-  const KLD_NOTE = "Research–disease divergence is the Kullback–Leibler divergence (KLD) of the research mix from the " +
-    "burden mix across GBD level-2 causes: the sum over causes of p·ln(p/q), where p is a cause's share of DALYs " +
-    "(GBD 2023) and q its share of studies (a study naming several causes counts for each; add-one smoothing). " +
-    "0 = research spread across diseases exactly as burden is. The paper's Fig. 2a and Fig. 3 compare global research " +
-    "with global burden, so geography does not enter; our 'with high-income studies' panels do the same (all studies " +
-    "vs global DALYs). The split by income is our extension. For it, studies are placed by the country studied (the " +
-    "paper's regional analyses use first-author country). An economic evaluation is tied to its setting: its costs, prices, health-care " +
-    "delivery and value-for-money threshold are those of the country it examines, so it informs decisions there. " +
-    "Placing it by the country studied therefore tests whether the evidence available to each setting matches that " +
-    "setting's burden, which is the question here. Placing it by author country would count a high-income team's " +
-    "evaluation of a low-income country as high-income research, mixing up who produces evidence (shown separately " +
-    "in the authorship figures) with whom it serves. Author locations are also known for only 85% of studies. " +
-    "Income is the World Bank group in force at publication (studies) or in the burden " +
-    "year (DALYs). 3-year rolling windows; solid = 2010–2019, dashed = windows reaching 2020–23 (COVID-19). " +
-    "Shaded bands: 95% intervals from resampling studies (1,000 draws). Reference: Schmallenbach L et al. Nat Med " +
-    "2025;31:3101–9, doi:10.1038/s41591-025-03923-0.";
-  const KLD_FIG3_NOTE = " Observed line vs two scenarios fixed at 2010–12: research fixed (only DALYs change) and " +
-    "DALYs fixed (only research changes). Box: the change from 2010–12 to 2017–19 split into research and burden " +
-    "parts, each the average of fixing one side first, so they add up; % of 2010–12 divergence.";
+  const KLD_NOTE = "Method. Research–disease divergence is the Kullback–Leibler divergence (KLD) of the research mix " +
+    "from the burden mix across GBD level-2 causes: the sum over causes of p·ln(p/q), where p is a cause's share of " +
+    "DALYs (GBD 2023) and q its share of studies (a study naming several causes counts for each). 0 = research spread " +
+    "across diseases exactly as burden is. No smoothing, as in the paper's main analysis: no cause has zero studies in " +
+    "any 3-year window of the 16-cause analysis. 3-year rolling windows; solid = 2010–2019, dashed = windows reaching " +
+    "2020–23 (COVID-19). Shaded bands: 95% intervals from resampling studies within each year (1,000 draws); in 1.7% of " +
+    "draws a cause was left with no study and was given 0.5 study. Geography: the paper's Fig. 2a and Fig. 3 compare " +
+    "global research with global burden, so geography does not enter; our 'with high-income studies' panels do the same " +
+    "(all studies vs global DALYs). The split by income is our extension. For it, studies are placed by the country " +
+    "studied (the paper's regional analyses use first-author country). An economic evaluation is tied to its setting: " +
+    "its costs, prices, health-care delivery and value-for-money threshold are those of the country it examines, so it " +
+    "informs decisions there. Placing it by the country studied therefore tests whether the evidence available to each " +
+    "setting matches that setting's burden, which is the question here. Placing it by author country would count a " +
+    "high-income team's evaluation of a low-income country as high-income research, mixing up who produces evidence " +
+    "(shown separately in the authorship figures) with whom it serves. Author locations are also known for only 85% of " +
+    "studies. Income is the World Bank group in force at publication (studies) or in the burden year (DALYs). " +
+    "Reference: Schmallenbach L et al. Nat Med 2025;31:3101–9, doi:10.1038/s41591-025-03923-0.";
+  const KLD_CAVEATS = " Caveats. (1) Small numbers: 442 studies of low- and middle-income countries in 2010–12 and " +
+    "965 in 2017–19 (all studies: 3,004 and 5,246), against 7.4–8.6 million articles in the paper. Intervals for " +
+    "low- and middle-income countries are wide, and their changes cannot be told apart from zero. (2) KLD reacts " +
+    "strongly to causes with few studies. The rise for low- and middle-income countries in 2016–18 comes mainly from " +
+    "cardiovascular disease (9% of studies against 20% of burden, a gap that widened) and chronic respiratory disease, " +
+    "which fell to 8 studies in that window (0.9% of studies against 4.7% of burden). Leaving out causes below 1% (the " +
+    "paper's check; see the sensitivity figure) removes the sharp rise. (3) Levels are not comparable between panels, " +
+    "because each panel uses a different burden reference (global or low- and middle-income DALYs): compare trends " +
+    "within a panel. (4) The period is shorter than the paper's (2010–2023 against 1999–2019), and windows reaching " +
+    "2020–23 are affected by COVID-19. (5) The research is health economic evaluations and reviews of them, not all " +
+    "health research as in the paper; diseases are coded to GBD 2023 causes from each study's title and abstract. " +
+    "(6) Research and burden are compared in the same years, without a time lag. (7) A study naming several causes, or " +
+    "countries in both income groups, counts in each. Preliminary results, not peer reviewed.";
+  const KLD_FIG3_NOTE = " Observed line against two scenarios fixed at 2010–12: research fixed (only DALYs change, " +
+    "green) and DALYs fixed (only research changes, red). Box: the change in each line from 2010–12 to 2017–19, as % of " +
+    "2010–12 divergence, with 95% intervals. As in the paper, the two scenarios need not add up to the observed change.";
   const KLD_FIG4_NOTE = " Shown as shares rather than the paper's per-cause KLD terms, which can be negative and so " +
     "misread single causes. 'Closer'/'further': whether the gap between a cause's research share and DALY share narrowed.";
+  const KLD_20_NOTE = " 20-cause caveat: very few studies are coded to transport injuries (0–5 per 3-year window even " +
+    "across all studies; none in 2010–12 and 2011–13 overall, and none in most windows for low- and middle-income or " +
+    "high-income studies), and self-harm and violence has 0–1 low- and middle-income studies in early windows. An " +
+    "empty cause is given 0.5 study, so the values in this version depend on that choice and should be read with caution.";
+  const kldNotes = (scope, extra = "") => scope + extra + " " + KLD_NOTE + KLD_CAVEATS;
   // The paper's own figures, as tabs in the figure pop-up (CC BY 4.0; cropped from the published PDF).
   const KLD_CREDIT = " Reproduced from Schmallenbach L, Bley M, Bärnighausen TW, Sugimoto CR, Lerchenmüller C, " +
     "Lerchenmueller MJ. Global distribution of research efforts, disease burden, and impact of US public funding " +
@@ -964,13 +983,14 @@ if (typeof document !== "undefined") {
       "https://doi.org/10.1038/s41591-025-03923-0) Fig. 2a and Fig. 3 for " +
       "health economic evaluations: is the mix of diseases studied moving closer to the mix of disease burden, and is " +
       "that because research changed or because burden changed? With and without high-income studies, plus " +
-      "sensitivity and supplementary versions. Preliminary findings for discussion.",
+      "sensitivity and supplementary versions. Preliminary findings for discussion, not peer reviewed.",
     figs: [
       { file: KLD_DIR + "main_fig2a_16causes.png", title: "Evolution of research–disease divergence (Fig. 2a)",
-        summary: "How far the mix of diseases studied is from the mix of disease burden, over time, with and without " +
-          "high-income studies. With them, the gap fell by about a fifth from 2010–12 to 2017–19; for studies of low- " +
-          "and middle-income countries it did not change overall. Open the figure to compare it with the paper's original.",
-        caption: "The paper's 16 GBD level-2 causes. " + KLD_NOTE,
+        summary: "How far the mix of diseases studied is from the mix of disease burden, over time. With high-income " +
+          "studies, divergence fell by 20% from 2010–12 to 2017–19 (95% interval −32% to −7%). For studies of low- and " +
+          "middle-income countries it changed by −5% (−34% to +30%): no clear change. Open the figure to compare it " +
+          "with the paper's original.",
+        caption: kldNotes("The paper's 16 GBD level-2 causes."),
         views: kldViews(KLD_DIR + "main_fig2a_16causes.png", {
           file: KLD_DIR + "original_fig2a.png", title: "Original: evolution of research–disease divergence (Schmallenbach et al. 2025, Fig. 2a)",
           summary: "Across all life-science research, divergence between research and disease burden fell by about 48% " +
@@ -981,11 +1001,12 @@ if (typeof document !== "undefined") {
             "is limited to articles the authors could geolocate by first-author affiliation (about 89%)." + KLD_CREDIT }) },
       { file: KLD_DIR + "main_fig3_16causes.png",
         title: "Contributions of research and disease burden to changes in divergence (Fig. 3)",
-        summary: "With high-income studies, the fall in divergence comes from disease burden changing, not research, as " +
-          "the paper found for health research overall. For low- and middle-income countries, burden changes alone " +
-          "would have widened the gap slightly; research shifts offset that, but their effect is uncertain. Open the " +
-          "figure to compare it with the paper's original.",
-        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG3_NOTE + " " + KLD_NOTE,
+        summary: "With high-income studies, the fall comes from disease burden changing: with research held at its " +
+          "2010–12 mix, divergence would have fallen 25%, while research changes alone moved it +7% (−9% to +24%). " +
+          "This matches the paper. For low- and middle-income countries, burden changes alone would have raised " +
+          "divergence 9% (+2% to +15%); research changes alone lowered it 9%, but with a wide interval (−36% to +25%). " +
+          "Open the figure to compare it with the paper's original.",
+        caption: kldNotes("The paper's 16 GBD level-2 causes.", KLD_FIG3_NOTE),
         views: kldViews(KLD_DIR + "main_fig3_16causes.png", {
           file: KLD_DIR + "original_fig3.png",
           title: "Original: contributions of research and disease burden to changes in divergence (Schmallenbach et al. 2025, Fig. 3)",
@@ -998,29 +1019,41 @@ if (typeof document !== "undefined") {
             "articles across 16 level-2 disease causes." + KLD_CREDIT }) },
       { file: KLD_DIR + "main_fig4_16causes.png", title: "Which diseases moved, 2010–12 to 2017–19",
         summary: "Each disease's share of studies and share of burden, at the start and end. Research on low- and " +
-          "middle-income countries moved a lot: HIV/AIDS fell from 18% to 10% of studies and cancer rose from 14% to " +
+          "middle-income countries moved a lot: HIV/AIDS fell from 18% to 10% of studies and cancer rose from 15% to " +
           "23%, while cardiovascular disease stayed at about 9% of studies against about 20% of burden.",
-        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG4_NOTE + " " + KLD_NOTE },
+        caption: kldNotes("The paper's 16 GBD level-2 causes.", KLD_FIG4_NOTE) },
+      { file: KLD_DIR + "supp_fig2a_rare_causes_excluded_16causes.png", title: "Sensitivity: divergence without rare causes",
+        summary: "The paper's check for causes with very few studies: divergence without causes whose share of studies or " +
+          "burden is below 1%. The trends hold (with high-income studies −16%; low- and middle-income −18%, with a wide " +
+          "interval), and the sharp low- and middle-income rise in 2016–18 disappears.",
+        caption: kldNotes("The paper's 16 GBD level-2 causes, leaving out one fixed set per panel: causes below 1% of " +
+          "studies or burden in any window (with high-income studies: nutritional deficiencies and substance use; low- " +
+          "and middle-income: chronic respiratory, skin and substance use). A fixed set stops the line jumping when a " +
+          "cause crosses 1%.") },
       { file: KLD_DIR + "supp_fig2a_20causes.png", title: "Sensitivity: divergence with mental disorders and injuries",
         summary: "The same as Fig. 2a with 20 causes: the paper's 16 plus mental disorders and the three injury groups, " +
-          "which the paper leaves out and where research is far below burden.",
-        caption: "20 GBD level-2 causes. " + KLD_NOTE },
+          "which the paper leaves out and where research is far below burden. With high-income studies divergence fell " +
+          "23%; for low- and middle-income countries it stayed flat (−3%).",
+        caption: kldNotes("20 GBD level-2 causes.", KLD_20_NOTE) },
       { file: KLD_DIR + "supp_fig3_20causes.png", title: "Sensitivity: research and burden contributions, 20 causes",
-        summary: "With mental disorders and injuries included, the global fall is again mostly burden, and divergence for " +
-          "low- and middle-income countries stays flat.",
-        caption: "20 GBD level-2 causes." + KLD_FIG3_NOTE + " " + KLD_NOTE },
+        summary: "With mental disorders and injuries included, the fall with high-income studies is again mostly burden " +
+          "(−14% with research fixed; research changes alone −9%, interval −21% to +7%), and divergence for low- and " +
+          "middle-income countries stays flat.",
+        caption: kldNotes("20 GBD level-2 causes.", KLD_FIG3_NOTE + KLD_20_NOTE) },
       { file: KLD_DIR + "supp_fig4_20causes.png", title: "Sensitivity: which diseases moved, 20 causes",
         summary: "Research and burden shares for 20 causes, including mental disorders and injuries.",
-        caption: "20 GBD level-2 causes." + KLD_FIG4_NOTE + " " + KLD_NOTE },
+        caption: kldNotes("20 GBD level-2 causes.", KLD_FIG4_NOTE + KLD_20_NOTE) },
       { file: KLD_DIR + "supp_fig2a_hic_16causes.png", title: "Supplementary: divergence for high-income studies",
-        summary: "Studies of high-income countries against high-income DALYs: divergence fell by about a fifth.",
-        caption: "The paper's 16 GBD level-2 causes. " + KLD_NOTE },
+        summary: "Studies of high-income countries against high-income DALYs: divergence fell 21% from 2010–12 to " +
+          "2017–19 (−38% to −2%).",
+        caption: kldNotes("The paper's 16 GBD level-2 causes.") },
       { file: KLD_DIR + "supp_fig3_hic_16causes.png", title: "Supplementary: research and burden contributions, high-income studies",
-        summary: "For high-income countries, research shifting explains the fall in divergence; burden barely moved.",
-        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG3_NOTE + " " + KLD_NOTE },
+        summary: "For high-income countries, research changes explain the fall: research changes alone lowered divergence " +
+          "30% (−45% to −12%), while burden changes alone would have raised it 10%. This differs from the paper.",
+        caption: kldNotes("The paper's 16 GBD level-2 causes.", KLD_FIG3_NOTE) },
       { file: KLD_DIR + "supp_fig4_hic_16causes.png", title: "Supplementary: which diseases moved, high-income studies",
         summary: "Research and burden shares for studies of high-income countries, 2010–12 and 2017–19.",
-        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG4_NOTE + " " + KLD_NOTE }
+        caption: kldNotes("The paper's 16 GBD level-2 causes.", KLD_FIG4_NOTE) }
     ]
   }];
   // Thematic sections hidden from the site, and figures moved to one other
