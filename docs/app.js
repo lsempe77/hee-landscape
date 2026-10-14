@@ -963,7 +963,11 @@ if (typeof document !== "undefined") {
     "green) and DALYs fixed (only research changes, red). Box: the change in each line from 2010–12 to 2017–19, as % of " +
     "2010–12 divergence, with 95% intervals. As in the paper, the two scenarios need not add up to the observed change.";
   const KLD_FIG4_NOTE = " Shown as shares rather than the paper's per-cause KLD terms, which can be negative and so " +
-    "misread single causes. 'Closer'/'further': whether the gap between a cause's research share and DALY share narrowed.";
+    "misread single causes. 'Closer'/'further': whether the gap between a cause's research share and DALY share narrowed. " +
+    "Shares are of study–disease links across the 16 causes (a study naming two causes counts in both; studies naming " +
+    "only other causes are not in the base), not of all studies. No intervals are shown: with about 460 links for " +
+    "low- and middle-income countries in 2010–12 and 1,000 in 2017–19, changes smaller than about 2–4 percentage points, " +
+    "including most 'closer'/'further' labels for small causes, are within sampling noise.";
   const KLD_20_NOTE = " 20-cause caveat: very few studies are coded to transport injuries (0–5 per 3-year window even " +
     "across all studies; none in 2010–12 and 2011–13 overall, and none in most windows for low- and middle-income or " +
     "high-income studies), and self-harm and violence has 0–1 low- and middle-income studies in early windows. An " +
@@ -1012,8 +1016,8 @@ if (typeof document !== "undefined") {
             "articles across 16 level-2 disease causes." + KLD_CREDIT }) },
       { file: KLD_DIR + "main_fig4_16causes.png", title: "Which diseases moved, 2010–12 to 2017–19",
         summary: "Each disease's share of studies and share of burden, at the start and end. Research on low- and " +
-          "middle-income countries moved a lot: HIV/AIDS fell from 18% to 10% of studies and cancer rose from 15% to " +
-          "23%, while cardiovascular disease stayed at about 9% of studies against about 20% of burden.",
+          "middle-income countries moved a lot: HIV/AIDS fell from 18% to 10% of disease mentions and cancer rose from 15% to " +
+          "23%, while cardiovascular disease stayed at about 9% of disease mentions against about 20% of burden.",
         caption: kldNotes("The paper's 16 GBD level-2 causes.", KLD_FIG4_NOTE) },
       { file: KLD_DIR + "supp_fig2a_rare_causes_excluded_16causes.png", title: "Sensitivity: divergence without rare causes",
         summary: "The paper's check for causes with very few studies: divergence without causes whose share of studies or " +
@@ -1056,8 +1060,8 @@ if (typeof document !== "undefined") {
   // Trends over time) moves to Methods & metrics only.
   const HIDDEN_SECTIONS = new Set(["Size & growth", "Maps & regional charts"]);
   // The selection flow is opened from the Overview's study-count card.
-  // The Schmallenbach "which diseases moved" charts are hidden until they show uncertainty (kept in EXTRA_SECTIONS).
-  const HIDDEN_FIGURES = new Set(["paper01.webp", "schmallenbach2025/main_fig4_16causes.png",
+  // The 20-cause and high-income "which diseases moved" charts are hidden (kept in EXTRA_SECTIONS); the main one is shown.
+  const HIDDEN_FIGURES = new Set(["paper01.webp",
     "schmallenbach2025/supp_fig4_20causes.png", "schmallenbach2025/supp_fig4_hic_16causes.png"]);
   // Shown only as the section's index thumbnail; its interactive view already
   // carries the same numbers, so the section page shows that view alone.
