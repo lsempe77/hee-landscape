@@ -1486,12 +1486,15 @@ if (typeof document !== "undefined") {
     const res = compCounts(db, state.result, xv, sv, mode);
     const note = xv === "grp" ? " · a study can sit in several disease groups" : "";
     const annotation = {
-      text: label + note + (res.knownOaOnly
-        ? "<br>Known open-access status only; " + fmtNum(res.excludedUnknown) + " unknown excluded (see Count mode)." : ""),
-      xref: "paper", yref: "paper",
+      text: label + note, xref: "paper", yref: "paper",
       x: 0, y: 1.06, xanchor: "left", showarrow: false,
       font: { size: 11, color: "#6b7280" }
     };
+    const oaNote = $("x-comp-oa-note");
+    oaNote.hidden = !res.knownOaOnly;
+    oaNote.textContent = res.knownOaOnly
+      ? "Percentages use studies with known open-access status; " + fmtNum(res.excludedUnknown) +
+        " unknown-status studies are excluded. Switch to Count to see unknowns." : "";
     let traces, layout;
     if (res.type === "simple") {
       const desc = res.rows;
@@ -1544,7 +1547,7 @@ if (typeof document !== "undefined") {
     }
     window.Plotly.react("x-comp", traces, Object.assign({
       font: BASE_FONT,
-      margin: { t: res.knownOaOnly ? 55 : 30, b: 70, l: 170, r: 20 },
+      margin: { t: 30, b: 70, l: 170, r: 20 },
       legend: hLegend(-0.22),
       plot_bgcolor: "rgba(0,0,0,0)",
       paper_bgcolor: "rgba(0,0,0,0)",
