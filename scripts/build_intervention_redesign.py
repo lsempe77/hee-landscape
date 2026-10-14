@@ -73,10 +73,11 @@ def lighter(hexc, f=.6):
     return tuple(c + (1 - c) * f)
 
 
-def circles(fig, gs_cells, counts, mode, per):
-    """One circle per class, ordered by LMIC share; area proportional to studies."""
+def circles(fig, gs_cells, counts, mode, per, order="lmic"):
+    """One circle per class, ordered by LMIC share (or by size); area proportional to studies."""
     rng = np.random.default_rng(7)
-    items = sorted(counts.items(), key=lambda kv: -kv[1][1] / sum(kv[1]))
+    key = (lambda kv: -sum(kv[1])) if order == "size" else (lambda kv: -kv[1][1] / sum(kv[1]))
+    items = sorted(counts.items(), key=key)
     maxn = max(sum(v) for v in counts.values())
     for cell, (k, (h, l)) in zip(gs_cells, items):
         ax = fig.add_subplot(cell)
@@ -92,29 +93,31 @@ def circles(fig, gs_cells, counts, mode, per):
             i = np.arange(nd) + .5
             r, th = np.sqrt(i / nd), i * math.pi * (3 - math.sqrt(5))  # even sunflower packing
             x, y = r * np.cos(th), r * np.sin(th)
-            order = np.argsort(y)  # LMIC dots fill from the bottom
-            x, y, dot = x[order] * s, y[order] * s, 26 * min(1, .6 + .4 * s)
+            idx = np.argsort(y)  # LMIC dots fill from the bottom
+            x, y = x[idx] * s, y[idx] * s
+            dot = 26 * min(1, .6 + .4 * s) if per > 1 else 1.4
         ax.scatter(x[nl:], y[nl:], s=dot, color=COLOUR[k], lw=0)
         ax.scatter(x[:nl], y[:nl], s=dot, color=lighter(COLOUR[k]), lw=0)
         ax.set_xlim(-1.08, 1.08); ax.set_ylim(-1.08, 1.08); ax.set_aspect("equal"); ax.axis("off")
         ax.set_title(f"{LABEL[k]}\n{100 * l / n:.0f}% LMIC · {n:,} studies", fontsize=11, color=INK)
 
 
-def circles_note(mode, per):
+def circles_note(mode, per, order="lmic"):
     first = ("One dot = one single-country study, placed at random within its circle; darker = high-income settings, "
              "lighter = low- and middle-income settings." if mode == "scatter" else
-             f"One dot = {per} single-country studies; darker = high-income settings, lighter (filling from the bottom) = "
+             f"One dot = {per} single-country stud{'y' if per == 1 else 'ies'}; darker = high-income settings, lighter (filling from the bottom) = "
              "low- and middle-income settings.")
-    return first + " Circle area = number of studies. Ordered by LMIC share. Base: 27,897 single-country studies."
+    by = "number of studies (largest first)" if order == "size" else "LMIC share"
+    return first + f" Circle area = number of studies. Ordered by {by}. Base: 27,897 single-country studies."
 
 
-def standalone(counts, mode, per, path):
+def standalone(counts, mode, per, path, order="lmic"):
     fig = plt.figure(figsize=(13, 13.6), facecolor=BG)
     gs = fig.add_gridspec(3, 3, left=.03, right=.97, top=.88, bottom=.06, hspace=.28)
-    circles(fig, [gs[i, j] for i in range(3) for j in range(3)], counts, mode, per)
-    fig.suptitle("What kinds of healthcare does the research cover, and where?", x=.03, ha="left", y=.975,
-                 fontsize=18, fontweight="bold", color=INK)
-    fig.text(.03, .945, circles_note(mode, per), fontsize=10.5, color=MUTED, va="top", wrap=True)
+    circles(fig, [gs[i, j] for i in range(3) for j in range(3)], counts, mode, per, order)
+    fig.suptitle("Studies by main type of intervention, and the share set in low- and middle-income countries", x=.03, ha="left", y=.975,
+                 fontsize=15.5, fontweight="bold", color=INK)
+    fig.text(.03, .945, circles_note(mode, per, order), fontsize=10.5, color=MUTED, va="top", wrap=True)
     fig.text(.03, .02, INCOME_NOTE, fontsize=9, color=MUTED)
     fig.savefig(path, dpi=300, facecolor=BG)
     fig.savefig(path.replace('.png', '.pdf'), dpi=300, facecolor=BG)
@@ -144,7 +147,7 @@ def combined(counts, pts, path):
     fig.legend(handles=handles, loc="lower left", bbox_to_anchor=(.02, .075), ncol=5, frameon=False, fontsize=13,
                title="Primary intervention", title_fontsize=14, alignment="left", handletextpad=.4, columnspacing=1.6,
                labelspacing=.9)
-    fig.suptitle("What kinds of healthcare does the research cover, and where?", x=.02, ha="left", y=.965,
+    fig.suptitle("Studies by main type of intervention, and the share set in low- and middle-income countries", x=.02, ha="left", y=.965,
                  fontsize=20, fontweight="bold", color=INK)
     fig.text(.02, .015, textwrap.fill("A: positions come from abstract wording (text embeddings, UMAP; frozen topic coordinates from the "
              "September run, filtered to the current studies), so studies group by topic, mainly disease area; the axes "
@@ -161,6 +164,8 @@ def main():
     combined(counts, pts, os.path.join(OUT, "option1_map_plus_circles.png"))
     standalone(counts, "fill", 20, os.path.join(OUT, "option2_circles_fill.png"))
     standalone(counts, "scatter", 1, os.path.join(OUT, "option3_circles_scatter.png"))
+    standalone(counts, "fill", 20, os.path.join(OUT, "option2b_circles_fill_by_size.png"), order="size")
+    standalone(counts, "fill", 1, os.path.join(OUT, "option2c_circles_fill_by_size_one_dot_per_study.png"), order="size")
     for k, (h, l) in sorted(counts.items(), key=lambda kv: -kv[1][1] / sum(kv[1])):
         print(f"{LABEL[k]}: {h + l:,} studies, {100 * l / (h + l):.0f}% LMIC")
     print("wrote", OUT)
