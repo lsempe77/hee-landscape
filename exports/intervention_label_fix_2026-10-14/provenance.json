@@ -1,0 +1,46 @@
+{
+  "change": "Replace visible LMIC labels with L&MICs",
+  "source_builder": "scripts/build_intervention_redesign.py",
+  "data_unchanged": true,
+  "base_single_country_records": 27897,
+  "counts": {
+    "pharma": [
+      6804,
+      3113
+    ],
+    "behavioural_preventive": [
+      1914,
+      587
+    ],
+    "surgical_procedural": [
+      2792,
+      846
+    ],
+    "care_model_organisational": [
+      2513,
+      759
+    ],
+    "screening_diagnostic": [
+      2702,
+      873
+    ],
+    "device_or_supply": [
+      1718,
+      371
+    ],
+    "vaccine": [
+      959,
+      708
+    ],
+    "financing_payment_policy": [
+      702,
+      349
+    ],
+    "other": [
+      132,
+      55
+    ]
+  },
+  "original_attachment": "C:/Users/Sawa/Downloads/fig_intervention_map.png",
+  "original_retained": true
+}

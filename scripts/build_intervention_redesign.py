@@ -99,7 +99,7 @@ def circles(fig, gs_cells, counts, mode, per, order="lmic"):
         ax.scatter(x[nl:], y[nl:], s=dot, color=COLOUR[k], lw=0)
         ax.scatter(x[:nl], y[:nl], s=dot, color=lighter(COLOUR[k]), lw=0)
         ax.set_xlim(-1.08, 1.08); ax.set_ylim(-1.08, 1.08); ax.set_aspect("equal"); ax.axis("off")
-        ax.set_title(f"{LABEL[k]}\n{100 * l / n:.0f}% LMIC · {n:,} studies", fontsize=11, color=INK)
+        ax.set_title(f"{LABEL[k]}\n{100 * l / n:.0f}% L&MICs · {n:,} studies", fontsize=11, color=INK)
 
 
 def circles_note(mode, per, order="lmic"):
@@ -107,7 +107,7 @@ def circles_note(mode, per, order="lmic"):
              "lighter = low- and middle-income settings." if mode == "scatter" else
              f"One dot = {per} single-country stud{'y' if per == 1 else 'ies'}; darker = high-income settings, lighter (filling from the bottom) = "
              "low- and middle-income settings.")
-    by = "number of studies (largest first)" if order == "size" else "LMIC share"
+    by = "number of studies (largest first)" if order == "size" else "L&MICs share"
     return first + f" Circle area = number of studies. Ordered by {by}. Base: 27,897 single-country studies."
 
 
@@ -143,7 +143,7 @@ def combined(counts, pts, path):
     # One legend for both panels: the class colours, with their LMIC share.
     shares = {k: 100 * v[1] / sum(v) for k, v in counts.items()}
     handles = [Line2D([], [], marker="o", ls="", markersize=18, color=COLOUR[k],
-                      label=f"{LABEL[k]} ({shares[k]:.0f}% LMIC)") for k in sorted(LABEL, key=lambda k: LABEL[k])]
+                      label=f"{LABEL[k]} ({shares[k]:.0f}% L&MICs)") for k in sorted(LABEL, key=lambda k: LABEL[k])]
     fig.legend(handles=handles, loc="lower left", bbox_to_anchor=(.02, .075), ncol=5, frameon=False, fontsize=13,
                title="Primary intervention", title_fontsize=14, alignment="left", handletextpad=.4, columnspacing=1.6,
                labelspacing=.9)
