@@ -1809,7 +1809,7 @@ if (typeof document !== "undefined") {
       title: "What is a " + label.replace(/ \(.*/, "").toLowerCase() + " analysis?", paragraphs: [text] }]);
     rows.sort((a, b) => b[1] - a[1]);
     const reviews = countLevel("econ_eval_type", "Review (no evaluation type)");
-    return barRowsCard("", "Types of economic evaluation", rows,
+    return barRowsCard("eval-types-card", "Types of economic evaluation", rows,
       "Share of the " + fmtNum(typed) + " studies with an evaluation type; " + fmtNum(reviews) +
       " reviews that report no evaluation of their own are left out.", {
         title: "How are the types counted?",
