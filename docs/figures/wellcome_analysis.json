@@ -8,7 +8,9 @@
     "master_sha256": "39c4655138d36da5936b88e8e3d977e2ead11b1dcf7f6e804a38cf1de4c54222",
     "unit": "Unique eligible studies reporting each funder; no grant amounts or causal attribution.",
     "theme_overlap": true,
-    "sources_accessed": "2026-10-12"
+    "sources_accessed": "2026-10-12",
+    "gbd_share": "team GBD 2023 coding, share v2.1 (received 14 October 2026)",
+    "analysis_built": "14 October 2026"
   },
   "global": {
     "n": 41657,

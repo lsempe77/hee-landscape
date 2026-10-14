@@ -911,18 +911,81 @@ if (typeof document !== "undefined") {
   const figSrc = file => "figures/" + ((FIGURE_UPDATES[file] && FIGURE_UPDATES[file].file) || file);
   let FIG_INDEX = {};
   // Interactive figures: self-contained HTML pages built by scripts/ (here
-  // scripts/build_glance_regions_who_v3.py), added on top of content.json's gallery
+  // scripts/build_glance_regions_who_v4.py), added on top of content.json's gallery
   // so the upstream content build stays untouched. Shown in an iframe.
   const EXTRA_FIGURES = [{
     section: "Geography",
     index: 0,
     fig: {
-      file: "fig_glance_regions_who_v3.html",
+      file: "fig_glance_regions_who_v4.html",
       html: true,
       // No caption: the summary in figure_copy.json says it all, so no
       // "Technical details" toggle for this figure.
-      title: "Research coverage and health needs by region"
+      title: "Health Economic Evaluations"
     }
+  }];
+  // Temporary placeholder section, shown last: replication of Schmallenbach et al.
+  // (2025, Nature Medicine) Fig. 2a and Fig. 3 for health economic evaluations, with
+  // sensitivity and supplementary versions (scripts/build_kld_replication_v2.py;
+  // figures copied from exports/kld_replication_v2_2026-10-14).
+  const KLD_DIR = "schmallenbach2025/";
+  const KLD_NOTE = "Research–disease divergence is the Kullback–Leibler divergence (KLD) of the research mix from the " +
+    "burden mix across GBD level-2 causes: the sum over causes of p·ln(p/q), where p is a cause's share of DALYs " +
+    "(GBD 2023) and q its share of studies (a study naming several causes counts for each; add-one smoothing). " +
+    "0 = research spread across diseases exactly as burden is. Studies are placed by the country studied (the paper " +
+    "uses first-author country); income is the World Bank group in force at publication (studies) or in the burden " +
+    "year (DALYs). 3-year rolling windows; solid = 2010–2019, dashed = windows reaching 2020–23 (COVID-19). " +
+    "Shaded bands: 95% intervals from resampling studies (1,000 draws). Reference: Schmallenbach L et al. Nat Med " +
+    "2025;31:3101–9, doi:10.1038/s41591-025-03923-0.";
+  const KLD_FIG3_NOTE = " Observed line vs two scenarios fixed at 2010–12: research fixed (only DALYs change) and " +
+    "DALYs fixed (only research changes). Box: the change from 2010–12 to 2017–19 split into research and burden " +
+    "parts, each the average of fixing one side first, so they add up; % of 2010–12 divergence.";
+  const KLD_FIG4_NOTE = " Shown as shares rather than the paper's per-cause KLD terms, which can be negative and so " +
+    "misread single causes. 'Closer'/'further': whether the gap between a cause's research share and DALY share narrowed.";
+  const EXTRA_SECTIONS = [{
+    title: "Schmallenbach et al 2025",
+    blurb: "Temporary placeholder. A replication of Schmallenbach et al. (2025, Nature Medicine) Fig. 2a and Fig. 3 for " +
+      "health economic evaluations: is the mix of diseases studied moving closer to the mix of disease burden, and is " +
+      "that because research changed or because burden changed? With and without high-income studies, plus " +
+      "sensitivity and supplementary versions. Preliminary findings for discussion.",
+    figs: [
+      { file: KLD_DIR + "main_fig2a_16causes.png", title: "Evolution of research–disease divergence (Fig. 2a)",
+        summary: "How far the mix of diseases studied is from the mix of disease burden, over time, with and without " +
+          "high-income studies. With them, the gap fell by about a fifth from 2010–12 to 2017–19; for studies of low- " +
+          "and middle-income countries it did not change overall.",
+        caption: "The paper's 16 GBD level-2 causes. " + KLD_NOTE },
+      { file: KLD_DIR + "main_fig3_16causes.png",
+        title: "Contributions of research and disease burden to changes in divergence (Fig. 3)",
+        summary: "With high-income studies, the fall in divergence comes from disease burden changing, not research, as " +
+          "the paper found for health research overall. For low- and middle-income countries, burden changes alone " +
+          "would have widened the gap slightly; research shifts offset that, but their effect is uncertain.",
+        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG3_NOTE + " " + KLD_NOTE },
+      { file: KLD_DIR + "main_fig4_16causes.png", title: "Which diseases moved, 2010–12 to 2017–19",
+        summary: "Each disease's share of studies and share of burden, at the start and end. Research on low- and " +
+          "middle-income countries moved a lot: HIV/AIDS fell from 18% to 10% of studies and cancer rose from 14% to " +
+          "23%, while cardiovascular disease stayed at about 9% of studies against about 20% of burden.",
+        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG4_NOTE + " " + KLD_NOTE },
+      { file: KLD_DIR + "supp_fig2a_20causes.png", title: "Sensitivity: divergence with mental disorders and injuries",
+        summary: "The same as Fig. 2a with 20 causes: the paper's 16 plus mental disorders and the three injury groups, " +
+          "which the paper leaves out and where research is far below burden.",
+        caption: "20 GBD level-2 causes. " + KLD_NOTE },
+      { file: KLD_DIR + "supp_fig3_20causes.png", title: "Sensitivity: research and burden contributions, 20 causes",
+        summary: "With mental disorders and injuries included, the global fall is again mostly burden, and divergence for " +
+          "low- and middle-income countries stays flat.",
+        caption: "20 GBD level-2 causes." + KLD_FIG3_NOTE + " " + KLD_NOTE },
+      { file: KLD_DIR + "supp_fig4_20causes.png", title: "Sensitivity: which diseases moved, 20 causes",
+        summary: "Research and burden shares for 20 causes, including mental disorders and injuries.",
+        caption: "20 GBD level-2 causes." + KLD_FIG4_NOTE + " " + KLD_NOTE },
+      { file: KLD_DIR + "supp_fig2a_hic_16causes.png", title: "Supplementary: divergence for high-income studies",
+        summary: "Studies of high-income countries against high-income DALYs: divergence fell by about a fifth.",
+        caption: "The paper's 16 GBD level-2 causes. " + KLD_NOTE },
+      { file: KLD_DIR + "supp_fig3_hic_16causes.png", title: "Supplementary: research and burden contributions, high-income studies",
+        summary: "For high-income countries, research shifting explains the fall in divergence; burden barely moved.",
+        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG3_NOTE + " " + KLD_NOTE },
+      { file: KLD_DIR + "supp_fig4_hic_16causes.png", title: "Supplementary: which diseases moved, high-income studies",
+        summary: "Research and burden shares for studies of high-income countries, 2010–12 and 2017–19.",
+        caption: "The paper's 16 GBD level-2 causes." + KLD_FIG4_NOTE + " " + KLD_NOTE }
+    ]
   }];
   // Thematic sections hidden from the site, and figures moved to one other
   // section (removed from every section they were in), so each appears once.
@@ -1017,7 +1080,7 @@ if (typeof document !== "undefined") {
         title: "Geographic inequalities",
         blurb: "How research intensity differs across countries, income groups and regions, " +
           "including how the evidence compares with disease burden.",
-        files: ["fig_glance_regions_who_v3.html", "fig_map_burden.webp", "paper03.webp"]
+        files: ["fig_glance_regions_who_v4.html", "fig_map_burden.webp", "paper03.webp"]
       }
     ]
   };
@@ -1469,23 +1532,29 @@ if (typeof document !== "undefined") {
         countLevel("geo_scope", "Multi-country") + countLevel("geo_scope", "Region/global"), "geo-scope-other"],
       ["No country stated", countLevel("geo_scope", "No country stated"), "geo-scope-none"]
     ];
+    // Shown shares in tenths of a percent, by largest remainder so they total exactly 100.0%.
+    const tenths = scopes.map(([, n]) => 1000 * n / total);
+    const shown = tenths.map(Math.floor);
+    const order = tenths.map((x, i) => i).sort((a, b) => (tenths[b] - shown[b]) - (tenths[a] - shown[a]));
+    for (const i of order.slice(0, 1000 - shown.reduce((a, b) => a + b, 0))) shown[i] += 1;
     const bar = el("div", "geo-scope-bar");
     const legend = el("div", "geo-scope-legend");
-    for (const [label, n, cls] of scopes) {
+    scopes.forEach(([label, n, cls], i) => {
       const pct = 100 * n / total;
+      const shownPct = (shown[i] / 10).toFixed(1) + "%";
       const seg = el("div", "geo-scope-segment " + cls);
       seg.style.width = pct + "%";
-      seg.title = label + ": " + pct.toFixed(1) + "%";
+      seg.title = label + ": " + shownPct;
       bar.appendChild(seg);
       const item = el("div", "geo-scope-legend-row");
       const swatch = el("span", "geo-scope-swatch " + cls);
       const name = el("span");
       name.textContent = label;
       const value = el("strong");
-      value.textContent = pct.toFixed(1) + "%";
+      value.textContent = shownPct;
       item.append(swatch, name, value);
       legend.appendChild(item);
-    }
+    });
     colCountries.append(subhead("Countries"), countryHead, countryNote,
       subhead("Geographic scope"), bar, legend);
 
@@ -1523,7 +1592,7 @@ if (typeof document !== "undefined") {
       item.append(count, dot, name);
       circles.appendChild(item);
     });
-    colIncome.append(subhead("By country income group"), circles);
+    colIncome.append(subhead("By income group of the country studied"), circles);
 
     // Column 3: WHO regions, most studied first.
     const colRegion = el("div", "geo-overview-col");
@@ -2646,7 +2715,8 @@ if (typeof document !== "undefined") {
     for (const c of cols) {
       const th = document.createElement("th");
       if (numCols.has(c)) th.className = "num";
-      th.textContent = c;
+      // Header only: column names double as tableRows keys.
+      th.textContent = c === "Studies" ? "Studies examining the country" : c;
       htr.appendChild(th);
     }
     thead.appendChild(htr);
@@ -3273,6 +3343,7 @@ if (typeof document !== "undefined") {
       const sec = GALLERY.find(s => s.title === x.section);
       if (sec) sec.figs.splice(x.index, 0, x.fig);
     }
+    for (const s of EXTRA_SECTIONS) GALLERY.push({ ...s, figs: s.figs.slice() });
     for (const sec of GALLERY) {
       sec.figs = sec.figs.map(figure => ({ ...figure, ...figureCopy[figure.file],
         ...(FIGURE_UPDATES[figure.file] ? { caption: FIGURE_UPDATES[figure.file].caption } : {}) }));

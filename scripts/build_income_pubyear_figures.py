@@ -51,7 +51,7 @@ GREYLINE = "#c3bdb3"
 RED = "#D24A12"
 TITLE_FONT = "Franklin Gothic Heavy"
 BODY_FONT = "Franklin Gothic Book"
-RULE = "Income group: the World Bank group the country was in when the study was published."
+RULE = "Income group: the World Bank group the country studied was in when the study was published."
 
 plt.rcParams.update({"font.family": BODY_FONT, "font.size": 11, "text.color": INK, "axes.edgecolor": GRID,
                      "axes.labelcolor": MUTED, "xtick.color": MUTED, "ytick.color": MUTED,
@@ -152,7 +152,7 @@ def equity_time(rows):
                        f"{pct(vals[0])} in {years[0]} → {pct(vals[-1])} in {years[-1]}, against the 83% of global disease "
                        "burden (GBD 2023 all-cause DALYs) those countries carry (dashed line). Studies "
                        f"naming a single country with a known income group ({n:,}); 2026 is partial and left out. Income "
-                       "group: the World Bank classification in force on 1 January of the publication year (World Bank "
+                       "group: the World Bank group of the country studied, as classified on 1 January of the publication year (World Bank "
                        "historical classifications)."}
 
 
@@ -192,7 +192,7 @@ def metric(rows):
                        f"high-income research reports QALYs ({pct(hi[0])}) and almost no DALYs ({pct(hi[1])}); "
                        f"low-income research does the reverse ({pct(lo[1])} DALYs, {pct(lo[0])} QALYs) — so rich and poor "
                        f"settings are measured in different units. Base: {len(rows):,} eligible studies (income shown "
-                       "for single-country studies, by the World Bank group in force on 1 January of the publication year); "
+                       "for single-country studies, by the World Bank group of the country studied on 1 January of the publication year); "
                        "a study may report neither, one, or both."}
 
 
@@ -255,8 +255,8 @@ def intervention_mix(rows):
                        f"upper-middle-income settings ({pct(ph[1], 1)}) and fall to {pct(ph[3], 1)} at low income, where "
                        f"{low}; vaccines rise steadily with lower income ({pct(va[0], 1)} → {pct(va[3], 1)}) while surgery "
                        f"({pct(su[0], 1)} → {pct(su[3], 1)}) and devices ({pct(de[0], 1)} → {pct(de[3], 1)}) fall. Base: "
-                       f"{n:,} eligible single-country studies with a World Bank income group in force on 1 January of "
-                       "the publication year. Intervention classes were assigned by a large language model from each "
+                       f"{n:,} eligible single-country studies whose country studied had a World Bank income group on 1 January "
+                       "of the publication year. Intervention classes were assigned by a large language model from each "
                        "abstract (one pass), checked against a keyword list, the topic clusters and a second model; "
                        "they have not been checked by people."}
 
@@ -313,8 +313,8 @@ def paper05(rows, geo_groups):
                        f"research (bottom): infectious disease dominates lower-income groups ({pct(inf['Low income'])} of "
                        f"low-income and {pct(inf['Lower middle income'])} of lower-middle-income studies), neoplasms and "
                        "cardiovascular disease the high-income group. A study naming several areas appears in each, so "
-                       "columns sum above 100%. Income group: the World Bank classification in force on 1 January of the "
-                       "publication year."}
+                       "columns sum above 100%. Income group: the World Bank group of the country studied, as classified on "
+                       "1 January of the publication year."}
 
 
 # Plain names for topics, by cluster number (from each topic's keywords in
@@ -376,7 +376,7 @@ def theme_rank(rows, labels):
                        f"({name[top_h].lower()} leads at {pct(1 - th[top_h][0])}); the LMIC panel as its LMIC share "
                        f"({name[top_l].lower()} leads at {pct(th[top_l][0])}): "
                        f"{pct(lo_rng[0])}–{pct(lo_rng[1])} LMIC vs {pct(hi_rng[0])}–{pct(hi_rng[1])} LMIC. n per theme = "
-                       "single-country studies with a World Bank income group in force on 1 January of the publication year."}
+                       "single-country studies whose country studied had a World Bank income group on 1 January of the publication year."}
 
 
 def main():

@@ -507,15 +507,27 @@ def wellcome_rank(donors):
     return f"{'joint ' if tied else ''}{ordinal(rank)} of {len(donors):,} reported funders"
 
 
+def rounded_shares(counts, total, decimals=0):
+    """Percentages rounded so they sum to exactly 100 (largest-remainder method)."""
+    scale = 10 ** decimals
+    exact = [100 * scale * c / total for c in counts]
+    floors = [int(x) for x in exact]
+    by_remainder = sorted(range(len(exact)), key=lambda i: exact[i] - floors[i], reverse=True)
+    for i in by_remainder[:100 * scale - sum(floors)]:
+        floors[i] += 1
+    return [f / scale for f in floors]
+
+
 def stacked_bar(counts, total):
     """Inline 100% bar split by setting, with readable labels on wide segments."""
     if not total:
         return '<div class="stack empty">No studies</div>'
     parts = []
-    for count, color, label in zip(counts, COLORS, INCOMES):
+    whole, tenths = rounded_shares(counts, total), rounded_shares(counts, total, 1)
+    for count, color, label, label_pct, title_pct in zip(counts, COLORS, INCOMES, whole, tenths):
         share = 100 * count / total
-        text = f"{share:.0f}%" if share >= 9 else ""
-        parts.append(f'<span style="width:{share:.4f}%;background:{color}" title="{escape(label)}: {count:,} ({share:.1f}%)">{text}</span>')
+        text = f"{label_pct:.0f}%" if share >= 9 else ""
+        parts.append(f'<span style="width:{share:.4f}%;background:{color}" title="{escape(label)}: {count:,} ({title_pct:.1f}%)">{text}</span>')
     return '<div class="stack">' + "".join(parts) + "</div>"
 
 
@@ -736,7 +748,7 @@ def main():
             raise ValueError("No Wellcome records or reported funders; refusing to build an empty analysis.")
         for entry in general_entries:
             entry.update(file="fig_funder_funders.svg", title="Top funders: who funds economic evidence, and where?",
-                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} studies report a funder. Blue/coral identify single-country studies with known income; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
+                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} studies report a funder. Blue/coral identify single-country studies by the income group of the country studied; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
             nihr = next(d for d in analysis["parent_donors"] if d["funder"] == "NIHR")
             # Alternative views shown as tabs in the figure pop-up; the bar chart stays the default.
             entry["views"] = [

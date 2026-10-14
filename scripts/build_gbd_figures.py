@@ -250,7 +250,7 @@ def circular(rows, l1):
                        f"({pct(share[lead[2]] / len(coded))}) lead. Colour shows whether a group's research leans "
                        "toward low- and middle-income or high-income countries (single-country studies). A study can "
                        "name several groups. Disease groups coded from titles and abstracts to GBD 2023 causes. "
-                       "Income group: the World Bank classification in force on 1 January of the publication year."}
+                       "Income group: the World Bank group of the country studied, as classified on 1 January of the publication year."}
 
 
 # ---------------------------------------------------------------- paper04 (eras)
@@ -334,7 +334,7 @@ def paper04(rows, l1):
                        + ("; ".join(desc(g, "lmic") for g in rising[:2]) + " rise" if rising else "no group rises")
                        + ". Falling or rising: non-overlapping 95% intervals. Bars are 95% intervals; point size is "
                        "the number of studies. Disease groups coded from titles and abstracts. Income group: the "
-                       "World Bank classification in force on 1 January of the publication year.",
+                       "World Bank group of the country studied, as classified on 1 January of the publication year.",
             "falling": falling, "rising": rising}
 
 
@@ -412,7 +412,7 @@ def paper05(rows, geo_groups, l1):
                        f"{pct(hiv['High income'])}) concentrate in low-income research; cancers in upper-middle- and "
                        f"high-income research ({pct(neo['Upper middle income'])}, {pct(neo['High income'])}). A study "
                        "naming several groups or countries appears in each, so columns sum above 100%. Income group: "
-                       "the World Bank classification in force on 1 January of the publication year.",
+                       "the World Bank group of the country studied, as classified on 1 January of the publication year.",
             "share": share}
 
 
@@ -489,8 +489,8 @@ def paper08(rows, burden):
                        f"lower-income settings and {res['hic']['ratio'][mat]:.2g}× in high-income ones. Disease groups "
                        "coded from titles and abstracts to the same GBD causes as the burden, so no crosswalk is "
                        "needed; studies naming an injury without its cause are left out, so injury ratios are lower "
-                       "bounds. Burden: GBD 2023 DALYs. Income group: the World Bank classification in force on 1 "
-                       "January of the publication year.", "res": res, "low": low}
+                       "bounds. Burden: GBD 2023 DALYs. Income group: the World Bank group "
+                       "of the country studied, as classified on 1 January of the publication year.", "res": res, "low": low}
 
 
 def companion(rows, burden):
@@ -533,8 +533,8 @@ def companion(rows, burden):
                        + ", ".join(f"{LABEL[g].lower()} ({pct(res['lmic']['rs'][g])} of studies vs "
                                    f"{pct(res['lmic']['bs'][g])} of burden)" for g in big_under)
                        + ". Studies naming an infection or injury without its cause are left out. Burden: GBD 2023 "
-                       "DALYs. Income group: the World Bank classification in force on 1 January of the publication "
-                       "year.", "big_under": big_under, "res": res}
+                       "DALYs. Income group: the World Bank group of the country studied, "
+                       "as classified on 1 January of the publication year.", "big_under": big_under, "res": res}
 
 
 # ---------------------------------------------------------------- trajectory (LMIC, two periods)
@@ -607,7 +607,7 @@ def trajectory(rows, burden):
                        + f" Closing means the {e2} ratio is at least 5% above the {e1} ratio. Burden: GBD 2023 DALYs "
                        "in low- and middle-income countries, a fixed reference for both periods. Past publication "
                        "trends describe what happened, not future research needs. Income group: the World Bank "
-                       "classification in force on 1 January of the publication year.",
+                       "group of the country studied, as classified on 1 January of the publication year.",
             "stuck": stuck, "closing": closing}
 
 
@@ -679,8 +679,8 @@ def opportunity(rows, b):
                        + f". Cells with fewer than {MIN_N} studies are grey. Studies naming an infection or injury "
                        "without its cause are left out, so injury ratios are lower bounds. Burden: GBD 2023 DALYs by "
                        "income group (classification on 1 January 2023). Matching research to burden is a reference "
-                       "point, not a target. Income group of studies: the World Bank classification in force on 1 "
-                       "January of the publication year.", "worst": worst}
+                       "point, not a target. Income group of studies: the World Bank "
+                       "group of the country studied, as classified on 1 January of the publication year.", "worst": worst}
 
 
 # ---------------------------------------------------------------- epidemiological transition (LMIC)
@@ -749,7 +749,7 @@ def transition(rows, burden, l1):
                        f"{pct(share[y1]['ncd'])} (burden {pct(bshare[2023]['ncd'])}); injuries stayed at "
                        f"{pct(share[y1]['inj'])} (burden {pct(bshare[2023]['inj'])}). A study with causes in two "
                        "groups counts in both. Burden: GBD 2023-round DALYs. Income group: the World Bank "
-                       "classification in force on 1 January of the publication (or burden) year.",
+                       "group of each country, as classified on 1 January of the publication year (for studies) or the burden year (for burden).",
             "share": share, "bshare": bshare, "years": (y0, y1)}
 
 

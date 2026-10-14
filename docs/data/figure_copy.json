@@ -58,13 +58,13 @@
     "title": "Most economic evidence is about high-income countries"
   },
   "fig_worldmap.webp": {
-    "summary": "This map compares the number of studies with each country's population. It shows research coverage rather than the quality of the evidence or the amount of funding received.",
-    "title": "Studies per person, by country",
+    "summary": "This map compares the number of studies examining each country with that country's population. A country is counted when a study examines it, not where the authors are based; a study examining several countries counts for each. It shows research coverage rather than the quality of the evidence or the amount of funding received.",
+    "title": "Studies examining each country, per person",
     "caption": "Per-capita choropleth (Robinson): studies naming each country per 10\n                      million people. Mid-grey = the 54 countries and territories named by no\n                      eligible study (of 241 Natural Earth polygons, Antarctica excluded); pale grey\n                      = named but outside the 155-country list the shading uses. 31,775\n                      study–country pairs across 187 countries."
   },
   "paper03.webp": {
     "title": "How much research is available relative to population?",
-    "summary": "Compare study counts per 10 million people across country income groups. This adjusts for population size, but does not measure research quality or whether enough evidence exists."
+    "summary": "Compare the number of studies examining each country per 10 million people, across country income groups. Countries are those the studies examine, not where the authors are based. This adjusts for population size, but does not measure research quality or whether enough evidence exists."
   },
   "fig_authorship_pattern_v2.svg": {
     "title": "Are local researchers involved in studies about their countries?",
@@ -87,7 +87,7 @@
     "caption": "Base: 154 countries with disease-burden data; 31,471 study–country counts (a study naming several countries counts once for each). Eritrea and Mauritius have no identified studies. Studies published 2010–2026 (final year partial); disease burden is GBD 2023 all-cause DALYs. Ratios compare shares, so countries well above the line push others below it. The line is a reference point, not a measure of adequacy. Horizontal position within a group is spread out only for readability."
   },
   "paper07.webp": {
-    "summary": "Compare how many studies countries have relative to illness and early death. The comparison adjusts for disease burden, but does not determine how much research a country needs.",
+    "summary": "Compare how many studies examine each country relative to that country's illness and early death. The comparison adjusts for disease burden, but does not determine how much research a country needs.",
     "caption": "Studies per 100,000 DALYs (healthy years lost) against total disease burden, by country and income group (2023). The typical high-income country has 22 times as many studies per unit of burden as the typical low-income country. Studies naming each country divided by GBD 2023 all-cause DALYs; point size shows population."
   },
   "fig_burden_disease_companion.webp": {
@@ -101,7 +101,7 @@
   },
   "fig_deficit.webp": {
     "title": "Where are the largest differences between research and disease burden?",
-    "summary": "This chart highlights the largest differences between research output and disease burden.",
+    "summary": "This chart highlights the largest differences between the number of studies examining each country and that country's disease burden.",
     "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,627 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,471 pairs). Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point."
   },
   "fig_injustice.webp": {
@@ -119,7 +119,7 @@
   },
   "fig_funder_funders.svg": {
     "title": "Top funders: who funds economic evidence, and where?",
-    "summary": "The bars show how many studies report each funder, rather than how much money they provided. Only about 27% of studies report a funder in the dataset, so this is an incomplete picture. Colours show study setting; grey retains other settings and missing income information."
+    "summary": "The bars show how many studies report each funder, rather than how much money they provided. Only about 27% of studies report a funder in the dataset, so this is an incomplete picture. Colours show the income group of the country studied; grey retains other settings and missing income information."
   },
   "fig_map_burden.webp": {
     "title": "Where is research more or less abundant relative to disease burden?",
@@ -130,7 +130,7 @@
     "summary": "Compare recorded open-access availability across countries. Access information is incomplete; an unknown status does not necessarily mean an article requires payment."
   },
   "fig_map_growth.webp": {
-    "summary": "Compare how research output has grown across countries. Growth describes publication counts rather than evidence quality. The final publication year is incomplete."
+    "summary": "Compare how the number of studies examining each country has grown. Growth describes publication counts rather than evidence quality. The final publication year is incomplete."
   },
   "fig_map_authorship_v2.svg": {
     "title": "Where do studies include locally based authors?",
@@ -160,7 +160,7 @@
   },
   "fig_funder_scorecard_v2.svg": {
     "title": "Evidence gaps: where is research coverage lowest relative to disease burden?",
-    "summary": "Compare each country's share of research with its share of global disease burden. Because the comparison uses shares, large countries do not dominate the ranking. Ratios based on few studies are less stable."
+    "summary": "Compare the share of studies examining each country with that country's share of global disease burden. A study examining several countries counts for each. Because the comparison uses shares, large countries do not dominate the ranking. Ratios based on few studies are less stable."
   },
   "fig_funder_capacity.webp": {
     "title": "Local capacity: where could research capacity be strengthened?",
@@ -176,6 +176,10 @@
   },
   "wellcome_analysis.html": {
     "summary": "Explore the evidence and recorded funders within Wellcome's priority themes. The view separates all theme-related studies from Wellcome-funded studies. Theme coverage and funding records are incomplete. Climate & Health is a reviewed title-and-abstract screen, and is small because few studies in the map address climate."
+  },
+  "fig_glance_regions_who_v4.html": {
+    "title": "Health Economic Evaluations",
+    "summary": "Headline figures for the evidence map, then where full economic evaluations are concentrated relative to disease burden, by country and by WHO region: each region's disease focus, top diseases, use of utility measures (QALYs, DALYs) and country coverage over time. Use the information buttons to see how each measure was calculated."
   },
   "fig_glance_regions_who_v3.html": {
     "title": "Research coverage and health needs by region",
