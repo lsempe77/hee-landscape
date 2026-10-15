@@ -413,6 +413,27 @@ function studyCatGetter(db, varName, flt) {
   return s => lv[col[s]];
 }
 
+export function incomeAccessSummary(db, flt) {
+  const groups = [new Set(), new Set()];
+  for (const i of flt.geoRows) {
+    const income = db.incomeAt(db.geo.c[i], db.geo.y[i]);
+    const group = ["Low income", "Lower middle income"].includes(income) ? 0
+      : ["Upper middle income", "High income"].includes(income) ? 1 : null;
+    if (group !== null) groups[group].add(db.geo.s[i]);
+  }
+  const open = db.codeOf.oa_label.get("Open access");
+  const closed = db.codeOf.oa_label.get("Not open");
+  return groups.map(studies => {
+    let numerator = 0, denominator = 0;
+    for (const s of studies) {
+      const status = db.studies.oa_label[s];
+      if (status === open || status === closed) denominator++;
+      if (status === open) numerator++;
+    }
+    return { numerator, denominator, percent: denominator ? 100 * numerator / denominator : null };
+  });
+}
+
 export function compCounts(db, flt, xv, sv, mode) {
   const pct = mode === "pct";
   const stacked = !!(sv && sv !== xv);
@@ -2327,7 +2348,28 @@ if (typeof document !== "undefined") {
     open.target = "_blank";
     open.rel = "noopener";
     open.textContent = "Open full page ↗";
-    body.append(ft, fc, open);
+    const download = el("button", "btn-outline-secondary");
+    download.type = "button";
+    download.textContent = "Download PNG";
+    download.style.marginLeft = "1rem";
+    const status = el("p", "download-status");
+    status.setAttribute("role", "status");
+    download.addEventListener("click", async () => {
+      download.disabled = true;
+      download.textContent = "Preparing PNG…";
+      status.textContent = "Preparing the full figure at high resolution.";
+      try {
+        const { downloadHtmlFigure } = await import("./figure-export.js?v=" + BUILD);
+        await downloadHtmlFigure(frame.src, f.file);
+        status.textContent = "PNG download started.";
+      } catch (error) {
+        status.textContent = "Download failed. " + error.message;
+      } finally {
+        download.disabled = false;
+        download.textContent = "Download PNG";
+      }
+    });
+    body.append(ft, fc, open, download, status);
     card.appendChild(body);
     return card;
   }
@@ -2757,8 +2799,17 @@ if (typeof document !== "undefined") {
     const oaNote = $("x-comp-oa-note");
     oaNote.hidden = !res.knownOaOnly;
     oaNote.textContent = res.knownOaOnly
-      ? "Percentages use studies with known open-access status; " + fmtNum(res.excludedUnknown) +
-        " unknown-status studies are excluded. Switch to Count to see unknowns." : "";
+      ? "Open-access percentages use studies with known access status within the current filters. " +
+        "Both numerator and denominator include single-country, multi-country, regional/global studies and studies with no country stated, unless filtered out. " +
+        fmtNum(res.excludedUnknown) + " unknown-status studies are excluded. Switch to Count to see unknowns." : "";
+    if (res.knownOaOnly) {
+      const rates = incomeAccessSummary(db, state.result);
+      oaNote.textContent += " By study setting: " + rates.map((r, i) =>
+        (i === 0 ? "low/lower-middle income" : "upper-middle/high income") + ": " +
+        fmtPct(r.percent) + " (" + fmtNum(r.numerator) + "/" + fmtNum(r.denominator) + ")"
+      ).join("; ") + ". Each study counts once within each group it examines, including multi-country studies. " +
+        "Groups can overlap; studies without an identified income group contribute only to the overall rate.";
+    }
     let traces, layout;
     if (res.type === "simple") {
       const desc = res.rows;
