@@ -218,7 +218,7 @@
         {
           "file": "fig_map_openaccess.webp",
           "title": "Where studies are available to read for free",
-          "caption": "Base: 133 countries with at least five unique included records with known open-access status. Grey: fewer than five known-status records or no matching country. Study settings are extracted from titles/abstracts; Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+          "caption": "Base: 133 countries with at least five unique included records with known open-access status. Colour is centred on the median country share (79%): green = more open than the typical country, red = more paywalled. Grey: fewer than five known-status records or no matching country. Study settings are extracted from titles/abstracts; Robinson projection. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
           "summary": "Where studies are available to read for free"
         },
         {
