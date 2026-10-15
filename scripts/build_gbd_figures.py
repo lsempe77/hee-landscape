@@ -214,7 +214,6 @@ def circular(rows, l1):
     norm = TwoSlopeNorm(vcenter=0, vmin=-2, vmax=2)
     ax.bar(theta, [v * scale for v in vals], width=width - gap, bottom=inner,
            color=[cmap(norm(lean[g])) if lean[g] is not None else "#ddd" for g in order], edgecolor=BG, lw=.5)
-    ax.bar(theta, .045, width=width, bottom=inner - .075, color=[L1_COLOR[l1[g]] for g in order], lw=0)
     for t, g, v in zip(theta, order, vals):
         deg = math.degrees(t)
         rot = 90 - deg
@@ -232,12 +231,7 @@ def circular(rows, l1):
     cb.ax.set_xticklabels(["Leans high-income", "Balanced", "Leans lower-income"], fontsize=9.5, color=MUTED)
     cb.outline.set_visible(False)
     cb.ax.tick_params(length=0)
-    for k, blk in enumerate(("cmnn", "ncd", "inj")):
-        x0 = (.1, .56, .8)[k]
-        fig.text(x0, .14, "■ ", color=L1_COLOR[blk], fontsize=11, ha="right", va="center")
-        fig.text(x0, .14, ("Inner ring: " if not k else "") + L1_LABEL[blk].replace("\n", " "), color=MUTED,
-                 fontsize=9.5, va="center")
-    pf.footer(fig, f"{CODING} Inner ring: GBD level 1. Groups under 1% of studies are not drawn ("
+    pf.footer(fig, f"{CODING} Groups under 1% of studies are not drawn ("
                    + "; ".join(f"{LABEL[g]} {share[g]:,}" for g in small) + "). Base: "
                    f"{len(coded):,} of {len(rows):,} studies name at least one disease group; a study can name "
                    "several, so shares add up to more than 100%. Colour: log2 of the group's share of single-country "
