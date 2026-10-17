@@ -80,8 +80,8 @@
     "caption": "Base: 41,610 included records; intervention rows use the included records within each class. Primary intervention class only; residual Other omitted. All columns use the full row denominator, including records with an unavailable flag; model-based is the share positively identified as model-based. Signals are abstract keyword flags, not a full-text quality assessment. \"Not reported\" does not mean \"not done\"."
   },
   "fig_intervention_map.webp": {
-    "file": "fig_intervention_circles.webp",
-    "caption": "One dot = one single-country study, filed under the primary intervention class assigned to its abstract by a language model (secondary classes not counted). Darker dots: high-income settings; lighter dots, filling from the bottom: low- and middle-income settings (World Bank group in force on 1 January of the publication year). Circle area is proportional to the number of studies; classes are ordered by number of studies. Base: 27,897 single-country studies with a known income group. Replaces the earlier topic map, whose dot positions came from abstract wording and had no meaningful axes."
+    "file": "fig_intervention_circles_v3.webp",
+    "caption": "One dot = one single-country study, filed under the primary intervention class assigned to its abstract by a language model (secondary classes not counted). Darker dots: high-income settings; lighter dots, filling from the bottom: low- and middle-income settings (World Bank group in force on 1 January of the publication year). Circle area is proportional to the number of studies; classes are ordered by number of studies. Base: 27,417 single-country studies with a known income group; reviews count only if they also report an original economic evaluation (480 without one are excluded). Replaces the earlier topic map, whose dot positions came from abstract wording and had no meaningful axes."
   },
   "fig_openaccess.webp": {
     "file": "fig_openaccess_reconciled.webp",
