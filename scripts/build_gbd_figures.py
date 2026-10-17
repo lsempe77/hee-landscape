@@ -630,12 +630,12 @@ def opportunity(rows, b):
     fig = plt.figure(figsize=(9, 11))
     y = pf.header(fig, "Where evidence is thinnest relative to health needs",
                   "For each GBD cause group and income group, its share of single-country studies divided by its "
-                  "share of that income group's disease burden. Red: less research than burden; blue: more.",
+                  "share of that income group's disease burden. Blue: less research than burden; red: more.",
                   "The thinnest evidence relative to burden: "
                   + "; ".join(f"{LABEL[c].lower()} in {short[g]} countries ({v:.2g}×)" for v, c, g in worst)
                   + f". Grey cells have too few studies (under {MIN_N}) to estimate.", width=100)
     ax = fig.add_axes([.33, .14, .55, y - .2])
-    cmap = LinearSegmentedColormap.from_list("gap", ["#c2412d", "#e58c6c", "#efe4d6", "#8d9fd3", "#2c4fa3"])
+    cmap = LinearSegmentedColormap.from_list("gap", ["#2c4fa3", "#8d9fd3", "#efe4d6", "#e58c6c", "#c2412d"])
     norm = TwoSlopeNorm(vcenter=0, vmin=-3, vmax=3)
     for i, c in enumerate(order):
         for j, g in enumerate(GROUPS):

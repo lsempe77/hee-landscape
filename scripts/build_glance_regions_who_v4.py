@@ -87,8 +87,8 @@ DISEASE_CATEGORY = {
 }
 CATEGORIES = ["Communicable", "Non-communicable", "Injuries"]
 CAT_COLOURS = {"Communicable": "#3f8f80", "Non-communicable": "#8a63a8", "Injuries": "#d8a03c"}
-# Diverging map ramp: under-represented (red) -> median (sand) -> high (blue).
-MAP_COLOURS = [[0, "#c2412d"], [0.25, "#e58c6c"], [0.5, "#efe4d6"], [0.75, "#8d9fd3"], [1, "#4b64b4"]]
+# Diverging map ramp, read like a heat map: low (blue) -> median (sand) -> high (red).
+MAP_COLOURS = [[0, "#4b64b4"], [0.25, "#8d9fd3"], [0.5, "#efe4d6"], [0.75, "#e58c6c"], [1, "#c2412d"]]
 PLOTLY_SRC = "https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"
 PLOTLY_SRI = "sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7"
 
