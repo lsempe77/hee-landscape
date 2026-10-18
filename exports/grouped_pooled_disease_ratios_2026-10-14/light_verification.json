@@ -1,0 +1,28 @@
+{
+  "master_unchanged": true,
+  "research_denominators_verified": {
+    "lmic": 7331,
+    "hic": 17692
+  },
+  "unique_gbd_number_rows_checked": 62832,
+  "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "countries": 204,
+  "causes": 22,
+  "pooling_and_ratios_verified": true,
+  "scope_note": "Research 2010-2026; pooled burden 2010-2023; burden-year income, rather than original 2023-only classification."
+}

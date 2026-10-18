@@ -1,0 +1,113 @@
+{
+  "eligible_records": 41610,
+  "disease_count": 22,
+  "research_years": [
+    2010,
+    2026
+  ],
+  "burden_years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "pooling": "Sum absolute DALYs over country-year rows, then calculate shares",
+  "order": "Level-1 groups CMNN, NCDs, injuries; descending pooled global DALYs within each",
+  "income": "Research: publication year. Burden: burden year; existing KLD overrides.",
+  "missing_income_locations_by_year": {
+    "2011": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2013": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2014": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2012": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2015": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2016": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2017": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2010": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL",
+      "TUV"
+    ],
+    "2021": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2022": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2023": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2018": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2019": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2020": [
+      "COK",
+      "NIU",
+      "TKL"
+    ]
+  },
+  "research_denominators": {
+    "lmic": 7331,
+    "hic": 17692
+  },
+  "map_modified": false,
+  "master_sha256": "fb0bc6dfb116080f0df3db5414a35284a9d864b764e3a9c027984b974be275d5"
+}

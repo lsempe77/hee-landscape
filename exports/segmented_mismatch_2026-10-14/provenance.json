@@ -1,0 +1,160 @@
+{
+  "metric": "Total variation distance, expressed as percent share mass",
+  "fixed_reference_years": [
+    2021,
+    2023
+  ],
+  "research_windows": [
+    [
+      2010,
+      2012
+    ],
+    [
+      2021,
+      2023
+    ]
+  ],
+  "causes": 22,
+  "included_records": 41610,
+  "early_n": 518,
+  "late_n": 2005,
+  "early_links": 563,
+  "late_links": 2117,
+  "overall": {
+    "section": "overall",
+    "label": "All 22 disease and injury causes",
+    "level1": "",
+    "early_contribution_pp": 32.75527656858987,
+    "late_contribution_pp": 32.758992405034974,
+    "change_pp": 0.0037158364451065906,
+    "change_lo": -4.551157836859353,
+    "change_hi": 3.451403437186881
+  },
+  "level1": [
+    {
+      "section": "level1",
+      "label": "Communicable, maternal, neonatal & nutritional",
+      "level1": "cmnn",
+      "early_contribution_pp": 12.6360470331089,
+      "late_contribution_pp": 6.93184983612256,
+      "change_pp": -5.70419719698634,
+      "change_lo": -8.822735297678994,
+      "change_hi": -3.791702605101263
+    },
+    {
+      "section": "level1",
+      "label": "Non-communicable diseases",
+      "level1": "ncd",
+      "early_contribution_pp": 15.432075413673315,
+      "late_contribution_pp": 21.6340435923344,
+      "change_pp": 6.2019681786610885,
+      "change_lo": 3.0305451693997236,
+      "change_hi": 9.247933552216017
+    },
+    {
+      "section": "level1",
+      "label": "All injuries",
+      "level1": "inj",
+      "early_contribution_pp": 4.687154121807652,
+      "late_contribution_pp": 4.193098976578008,
+      "change_pp": -0.4940551452296431,
+      "change_lo": -1.0404945576798574,
+      "change_hi": 0.11311235927799541
+    }
+  ],
+  "bootstrap_draws": 1000,
+  "seed": 20261014,
+  "exact_additivity_checks": "passed for point estimates and every bootstrap draw",
+  "master_sha256": "fb0bc6dfb116080f0df3db5414a35284a9d864b764e3a9c027984b974be275d5",
+  "gbd_source_hashes": {
+    "IHME-GBD_2023_DATA-4c48fdfa-1.csv": "abf6b911c636887524f0492ba0deb8ac1b57cd29311a5d49158e473f34d09301",
+    "IHME-GBD_2023_DATA-4c9a17d4-1.csv": "7e5db10ab0eaecc1193306c6690bbf58b8c81ce4abddf206d2bad6c85c142f41",
+    "IHME-GBD_2023_DATA-7609a140-1.csv": "fb943c44c9cae0532712b9661b116f88b096c9a0f1272c99009f9f0b9d4a656c",
+    "IHME-GBD_2023_DATA-cb5cf43b-1.csv": "fbd573cc10f330d09ce09e3078ada1c9be0c0a9a92e64cc5ca6f2155acd79502",
+    "IHME-GBD_2023_DATA-fd3fd126-1.csv": "cd0be20fcdd9693bd83960b22eb3de97a9848debbd763d4a3354f0b18bf56c87"
+  },
+  "burden_unclassified_locations": {
+    "2011": [
+      "COK",
+      "NIU",
+      "NRU",
+      "SSD",
+      "TKL"
+    ],
+    "2012": [
+      "COK",
+      "NIU",
+      "NRU",
+      "SSD",
+      "TKL"
+    ],
+    "2013": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2014": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2015": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2016": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2017": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2010": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL",
+      "TUV"
+    ],
+    "2021": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2022": [
+      "COK",
+      "NIU",
+      "TKL",
+      "VEN"
+    ],
+    "2023": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2018": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2019": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2020": [
+      "COK",
+      "NIU",
+      "TKL"
+    ]
+  },
+  "map_modified": false
+}

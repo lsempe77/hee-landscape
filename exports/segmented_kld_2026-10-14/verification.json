@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "cause_count": 16,
+      "panel": "all",
+      "early": 0.21036833986030332,
+      "late": 0.16320426041442998,
+      "passed": true
+    },
+    {
+      "cause_count": 16,
+      "panel": "lmic",
+      "early": 0.2672505275191587,
+      "late": 0.2487397121293023,
+      "passed": true
+    },
+    {
+      "cause_count": 22,
+      "panel": "all",
+      "early": 0.35426007942264415,
+      "late": 0.26949662332297897,
+      "passed": true
+    },
+    {
+      "cause_count": 22,
+      "panel": "lmic",
+      "early": 0.4032115585235545,
+      "late": 0.3568488035308892,
+      "passed": true
+    }
+  ],
+  "existing_fig2a_16_cause_endpoints_match": true,
+  "hierarchy_and_bootstrap_shape_checks": true
+}

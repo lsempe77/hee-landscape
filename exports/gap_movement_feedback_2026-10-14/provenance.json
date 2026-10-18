@@ -1,0 +1,120 @@
+{
+  "eligible_records": 41610,
+  "early_window": [
+    2010,
+    2012
+  ],
+  "late_window": [
+    2021,
+    2023
+  ],
+  "ordering_years": [
+    2010,
+    2023
+  ],
+  "fixed_burden_reference": [
+    2021,
+    2023
+  ],
+  "early_n": 527,
+  "late_n": 2033,
+  "rows": 20,
+  "alternative_axis": "Log view of identical ratios and identical absolute-share-gap colour decisions",
+  "statuses": {
+    "Farther": 10,
+    "Closer": 10
+  },
+  "axis": "linear research share / fixed late DALY share; matched = 1",
+  "zero_research_rows": [],
+  "source_hashes": {
+    "IHME-GBD_2023_DATA-4c48fdfa-1.csv": "abf6b911c636887524f0492ba0deb8ac1b57cd29311a5d49158e473f34d09301",
+    "IHME-GBD_2023_DATA-4c9a17d4-1.csv": "7e5db10ab0eaecc1193306c6690bbf58b8c81ce4abddf206d2bad6c85c142f41",
+    "IHME-GBD_2023_DATA-7609a140-1.csv": "fb943c44c9cae0532712b9661b116f88b096c9a0f1272c99009f9f0b9d4a656c",
+    "IHME-GBD_2023_DATA-cb5cf43b-1.csv": "fbd573cc10f330d09ce09e3078ada1c9be0c0a9a92e64cc5ca6f2155acd79502",
+    "IHME-GBD_2023_DATA-fd3fd126-1.csv": "cd0be20fcdd9693bd83960b22eb3de97a9848debbd763d4a3354f0b18bf56c87"
+  },
+  "burden_unclassified_locations": {
+    "2011": [
+      "COK",
+      "NIU",
+      "NRU",
+      "SSD",
+      "TKL"
+    ],
+    "2012": [
+      "COK",
+      "NIU",
+      "NRU",
+      "SSD",
+      "TKL"
+    ],
+    "2013": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2014": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2015": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2016": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL"
+    ],
+    "2017": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2010": [
+      "COK",
+      "NIU",
+      "NRU",
+      "TKL",
+      "TUV"
+    ],
+    "2021": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2022": [
+      "COK",
+      "NIU",
+      "TKL",
+      "VEN"
+    ],
+    "2023": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2018": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2019": [
+      "COK",
+      "NIU",
+      "TKL"
+    ],
+    "2020": [
+      "COK",
+      "NIU",
+      "TKL"
+    ]
+  },
+  "map_modified": false
+}

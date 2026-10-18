@@ -1,0 +1,7 @@
+We used our latest dataset of 41,610 included economic-evaluation records, linking their disease codes to GBD 2023 disease-burden data. This figure uses the records with disease codes in two periods: 2010–2012 and 2021–2023.
+- Panel A: all studies, including HIC and L&MIC settings, compared with global disease burden.
+- Panel B: studies about low- and middle-income countries, compared with disease burden in those countries.
+Both periods are compared against the same 2021–2023 burden distribution, so the movement reflects changes in the research mix. The figure then breaks the overall mismatch into contributions from the three broad disease groups and individual diseases. Green means a contribution reduced mismatch; red means it increased mismatch.
+The main takeaway is that changes largely offset one another. Research became better aligned with burden for several communicable conditions, especially HIV/AIDS. But increasing concentration on cancer contributed to greater mismatch within NCDs. Injury research remained relatively underrepresented.
+Overall mismatch changed little: 23.73% → 24.43% globally, and 32.76% → 32.76% for L&MICs. Neither overall change was clearly distinguishable from zero.
+These percentages are share-distribution mismatch scores, not percentages of studies that are inappropriate. The message is: shifting towards NCDs does not automatically mean research becomes better aligned with the burden of individual diseases.

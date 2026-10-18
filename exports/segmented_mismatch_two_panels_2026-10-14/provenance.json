@@ -1,0 +1,144 @@
+{
+  "eligible_records": 41610,
+  "panels": {
+    "all": {
+      "total": {
+        "panel": "all",
+        "section": "overall",
+        "label": "All 22 disease and injury causes",
+        "level1": "",
+        "cause": "",
+        "early_pp": 23.733673683685023,
+        "late_pp": 24.42839753680474,
+        "change_pp": 0.6947238531197135,
+        "change_lo": -1.1703889649729007,
+        "change_hi": 2.333028564022292
+      },
+      "parents": [
+        {
+          "panel": "all",
+          "section": "level1",
+          "label": "Communicable / maternal /\nneonatal / nutritional",
+          "level1": "cmnn",
+          "cause": "",
+          "early_pp": 8.87032186835108,
+          "late_pp": 5.3801517021653895,
+          "change_pp": -3.490170166185691,
+          "change_lo": -4.404418547895728,
+          "change_hi": -2.6155668157326577
+        },
+        {
+          "panel": "all",
+          "section": "level1",
+          "label": "Non-communicable diseases",
+          "level1": "ncd",
+          "cause": "",
+          "early_pp": 11.290226426878773,
+          "late_pp": 15.558750658145563,
+          "change_pp": 4.268524231266794,
+          "change_lo": 2.6061607947297487,
+          "change_hi": 5.628582441635532
+        },
+        {
+          "panel": "all",
+          "section": "level1",
+          "label": "All injuries",
+          "level1": "inj",
+          "cause": "",
+          "early_pp": 3.573125388455172,
+          "late_pp": 3.4894951764937834,
+          "change_pp": -0.08363021196138898,
+          "change_lo": -0.42733194070050273,
+          "change_hi": 0.29435580909047154
+        }
+      ],
+      "early_n": 3692,
+      "late_n": 7822,
+      "early_links": 3865,
+      "late_links": 8125
+    },
+    "lmic": {
+      "total": {
+        "panel": "lmic",
+        "section": "overall",
+        "label": "All 22 disease and injury causes",
+        "level1": "",
+        "cause": "",
+        "early_pp": 32.75527656858987,
+        "late_pp": 32.758992405034974,
+        "change_pp": 0.0037158364451065906,
+        "change_lo": -4.551157836859353,
+        "change_hi": 3.451403437186881
+      },
+      "parents": [
+        {
+          "panel": "lmic",
+          "section": "level1",
+          "label": "Communicable / maternal /\nneonatal / nutritional",
+          "level1": "cmnn",
+          "cause": "",
+          "early_pp": 12.6360470331089,
+          "late_pp": 6.93184983612256,
+          "change_pp": -5.70419719698634,
+          "change_lo": -8.822735297678994,
+          "change_hi": -3.791702605101263
+        },
+        {
+          "panel": "lmic",
+          "section": "level1",
+          "label": "Non-communicable diseases",
+          "level1": "ncd",
+          "cause": "",
+          "early_pp": 15.432075413673315,
+          "late_pp": 21.6340435923344,
+          "change_pp": 6.2019681786610885,
+          "change_lo": 3.0305451693997236,
+          "change_hi": 9.247933552216017
+        },
+        {
+          "panel": "lmic",
+          "section": "level1",
+          "label": "All injuries",
+          "level1": "inj",
+          "cause": "",
+          "early_pp": 4.687154121807652,
+          "late_pp": 4.193098976578008,
+          "change_pp": -0.4940551452296431,
+          "change_lo": -1.0404945576798574,
+          "change_hi": 0.11311235927799541
+        }
+      ],
+      "early_n": 518,
+      "late_n": 2005,
+      "early_links": 563,
+      "late_links": 2117
+    }
+  },
+  "research_windows": [
+    [
+      2010,
+      2012
+    ],
+    [
+      2021,
+      2023
+    ]
+  ],
+  "fixed_burden_window": [
+    2021,
+    2023
+  ],
+  "ordering": "Common pooled global DALYs 2010\u20132023 within level-1 groups",
+  "cause_count": 22,
+  "bootstrap_draws": 1000,
+  "seed": 20261014,
+  "panel_seeds": {
+    "all": 20261015,
+    "lmic": 20261014
+  },
+  "additivity_checks": "Passed for both panels and every bootstrap draw",
+  "master_sha256": "fb0bc6dfb116080f0df3db5414a35284a9d864b764e3a9c027984b974be275d5",
+  "map_modified": false,
+  "global_gbd_rows_checked": 62832,
+  "global_includes_unknown_country_studies": true
+}
