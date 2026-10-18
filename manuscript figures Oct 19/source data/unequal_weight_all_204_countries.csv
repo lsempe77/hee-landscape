@@ -1,0 +1,205 @@
+iso3,country,income_group,income_setting,observed,expected,difference
+ATG,Antigua and Barbuda,High income,High-income settings,0,0.31145389142352203,-0.31145389142352203
+IND,India,Lower middle income,Low- and middle-income settings,608,5471.016912881591,-4863.016912881591
+FSM,"Micronesia, Fed. Sts.",Upper middle income,Low- and middle-income settings,1,0.4423231237702003,0.5576768762297997
+CHE,Switzerland,High income,High-income settings,189,27.447344477566016,161.55265552243398
+VCT,St. Vincent and the Grenadines,Upper middle income,Low- and middle-income settings,2,0.47062433956725247,1.5293756604327475
+SYC,Seychelles,High income,High-income settings,2,0.3731911757068085,1.6268088242931915
+BHS,"Bahamas, The",High income,High-income settings,0,1.6585854027134659,-1.6585854027134659
+HUN,Hungary,High income,High-income settings,40,44.15458704394362,-4.154587043943621
+KAZ,Kazakhstan,Upper middle income,Low- and middle-income settings,26,67.69555854690958,-41.69555854690958
+SAU,Saudi Arabia,High income,High-income settings,82,81.7570480375934,0.24295196240659322
+ISL,Iceland,High income,High-income settings,4,1.111776816228845,2.8882231837711547
+KNA,St. Kitts and Nevis,High income,High-income settings,0,0.18459693241843686,-0.18459693241843686
+KGZ,Kyrgyzstan,Lower middle income,Low- and middle-income settings,5,19.988479622640778,-14.988479622640778
+LBR,Liberia,Low income,Low- and middle-income settings,3,37.66120085189665,-34.66120085189665
+NPL,Nepal,Lower middle income,Low- and middle-income settings,26,109.09223367815348,-83.09223367815348
+BDI,Burundi,Low income,Low- and middle-income settings,11,94.25538606682844,-83.25538606682844
+MLI,Mali,Low income,Low- and middle-income settings,28,170.56735388804051,-142.56735388804051
+COK,COK,Not reported,Income not reported,0,0.06262455733380665,-0.06262455733380665
+TZA,United Republic of Tanzania,Lower middle income,Low- and middle-income settings,100,273.07788069940693,-173.07788069940693
+GBR,United Kingdom,High income,High-income settings,4203,251.9259963883969,3951.074003611603
+NZL,New Zealand,High income,High-income settings,152,16.670053454311123,135.32994654568887
+ISR,Israel,High income,High-income settings,48,23.81284943268655,24.18715056731345
+BLZ,Belize,Upper middle income,Low- and middle-income settings,2,1.2965154587974148,0.7034845412025852
+EGY,Egypt,Lower middle income,Low- and middle-income settings,87,376.53740920561137,-289.53740920561137
+MEX,Mexico,Upper middle income,Low- and middle-income settings,179,463.7940852654072,-284.7940852654072
+MDV,Maldives,Upper middle income,Low- and middle-income settings,0,1.1352062024238991,-1.1352062024238991
+BEN,Benin,Lower middle income,Low- and middle-income settings,12,77.31534415368571,-65.31534415368571
+AUS,Australia,High income,High-income settings,1044,82.44395098853062,961.5560490114694
+LTU,Lithuania,High income,High-income settings,8,13.495138599852407,-5.495138599852407
+SOM,Somalia,Low income,Low- and middle-income settings,9,149.4901310433863,-140.4901310433863
+MNE,Montenegro,Upper middle income,Low- and middle-income settings,3,2.5904891576138582,0.40951084238614177
+BMU,Bermuda,High income,High-income settings,0,0.24025681567683038,-0.24025681567683038
+HND,Honduras,Lower middle income,Low- and middle-income settings,9,29.84089043616246,-20.84089043616246
+MNG,Mongolia,Upper middle income,Low- and middle-income settings,7,11.19531317996443,-4.19531317996443
+ARG,Argentina,Upper middle income,Low- and middle-income settings,70,157.62201182471375,-87.62201182471375
+CHL,Chile,High income,High-income settings,73,58.409110736444525,14.590889263555475
+MKD,North Macedonia,Upper middle income,Low- and middle-income settings,7,7.5314917054605015,-0.5314917054605015
+ZMB,Zambia,Lower middle income,Low- and middle-income settings,70,113.79503179471997,-43.795031794719975
+MDA,Moldova,Upper middle income,Low- and middle-income settings,12,15.635413795220792,-3.635413795220792
+PRK,North Korea,Low income,Low- and middle-income settings,1,101.34060344492835,-100.34060344492835
+TTO,Trinidad and Tobago,High income,High-income settings,2,6.2106025010900705,-4.2106025010900705
+SYR,Syria,Low income,Low- and middle-income settings,6,57.45526476998266,-51.45526476998266
+PAN,Panama,High income,High-income settings,5,12.482211121604202,-7.482211121604202
+BFA,Burkina Faso,Low income,Low- and middle-income settings,32,128.78338956729476,-96.78338956729476
+PAK,Pakistan,Lower middle income,Low- and middle-income settings,111,1002.3807954457479,-891.3807954457479
+BRB,Barbados,High income,High-income settings,2,1.269572814312456,0.730427185687544
+RUS,Russia,High income,High-income settings,233,741.4568114295645,-508.4568114295645
+IRQ,Iraq,Upper middle income,Low- and middle-income settings,16,151.62931141807329,-135.62931141807329
+MYS,Malaysia,Upper middle income,Low- and middle-income settings,101,95.90487349485953,5.09512650514047
+TUR,Turkey,Upper middle income,Low- and middle-income settings,101,288.3198665649228,-187.3198665649228
+IRL,Ireland,High income,High-income settings,132,15.322522559950812,116.67747744004919
+NIC,Nicaragua,Lower middle income,Low- and middle-income settings,16,19.60319517678121,-3.6031951767812096
+ETH,Ethiopia,Low income,Low- and middle-income settings,101,587.9033305227844,-486.90333052278436
+SUR,Suriname,Upper middle income,Low- and middle-income settings,1,2.441897881751084,-1.4418978817510841
+CPV,Cabo Verde,Upper middle income,Low- and middle-income settings,0,1.5452881027247285,-1.5452881027247285
+SMR,San Marino,High income,High-income settings,0,0.11046073631505689,-0.11046073631505689
+NER,Niger,Low income,Low- and middle-income settings,18,240.69944935517725,-222.69944935517725
+COM,Comoros,Lower middle income,Low- and middle-income settings,1,3.073999495125245,-2.073999495125245
+WSM,Samoa,Upper middle income,Low- and middle-income settings,2,0.7401570402382922,1.2598429597617078
+DMA,Dominica,Upper middle income,Low- and middle-income settings,0,0.2695798883957499,-0.2695798883957499
+TUN,Tunisia,Lower middle income,Low- and middle-income settings,13,41.10656923015865,-28.106569230158648
+PHL,Philippines,Upper middle income,Low- and middle-income settings,79,379.6742278114974,-300.6742278114974
+BWA,Botswana,Upper middle income,Low- and middle-income settings,14,10.278647747720287,3.721352252279713
+TKL,TKL,Not reported,Income not reported,0,0.005415956464974296,-0.005415956464974296
+URY,Uruguay,High income,High-income settings,12,13.15754287243708,-1.1575428724370802
+TKM,Turkmenistan,Upper middle income,Low- and middle-income settings,1,20.64269606597081,-19.64269606597081
+CMR,Cameroon,Lower middle income,Low- and middle-income settings,24,200.65355855936494,-176.65355855936494
+BOL,Bolivia,Lower middle income,Low- and middle-income settings,10,45.24833679832421,-35.24833679832421
+MRT,Mauritania,Lower middle income,Low- and middle-income settings,2,19.297601923047093,-17.297601923047093
+UGA,Uganda,Low income,Low- and middle-income settings,168,232.43210361689438,-64.43210361689438
+TON,Tonga,Upper middle income,Low- and middle-income settings,3,0.3542518083415498,2.64574819165845
+BHR,Bahrain,High income,High-income settings,2,3.670255596950529,-1.670255596950529
+DJI,Djibouti,Lower middle income,Low- and middle-income settings,2,6.2607401170673995,-4.2607401170673995
+GRL,Greenland,High income,High-income settings,2,0.2475613622417698,1.7524386377582302
+ERI,Eritrea,Low income,Low- and middle-income settings,0,42.52231318911583,-42.52231318911583
+CHN,China,Upper middle income,Low- and middle-income settings,3166,4423.043801318006,-1257.0438013180064
+POL,Poland,High income,High-income settings,89,155.3571056454503,-66.3571056454503
+TUV,Tuvalu,Upper middle income,Low- and middle-income settings,1,0.05956926089943074,0.9404307391005693
+CIV,Ivory Coast,Lower middle income,Low- and middle-income settings,21,193.82152709792487,-172.82152709792487
+AND,Andorra,High income,High-income settings,0,0.27907828730074213,-0.27907828730074213
+MDG,Madagascar,Low income,Low- and middle-income settings,14,170.11819687520722,-156.11819687520722
+SLB,Solomon Islands,Lower middle income,Low- and middle-income settings,2,3.603839368854271,-1.603839368854271
+GUM,Guam,High income,High-income settings,0,0.588949397806226,-0.588949397806226
+KWT,Kuwait,High income,High-income settings,6,9.721135633660943,-3.7211356336609427
+ECU,Ecuador,Upper middle income,Low- and middle-income settings,18,59.127534758063454,-41.127534758063454
+PNG,Papua New Guinea,Lower middle income,Low- and middle-income settings,9,49.01350624668192,-40.01350624668192
+ROU,Romania,High income,High-income settings,29,86.70887165886064,-57.708871658860645
+MMR,Myanmar,Lower middle income,Low- and middle-income settings,19,296.7918156760469,-277.7918156760469
+ALB,Albania,Upper middle income,Low- and middle-income settings,8,8.364782332397438,-0.3647823323974375
+AUT,Austria,High income,High-income settings,62,31.53178240371856,30.46821759628144
+NGA,Nigeria,Lower middle income,Low- and middle-income settings,130,1501.568628796069,-1371.568628796069
+VEN,Venezuela,Lower middle income,Low- and middle-income settings,6,110.34680883363205,-104.34680883363205
+SRB,Republic of Serbia,Upper middle income,Low- and middle-income settings,45,39.67123792581942,5.328762074180581
+MCO,Monaco,High income,High-income settings,1,0.1677973552199218,0.8322026447800782
+COG,Republic of the Congo,Lower middle income,Low- and middle-income settings,2,31.05941298363156,-29.05941298363156
+KEN,Kenya,Lower middle income,Low- and middle-income settings,147,198.06176827327107,-51.06176827327107
+CAF,Central African Republic,Low income,Low- and middle-income settings,3,62.50497686098345,-59.50497686098345
+IRN,Iran,Upper middle income,Low- and middle-income settings,279,244.04767128120383,34.95232871879617
+TJK,Tajikistan,Lower middle income,Low- and middle-income settings,3,31.71936156131025,-28.71936156131025
+VIR,Virgin Islands (U.S.),High income,High-income settings,0,0.3960943368818184,-0.3960943368818184
+THA,Thailand,Upper middle income,Low- and middle-income settings,416,261.4542924870045,154.54570751299548
+ITA,Italy,High income,High-income settings,715,215.55553702073522,499.4444629792648
+SVN,Slovenia,High income,High-income settings,16,7.819059394171881,8.18094060582812
+YEM,Yemen,Low income,Low- and middle-income settings,3,127.03706215380087,-124.03706215380087
+LUX,Luxembourg,High income,High-income settings,2,1.8413392410327287,0.15866075896727128
+GRD,Grenada,Upper middle income,Low- and middle-income settings,0,0.45950673111578766,-0.45950673111578766
+LBN,Lebanon,Lower middle income,Low- and middle-income settings,16,17.518801737893195,-1.5188017378931953
+VUT,Vanuatu,Lower middle income,Low- and middle-income settings,3,1.1159686224714065,1.8840313775285935
+CUB,Cuba,Upper middle income,Low- and middle-income settings,14,44.639723715647804,-30.639723715647804
+BGR,Bulgaria,High income,High-income settings,73,34.50612354492783,38.49387645507217
+LKA,Sri Lanka,Upper middle income,Low- and middle-income settings,24,76.58198584180128,-52.581985841801284
+BRN,Brunei Darussalam,High income,High-income settings,1,1.2067383472681597,-0.20673834726815965
+BRA,Brazil,Upper middle income,Low- and middle-income settings,500,788.0823238453414,-288.0823238453414
+SEN,Senegal,Lower middle income,Low- and middle-income settings,24,77.02538228431017,-53.02538228431017
+UKR,Ukraine,Upper middle income,Low- and middle-income settings,39,212.28261501247914,-173.28261501247914
+GHA,Ghana,Lower middle income,Low- and middle-income settings,72,159.71810171481204,-87.71810171481204
+AGO,Angola,Lower middle income,Low- and middle-income settings,3,198.27089637562358,-195.27089637562358
+NRU,Naoero,High income,High-income settings,0,0.06826199290632637,-0.06826199290632637
+GNQ,Equatorial Guinea,Upper middle income,Low- and middle-income settings,1,8.755557052736378,-7.755557052736378
+PER,Peru,Upper middle income,Low- and middle-income settings,56,115.0661288777846,-59.06612887778461
+ARE,United Arab Emirates,High income,High-income settings,23,19.32888904278925,3.6711109572107503
+STP,São Tomé and Príncipe,Lower middle income,Low- and middle-income settings,1,0.7856844213596113,0.21431557864038875
+NIU,NIU,Not reported,Income not reported,0,0.007543284884868915,-0.007543284884868915
+AFG,Afghanistan,Low income,Low- and middle-income settings,13,163.26400168526976,-150.26400168526976
+MUS,Mauritius,Upper middle income,Low- and middle-income settings,0,5.525841458476812,-5.525841458476812
+MWI,Malawi,Low income,Low- and middle-income settings,96,113.11555848775414,-17.115558487754143
+TLS,East Timor,Lower middle income,Low- and middle-income settings,2,5.562110237546247,-3.5621102375462472
+LSO,Lesotho,Lower middle income,Low- and middle-income settings,9,13.637269362729626,-4.637269362729626
+TWN,Taiwan,High income,High-income settings,366,83.35059431051434,282.64940568948566
+COD,Democratic Republic of the Congo,Low income,Low- and middle-income settings,28,597.6205908503413,-569.6205908503413
+SVK,Slovakia,High income,High-income settings,21,21.102792101236872,-0.10279210123687221
+ASM,American Samoa,High income,High-income settings,1,0.19316109354404576,0.8068389064559542
+JAM,Jamaica,Upper middle income,Low- and middle-income settings,3,10.04126733471939,-7.0412673347193895
+LBY,Libya,Upper middle income,Low- and middle-income settings,3,30.9172968376065,-27.9172968376065
+VNM,Vietnam,Upper middle income,Low- and middle-income settings,120,331.87264462670925,-211.87264462670925
+TCD,Chad,Low income,Low- and middle-income settings,8,166.86484978394805,-158.86484978394805
+HTI,Haiti,Lower middle income,Low- and middle-income settings,17,84.51745391372748,-67.51745391372748
+SDN,Sudan,Low income,Low- and middle-income settings,7,151.14139069571226,-144.14139069571226
+DOM,Dominican Republic,Upper middle income,Low- and middle-income settings,7,41.24348354836789,-34.24348354836789
+NLD,Netherlands,High income,High-income settings,1073,62.965844638284935,1010.0341553617151
+BIH,Bosnia and Herzegovina,Upper middle income,Low- and middle-income settings,6,13.66855556834105,-7.66855556834105
+BEL,Belgium,High income,High-income settings,184,40.16001931406085,143.83998068593917
+SLE,Sierra Leone,Low income,Low- and middle-income settings,19,59.8251625865359,-40.8251625865359
+BLR,Belarus,Upper middle income,Low- and middle-income settings,19,45.22535702248896,-26.225357022488957
+FJI,Fiji,Upper middle income,Low- and middle-income settings,3,4.2159579718437925,-1.2159579718437925
+MAR,Morocco,Lower middle income,Low- and middle-income settings,15,135.1818101642035,-120.18181016420351
+UZB,Uzbekistan,Lower middle income,Low- and middle-income settings,8,120.64049399593928,-112.64049399593928
+GNB,Guinea-Bissau,Low income,Low- and middle-income settings,6,13.447798869111395,-7.447798869111395
+ARM,Armenia,Upper middle income,Low- and middle-income settings,8,10.431564762414704,-2.4315647624147037
+TGO,Togo,Lower middle income,Low- and middle-income settings,3,46.43454449234597,-43.43454449234597
+ESP,Spain,High income,High-income settings,889,159.9117577155719,729.0882422844281
+IDN,Indonesia,Upper middle income,Low- and middle-income settings,180,1070.9256135585465,-890.9256135585465
+JPN,Japan,High income,High-income settings,789,479.54575797519107,309.45424202480893
+AZE,Azerbaijan,Upper middle income,Low- and middle-income settings,2,38.43694757657973,-36.43694757657973
+MNP,Northern Mariana Islands,High income,High-income settings,0,0.1899833641406594,-0.1899833641406594
+CAN,Canada,High income,High-income settings,1432,137.69088892483524,1294.3091110751648
+BGD,Bangladesh,Lower middle income,Low- and middle-income settings,105,629.4096533154187,-524.4096533154187
+ZAF,South Africa,Upper middle income,Low- and middle-income settings,358,338.3230627104426,19.676937289557372
+MLT,Malta,High income,High-income settings,2,1.6510908135738227,0.3489091864261773
+KHM,Cambodia,Lower middle income,Low- and middle-income settings,26,58.92994866691056,-32.92994866691056
+SSD,South Sudan,Low income,Low- and middle-income settings,8,80.54355665167637,-72.54355665167637
+KOR,South Korea,High income,High-income settings,371,151.63857225092787,219.36142774907213
+LVA,Latvia,High income,High-income settings,6,9.406844516951743,-3.406844516951743
+OMN,Oman,High income,High-income settings,3,10.632042316152216,-7.632042316152216
+CYP,Cyprus,High income,High-income settings,4,4.014176072641364,-0.014176072641364001
+PLW,Palau,High income,High-income settings,0,0.09050786924623624,-0.09050786924623624
+GMB,Gambia,Low income,Low- and middle-income settings,13,11.9834215287278,1.0165784712722008
+PRY,Paraguay,Upper middle income,Low- and middle-income settings,7,22.743380477711256,-15.743380477711256
+GRC,Greece,High income,High-income settings,135,42.931288453468696,92.0687115465313
+JOR,Jordan,Upper middle income,Low- and middle-income settings,24,30.503756623252468,-6.5037566232524675
+DEU,Germany,High income,High-income settings,830,336.5059859509235,493.4940140490765
+DNK,Denmark,High income,High-income settings,198,20.64584133102913,177.35415866897088
+NAM,Namibia,Lower middle income,Low- and middle-income settings,11,14.741412432340011,-3.7414124323400113
+SGP,Singapore,High income,High-income settings,212,13.385803664668424,198.61419633533157
+COL,Colombia,Upper middle income,Low- and middle-income settings,288,154.42864490521958,133.57135509478042
+GIN,Guinea,Lower middle income,Low- and middle-income settings,8,91.47212442841823,-83.47212442841823
+DZA,Algeria,Upper middle income,Low- and middle-income settings,11,134.9939153882259,-123.9939153882259
+SWZ,eSwatini,Lower middle income,Low- and middle-income settings,11,7.729774028873843,3.270225971126157
+LAO,Laos,Lower middle income,Low- and middle-income settings,17,34.15321513557953,-17.15321513557953
+HRV,Croatia,High income,High-income settings,20,17.24876411879261,2.751235881207389
+FRA,France,High income,High-income settings,580,237.56969354909805,342.430306450902
+BTN,Bhutan,Lower middle income,Low- and middle-income settings,3,2.6898730428606923,0.3101269571393077
+USA,United States of America,High income,High-income settings,7327,1391.9477747347216,5935.052225265278
+GEO,Georgia,Upper middle income,Low- and middle-income settings,24,16.112411645141687,7.887588354858313
+PRT,Portugal,High income,High-income settings,119,40.43349495040296,78.56650504959704
+GUY,Guyana,High income,High-income settings,2,3.7241105127021257,-1.7241105127021257
+NOR,Norway,High income,High-income settings,194,16.89435211787912,177.10564788212088
+CRI,Costa Rica,High income,High-income settings,12,15.860576046862715,-3.8605760468627146
+GAB,Gabon,Upper middle income,Low- and middle-income settings,5,9.119123204516079,-4.119123204516079
+KIR,Kiribati,Lower middle income,Low- and middle-income settings,1,0.5022569545067658,0.4977430454932342
+SLV,El Salvador,Upper middle income,Low- and middle-income settings,8,23.490856141232683,-15.490856141232683
+MHL,Marshall Islands,Upper middle income,Low- and middle-income settings,0,0.1903561330563044,-0.1903561330563044
+SWE,Sweden,High income,High-income settings,508,34.129815971829586,473.8701840281704
+RWA,Rwanda,Low income,Low- and middle-income settings,22,70.19326542692205,-48.19326542692205
+MOZ,Mozambique,Low income,Low- and middle-income settings,43,187.6930431984889,-144.6930431984889
+ZWE,Zimbabwe,Lower middle income,Low- and middle-income settings,58,82.07765453773179,-24.07765453773179
+FIN,Finland,High income,High-income settings,137,20.77339449381501,116.226605506185
+CZE,Czechia,High income,High-income settings,73,41.77051108799404,31.229488912005962
+LCA,St. Lucia,Upper middle income,Low- and middle-income settings,1,0.6642419294758173,0.3357580705241827
+EST,Estonia,High income,High-income settings,14,5.625342159280542,8.374657840719458
+PRI,Puerto Rico (U.S.),High income,High-income settings,10,13.649629287639456,-3.6496292876394563
+GTM,Guatemala,Upper middle income,Low- and middle-income settings,16,58.23017801546994,-42.23017801546994
+PSE,West Bank and Gaza,Lower middle income,Low- and middle-income settings,8,29.110784253574497,-21.110784253574497
+QAT,Qatar,High income,High-income settings,25,5.168477553162585,19.831522446837415

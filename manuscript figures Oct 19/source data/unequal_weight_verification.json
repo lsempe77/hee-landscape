@@ -1,0 +1,10 @@
+{
+  "national_locations": 204,
+  "study_country_pairs": 31592,
+  "displayed_countries": 24,
+  "deficits": 16,
+  "surpluses": 8,
+  "text_bounds_check": "All visible text within canvas",
+  "right_margin_fraction": 0.055,
+  "site_modified": false
+}

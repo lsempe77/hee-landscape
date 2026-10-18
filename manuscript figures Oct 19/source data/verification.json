@@ -1,0 +1,19 @@
+{
+  "figures": 6,
+  "formats": [
+    "PNG 300 dpi",
+    "PDF",
+    "SVG"
+  ],
+  "visual_review": "All six PNGs inspected for layout and readability",
+  "regional_counts": [
+    1379,
+    9580,
+    1146,
+    9825,
+    694,
+    6492
+  ],
+  "single_country_base": 27897,
+  "site_files_changed": false
+}

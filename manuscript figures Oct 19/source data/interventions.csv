@@ -1,0 +1,10 @@
+intervention,label,high_income,low_middle_income,lmic_share
+pharma,Pharmaceuticals,6804,3113,0.3139054149440355
+surgical_procedural,Surgery & procedures,2792,846,0.2325453545904343
+screening_diagnostic,Screening & diagnosis,2702,873,0.2441958041958042
+care_model_organisational,Care models & organisation,2513,759,0.2319682151589242
+behavioural_preventive,Behavioural & preventive,1914,587,0.23470611755297882
+device_or_supply,Devices & supplies,1718,371,0.17759693633317378
+vaccine,Vaccines,959,708,0.4247150569886023
+financing_payment_policy,Financing & payment policy,702,349,0.33206470028544244
+other,Other,132,55,0.29411764705882354

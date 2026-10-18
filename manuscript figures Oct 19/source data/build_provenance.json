@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-19",
+  "theme_sha256": "90ca00a3cc882cf069c165a072dc6cdf0c23855539c0bc2dd2ca34144dbeef20",
+  "master_sha256": "fb0bc6dfb116080f0df3db5414a35284a9d864b764e3a9c027984b974be275d5",
+  "eligible_n": 41610,
+  "colours": {
+    "high_income": "#2a78d6",
+    "low_middle_income": "#eb6834",
+    "third_category": "#1baf7a"
+  },
+  "site_modified": false
+}
