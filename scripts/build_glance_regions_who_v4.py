@@ -100,8 +100,9 @@ NOTES = {
                "evidence on cost-effectiveness or value for money.",
     "period": "2026 is a partial year: the literature searches ran until August 2026. "
               "Studies published later in 2026 are not included.",
-    "countries": "Of the {n_gbd} countries and territories with Global Burden of Disease 2023 data, the number named by "
-                 "at least one study in the period. Places without their own burden figures, such as Hong Kong, are not counted.",
+    "countries": "All countries and territories named by at least one eligible study in the period, "
+                 "including places without a matching national Global Burden of Disease 2023 row. "
+                 "Panel A counts full economic evaluations without requiring burden data.",
     "open_access": "Share of studies with a known open-access status that are open access, meaning they are free to read "
                    "(from OpenAlex, matched by DOI). {n_oa_unknown} studies whose status could not be found are left out of the base.",
     "funder": "Share of studies whose record names at least one funder in its publication metadata (Crossref). "
@@ -120,7 +121,7 @@ NOTES = {
     "intensity": "Economic evaluations naming at least one country in the region, divided by the region's disease burden: the healthy years of life lost to illness and early death (DALYs, Global Burden of Disease 2023), per 100,000 DALYs. "
                  "Reviews that report no evaluation of their own, and evaluations naming only places without burden data (such as Hong Kong), are left out of this rate. "
                  "Evaluations published over the whole period are divided by one year's burden. "
-                 "The marker sits on the same colour scale as the map.",
+                 "This regional rate scale is separate from Panel A's study-count scale.",
     "disease": "Share of the region's disease-coded economic evaluations (reviews that report no evaluation of their own left out), split into the Global Burden of Disease (GBD 2023) top-level groups: "
                "communicable, maternal, neonatal and nutritional conditions; non-communicable diseases; and injuries. "
                "Each study's diseases were coded to GBD causes from its title and abstract (the condition the evaluated intervention targets). "
@@ -297,17 +298,41 @@ def main():
     n_gbd = len(gbd_isos)
     for k in ("countries", "trend"):
         NOTES[k] = NOTES[k].format(n_gbd=n_gbd)
+    named_isos = set()  # Full study geography, before matching to burden data.
+    full_ee_counts = defaultdict(int)
+    with open(GEO_LONG_CSV, encoding="utf-8") as f:
+        country_names = {r["iso3"]: r["place"] for r in csv.DictReader(f) if r["iso3"] not in ("", "NA")}
     pairs_by_year = defaultdict(lambda: defaultdict(int))  # iso3 -> year -> new studies
     ee_pairs_by_year = defaultdict(lambda: defaultdict(int))  # the same, economic evaluations only
     with open(GEO_LONG_CSV, encoding="utf-8") as f:
         for r in {(r["record_id"], r["iso3"]) for r in csv.DictReader(f)
-                  if r["is_special"] == "FALSE" and r["iso3"] in gbd_isos}:
+                  if r["is_special"] == "FALSE" and r["iso3"] not in ("", "NA")}:
             s = index_of.get(r[0])
             if s is not None and in_range[s]:
+                named_isos.add(r[1])
+                if is_ee[s]:
+                    full_ee_counts[r[1]] += 1
+                if r[1] not in gbd_isos:
+                    continue
                 pairs_by_year[r[1]][years[s]] += 1
                 if is_ee[s]:
                     ee_pairs_by_year[r[1]][years[s]] += 1
-    n_named = len(pairs_by_year)
+    n_named = len(named_isos)
+    n_named_gbd = len(named_isos & gbd_isos)
+    unmatched_names = {"HKG": "Hong Kong", "CYM": "Cayman Islands", "GUF": "French Guiana", "GLP": "Guadeloupe"}
+    unmatched = ", ".join(unmatched_names.get(i, i) for i in sorted(named_isos - gbd_isos))
+    burden_coverage_note = (
+        f"The evidence base covers {n_named} countries and territories. Of these, {n_named_gbd} have matching "
+        f"national GBD 2023 disease-burden data; {unmatched} have no separate row in this export, "
+        "so burden comparisons exclude them. "
+        f"Panel B's regional rates use the {len(map_rows)} countries in the regional country-data file "
+        "with available burden data, including countries with no evaluation. Panel A uses full study geography and does not require burden data."
+    )
+    rate_rows = map_rows
+    map_rows = [{"iso3": i, "country": country_names.get(i, i), "n": full_ee_counts[i]} for i in sorted(named_isos)]
+    count_zmin = 0.0
+    count_zmax = math.log10(max(r["n"] for r in map_rows))
+    count_colours = [[0, "#cde2fb"], [0.5, "#2a78d6"], [1, "#0d366b"]]
 
     # ---- Regions ----
     reg_countries = defaultdict(list)  # map countries, for the card silhouettes
@@ -461,8 +486,8 @@ def render(v):
       </div>""")
 
     map_data = {
-        "rows": v["map_rows"], "zmin": v["zmin"], "zmax": v["zmax"], "median": v["median"],
-        "colours": MAP_COLOURS,
+        "rows": v["map_rows"], "zmin": v["count_zmin"], "zmax": v["count_zmax"],
+        "colours": v["count_colours"],
         "tags": [{"code": c, "lon": REGION_TAG_POS[c][0], "lat": REGION_TAG_POS[c][1]} for c in REGION_ORDER],
         "silhouettes": {c: {"isos": sorted(v["reg_countries"][c]) + SILHOUETTE_EXTRA[c],
                             "lon": SILHOUETTE_VIEW[c][0], "lat": SILHOUETTE_VIEW[c][1]} for c in REGION_ORDER},
@@ -481,6 +506,7 @@ def render(v):
         q_intensity=help_btn("intensity"), q_ee_rate=help_btn("ee_rate"), q_disease=help_btn("disease"),
         q_top=help_btn("top_diseases"), q_utility=help_btn("utility_region"), q_global=help_btn("global_avg"),
         q_trend=help_btn("trend"),
+        burden_coverage_note=html.escape(v["burden_coverage_note"]),
         n_map=len(v["map_rows"]), n_gbd=v["n_gbd"], trend_end=v["trend_end"], n_ee=fmt_int(len(v["ees"])),
     )
 
@@ -518,6 +544,7 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 .sec span {{ color:var(--muted); font-size:12px; }}
 .scope {{ display:flex; align-items:center; gap:12px; margin:30px 0 4px; color:var(--ink); font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; }}
 .scope::before, .scope::after {{ content:""; flex:1; border-top:1.5px solid var(--ink); }}
+.coverage-note {{ margin:20px 0 12px; max-width:100%; color:var(--muted); font-size:13px; line-height:1.6; overflow-wrap:anywhere; }}
 #map {{ height:520px; }}
 .kpis {{ display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); border-top:1.5px solid var(--ink); border-bottom:1px solid var(--line); margin-top:8px; }}
 .kpis.k3 {{ grid-template-columns:repeat(3, minmax(0, 1fr)); }}
@@ -571,23 +598,24 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 <div class="wrap">
   <div class="eyebrow"><span>3ie evidence map · studies published {period}</span><span class="badge">Data as of {built}</span></div>
   <h1>Health Economic Evaluations</h1>
-  <p class="lede">Compared with how much illness and early death they carry, high-income countries have far more economic evidence than lower-income countries.</p>
+  <p class="lede">Where full economic evaluations have been conducted, followed by regional profiles of research and health needs.</p>
 
   <div class="kh">The evidence at a glance</div>
   <div class="kpis">{study_kpis}</div>
 
   <div class="scope">Full economic evaluations only ({n_ee})</div>
-  <div class="sec"><b>A</b><h2>Look north for economic evidence (mostly)</h2><span>Research is concentrated in North America, Europe and higher-income parts of Asia and the Pacific</span>{q_ee_rate}</div>
+  <div class="sec"><b>A</b><h2>Geographic distribution of full economic evaluations</h2><span>Number of evaluations per country or territory; no disease-burden matching</span></div>
   <div id="map"></div>
 
   <div class="sec"><b>B</b><h2>Profile of studies by region</h2><span>Each card matches the black region tag on the map</span></div>
+  <p class="coverage-note"><strong>Why the burden comparison covers fewer countries.</strong> {burden_coverage_note}</p>
   <div class="kh">Health economic evaluations: study composition</div>
   <div class="kpis k3">{ee_kpis}</div>
 
   <div class="regions">
     <div class="labels">
       <div></div><div></div><div></div>
-      <div class="lab">Marker shows where each region falls on the map's colour scale {q_intensity}</div>
+      <div class="lab">Regional evaluations per 100,000 DALYs; a separate rate scale from Panel A's counts {q_intensity}</div>
       <div class="lab"><strong>Disease focus {q_disease}</strong>Share of disease-coded evaluations. 1 dot = 1%
         <span class="key"><i style="background:#3f8f80"></i>Communicable</span>
         <span class="key"><i style="background:#8a63a8"></i>Non-communicable</span>
@@ -605,8 +633,8 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
   <div class="foot">
     <div>
       <p>Data: 3ie Health Economic Evaluation (HEE) Evidence Map, data as of {built}; studies published {period} {q_period}</p>
-      <p>Regions: the WHO's six regions (AFR Africa, AMR Americas, SEAR South-East Asia, EUR Europe, EMR Eastern Mediterranean, WPR Western Pacific), with Indonesia in the Western Pacific since 2025. Taiwan and Hong Kong, which the WHO does not assign, are placed in the Western Pacific. The United States and Argentina left the WHO in 2026 but stay in the Americas region on the WHO's list. The map covers the {n_map} countries in the evidence map's country data that have disease-burden data. The country count and trend lines use all {n_gbd} countries and territories in the Global Burden of Disease; trends run to {trend_end}.</p>
-      <p>Disease burden: healthy years lost to illness and early death (DALYs), Global Burden of Disease 2023. Disease focus: diseases coded to Global Burden of Disease 2023 causes from each study's title and abstract, grouped into communicable (with maternal, neonatal and nutritional), non-communicable and injuries. Top three diseases: research topics found by grouping similar abstracts. Utility measure: a QALY or a DALY reported as an outcome, counting economic evaluations only (not reviews). The map and the regional profile count full economic evaluations only (reviews that report no evaluation of their own left out); the overview stats count all studies. Rates per 100,000 DALYs divide evaluations published over the whole period by one year's burden (2023). Grey on the map: no economic evaluation or no burden data.</p>
+      <p>Regions: the WHO's six regions (AFR Africa, AMR Americas, SEAR South-East Asia, EUR Europe, EMR Eastern Mediterranean, WPR Western Pacific), with Indonesia in the Western Pacific since 2025. Taiwan and Hong Kong, which the WHO does not assign, are placed in the Western Pacific. The United States and Argentina left the WHO in 2026 but stay in the Americas region on the WHO's list. Panel A uses full evaluation counts across the {n_map} countries and territories in the study geography, without matching to burden data. The headline country count uses the full study geography, before matching to burden data. Trend denominators use all {n_gbd} countries and territories in the Global Burden of Disease; trends run to {trend_end}.</p>
+      <p>Disease burden: healthy years lost to illness and early death (DALYs), Global Burden of Disease 2023. Disease focus: diseases coded to Global Burden of Disease 2023 causes from each study's title and abstract, grouped into communicable (with maternal, neonatal and nutritional), non-communicable and injuries. Top three diseases: research topics found by grouping similar abstracts. Utility measure: a QALY or a DALY reported as an outcome, counting economic evaluations only (not reviews). Panel A and the regional profile count full economic evaluations only (reviews that report no evaluation of their own left out); the overview stats count all studies. Panel A colours show counts, without a DALY denominator; each multi-country evaluation counts once per named country. Regional rates per 100,000 DALYs divide evaluations published over the whole period by one year's burden (2023). Grey on Panel A: no recorded full economic evaluation. Small territories may not be visible at this map scale.</p>
     </div>
   </div>
 </div>
@@ -616,17 +644,16 @@ h1 {{ font:800 34px/1.12 "Arial Narrow", "Roboto Condensed", Inter, sans-serif; 
 const MAP = {map_json};
 (function () {{
   const rows = MAP.rows;
-  const z = rows.map(r => r.rate > 0 ? Math.log10(r.rate) : null);
-  const text = rows.map(r => r.country + "<br>" + r.n.toLocaleString("en-GB") + " economic evaluations" +
-    (r.rate > 0 ? "<br>" + r.rate.toFixed(2) + " per 100,000 DALYs" : "<br>no economic evaluation"));
-  const none = rows.filter(r => r.rate === 0);
+  const z = rows.map(r => r.n > 0 ? Math.log10(r.n) : null);
+  const text = rows.map(r => r.country + "<br>" + r.n.toLocaleString("en-GB") + " full economic evaluations");
+  const none = rows.filter(r => r.n === 0);
   window.Plotly.newPlot("map", [
-    {{ type: "choropleth", locations: rows.filter(r => r.rate > 0).map(r => r.iso3),
-       z: z.filter(v => v !== null), text: text.filter((t, i) => rows[i].rate > 0), hoverinfo: "text",
+    {{ type: "choropleth", locations: rows.filter(r => r.n > 0).map(r => r.iso3),
+       z: z.filter(v => v !== null), text: text.filter((t, i) => rows[i].n > 0), hoverinfo: "text",
        zmin: MAP.zmin, zmax: MAP.zmax, colorscale: MAP.colours,
        marker: {{ line: {{ color: "#ffffff", width: 0.4 }} }},
-       colorbar: {{ title: {{ text: "EEs per<br>100,000 DALYs", font: {{ size: 11 }} }}, thickness: 10, len: 0.55, x: 0.02, y: 0.3,
-         tickvals: [MAP.zmin, Math.log10(MAP.median), MAP.zmax], ticktext: ["low", "median", "high"] }} }},
+       colorbar: {{ title: {{ text: "Full economic<br>evaluations", font: {{ size: 11 }} }}, thickness: 10, len: 0.55, x: 0.02, y: 0.3,
+         tickvals: [0, 1, 2, 3], ticktext: ["1", "10", "100", "1,000"] }} }},
     {{ type: "choropleth", locations: none.map(r => r.iso3), z: none.map(() => 0), showscale: false,
        text: none.map(r => r.country + "<br>no economic evaluation"), hoverinfo: "text",
        colorscale: [[0, "#dcd6cc"], [1, "#dcd6cc"]], marker: {{ line: {{ color: "#ffffff", width: 0.4 }} }} }},

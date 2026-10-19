@@ -219,7 +219,7 @@
   },
   "fig_glance_regions_who_v4.html": {
     "title": "Health Economic Evaluations",
-    "summary": "Headline figures for the evidence map, then where full economic evaluations are concentrated relative to disease burden, by country and by WHO region: each region's disease focus, top diseases, use of utility measures (QALYs, DALYs) and country coverage over time. Use the information buttons to see how each measure was calculated."
+    "summary": "Headline figures for the evidence map. Panel A shows the number of full economic evaluations per country or territory using complete study geography, without disease-burden matching. Panel B shows WHO regional profiles, including burden-adjusted rates, disease focus, top diseases, utility measures (QALYs, DALYs) and country coverage over time. The smaller coverage of burden-based calculations is explained before Panel B."
   },
   "fig_glance_regions_who_v3.html": {
     "title": "Research coverage and health needs by region",

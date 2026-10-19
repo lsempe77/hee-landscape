@@ -66,12 +66,13 @@ def glance():
     (DATA/'glance_calculation.txt').unlink()
     v=captured
     (DATA/'regional_profiles.json').write_text(json.dumps({k:v[k] for k in ['regions','themes','trend_years','trend_all','utility_linked']},indent=2),encoding='utf-8')
-    pd.DataFrame(v['map_rows']).to_csv(DATA/'country_evaluation_rates.csv',index=False)
+    pd.DataFrame(v['map_rows']).to_csv(DATA/'country_evaluation_counts.csv',index=False)
+    pd.DataFrame(v['rate_rows']).to_csv(DATA/'country_evaluation_rates.csv',index=False)
     shapes=DATA/'natural_earth_countries.geojson'
     if not shapes.exists():
         urllib.request.urlretrieve('https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson',shapes)
     features=json.loads(shapes.read_text(encoding='utf-8'))['features']
-    rate={r['iso3']:r['rate'] for r in v['map_rows']}
+    counts={r['iso3']:r['n'] for r in v['map_rows']}
     fig=plt.figure(figsize=(11.5,6.8));title(fig,'The evidence at a glance')
     kpis=[(f"{v['n_studies']:,}",'studies, 2010–2026'),(f"{v['ee_share']:.0%}",'full economic evaluations'),(str(v['n_named']),'countries or territories'),(f"{v['oa_known']:.0%}",'open access'),(f"{v['funder_share']:.0%}",'report a funder')]
     for i,(val,lab) in enumerate(kpis):
@@ -79,29 +80,30 @@ def glance():
         fig.text(x,.875,val,fontsize=20,weight='bold');fig.text(x,.837,lab,fontsize=8,color=SECONDARY)
     ax=fig.add_axes([.035,.16,.93,.61]);ax.set_xlim(-180,180);ax.set_ylim(-60,85);ax.set_aspect('equal');ax.axis('off')
     cmap=LinearSegmentedColormap.from_list('hee_sequential',SEQ)
-    norm=Normalize(v['zmin'],v['zmax']);patches=[];colors=[]
+    norm=Normalize(v['count_zmin'],v['count_zmax']);patches=[];colors=[]
     for f in features:
         p=f['properties'];iso=p.get('ADM0_A3');iso={'SDS':'SSD'}.get(iso,iso)
         if iso=='ATA':continue
         geom=f['geometry'];polys=geom['coordinates'] if geom['type']=='MultiPolygon' else [geom['coordinates']]
-        r=rate.get(iso)
+        r=counts.get(iso)
         col=cmap(norm(math.log10(r))) if r else GRID
         for poly in polys: patches.append(Polygon(poly[0]));colors.append(col)
     ax.add_collection(PatchCollection(patches,facecolors=colors,edgecolors=BG,linewidths=.25))
     for code,(lon,lat) in g.REGION_TAG_POS.items():
         ax.text(lon,lat,code,color=BG,weight='bold',fontsize=9,ha='center',va='center',bbox=dict(facecolor=INK,edgecolor='none',pad=3))
     ca=fig.add_axes([.16,.13,.68,.017]);cb=fig.colorbar(matplotlib.cm.ScalarMappable(norm=norm,cmap=cmap),cax=ca,orientation='horizontal')
-    ticks=np.arange(math.ceil(v['zmin']),math.floor(v['zmax'])+1)
+    ticks=np.arange(math.ceil(v['count_zmin']),math.floor(v['count_zmax'])+1)
     cb.set_ticks(ticks,labels=[f'{10.**t:g}' for t in ticks]);cb.outline.set_visible(False)
-    cb.set_label('Full economic evaluations per 100,000 DALYs (log colour scale)')
+    cb.set_label('Number of full economic evaluations (log colour scale)')
     fig.text(.035,.78,f"A  Geographic distribution of full economic evaluations (n = {len(v['ees']):,})",fontsize=10,weight='bold')
-    fig.legend(handles=[Patch(color=GRID,label='No rate available or no evaluations')],loc='lower right',bbox_to_anchor=(.98,.06),fontsize=7)
-    caption='Eligible studies, 2010–2026; 2026 is incomplete. Map: full economic evaluations only. Countries count each named study once; multi-country studies can appear in several countries. Rates use the source builder’s GBD denominator. Colour limits retain the original log-scale clipping. Grey includes unavailable rates and zero evaluations.'
+    fig.legend(handles=[Patch(color=GRID,label='No recorded full economic evaluations')],loc='lower right',bbox_to_anchor=(.98,.06),fontsize=7)
+    caption='Eligible studies, 2010–2026; 2026 is incomplete. Panel A shows full evaluation counts using complete study geography, without disease-burden matching. Each evaluation counts once per named country; multi-country evaluations appear in several countries. Evaluations without a named country are not located. Grey: no recorded full evaluations. Small territories may not be visible at this scale.'
     foot(fig,caption,170);save(fig,'01_evidence_at_a_glance',caption)
     # Six aligned regional profiles, retaining the source values and top-three diseases.
-    fig=plt.figure(figsize=(13,9));title(fig,'Profile of studies by WHO region')
+    fig=plt.figure(figsize=(13,9.8));title(fig,'Profile of studies by WHO region')
+    fig.text(.035,.945,textwrap.fill(v['burden_coverage_note'],210),fontsize=7,color=SECONDARY,va='top',linespacing=1.3)
     for i,(val,lab) in enumerate([(f"{v['ee_rate']:.1f}",'evaluations per 100,000 DALYs'),(f"{v['utility_all']:.0%}",'report QALYs or DALYs'),(f"{v['model_all']:.0%}",'use some modelling')]):
-        fig.text(.035+i*.32,.895,val,fontsize=19,weight='bold');fig.text(.035+i*.32,.867,lab,fontsize=9,color=SECONDARY)
+        fig.text(.035+i*.32,.875,val,fontsize=19,weight='bold');fig.text(.035+i*.32,.847,lab,fontsize=9,color=SECONDARY)
     cats=g.CATEGORIES;cols=[BLUE,ORANGE,AQUA]
     fig.legend(handles=[Patch(color=c,label=l) for c,l in zip(cols,cats)],loc='upper left',bbox_to_anchor=(.035,.84),ncol=3)
     for j,r in enumerate(v['regions']):

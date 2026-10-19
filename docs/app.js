@@ -1088,10 +1088,12 @@ if (typeof document !== "undefined") {
   // content.json is left as built. "Size & growth": its growth chart
   // duplicates the Overview's Publication trends; its QALY/DALY chart (also in
   // Trends over time) moves to Methods & metrics only.
-  const HIDDEN_SECTIONS = new Set(["Size & growth", "Maps & regional charts"]);
+  // Temporarily hide these themes; their content and figure assets are retained.
+  const HIDDEN_SECTIONS = new Set(["Size & growth", "Maps & regional charts",
+    "Wellcome priority themes", "Schmallenbach et al 2025"]);
   // The selection flow is opened from the Overview's study-count card.
   // The 20-cause and high-income "which diseases moved" charts are hidden (kept in EXTRA_SECTIONS); the main one is shown.
-  const HIDDEN_FIGURES = new Set(["paper01.webp",
+  const HIDDEN_FIGURES = new Set(["paper01.webp", "fig_injustice.webp",
     "schmallenbach2025/supp_fig4_20causes.png", "schmallenbach2025/supp_fig4_hic_16causes.png"]);
   // Shown only as the section's index thumbnail; its interactive view already
   // carries the same numbers, so the section page shows that view alone.
@@ -2052,7 +2054,7 @@ if (typeof document !== "undefined") {
     wellcomeLink.textContent = "Explore Wellcome priority themes \u2192";
     wellcomeLink.addEventListener("click", () => openOverviewTheme("Wellcome priority themes"));
     wellcomeCard.append(wellcomeBadge, wellcomeTitle, wellcomeCopy, wellcomeLink);
-    hw.appendChild(wellcomeCard);
+    if (!HIDDEN_SECTIONS.has("Wellcome priority themes")) hw.appendChild(wellcomeCard);
   }
 
   // Overview publication trend for the unfiltered corpus, with a
@@ -3541,7 +3543,9 @@ if (typeof document !== "undefined") {
       const sec = GALLERY.find(s => s.title === x.section);
       if (sec) sec.figs.splice(x.index, 0, x.fig);
     }
-    for (const s of EXTRA_SECTIONS) GALLERY.push({ ...s, figs: s.figs.slice() });
+    for (const s of EXTRA_SECTIONS) {
+      if (!HIDDEN_SECTIONS.has(s.title)) GALLERY.push({ ...s, figs: s.figs.slice() });
+    }
     for (const sec of GALLERY) {
       sec.figs = sec.figs.map(figure => ({ ...figure, ...figureCopy[figure.file],
         ...(FIGURE_UPDATES[figure.file] ? { caption: FIGURE_UPDATES[figure.file].caption } : {}) }));

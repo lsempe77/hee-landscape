@@ -8,7 +8,7 @@ The supplied figures have different populations: the overview/regional profiles 
 
 ## 01_evidence_at_a_glance
 
-Eligible studies, 2010–2026; 2026 is incomplete. Map: full economic evaluations only. Countries count each named study once; multi-country studies can appear in several countries. Rates use the source builder’s GBD denominator. Colour limits retain the original log-scale clipping. Grey includes unavailable rates and zero evaluations.
+Eligible studies, 2010–2026; 2026 is incomplete. Panel A shows full evaluation counts using complete study geography, without disease-burden matching. Each evaluation counts once per named country; multi-country evaluations appear in several countries. Evaluations without a named country are not located. Grey: no recorded full evaluations. Small territories may not be visible at this scale.
 
 ## 02_regional_profiles
 
@@ -45,3 +45,5 @@ Rebuild: python -B scripts/create_manuscript_unequal_weight_oct19.py
 This folder is stored at the repository root and includes all rendered figures, captions and aggregated source tables. After committing and pushing it to the shared repository, collaborators receive it with git pull; no relocation or local path configuration is needed to view the figures.
 
 Rebuilding the figures requires the original data/raw inputs, which are excluded from Git. The exported PNG, PDF and SVG figures can be viewed without those inputs or Python.
+
+Panel A now uses full evaluation counts across the complete study geography. Source counts: source data/country_evaluation_counts.csv. The rates CSV is retained only for the separate burden-adjusted calculations. The 187 headline includes all eligible studies; Panel A counts full economic evaluations.
