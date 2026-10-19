@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-14-all-figures-reconciled";
+const BUILD = "2026-10-19-overview-glance-match";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -1456,8 +1456,13 @@ if (typeof document !== "undefined") {
     "Model-based": "tile-model",
     [FUNDERS_CARD]: "tile-funders"
   };
+  // value: optional function replacing content.json's value (called after the data loads).
   const OVERVIEW_TILE_COPY = {
-    "Model-based": { sub: "Results estimated with a computer model rather than measured in patients" }
+    "Model-based": {
+      value: () => fmtPctWhole(modelShareOfEvaluations()),
+      sub: "Of economic evaluations: conducted using at least some degree of modelling rather than " +
+        "measured in patients"
+    }
   };
   const PLACEHOLDER_PCT = "XX%";
   // Review counts from the web data's review_label (an automated title-and-abstract
@@ -1511,6 +1516,36 @@ if (typeof document !== "undefined") {
 
   function fmtPct(value) {
     return value == null ? PLACEHOLDER_PCT : value.toFixed(1) + "%";
+  }
+
+  // Whole percent, as in the "(Un)equal weight" glance figure.
+  function fmtPctWhole(value) {
+    return value == null ? PLACEHOLDER_PCT : Math.round(value) + "%";
+  }
+
+  // Full economic evaluations: studies with an evaluation type (reviews that
+  // report no evaluation of their own left out), as in the glance figure.
+  function isEvaluation() {
+    const noType = db.codeOf.econ_eval_type
+      ? db.codeOf.econ_eval_type.get("Review (no evaluation type)")
+      : db.levels.econ_eval_type.indexOf("Review (no evaluation type)");
+    return db.studies.econ_eval_type.map(v => v !== noType);
+  }
+
+  // Model-based share of economic evaluations with a clear model/measured
+  // label, matching scripts/build_glance_regions_who_v4.py.
+  function modelShareOfEvaluations() {
+    const code = label => db.codeOf.model_label
+      ? db.codeOf.model_label.get(label) : db.levels.model_label.indexOf(label);
+    const model = code("Model-based"), measured = code("Measured");
+    const ee = isEvaluation();
+    let n = 0, k = 0;
+    db.studies.model_label.forEach((v, s) => {
+      if (!ee[s] || (v !== model && v !== measured)) return;
+      n++;
+      if (v === model) k++;
+    });
+    return n ? 100 * k / n : null;
   }
 
   function placeholderize(node, text) {
@@ -1607,9 +1642,18 @@ if (typeof document !== "undefined") {
     return box;
   }
 
-  // Geography card: countries and geographic scope, studies by income group
-  // (circles, area = studies) and by WHO region (lollipops). A multi-country
-  // study counts once in each income group and region it examines.
+  // Countries and territories named by at least one study, from the full study
+  // geography in the v2 team export (hee_geo_long_v2_1.csv), as in the glance
+  // figure (scripts/build_glance_regions_who_v4.py). The web data holds only
+  // the countries with burden and spending data, so it cannot recount these.
+  // Update with the export; if the study count changes, the web count is shown.
+  const GLANCE_STUDIES = 41610;
+  const GLANCE_COUNTRIES = 187;
+
+  // Geography card: countries and geographic scope, full economic evaluations
+  // by income group (circles, area = evaluations) and by WHO region
+  // (lollipops; these equal the glance figure's region n). A multi-country
+  // evaluation counts once in each income group and region it examines.
   function geographyCard() {
     const box = el("div", "value-box geo-overview-card");
     const title = el("div", "value-box-title");
@@ -1626,13 +1670,18 @@ if (typeof document !== "undefined") {
     const colCountries = el("div", "geo-overview-col");
     const countryHead = el("div", "studies-overview-head");
     const nCountries = el("span", "studies-overview-value");
-    nCountries.textContent = fmtNum(db.countries.filter(r => r.studies > 0).length);
+    const nWithData = db.countries.filter(r => r.studies > 0).length;
+    const fromExport = db.nStudies === GLANCE_STUDIES;
+    nCountries.textContent = fmtNum(fromExport ? GLANCE_COUNTRIES : nWithData);
     const countryText = el("span", "studies-overview-text");
-    countryText.textContent = "countries named by at least one study";
+    countryText.textContent = fromExport
+      ? "countries or territories with at least one study"
+      : "countries named by at least one study";
     countryHead.append(nCountries, countryText);
     const countryNote = el("div", "geo-overview-note");
-    countryNote.textContent = "Of " + fmtNum(db.countries.length) +
-      " countries with disease-burden and health-spending data";
+    countryNote.textContent = fromExport
+      ? fmtNum(nWithData) + " of them have disease-burden and health-spending data and appear on the maps"
+      : "Of " + fmtNum(db.countries.length) + " countries with disease-burden and health-spending data";
 
     const total = Math.max(1, db.nStudies);
     const scopes = [
@@ -1667,7 +1716,7 @@ if (typeof document !== "undefined") {
     colCountries.append(subhead("Countries"), countryHead, countryNote,
       subhead("Geographic scope"), bar, legend);
 
-    // Unique studies per income group (at publication year) and WHO region.
+    // Unique economic evaluations per income group (at publication year) and WHO region.
     const incSets = new Map(), regSets = new Map();
     const add = (map, key, s) => {
       if (key == null) return;
@@ -1675,8 +1724,10 @@ if (typeof document !== "undefined") {
       if (!set) { set = new Set(); map.set(key, set); }
       set.add(s);
     };
+    const ee = isEvaluation();
     for (let i = 0; i < db.geo.s.length; i++) {
       const s = db.geo.s[i], c = db.geo.c[i];
+      if (!ee[s]) continue;
       add(incSets, db.incomeAt(c, db.geo.y[i]), s);
       add(regSets, db.regionOf[c], s);
     }
@@ -1697,11 +1748,11 @@ if (typeof document !== "undefined") {
       dot.style.background = shades[i] || shades[shades.length - 1];
       const name = el("span", "geo-income-name");
       name.textContent = lv.replace(/ income$/, "");
-      item.title = lv + ": " + fmtNum(n) + " studies";
+      item.title = lv + ": " + fmtNum(n) + " economic evaluations";
       item.append(count, dot, name);
       circles.appendChild(item);
     });
-    colIncome.append(subhead("By income group of the country studied"), circles);
+    colIncome.append(subhead("Economic evaluations by income group of the country studied"), circles);
 
     // Column 3: WHO regions, most studied first.
     const colRegion = el("div", "geo-overview-col");
@@ -1718,16 +1769,17 @@ if (typeof document !== "undefined") {
       track.appendChild(stem);
       const value = el("strong");
       value.textContent = fmtNum(n);
-      row.title = r + ": " + fmtNum(n) + " studies";
+      row.title = r + ": " + fmtNum(n) + " economic evaluations";
       row.append(name, track, value);
       regions.appendChild(row);
     }
-    colRegion.append(subhead("By WHO region"), regions);
+    colRegion.append(subhead("Economic evaluations by WHO region"), regions);
 
     cols.append(colCountries, colIncome, colRegion);
     const note = el("div", "metrics-overview-note");
-    note.textContent = "A multi-country study counts in every income group and region of the countries it " +
-      "examines. Income groups are World Bank groups in the publication year; circle area = studies.";
+    note.textContent = "Economic evaluations leave out reviews that report no evaluation of their own. A " +
+      "multi-country evaluation counts in every income group and region of the countries it examines. Income " +
+      "groups are World Bank groups in the publication year; circle area = evaluations.";
     box.append(title, cols, note);
     return box;
   }
@@ -1882,7 +1934,8 @@ if (typeof document !== "undefined") {
   function fundersCard() {
     return barRowsCard("funding-overview-card", "Who funds the evidence?",
       FUNDER_TYPE_COUNTS.map(([label, n]) => [label, 100 * n / FUNDER_STUDIES]),
-      "Among " + fmtNum(FUNDER_STUDIES) + " studies reporting a funder. Categories may overlap.", {
+      "Among " + fmtNum(FUNDER_STUDIES) + " studies reporting a funder (" +
+      fmtPctWhole(100 * FUNDER_STUDIES / Math.max(1, db.nStudies)) + " of all studies). Categories may overlap.", {
         title: "Why do the percentages add up to more than 100%?",
         paragraphs: [
           "Each bar is the share of the " + fmtNum(FUNDER_STUDIES) + " studies that report at least one funder of that type.",
@@ -1965,7 +2018,7 @@ if (typeof document !== "undefined") {
         const title = el("div", "value-box-title");
         title.textContent = copy.label || tile.label;
         const value = el("div", "value-box-value");
-        value.textContent = tile.value;
+        value.textContent = copy.value ? copy.value() : tile.value;
         box.append(title, value);
         const subText = "sub" in copy ? copy.sub : tile.sub;
         if (subText != null) {
