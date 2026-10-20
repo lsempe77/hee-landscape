@@ -19,6 +19,7 @@ Output: [`manuscript figures Oct 19/`](../manuscript%20figures%20Oct%2019/).
 | `create_manuscript_supp_g4_oct19.py` | Supplementary G4: evaluation types and publications per year |
 | `build_country_concentration_figure.py` / `.R` | Country concentration figure (writes to `output/figures/`) |
 | `build_overview_figure.py` | Overview figure: one panel per overview paragraph |
+| `create_wellcome_by_year_oct20.py` | Wellcome-funded studies by publication year (writes to `exports/wellcome_by_year_2026-10-20/`) |
 
 ## Live map: site data and figures
 
