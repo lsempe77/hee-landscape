@@ -1,0 +1,260 @@
+{
+  "all": {
+    "n": 41610,
+    "evaluation_types": {
+      "Cost-utility": 19872,
+      "Cost-effectiveness": 10911,
+      "Cost-consequence": 9424,
+      "Cost-benefit": 1403
+    },
+    "since2020_pct": 50.785868781542895,
+    "named_country_n": 29104,
+    "named_country_pct": 69.94472482576303,
+    "geo_scope_counts": {
+      "single_country": 27899,
+      "none": 11717,
+      "multi_country": 1206,
+      "region_or_global": 788
+    },
+    "country_pairs": 31740,
+    "countries": 187,
+    "single_country_known_income_n": 27897,
+    "intervention_counts": {
+      "pharma": 9917,
+      "surgical_procedural": 3638,
+      "screening_diagnostic": 3575,
+      "care_model_organisational": 3272,
+      "behavioural_preventive": 2501,
+      "device_or_supply": 2089,
+      "vaccine": 1667,
+      "financing_payment_policy": 1051,
+      "other": 187
+    },
+    "intervention_lmic_pct": {
+      "behavioural_preventive": 23.47061175529788,
+      "care_model_organisational": 23.19682151589242,
+      "device_or_supply": 17.759693633317376,
+      "financing_payment_policy": 33.206470028544246,
+      "other": 29.41176470588235,
+      "pharma": 31.39054149440355,
+      "screening_diagnostic": 24.41958041958042,
+      "surgical_procedural": 23.25453545904343,
+      "vaccine": 42.47150569886023
+    },
+    "generic_n": 19515,
+    "generic_pct": 46.899783705839944,
+    "outcome_pct": {
+      "QALYs": 43.6000961307378,
+      "Adverse events / harms": 28.252823840422977,
+      "Survival / mortality": 27.772170151405913,
+      "Other clinical": 24.736842105263158,
+      "Symptoms / clinical scores": 20.71377072819034,
+      "Quality of life / function": 17.11607786589762,
+      "Major clinical events": 13.588079788512378,
+      "Life-years": 10.336457582311944,
+      "Incidence / cases detected": 9.685171833693824,
+      "Disease progression": 5.866378274453257,
+      "Biomarkers / physiological": 5.55635664503725,
+      "DALYs": 3.446286950252343,
+      "Mental health": 2.701273732275895,
+      "Unspecified benefit": 1.8000480653689017,
+      "Reproductive & birth outcomes": 1.6342225426580148
+    },
+    "top_country_pairs": {
+      "USA": 7327,
+      "GBR": 4203,
+      "CHN": 3166,
+      "CAN": 1432,
+      "NLD": 1073,
+      "AUS": 1044,
+      "ESP": 889,
+      "DEU": 830,
+      "JPN": 789,
+      "ITA": 715
+    },
+    "top3_pairs_pct": 46.30119722747322,
+    "top5_pairs_pct": 54.193446754883425,
+    "top10_pairs_pct": 67.63705103969754,
+    "gini_observed_countries": 0.8634045334923796,
+    "top_country_unique_studies_pct": {
+      "3": 49.47429906542056,
+      "5": 57.435404068169326,
+      "10": 70.40612974161627
+    },
+    "gbd_coded_n": 36446,
+    "gbd_causes": {
+      "Neoplasms": 7856,
+      "Cardiovascular diseases": 4087,
+      "Diabetes and kidney diseases": 2633,
+      "Digestive diseases": 2600,
+      "Other non-communicable diseases": 2410,
+      "Respiratory infections and tuberculosis": 2385,
+      "Musculoskeletal disorders": 2168,
+      "Mental disorders": 1598,
+      "Other infectious diseases": 1421,
+      "Unintentional injuries": 1367,
+      "HIV/AIDS and sexually transmitted infections": 1229,
+      "Neurological disorders": 1225,
+      "Chronic respiratory diseases": 1103,
+      "Injuries, cause not stated": 1085,
+      "Maternal and neonatal disorders": 907,
+      "Skin and subcutaneous diseases": 692,
+      "Sense organ diseases": 687,
+      "Infections, disease not stated": 677,
+      "Neglected tropical diseases and malaria": 593,
+      "Enteric infections": 424,
+      "Nutritional deficiencies": 357,
+      "Substance use disorders": 341,
+      "Self-harm and interpersonal violence": 95,
+      "Transport injuries": 12
+    }
+  },
+  "full": {
+    "n": 39625,
+    "evaluation_types": {
+      "Cost-utility": 19097,
+      "Cost-effectiveness": 10150,
+      "Cost-consequence": 9020,
+      "Cost-benefit": 1358
+    },
+    "since2020_pct": 50.51608832807572,
+    "named_country_n": 28505,
+    "named_country_pct": 71.93690851735016,
+    "geo_scope_counts": {
+      "single_country": 27419,
+      "none": 10533,
+      "multi_country": 1087,
+      "region_or_global": 586
+    },
+    "country_pairs": 30810,
+    "countries": 187,
+    "single_country_known_income_n": 27417,
+    "intervention_counts": {
+      "pharma": 9744,
+      "surgical_procedural": 3568,
+      "screening_diagnostic": 3518,
+      "care_model_organisational": 3222,
+      "behavioural_preventive": 2461,
+      "device_or_supply": 2037,
+      "vaccine": 1650,
+      "financing_payment_policy": 1037,
+      "other": 180
+    },
+    "intervention_lmic_pct": {
+      "behavioural_preventive": 23.77082486793986,
+      "care_model_organisational": 23.33954065797641,
+      "device_or_supply": 18.0166912125675,
+      "financing_payment_policy": 33.365477338476374,
+      "other": 28.88888888888889,
+      "pharma": 31.301313628899837,
+      "screening_diagnostic": 24.530983513359864,
+      "surgical_procedural": 23.458520179372197,
+      "vaccine": 42.60606060606061
+    },
+    "generic_n": 18774,
+    "generic_pct": 47.37917981072555,
+    "outcome_pct": {
+      "QALYs": 44.022712933753944,
+      "Survival / mortality": 27.926813880126183,
+      "Adverse events / harms": 27.745110410094636,
+      "Other clinical": 24.50473186119874,
+      "Symptoms / clinical scores": 20.461829652996844,
+      "Quality of life / function": 16.757097791798106,
+      "Major clinical events": 13.514195583596214,
+      "Life-years": 10.503470031545742,
+      "Incidence / cases detected": 9.8801261829653,
+      "Disease progression": 5.857413249211357,
+      "Biomarkers / physiological": 5.529337539432177,
+      "DALYs": 3.4649842271293374,
+      "Mental health": 2.644794952681388,
+      "Reproductive & birth outcomes": 1.6479495268138802,
+      "Unspecified benefit": 1.6201892744479496
+    },
+    "top_country_pairs": {
+      "USA": 7127,
+      "GBR": 4037,
+      "CHN": 3086,
+      "CAN": 1347,
+      "NLD": 1051,
+      "AUS": 1008,
+      "ESP": 870,
+      "DEU": 811,
+      "JPN": 772,
+      "ITA": 697
+    },
+    "top3_pairs_pct": 46.25121713729309,
+    "top5_pairs_pct": 54.03440441415125,
+    "top10_pairs_pct": 67.53002271989614,
+    "gini_observed_countries": 0.8626499834243692,
+    "top_country_unique_studies_pct": {
+      "3": 49.149272057533764,
+      "5": 57.05314857042624,
+      "10": 70.14208033678302
+    },
+    "gbd_coded_n": 34812,
+    "gbd_causes": {
+      "Neoplasms": 7531,
+      "Cardiovascular diseases": 3896,
+      "Diabetes and kidney diseases": 2502,
+      "Digestive diseases": 2479,
+      "Respiratory infections and tuberculosis": 2303,
+      "Other non-communicable diseases": 2282,
+      "Musculoskeletal disorders": 2028,
+      "Mental disorders": 1527,
+      "Other infectious diseases": 1383,
+      "Unintentional injuries": 1280,
+      "HIV/AIDS and sexually transmitted infections": 1191,
+      "Neurological disorders": 1165,
+      "Chronic respiratory diseases": 1049,
+      "Injuries, cause not stated": 1031,
+      "Maternal and neonatal disorders": 866,
+      "Sense organ diseases": 648,
+      "Infections, disease not stated": 641,
+      "Skin and subcutaneous diseases": 636,
+      "Neglected tropical diseases and malaria": 578,
+      "Enteric infections": 413,
+      "Nutritional deficiencies": 337,
+      "Substance use disorders": 330,
+      "Self-harm and interpersonal violence": 94,
+      "Transport injuries": 10
+    }
+  },
+  "topics": {
+    "single_known_income_n": 27897,
+    "all_cluster_assigned_single_known_income": 24225,
+    "display_eligible_topic_base": 24225,
+    "topic_n": 73,
+    "overall_lmic_pct": 28.00825593395253
+  },
+  "figure13_weighted_shares": {
+    "Adverse events / harms": 24.482919310320106,
+    "Survival / mortality": 29.97096461985159,
+    "Symptoms / clinical scores": 17.31368964404775,
+    "Quality of life / function": 15.919274473957774
+  },
+  "oa": {
+    "known_n": 36332,
+    "open_n": 24216,
+    "open_pct_known": 66.65198722888914,
+    "raw_funder_empty": 30413
+  },
+  "country_reference": {
+    "countries": 155,
+    "population_under_1million": 0,
+    "burden_countries": 154,
+    "medians_all_by_income_gt1m": {
+      "High income": 84.11235391786933,
+      "Low income": 6.447492285485932,
+      "Lower middle income": 8.138831627316705,
+      "Upper middle income": 15.266716738589624
+    }
+  },
+  "fraction157of160_pct": 98.125,
+  "funding_web_unreported": 30461,
+  "percapita_text_internal_difference": {
+    "main_HIC": 84.1,
+    "discussion_HIC": 73.4,
+    "global_reach_main_pct": 98.7,
+    "discussion_fraction": 98.125
+  }
+}
