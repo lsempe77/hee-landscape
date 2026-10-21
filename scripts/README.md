@@ -76,7 +76,7 @@ Written to dated folders in `exports/`; they never change the site.
 
 ## Data cleaning and classification (one-off steps, kept for the record)
 
-These changed the analysis master in sequence. They are not meant to be re-run.
+These changed the analysis master in sequence. They are not meant to be re-run. Some of them also wrote to `docs/v2` and `docs/v3`, which moved to `archive/site_builds/` on 21 October 2026 and are no longer published.
 
 - **Reviews:** `identify_review_candidates.py`, `screen_reviews_with_abstracts.py`, `resolve_unclear_reviews.py`, `fetch_review_resolution_sources.py`, `resolve_remaining_review_classifications.py`, `migrate_review_categories.py`, `migrate_review_terminology.py`, `crosscheck_review_evidence_basis.py`, `audit_review_evidence_basis_93.py`, `resolve_review_evidence_basis_22.py`, `apply_review_evidence_basis_93.py`, `explain_review_evidence_basis_65.py`, `audit_review_ownership_81.py`, `apply_review_ownership_3.py`, `apply_review_ownership_11.py`, `apply_review_eval_type.py`
 - **Duplicate publications:** `build_publication_version_check.py`, `check_publication_version_sources.py`, `prepare_publication_reconciliation.py`, `apply_publication_reconciliation.py`, `apply_publication_followup.py`, `rebuild_publication_followup.py`, `apply_publication_links.py`, `reconcile_publication_methods.py`, `finalize_methods_decisions.py`, `update_selection_presentation.py`

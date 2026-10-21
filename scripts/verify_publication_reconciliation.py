@@ -37,7 +37,8 @@ def main():
         assert master[rid]['doi']==fix['doi']
         assert master[rid]['metadata_original_doi']
     assert master['132866626']['metadata_original_doi']=='10.3109/13625187.2015.1135897'
-    for site in ('docs','docs/v2','docs/v3'):
+    # docs/v2 and docs/v3 moved to archive/site_builds/ on 2026-10-21 and are no longer published.
+    for site in ('docs',):
         data=ROOT/site/'data';st=read_json(data/'studies.json');n=len(st['id'])
         assert n==41610 and set(st['record_id'])==eligible
         assert st['id']==list(range(n))
