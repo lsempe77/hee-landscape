@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-21-daly-filter";
+const BUILD = "2026-10-21-outcome-filter-options";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -2577,7 +2577,7 @@ if (typeof document !== "undefined") {
       l => l + " (" + fmtNum(langN.get(l)) + ")");
 
     makeRadios("x-model", "x_model", ["All", "Model-based", "Measured"]);
-    makeRadios("x-qaly", "x_qaly", ["All", "Uses QALY", "No QALY"]);
+    makeRadios("x-qaly", "x_qaly", ["All", "Uses QALY"]);
     makeRadios("x-daly", "x_daly", ["All", "Uses DALY"]);
     makeRadios("x-oa", "x_oa", ["All", "Open access", "Not open"]);
 
