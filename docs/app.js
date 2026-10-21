@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-21-utility-measure-filter";
+const BUILD = "2026-10-21-wellcome-v5";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -193,7 +193,7 @@ export function loadData({ dict, studies, geo, disease, countries, content, fund
   };
 }
 
-export const ANY_FUNDER = "Any funder reported";
+export const ANY_FUNDER = "Any funder identified";
 
 export function normalizeFilter(filt, db) {
   const f = filt || {};
@@ -1940,11 +1940,12 @@ if (typeof document !== "undefined") {
   function fundersCard() {
     return barRowsCard("funding-overview-card", "Who funds the evidence?",
       FUNDER_TYPE_COUNTS.map(([label, n]) => [label, 100 * n / FUNDER_STUDIES]),
-      "Among " + fmtNum(FUNDER_STUDIES) + " studies reporting a funder (" +
+      "Among " + fmtNum(FUNDER_STUDIES) + " studies with a funder identified in Crossref metadata (" +
       fmtPctWhole(100 * FUNDER_STUDIES / Math.max(1, db.nStudies)) + " of all studies). Categories may overlap.", {
         title: "Why do the percentages add up to more than 100%?",
         paragraphs: [
-          "Each bar is the share of the " + fmtNum(FUNDER_STUDIES) + " studies that report at least one funder of that type.",
+          "Each bar is the share of the " + fmtNum(FUNDER_STUDIES) + " studies with at least one identified funder of that type. " +
+          "Funders come from Crossref metadata; studies with none identified may still acknowledge funding in their full text, which this map did not screen.",
           "Many studies have more than one funder, for example a government grant and a company, so they count in more than one bar. " +
           "The bars therefore add up to more than 100%."
         ]
@@ -2389,9 +2390,14 @@ if (typeof document !== "undefined") {
     frame.src = "figures/" + f.file + "?v=" + BUILD;
     frame.title = f.title;
     frame.loading = "lazy";
+    // Size to the page's content (body), not the document: the document never reports less than the
+    // frame's current height, so the frame could grow but never shrink after a section closed.
     const fit = () => {
       const doc = frame.contentDocument;
-      if (doc && doc.documentElement) frame.style.height = doc.documentElement.scrollHeight + "px";
+      if (!doc || !doc.body) return;
+      const cs = doc.defaultView.getComputedStyle(doc.body);
+      const h = doc.body.getBoundingClientRect().height + parseFloat(cs.marginTop) + parseFloat(cs.marginBottom);
+      frame.style.height = Math.ceil(h) + "px";
     };
     frame.addEventListener("load", () => {
       fit();
@@ -2430,7 +2436,9 @@ if (typeof document !== "undefined") {
         download.textContent = "Download PNG";
       }
     });
-    body.append(ft, fc, open, download, status);
+    // "bare" figures carry their own heading inside the page, so the card shows only the links.
+    if (f.bare) body.append(open, download, status);
+    else body.append(ft, fc, open, download, status);
     card.appendChild(body);
     return card;
   }

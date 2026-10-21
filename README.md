@@ -8,6 +8,15 @@ Static site for the health economic evaluation (HEE) evidence map, published at
 
 Newest first; add a line here when you push something colleagues should know about.
 
+- **21 Oct 2026: Wellcome page, version 5.** Opens with "The three themes at a glance" (publications matching
+  the themes → funder identified → Wellcome-funded, with each step's split by theme), then all 174
+  Wellcome-funded publications (112 in the themes, 62 outside). Mental Health covers all mental health, with
+  Wellcome's stated focus (anxiety, depression, psychosis) shown as a sourced subset; details sit behind "?"
+  marks and collapsible sections. Code: `scripts/build_wellcome_analysis_gbd_v5.py`.
+- **21 Oct 2026: "No funder identified" wording across the map.** Funders come from Crossref metadata, so a
+  publication without one may still report funding in its full text; the site now says so (Explorer filter,
+  Overview card, glance infographic, funder figures). The general top-funders chart is redrawn on the 41,610.
+
 - **21 Oct 2026: Wellcome priority themes page redesigned.** View it at
   <https://3ieimpact.pages.dev/hee/figures/wellcome_analysis.html> (the section is still hidden in the
   map's menus). Built on the v2.1 master (41,610) with publication-year income; shows funding

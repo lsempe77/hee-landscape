@@ -140,8 +140,8 @@
   },
   "fig_funder_funders.svg": {
     "title": "Top funders: who funds economic evidence, and where?",
-    "summary": "The bars show how many studies report each funder, rather than how much money they provided. Only about 27% of studies report a funder in the dataset, so this is an incomplete picture. Colours show the income group of the country studied; grey retains other settings and missing income information.",
-    "caption": "Top 15 recorded funders by unique eligible studies. 11,149 of 41,610 studies report a funder. Blue/coral identify single-country studies by the income group of the country studied; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts."
+    "summary": "The bars show how many studies report each funder, rather than how much money they provided. A funder could be identified (from Crossref metadata) for only about 27% of studies; others may acknowledge funding only in the full text, which this map did not screen, so this is an incomplete picture. Colours show the income group of the country studied; grey retains other settings and missing income information.",
+    "caption": "Top 15 recorded funders by unique eligible studies. 11,149 of 41,610 studies have a funder identified in Crossref metadata; studies without one may still acknowledge funding in the full text. Blue/coral identify single-country studies by the income group of the country studied in its publication year; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts."
   },
   "fig_map_burden.webp": {
     "title": "Research intensity relative to disease burden, by country",
@@ -210,8 +210,8 @@
   },
   "fig_wellcome_priorities.svg": {
     "title": "Wellcome-funded studies: which priority themes do they cover?",
-    "summary": "This chart counts studies that report Wellcome Trust as a funder in each theme, with Wellcome's share of theme studies and its rank among reported funders. The grey bar shows studies outside all three themes. Disease groups provide broad theme indicators, and Climate & Health uses a reviewed title-and-abstract screen. Climate & Health is small because few studies in the map address climate. Themes can overlap; these counts are not a complete record of Wellcome grants.",
-    "caption": "Studies reporting Wellcome Trust as a funder in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses GBD 2023 disease codes from titles and abstracts and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."
+    "summary": "This chart counts studies with Wellcome Trust identified as a funder (Crossref metadata) in each theme, with Wellcome's share of theme studies and its rank among identified funders. The grey bar shows studies outside all three themes. Disease groups provide broad theme indicators, and Climate & Health uses a reviewed title-and-abstract screen. Climate & Health is small because few studies in the map address climate. Themes can overlap; these counts are not a complete record of Wellcome grants.",
+    "caption": "Studies with Wellcome Trust identified as a funder (Crossref metadata) in each priority theme, with Wellcome's share of theme studies and rank among identified funders. Uses GBD 2023 disease codes from titles and abstracts and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."
   },
   "wellcome_analysis.html": {
     "summary": "Explore the evidence and recorded funders within Wellcome's priority themes. The view separates all theme-related studies from Wellcome-funded studies. Theme coverage and funding records are incomplete. Climate & Health is a reviewed title-and-abstract screen, and is small because few studies in the map address climate.",

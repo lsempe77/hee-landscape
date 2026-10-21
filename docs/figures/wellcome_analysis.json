@@ -15051,7 +15051,7 @@
     "mental": {
       "label": "Mental Health",
       "url": "https://wellcome.org/our-priorities/mental-health",
-      "definition": "Broad proxy: studies coded to the GBD 2023 causes mental disorders or substance use disorders. It includes substance use and is wider than Wellcome's focus on early intervention in anxiety, depression and psychosis. A separate focus-condition title screen is reported below.",
+      "definition": "This theme covers all mental health research in the map: publications coded to the GBD 2023 causes mental disorders or substance use disorders. Wellcome's stated focus within mental health is anxiety, depression and psychosis; those publications (GBD depressive disorders, anxiety disorders, schizophrenia and bipolar disorder, which Wellcome's funding calls list among psychotic disorders) are shown as a subset. The theme is broad because Wellcome also funds mental health work beyond its stated focus.",
       "n": 1912,
       "named_funder": 678,
       "wellcome": 16,
@@ -20088,7 +20088,12 @@
             1
           ]
         }
-      ]
+      ],
+      "focus": {
+        "n": 1092,
+        "wellcome": 7,
+        "named_funder": 355
+      }
     },
     "climate": {
       "label": "Climate & Health",
@@ -20709,8 +20714,8 @@
   "wellcome_outside_groups": [
     {
       "key": "infectious",
-      "label": "Infection-related studies coded to a non-infectious GBD cause",
-      "note": "Infection-related topics (hepatitis, HPV and other vaccines, antibiotic use) that GBD codes to a non-infectious cause, as it prescribes (e.g. chronic hepatitis C to liver disease, HPV vaccination to cervical cancer, maternal Group B strep vaccination to maternal and neonatal disorders), or that have no disease code. The code-based Infectious Diseases theme does not count them.",
+      "label": "Infection-related, but GBD classifies under another cause",
+      "note": "Infection-related topics that GBD 2023 assigns to the condition they lead to or prevent, as its burden-based rules prescribe (e.g. chronic hepatitis C to liver disease, HPV vaccination to cervical cancer, maternal Group B strep vaccination to maternal and neonatal disorders), or that target no single disease (e.g. antimicrobial stewardship). This follows GBD's classification; it is not a coding error. The code-based Infectious Diseases theme does not count them.",
       "n": 11,
       "studies": [
         {
@@ -20993,7 +20998,7 @@
     {
       "key": "mental",
       "label": "Alcohol, drugs and mental health without a mental-health code",
-      "note": "Alcohol and drug use or mental-health outcomes without a GBD mental or substance-use code; these relate to the Mental Health theme's proxy.",
+      "note": "Alcohol and drug use or mental-health outcomes without a GBD mental or substance-use code.",
       "n": 3,
       "studies": [
         {

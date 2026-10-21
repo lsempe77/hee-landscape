@@ -10,7 +10,7 @@ Writes docs/data/funders.json:
   s, f   one entry per study-funder pair: study index (as in studies.json)
          and index into names
   any    indices of the studies reporting at least one funder (for the
-         "Any funder reported" option, which also counts funders not listed)
+         "Any funder identified" option, which also counts funders not listed)
 
 Funders reported by fewer than MIN_STUDIES studies are left out of the list
 (they still count towards `any`). Funding is as reported in the publication

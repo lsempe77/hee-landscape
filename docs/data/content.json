@@ -188,7 +188,7 @@
         {
           "file": "fig_funder_funders.svg",
           "title": "Top funders: who funds economic evidence, and where?",
-          "caption": "Top 15 recorded funders by unique eligible studies. 11,149 of 41,610 studies report a funder. Blue/coral identify single-country studies by the income group of the country studied; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.",
+          "caption": "Top 15 recorded funders by unique eligible studies. 11,149 of 41,610 studies have a funder identified in Crossref metadata; studies without one may still acknowledge funding in the full text. Blue/coral identify single-country studies by the income group of the country studied in its publication year; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.",
           "views": [
             {
               "label": "Funders as named",
@@ -299,7 +299,7 @@
         {
           "file": "fig_funder_funders.svg",
           "title": "Top funders: who funds economic evidence, and where?",
-          "caption": "Top 15 recorded funders by unique eligible studies. 11,149 of 41,610 studies report a funder. Blue/coral identify single-country studies by the income group of the country studied; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.",
+          "caption": "Top 15 recorded funders by unique eligible studies. 11,149 of 41,610 studies have a funder identified in Crossref metadata; studies without one may still acknowledge funding in the full text. Blue/coral identify single-country studies by the income group of the country studied in its publication year; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.",
           "views": [
             {
               "label": "Funders as named",
@@ -323,11 +323,12 @@
         {
           "file": "fig_wellcome_priorities.svg",
           "title": "Wellcome-funded studies: which priority themes do they cover?",
-          "caption": "Studies reporting Wellcome Trust as a funder in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses GBD 2023 disease codes from titles and abstracts and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."
+          "caption": "Studies with Wellcome Trust identified as a funder (Crossref metadata) in each priority theme, with Wellcome's share of theme studies and rank among identified funders. Uses GBD 2023 disease codes from titles and abstracts and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."
         },
         {
           "file": "wellcome_analysis.html",
           "html": true,
+          "bare": true,
           "title": "Theme explorer: who funds each priority theme, and where?",
           "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health is a reviewed title-and-abstract screen and is small because few economic evaluations address climate."
         }

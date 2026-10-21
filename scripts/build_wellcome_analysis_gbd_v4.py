@@ -196,6 +196,24 @@ def load_climate_review(path):
 GBD_LONG = Path("hee_share_v2_1") / "gbd_disease_long.csv"
 GBD_INFECTIOUS = {"HIV/AIDS and sexually transmitted infections", "Respiratory infections and tuberculosis", "Enteric infections", "Neglected tropical diseases and malaria", "Other infectious diseases", "Infections, disease not stated"}
 GBD_MENTAL = {"Mental disorders", "Substance use disorders"}
+# How each theme's publications were matched, shown beside each theme and in the technical details.
+# Keyword lists summarise scripts/build_climate_candidates.py (the regular expressions are in its "Keyword list" sheet).
+INFECTIOUS_GROUPS = ["HIV/AIDS and sexually transmitted infections", "Respiratory infections and tuberculosis", "Enteric infections",
+                     "Neglected tropical diseases and malaria", "Other infectious diseases", "Infections, disease not stated"]
+MENTAL_GROUPS = ["Mental disorders", "Substance use disorders"]
+CLIMATE_KEYWORDS = [
+    ("Health impacts of climate change", "climate change, global warming, climate crisis, climate-sensitive, climate adaptation or resilience, "
+     "extreme heat, heatwaves, heat stress, extreme weather, floods, drought, wildfires, cyclones and hurricanes, sea-level rise, natural disasters"),
+    ("Air pollution", "air pollution, air quality, particulate matter (PM2.5, PM10), black carbon, household or indoor air, cookstoves, solid or biomass fuels"),
+    ("Mitigation with health co-benefits", "greenhouse gas, carbon or CO2 emissions, carbon footprint, carbon tax or pricing, decarbonisation, net zero, "
+     "low carbon, sustainable diets, planetary health, environmental sustainability, active travel, clean or renewable energy"),
+    ("Climate-sensitive infectious disease", "a climate or weather term (climate, weather, rainfall, seasonal temperature) together with dengue, malaria, "
+     "cholera, vector-borne disease, Zika, chikungunya, leishmaniasis, schistosomiasis or diarrhoeal disease"),
+    ("Health-sector emissions", "an emissions term together with a health-care setting (hospitals, surgery, inhalers, anaesthesia, dialysis, telemedicine)"),
+]
+CLIMATE_EXCLUSIONS = "non-environmental uses such as 'organisational climate', 'current climate', 'positron emission' or 'flooding with fluid'"
+CLIMATE_NO_GBD = ("The GBD cause list classifies diseases and injuries; it has no climate category. Climate affects health through many "
+                  "causes at once (heat, air pollution, infections, injuries), so no set of GBD causes identifies climate-and-health research.")
 GBD_SHARE_RECEIVED = "14 October 2026"
 
 
@@ -439,7 +457,7 @@ def plots(analysis, staging):
     fig.text(.025, .905, "Top 15 recorded funders, ranked by unique eligible studies", fontsize=14, color="#33475f")
     n = analysis["global"]["n"]
     known = analysis["global"]["named_funder"]
-    notes = (f"Base: {n:,} eligible studies, including reviews; {known:,} ({100 * known / n:.1f}%) report a funder. "
+    notes = (f"Base: {n:,} eligible studies, including reviews; {known:,} ({100 * known / n:.1f}%) have a funder identified in Crossref metadata. "
              "Counts describe recorded acknowledgements, not funding amounts.\n"
              "Blue and coral: single-country studies with known publication-year income. Grey: other geographic scope or unavailable income.\n"
              "Names are lightly normalised and counted once per study; funding coverage is incomplete.\n"
@@ -490,7 +508,7 @@ def plots(analysis, staging):
              fontsize=15, color="#705a84")
     fig.text(.025, .035, f"{overlap_text(analysis['wellcome_theme_overlap'], 'Wellcome-funded')}\n"
              "Infectious Diseases and Mental Health use GBD 2023 disease codes, so studies without a matching code fall outside. Climate & Health is a reviewed title-and-abstract screen.\n"
-             "Rank compares studies reporting each funder within the theme. Funding is reported for about a quarter of studies, so counts are a lower bound,\n"
+             "Rank compares studies reporting each funder within the theme. A funder is identified (Crossref metadata) for about a quarter of studies, so counts are a lower bound,\n"
              "not grant value, exclusive support or Wellcome programme membership.", fontsize=10, color="#5a564d", linespacing=1.6)
     fig.savefig(staging / "fig_wellcome_priorities.svg", facecolor=background)
     tidy_svg(staging / "fig_wellcome_priorities.svg")
@@ -533,7 +551,7 @@ def wellcome_rank(donors):
         return "not named in this theme"
     rank = 1 + sum(d["n"] > w["n"] for d in donors)
     tied = sum(d["n"] == w["n"] for d in donors) > 1
-    return f"{'joint ' if tied else ''}{ordinal(rank)} of {len(donors):,} reported funders"
+    return f"{'joint ' if tied else ''}{ordinal(rank)} of {len(donors):,} identified funders"
 
 
 def rounded_shares(counts, total, decimals=0):
@@ -557,6 +575,10 @@ SETTING_LABELS = ["High-income setting", "Low- & middle-income setting", "Multi-
 # Last search date, so the final publication year is partial.
 SEARCH_END = "3 August 2026"
 SEARCH_END_SHORT = "3 Aug 2026"
+SIGNPOST = {"infectious": "any of 6 GBD 2023 infectious cause groups (HIV/AIDS and STIs, respiratory infections and TB, enteric infections, "
+                          "malaria and neglected tropical diseases, other infectious diseases, infections not further specified)",
+            "mental": "GBD 2023 mental disorders or substance use disorders",
+            "climate": "keyword screen of titles and abstracts (GBD has no climate category); every candidate checked by hand"}
 BLURB = ("Economic evidence by Wellcome's three priority themes: Infectious Diseases, Mental Health and Climate & Health. "
          "It separates all evidence in each theme from publications that report Wellcome Trust funding, ranks the funders reported "
          "within each theme, and sets out how each theme was defined.")
@@ -665,6 +687,19 @@ border-top:5px solid var(--c);border-radius:14px;padding:18px 20px;transition:bo
 .vs{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:center;font-size:12.5px;color:var(--muted)}
 .vs .b{height:8px;border-radius:4px;background:var(--lav)}
 .vs .b i{display:block;height:100%;border-radius:4px}
+.first{margin-top:8px}
+.signpost{margin:12px 0 0;background:var(--lav-2);border:1px solid #e2d9f0;border-radius:12px;padding:12px 18px;font-size:13.5px}
+.signpost ul{list-style:none;margin:6px 0 6px;padding:0}.signpost li{margin:3px 0;padding-left:18px;position:relative}
+.signpost li i{position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%}
+.linkbtn{all:unset;cursor:pointer;color:var(--violet);font-weight:600;font-size:13px}.linkbtn:hover{text-decoration:underline}
+.cards-h{margin:30px 0 2px;font:600 21px/1.2 Newsreader,Georgia,serif}
+.tcard .how{font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+.match{margin:14px 0 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--c);border-radius:10px;padding:14px 18px;font-size:13.5px;color:var(--ink)}
+.match small{display:block;color:var(--muted);margin-top:8px;font-size:12.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.gbd{background:var(--lav-2);border:1px solid #e2d9f0;border-radius:999px;padding:3px 10px;font-size:12.5px;color:#3b2b63}
+.kw{margin:8px 0 0;padding-left:18px}.kw li{margin-bottom:4px}
+.verified{margin:10px 0 0;background:#eef7f5;border:1px solid #bfe0da;color:#16544e;border-radius:8px;padding:8px 12px;font-size:13px}
 .tcard .go{font-size:13px;font-weight:600;color:var(--violet);margin-top:auto}
 /* Theme detail */
 nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 0;position:sticky;top:0;background:var(--paper);padding:12px 0;z-index:1;border-bottom:1px solid var(--line)}
@@ -741,6 +776,9 @@ document.querySelectorAll('[data-open-outside]').forEach(b => b.addEventListener
   pop.style.top = Math.max(8, b.getBoundingClientRect().bottom + 10) + 'px';
   pop.showModal();
 }));
+document.querySelectorAll('[data-open-tech]').forEach(b => b.addEventListener('click', () => {
+  const d = document.getElementById('tech'); d.open = true; d.scrollIntoView({behavior: 'smooth', block: 'start'});
+}));
 pop.querySelector('.pop-close').addEventListener('click', () => pop.close());
 pop.addEventListener('click', e => { if (e.target === pop) pop.close(); });
 // Publication-year trend, styled after the Overview chart: smooth line, light-to-deep markers, partial final year.
@@ -813,6 +851,26 @@ def report(analysis, rows):
     legend = '<div class="legend">' + ''.join(f'<span><i style="background:{c}"></i>{escape(label)}</span>'
                                              for c, label in zip(SETTING_COLORS, SETTING_LABELS)) + '</div>'
     cards, tabs, panels = [], [], []
+    MATCH_LINE = {"infectious": f"Matched by GBD 2023 cause: {len(INFECTIOUS_GROUPS)} infectious groups",
+                  "mental": "Matched by GBD 2023 cause: mental and substance use disorders",
+                  "climate": "Matched by keyword screen, every candidate reviewed by hand (no GBD category)"}
+    chips = lambda groups: ''.join(f'<span class="gbd">{escape(g)}</span>' for g in groups)
+    MATCH_BOX = {
+        "infectious": (f'<strong>How publications were matched:</strong> by the GBD 2023 cause coded from each title and abstract (the condition the evaluated intervention targets). '
+                       f'A publication counts if it has any of these GBD groups:<div class="chips">{chips(INFECTIOUS_GROUPS)}</div>'
+                       '<small>GBD codes were assigned by AI from titles and abstracts under the team’s coding rules and checked against a second coder and MeSH headings; '
+                       'they were not reviewed publication by publication. "Infections, disease not stated" is the team’s group for infections GBD cannot place.</small>'),
+        "mental": (f'<strong>How publications were matched:</strong> by the GBD 2023 cause coded from each title and abstract. A publication counts if it has either GBD group:'
+                   f'<div class="chips">{chips(MENTAL_GROUPS)}</div>'
+                   '<small>Substance use is included, so this is wider than Wellcome’s focus on anxiety, depression and psychosis (see the narrower check below). '
+                   'GBD codes were assigned by AI under the team’s coding rules, not reviewed publication by publication.</small>'),
+        "climate": (f'<strong>How publications were matched: no GBD code.</strong> {escape(CLIMATE_NO_GBD)} Instead, every title and abstract was searched for these keywords:'
+                    '<ul class="kw">' + ''.join(f'<li><b>{escape(area)}:</b> {escape(terms)}</li>' for area, terms in CLIMATE_KEYWORDS) + '</ul>'
+                    f'<small>Excluded before matching: {escape(CLIMATE_EXCLUSIONS)}.</small>'
+                    '<p class="verified">✓ Human-verified: each of the {reviewed} candidates was reviewed by hand against Wellcome’s Climate &amp; Health framing; '
+                    '{included} were included and {excluded} excluded, with the reason recorded for each '
+                    '(exports/climate_health_review_decisions_2026-10-12.csv).</p>'),
+    }
     for index, (key, t) in enumerate(analysis["themes"].items()):
         color = THEME_COLORS[key]
         top = t["donors"][0] if t["donors"] else None
@@ -825,11 +883,12 @@ def report(analysis, rows):
         cards.append(f'<button type="button" class="tcard" style="--c:{color}" data-theme="{key}" aria-pressed="false" aria-controls="theme-{key}">'
                      f'<span class="t-name">{escape(t["label"])}</span>'
                      f'<span class="t-big">{t["n"]:,}<small>theme publications</small></span>'
-                     f'<span class="cov"><span class="cov-lab">Funding reported: <b>{t["named_funder"]:,}</b> of {t["n"]:,} ({pct(t["named_funder"], t["n"])})</span>'
+                     f'<span class="cov"><span class="cov-lab">Funder identified: <b>{t["named_funder"]:,}</b> of {t["n"]:,} ({pct(t["named_funder"], t["n"])})</span>'
                      f'<span class="cov-bar" aria-hidden="true"><i style="width:{100 * t["named_funder"] / max(1, t["n"]):.2f}%;background:{color}"></i></span></span>'
-                     f'<span class="t-w"><strong>{t["wellcome"]:,}</strong> Wellcome-funded · <b>{pct(t["wellcome"], t["named_funder"])}</b> of those that report a funder'
+                     f'<span class="t-w"><strong>{t["wellcome"]:,}</strong> Wellcome-funded · <b>{pct(t["wellcome"], t["named_funder"])}</b> of those with a funder identified'
                      f'<small class="t-note">{pct(t["wellcome"], t["n"])} of all theme publications</small></span>'
                      f'<span class="chip">Wellcome: {escape(wellcome_rank(t["donors"]))}</span>{versus}'
+                     f'<span class="how">{escape(MATCH_LINE[key])}</span>'
                      f'<span class="go">Explore this theme →</span></button>')
         tabs.append(f'<button type="button" style="--c:{color}" aria-pressed="{str(index == 0).lower()}" aria-controls="theme-{key}" data-theme="{key}"><i></i>{escape(t["label"])}</button>')
         max_n = max([d["n"] for d in t["donors"]] or [1])
@@ -852,7 +911,7 @@ def report(analysis, rows):
         if key == "mental":
             focus = analysis["mental_focus_title_screen"]
             extra = (f'<aside><strong>Narrower check on anxiety, depression and psychosis:</strong> {focus["n"]:,} eligible publications mention these conditions in their title; '
-                     f'{focus["named_funder"]:,} report any funder and {focus["wellcome"]:,} report Wellcome funding. This title screen covers all eligible publications, including those without disease tags. '
+                     f'{focus["named_funder"]:,} have a funder identified and {focus["wellcome"]:,} have Wellcome Trust identified as a funder. This title screen covers all eligible publications, including those without disease tags. '
                      'It does not establish early-intervention focus or Wellcome programme eligibility.</aside>')
         lead = ''
         if key == "climate":
@@ -880,19 +939,20 @@ def report(analysis, rows):
         panels.append(f'''<section id="theme-{key}" class="theme" style="--c:{color}" {'hidden' if index else ''}>
 <div class="theme-head"><span class="dot"></span><h2>{escape(t['label'])}</h2></div>
 <details class="def"><summary>How this theme is defined</summary><p>{escape(t['definition'])} <a href="{escape(t['url'])}" target="_blank" rel="noopener">Wellcome programme scope&nbsp;↗</a></p></details>
+<div class="match">{MATCH_BOX[key].replace('{reviewed}', f"{t.get('reviewed', 0):,}").replace('{included}', f"{t['n']:,}").replace('{excluded}', f"{t.get('reviewed', 0) - t['n']:,}")}</div>
 {lead}<div class="strip"><div><strong>{t['n']:,}</strong><span>Eligible publications in this theme</span></div>
-<div><strong>{pct(t['named_funder'], t['n'])}</strong><span>Report at least one funder ({t['named_funder']:,} publications), so funder counts are a lower bound</span></div>
-<div class="w"><strong>{t['wellcome']:,}</strong><span>Wellcome-funded: <b>{pct(t['wellcome'], t['named_funder'])}</b> of those that report a funder ({pct(t['wellcome'], t['n'])} of all theme publications) · {escape(wellcome_rank(t['donors']))}</span></div></div>
+<div><strong>{pct(t['named_funder'], t['n'])}</strong><span>Have a funder identified ({t['named_funder']:,} publications), so funder counts are a lower bound</span></div>
+<div class="w"><strong>{t['wellcome']:,}</strong><span>Wellcome-funded: <b>{pct(t['wellcome'], t['named_funder'])}</b> of those with a funder identified ({pct(t['wellcome'], t['n'])} of all theme publications) · {escape(wellcome_rank(t['donors']))}</span></div></div>
 <div class="card fund"><h3>Who funds this theme, and where are the publications set?</h3>
 <p class="hint">Settings use single-country publications by World Bank income group in their publication year. Hover a bar for its counts.</p>{legend}
 <div class="compare"><span class="lab">All theme publications</span>{stacked_bar(t['income_counts'], t['n'])}<span class="num">n = {t['n']:,}</span>
 <span class="lab"><strong>Wellcome-funded</strong></span>{stacked_bar(t['wellcome_income_counts'], t['wellcome'])}<span class="num">n = {t['wellcome']:,}</span></div>
-<div class="sub">Funding reported</div>
-<div class="mixrow"><span class="lab">All theme publications</span><div class="mix" role="img" aria-label="{t['named_funder']:,} of {t['n']:,} publications report a funder">
-<span style="flex:{t['named_funder']};background:{color};color:{THEME_INK[key]}" title="Report a funder: {t['named_funder']:,}">{t['named_funder']:,} report a funder ({pct(t['named_funder'], t['n'])})</span>
-<span style="flex:{t['n'] - t['named_funder']};background:#ece8f2;color:#4a4560" title="No funder reported: {t['n'] - t['named_funder']:,}">{t['n'] - t['named_funder']:,} no funder reported</span></div><span class="num">n = {t['n']:,}</span></div>
-<p class="hint" style="margin:0">The ranking below uses only the publications that report a funder. Those without one may still have been funded: acknowledgements are often missing.</p>
-<div class="sub">Top funders · among the {t['named_funder']:,} publications that report a funder</div>
+<div class="sub">Funder identified</div>
+<div class="mixrow"><span class="lab">All theme publications</span><div class="mix" role="img" aria-label="{t['named_funder']:,} of {t['n']:,} publications have a funder identified">
+<span style="flex:{t['named_funder']};background:{color};color:{THEME_INK[key]}" title="Funder identified: {t['named_funder']:,}">{t['named_funder']:,} funder identified ({pct(t['named_funder'], t['n'])})</span>
+<span style="flex:{t['n'] - t['named_funder']};background:#ece8f2;color:#4a4560" title="No funder identified in Crossref: {t['n'] - t['named_funder']:,}">{t['n'] - t['named_funder']:,} no funder identified</span></div><span class="num">n = {t['n']:,}</span></div>
+<p class="hint" style="margin:0">The ranking below uses only the publications with a funder identified. Funders come from Crossref publication metadata; this map screened titles and abstracts only. “No funder identified” means none was found there, not that the publication reports no funding: many acknowledge funders only in the full text.</p>
+<div class="sub">Top funders · among the {t['named_funder']:,} publications with a funder identified</div>
 <div class="donors">{''.join(donor_rows) or '<span></span><span>No named funder available.</span>'}</div>
 <p class="hint" style="margin-top:12px">= marks a tie. Wellcome is highlighted, and added below the top 10 when it ranks lower.</p></div>{extra}</section>''')
     groups = analysis["wellcome_outside_groups"]
@@ -908,6 +968,9 @@ def report(analysis, rows):
                            f'<span class="meter" aria-hidden="true"><i style="width:{100 * g["n"] / max_g:.4f}%"></i></span>'
                            f'<span class="num"><strong>{g["n"]}</strong></span></summary>{note}<ol>{studies}</ol></details>')
     inside = wellcome - outside
+    signpost = ('<div class="signpost"><strong>How publications were matched to the themes</strong><ul>' + ''.join(
+        f'<li><i style="background:{THEME_COLORS[k]}"></i><b>{escape(analysis["themes"][k]["label"])}:</b> {escape(SIGNPOST[k])}</li>' for k in THEME_COLORS)
+        + '</ul><button type="button" class="linkbtn" data-open-tech>Full lists of GBD codes and keywords in the technical note ▸</button></div>')
     union = analysis["themes_union"]
     labels = {key: t["label"] for key, t in analysis["themes"].items()}
 
@@ -921,19 +984,19 @@ def report(analysis, rows):
     total_html = (f'<div class="card total"><div class="tot-nums">'
                   f'<div><strong>{union["all"]["n"]:,}</strong><span>publications match at least one of the three themes ({pct(union["all"]["n"], total)} of all {total:,})</span>'
                   f'<i class="fbar" style="width:100%;background:#cdbfe3"></i></div>'
-                  f'<div><strong>{union["funded"]["n"]:,}</strong><span>of these report any funder ({pct(union["funded"]["n"], union["all"]["n"])}); the rest name no funder, so their funding is unknown</span>'
+                  f'<div><strong>{union["funded"]["n"]:,}</strong><span>of these have a funder identified ({pct(union["funded"]["n"], union["all"]["n"])}); for the rest none was found in Crossref metadata, which does not mean they report no funding</span>'
                   f'<i class="fbar" style="width:{100 * union["funded"]["n"] / union["all"]["n"]:.2f}%;background:var(--violet-2)"></i></div>'
-                  f'<div class="w"><strong>{union["wellcome"]["n"]:,}</strong><span>are Wellcome-funded: <b>{pct(union["wellcome"]["n"], union["funded"]["n"])}</b> of those that report a funder</span>'
+                  f'<div class="w"><strong>{union["wellcome"]["n"]:,}</strong><span>are Wellcome-funded: <b>{pct(union["wellcome"]["n"], union["funded"]["n"])}</b> of those with a funder identified</span>'
                   f'<span class="step-note">{pct(union["wellcome"]["n"], union["all"]["n"])} of all matching publications</span>'
                   f'<i class="fbar" style="width:{100 * union["wellcome"]["n"] / union["all"]["n"]:.2f}%;background:var(--violet)"></i></div></div>'
-                  f'<div><div class="mixrow"><span class="lab"><strong>Funding reported</strong></span><div class="mix" role="img" aria-label="{union["funded"]["n"]:,} of {union["all"]["n"]:,} matching publications report a funder">'
-                  f'<span style="flex:{union["funded"]["n"]};background:var(--violet-2);color:#fff" title="Report a funder: {union["funded"]["n"]:,}">{union["funded"]["n"]:,} ({pct(union["funded"]["n"], union["all"]["n"])})</span>'
-                  f'<span style="flex:{union["all"]["n"] - union["funded"]["n"]};background:#ece8f2;color:#4a4560" title="No funder reported: {union["all"]["n"] - union["funded"]["n"]:,}">{union["all"]["n"] - union["funded"]["n"]:,} no funder reported</span></div>'
+                  f'<div><div class="mixrow"><span class="lab"><strong>Funder identified</strong></span><div class="mix" role="img" aria-label="{union["funded"]["n"]:,} of {union["all"]["n"]:,} matching publications have a funder identified">'
+                  f'<span style="flex:{union["funded"]["n"]};background:var(--violet-2);color:#fff" title="Funder identified: {union["funded"]["n"]:,}">{union["funded"]["n"]:,} ({pct(union["funded"]["n"], union["all"]["n"])})</span>'
+                  f'<span style="flex:{union["all"]["n"] - union["funded"]["n"]};background:#ece8f2;color:#4a4560" title="No funder identified in Crossref: {union["all"]["n"] - union["funded"]["n"]:,}">{union["all"]["n"] - union["funded"]["n"]:,} no funder identified</span></div>'
                   f'<span class="num">{union["all"]["n"]:,}</span></div>'
-                  f'<div class="legend" style="margin:-4px 0 0 184px"><span><i style="background:var(--violet-2)"></i>Report a funder</span><span><i style="background:#ece8f2;border:1px solid #d9d2e4"></i>No funder reported, so funding unknown</span></div>'
+                  f'<div class="legend" style="margin:-4px 0 0 184px"><span><i style="background:var(--violet-2)"></i>Funder identified</span><span><i style="background:#ece8f2;border:1px solid #d9d2e4"></i>No funder identified in Crossref (may be in the full text)</span></div>'
                   f'<div class="sub" style="margin:14px 0 10px;padding-top:12px">By theme</div>'
                   f'<div class="mixrow"><span class="lab">All matching publications</span>{mix_bar(union["all"])}<span class="num">{union["all"]["n"]:,}</span></div>'
-                  f'<div class="mixrow"><span class="lab">Report any funder</span>{mix_bar(union["funded"])}<span class="num">{union["funded"]["n"]:,}</span></div>'
+                  f'<div class="mixrow"><span class="lab">Funder identified</span>{mix_bar(union["funded"])}<span class="num">{union["funded"]["n"]:,}</span></div>'
                   f'<div class="mixrow"><span class="lab"><strong>Wellcome-funded</strong></span>{mix_bar(union["wellcome"])}<span class="num">{union["wellcome"]["n"]:,}</span></div>'
                   f'{key_html}<p class="hint" style="margin:0">Each publication is counted once. Hover a segment for its count.</p></div></div>')
     data = json.dumps({"years": analysis["wellcome_by_year"], "searchEnd": SEARCH_END_SHORT}).replace("</", "<\\/")
@@ -942,13 +1005,20 @@ def report(analysis, rows):
             '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">'
             f'<style>{STYLE}</style></head><body><main>' + f'''
 <header class="page-head"><h1>{escape(SECTION)}</h1><p class="lede">{escape(BLURB)}</p></header>
+<section class="block first"><h2>The three themes at a glance</h2>
+<p class="hint">Publications in the map that match at least one of Wellcome's three priority themes, how many have a funder identified, and how many of those are Wellcome-funded.</p>
+{total_html}{signpost}
+<h3 class="cards-h">Each theme</h3><p class="hint">Select a theme to see who funds it and where its publications are set. Across all eligible publications, {analysis['all_theme_overlap']['n']:,} fall in more than one theme. Bars compare Wellcome with the theme's top funder.</p>
+<div class="theme-cards">{''.join(cards)}</div></section>
+<section class="block"><h2>All Wellcome-funded publications</h2><p class="hint">Every publication with Wellcome Trust identified as a funder, including those outside the three themes.</p>
 <section class="hero" aria-label="Wellcome-funded publications">
 <div class="hero-num"><strong>{wellcome:,}</strong><span>eligible publications report Wellcome Trust funding <span style="white-space:nowrap">({years[0]}–{years[1]}<span class="pmark" tabindex="0" role="note" aria-label="{years[1]} is a partial year: searches ended {SEARCH_END}" data-tip="{years[1]} is a partial year: searches ended {SEARCH_END}">*</span>)</span></span></div>
 <div><div class="split" role="img" aria-label="{inside:,} in at least one priority theme, {outside:,} outside the three themes">
 <span class="in" style="flex:{inside}">{inside:,} in a priority theme</span><button type="button" class="out" style="flex:{outside}" data-open-outside>{outside:,} outside</button></div>
 <div class="split-key"><span><i style="background:var(--violet)"></i>{inside:,} fall in at least one of the three themes</span>
 <span><i style="background:#ddd6e8"></i><button type="button" data-open-outside>{outside:,} fall outside them: see what they cover ▸</button></span></div>
-<p class="hint">{escape(overlap_text(analysis['wellcome_theme_overlap'], 'Wellcome-funded'))} Only {pct(analysis['global']['named_funder'], total)} of all {total:,} publications report any funder, so these counts are a lower bound on support.</p></div>
+<p class="hint">{escape(overlap_text(analysis['wellcome_theme_overlap'], 'Wellcome-funded'))} A funder could be identified for only {pct(analysis['global']['named_funder'], total)} of all {total:,} publications, so these counts are a lower bound on support. Funders come from Crossref publication metadata; this map screened titles and abstracts only. “No funder identified” means none was found there, not that the publication reports no funding: many acknowledge funders only in the full text.</p></div>
+</section>
 </section>
 <dialog class="pop" id="outside" aria-labelledby="outside-title"><div class="pop-head"><h2 id="outside-title">What the {outside:,} Wellcome-funded publications outside the themes cover</h2><button type="button" class="pop-close" aria-label="Close">×</button></div><div class="pop-body">
 <p class="hint">No infectious or mental-health disease code and not on the reviewed Climate &amp; Health list, grouped by keywords in their titles. Groupings are indicative.
@@ -958,13 +1028,11 @@ def report(analysis, rows):
 <p class="hint">Publication counts, not grant-award dates or spending. Hover the line for each year.</p></div>
 <div class="toggle" role="group" aria-label="Trend view"><button type="button" data-trend="annual" aria-pressed="true">Per year</button><button type="button" data-trend="cumulative" aria-pressed="false">Cumulative</button></div></div>
 <div id="trend"></div><p class="trend-note">{years[1]} is a partial year: searches ended {SEARCH_END}.</p></section>
-<section class="block"><h2>The three themes at a glance</h2>
-<p class="hint">Select a theme to see who funds it and where its publications are set. Across all eligible publications, {analysis['all_theme_overlap']['n']:,} fall in more than one theme. Bars compare Wellcome with the theme's top funder.</p>
-{total_html}<div class="theme-cards">{''.join(cards)}</div></section>
 <nav class="tabs" aria-label="Select a priority theme">{''.join(tabs)}</nav>{''.join(panels)}
-<details class="method"><summary>Technical details and sources</summary><p>Each funder is counted once per eligible publication. A publication can name multiple funders and belong to multiple themes, so counts do not sum across funders or themes. Funding is recorded for {pct(analysis['global']['named_funder'], total)} of the evidence base, so absence of a name does not establish absence of support. Burroughs Wellcome Fund is a separate organisation and is excluded from the Wellcome cohort.</p>
-<p>Setting comparisons use single-country publications with known income, taking the World Bank group in force on 1 January of each publication's year; all other publications stay visible in the multi-country, regional or income-unavailable category. Names are lightly normalised (NIHR, HTA, NIH, MRC, Gates and common variants); agencies and their programmes are not comprehensively merged. Rankings count reported funders, not funding amounts, and tied funders share a rank. A programme named in an acknowledgement does not establish membership in a current priority programme.</p>
+<details class="method" id="tech"><summary>Technical details and sources</summary><p>Each funder is counted once per eligible publication. A publication can name multiple funders and belong to multiple themes, so counts do not sum across funders or themes. Funders come from Crossref publication metadata; this map screened titles and abstracts only. “No funder identified” means none was found there, not that the publication reports no funding: many acknowledge funders only in the full text. Funding is recorded for {pct(analysis['global']['named_funder'], total)} of the evidence base, so absence of a name does not establish absence of support. Burroughs Wellcome Fund is a separate organisation and is excluded from the Wellcome cohort.</p>
+<p>Setting comparisons use single-country publications with known income, taking the World Bank group in force on 1 January of each publication's year; all other publications stay visible in the multi-country, regional or income-unavailable category. Names are lightly normalised (NIHR, HTA, NIH, MRC, Gates and common variants); agencies and their programmes are not comprehensively merged. Rankings count identified funders, not funding amounts, and tied funders share a rank. A programme named in an acknowledgement does not establish membership in a current priority programme.</p>
 <p>Infectious Diseases and Mental Health use the Global Burden of Disease (GBD 2023) causes coded from each publication's title and abstract (the condition the evaluated intervention targets); {analysis['disease_tagged']:,} of {total:,} eligible publications have a disease code, so publications without one can still contain relevant evidence. Climate &amp; Health uses a keyword screen of all titles and abstracts (scripts/build_climate_candidates.py), after which every candidate was reviewed against Wellcome's Climate &amp; Health framing; decisions and their basis are in exports/climate_health_review_decisions_2026-10-12.csv. A broader recall check found almost no further publications. Classification uses titles and abstracts, not full texts. The anxiety, depression and psychosis title screen is a separate sensitivity view. Wellcome-funded publications outside all three themes are grouped by keywords in their titles (first matching group wins) to describe what they cover; this grouping does not change any theme count. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
+<p><strong>Theme mapping.</strong> Infectious Diseases: any of the GBD 2023 groups {escape('; '.join(INFECTIOUS_GROUPS))}. Mental Health: {escape('; '.join(MENTAL_GROUPS))}. GBD codes were assigned by AI from titles and abstracts under the team’s coding rules (see methods/gbd_coding/GBD_CODING.md in the repository) and checked against a second coder and MeSH headings; they were not reviewed publication by publication. Climate &amp; Health has no GBD mapping: {escape(CLIMATE_NO_GBD)} Its keyword screen covered {escape('; '.join(f'{area}: {terms}' for area, terms in CLIMATE_KEYWORDS))}. Excluded before matching: {escape(CLIMATE_EXCLUSIONS)}. Every one of the {analysis['themes']['climate']['reviewed']:,} candidates was then reviewed by hand (human-verified): {analysis['themes']['climate']['n']:,} included, {analysis['themes']['climate']['reviewed'] - analysis['themes']['climate']['n']:,} excluded, each with its reason recorded.</p>
 <p>Source: the map's eligible analysis master, v2.1 ({total:,} publications) and the {escape(analysis['meta']['gbd_share'])}; analysis rebuilt {escape(analysis['meta']['analysis_built'])}. Publication years {years[0]}–{years[1]} (final year partial). Programme scope checked 12 October 2026: <a href="https://wellcome.org/our-priorities/infectious-disease">Infectious Disease</a>, <a href="https://wellcome.org/our-priorities/mental-health">Mental Health</a>, <a href="https://wellcome.org/our-priorities/climate-and-health">Climate and Health</a>.</p></details>
 <div class="download"><a href="wellcome_theme_funders.csv" download>Download funder counts by theme (CSV)</a><a href="wellcome_analysis.json" download>Download aggregate analysis (JSON)</a></div>
 </main><script type="application/json" id="data">{data}</script><script>{SCRIPT}</script></body></html>''')
@@ -978,10 +1046,10 @@ def main():
         rows, meta, content, general_entries, source_hash = load_inputs(args.raw)
         analysis = build_analysis(rows, meta, source_hash)
         if not analysis["wellcome"]["n"] or not analysis["donors"]:
-            raise ValueError("No Wellcome records or reported funders; refusing to build an empty analysis.")
+            raise ValueError("No Wellcome records or identified funders; refusing to build an empty analysis.")
         for entry in general_entries:
             entry.update(file="fig_funder_funders.svg", title="Top funders: who funds economic evidence, and where?",
-                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} studies report a funder. Blue/coral identify single-country studies by the income group of the country studied; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
+                         caption=f"Top 15 recorded funders by unique eligible studies. {analysis['global']['named_funder']:,} of {len(rows):,} studies have a funder identified in Crossref metadata; studies without one may still acknowledge funding in the full text. Blue/coral identify single-country studies by the income group of the country studied in its publication year; grey retains other scope or unavailable income. Names are lightly normalised; counts describe acknowledgements, not funding amounts.")
             nihr = next(d for d in analysis["parent_donors"] if d["funder"] == "NIHR")
             # Alternative views shown as tabs in the figure pop-up; the bar chart stays the default.
             entry["views"] = [
@@ -997,7 +1065,7 @@ def main():
                              "institutes and centres (e.g. NCI, NIAID, NIDA, NHLBI, NIMH, NCATS). Same-named bodies in other countries stay "
                              "separate. Each study counts once per funder; other funders are counted as in the bar chart.")}]
         section = {"title": SECTION, "blurb": BLURB,
-                   "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-funded studies: which priority themes do they cover?", "caption": "Studies reporting Wellcome Trust as a funder in each priority theme, with Wellcome's share of theme studies and rank among reported funders. Uses GBD 2023 disease codes from titles and abstracts and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."},
+                   "figs": [{"file": "fig_wellcome_priorities.svg", "title": "Wellcome-funded studies: which priority themes do they cover?", "caption": "Studies with Wellcome Trust identified as a funder (Crossref metadata) in each priority theme, with Wellcome's share of theme studies and rank among identified funders. Uses GBD 2023 disease codes from titles and abstracts and a reviewed Climate & Health title-and-abstract screen; Climate & Health is small because few economic evaluations address climate. Themes can overlap; this is not a grant-portfolio assessment."},
                             {"file": "wellcome_analysis.html", "html": True, "title": "Theme explorer: who funds each priority theme, and where?", "caption": "Compare the three themes, then explore each theme's evidence, funding coverage, top funders and study settings. Definitions and denominators are provided within the view; Climate & Health is a reviewed title-and-abstract screen and is small because few economic evaluations address climate."}]}
         # Also drop the section under its earlier name so a rename never leaves a duplicate.
         content["gallery"] = [s for s in content["gallery"] if s["title"] not in (SECTION, "Wellcome-specific analysis")] + [section]
@@ -1013,9 +1081,9 @@ def main():
                     for d in t["donors"]:
                         writer.writerow([t["label"], t["n"], t["named_funder"], d["funder"], d["n"], *d["income_counts"]])
             (staging / "content.json").write_text(json.dumps(content, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-            # Wellcome outputs only; the general funder figures stay as published.
+            # Wellcome outputs plus the general top-funders bar chart (redrawn on v2.1); the treemap stays as published.
             for path in staging.iterdir():
-                if path.name.startswith(("wellcome_", "fig_wellcome_priorities")):
+                if path.name.startswith(("wellcome_", "fig_wellcome_priorities", "fig_funder_funders")):
                     os.replace(path, OUT / path.name)
             os.replace(staging / "content.json", DATA / "content.json")
     except (OSError, ValueError, KeyError, TypeError, ImportError) as exc:

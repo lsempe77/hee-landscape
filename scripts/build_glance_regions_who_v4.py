@@ -105,8 +105,9 @@ NOTES = {
                  "Panel A counts full economic evaluations without requiring burden data.",
     "open_access": "Share of studies with a known open-access status that are open access, meaning they are free to read "
                    "(from OpenAlex, matched by DOI). {n_oa_unknown} studies whose status could not be found are left out of the base.",
-    "funder": "Share of studies whose record names at least one funder in its publication metadata (Crossref). "
-              "Many studies do not report funding, so this is a lower bound on the share that were funded.",
+    "funder": "Share of studies whose publication metadata (Crossref) names at least one funder. "
+              "Studies without one may still acknowledge funding in the full text, which this map did not screen, "
+              "so this is a lower bound on the share that were funded.",
     "ee_rate": "Number of economic evaluations naming at least one country, divided by the combined disease burden of all "
                "countries on the map, including those with no evaluation. The disease burden is measured in disability-adjusted "
                "life years (DALYs) as reported by IHME's 2023 Global Burden of Disease study. Reviews that report no evaluation of their own, and evaluations naming only "
@@ -439,7 +440,7 @@ def render(v):
         (pct(v["ee_share"]), "are full economic evaluations (EE). The rest are reviews that contain value-for-money evidence.", "full_ee"),
         (fmt_int(v["n_named"]), "countries or territories with at least one study", "countries"),
         (pct(v["oa_known"]), "of studies are open access (i.e. free to read)", "open_access"),
-        (pct(v["funder_share"]), "of studies report a funder", "funder"),
+        (pct(v["funder_share"]), "of studies have a funder identified", "funder"),
     ]
     ee_kpis = [
         (f"{v['ee_rate']:.1f}", "economic evaluations per 100,000 DALYs", "ee_rate"),
