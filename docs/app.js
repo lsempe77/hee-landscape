@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-21-wellcome-v5";
+const BUILD = "2026-10-21-no-haly-filter";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -272,6 +272,7 @@ export function applyFilters(db, filt) {
     if (qalyCode !== null && st.qaly_label[s] !== qalyCode) continue;
     if (needsDaly && st.uses_daly[s] !== 1) continue;
     if (bothMeasures && st.qaly_label[s] !== db.codeOf.qaly_label.get("Uses QALY")) continue;
+    if (f.qaly === "No HALY" && (st.qaly_label[s] === db.codeOf.qaly_label.get("Uses QALY") || st.uses_daly[s] === 1)) continue;
     if (oaCode !== null && st.oa_label[s] !== oaCode) continue;
     if (scopeCode !== null && st.geo_scope[s] !== scopeCode) continue;
     if (disSet && !disSet.has(s)) continue;
@@ -2551,7 +2552,7 @@ if (typeof document !== "undefined") {
     state.filt = {
       years: db.years.slice(),
       income: [], region: [], disease: [], evaltype: [], design: [], funder: [], language: [],
-      model: "All", qaly: "All", daly: "All", oa: "All", scope: "All"
+      model: "All", qaly: "No HALY", daly: "All", oa: "All", scope: "All"
     };
 
     const slider = $("x-years");
@@ -2589,7 +2590,7 @@ if (typeof document !== "undefined") {
       l => l + " (" + fmtNum(langN.get(l)) + ")");
 
     makeRadios("x-model", "x_model", ["All", "Model-based", "Measured"]);
-    makeRadios("x-qaly", "x_qaly", ["All studies", "Uses QALY", "Uses DALY", "Both QALY and DALY"]);
+    makeRadios("x-qaly", "x_qaly", ["No HALY", "Uses QALY", "Uses DALY", "Both QALY and DALY"]);
     makeRadios("x-oa", "x_oa", ["All", "Open access", "Not open"]);
 
     const scope = $("x-scope");
@@ -2607,7 +2608,7 @@ if (typeof document !== "undefined") {
       for (const [cont, name] of [["x-model", "model"], ["x-qaly", "qaly"], ["x-oa", "oa"]]) {
         const first = $(cont).querySelector("input");
         first.checked = true;
-        state.filt[name] = "All";
+        state.filt[name] = first.value;
       }
       scope.value = "All";
       state.filt.scope = "All";
