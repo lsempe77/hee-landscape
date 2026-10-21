@@ -11,7 +11,7 @@ printed, so the manuscript text can match. Not used by the site.
 
 Data: docs/data (studies, geo, countries, dict) for A and B; the reconciled master
 (data/raw/hee_analysis_master_v2_1.csv) for open access; funder names grouped as in the
-site's funder treemap (build_wellcome_analysis_gbd_v2.parent_funder); local authorship as in
+site's funder treemap (build_wellcome_analysis_gbd_v3.parent_funder); local authorship as in
 build_authorship_figures.py. LMIC/high-income settings: single-country studies, World Bank
 group in force on 1 January of the publication year. B uses each country's current (July
 2026) group, as in the site's per-capita figure.
@@ -88,7 +88,7 @@ def per_capita():
 
 
 def funders():
-    import build_wellcome_analysis_gbd_v2 as wv
+    import build_wellcome_analysis_gbd_v3 as wv
     rows, *_ = wv.load_inputs(wv.ROOT / "data" / "raw")
     funded = [r for r in rows if r["named_funders"]]
     per = collections.defaultdict(lambda: {"all": set(), "hic": set(), "lmic": set()})

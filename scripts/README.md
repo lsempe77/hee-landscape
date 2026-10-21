@@ -44,7 +44,8 @@ These write into `docs/`, which is the published site. Pushing their output chan
 | `build_funder_scorecard.py` | Size-neutral evidence-gap scorecard |
 | `build_funder_scorecard_absolute.py` | Absolute evidence-shortfall scorecard |
 | `build_wellcome_analysis.py` | Global funder figures; also supplies `funders_of` to the funder filter |
-| `build_wellcome_analysis_gbd_v2.py` | Wellcome priority-themes view on GBD 2023 coding |
+| `build_wellcome_analysis_gbd_v4.py` | Wellcome priority-themes view (current): v3 data, redesigned page and purple palette |
+| `build_wellcome_analysis_gbd_v3.py` | Previous version of the page (same data); imported by `build_overview_figure.py` |
 | `build_funder_filter.py` | Data for the Explorer's funder filter |
 | `build_language_filter.py` | Data for the Explorer's language filter |
 | `build_dotmap_title.py` | Dot-map layout |
@@ -73,6 +74,7 @@ Written to dated folders in `exports/`; they never change the site.
 | `create_standalone_transition.py` | Slide-style transition figure |
 | `create_overview_figure_mockups.py` | Overview layout options |
 | `build_climate_candidates.py` | Climate & Health candidate list for manual review |
+| `build_infectious_candidates.py` | Infectious Diseases scope candidates (hepatitis, vaccines, antimicrobial use/resistance) for manual review |
 
 ## Data cleaning and classification (one-off steps, kept for the record)
 

@@ -318,7 +318,7 @@
     },
     {
       "title": "Wellcome priority themes",
-      "blurb": "A funder-specific view of economic evidence in Wellcome's three priority themes: Infectious Diseases, Mental Health and Climate & Health. It separates all evidence in each theme from studies that report Wellcome funding, ranks the funders reported within each theme, and sets out how each theme was defined.",
+      "blurb": "Economic evidence by Wellcome's three priority themes: Infectious Diseases, Mental Health and Climate & Health. It separates all evidence in each theme from publications that report Wellcome Trust funding, ranks the funders reported within each theme, and sets out how each theme was defined.",
       "figs": [
         {
           "file": "fig_wellcome_priorities.svg",

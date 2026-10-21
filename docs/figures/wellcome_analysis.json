@@ -5,20 +5,20 @@
       2026
     ],
     "data_built": "2026-10-14",
-    "master_sha256": "bb61ac626bb49ddec5ca86a5714ed5cfff5dd03f10641279f0428ffeb7718295",
+    "master_sha256": "fb0bc6dfb116080f0df3db5414a35284a9d864b764e3a9c027984b974be275d5",
     "unit": "Unique eligible studies reporting each funder; no grant amounts or causal attribution.",
     "theme_overlap": true,
     "sources_accessed": "2026-10-12",
     "gbd_share": "team GBD 2023 coding, share v2.1 (received 14 October 2026)",
-    "analysis_built": "14 October 2026"
+    "analysis_built": "21 October 2026"
   },
   "global": {
     "n": 41610,
     "named_funder": 11149,
     "wellcome": 174,
     "income_counts": [
-      20491,
-      7406,
+      20236,
+      7661,
       13713
     ],
     "wellcome_income_counts": [
@@ -51,8 +51,8 @@
       "named_funder": 1976,
       "wellcome": 92,
       "income_counts": [
-        2486,
-        1961,
+        2443,
+        2004,
         1886
       ],
       "wellcome_income_counts": [
@@ -182,8 +182,8 @@
           "funder": "National Institute on Drug Abuse",
           "n": 39,
           "income_counts": [
-            19,
-            15,
+            18,
+            16,
             5
           ]
         },
@@ -236,8 +236,8 @@
           "funder": "GlaxoSmithKline Biologicals SA",
           "n": 21,
           "income_counts": [
-            15,
-            5,
+            14,
+            6,
             1
           ]
         },
@@ -11378,8 +11378,8 @@
           "funder": "Priority 2030 Federal Academic Leadership Program",
           "n": 1,
           "income_counts": [
-            1,
             0,
+            1,
             0
           ]
         },
@@ -15056,8 +15056,8 @@
       "named_funder": 678,
       "wellcome": 16,
       "income_counts": [
-        1134,
-        180,
+        1124,
+        190,
         598
       ],
       "wellcome_income_counts": [
@@ -15745,8 +15745,8 @@
           "funder": "National Institute of Drug Abuse",
           "n": 2,
           "income_counts": [
-            1,
-            1,
+            0,
+            2,
             0
           ]
         },
@@ -20661,13 +20661,42 @@
       ]
     }
   },
+  "themes_union": {
+    "all": {
+      "n": 8297,
+      "only": {
+        "infectious": 6287,
+        "mental": 1876,
+        "climate": 84
+      },
+      "multi": 50
+    },
+    "funded": {
+      "n": 2675,
+      "only": {
+        "infectious": 1961,
+        "mental": 668,
+        "climate": 30
+      },
+      "multi": 16
+    },
+    "wellcome": {
+      "n": 112,
+      "only": {
+        "infectious": 92,
+        "mental": 16,
+        "climate": 4
+      },
+      "multi": 0
+    }
+  },
   "mental_focus_title_screen": {
     "n": 867,
     "named_funder": 276,
     "wellcome": 5,
     "income_counts": [
-      517,
-      94,
+      511,
+      100,
       256
     ],
     "wellcome_income_counts": [
@@ -20680,8 +20709,8 @@
   "wellcome_outside_groups": [
     {
       "key": "infectious",
-      "label": "Infectious disease without an infectious-disease code",
-      "note": "Clearly infectious-disease topics (malaria, tuberculosis, HIV, hepatitis, vaccines, antibiotic use) that lack a GBD infectious-disease code, so the code-based Infectious Diseases theme does not count them.",
+      "label": "Infection-related studies coded to a non-infectious GBD cause",
+      "note": "Infection-related topics (hepatitis, HPV and other vaccines, antibiotic use) that GBD codes to a non-infectious cause, as it prescribes (e.g. chronic hepatitis C to liver disease, HPV vaccination to cervical cancer, maternal Group B strep vaccination to maternal and neonatal disorders), or that have no disease code. The code-based Infectious Diseases theme does not count them.",
       "n": 11,
       "studies": [
         {
@@ -21214,8 +21243,8 @@
       "funder": "National Institute on Drug Abuse",
       "n": 94,
       "income_counts": [
-        45,
-        20,
+        44,
+        21,
         29
       ]
     },
@@ -21358,8 +21387,8 @@
       "funder": "National Institute of Diabetes and Digestive and Kidney Diseases",
       "n": 53,
       "income_counts": [
-        37,
-        2,
+        36,
+        3,
         14
       ]
     },
@@ -21736,8 +21765,8 @@
       "funder": "GlaxoSmithKline Biologicals SA",
       "n": 22,
       "income_counts": [
-        15,
-        6,
+        14,
+        7,
         1
       ]
     },
@@ -23599,8 +23628,8 @@
       "funder": "Novartis Pharma AG",
       "n": 7,
       "income_counts": [
-        6,
-        1,
+        7,
+        0,
         0
       ]
     },
@@ -24328,8 +24357,8 @@
       "funder": "Amgen Inc",
       "n": 5,
       "income_counts": [
-        5,
-        0,
+        4,
+        1,
         0
       ]
     },
@@ -32572,8 +32601,8 @@
       "funder": "National Institute of Drug Abuse",
       "n": 2,
       "income_counts": [
-        1,
-        1,
+        0,
+        2,
         0
       ]
     },
@@ -39673,8 +39702,8 @@
       "funder": "Baxter Inc",
       "n": 1,
       "income_counts": [
-        0,
         1,
+        0,
         0
       ]
     },
@@ -43057,8 +43086,8 @@
       "funder": "Center for Brown University Global Health Framework",
       "n": 1,
       "income_counts": [
-        1,
         0,
+        1,
         0
       ]
     },
@@ -49807,8 +49836,8 @@
       "funder": "European Union-Next Generation EU",
       "n": 1,
       "income_counts": [
-        1,
         0,
+        1,
         0
       ]
     },
@@ -63487,8 +63516,8 @@
       "funder": "Ministry of Education, Youth and Science",
       "n": 1,
       "income_counts": [
-        1,
         0,
+        1,
         0
       ]
     },
@@ -64234,8 +64263,8 @@
       "funder": "MSD Pharmaceuticals",
       "n": 1,
       "income_counts": [
-        1,
         0,
+        1,
         0
       ]
     },
@@ -66385,8 +66414,8 @@
       "funder": "National Recovery and Resilience Plan of the Republic of Bulgaria",
       "n": 1,
       "income_counts": [
-        1,
         0,
+        1,
         0
       ]
     },
@@ -72352,8 +72381,8 @@
       "funder": "Priority 2030 Federal Academic Leadership Program",
       "n": 1,
       "income_counts": [
-        1,
         0,
+        1,
         0
       ]
     },
