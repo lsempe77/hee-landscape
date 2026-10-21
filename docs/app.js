@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-21-wellcome-redesign";
+const BUILD = "2026-10-21-daly-filter";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -210,6 +210,7 @@ export function normalizeFilter(filt, db) {
     language: arr(f.language),
     model: one(f.model),
     qaly: one(f.qaly),
+    daly: one(f.daly),
     oa: one(f.oa),
     scope: one(f.scope)
   };
@@ -266,6 +267,7 @@ export function applyFilters(db, filt) {
     if (designCodes && !designCodes.has(st.design_basis[s])) continue;
     if (modelCode !== null && st.model_label[s] !== modelCode) continue;
     if (qalyCode !== null && st.qaly_label[s] !== qalyCode) continue;
+    if (f.daly === "Uses DALY" && st.uses_daly[s] !== 1) continue;
     if (oaCode !== null && st.oa_label[s] !== oaCode) continue;
     if (scopeCode !== null && st.geo_scope[s] !== scopeCode) continue;
     if (disSet && !disSet.has(s)) continue;
@@ -2537,7 +2539,7 @@ if (typeof document !== "undefined") {
     state.filt = {
       years: db.years.slice(),
       income: [], region: [], disease: [], evaltype: [], design: [], funder: [], language: [],
-      model: "All", qaly: "All", oa: "All", scope: "All"
+      model: "All", qaly: "All", daly: "All", oa: "All", scope: "All"
     };
 
     const slider = $("x-years");
@@ -2576,6 +2578,7 @@ if (typeof document !== "undefined") {
 
     makeRadios("x-model", "x_model", ["All", "Model-based", "Measured"]);
     makeRadios("x-qaly", "x_qaly", ["All", "Uses QALY", "No QALY"]);
+    makeRadios("x-daly", "x_daly", ["All", "Uses DALY"]);
     makeRadios("x-oa", "x_oa", ["All", "Open access", "Not open"]);
 
     const scope = $("x-scope");
@@ -2589,7 +2592,7 @@ if (typeof document !== "undefined") {
     $("x-reset").addEventListener("click", () => {
       slider.noUiSlider.set(db.years);
       for (const k of ["income", "region", "disease", "evaltype", "design", "funder", "language"]) state.ts[k].clear();
-      for (const [cont, name] of [["x-model", "model"], ["x-qaly", "qaly"], ["x-oa", "oa"]]) {
+      for (const [cont, name] of [["x-model", "model"], ["x-qaly", "qaly"], ["x-daly", "daly"], ["x-oa", "oa"]]) {
         const first = $(cont).querySelector("input");
         first.checked = true;
         state.filt[name] = "All";
@@ -2687,7 +2690,7 @@ if (typeof document !== "undefined") {
       const label = (col, s) => db.levels[col][st[col][s]] ?? "";
       const yesNo = v => v === 1 ? "Yes" : v === 0 ? "No" : "";
       const header = ["map_id", "year", "title", "countries", "income_groups", "income_groups_at_publication", "disease_groups", "funders", "publication_language",
-        "evaluation_type", "design_basis", "approach", "qaly", "open_access", "geographic_scope",
+        "evaluation_type", "design_basis", "approach", "qaly", "daly_outcome_recorded", "open_access", "geographic_scope",
         "topic_domain", "abstract_reports_icer", "abstract_reports_threshold",
         "record_id", "doi", "url", "url_source", "doi_source", "publication_link"];
       const rows = [header];
@@ -2702,7 +2705,7 @@ if (typeof document !== "undefined") {
           fundersOf.has(s) ? fundersOf.get(s).join("; ") : (db.fundedSet.has(s) ? "Other (fewer than 5 studies)" : ""),
           db.languages ? db.languages.levels[db.languages.code[s]] : "",
           label("econ_eval_type", s), label("design_basis", s), label("model_label", s),
-          label("qaly_label", s), label("oa_label", s), label("geo_scope", s), label("topic_domain", s),
+          label("qaly_label", s), yesNo(st.uses_daly[s]), label("oa_label", s), label("geo_scope", s), label("topic_domain", s),
           yesNo(st.has_icer[s]), yesNo(st.has_threshold[s]),
           st.record_id?.[s] || "", st.doi?.[s] || "", st.url?.[s] || "",
           st.url_source?.[s] || "", st.doi_source?.[s] || "", publicationUrl(st, s) || ""

@@ -48,6 +48,7 @@ These write into `docs/`, which is the published site. Pushing their output chan
 | `build_wellcome_analysis_gbd_v3.py` | Previous version of the page (same data); imported by `build_overview_figure.py` |
 | `build_funder_filter.py` | Data for the Explorer's funder filter |
 | `build_language_filter.py` | Data for the Explorer's language filter |
+| `build_daly_filter.py` | Adds explicit DALY outcome flags by record ID; run after regenerating `docs/data/studies.json` |
 | `build_dotmap_title.py` | Dot-map layout |
 | `build_remaining_figures_reconciled.R` | Remaining static figures from the reconciled CSVs |
 | `build_intervention_map_legend.R` | Intervention map with a readable legend |

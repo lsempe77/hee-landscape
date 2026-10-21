@@ -168,9 +168,17 @@
           <div class="control-label-row">
             <label class="control-label">QALY use</label>
             <span class="filter-help" tabindex="0" role="button" aria-label="About qaly use" aria-describedby="tip-qaly-use">?</span>
-            <span class="filter-tip" role="tooltip" id="tip-qaly-use">A QALY (quality-adjusted life year) is one year of life in full health.</span>
+            <span class="filter-tip" role="tooltip" id="tip-qaly-use">A QALY (quality-adjusted life year) is one year of life in full health. “No QALY” does not establish DALY use, even within cost-utility analyses. Use the DALY filter to find recorded DALY outcomes.</span>
           </div>
           <div class="radio-inline" id="x-qaly"></div>
+        </div>
+        <div class="control-group has-filter-help">
+          <div class="control-label-row">
+            <label class="control-label">DALY use</label>
+            <span class="filter-help" tabindex="0" role="button" aria-label="About DALY use" aria-describedby="tip-daly-use">?</span>
+            <span class="filter-tip" role="tooltip" id="tip-daly-use">A DALY (disability-adjusted life year) measures healthy life lost. “Uses DALY” selects studies with an explicit DALY outcome recorded in the source export, including studies using both QALYs and DALYs. Combine with “No QALY” to exclude studies using both. Missing DALY outcomes do not establish non-use.</span>
+          </div>
+          <div class="radio-inline" id="x-daly"></div>
         </div>
         <div class="control-group">
           <label class="control-label">Open access</label>
@@ -482,7 +490,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-21-wellcome-redesign"></script>
+<script type="module" src="app.js?v=2026-10-21-daly-filter"></script>
 
 </body>
 </html>
