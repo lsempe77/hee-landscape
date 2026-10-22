@@ -32,19 +32,21 @@ These write into `docs/`, which is the published site. Pushing their output chan
 | `build_region_disease_themes_who.py` | Top disease themes by WHO region, all studies |
 | `build_who_regions.py` | WHO region for every country (UN M49 fallback) → `who_regions.csv` |
 | `build_income_pubyear.py` | World Bank income group at each study's publication year → `income_pubyear.csv` |
+| `build_country_income_pubyear.py` | One income group per country for country-level views and figures: the group most of its studies were published under (zero-study countries: most years 2010–2026) → `country_income_pubyear.csv` and `income_pub` in `countries.json`. Run after `build_income_pubyear.py` |
 | `income_pubyear_figure_data.py` | Data behind the income-stratified gallery figures |
-| `build_income_pubyear_figures.py` | Income-stratified gallery figures |
+| `build_income_pubyear_figures.py` | Income-stratified gallery figures (imported by other scripts) |
+| `build_income_pubyear_figures_v2.py` | Redraws `fig_equity_time_pubyear.webp` with the burden line computed (World Bank groups at 1 January 2023) instead of a hardcoded 83% |
 | `build_gbd_figures.py` | Gallery disease figures on GBD 2023 coding |
 | `build_disease_gbd_data.py` | Site's GBD disease groups (`docs/data/disease_gbd.json`) |
 | `build_study_text.py` | Title and abstract of every study for the Explorer's "Download filtered studies" (`docs/data/text/`); rerun when the master or `studies.json` changes |
 | `build_authorship_figures.py` | Five author-location figures |
 | `recolour_authorship_figures.py` | Recolours pre-rendered authorship figures to the site palette |
 | `build_eval_type_figures.py` | Two evaluation-type figures |
-| `build_research_burden_ratio.py` | Country research-to-burden ratio figure |
-| `build_denominator_audit.py` | Country denominators; inequality and reach figures |
-| `build_funder_scorecard.py` | Size-neutral evidence-gap scorecard |
-| `build_funder_scorecard_absolute.py` | Absolute evidence-shortfall scorecard |
-| `build_wellcome_analysis.py` | Global funder figures; also supplies `funders_of` to the funder filter |
+| `build_research_burden_ratio_v2.py` | Country research-to-burden ratio figure (current). Country groups: `income_pub` (most studies' publication-year group). v1 kept, uses July 2026 groups |
+| `build_denominator_audit_v2.py` | Country denominators; deficit, inequality and reach figures (current; `--sync-dir` for the audit JSON). Country groups: `income_pub` (most studies' publication-year group). v1 kept |
+| `build_funder_scorecard_v3.py` | Size-neutral evidence-gap scorecard (current). Country groups: `income_pub` (most studies' publication-year group). v1 kept |
+| `build_funder_scorecard_absolute_v2.py` | Absolute evidence-shortfall scorecard (current). Country groups: `income_pub` (most studies' publication-year group). v1 kept |
+| `build_wellcome_analysis.py` | Supplies `funders_of` to the funder filter. Its own global funder figures use current income: do not rerun them for the site; `fig_funder_funders.svg` is built by `build_wellcome_analysis_gbd_v5.py` on publication-year income |
 | `build_wellcome_analysis_gbd_v5.py` | Wellcome priority-themes view (current): Mental Health covers all mental health, with Wellcome's stated focus (GBD depression, anxiety, schizophrenia, bipolar) as a sourced subset; cards link to how each theme was matched |
 | `build_wellcome_analysis_gbd_v4.py` | Previous version of the redesigned page |
 | `build_wellcome_analysis_gbd_v3.py` | Previous version of the page (same data); imported by `build_overview_figure.py` |
@@ -52,7 +54,7 @@ These write into `docs/`, which is the published site. Pushing their output chan
 | `build_language_filter.py` | Data for the Explorer's language filter |
 | `build_daly_filter.py` | Adds explicit DALY outcome flags by record ID; run after regenerating `docs/data/studies.json` |
 | `build_dotmap_title.py` | Dot-map layout |
-| `build_remaining_figures_reconciled.R` | Remaining static figures from the reconciled CSVs |
+| `build_remaining_figures_reconciled_v2.R` | Remaining static figures from the reconciled CSVs (current): WHO regions for model use; country colours from `income_pub`. v1 kept |
 | `build_intervention_map_legend.R` | Intervention map with a readable legend |
 | `rebuild_reporting_figure.R` | Abstract-reporting heatmap only |
 | `create_intervention_mix_v2.py` | Small-multiples intervention mix figure |

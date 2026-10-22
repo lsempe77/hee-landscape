@@ -96,7 +96,12 @@ in force on 1 January of each study's publication year. Missing country-year cla
 were excluded from these comparisons, except for recorded 2026 exceptions: Ethiopia used its
 FY2025 low-income classification and Venezuela its last available FY2021 upper-middle-income
 classification. Taiwan was coded as high income in every year by recorded override.
-Country-level maps and cross-sectional summaries used the July 2026 classification. Populations
+Country-level maps and cross-sectional summaries, which pool all years, assigned each country
+the World Bank group most of its studies were published under (each study classified as above);
+countries with no study took the group they held in most years from 2010 to 2026. Countries were
+grouped into the six WHO regions using WHO's own country list (Global Health Observatory), which
+places Indonesia in the Western Pacific Region from May 2025; places WHO assigns no region
+(Taiwan, Hong Kong, Kosovo) took the WHO region of the other countries in their UN M49 sub-region. Populations
 were retrieved from the World Bank API (latest access: 1 September 2026). Studies naming more than 15 countries
 were classed as multi-country. Disease areas were coded to Global
 Burden of Disease (GBD) 2023 causes from each study's title and abstract by a language model

@@ -8,6 +8,15 @@ Static site for the health economic evaluation (HEE) evidence map, published at
 
 Newest first; add a line here when you push something colleagues should know about.
 
+- **22 Oct 2026: Income and region groupings made consistent.** Country-level views and figures (one dot or bar
+  per country, all years pooled) now give each country the World Bank group most of its studies were published
+  under, matching the publication-year rule used for studies (zero-study countries: the group held in most years
+  2010–2026). Built by `scripts/build_country_income_pubyear.py` (`income_pub` in `countries.json`). "Model use
+  across regions" now uses WHO regions. Figure captions corrected; the equity-trend burden line is now computed
+  (85%, World Bank groups at the 2023 burden year) instead of a hardcoded 83%. New versioned scripts:
+  `build_remaining_figures_reconciled_v2.R`, `build_funder_scorecard_v3.py`, `build_funder_scorecard_absolute_v2.py`,
+  `build_research_burden_ratio_v2.py`, `build_denominator_audit_v2.py`, `build_income_pubyear_figures_v2.py`.
+
 - **22 Oct 2026: Explorer download now has every title, plus abstracts.** "Download filtered studies" used
   to leave titles blank for the ~11,000 studies naming no country (titles came from the per-country files).
   It now reads the title and abstract of all 41,610 studies from `docs/data/text/` and adds an `abstract`

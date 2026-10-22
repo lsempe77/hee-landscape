@@ -44,7 +44,7 @@
         {
           "file": "fig_intervention_map.webp",
           "title": "What kinds of healthcare does the research cover?",
-          "caption": "Base: 41,583 eligible records with frozen topic coordinates; 27 included records have no coordinates. Grey points are HDBSCAN noise or missing intervention labels. LMIC shares are computed among 27,897 single-country records with known publication-year income, by primary intervention class. Coordinates were filtered, not refitted. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "caption": "Base: 41,583 eligible records with frozen topic coordinates; 27 included records have no coordinates. Grey points are HDBSCAN noise or missing intervention labels. LMIC shares are computed among 27,897 single-country records with known publication-year income, by primary intervention class. Coordinates were filtered, not refitted. Income: World Bank group in force on 1 January of each study's publication year.",
           "summary": "What kinds of healthcare does the research cover?"
         },
         {
@@ -95,7 +95,7 @@
         {
           "file": "fig_dotmap.svg",
           "title": "Where economic evaluation studies are conducted",
-          "caption": "Each bubble represents a country; area is the number of unique included records naming it. Colour uses July 2026 income, grey where unavailable. Locations are study settings, not author affiliations. 31,740 study-country pairs across 187 named countries; locations without a matched map polygon have no bubble. Robinson projection.",
+          "caption": "Each bubble represents a country; area is the number of unique included records naming it. Colour: the World Bank income group most of the country’s studies were published under (each study classified in force on 1 January of its publication year); grey where unavailable. Locations are study settings, not author affiliations. 31,740 study-country pairs across 187 named countries; locations without a matched map polygon have no bubble. Robinson projection.",
           "summary": "Where economic evaluation studies are conducted"
         },
         {
@@ -107,7 +107,7 @@
         {
           "file": "paper03.webp",
           "title": "Research availability relative to population",
-          "caption": "Base: 153 countries with at least one study, population and income classification from the 155 country website list. Zero-study countries are omitted from the log axis. Dashed lines are within-group medians. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "caption": "Base: 153 countries with at least one study, population and income classification from the 155 country website list. Zero-study countries are omitted from the log axis. Dashed lines are within-group medians. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Country colours/groups: the World Bank income group most of the country's studies were published under (each study classified in force on 1 January of its publication year).",
           "summary": "Research availability relative to population"
         },
         {
@@ -139,12 +139,12 @@
         {
           "file": "fig_research_burden_ratio.svg",
           "title": "Lower-income countries have less economic evidence relative to their disease burden",
-          "caption": "Base: 154 countries with positive burden data; 31,437 study-country counts. 1 country excluded because burden is unavailable. Eritrea and Mauritius have no identified studies. Studies published 2010–2026 (final year partial); GBD 2023 all-cause DALYs. A study naming multiple countries counts once for each country. Ratios compare shares, so countries well above proportional push others below it. Proportional is a reference point, not a measure of adequacy. Horizontal position within a group is random jitter. Full country values: research_burden_ratios.csv."
+          "caption": "Base: 154 countries with positive burden data; 31,437 study-country counts. 1 country excluded because burden is unavailable. Eritrea and Mauritius have no identified studies. Studies published 2010–2026 (final year partial); GBD 2023 all-cause DALYs. A study naming multiple countries counts once for each country. Ratios compare shares, so countries well above proportional push others below it. Proportional is a reference point, not a measure of adequacy. Income group: the World Bank group most of the country's studies were published under, each classified on 1 January of its publication year (no studies: the group held in most years). Horizontal position within a group is random jitter. Full country values: research_burden_ratios.csv."
         },
         {
           "file": "paper07.webp",
           "title": "Research intensity relative to disease burden",
-          "caption": "Base: 152 countries with studies and non-missing GBD 2023 all-cause DALYs and income classification. Countries with zero studies are omitted from the log scale. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "caption": "Base: 152 countries with studies and non-missing GBD 2023 all-cause DALYs and income classification. Countries with zero studies are omitted from the log scale. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Country colours/groups: the World Bank income group most of the country's studies were published under (each study classified in force on 1 January of its publication year).",
           "summary": "Research intensity relative to disease burden"
         },
         {
@@ -160,18 +160,18 @@
         {
           "file": "fig_deficit.webp",
           "title": "(Un)equal weight: how research output compares with disease burden — largest gaps",
-          "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,592 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,437 pairs). Country colours use July 2026 income groups. Studies published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point."
+          "caption": "Base: all 204 national GBD 2023 locations, including zero-study locations; 31,592 unique study–country pairs. Expected studies = this pair total × the country's share of DALYs across the same 204 locations. Hong Kong, Cayman Islands, French Guiana and Guadeloupe have no row in the national GBD export and their pairs are excluded. Bars show the 16 largest deficits and 8 largest surpluses. This larger country set differs from the 154-country website burden analysis (31,437 pairs). Studies published 2010–2026, final year partial; GBD 2023 all-cause DALYs. Proportionality is a reference point. Country income group: the World Bank group most of the country's studies were published under, each classified on 1 January of its publication year (no studies: the group held in most years 2010–2026)."
         },
         {
           "file": "fig_injustice.webp",
           "title": "How research attention compares with disease burden",
-          "caption": "Base: 152 countries plotted; 154 countries contribute to the burden-proportional reference, including zero-study countries. 31,437 study-country pairs. Dashed line: the pair total multiplied by the burden share of each country. Proportionality is a reference point, not an adequacy target. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+          "caption": "Base: 152 countries plotted; 154 countries contribute to the burden-proportional reference, including zero-study countries. 31,437 study-country pairs. Dashed line: the pair total multiplied by the burden share of each country. Proportionality is a reference point, not an adequacy target. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country. Country colours/groups: the World Bank income group most of the country's studies were published under (each study classified in force on 1 January of its publication year).",
           "summary": "How research attention compares with disease burden"
         },
         {
           "file": "fig_inequality.webp",
           "title": "Inequity: small disease burden, few economic evaluations",
-          "caption": "Base: 106 LMIC countries with GBD 2023 all-cause DALYs; 8,725 study–country pairs; 2 countries have no study. Countries ordered by studies per DALY. The first 41 countries crossing 50% of burden carry 53.9% of burden and 1,454 pairs (16.7%); the marker is at these actual coordinates. The five countries with the greatest burden (India, China, Nigeria, Indonesia, Pakistan) instead carry 51.7% of burden and 48.1% of evidence. Gini = 0.49. Country grouping uses July 2026 income classifications; studies span 2010–2026, final year partial. Each multi-country study counts once per country."
+          "caption": "Base: 111 LMIC countries with GBD 2023 all-cause DALYs; 9,056 study–country pairs; 2 countries have no study. Countries ordered by studies per DALY. The first 41 countries crossing 50% of burden carry 52.3% of burden and 1,454 pairs (16.1%); the marker is at these actual coordinates. The five countries with the greatest burden (India, China, Nigeria, Indonesia, Pakistan) instead carry 50.2% of burden and 46.3% of evidence. Gini = 0.49. Studies span 2010–2026, final year partial. Each multi-country study counts once per country. Country income group: the World Bank group most of the country's studies were published under, each classified on 1 January of its publication year (no studies: the group held in most years 2010–2026)."
         }
       ]
     },
@@ -182,7 +182,7 @@
         {
           "file": "fig_openaccess.webp",
           "title": "How access to economic evidence has changed",
-          "caption": "Base: 22,954 single-country included records, 2010-2025, with known publication-year income and known open-access status. All three lines use this same base; 2026 is excluded as partial. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "caption": "Base: 22,954 single-country included records, 2010-2025, with known publication-year income and known open-access status. All three lines use this same base; 2026 is excluded as partial. Income: World Bank group in force on 1 January of each study's publication year.",
           "summary": "How access to economic evidence has changed"
         },
         {
@@ -234,8 +234,8 @@
         },
         {
           "file": "fig_map_model.webp",
-          "title": "Model use across study regions",
-          "caption": "Base: 30,602 unique study-country pairs with known model status. Regions with at least 100 pairs are shown. Dashed reference: 64 %, calculated across all pairs, so this differs from the study-level Overview share. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
+          "title": "Model use across WHO regions",
+          "caption": "Base: 30,602 unique study-country pairs with known model status. Countries are grouped by WHO region (UN M49 fallback where WHO assigns none); regions with at least 100 pairs are shown. Dashed reference: 64 %, calculated across all pairs, so this differs from the study-level Overview share. Eligible records published 2010-2026; 2026 is partial. Country counts use unique study-country pairs, so multi-country studies count once for each named country.",
           "summary": "Model use across study regions"
         }
       ]
@@ -247,7 +247,7 @@
         {
           "file": "fig_equity_time.webp",
           "title": "LMICs are grabbing a growing share of the research market",
-          "caption": "Share of each year's single-country studies about low- and middle-income countries (LMICs): 17% in 2010 → 35% in 2025, against the 83% of global disease burden (GBD 2023 all-cause DALYs) those countries carry (dashed line). Studies naming a single country with a known income group (26,093); 2026 is partial and left out. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year (World Bank historical classifications). For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
+          "caption": "Share of each year's single-country studies about low- and middle-income countries (LMICs): 17% in 2010 → 35% in 2025, against the 85% of global disease burden (GBD 2023 all-cause DALYs, 204 national locations) those countries carry (dashed line; countries grouped by the World Bank group on 1 January 2023, the burden year). Studies naming a single country with a known income group (26,093); 2026 is partial and left out. Income group: the World Bank group of the country studied, as classified on 1 January of the publication year (World Bank historical classifications). For 2026 publications only, missing FY2026 classifications use FY2025 low income for Ethiopia and FY2021 upper-middle income for Venezuela (FY2025 also unavailable); these are analysis exceptions."
         },
         {
           "file": "fig_reach_time.webp",
@@ -278,17 +278,17 @@
         {
           "file": "fig_funder_scorecard_v2.svg",
           "title": "Where research coverage is low relative to disease burden",
-          "caption": "Share of studies examining each country, divided by that country's share of global disease burden (GBD 2023 all-cause DALYs), so country size does not drive the ranking. Base: 154 countries with GBD 2023 burden data; 152 with at least one identified study are plotted and ranked. Eritrea and Mauritius have no identified studies. 31,437 study-country counts: a study naming several countries counts once for each. Ratios resting on few studies are less stable; study counts are shown on each bar. Proportional is a reference point, not a measure of adequacy. Full country values: fig_funder_scorecard_v2.csv."
+          "caption": "Share of studies examining each country, divided by that country's share of global disease burden (GBD 2023 all-cause DALYs), so country size does not drive the ranking. Base: 154 countries with GBD 2023 burden data; 152 with at least one identified study are plotted and ranked. Eritrea and Mauritius have no identified studies. 31,437 study-country counts: a study naming several countries counts once for each. Ratios resting on few studies are less stable; study counts are shown on each bar. Colours: the World Bank income group most of the country's studies were published under, each classified on 1 January of its publication year (no studies: the group held in most years 2010–2026). Proportional is a reference point, not a measure of adequacy. Full country values: fig_funder_scorecard_v2.csv."
         },
         {
           "file": "fig_funder_scorecard_absolute.svg",
           "title": "Where the gap between studies and disease burden is largest in absolute terms",
-          "caption": "Left: studies per 100,000 DALYs for each country; below the dashed line, a country has fewer studies than its share of disease burden. Bubble area is population. Right: the 15 countries furthest below a burden-proportional number of studies. Burden-proportional number = 31,437 study-country counts × the country's share of DALYs across 154 countries with GBD 2023 all-cause DALYs; a study examining several countries counts for each. All 154 are ranked; the 152 with at least one identified study are plotted (Eritrea and Mauritius have none). Hong Kong has no separate GBD estimate and is excluded. Populous countries have the largest absolute gaps; the companion figure shows the same comparison as a ratio, so country size does not drive the ranking. The burden-proportional number is a reference point, not a target. Colours: July 2026 World Bank income groups. Full country values: fig_funder_scorecard_absolute.csv."
+          "caption": "Left: studies per 100,000 DALYs for each country; below the dashed line, a country has fewer studies than its share of disease burden. Bubble area is population. Right: the 15 countries furthest below a burden-proportional number of studies. Burden-proportional number = 31,437 study-country counts × the country's share of DALYs across 154 countries with GBD 2023 all-cause DALYs; a study examining several countries counts for each. All 154 are ranked; the 152 with at least one identified study are plotted (Eritrea and Mauritius have none). Hong Kong has no separate GBD estimate and is excluded. Populous countries have the largest absolute gaps; the companion figure shows the same comparison as a ratio, so country size does not drive the ranking. The burden-proportional number is a reference point, not a target. Colours: the World Bank income group most of the country's studies were published under, each classified on 1 January of its publication year (no studies: the group held in most years 2010–2026). Full country values: fig_funder_scorecard_absolute.csv."
         },
         {
           "file": "fig_funder_capacity.webp",
           "title": "Local authorship and potential research-capacity gaps",
-          "caption": "Base: 105 countries with at least five single-country studies with known author locations, publication-year income, and a GBD 2023 burden value. Local authorship means an affiliation in the country studied; it is a proxy, not a full measure of capacity. Point area is the number of studies with known author locations. Study-level income groups use the World Bank classification in force on 1 January of publication year. Country-level colours use July 2026 groups.",
+          "caption": "Base: 105 countries with at least five single-country studies with known author locations, publication-year income, and a GBD 2023 burden value. Local authorship means an affiliation in the country studied; it is a proxy, not a full measure of capacity. Point area is the number of studies with known author locations. Income: World Bank group in force on 1 January of each study's publication year. Country colours/groups: the World Bank income group most of the country's studies were published under (each study classified in force on 1 January of its publication year).",
           "summary": "Local authorship and potential research-capacity gaps"
         },
         {

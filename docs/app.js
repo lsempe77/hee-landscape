@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-22-study-text";
+const BUILD = "2026-10-22-income-pubyear-countries";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -146,6 +146,14 @@ export function loadData({ dict, studies, geo, disease, countries, content, fund
   for (const col of CODED_COLS) {
     codeOf[col] = new Map(levels[col].map((lab, i) => [lab, i]));
   }
+  // Country views (map colours, scatter, table, profile peers) need one group per
+  // country: the World Bank group most of its studies were published under
+  // (scripts/build_country_income_pubyear.py). income_current keeps July 2026.
+  for (const r of countries) {
+    if ("income_current" in r) continue;
+    r.income_current = r.income;
+    if (r.income_pub !== undefined) r.income = r.income_pub;
+  }
   // Optional: review_label (scripts/apply_review_eval_type.py) feeds the review
   // choices in the Explorer's evaluation-type filter.
   if (levels.review_label && studies.review_label) {
@@ -178,7 +186,7 @@ export function loadData({ dict, studies, geo, disease, countries, content, fund
     incOrder: dict.meta.inc_lv.slice().reverse(),
     incomeOf: countries.map(r => r.income),
     // Income group in force on 1 January of a publication year (World Bank
-    // FY of that year); incomeOf is the current group, for country views.
+    // FY of that year); incomeOf is the country-level group, for country views.
     incomeAt: (c, y) => {
       const v = countries[c].income_y;
       return v ? (v[y - dict.meta.years[0]] ?? null) : countries[c].income;
@@ -743,7 +751,7 @@ export function countryFacts(db, iso3) {
   if (!r) return [];
   const pop = num(r.pop), dalys = num(r.dalys), spend = num(r.total_spend_bn);
   const pairs = [
-    ["Income group (July 2026)", r.income],
+    ["Income group (most studies published under)", r.income],
     ["WHO region", r.who_region == null ? "—" : r.who_region]
   ];
   if (pop != null) pairs.push(["Population", fmtNum(rRound(pop / 1e6)) + " M"]);
@@ -2748,7 +2756,7 @@ if (typeof document !== "undefined") {
         const s = g.s[i];
         if (!mask[s]) continue;
         if (!countriesOf.has(s)) countriesOf.set(s, []);
-        countriesOf.get(s).push(Object.assign({ income_pub: db.incomeAt(g.c[i], g.y[i]) }, db.countries[g.c[i]]));
+        countriesOf.get(s).push(Object.assign({}, db.countries[g.c[i]], { income_study: db.incomeAt(g.c[i], g.y[i]) }));
       }
       const fundersOf = new Map();
       for (let i = 0; i < db.funders.s.length; i++) {
@@ -2771,7 +2779,7 @@ if (typeof document !== "undefined") {
       const st = db.studies;
       const label = (col, s) => db.levels[col][st[col][s]] ?? "";
       const yesNo = v => v === 1 ? "Yes" : v === 0 ? "No" : "";
-      const header = ["map_id", "year", "title", "countries", "income_groups", "income_groups_at_publication", "disease_groups", "funders", "publication_language",
+      const header = ["map_id", "year", "title", "countries", "income_groups_current", "income_groups_at_publication", "disease_groups", "funders", "publication_language",
         "evaluation_type", "design_basis", "approach", "qaly", "daly_outcome_recorded", "open_access", "geographic_scope",
         "topic_domain", "abstract_reports_icer", "abstract_reports_threshold",
         "record_id", "doi", "url", "url_source", "doi_source", "publication_link", "abstract"];
@@ -2781,8 +2789,8 @@ if (typeof document !== "undefined") {
         rows.push([
           st.id[s], st.year[s], text.title(s),
           cs.map(c => c.country).join("; "),
-          [...new Set(cs.map(c => c.income))].join("; "),
-          [...new Set(cs.map(c => c.income_pub ?? "Not classified"))].join("; "),
+          [...new Set(cs.map(c => c.income_current))].join("; "),
+          [...new Set(cs.map(c => c.income_study ?? "Not classified"))].join("; "),
           (diseasesOf.get(s) || []).join("; "),
           fundersOf.has(s) ? fundersOf.get(s).join("; ") : (db.fundedSet.has(s) ? "Other (fewer than 5 studies)" : ""),
           db.languages ? db.languages.levels[db.languages.code[s]] : "",
