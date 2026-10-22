@@ -8,6 +8,13 @@ Static site for the health economic evaluation (HEE) evidence map, published at
 
 Newest first; add a line here when you push something colleagues should know about.
 
+- **22 Oct 2026: Explorer download now has every title, plus abstracts.** "Download filtered studies" used
+  to leave titles blank for the ~11,000 studies naming no country (titles came from the per-country files).
+  It now reads the title and abstract of all 41,610 studies from `docs/data/text/` and adds an `abstract`
+  column. Code: `scripts/build_study_text.py` (rerun when the master or `studies.json` changes).
+- **22 Oct 2026: HALY type filter.** Bubbles are No HALY, Any HALY, QALY only, DALY only, and Both QALY
+  and DALY; "only" now excludes studies reporting the other measure.
+
 - **21 Oct 2026: Wellcome page, version 5.** Opens with "The three themes at a glance" (publications matching
   the themes → funder identified → Wellcome-funded, with each step's split by theme), then all 174
   Wellcome-funded publications (112 in the themes, 62 outside). Mental Health covers all mental health, with

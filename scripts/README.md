@@ -36,6 +36,7 @@ These write into `docs/`, which is the published site. Pushing their output chan
 | `build_income_pubyear_figures.py` | Income-stratified gallery figures |
 | `build_gbd_figures.py` | Gallery disease figures on GBD 2023 coding |
 | `build_disease_gbd_data.py` | Site's GBD disease groups (`docs/data/disease_gbd.json`) |
+| `build_study_text.py` | Title and abstract of every study for the Explorer's "Download filtered studies" (`docs/data/text/`); rerun when the master or `studies.json` changes |
 | `build_authorship_figures.py` | Five author-location figures |
 | `recolour_authorship_figures.py` | Recolours pre-rendered authorship figures to the site palette |
 | `build_eval_type_figures.py` | Two evaluation-type figures |

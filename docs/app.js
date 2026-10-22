@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-22-any-haly-filter";
+const BUILD = "2026-10-22-study-text";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -2708,10 +2708,29 @@ if (typeof document !== "undefined") {
     renderTable();
   }
 
+  // Titles and abstracts of every study, in fixed-size chunks by study index
+  // (scripts/build_study_text.py); only the chunks the given studies need are fetched.
+  async function loadStudyText(studies) {
+    const r = await fetch("data/text/index.json?v=" + BUILD);
+    if (!r.ok) throw new Error("Study text index unavailable");
+    const index = await r.json();
+    const need = [...new Set(studies.map(s => Math.floor(s / index.chunk)))];
+    const chunks = new Map();
+    await Promise.all(need.map(async k => {
+      const res = await fetch("data/text/" + index.files[k] + "?v=" + BUILD);
+      if (!res.ok) throw new Error("Study text chunk unavailable");
+      chunks.set(k, await res.json());
+    }));
+    const get = (key, s) => {
+      const c = chunks.get(Math.floor(s / index.chunk));
+      return (c && c[key][s - c.start]) || "";
+    };
+    return { title: s => get("t", s), abstract: s => get("a", s) };
+  }
+
   // Explorer "Download filtered studies (CSV)": one row per study in view,
   // with its coded fields, every country and disease group it names, and its
-  // title. Titles live in the per-country text shards, so only studies naming
-  // a country have one; the shards needed are fetched on demand.
+  // title and abstract (loaded on demand by loadStudyText).
   async function downloadFilteredStudies() {
     const button = $("x-download");
     const status = $("x-download-status");
@@ -2746,14 +2765,8 @@ if (typeof document !== "undefined") {
         if (!diseasesOf.has(s)) diseasesOf.set(s, []);
         diseasesOf.get(s).push(db.disease_grps[d.g[i]]);
       }
-      const isos = new Set(studies.map(firstIsoOf).filter(Boolean));
-      status.textContent = "Loading study titles from " + fmtNum(isos.size) + " country files…";
-      const shards = await Promise.all([...isos].map(loadDrill));
-      const titleOf = new Map();
-      for (const p of shards) {
-        if (!p) continue;
-        p.s.forEach((s, i) => { if (mask[s] && !titleOf.has(s)) titleOf.set(s, p.t[i]); });
-      }
+      status.textContent = "Loading study titles and abstracts…";
+      const text = await loadStudyText(studies);
 
       const st = db.studies;
       const label = (col, s) => db.levels[col][st[col][s]] ?? "";
@@ -2761,12 +2774,12 @@ if (typeof document !== "undefined") {
       const header = ["map_id", "year", "title", "countries", "income_groups", "income_groups_at_publication", "disease_groups", "funders", "publication_language",
         "evaluation_type", "design_basis", "approach", "qaly", "daly_outcome_recorded", "open_access", "geographic_scope",
         "topic_domain", "abstract_reports_icer", "abstract_reports_threshold",
-        "record_id", "doi", "url", "url_source", "doi_source", "publication_link"];
+        "record_id", "doi", "url", "url_source", "doi_source", "publication_link", "abstract"];
       const rows = [header];
       for (const s of studies) {
         const cs = countriesOf.get(s) || [];
         rows.push([
-          st.id[s], st.year[s], titleOf.get(s) || "",
+          st.id[s], st.year[s], text.title(s),
           cs.map(c => c.country).join("; "),
           [...new Set(cs.map(c => c.income))].join("; "),
           [...new Set(cs.map(c => c.income_pub ?? "Not classified"))].join("; "),
@@ -2777,7 +2790,8 @@ if (typeof document !== "undefined") {
           label("qaly_label", s), yesNo(st.uses_daly[s]), label("oa_label", s), label("geo_scope", s), label("topic_domain", s),
           yesNo(st.has_icer[s]), yesNo(st.has_threshold[s]),
           st.record_id?.[s] || "", st.doi?.[s] || "", st.url?.[s] || "",
-          st.url_source?.[s] || "", st.doi_source?.[s] || "", publicationUrl(st, s) || ""
+          st.url_source?.[s] || "", st.doi_source?.[s] || "", publicationUrl(st, s) || "",
+          text.abstract(s)
         ]);
       }
       const cell = v => {
@@ -2793,8 +2807,7 @@ if (typeof document !== "undefined") {
       a.click();
       a.remove();
       setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-      status.textContent = "Downloaded " + fmtNum(studies.length) + " studies. Titles are included for the " +
-        fmtNum(titleOf.size) + " that name a country.";
+      status.textContent = "Downloaded " + fmtNum(studies.length) + " studies with titles and abstracts.";
     } catch (e) {
       status.textContent = "Download failed; please try again.";
     } finally {
