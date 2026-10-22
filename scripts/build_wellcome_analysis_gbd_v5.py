@@ -115,13 +115,30 @@ def parent_funder(name):
 MENTAL_FOCUS = re.compile(r"\banxiet\w*|\bdepress\w*|\bpsychos\w*|\bpsychoti\w*|\bschizophren\w*", re.I)
 # Indicative title-keyword groups for Wellcome-funded studies outside all three themes.
 # First match wins; unmatched studies fall into the final catch-all group.
+# Why infection-related research such as HPV vaccination is outside the GBD-based Infectious Diseases theme.
+GBD_RULE_TITLE = "How HPV vaccine and hepatitis C studies are classified"
+GBD_RULE = ("GBD counts each illness once, under the disease people suffer or die from rather than under its cause, so totals never double-count. "
+            "HPV, for example, is counted under cervical cancer, just as smoking-related lung cancer is counted as lung cancer. "
+            "The map follows the same rule: each study is coded to the condition its intervention aims to prevent or treat. "
+            "So HPV vaccine studies are coded to cervical cancer (Neoplasms), hepatitis C treatment to cirrhosis and other chronic liver diseases, "
+            "and maternal Group B strep vaccination to neonatal disorders. These classifications follow GBD's rules. Because this theme is defined by "
+            "GBD infectious causes, and these conditions are not among them, such studies are reported separately rather than counted in the theme. "
+            "The same rule applies to every publication in the map, whoever funds it; "
+            "no publication was moved in or out of the theme by hand.")
 OUTSIDE_GROUPS = [
-    ("infectious", "Infection-related, but GBD classifies under another cause",
+    ("infectious", "Vaccines, hepatitis C and antibiotic use",
      re.compile(r"malaria|tubercul|\bhiv\b|antiretroviral|hepatitis|cryptococc|talaromyc|shigella|strep|sars-cov|coronavirus|covid|dengue|wolbachia|\bhpv\b|sepsis|febrile|antibiotic|cephalosporin|infection", re.I),
-     "Infection-related topics that GBD 2023 assigns to the condition they lead to or prevent, as its burden-based rules prescribe (e.g. chronic hepatitis C to liver disease, HPV vaccination to cervical cancer, maternal Group B strep vaccination to maternal and neonatal disorders), or that target no single disease (e.g. antimicrobial stewardship). This follows GBD's classification; it is not a coding error. The code-based Infectious Diseases theme does not count them."),
-    ("mental", "Alcohol, drugs and mental health without a mental-health code",
+     "Following GBD 2023 rules, each study is classified under the condition its intervention prevents or treats, shown beside each title: "
+     "HPV vaccination to cervical cancer (Neoplasms); hepatitis C treatment to cirrhosis and other chronic liver diseases (Digestive diseases), "
+     "where GBD counts the lasting harm of chronic hepatitis C; maternal Group B strep vaccination to neonatal disorders, the newborn illness it prevents; "
+     "antibiotic prophylaxis in miscarriage surgery to maternal disorders; and an antibiotic stewardship programme to no single disease. "
+     "These conditions are not GBD infectious causes, so the studies are reported here rather than in the Infectious Diseases theme."),
+    ("mental", "Alcohol policy and wellbeing programmes",
      re.compile(r"alcohol|\bdrug\b|mindfulness|mental health", re.I),
-     "Alcohol and drug use or mental-health outcomes without a GBD mental or substance-use code."),
+     "These studies address alcohol policy, such as minimum pricing and taxation, or include mental health among the outcomes of a wider programme. "
+     "Under the map's coding rules, each study is classified under the condition its intervention mainly targets; alcohol policies act on a risk factor "
+     "(alcohol use) that affects many conditions, so they are recorded under that risk factor. These are not GBD mental or substance-use causes, "
+     "so the studies are reported here rather than in the Mental Health theme."),
     ("food", "Food systems and diet",
      re.compile(r"food|diet|meals?\b|salt|palm oil|meat|tariff|undernutrition", re.I), None),
     ("cardiometabolic", "Cardiometabolic disease and obesity",
@@ -204,6 +221,7 @@ def load_climate_review(path):
 
 GBD_LONG = Path("hee_share_v2_1") / "gbd_disease_long.csv"
 GBD_BY_RECORD = Path("hee_share_v2_1") / "gbd_by_record.csv"  # level-3 causes, for the Mental Health focus
+GBD_HIERARCHY = Path("hee_share_v2_1") / "gbd2023_cause_hierarchy_l3_l2_l1.csv"  # level 3 -> level 2, for theme breakdowns
 GBD_INFECTIOUS = {"HIV/AIDS and sexually transmitted infections", "Respiratory infections and tuberculosis", "Enteric infections", "Neglected tropical diseases and malaria", "Other infectious diseases", "Infections, disease not stated"}
 GBD_MENTAL = {"Mental disorders", "Substance use disorders"}
 # How each theme's publications were matched, shown beside each theme and in the technical details.
@@ -233,9 +251,22 @@ CLIMATE_NO_GBD = ("The GBD cause list classifies diseases and injuries; it has n
 GBD_SHARE_RECEIVED = "14 October 2026"
 
 
+def gbd_label(r, status, risk):
+    """Plain label for a publication's GBD code, shown beside each study outside the themes."""
+    if r["gbd_l3"]:
+        return "; ".join(sorted(r["gbd_l3"]))
+    if r["gbd"]:
+        return "; ".join(sorted(r["gbd"]))
+    if status == "risk_factor_only" and risk:
+        return f"risk factor: {risk.replace(';', ',')}"
+    if status == "no_specific_disease":
+        return "not specific to one disease"
+    return "not linked to a specific disease"
+
+
 def load_inputs(raw):
     master_path = raw / "hee_analysis_master_v2_1.csv"
-    required = [master_path, raw / GBD_LONG, raw / GBD_BY_RECORD, DATA / "dict.json", DATA / "content.json"]
+    required = [master_path, raw / GBD_LONG, raw / GBD_BY_RECORD, raw / GBD_HIERARCHY, DATA / "dict.json", DATA / "content.json"]
     missing = [str(p) for p in required if not p.is_file() or p.stat().st_size == 0]
     if missing:
         raise ValueError("Missing or empty inputs: " + ", ".join(missing))
@@ -254,10 +285,13 @@ def load_inputs(raw):
     with (raw / GBD_LONG).open(encoding="utf-8", newline="") as handle:
         for g in csv.DictReader(handle):
             gbd[g["record_id"]].add(g["grp"])
-    gbd_l3 = defaultdict(set)
+    gbd_l3, gbd_status, gbd_risk = defaultdict(set), {}, {}
+    with (raw / GBD_HIERARCHY).open(encoding="utf-8", newline="") as handle:
+        l3_to_l2 = {h["l3_name"]: h["l2_name"] for h in csv.DictReader(handle)}
     with (raw / GBD_BY_RECORD).open(encoding="utf-8", newline="") as handle:
         for g in csv.DictReader(handle):
             gbd_l3[g["record_id"]].update(c.strip() for c in g["gbd_l3"].split(";") if c.strip())
+            gbd_status[g["record_id"]], gbd_risk[g["record_id"]] = g["gbd_status"], g["gbd_risk_l3"]
     climate, reviewed = load_climate_review(CLIMATE_REVIEW)
     unknown = set(climate) - {r["record_id"] for r in rows}
     if unknown:
@@ -276,6 +310,9 @@ def load_inputs(raw):
         r["gbd"] = gbd.get(r["record_id"], set())
         r["gbd_l3"] = gbd_l3.get(r["record_id"], set())
         r["mental_broad"] = bool(r["gbd"] & GBD_MENTAL)
+        r["mental_conditions"] = ({c for c in r["gbd_l3"] if l3_to_l2.get(c) in GBD_MENTAL}
+                                  or {f"{g} (condition not specified)" for g in r["gbd"] & GBD_MENTAL})
+        r["gbd_label"] = gbd_label(r, gbd_status.get(r["record_id"], ""), gbd_risk.get(r["record_id"], ""))
         r["climate_subarea"] = climate.get(r["record_id"])
         r["themes"] = {k for k, match in [("infectious", bool(r["gbd"] & GBD_INFECTIOUS)),
                                            ("mental", r["mental_broad"]),
@@ -323,6 +360,21 @@ def build_analysis(rows, meta, source_hash):
     focus_rows = [r for r in rows if r["gbd_l3"] & set(MENTAL_GROUPS)]
     themes["mental"]["focus"] = {"n": len(focus_rows), "wellcome": sum(r["wellcome"] for r in focus_rows),
                                  "named_funder": sum(bool(r["named_funders"]) for r in focus_rows)}
+    def subgroups(subset, groups_of, focus=()):
+        """Publications per group (a publication can be in several), with the Wellcome-funded ones listed."""
+        members = defaultdict(list)
+        for r in subset:
+            for g in groups_of(r):
+                members[g].append(r)
+        return [{"label": g, "n": len(rs), "wellcome": sum(r["wellcome"] for r in rs), "focus": g in focus,
+                 "studies": [{"title": r["title"], "year": r["year"], "url": r["url"]}
+                             for r in sorted((r for r in rs if r["wellcome"]), key=lambda r: (r["year"], r["title"]))]}
+                for g, rs in sorted(members.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
+
+    inf_rows = [r for r in rows if "infectious" in r["themes"]]
+    themes["infectious"]["subgroups"] = subgroups(inf_rows, lambda r: r["gbd"] & GBD_INFECTIOUS)
+    mh_rows = [r for r in rows if "mental" in r["themes"]]
+    themes["mental"]["subgroups"] = subgroups(mh_rows, lambda r: r["mental_conditions"], set(MENTAL_GROUPS))
     climate = [r for r in rows if "climate" in r["themes"]]
     themes["climate"]["reviewed"] = meta.get("climate_reviewed", 0)
     themes["climate"]["subareas"] = [
@@ -353,7 +405,7 @@ def build_analysis(rows, meta, source_hash):
         note = rest[-1]
         studies = sorted(groups[key], key=lambda r: (r["year"], r["title"]))
         outside_groups.append({"key": key, "label": label, "note": note, "n": len(studies),
-                               "studies": [{"title": r["title"], "year": r["year"], "url": r["url"]} for r in studies]})
+                               "studies": [{"title": r["title"], "year": r["year"], "url": r["url"], "gbd": r["gbd_label"]} for r in studies]})
     return {"meta": {"years": meta["years"], "data_built": meta["built"], "master_sha256": source_hash,
                       "unit": "Unique eligible studies reporting each funder; no grant amounts or causal attribution.",
                       "theme_overlap": True, "sources_accessed": "2026-10-12",
@@ -364,7 +416,7 @@ def build_analysis(rows, meta, source_hash):
                              "wellcome": mix([r for r in in_any if r["wellcome"]])},
             "mental_focus_title_screen": stats(focus),
             "wellcome_outside_themes": sum(not r["themes"] for r in wellcome),
-            "wellcome_outside_groups": sorted((g for g in outside_groups if g["n"]), key=lambda g: (g["key"] == "other", -g["n"])),
+            "wellcome_outside_groups": sorted((g for g in outside_groups if g["n"]), key=lambda g: (g["key"] == "other", g["label"].casefold())),
             "wellcome_theme_overlap": overlaps(wellcome), "all_theme_overlap": overlaps(rows),
             "disease_tagged": sum(bool(r["gbd"]) for r in rows),
             "donors": donor_counts(rows), "parent_donors": parent_donor_counts(rows),
@@ -504,7 +556,7 @@ def plots(analysis, staging):
     labels = ["Infectious Diseases", "Mental Health", "Climate & Health", "Outside these three themes"]
     untagged = next((g["n"] for g in analysis["wellcome_outside_groups"] if g["key"] == "infectious"), 0)
     notes = [f"{pct(t['wellcome'], t['n'])} of {t['n']:,} theme studies · {wellcome_rank(t['donors'])}" for t in themes] + [
-        f"Includes {untagged} infection-related studies that GBD classifies under another cause" if untagged else "No theme tag and not on the reviewed climate list"]
+        f"Includes {untagged} studies on vaccines, hepatitis C or antibiotic use coded to other GBD conditions" if untagged else "No theme tag and not on the reviewed climate list"]
     # Explain the small Climate & Health count where readers see it.
     climate = analysis["themes"]["climate"]
     notes[2] += (f"\nSmall because few studies in the map address climate: "
@@ -601,7 +653,8 @@ SETTING_LABELS = ["High-income setting", "Low- & middle-income setting", "Multi-
 SEARCH_END = "3 August 2026"
 SEARCH_END_SHORT = "3 Aug 2026"
 SIGNPOST = {"infectious": "any of 6 GBD 2023 infectious cause groups (HIV/AIDS and STIs, respiratory infections and TB, enteric infections, "
-                          "malaria and neglected tropical diseases, other infectious diseases, infections not further specified)",
+                          "malaria and neglected tropical diseases, other infectious diseases, infections not further specified)"
+                          ". GBD codes studies such as HPV vaccination under the disease they prevent (cervical cancer), so they are not in this theme.",
             "mental": "all mental health: GBD 2023 mental disorders or substance use disorders. Wellcome’s stated focus within it, anxiety, depression and psychosis, is shown as a subset",
             "climate": "keyword screen of titles and abstracts (GBD has no climate category); every candidate checked by hand"}
 INFO_ICON = ('<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>'
@@ -669,6 +722,14 @@ dialog.pop::backdrop{background:rgba(29,26,46,.35)}
 .pop-close{all:unset;cursor:pointer;font-size:22px;line-height:1;color:var(--muted);padding:2px 6px;border-radius:6px}
 .pop-close:hover{background:var(--lav)}
 .pop-body{padding:0 22px 18px}
+.sens{display:block;margin-top:8px;font-size:13px;color:var(--muted)}
+.focus-tag{display:inline-block;margin-left:6px;background:var(--lav);color:#4a3577;border-radius:999px;padding:1px 8px;font-size:11px;font-weight:700;vertical-align:1px}
+.subareas .num small.wn{display:block;font-size:11px;font-weight:500;color:var(--muted)}
+.subareas .group summary{grid-template-columns:minmax(220px,40%) 1fr 92px}
+.rule-note{margin:12px 0 0;font-size:13.5px;color:var(--ink);border-left:3px solid var(--c);padding:2px 0 2px 14px}
+.pop-note{margin:6px 0 10px;background:var(--lav-2);border-left:3px solid var(--violet-2);border-radius:6px;padding:8px 12px;font-size:13px}
+.pop-lead{margin:0 0 6px;font-size:14px}
+.qmark[data-open-outside]{cursor:pointer}
 .groups{border-top:1px solid var(--line)}
 .group{border-bottom:1px solid var(--line)}
 .group:last-child{border-bottom:0}
@@ -718,11 +779,20 @@ dialog.pop::backdrop{background:rgba(29,26,46,.35)}
 .mix span{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;min-width:4px;border-right:2px solid #fff;white-space:nowrap;overflow:hidden}
 .mix span:last-child{border-right:0}
 .tot-nums .step{display:flex;flex-direction:column}
-.mini-lab{margin-top:auto;padding-top:14px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.tot-nums .mini-lab{margin-top:auto;padding-top:14px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
 .mix.mini{height:22px;border-radius:6px;margin-top:5px;background:#fff}
-.mix.mini span{min-width:4px;border-right:2px solid #fff;font-size:11px;font-weight:700}
-.tile-key{margin:2px 0 0;align-items:center}
-.qtip{position:fixed;z-index:50;max-width:300px;background:#2d2840;color:#fff;font:500 12px/1.45 Inter,system-ui,sans-serif;padding:7px 10px;border-radius:8px;box-shadow:0 6px 18px rgba(30,20,60,.25);pointer-events:none}
+.mix.mini span{display:flex;margin-top:0;min-width:4px;border-right:2px solid #fff;font-size:11px;font-weight:700}
+.total .tile-key{margin:2px 0 0;padding:0 18px;align-items:center;gap:8px 18px}
+.tile-key>span:not(.qmark){display:inline-flex;align-items:center;gap:6px}
+.tile-key i{margin-right:0;flex-shrink:0}
+.qtip-link{all:unset;display:block;margin-top:7px;color:#e6dcff;font-weight:700;cursor:pointer;text-decoration:underline}
+.qtip.rich{max-width:400px;padding:10px 13px}
+.qtip a{color:#e6dcff}
+.rt-h{display:block;margin-bottom:4px;font-size:12.5px}
+.rt{list-style:none;margin:0 0 6px;padding:0}.rt li{position:relative;padding-left:15px;margin:4px 0}
+.rt li i{position:absolute;left:0;top:5px;width:8px;height:8px;border-radius:50%}
+.rt-note{display:block;color:#cfc7e2}
+.qtip{position:fixed;z-index:50;max-width:300px;background:#2d2840;color:#fff;font:500 12px/1.45 Inter,system-ui,sans-serif;padding:7px 10px;border-radius:8px;box-shadow:0 6px 18px rgba(30,20,60,.25)}
 .fund .mixrow{grid-template-columns:200px 1fr 70px;gap:10px 14px}
 /* Theme cards */
 .theme-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
@@ -811,6 +881,7 @@ details.method{border:1px solid var(--line);background:var(--card);padding:14px 
 details.method summary{cursor:pointer;font-weight:600;color:var(--ink)}
 li{margin-bottom:8px}
 small{color:var(--muted)}
+.png-status{font-size:13px;color:var(--muted)}
 .download{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0 8px;font-size:14px}
 [hidden]{display:none!important}
 @media(max-width:820px){main{padding:16px}.hero{grid-template-columns:1fr;gap:14px;padding:18px}.theme-cards{grid-template-columns:1fr}
@@ -824,15 +895,32 @@ SCRIPT = '''
 if (window.self !== window.top) document.documentElement.classList.add('embedded');
 // Tooltips for '?' and '*' marks: placed above the mark, kept inside the visible area, flipped below if needed.
 const qtip = document.createElement('div'); qtip.className = 'qtip'; qtip.hidden = true; document.body.appendChild(qtip);
+let hideTimer = null;
+const hideSoon = () => { clearTimeout(hideTimer); hideTimer = setTimeout(() => { qtip.hidden = true; }, 250); };
+qtip.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+qtip.addEventListener('mouseleave', hideSoon);
 function showTip(el) {
-  qtip.textContent = el.dataset.tip; qtip.hidden = false;
+  clearTimeout(hideTimer);
+  qtip.classList.toggle('rich', !!el.dataset.rich);
+  if (el.dataset.rich) {  // HTML content (with links) from a <template>
+    qtip.innerHTML = document.getElementById(el.dataset.rich).innerHTML;
+    qtip.querySelectorAll('[data-open-tech]').forEach(b => b.addEventListener('click', () => {
+      qtip.hidden = true; const d = document.getElementById('tech'); d.open = true; d.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }));
+  } else qtip.textContent = el.dataset.tip;
+  if (el.dataset.more) {  // a real link inside the tooltip, e.g. to the outside-themes pop-up
+    const more = document.createElement('button'); more.type = 'button'; more.className = 'qtip-link'; more.textContent = el.dataset.more;
+    more.addEventListener('click', () => { qtip.hidden = true; openOutside(el); });
+    qtip.appendChild(more);
+  }
+  qtip.hidden = false;
   const r = el.getBoundingClientRect(), w = qtip.offsetWidth, h = qtip.offsetHeight, vw = document.documentElement.clientWidth;
   qtip.style.left = Math.max(8, Math.min(vw - w - 8, r.left + r.width / 2 - w / 2)) + 'px';
   qtip.style.top = (r.top - h - 8 >= 8 ? r.top - h - 8 : r.bottom + 8) + 'px';
 }
 document.querySelectorAll('.qmark, .pmark').forEach(el => {
   el.addEventListener('mouseenter', () => showTip(el)); el.addEventListener('focus', () => showTip(el));
-  el.addEventListener('mouseleave', () => { qtip.hidden = true; }); el.addEventListener('blur', () => { qtip.hidden = true; });
+  el.addEventListener('mouseleave', hideSoon); el.addEventListener('blur', hideSoon);
 });
 window.addEventListener('scroll', () => { qtip.hidden = true; }, {passive: true});
 const DATA = JSON.parse(document.getElementById('data').textContent);
@@ -849,12 +937,32 @@ document.querySelectorAll('[data-theme]').forEach(b => b.addEventListener('click
 // The pop-up opens just below the link clicked: when embedded, the frame is as tall as the page,
 // so a centred dialog could open out of view.
 const pop = document.getElementById('outside');
-document.querySelectorAll('[data-open-outside]').forEach(b => b.addEventListener('click', () => {
-  pop.style.top = Math.max(8, b.getBoundingClientRect().bottom + 10) + 'px';
+function openOutside(anchor) {
+  pop.style.top = Math.max(8, anchor.getBoundingClientRect().bottom + 10) + 'px';
   pop.showModal();
-}));
+}
+document.querySelectorAll('[data-open-outside]').forEach(b => b.addEventListener('click', () => { qtip.hidden = true; openOutside(b); }));
 document.querySelectorAll('[data-open-tech]').forEach(b => b.addEventListener('click', () => {
   const d = document.getElementById('tech'); d.open = true; d.scrollIntoView({behavior: 'smooth', block: 'start'});
+}));
+// PNG of the page as shown (current theme tab), using the site's bundled html2canvas.
+document.querySelectorAll('[data-png]').forEach(link => link.addEventListener('click', async e => {
+  e.preventDefault();
+  const status = document.querySelector('.png-status');
+  status.textContent = 'Preparing image…';
+  try {
+    if (!window.html2canvas) await new Promise((resolve, reject) => {
+      const sc = document.createElement('script'); sc.src = '../vendor/html2canvas-1.4.1.min.js';
+      sc.onload = resolve; sc.onerror = () => reject(new Error('Image renderer could not load.')); document.head.appendChild(sc);
+    });
+    await document.fonts.ready;
+    const canvas = await window.html2canvas(document.querySelector('main'), {scale: 2, backgroundColor: '#fbfaf8', windowWidth: 1200, logging: false,
+      onclone(clone) { clone.querySelectorAll('.qtip, dialog, .download, details.method').forEach(n => n.remove()); }});
+    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'wellcome_priority_themes.png';
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+    status.textContent = '';
+  } catch (err) { status.textContent = 'Image download failed: ' + err.message; }
 }));
 pop.querySelector('.pop-close').addEventListener('click', () => pop.close());
 pop.addEventListener('click', e => { if (e.target === pop) pop.close(); });
@@ -929,10 +1037,14 @@ def report(analysis, rows):
     years = analysis["meta"]["years"]
     legend = '<div class="legend">' + ''.join(f'<span><i style="background:{c}"></i>{escape(label)}</span>'
                                              for c, label in zip(SETTING_COLORS, SETTING_LABELS)) + '</div>'
-    def tip(text, side=""):
-        """Small '?' that shows `text` on hover or keyboard focus."""
+    def tip(text, side="", attrs=""):
+        """Small '?' that shows `text` on hover or keyboard focus; `attrs` can make it clickable."""
         return (f'<span class="qmark{side}" tabindex="0" role="note" aria-label="{escape(text)}" '
-                f'data-tip="{escape(text)}">?</span>')
+                f'data-tip="{escape(text)}"{attrs}>?</span>')
+
+    def study_link(x):
+        title = escape(x["title"])
+        return f'<a href="{escape(x["url"])}" target="_blank" rel="noopener">{title}</a>' if x["url"].startswith(("https://", "http://")) else title
 
     cards, tabs, panels = [], [], []
     MATCH_LINE = {"infectious": f"Matched by GBD 2023 cause: {len(INFECTIOUS_GROUPS)} infectious groups",
@@ -943,7 +1055,7 @@ def report(analysis, rows):
         "infectious": (f'<strong>How publications were matched:</strong> by the GBD 2023 cause coded from each title and abstract (the condition the evaluated intervention targets). '
                        f'A publication counts if it has any of these GBD groups:<div class="chips">{chips(INFECTIOUS_GROUPS)}</div>'
                        '<small>GBD codes were assigned by AI from titles and abstracts under the team’s coding rules and checked against a second coder and MeSH headings; '
-                       'they were not reviewed publication by publication. "Infections, disease not stated" is the team’s group for infections GBD cannot place.</small>'),
+                       'they were not reviewed publication by publication. "Infections, disease not stated" is the team’s group for infections where the specific disease is not reported.</small>'),
         "mental": (f'<strong>How publications were matched:</strong> by the GBD 2023 cause coded from each title and abstract. A publication counts if it has either GBD group:'
                    f'<div class="chips">{chips(MENTAL_BROAD_GROUPS)}</div>'
                    f'<p class="focusline"><b>Wellcome' + '’' + 's stated focus</b>, shown as a subset: anxiety, depression and psychosis '
@@ -970,10 +1082,10 @@ def report(analysis, rows):
                       f'<span>Wellcome <small>({ordinal(1 + sum(d["n"] > (w["n"] if w else 0) for d in t["donors"]))})</small></span><span class="b"><i style="width:{100 * (w["n"] if w else 0) / scale:.2f}%;background:{color}"></i></span><span class="num">{w["n"] if w else 0:,}</span></div>')
         cards.append(f'<button type="button" class="tcard" style="--c:{color}" data-theme="{key}" aria-pressed="false" aria-controls="theme-{key}">'
                      f'<span class="t-name">{escape(t["label"])}</span>'
-                     f'<span class="t-big">{t["n"]:,}<small>publications</small></span>'
-                     + (f'<span class="t-focus"><b>{t["focus"]["n"]:,}</b> in Wellcome' + '’' + 's stated focus '
-                        + tip(f"Anxiety, depression and psychosis (GBD depressive and anxiety disorders, schizophrenia, bipolar disorder): "
-                              f"{t['focus']['n']:,} publications, {t['focus']['wellcome']:,} Wellcome-funded.") + '</span>' if "focus" in t else '') +
+                     f'<span class="t-big">{t["n"]:,}<small>publications</small>'
+                     + (' ' + tip(f"Includes {t['focus']['n']:,} publications in Wellcome’s stated focus: anxiety, depression and psychosis "
+                                  f"(GBD depressive and anxiety disorders, schizophrenia, bipolar disorder), {t['focus']['wellcome']:,} of them Wellcome-funded.")
+                        if "focus" in t else '') + '</span>' +
                      f'<span class="cov"><span class="cov-lab">Funder identified <b>{pct(t["named_funder"], t["n"])}</b> '
                      + tip(f"{t['named_funder']:,} of {t['n']:,} publications have a funder identified in Crossref metadata; others may report one in the full text.") + '</span>'
                      f'<span class="cov-bar" aria-hidden="true"><i style="width:{100 * t["named_funder"] / max(1, t["n"]):.2f}%;background:{color}"></i></span></span>'
@@ -1003,14 +1115,32 @@ def report(analysis, rows):
         extra = ''
         if key == "mental":
             f = t["focus"]
-            extra = (f'<aside class="focus"><strong>Wellcome’s stated focus within this theme</strong> (<a href="{MENTAL_SOURCE}" target="_blank" rel="noopener">source&nbsp;↗</a>): anxiety, depression and psychosis account for <b>{f["n"]:,}</b> of the {t["n"]:,} publications, <b>{f["wellcome"]:,}</b> of them Wellcome-funded ({pct(f["wellcome"], f["named_funder"])} of the {f["named_funder"]:,} with a funder identified). The other {t["wellcome"] - f["wellcome"]:,} Wellcome-funded publications in this theme are on, for example, alcohol and drug use or eating disorders. GBD codes cannot identify Wellcome’s emphasis on early intervention.</aside>')
+            extra = (f'<aside class="focus"><strong>Wellcome’s stated focus within this theme</strong> (<a href="{MENTAL_SOURCE}" target="_blank" rel="noopener">source&nbsp;↗</a>): anxiety, depression and psychosis account for <b>{f["n"]:,}</b> of the {t["n"]:,} publications, <b>{f["wellcome"]:,}</b> of them Wellcome-funded ({pct(f["wellcome"], f["named_funder"])} of the {f["named_funder"]:,} with a funder identified). The other {t["wellcome"] - f["wellcome"]:,} Wellcome-funded publications in this theme are on, for example, alcohol and drug use or eating disorders. Wellcome’s emphasis on early intervention is not something GBD codes record.</aside>')
         lead = ''
+        rule_note = ''
+        cover = ''
+        if t.get('subgroups'):
+            max_g = max(g['n'] for g in t['subgroups'])
+            items = []
+            for g in t['subgroups']:
+                lis = ''.join(f'<li>{study_link(x)} <small>({escape(x["year"])})</small></li>' for x in g['studies'])
+                body = f'<ol>{lis}</ol>' if lis else '<p class="hint">No Wellcome-funded publications in this group.</p>'
+                star = ' <span class="focus-tag">Wellcome focus</span>' if g['focus'] else ''
+                items.append(f'<details class="group"><summary><span class="g-label">{escape(g["label"])}{star}</span>'
+                             f'<span class="meter" aria-hidden="true"><i style="width:{100 * g["n"] / max_g:.4f}%;background:{color}"></i></span>'
+                             f'<span class="num"><strong>{g["n"]:,}</strong><small class="wn">{g["wellcome"]:,} Wellcome</small></span></summary>{body}</details>')
+            how = ('GBD 2023 groups' if key == 'infectious' else 'GBD 2023 conditions; “Wellcome focus” marks anxiety, depression and psychosis')
+            cover = (f'<div class="card subareas"><h3>What the {t["n"]:,} publications cover</h3><p class="hint">By {how}. '
+                     'A publication can be in more than one group. Select a group to list its Wellcome-funded publications.</p>'
+                     f'<div class="groups">{"".join(items)}</div></div>')
+        if key == "infectious":  # inside the collapsed 'How this theme is defined and matched' section
+            rule_note = f'<p class="rule-note"><strong>{escape(GBD_RULE_TITLE)}.</strong> {escape(GBD_RULE)}</p>'
         if key == "climate":
-            lead = (f'<aside><strong>Why so few publications?</strong> This map covers health economic evaluations (cost-effectiveness and related '
-                    f'studies of health interventions) and reviews of them. Most climate-and-health research is epidemiology or impact modelling, so it falls outside the map. '
-                    f'Only {t["n"]:,} of {total:,} eligible publications ({pct(t["n"], total)}) address climate. '
+            rule_note = (f'<p class="rule-note"><strong>Why so few publications?</strong> This map covers health economic evaluations (cost-effectiveness and related '
+                    f'studies of health interventions) and reviews of them. Most climate-and-health research is epidemiology or impact modelling, which this map does not cover. '
+                    f'{t["n"]:,} of {total:,} eligible publications ({pct(t["n"], total)}) address climate. '
                     f'The {t["reviewed"]:,} candidates found by the keyword screen were each reviewed, and a broader search for related terms found almost no further publications. '
-                    'The small count reflects how thin this evidence is, not a gap in the search.</aside>')
+                    'The small number reflects how little economic evaluation has been published in this area so far, rather than gaps in the search.</p>')
             max_s = max([s["n"] for s in t["subareas"]] or [1])
             sub_items = []
             for s in t["subareas"]:
@@ -1030,7 +1160,7 @@ def report(analysis, rows):
         panels.append(f'''<section id="theme-{key}" class="theme" style="--c:{color}" {'hidden' if index else ''}>
 <div class="theme-head"><span class="dot"></span><h2>{escape(t['label'])}</h2></div>
 <details class="def"><summary>How this theme is defined and matched</summary><p>{escape(t['definition'])} <a href="{escape(t['url'])}" target="_blank" rel="noopener">Wellcome programme scope&nbsp;↗</a></p>
-<div class="match" id="match-{key}">{MATCH_BOX[key].replace('{reviewed}', f"{t.get('reviewed', 0):,}").replace('{included}', f"{t['n']:,}").replace('{excluded}', f"{t.get('reviewed', 0) - t['n']:,}")}</div></details>
+<div class="match" id="match-{key}">{MATCH_BOX[key].replace('{reviewed}', f"{t.get('reviewed', 0):,}").replace('{included}', f"{t['n']:,}").replace('{excluded}', f"{t.get('reviewed', 0) - t['n']:,}")}</div>{rule_note}</details>
 {lead}<div class="strip"><div><strong>{t['n']:,}</strong><span>Eligible publications in this theme</span></div>
 <div class="w"><strong>{t['wellcome']:,}</strong><span>Wellcome-funded: <b>{pct(t['wellcome'], t['named_funder'])}</b> of those with a funder identified ({pct(t['wellcome'], t['n'])} of all theme publications) · {escape(wellcome_rank(t['donors']))}</span></div></div>
 <div class="card fund"><h3>Who funds this theme, and where are the publications set?</h3>
@@ -1039,14 +1169,14 @@ def report(analysis, rows):
 <span class="lab"><strong>Wellcome-funded</strong></span>{stacked_bar(t['wellcome_income_counts'], t['wellcome'])}<span class="num">n = {t['wellcome']:,}</span></div>
 <div class="sub">Top funders · among the {t['named_funder']:,} ({pct(t['named_funder'], t['n'])}) publications with a funder identified {tip(f"Only publications whose Crossref metadata names a funder are ranked; the other {t['n'] - t['named_funder']:,} may still report funding in their full text. = marks a tie. Wellcome is highlighted, and added below the top 10 when it ranks lower.")}</div>
 <div class="donors">{''.join(donor_rows) or '<span></span><span>No named funder available.</span>'}</div>
-</div>{extra}</section>''')
+</div>{extra}{cover}</section>''')
     groups = analysis["wellcome_outside_groups"]
     max_g = max([g["n"] for g in groups] or [1])
     untagged = sum(g["n"] for g in groups if g["key"] in ("infectious", "mental"))
     group_items = []
     for g in groups:
         studies = ''.join(
-            f'<li>{f"""<a href="{escape(s["url"])}" target="_blank" rel="noopener">{escape(s["title"])}</a>""" if s["url"].startswith(("https://", "http://")) else escape(s["title"])} <small>({escape(s["year"])})</small></li>'
+            f'<li>{f"""<a href="{escape(s["url"])}" target="_blank" rel="noopener">{escape(s["title"])}</a>""" if s["url"].startswith(("https://", "http://")) else escape(s["title"])} <small>({escape(s["year"])}) · GBD: {escape(s.get("gbd", ""))}</small></li>'
             for s in g["studies"])
         note = f'<p class="hint">{escape(g["note"])}</p>' if g["note"] else ''
         group_items.append(f'<details class="group"><summary><span class="g-label">{escape(g["label"])}</span>'
@@ -1070,7 +1200,16 @@ def report(analysis, rows):
             for label, n, style in parts if n) + '</div>'
     key_html = ('<div class="legend tile-key">' + ''.join(f'<span><i style="background:{THEME_COLORS[k]}"></i>{escape(labels[k])}</span>' for k in THEME_COLORS)
                 + f'<span><i style="background:{MULTI_FILL}"></i>In 2+ themes</span>'
-                + tip("The strip in each box splits that step by theme. Each publication is counted once; hover a segment for its count.") + '</div>')
+                + '<span class="qmark" tabindex="0" role="note" aria-label="How themes were matched, and what the strips show" data-tip="" data-rich="match-rich">?</span></div>'
+                + '<template id="match-rich"><b class="rt-h">How themes were matched</b><ul class="rt">'
+                + f'<li><i style="background:{THEME_COLORS["infectious"]}"></i><b>Infectious Diseases:</b> GBD 2023 infectious causes (6 groups). GBD codes a study to the disease '
+                'its intervention prevents or treats, so HPV vaccination counts under cervical cancer and hepatitis C treatment under chronic liver disease.</li>'
+                + f'<li><i style="background:{THEME_COLORS["mental"]}"></i><b>Mental Health:</b> GBD 2023 mental and substance use disorders; Wellcome’s stated focus '
+                f'(anxiety, depression, psychosis) is shown as a subset. <a href="{MENTAL_SOURCE}" target="_blank" rel="noopener">Wellcome source&nbsp;↗</a></li>'
+                + f'<li><i style="background:{THEME_COLORS["climate"]}"></i><b>Climate &amp; Health:</b> keyword screen of titles and abstracts (GBD has no climate category); '
+                'every match checked by hand.</li></ul>'
+                '<span class="rt-note">Each box’s strip splits that step by theme; each publication is counted once. Hover a segment for its count.</span>'
+                '<button type="button" class="qtip-link" data-open-tech>Technical note ▸</button></template>')
     u_all, u_fund, u_w = union["all"]["n"], union["funded"]["n"], union["wellcome"]["n"]
 
     def mini_mix(m):
@@ -1082,8 +1221,8 @@ def report(analysis, rows):
             f'{f"{100 * n / total_n:.0f}%" if n / total_n >= .12 else ""}</span>'
             for label, n, c, ink in parts if n) + '</div>')
 
-    step = lambda n, label, note, text, m, cls="": (
-        f'<div class="step{cls}"><strong>{n:,}</strong><span class="s-lab">{label} {tip(text)}</span><span class="s-note">{note}</span>{mini_mix(m)}</div>')
+    step = lambda n, label, note, text, m, cls="", attrs="": (
+        f'<div class="step{cls}"><strong>{n:,}</strong><span class="s-lab">{label} {tip(text, "", attrs)}</span><span class="s-note">{note}</span>{mini_mix(m)}</div>')
     total_html = (f'<div class="card total"><div class="tot-nums">'
                   + step(u_all, "match the three themes", f"{pct(u_all, total)} of all publications",
                          f"Publications in the map ({total:,}, published {years[0]} to {SEARCH_END}, when searches ended) coded to at least one of the three themes. Each is counted once, even if it falls in two themes.",
@@ -1092,15 +1231,11 @@ def report(analysis, rows):
                          "Publications whose Crossref metadata names a funder. For the rest none was found there; they may still report funding in the full text, which this map did not screen.",
                          union["funded"])
                   + step(u_w, "Wellcome-funded", f"{pct(u_w, u_fund)} of the {u_fund:,} with a funder identified",
-                         f"Publications with Wellcome Trust identified as a funder: {pct(u_w, u_fund)} of the {u_fund:,} with a funder identified, {pct(u_w, u_all)} of all {u_all:,}.",
-                         union["wellcome"], " w")
+                         f"Publications with Wellcome Trust identified as a funder: {pct(u_w, u_fund)} of the {u_fund:,} with a funder identified. "
+                         f"Of the {wellcome:,} Wellcome-funded publications in the whole map, {inside:,} are in the three themes and {outside:,} cover other topics.",
+                         union["wellcome"], " w", f' data-open-outside data-more="See the {outside:,} beyond the three themes ▸"')
                   + f'</div>{key_html}'
-                  f'<div class="wfoot"><div class="step w"><strong>{wellcome:,}</strong><span class="s-lab">Wellcome-funded in the whole map '
-                  + tip(f"All publications with Wellcome Trust identified as a funder, {years[0]}–{years[1]} ({years[1]} is partial: searches ended {SEARCH_END}). "
-                        f"{inside:,} fall in the three themes and {outside:,} outside them.")
-                  + f'</span></div><div class="split" role="img" aria-label="{inside:,} in the three themes, {outside:,} outside them">'
-                  f'<span class="in" style="flex:{inside}">{inside:,} in the themes</span>'
-                  f'<button type="button" class="out" style="flex:{outside}" data-open-outside>{outside:,} outside · see what they cover ▸</button></div></div></div>')
+                  '</div>')
     data = json.dumps({"years": analysis["wellcome_by_year"], "searchEnd": SEARCH_END_SHORT, "searchEndLong": SEARCH_END}).replace("</", "<\\/")
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
             '<title>Wellcome priority themes</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
@@ -1109,24 +1244,25 @@ def report(analysis, rows):
 <header class="page-head"><h1>{escape(SECTION)}</h1><p class="lede">{escape(BLURB)}</p></header>
 <section class="block first"><h2>The three themes at a glance</h2>
 <p class="hint">How many publications match Wellcome's three themes, how many name a funder, and how many are Wellcome-funded.</p>
-{total_html}{signpost}
+{total_html}
 <h3 class="cards-h">Each theme {tip(f"Select a card for the theme's funders and settings. Bars compare Wellcome with the theme's top funder. {analysis['all_theme_overlap']['n']:,} publications fall in more than one theme.")}</h3>
 <div class="theme-cards">{''.join(cards)}</div></section>
-<dialog class="pop" id="outside" aria-labelledby="outside-title"><div class="pop-head"><h2 id="outside-title">What the {outside:,} Wellcome-funded publications outside the themes cover</h2><button type="button" class="pop-close" aria-label="Close">×</button></div><div class="pop-body">
-<p class="hint">No infectious or mental-health disease code and not on the reviewed Climate &amp; Health list, grouped by keywords in their titles. Groupings are indicative.
-<strong>{untagged:,} of the {outside:,} are infection-related, substance-use or mental-health publications without a matching theme code</strong>, so the theme counts understate Wellcome-funded work in those themes. Select a group to list its publications.</p>
+<dialog class="pop" id="outside" aria-labelledby="outside-title"><div class="pop-head"><h2 id="outside-title">The {outside:,} Wellcome-funded publications beyond the three themes</h2><button type="button" class="pop-close" aria-label="Close">×</button></div><div class="pop-body">
+<p class="pop-lead">Of the <b>{wellcome:,}</b> Wellcome-funded publications in the whole map, <b>{inside:,}</b> match the three themes and <b>{outside:,}</b> cover other topics, shown below.</p>
+<p class="pop-note"><b>Studies that mention an infection:</b> GBD classifies each study under the disease its intervention prevents or treats, rather than the infection behind it. So HPV vaccination is coded to cervical cancer and hepatitis C treatment to chronic liver disease; each title below shows its GBD code.</p>
+<p class="hint">Infectious Diseases and Mental Health are defined by specific GBD 2023 codes, and Climate &amp; Health by a reviewed keyword screen. Each publication below is shown with the GBD code it was given; their classifications lie beyond the definitions used for the three themes, so they are reported here. Two groups explain how studies on vaccination, hepatitis C, antibiotic use and alcohol policy are classified. Groups are formed from keywords in the titles and are indicative. Select a group to list its publications.</p>
 <div class="groups">{"".join(group_items)}</div></div></dialog>
 <section class="block card"><div class="trend-head"><div><h2>Wellcome-funded publications by year</h2>
-<p class="hint">All {wellcome:,} Wellcome-funded publications, in and outside the three themes. Publication counts, not grant-award dates or spending. Hover the line for each year.</p></div>
+<p class="hint">All {wellcome:,} Wellcome-funded publications, within and beyond the three themes. Publication counts, not grant-award dates or spending. Hover the line for each year.</p></div>
 <div class="toggle" role="group" aria-label="Trend view"><button type="button" data-trend="annual" aria-pressed="true">Per year</button><button type="button" data-trend="cumulative" aria-pressed="false">Cumulative</button></div></div>
 <div id="trend"></div></section>
 <nav class="tabs" aria-label="Select a priority theme">{''.join(tabs)}</nav>{''.join(panels)}
 <details class="method" id="tech"><summary>Technical details and sources</summary><p>Each funder is counted once per eligible publication. A publication can name multiple funders and belong to multiple themes, so counts do not sum across funders or themes. Funders come from Crossref publication metadata; this map screened titles and abstracts only. “No funder identified” means none was found there, not that the publication reports no funding: many acknowledge funders only in the full text. Funding is recorded for {pct(analysis['global']['named_funder'], total)} of the evidence base, so absence of a name does not establish absence of support. Burroughs Wellcome Fund is a separate organisation and is excluded from the Wellcome cohort.</p>
 <p>Setting comparisons use single-country publications with known income, taking the World Bank group in force on 1 January of each publication's year; all other publications stay visible in the multi-country, regional or income-unavailable category. Names are lightly normalised (NIHR, HTA, NIH, MRC, Gates and common variants); agencies and their programmes are not comprehensively merged. Rankings count identified funders, not funding amounts, and tied funders share a rank. A programme named in an acknowledgement does not establish membership in a current priority programme.</p>
-<p>Infectious Diseases and Mental Health use the Global Burden of Disease (GBD 2023) causes coded from each publication's title and abstract (the condition the evaluated intervention targets); {analysis['disease_tagged']:,} of {total:,} eligible publications have a disease code, so publications without one can still contain relevant evidence. Climate &amp; Health uses a keyword screen of all titles and abstracts (scripts/build_climate_candidates.py), after which every candidate was reviewed against Wellcome's Climate &amp; Health framing; decisions and their basis are in exports/climate_health_review_decisions_2026-10-12.csv. A broader recall check found almost no further publications. Classification uses titles and abstracts, not full texts. The anxiety, depression and psychosis title screen is a separate sensitivity view. Wellcome-funded publications outside all three themes are grouped by keywords in their titles (first matching group wins) to describe what they cover; this grouping does not change any theme count. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
-<p><strong>Theme mapping.</strong> Infectious Diseases: any of the GBD 2023 groups {escape('; '.join(INFECTIOUS_GROUPS))}. Mental Health covers all mental health: {escape('; '.join(MENTAL_BROAD_GROUPS))}, because Wellcome also funds mental health work beyond its stated focus. Wellcome’s stated focus, anxiety, depression and psychosis (<a href="{MENTAL_SOURCE}">Wellcome: Mental Health</a>), is reported as a subset using the GBD 2023 level-3 causes {escape('; '.join(MENTAL_GROUPS))} ({analysis['themes']['mental']['focus']['n']:,} publications); bipolar disorder is included because Wellcome’s funding calls list it among psychotic disorders (<a href="{MENTAL_BIPOLAR_SOURCE}">example call</a>). GBD codes were assigned by AI from titles and abstracts under the team’s coding rules (see methods/gbd_coding/GBD_CODING.md in the repository) and checked against a second coder and MeSH headings; they were not reviewed publication by publication. Climate &amp; Health has no GBD mapping: {escape(CLIMATE_NO_GBD)} Its keyword screen covered {escape('; '.join(f'{area}: {terms}' for area, terms in CLIMATE_KEYWORDS))}. Excluded before matching: {escape(CLIMATE_EXCLUSIONS)}. Every one of the {analysis['themes']['climate']['reviewed']:,} candidates was then reviewed by hand (human-verified): {analysis['themes']['climate']['n']:,} included, {analysis['themes']['climate']['reviewed'] - analysis['themes']['climate']['n']:,} excluded, each with its reason recorded.</p>
+<p>Infectious Diseases and Mental Health use the Global Burden of Disease (GBD 2023) causes coded from each publication's title and abstract (the condition the evaluated intervention targets); {analysis['disease_tagged']:,} of {total:,} eligible publications have a disease code, so publications without one can still contain relevant evidence. Climate &amp; Health uses a keyword screen of all titles and abstracts (scripts/build_climate_candidates.py), after which every candidate was reviewed against Wellcome's Climate &amp; Health framing; decisions and their basis are in exports/climate_health_review_decisions_2026-10-12.csv. A broader recall check found almost no further publications. Classification uses titles and abstracts, not full texts. Wellcome-funded publications beyond the three themes are grouped by keywords in their titles (first matching group wins) to describe what they cover; this grouping does not change any theme count. These definitions do not establish current Wellcome grant eligibility or early-intervention status.</p>
+<p><strong>Theme mapping.</strong> Infectious Diseases: any of the GBD 2023 groups {escape('; '.join(INFECTIOUS_GROUPS))}. Mental Health covers all mental health: {escape('; '.join(MENTAL_BROAD_GROUPS))}, because Wellcome also funds mental health work beyond its stated focus. Wellcome’s stated focus, anxiety, depression and psychosis (<a href="{MENTAL_SOURCE}">Wellcome: Mental Health</a>), is reported as a subset using the GBD 2023 level-3 causes {escape('; '.join(MENTAL_GROUPS))} ({analysis['themes']['mental']['focus']['n']:,} publications); bipolar disorder is included because Wellcome’s funding calls list it among psychotic disorders (<a href="{MENTAL_BIPOLAR_SOURCE}">example call</a>). GBD codes were assigned by AI from titles and abstracts under the team’s coding rules (see methods/gbd_coding/GBD_CODING.md in the repository) and checked against a second coder and MeSH headings; they were not reviewed publication by publication. {escape(GBD_RULE_TITLE)}: {escape(GBD_RULE)}Climate &amp; Health has no GBD mapping: {escape(CLIMATE_NO_GBD)} Its keyword screen covered {escape('; '.join(f'{area}: {terms}' for area, terms in CLIMATE_KEYWORDS))}. Excluded before matching: {escape(CLIMATE_EXCLUSIONS)}. Every one of the {analysis['themes']['climate']['reviewed']:,} candidates was then reviewed by hand (human-verified): {analysis['themes']['climate']['n']:,} included, {analysis['themes']['climate']['reviewed'] - analysis['themes']['climate']['n']:,} excluded, each with its reason recorded.</p>
 <p>Source: the map's eligible analysis master, v2.1 ({total:,} publications) and the {escape(analysis['meta']['gbd_share'])}; analysis rebuilt {escape(analysis['meta']['analysis_built'])}. Publication years {years[0]}–{years[1]}; {years[1]} covers publications up to {SEARCH_END}, when searches ended. Programme scope checked 12 October 2026: <a href="https://wellcome.org/our-priorities/infectious-disease">Infectious Disease</a>, <a href="https://wellcome.org/our-priorities/mental-health">Mental Health</a>, <a href="https://wellcome.org/our-priorities/climate-and-health">Climate and Health</a>.</p></details>
-<div class="download"><a href="wellcome_theme_funders.csv" download>Download funder counts by theme (CSV)</a><a href="wellcome_analysis.json" download>Download aggregate analysis (JSON)</a></div>
+<div class="download"><a href="wellcome_theme_funders.csv" download>Download funder counts by theme (CSV)</a><a href="wellcome_analysis.json" download>Download aggregate analysis (JSON)</a><a href="#" data-png>Download as image (PNG)</a><span class="png-status" role="status"></span></div>
 </main><script type="application/json" id="data">{data}</script><script>{SCRIPT}</script></body></html>''')
 
 

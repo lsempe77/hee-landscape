@@ -15046,6 +15046,551 @@
             0
           ]
         }
+      ],
+      "subgroups": [
+        {
+          "label": "Respiratory infections and tuberculosis",
+          "n": 2385,
+          "wellcome": 26,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Cost-effectiveness of various tuberculosis control strategies in Thailand",
+              "year": "2012",
+              "url": ""
+            },
+            {
+              "title": "Assessing the efficiency of catch-up campaigns for the introduction of pneumococcal conjugate vaccine: A modelling study based on data from PCV10 introduction in Kilifi, Kenya",
+              "year": "2017",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of urine-based tuberculosis screening in hospitalised patients with HIV in Africa: a microsimulation modelling study",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Sustaining pneumococcal vaccination after transitioning from Gavi support: a modelling and cost-effectiveness study in Kenya",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Delivery of long-term-injectable agents for TB by lay carers: Pragmatic randomised trial",
+              "year": "2020",
+              "url": ""
+            },
+            {
+              "title": "Affordability of adult tuberculosis vaccination in india and china: A dynamic transmission model-based analysis",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Clinical Impact, Costs, and Cost-effectiveness of Expanded Severe Acute Respiratory Syndrome Coronavirus 2 Testing in Massachusetts",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Computer-aided X-ray screening for tuberculosis and HIV testing among adults with cough in Malawi (the PROSPECT study): A randomised trial and cost-effectiveness analysis",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of a Novel Lipoarabinomannan Test for Tuberculosis in Patients with Human Immunodeficiency Virus",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of public health strategies for COVID-19 epidemic control in South Africa: a microsimulation modelling study",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Disregarding the restrictive vial-opening policy for BCG vaccine in Guinea-Bissau: Impact and cost-effectiveness for tuberculosis mortality and all-cause mortality in children aged 0-4 years",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "The potential health and economic value of SARS-CoV-2 vaccination alongside physical distancing in the UK: a transmission model-based future scenario analysis and economic evaluation",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Effectiveness of Continuous Endotracheal Cuff Pressure Control for the Prevention of Ventilator-Associated Respiratory Infections: An Open-Label Randomized, Controlled Trial",
+              "year": "2022",
+              "url": ""
+            },
+            {
+              "title": "Modelling how face masks and symptoms-based quarantine synergistically and cost-effectively reduce SARS-CoV-2 transmission in Bangladesh",
+              "year": "2022",
+              "url": ""
+            },
+            {
+              "title": "Modelling the cost-effectiveness of pulse oximetry in primary care management of acute respiratory infection in rural northern Thailand",
+              "year": "2022",
+              "url": ""
+            },
+            {
+              "title": "Cost Effectiveness of Strategies for Caring for Critically Ill Patients with COVID-19 in Tanzania",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "The cost and cost-effectiveness of novel tuberculosis vaccines in low- and middle-income countries: A modeling study",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "The potential global cost-effectiveness of prospective Strep A vaccines and associated implementation efforts",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "The potential impact of novel tuberculosis vaccines on health equity and financial protection in low-income and middle-income countries",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of a short-course antibiotic treatment strategy for the treatment of ventilator-associated pneumonia: an economic analysis of the REGARD-VAP trial",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Estimating the potential health and economic impacts of new tuberculosis vaccines under varying delivery strategies in Delhi and Gujarat, India: a modelling study",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Health impact and cost-effectiveness of vaccination using potential next-generation influenza vaccines in Thailand: a modelling study",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Operational priorities for engaging with India's private healthcare sector for the control of tuberculosis: A modelling study",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of wastewater-based environmental surveillance for SARS-CoV-2 in Blantyre, Malawi and Kathmandu, Nepal: A model-based study",
+              "year": "2025",
+              "url": ""
+            },
+            {
+              "title": "Estimating the epidemiological and economic impact of providing nutritional care for tuberculosis-affected households across India: a modelling study",
+              "year": "2025",
+              "url": ""
+            },
+            {
+              "title": "The potential global health impact and net monetary benefit of programmatic use of improved influenza vaccines: a mathematical modelling study",
+              "year": "2025",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Other infectious diseases",
+          "n": 1421,
+          "wellcome": 19,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Outsourcing cleaning services increases MRSA incidence: Evidence from 126 english acute trusts",
+              "year": "2017",
+              "url": ""
+            },
+            {
+              "title": "Strategies for the prevention of perinatal hepatitis B transmission in a marginalized population on the Thailand-Myanmar border: A cost-effectiveness analysis",
+              "year": "2017",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of interventions to improve hand hygiene in healthcare workers in middle-income hospital settings: a model-based analysis",
+              "year": "2018",
+              "url": ""
+            },
+            {
+              "title": "Accounting for aetiology: Can regional surveillance data alongside host biomarker-guided antibiotic therapy improve treatment of febrile illness in remote settings?",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of oral versus intravenous antibiotics (OVIVA) in patients with bone and joint infection: Evidence from a non-inferiority trial",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of reflex laboratory-based cryptococcal antigen screening for the prevention and treatment of cryptococcal meningitis in Botswana.",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Economic considerations support C-reactive protein testing alongside malaria rapid diagnostic tests to guide antimicrobial therapy for patients with febrile illness in settings with low malaria endemicity",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Healthcare Costs and Life-years Gained from Treatments within the Advancing Cryptococcal Meningitis Treatment for Africa (ACTA) Trial on Cryptococcal Meningitis: A Comparison of Antifungal Induction Strategies in Sub-Saharan Africa",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "The cost-effectiveness of the use of selective media for the diagnosis of melioidosis in different settings",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Genomic surveillance of methicillin-resistant staphylococcus aureus: A mathematical early modeling study of cost-effectiveness",
+              "year": "2020",
+              "url": ""
+            },
+            {
+              "title": "Cost-Effectiveness of Amphotericin B Deoxycholate Versus Itraconazole for Induction Therapy of Talaromycosis in Human Immunodeficiency Virus-Infected Adults in Vietnam",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of cryptococcal antigen screening at CD4 counts of 101-200 cells/L in Botswana",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Economic evaluation of varicella vaccination strategies in Jiangsu province, China: a decision-tree Markov model",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Tenofovir disoproxil fumarate in pregnancy for prevention of mother to child transmission of hepatitis B in a rural setting on the Thailand-Myanmar border: a cost-effectiveness analysis",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Transmission dynamics of the 2016-18 outbreak of hepatitis A among men who have sex with men in England and cost-effectiveness analysis of vaccination strategies to prevent future outbreaks",
+              "year": "2022",
+              "url": ""
+            },
+            {
+              "title": "The potential global cost-effectiveness of prospective Strep A vaccines and associated implementation efforts",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "Modelling the Cost-Effectiveness of Hepatitis A in South Africa",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness and budget impact of malaria, measles, and meningitis vaccines in Africa: a scoping review",
+              "year": "2025",
+              "url": ""
+            },
+            {
+              "title": "National burden of and optimal vaccine policy for Japanese encephalitis virus in Bangladesh: a seroprevalence and modelling study",
+              "year": "2026",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "HIV/AIDS and sexually transmitted infections",
+          "n": 1229,
+          "wellcome": 20,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Cost-eff ectiveness of HIV prevention for high-risk groups at scale: An economic evaluation of the avahan programme in south India",
+              "year": "2014",
+              "url": ""
+            },
+            {
+              "title": "Health benefits, costs, and cost-effectiveness of earlier eligibility for adult antiretroviral therapy and expanded treatment coverage: A combined analysis of 12 mathematical models",
+              "year": "2014",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of community-based strategies to strengthen the continuum of HIV care in rural South Africa: A health economic modelling analysis",
+              "year": "2015",
+              "url": ""
+            },
+            {
+              "title": "Cost and quality of life analysis of HIV self-testing and facility-based HIV testing and counselling in Blantyre, Malawi",
+              "year": "2016",
+              "url": ""
+            },
+            {
+              "title": "Impact and cost-effectiveness of point-of-care CD4 testing on the HIV epidemic in South Africa",
+              "year": "2016",
+              "url": ""
+            },
+            {
+              "title": "Incidence of opportunistic infections and the impact of antiretroviral therapy among HIV-infected adults in low- and middle-income countries: a systematic review and meta-analysis.",
+              "year": "2016",
+              "url": ""
+            },
+            {
+              "title": "Cardiovascular disease prevention policy in human immunodeficiency virus: Recommendations from a modeling study",
+              "year": "2018",
+              "url": ""
+            },
+            {
+              "title": "Cost-Effectiveness of Community-based Human Immunodeficiency Virus Self-Testing in Blantyre, Malawi",
+              "year": "2018",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of reflex laboratory-based cryptococcal antigen screening for the prevention and treatment of cryptococcal meningitis in Botswana.",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of urine-based tuberculosis screening in hospitalised patients with HIV in Africa: a microsimulation modelling study",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "HIV self-testing alone or with additional interventions, including financial incentives, and linkage to care or prevention among male partners of antenatal care clinic attendees in Malawi: An adaptive multi-arm, multi-stage cluster randomised trial",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "The cost-effectiveness of prophylaxis strategies for individuals with advanced HIV starting treatment in Africa",
+              "year": "2020",
+              "url": ""
+            },
+            {
+              "title": "Computer-aided X-ray screening for tuberculosis and HIV testing among adults with cough in Malawi (the PROSPECT study): A randomised trial and cost-effectiveness analysis",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Economic evaluation of point-of-care testing and treatment for sexually transmitted and genital infections in pregnancy in low- And middle-income countries: A systematic review",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Transmission reduction, health benefits, and upper-bound costs of interventions to improve retention on antiretroviral therapy: a combined analysis of three mathematical models",
+              "year": "2022",
+              "url": ""
+            },
+            {
+              "title": "Impact and cost-effectiveness of the national scale-up of HIV pre-exposure prophylaxis among female sex workers in South Africa: a modelling analysis",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "The effect on HIV transmission and cost-effectiveness of programmes for female sex workers in East, Central, and Southern Africa: a modelling study",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of 4CMenB Vaccination Against Gonorrhea: Importance of Dosing Schedule, Vaccine Sentiment, Targeting Strategy, and Duration of Protection",
+              "year": "2025",
+              "url": ""
+            },
+            {
+              "title": "Impact and cost-effectiveness of the community-led AMETHIST intervention among female sex workers in Zimbabwe",
+              "year": "2026",
+              "url": ""
+            },
+            {
+              "title": "Sustaining progress in HIV care in Africa with a transition to enabled self-care: a modelling study",
+              "year": "2026",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Infections, disease not stated",
+          "n": 677,
+          "wellcome": 1,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Cost-effectiveness analysis of Smart Triage, a data-driven pediatric sepsis triage platform in Eastern Uganda",
+              "year": "2023",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Neglected tropical diseases and malaria",
+          "n": 593,
+          "wellcome": 26,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Cost-effectiveness of scaling up mass drug administration for the control of soil-transmitted helminths: A comparison of cost function and constant costs analyses",
+              "year": "2016",
+              "url": ""
+            },
+            {
+              "title": "Using G6PD tests to enable the safe treatment of Plasmodium vivax infections with primaquine on the Thailand-Myanmar border: A cost-effectiveness analysis",
+              "year": "2017",
+              "url": ""
+            },
+            {
+              "title": "Economic considerations support C-reactive protein testing alongside malaria rapid diagnostic tests to guide antimicrobial therapy for patients with febrile illness in settings with low malaria endemicity",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "The global impact and cost-effectiveness of a melioidosis vaccine",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "The potential effect of improved provision of rabies post-exposure prophylaxis in Gavi-eligible countries: a modelling study",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Vaccination or mass drug administration against schistosomiasis: A hypothetical cost-effectiveness modelling comparison",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Malaria elimination transmission and costing in the Asia-Pacific: Developing an investment case",
+              "year": "2020",
+              "url": ""
+            },
+            {
+              "title": "Simulating the council-specific impact of anti-malaria interventions: A tool to support malaria strategic planning in Tanzania",
+              "year": "2020",
+              "url": ""
+            },
+            {
+              "title": "The cost-effectiveness of controlling dengue in Indonesia using wMel Wolbachia released at scale: a modelling study",
+              "year": "2020",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness and public health impact of RTS,S/AS01E malaria vaccine in Malawi, using a Markov static model",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Effectiveness and cost-effectiveness of reactive, targeted indoor residual spraying for malaria control in low-transmission settings: a cluster-randomised, non-inferiority trial in South Africa",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Global economic costs due to vivax malaria and the potential impact of its radical cure: A modelling study",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Implementation of field detection devices for antimalarial quality screening in lao pdr—a cost-effectiveness analysis",
+              "year": "2021",
+              "url": ""
+            },
+            {
+              "title": "Modeling impact and cost-effectiveness of driving-Y gene drives for malaria elimination in the Democratic Republic of the Congo",
+              "year": "2022",
+              "url": ""
+            },
+            {
+              "title": "Potential economic and clinical implications of improving access to snake antivenom in five ASEAN countries: A cost-effectiveness analysis",
+              "year": "2022",
+              "url": ""
+            },
+            {
+              "title": "The potential impact of Anopheles stephensi establishment on the transmission of Plasmodium falciparum in Ethiopia and prospective control measures",
+              "year": "2022",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness analysis of a multiplex lateral flow rapid diagnostic test for acute non-malarial febrile illness in rural Cambodia and Bangladesh",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Modeling resource allocation strategies for insecticide-treated bed nets to achieve malaria eradication.",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Reducing the Antigen Prevalence Target Threshold for Stopping and Restarting Mass Drug Administration for Lymphatic Filariasis Elimination: A Model-Based Cost-effectiveness Simulation in Tanzania, India and Haiti",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Simulation-based economic evaluation of the Wolbachia method in Brazil: a cost-effective strategy for dengue control",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "The epidemiological benefit of pyrethroid–pyrrole insecticide treated nets against malaria: an individual-based malaria transmission dynamics modelling study",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness and budget impact of malaria, measles, and meningitis vaccines in Africa: a scoping review",
+              "year": "2025",
+              "url": ""
+            },
+            {
+              "title": "Economic evaluation of Wolbachia deployment in Colombia: A modeling study",
+              "year": "2025",
+              "url": ""
+            },
+            {
+              "title": "Quantifying the potential value of entomological data collection for programmatic decision-making on malaria control in sub-Saharan African settings",
+              "year": "2025",
+              "url": ""
+            },
+            {
+              "title": "Routine childhood rabies pre-exposure prophylaxis can be cost effective in low- and middle-income countries",
+              "year": "2025",
+              "url": ""
+            },
+            {
+              "title": "Comparative effectiveness and cost-effectiveness of policies for provisioning rabies post-exposure vaccines",
+              "year": "2026",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Enteric infections",
+          "n": 424,
+          "wellcome": 7,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Cost-Effectiveness of Monovalent Rotavirus Vaccination of Infants in Malawi: A Postintroduction Analysis Using Individual Patient-Level Costing Data",
+              "year": "2016",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of routine and campaign use of typhoid Vi-conjugate vaccine in Gavi-eligible countries: a modelling study",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Cost, health impacts and cost effectiveness of iceless refrigeration in India’s last-mile vaccine cold chain delivery",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "Potential impact and cost-effectiveness of Shigella vaccination in 102 low-income and middle-income countries in children aged 5 years or younger: a modelling study",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "Projecting the long-term economic benefits of reducing Shigella-attributable linear growth faltering with a potential vaccine: a modelling study",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness analysis of a multiplex lateral flow rapid diagnostic test for acute non-malarial febrile illness in rural Cambodia and Bangladesh",
+              "year": "2024",
+              "url": ""
+            },
+            {
+              "title": "Microarray patch vaccines for typhoid conjugate vaccines: A global cost-effectiveness analysis",
+              "year": "2025",
+              "url": ""
+            }
+          ]
+        }
       ]
     },
     "mental": {
@@ -20093,7 +20638,205 @@
         "n": 1092,
         "wellcome": 7,
         "named_funder": 355
-      }
+      },
+      "subgroups": [
+        {
+          "label": "Depressive disorders",
+          "n": 690,
+          "wellcome": 7,
+          "focus": true,
+          "studies": [
+            {
+              "title": "Cost-effectiveness analysis for antidepressants and cognitive behavioral therapy for major depression in Thailand",
+              "year": "2012",
+              "url": ""
+            },
+            {
+              "title": "Sustained effectiveness and cost-effectiveness of the Healthy Activity Programme, a brief psychological treatment for depression delivered by lay counsellors in primary care: 12-month follow-up of a randomised controlled trial",
+              "year": "2017",
+              "url": ""
+            },
+            {
+              "title": "The Healthy Activity Program (HAP), a lay counsellor-delivered brief psychological treatment for severe depression, in primary care in India: a randomised controlled trial",
+              "year": "2017",
+              "url": ""
+            },
+            {
+              "title": "Quantifying the mental health and economic impacts of prospective Universal Basic Income schemes among young people in the UK: A microsimulation modelling study",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "Cost-effectiveness of a group psychological intervention for postnatal depression in British south Asian women: an economic evaluation from the ROSHNI-2 trial",
+              "year": "2025",
+              "url": ""
+            },
+            {
+              "title": "Developing a Health-Economic Model to Assess Cost-Effectiveness of Preventive Interventions for Children of Parents With Mental Illness or Substance Use Disorder",
+              "year": "2026",
+              "url": ""
+            },
+            {
+              "title": "Prolonged intermittent theta burst stimulation as an alternative to standard rTMS: Real-world data from patients with non-psychotic major depression",
+              "year": "2026",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Anxiety disorders",
+          "n": 288,
+          "wellcome": 2,
+          "focus": true,
+          "studies": [
+            {
+              "title": "Quantifying the mental health and economic impacts of prospective Universal Basic Income schemes among young people in the UK: A microsimulation modelling study",
+              "year": "2023",
+              "url": ""
+            },
+            {
+              "title": "Developing a Health-Economic Model to Assess Cost-Effectiveness of Preventive Interventions for Children of Parents With Mental Illness or Substance Use Disorder",
+              "year": "2026",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Schizophrenia",
+          "n": 256,
+          "wellcome": 0,
+          "focus": true,
+          "studies": []
+        },
+        {
+          "label": "Drug use disorders",
+          "n": 228,
+          "wellcome": 1,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Adapting the ASSIST model of informal peer-led intervention delivery to the Talk to FRANK drug prevention programme in UK secondary schools (ASSIST + FRANK): intervention development, refinement and a pilot cluster randomised controlled trial",
+              "year": "2017",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Mental disorders (condition not specified)",
+          "n": 198,
+          "wellcome": 1,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Effectiveness and cost-effectiveness of universal school-based mindfulness training compared with normal school provision in reducing risk of mental health problems and promoting well-being in adolescence: The MYRIAD cluster randomised controlled trial",
+              "year": "2022",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Other mental disorders",
+          "n": 159,
+          "wellcome": 1,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Cost-effectiveness of therapist-assisted internet-delivered psychological therapies for PTSD differing in trauma focus in England: an economic evaluation based on the STOP-PTSD trial",
+              "year": "2024",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Alcohol use disorders",
+          "n": 145,
+          "wellcome": 4,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Counselling for Alcohol Problems (CAP), a lay counsellor-delivered brief psychological treatment for harmful drinking in men, in primary care in India: a randomised controlled trial",
+              "year": "2017",
+              "url": ""
+            },
+            {
+              "title": "Sustained effectiveness and cost-effectiveness of Counselling for Alcohol Problems, a brief psychological treatment for harmful drinking in men, delivered by lay counsellors in primary care: 12-month follow-up of a randomised controlled trial",
+              "year": "2017",
+              "url": ""
+            },
+            {
+              "title": "Feasibility, acceptability and cost-effectiveness of a brief, lay counsellor-delivered psychological treatment for men with alcohol dependence in primary care: an exploratory randomized controlled trial",
+              "year": "2019",
+              "url": ""
+            },
+            {
+              "title": "Screening, brief intervention, and referral to treatment compared with treatment as usual for alcohol use in an integrated refugee settlement in Zambia: a hybrid, type 1, randomised controlled trial.",
+              "year": "2026",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Bipolar disorder",
+          "n": 58,
+          "wellcome": 0,
+          "focus": true,
+          "studies": []
+        },
+        {
+          "label": "Eating disorders",
+          "n": 49,
+          "wellcome": 1,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Clinical and cost-effectiveness of two ways of delivering guided self-help for people with an eating disorder: A multi-arm randomized controlled trial",
+              "year": "2021",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Attention-deficit/hyperactivity disorder",
+          "n": 37,
+          "wellcome": 0,
+          "focus": false,
+          "studies": []
+        },
+        {
+          "label": "Conduct disorder",
+          "n": 37,
+          "wellcome": 1,
+          "focus": false,
+          "studies": [
+            {
+              "title": "Evaluating childhood policy impacts on lifetime health, wellbeing and inequality: Lifecourse distributional economic evaluation",
+              "year": "2022",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "label": "Autism spectrum disorders",
+          "n": 30,
+          "wellcome": 0,
+          "focus": false,
+          "studies": []
+        },
+        {
+          "label": "Idiopathic developmental intellectual disability",
+          "n": 26,
+          "wellcome": 0,
+          "focus": false,
+          "studies": []
+        },
+        {
+          "label": "Substance use disorders (condition not specified)",
+          "n": 8,
+          "wellcome": 0,
+          "focus": false,
+          "studies": []
+        }
+      ]
     },
     "climate": {
       "label": "Climate & Health",
@@ -20713,209 +21456,28 @@
   "wellcome_outside_themes": 62,
   "wellcome_outside_groups": [
     {
-      "key": "infectious",
-      "label": "Infection-related, but GBD classifies under another cause",
-      "note": "Infection-related topics that GBD 2023 assigns to the condition they lead to or prevent, as its burden-based rules prescribe (e.g. chronic hepatitis C to liver disease, HPV vaccination to cervical cancer, maternal Group B strep vaccination to maternal and neonatal disorders), or that target no single disease (e.g. antimicrobial stewardship). This follows GBD's classification; it is not a coding error. The code-based Infectious Diseases theme does not count them.",
-      "n": 11,
+      "key": "mental",
+      "label": "Alcohol policy and wellbeing programmes",
+      "note": "These studies address alcohol policy, such as minimum pricing and taxation, or include mental health among the outcomes of a wider programme. Under the map's coding rules, each study is classified under the condition its intervention mainly targets; alcohol policies act on a risk factor (alcohol use) that affects many conditions, so they are recorded under that risk factor. These are not GBD mental or substance-use causes, so the studies are reported here rather than in the Mental Health theme.",
+      "n": 3,
       "studies": [
         {
-          "title": "Economic evaluation of screening strategies combined with hpv vaccination of preadolescent girls for the prevention of cervical cancer in Vientiane, Lao PDR",
-          "year": "2016",
-          "url": ""
+          "title": "Equity impact of minimum unit pricing of alcohol on household health and finances among rich and poor drinkers in South Africa",
+          "year": "2022",
+          "url": "",
+          "gbd": "risk factor: High alcohol use"
         },
         {
-          "title": "Antibiotic prophylaxis in the surgical management of miscarriage in low-income countries: a cost-effectiveness analysis of the AIMS trial",
-          "year": "2019",
-          "url": ""
-        },
-        {
-          "title": "Potential cost-effectiveness of a maternal Group B streptococcal vaccine in The Gambia",
-          "year": "2020",
-          "url": ""
-        },
-        {
-          "title": "Sustained Reduction in Third-generation Cephalosporin Usage in Adult Inpatients following Introduction of an Antimicrobial Stewardship Program in a Large, Urban Hospital in Malawi",
-          "year": "2020",
-          "url": ""
-        },
-        {
-          "title": "Economic and epidemiological evaluation of interventions to reduce the burden of hepatitis C in Yunnan province, China",
-          "year": "2021",
-          "url": ""
-        },
-        {
-          "title": "Cost-effectiveness analysis of maternal vaccination against Group B streptococcus in Japan",
-          "year": "2023",
-          "url": ""
-        },
-        {
-          "title": "Cost-effectiveness of integrated treatment for hepatitis C virus (HCV) among people who inject drugs in Norway: An economic evaluation of the INTRO-HCV trial",
-          "year": "2023",
-          "url": ""
-        },
-        {
-          "title": "Scale-up of Direct-Acting Antiviral Treatment in Prisons Is Both Cost-effective and Key to Hepatitis C Virus Elimination",
+          "title": "Estimating the effect of transitioning to a strength-based alcohol tax system on alcohol consumption and health outcomes: a modelling study of tax reform in England",
           "year": "2024",
-          "url": ""
+          "url": "",
+          "gbd": "risk factor: High alcohol use"
         },
         {
-          "title": "Cost-effectiveness analysis of switching from a bivalent to a nonavalent HPV vaccination programme in China: a modelling study",
+          "title": "Effects and costs of a multi-component menstrual health intervention (MENISCUS) on mental health problems, educational performance, and menstrual health in Ugandan secondary schools: an open-label, school-based, cluster-randomised controlled trial.",
           "year": "2025",
-          "url": ""
-        },
-        {
-          "title": "Cost-effectiveness and return on investment of hepatitis C virus elimination in China: A modelling study",
-          "year": "2025",
-          "url": ""
-        },
-        {
-          "title": "The projected cost-effectiveness and budget impact of alternative HPV vaccines in Senegal: A modeling study",
-          "year": "2026",
-          "url": ""
-        }
-      ]
-    },
-    {
-      "key": "cardiometabolic",
-      "label": "Cardiometabolic disease and obesity",
-      "note": null,
-      "n": 11,
-      "studies": [
-        {
-          "title": "Generalized Cost-Effectiveness Analysis of Pharmaceutical Interventions for Primary Prevention of Cardiovascular Disease in Thailand",
-          "year": "2012",
-          "url": ""
-        },
-        {
-          "title": "Cost-effectiveness of intensive multifactorial treatment compared with routine care for individuals with screendetected Type 2 diabetes: Analysis of the ADDITION-UK cluster-randomized controlled trial",
-          "year": "2015",
-          "url": ""
-        },
-        {
-          "title": "Incremental cost-effectiveness of screening and laser treatment for diabetic retinopathy and macular edema in Malawi",
-          "year": "2018",
-          "url": ""
-        },
-        {
-          "title": "Budget impact and cost-effectiveness analyses of the COBRA-BPS multicomponent hypertension management programme in rural communities in Bangladesh, Pakistan, and Sri Lanka",
-          "year": "2021",
-          "url": ""
-        },
-        {
-          "title": "Cost-effectiveness of bariatric surgery versus community weight management to treat obesity-related idiopathic intracranial hypertension: evidence from a single-payer healthcare system",
-          "year": "2021",
-          "url": ""
-        },
-        {
-          "title": "Estimated effect of increased diagnosis, treatment, and control of diabetes and its associated cardiovascular risk factors among low-income and middle-income countries: a microsimulation model",
-          "year": "2021",
-          "url": ""
-        },
-        {
-          "title": "Cost-Effectiveness of Masked Hypertension Screening and Treatment in US Adults With Suspected Masked Hypertension: A Simulation Study",
-          "year": "2022",
-          "url": ""
-        },
-        {
-          "title": "Effectiveness and cost-effectiveness of referral to a commercial open group behavioural weight management programme in adults with overweight and obesity: 5-year follow-up of the WRAP randomised controlled trial",
-          "year": "2022",
-          "url": ""
-        },
-        {
-          "title": "Development of a point-of-care genetic test for effective treatment of ischaemic stroke: an early model-based cost-effectiveness analysis",
-          "year": "2023",
-          "url": ""
-        },
-        {
-          "title": "Comparing the effectiveness and cost-effectiveness of alternative type 2 diabetes monitoring intervals in resource limited settings",
-          "year": "2024",
-          "url": ""
-        },
-        {
-          "title": "Within-Trial Cost-Effectiveness Analysis of a Family-Based Structured Lifestyle Modification Intervention Program for Cardiovascular Risk Reduction: Results from the PROLIFIC Trial",
-          "year": "2025",
-          "url": ""
-        }
-      ]
-    },
-    {
-      "key": "food",
-      "label": "Food systems and diet",
-      "note": null,
-      "n": 7,
-      "studies": [
-        {
-          "title": "Modelling of potential food policy interventions in Fiji and Tonga and their impacts on noncommunicable disease mortality",
-          "year": "2011",
-          "url": ""
-        },
-        {
-          "title": "Health-motivated taxes on red and processed meat: A modelling study on optimal tax levels and associated health impacts",
-          "year": "2018",
-          "url": ""
-        },
-        {
-          "title": "Estimating the cost-effectiveness of salt reformulation and increasing access to leisure centres in England, with PRIMEtime CE model validation using the AdViSHE tool",
-          "year": "2019",
-          "url": ""
-        },
-        {
-          "title": "PRIMEtime CE: A multistate life table model for estimating the cost-effectiveness of interventions affecting diet and physical activity",
-          "year": "2019",
-          "url": ""
-        },
-        {
-          "title": "Palm oil and dietary change: Application of an integrated macroeconomic, environmental, demographic, and health modelling framework for Thailand",
-          "year": "2019",
-          "url": ""
-        },
-        {
-          "title": "Cost and cost-effectiveness analysis of treatment for child undernutrition in low- and middle-income countries: A systematic review",
-          "year": "2020",
-          "url": ""
-        },
-        {
-          "title": "Economic and health impacts of the Change4Life Food Scanner app: Findings from a randomized pilot and feasibility study",
-          "year": "2023",
-          "url": ""
-        }
-      ]
-    },
-    {
-      "key": "mnch",
-      "label": "Maternal, newborn and child health",
-      "note": null,
-      "n": 6,
-      "studies": [
-        {
-          "title": "Women's groups practising participatory learning and action to improve maternal and newborn health in low-resource settings: A systematic review and meta-analysis",
-          "year": "2013",
-          "url": ""
-        },
-        {
-          "title": "Cost-effectiveness and economies of scale of a mass radio campaign to promote household life-saving practices in Burkina Faso",
-          "year": "2018",
-          "url": ""
-        },
-        {
-          "title": "Tranexamic acid for treatment of women with post-partum haemorrhage in Nigeria and Pakistan: a cost-effectiveness analysis of data from the WOMAN trial",
-          "year": "2018",
-          "url": ""
-        },
-        {
-          "title": "Modelling futility in the setting of fertility treatment",
-          "year": "2022",
-          "url": ""
-        },
-        {
-          "title": "Non-anaesthetist-administered ketamine for emergency caesarean section in Kenya: cost-effectiveness analysis",
-          "year": "2022",
-          "url": ""
-        },
-        {
-          "title": "Impact and cost-effectiveness of Neotree, a digital data capture and decision support tool designed to improve neonatal survival in Zimbabwe: an interrupted time series analysis and economic evaluation",
-          "year": "2026",
-          "url": ""
+          "url": "",
+          "gbd": "Gynecological diseases"
         }
       ]
     },
@@ -20928,32 +21490,162 @@
         {
           "title": "The economic evaluation of human papillomavirus vaccination strategies against cervical cancer in women in Lao PDR: A mathematical modelling approach",
           "year": "2016",
-          "url": ""
+          "url": "",
+          "gbd": "Cervical cancer"
         },
         {
           "title": "Palliative care and catastrophic costs in Malawi after a diagnosis of advanced cancer: a prospective cohort study",
           "year": "2021",
-          "url": ""
+          "url": "",
+          "gbd": "Neoplasms"
         },
         {
           "title": "Cost-effectiveness of a policy-based intervention to reduce melanoma and other skin cancers associated with indoor tanning*",
           "year": "2022",
-          "url": ""
+          "url": "",
+          "gbd": "Malignant skin melanoma; Non-melanoma skin cancer"
         },
         {
           "title": "Breast Cancer Screening Using Clinical Breast Examination: A Cost-Effectiveness Analysis for South Africa",
           "year": "2025",
-          "url": ""
+          "url": "",
+          "gbd": "Breast cancer"
         },
         {
           "title": "Equity impact and cost-effectiveness of a community health worker breast cancer educational programme in rural South Africa: a modelling study",
           "year": "2026",
-          "url": ""
+          "url": "",
+          "gbd": "Breast cancer"
         },
         {
           "title": "Lung Cancer Screening in a Population from Northeast Italy Exposed to Both Asbestos and Smoking: A Cost-Effectiveness Analysis",
           "year": "2026",
-          "url": ""
+          "url": "",
+          "gbd": "Tracheal, bronchus, and lung cancer"
+        }
+      ]
+    },
+    {
+      "key": "cardiometabolic",
+      "label": "Cardiometabolic disease and obesity",
+      "note": null,
+      "n": 11,
+      "studies": [
+        {
+          "title": "Generalized Cost-Effectiveness Analysis of Pharmaceutical Interventions for Primary Prevention of Cardiovascular Disease in Thailand",
+          "year": "2012",
+          "url": "",
+          "gbd": "Cardiovascular diseases"
+        },
+        {
+          "title": "Cost-effectiveness of intensive multifactorial treatment compared with routine care for individuals with screendetected Type 2 diabetes: Analysis of the ADDITION-UK cluster-randomized controlled trial",
+          "year": "2015",
+          "url": "",
+          "gbd": "Diabetes mellitus"
+        },
+        {
+          "title": "Incremental cost-effectiveness of screening and laser treatment for diabetic retinopathy and macular edema in Malawi",
+          "year": "2018",
+          "url": "",
+          "gbd": "Blindness and vision loss"
+        },
+        {
+          "title": "Budget impact and cost-effectiveness analyses of the COBRA-BPS multicomponent hypertension management programme in rural communities in Bangladesh, Pakistan, and Sri Lanka",
+          "year": "2021",
+          "url": "",
+          "gbd": "risk factor: High systolic blood pressure"
+        },
+        {
+          "title": "Cost-effectiveness of bariatric surgery versus community weight management to treat obesity-related idiopathic intracranial hypertension: evidence from a single-payer healthcare system",
+          "year": "2021",
+          "url": "",
+          "gbd": "Other neurological disorders"
+        },
+        {
+          "title": "Estimated effect of increased diagnosis, treatment, and control of diabetes and its associated cardiovascular risk factors among low-income and middle-income countries: a microsimulation model",
+          "year": "2021",
+          "url": "",
+          "gbd": "Diabetes mellitus"
+        },
+        {
+          "title": "Cost-Effectiveness of Masked Hypertension Screening and Treatment in US Adults With Suspected Masked Hypertension: A Simulation Study",
+          "year": "2022",
+          "url": "",
+          "gbd": "risk factor: High systolic blood pressure"
+        },
+        {
+          "title": "Effectiveness and cost-effectiveness of referral to a commercial open group behavioural weight management programme in adults with overweight and obesity: 5-year follow-up of the WRAP randomised controlled trial",
+          "year": "2022",
+          "url": "",
+          "gbd": "risk factor: High body-mass index"
+        },
+        {
+          "title": "Development of a point-of-care genetic test for effective treatment of ischaemic stroke: an early model-based cost-effectiveness analysis",
+          "year": "2023",
+          "url": "",
+          "gbd": "Stroke"
+        },
+        {
+          "title": "Comparing the effectiveness and cost-effectiveness of alternative type 2 diabetes monitoring intervals in resource limited settings",
+          "year": "2024",
+          "url": "",
+          "gbd": "Diabetes mellitus"
+        },
+        {
+          "title": "Within-Trial Cost-Effectiveness Analysis of a Family-Based Structured Lifestyle Modification Intervention Program for Cardiovascular Risk Reduction: Results from the PROLIFIC Trial",
+          "year": "2025",
+          "url": "",
+          "gbd": "risk factor: High LDL cholesterol, High body-mass index, High fasting plasma glucose, High systolic blood pressure"
+        }
+      ]
+    },
+    {
+      "key": "food",
+      "label": "Food systems and diet",
+      "note": null,
+      "n": 7,
+      "studies": [
+        {
+          "title": "Modelling of potential food policy interventions in Fiji and Tonga and their impacts on noncommunicable disease mortality",
+          "year": "2011",
+          "url": "",
+          "gbd": "risk factor: Diet high in red meat, Diet low in fruits, Diet low in vegetables"
+        },
+        {
+          "title": "Health-motivated taxes on red and processed meat: A modelling study on optimal tax levels and associated health impacts",
+          "year": "2018",
+          "url": "",
+          "gbd": "risk factor: Diet high in processed meat, Diet high in red meat"
+        },
+        {
+          "title": "Estimating the cost-effectiveness of salt reformulation and increasing access to leisure centres in England, with PRIMEtime CE model validation using the AdViSHE tool",
+          "year": "2019",
+          "url": "",
+          "gbd": "risk factor: Diet high in sodium, Low physical activity"
+        },
+        {
+          "title": "PRIMEtime CE: A multistate life table model for estimating the cost-effectiveness of interventions affecting diet and physical activity",
+          "year": "2019",
+          "url": "",
+          "gbd": "Cardiovascular diseases; Diabetes and kidney diseases; Digestive diseases; Neoplasms"
+        },
+        {
+          "title": "Palm oil and dietary change: Application of an integrated macroeconomic, environmental, demographic, and health modelling framework for Thailand",
+          "year": "2019",
+          "url": "",
+          "gbd": "Ischemic heart disease; Stroke"
+        },
+        {
+          "title": "Cost and cost-effectiveness analysis of treatment for child undernutrition in low- and middle-income countries: A systematic review",
+          "year": "2020",
+          "url": "",
+          "gbd": "Protein-energy malnutrition"
+        },
+        {
+          "title": "Economic and health impacts of the Change4Life Food Scanner app: Findings from a randomized pilot and feasibility study",
+          "year": "2023",
+          "url": "",
+          "gbd": "risk factor: Diet high in sugar-sweetened beverages"
         }
       ]
     },
@@ -20966,55 +21658,82 @@
         {
           "title": "Economic model of community-based falls prevention: seeking methodological solutions in evaluating the efficiency and equity of UK guideline recommendations",
           "year": "2023",
-          "url": ""
+          "url": "",
+          "gbd": "Falls"
         },
         {
           "title": "A new approach to Health Benefits Package design: an application of the Thanzi La Onse model in Malawi",
           "year": "2024",
-          "url": ""
+          "url": "",
+          "gbd": "not specific to one disease"
         },
         {
           "title": "Incorporating frailty to address the key challenges to geriatric economic evaluation",
           "year": "2024",
-          "url": ""
+          "url": "",
+          "gbd": "Falls"
         },
         {
           "title": "Reducing non-communicable diseases among Palestinian populations in Gaza: A participatory comparative and cost-effectiveness modeling assessment",
           "year": "2024",
-          "url": ""
+          "url": "",
+          "gbd": "Asthma; Breast cancer; Colon and rectum cancer"
         },
         {
           "title": "The potential impact of declining development assistance for health on population health in Malawi: A modelling study",
           "year": "2025",
-          "url": ""
+          "url": "",
+          "gbd": "not specific to one disease"
         },
         {
           "title": "Reducing tobacco supplier profits and pricing power: Modelling the impact of a tobacco price cap and tax increase on socioeconomic inequalities in England",
           "year": "2026",
-          "url": ""
+          "url": "",
+          "gbd": "risk factor: Smoking"
         }
       ]
     },
     {
-      "key": "mental",
-      "label": "Alcohol, drugs and mental health without a mental-health code",
-      "note": "Alcohol and drug use or mental-health outcomes without a GBD mental or substance-use code.",
-      "n": 3,
+      "key": "mnch",
+      "label": "Maternal, newborn and child health",
+      "note": null,
+      "n": 6,
       "studies": [
         {
-          "title": "Equity impact of minimum unit pricing of alcohol on household health and finances among rich and poor drinkers in South Africa",
+          "title": "Women's groups practising participatory learning and action to improve maternal and newborn health in low-resource settings: A systematic review and meta-analysis",
+          "year": "2013",
+          "url": "",
+          "gbd": "Maternal disorders; Neonatal disorders"
+        },
+        {
+          "title": "Cost-effectiveness and economies of scale of a mass radio campaign to promote household life-saving practices in Burkina Faso",
+          "year": "2018",
+          "url": "",
+          "gbd": "not specific to one disease"
+        },
+        {
+          "title": "Tranexamic acid for treatment of women with post-partum haemorrhage in Nigeria and Pakistan: a cost-effectiveness analysis of data from the WOMAN trial",
+          "year": "2018",
+          "url": "",
+          "gbd": "Maternal disorders"
+        },
+        {
+          "title": "Modelling futility in the setting of fertility treatment",
           "year": "2022",
-          "url": ""
+          "url": "",
+          "gbd": "Gynecological diseases"
         },
         {
-          "title": "Estimating the effect of transitioning to a strength-based alcohol tax system on alcohol consumption and health outcomes: a modelling study of tax reform in England",
-          "year": "2024",
-          "url": ""
+          "title": "Non-anaesthetist-administered ketamine for emergency caesarean section in Kenya: cost-effectiveness analysis",
+          "year": "2022",
+          "url": "",
+          "gbd": "Maternal disorders"
         },
         {
-          "title": "Effects and costs of a multi-component menstrual health intervention (MENISCUS) on mental health problems, educational performance, and menstrual health in Ugandan secondary schools: an open-label, school-based, cluster-randomised controlled trial.",
-          "year": "2025",
-          "url": ""
+          "title": "Impact and cost-effectiveness of Neotree, a digital data capture and decision support tool designed to improve neonatal survival in Zimbabwe: an interrupted time series analysis and economic evaluation",
+          "year": "2026",
+          "url": "",
+          "gbd": "Neonatal disorders"
         }
       ]
     },
@@ -21027,17 +21746,94 @@
         {
           "title": "Employer schemes to encourage walking to work: feasibility study incorporating an exploratory randomised controlled trial",
           "year": "2015",
-          "url": ""
+          "url": "",
+          "gbd": "risk factor: Low physical activity"
         },
         {
           "title": "Bristol Girls Dance Project: a cluster randomised controlled trial of an after-school dance programme to increase physical activity among 11- to 12-year-old girls",
           "year": "2016",
-          "url": ""
+          "url": "",
+          "gbd": "risk factor: Low physical activity"
         },
         {
           "title": "A school-based, peer-led programme to increase physical activity among 13- to 14-year-old adolescents: the GoActive cluster RCT",
           "year": "2021",
-          "url": ""
+          "url": "",
+          "gbd": "risk factor: Low physical activity"
+        }
+      ]
+    },
+    {
+      "key": "infectious",
+      "label": "Vaccines, hepatitis C and antibiotic use",
+      "note": "Following GBD 2023 rules, each study is classified under the condition its intervention prevents or treats, shown beside each title: HPV vaccination to cervical cancer (Neoplasms); hepatitis C treatment to cirrhosis and other chronic liver diseases (Digestive diseases), where GBD counts the lasting harm of chronic hepatitis C; maternal Group B strep vaccination to neonatal disorders, the newborn illness it prevents; antibiotic prophylaxis in miscarriage surgery to maternal disorders; and an antibiotic stewardship programme to no single disease. These conditions are not GBD infectious causes, so the studies are reported here rather than in the Infectious Diseases theme.",
+      "n": 11,
+      "studies": [
+        {
+          "title": "Economic evaluation of screening strategies combined with hpv vaccination of preadolescent girls for the prevention of cervical cancer in Vientiane, Lao PDR",
+          "year": "2016",
+          "url": "",
+          "gbd": "Cervical cancer"
+        },
+        {
+          "title": "Antibiotic prophylaxis in the surgical management of miscarriage in low-income countries: a cost-effectiveness analysis of the AIMS trial",
+          "year": "2019",
+          "url": "",
+          "gbd": "Maternal disorders"
+        },
+        {
+          "title": "Potential cost-effectiveness of a maternal Group B streptococcal vaccine in The Gambia",
+          "year": "2020",
+          "url": "",
+          "gbd": "Neonatal disorders"
+        },
+        {
+          "title": "Sustained Reduction in Third-generation Cephalosporin Usage in Adult Inpatients following Introduction of an Antimicrobial Stewardship Program in a Large, Urban Hospital in Malawi",
+          "year": "2020",
+          "url": "",
+          "gbd": "not specific to one disease"
+        },
+        {
+          "title": "Economic and epidemiological evaluation of interventions to reduce the burden of hepatitis C in Yunnan province, China",
+          "year": "2021",
+          "url": "",
+          "gbd": "Cirrhosis and other chronic liver diseases"
+        },
+        {
+          "title": "Cost-effectiveness analysis of maternal vaccination against Group B streptococcus in Japan",
+          "year": "2023",
+          "url": "",
+          "gbd": "Neonatal disorders"
+        },
+        {
+          "title": "Cost-effectiveness of integrated treatment for hepatitis C virus (HCV) among people who inject drugs in Norway: An economic evaluation of the INTRO-HCV trial",
+          "year": "2023",
+          "url": "",
+          "gbd": "Cirrhosis and other chronic liver diseases"
+        },
+        {
+          "title": "Scale-up of Direct-Acting Antiviral Treatment in Prisons Is Both Cost-effective and Key to Hepatitis C Virus Elimination",
+          "year": "2024",
+          "url": "",
+          "gbd": "Cirrhosis and other chronic liver diseases"
+        },
+        {
+          "title": "Cost-effectiveness analysis of switching from a bivalent to a nonavalent HPV vaccination programme in China: a modelling study",
+          "year": "2025",
+          "url": "",
+          "gbd": "Cervical cancer"
+        },
+        {
+          "title": "Cost-effectiveness and return on investment of hepatitis C virus elimination in China: A modelling study",
+          "year": "2025",
+          "url": "",
+          "gbd": "Cirrhosis and other chronic liver diseases"
+        },
+        {
+          "title": "The projected cost-effectiveness and budget impact of alternative HPV vaccines in Senegal: A modeling study",
+          "year": "2026",
+          "url": "",
+          "gbd": "Cervical cancer"
         }
       ]
     },
@@ -21050,47 +21846,56 @@
         {
           "title": "Using Genomic Information to Guide Ibrutinib Treatment Decisions in Chronic Lymphocytic Leukaemia: A Cost-Effectiveness Analysis",
           "year": "2017",
-          "url": ""
+          "url": "",
+          "gbd": "Leukemia"
         },
         {
           "title": "A prospective cohort study measuring cost-benefit analysis of the Otago Exercise Programme in community dwelling adults with rheumatoid arthritis",
           "year": "2018",
-          "url": ""
+          "url": "",
+          "gbd": "Falls"
         },
         {
           "title": "Community health workers to improve adherence to anti-seizure medication in rural South Africa: Is it cost-effective?",
           "year": "2021",
-          "url": ""
+          "url": "",
+          "gbd": "Idiopathic epilepsy"
         },
         {
           "title": "A single-centre analysis of a biosimilar switching programme for adalimumab in inflammatory bowel disease",
           "year": "2025",
-          "url": ""
+          "url": "",
+          "gbd": "Inflammatory bowel disease"
         },
         {
           "title": "Anti-tumor necrosis factor treatment from diagnosis is more effective and less costly than conventional \"step-up\" care for patients with active Crohn's disease: a cost-effectiveness analysis from the PROFILE trial",
           "year": "2025",
-          "url": ""
+          "url": "",
+          "gbd": "Inflammatory bowel disease"
         },
         {
           "title": "Change in subjective well-being and the associated costs of a woman-targeted presbyopia correction programme among older craftswomen in Zanzibar: A cost-outcome and scenario analysis",
           "year": "2025",
-          "url": ""
+          "url": "",
+          "gbd": "Blindness and vision loss"
         },
         {
           "title": "Economic burden and cost-effectiveness of treatments for open tibia fractures in Malawi: Economic analysis of a multicentre prospective cohort study",
           "year": "2025",
-          "url": ""
+          "url": "",
+          "gbd": "Injuries"
         },
         {
           "title": "Can real-world scaling up HCV treatment in people who inject drugs be cost-saving: an economic modelling study in the UK",
           "year": "2026",
-          "url": ""
+          "url": "",
+          "gbd": "Cirrhosis and other chronic liver diseases"
         },
         {
           "title": "Survival effect of prehospital emergency anaesthesia with intubation in risk-stratified patients with major trauma: a causal modelling study",
           "year": "2026",
-          "url": ""
+          "url": "",
+          "gbd": "Injuries"
         }
       ]
     }

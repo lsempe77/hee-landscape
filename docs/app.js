@@ -1453,10 +1453,11 @@ if (typeof document !== "undefined") {
   const GEO_CARD = "__geography";
   const METRICS_CARD = "__outcome_metrics";
   const FUNDERS_CARD = "__funders";
+  const MEASURE_CARD = "__outcome_measure";
   const OVERVIEW_TILE_ORDER = [
     STUDIES_CARD, ACCESS_CARD,
     GEO_CARD,
-    METRICS_CARD, "Model-based", FUNDERS_CARD
+    METRICS_CARD, "Model-based", FUNDERS_CARD, MEASURE_CARD
   ];
   // Grid widths and colours per card (styles.css: .tile-*).
   const TILE_CLASS = {
@@ -1465,7 +1466,8 @@ if (typeof document !== "undefined") {
     [GEO_CARD]: "tile-geo",
     [METRICS_CARD]: "tile-metrics",
     "Model-based": "tile-model",
-    [FUNDERS_CARD]: "tile-funders"
+    [FUNDERS_CARD]: "tile-funders",
+    [MEASURE_CARD]: "tile-measure"
   };
   // value: optional function replacing content.json's value (called after the data loads).
   const OVERVIEW_TILE_COPY = {
@@ -1515,6 +1517,7 @@ if (typeof document !== "undefined") {
     [GEO_CARD]: () => openOverviewTheme("Geography"),
     [METRICS_CARD]: () => openOverviewTheme("Methods & metrics"),
     "Model-based": () => openOverviewTheme("Methods & metrics"),
+    [MEASURE_CARD]: () => openOverviewTheme("Methods & metrics"),
     [FUNDERS_CARD]: () => openOverviewTheme("Research funding")
   };
 
@@ -1853,6 +1856,7 @@ if (typeof document !== "undefined") {
   // the export; if the study count changes, those two rows show "XX%".
   const OUTCOME_STUDIES = 41610;
   const DALY_STUDIES = 1434;
+  const DALY_EVALUATIONS = 1373;
   const OTHER_OUTCOME_STUDIES = 36288;
 
   function outcomeMetricsCard() {
@@ -1886,6 +1890,53 @@ if (typeof document !== "undefined") {
           "The bars therefore add up to more than 100%."
         ]
       });
+  }
+
+  // Overview tile: shares of economic evaluations (as in the Model-based tile)
+  // reporting QALYs and DALYs. QALYs from the web data; DALYs from the export
+  // count above, shown as "XX%" if the study count changes.
+  function outcomeMeasureCard() {
+    const ee = isEvaluation();
+    const q = db.codeOf.qaly_label ? db.codeOf.qaly_label.get("Uses QALY")
+      : db.levels.qaly_label.indexOf("Uses QALY");
+    let n = 0, k = 0;
+    db.studies.qaly_label.forEach((v, s) => {
+      if (!ee[s]) return;
+      n++;
+      if (v === q) k++;
+    });
+    const qalyPct = n ? 100 * k / n : null;
+    const dalyPct = n && db.nStudies === OUTCOME_STUDIES ? 100 * DALY_EVALUATIONS / n : null;
+
+    const box = el("div", "value-box measure-overview-card");
+    const title = el("div", "value-box-title");
+    title.textContent = "Health outcome measure";
+    const values = el("div", "measure-overview-values");
+    for (const [label, pct] of [["QALYs", qalyPct], ["DALYs", dalyPct]]) {
+      const item = el("div", "measure-overview-item");
+      const value = el("span", "value-box-value");
+      placeholderize(value, fmtPctWhole(pct));
+      const name = el("span", "measure-overview-label");
+      name.textContent = label;
+      item.append(value, name);
+      values.appendChild(item);
+    }
+    const sub = el("div", "value-box-sub");
+    sub.textContent = "Of economic evaluations. A study may report both.";
+    sub.appendChild(cardHelpButton({
+      title: "What are QALYs and DALYs?",
+      paragraphs: [
+        "A QALY (quality-adjusted life year) is one year of life in full health; years lived in poorer health " +
+        "count as less than one. A DALY (disability-adjusted life year) is one year of healthy life lost to " +
+        "illness, disability or early death; studies report DALYs averted.",
+        "Both combine length and quality of life in one number, so gains can be compared across diseases. " +
+        "Cost-utility analyses use one or the other. QALYs dominate overall; DALYs are more common in " +
+        "studies of lower-income settings.",
+        "Shares are of economic evaluations: reviews that report no evaluation of their own are left out."
+      ]
+    }));
+    box.append(title, values, sub);
+    return box;
   }
 
   // Overview card: the four full-evaluation types, as shares of studies with a type
@@ -2022,6 +2073,7 @@ if (typeof document !== "undefined") {
       else if (key === GEO_CARD) box = geographyCard();
       else if (key === METRICS_CARD) box = evalTypesCard();
       else if (key === FUNDERS_CARD) box = fundersCard();
+      else if (key === MEASURE_CARD) box = outcomeMeasureCard();
       else {
         const tile = tileByLabel.get(key);
         if (!tile) continue;
@@ -2441,9 +2493,9 @@ if (typeof document !== "undefined") {
         download.textContent = "Download PNG";
       }
     });
-    // "bare" figures carry their own heading inside the page, so the card shows only the links.
-    if (f.bare) body.append(open, download, status);
-    else body.append(ft, fc, open, download, status);
+    // "bare" figures carry their own heading and download links inside the page, so the card is the frame alone.
+    if (f.bare) return card;
+    body.append(ft, fc, open, download, status);
     card.appendChild(body);
     return card;
   }
