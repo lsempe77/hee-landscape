@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-21-no-haly-filter";
+const BUILD = "2026-10-22-any-haly-filter";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -234,10 +234,16 @@ export function applyFilters(db, filt) {
   const designCodes = f.design.length
     ? new Set(f.design.map(l => db.codeOf.design_basis.get(l))) : null;
   const modelCode = f.model !== "All" ? db.codeOf.model_label.get(f.model) : null;
-  const qalyCode = ["Uses QALY", "No QALY"].includes(f.qaly)
-    ? db.codeOf.qaly_label.get(f.qaly) : null;
-  const bothMeasures = f.qaly === "Both QALY and DALY";
-  const needsDaly = f.daly === "Uses DALY" || f.qaly === "Uses DALY" || bothMeasures;
+  // HALY type: which of QALY / DALY a study must (or must not) report.
+  const usesQalyCode = db.codeOf.qaly_label.get("Uses QALY");
+  const halyRule = {
+    "No HALY": (q, d) => !q && !d,
+    "Any HALY": (q, d) => q || d,
+    "QALY only": (q, d) => q && !d,
+    "DALY only": (q, d) => !q && d,
+    "Both QALY and DALY": (q, d) => q && d
+  }[f.qaly] || null;
+  const needsDaly = f.daly === "Uses DALY";
   const oaCode = f.oa !== "All" ? db.codeOf.oa_label.get(f.oa) : null;
   const scopeCode = f.scope !== "All" ? db.codeOf.geo_scope.get(f.scope) : null;
   let disSet = null;
@@ -269,10 +275,8 @@ export function applyFilters(db, filt) {
     if (reviewCodes && !reviewCodes.has(st.review_label[s])) continue;
     if (designCodes && !designCodes.has(st.design_basis[s])) continue;
     if (modelCode !== null && st.model_label[s] !== modelCode) continue;
-    if (qalyCode !== null && st.qaly_label[s] !== qalyCode) continue;
     if (needsDaly && st.uses_daly[s] !== 1) continue;
-    if (bothMeasures && st.qaly_label[s] !== db.codeOf.qaly_label.get("Uses QALY")) continue;
-    if (f.qaly === "No HALY" && (st.qaly_label[s] === db.codeOf.qaly_label.get("Uses QALY") || st.uses_daly[s] === 1)) continue;
+    if (halyRule && !halyRule(st.qaly_label[s] === usesQalyCode, st.uses_daly[s] === 1)) continue;
     if (oaCode !== null && st.oa_label[s] !== oaCode) continue;
     if (scopeCode !== null && st.geo_scope[s] !== scopeCode) continue;
     if (disSet && !disSet.has(s)) continue;
@@ -2590,7 +2594,7 @@ if (typeof document !== "undefined") {
       l => l + " (" + fmtNum(langN.get(l)) + ")");
 
     makeRadios("x-model", "x_model", ["All", "Model-based", "Measured"]);
-    makeRadios("x-qaly", "x_qaly", ["No HALY", "Uses QALY", "Uses DALY", "Both QALY and DALY"]);
+    makeRadios("x-qaly", "x_qaly", ["No HALY", "Any HALY", "QALY only", "DALY only", "Both QALY and DALY"]);
     makeRadios("x-oa", "x_oa", ["All", "Open access", "Not open"]);
 
     const scope = $("x-scope");
