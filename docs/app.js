@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-23-study-links";
+const BUILD = "2026-10-23-haly-all";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -2654,7 +2654,7 @@ if (typeof document !== "undefined") {
     state.filt = {
       years: db.years.slice(),
       income: [], region: [], disease: [], evaltype: [], design: [], funder: [], language: [],
-      model: "All", qaly: "No HALY", daly: "All", oa: "All", scope: "All"
+      model: "All", qaly: "All", daly: "All", oa: "All", scope: "All"
     };
 
     const slider = $("x-years");
@@ -2692,7 +2692,7 @@ if (typeof document !== "undefined") {
       l => l + " (" + fmtNum(langN.get(l)) + ")");
 
     makeRadios("x-model", "x_model", ["All", "Model-based", "Measured"]);
-    makeRadios("x-qaly", "x_qaly", ["No HALY", "Any HALY", "QALY only", "DALY only", "Both QALY and DALY"]);
+    makeRadios("x-qaly", "x_qaly", ["All", "No HALY", "Any HALY", "QALY only", "DALY only", "Both QALY and DALY"]);
     makeRadios("x-oa", "x_oa", ["All", "Open access", "Not open"]);
 
     const scope = $("x-scope");
