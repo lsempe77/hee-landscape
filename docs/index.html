@@ -11,7 +11,7 @@
      versions with SHA-384 integrity hashes verified by double fetch. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css" integrity="sha384-krui876Mk6M6Lq6uj1SQo+u4MoImxFwCfwzWNU982QBMNci3VMZ3FoYSdUakJD5I" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css" integrity="sha384-PSZaVsyG9jDu8hFaSJev5s/9poIJlX7cuxSGdqCgXRHpo2DzIaZAyCd2rG/DJJmV" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css?v=2026-10-14-eval-card-spacing">
+<link rel="stylesheet" href="styles.css?v=2026-10-23-study-links">
 </head>
 <body>
 
@@ -93,6 +93,7 @@
         <button class="back-link" id="gal-back">&larr; All themes</button>
         <h2 class="hero-title" id="gal-sec-title"></h2>
         <p class="theme-blurb" id="gal-sec-blurb"></p>
+        <div class="section-tiles" id="gal-sec-tiles" hidden></div>
         <div class="thematic-grid thematic-subsections" id="gal-subsections" hidden></div>
         <div class="fig-grid" id="gal-sec-grid"></div>
       </div>
@@ -183,6 +184,8 @@
 
         <button class="btn-outline-secondary" id="x-reset">Reset filters</button>
         <button class="btn-outline-secondary" id="x-download" type="button">Download filtered studies (CSV)</button>
+        <progress class="download-progress" id="x-download-progress" max="1" hidden
+          aria-label="Download progress"></progress>
         <p class="download-status" id="x-download-status" aria-live="polite"></p>
         <hr>
         <p class="text-muted">
@@ -484,7 +487,7 @@
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js" integrity="sha384-cnROoUgVILyibe3J0zhzWoJ9p2WmdnK7j/BOTSWqVDbC1pVw2d+i6Q/1ESKJKCYf" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js" integrity="sha384-EcVTHT5RdDTvzbTIbNOtaNxNALeJYDgmv5Crp3NBmcdrCPrDnqp6I1+ETJ/FCFHI" crossorigin="anonymous"></script>
-<script type="module" src="app.js?v=2026-10-22-income-pubyear-countries"></script>
+<script type="module" src="app.js?v=2026-10-23-study-links"></script>
 
 </body>
 </html>

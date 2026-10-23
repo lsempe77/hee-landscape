@@ -485,6 +485,17 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   color: #fff;
   font-size: .7rem;
 }
+/* Thematic analysis page: the section's Overview cards above its figures,
+   side by side, wrapping on narrow screens. */
+#gal-sec-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  align-items: start;
+  gap: .85rem;
+  max-width: 1180px;
+  margin: 0 0 1.4rem;
+}
+#gal-sec-tiles[hidden] { display: none; }
 /* Three columns per row; the last row is wide + narrow + wide. */
 #ov-tiles {
   display: grid;
@@ -492,7 +503,7 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   gap: .85rem;
   margin: 0;
 }
-#ov-tiles .value-box {
+:is(#ov-tiles, #gal-sec-tiles) .value-box {
   --tile-accent: #2b6cae;
   --tile-bg: #f1f6fb;
   position: relative;
@@ -507,6 +518,7 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   box-shadow: 0 4px 14px rgba(16, 36, 62, .06);
   color: var(--hee-ink);
 }
+#gal-sec-tiles .value-box { grid-column: auto; }
 /* Rows: studies (2/3) + access (1/3); geography (full); metrics + model/measure
    (stacked) + funders. Metrics and funders span both rows of the last band. */
 #ov-tiles .value-box.tile-studies { grid-column: span 32; }
@@ -518,23 +530,23 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 #ov-tiles .value-box.tile-funders { grid-row: span 2; }
 #ov-tiles .value-box.tile-model,
 #ov-tiles .value-box.tile-measure { grid-column: span 12; }
-#ov-tiles .value-box::before {
+:is(#ov-tiles, #gal-sec-tiles) .value-box::before {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
   width: 5px;
   background: var(--tile-accent);
 }
-#ov-tiles .value-box.tile-studies { --tile-accent: #2769a8; --tile-bg: #f0f6fc; }
-#ov-tiles .value-box.tile-access { --tile-accent: #b05b47; --tile-bg: #fbf2ef; }
-#ov-tiles .value-box.tile-geo { --tile-accent: #25835f; --tile-bg: #f2f8f4; }
-#ov-tiles .value-box.tile-metrics { --tile-accent: #16869a; --tile-bg: #eef8f8; }
-#ov-tiles .value-box.tile-model { --tile-accent: #2b6cae; --tile-bg: #f1f6fb; }
-#ov-tiles .value-box.tile-measure { --tile-accent: #16869a; --tile-bg: #eef8f8; }
+:is(#ov-tiles, #gal-sec-tiles) .value-box.tile-studies { --tile-accent: #2769a8; --tile-bg: #f0f6fc; }
+:is(#ov-tiles, #gal-sec-tiles) .value-box.tile-access { --tile-accent: #b05b47; --tile-bg: #fbf2ef; }
+:is(#ov-tiles, #gal-sec-tiles) .value-box.tile-geo { --tile-accent: #25835f; --tile-bg: #f2f8f4; }
+:is(#ov-tiles, #gal-sec-tiles) .value-box.tile-metrics { --tile-accent: #16869a; --tile-bg: #eef8f8; }
+:is(#ov-tiles, #gal-sec-tiles) .value-box.tile-model { --tile-accent: #2b6cae; --tile-bg: #f1f6fb; }
+:is(#ov-tiles, #gal-sec-tiles) .value-box.tile-measure { --tile-accent: #16869a; --tile-bg: #eef8f8; }
 .measure-overview-values { display: flex; flex-wrap: wrap; gap: .2rem 1.1rem; }
 .measure-overview-item { display: flex; align-items: baseline; gap: .35rem; }
 .measure-overview-label { color: var(--hee-ink); font-size: .8rem; font-weight: 600; }
-#ov-tiles .value-box.tile-funders { --tile-accent: #7b668c; --tile-bg: #f7f3f8; }
+:is(#ov-tiles, #gal-sec-tiles) .value-box.tile-funders { --tile-accent: #7b668c; --tile-bg: #f7f3f8; }
 /* "Who funds the evidence?" card: purple bars on a lavender track. */
 .funding-overview-card .metrics-overview-row { grid-template-columns: minmax(9.2rem, 1.25fr) minmax(5rem, 2fr) 3.2rem; }
 /* "Types of economic evaluation" card: room for labels such as "Cost-effectiveness (CEA)" and their "?". */
@@ -779,7 +791,7 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 .info-modal-body p { margin: 0 0 1rem; }
 .info-modal-body p:last-child { margin-bottom: 0; }
 /* Outcome and funding overview cards use compact horizontal bars. */
-#ov-tiles .value-box.metrics-overview-card { display: flex; flex-direction: column; }
+:is(#ov-tiles, #gal-sec-tiles) .value-box.metrics-overview-card { display: flex; flex-direction: column; }
 .metrics-overview-chart { display: grid; gap: .32rem; }
 .metrics-overview-row {
   display: grid;
@@ -814,7 +826,7 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   color: var(--hee-muted);
   font-size: .7rem;
 }
-#ov-tiles .value-box .value-box-title {
+:is(#ov-tiles, #gal-sec-tiles) .value-box .value-box-title {
   margin: 0 0 .55rem;
   color: var(--tile-accent);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -823,12 +835,12 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
   letter-spacing: .06em;
   opacity: 1;
 }
-#ov-tiles .value-box .value-box-value {
+:is(#ov-tiles, #gal-sec-tiles) .value-box .value-box-value {
   color: var(--hee-ink);
   font-size: 1.75rem;
   font-weight: 600;
 }
-#ov-tiles .value-box .value-box-sub {
+:is(#ov-tiles, #gal-sec-tiles) .value-box .value-box-sub {
   color: var(--hee-muted);
   font-size: .76rem;
   opacity: 1;
@@ -1406,6 +1418,8 @@ main { padding: 1.4rem 1.5rem 2.5rem; max-width: 1500px; margin: 0 auto; }
 .btn-outline-secondary:disabled { opacity: .6; cursor: progress; }
 .download-status { margin: .35rem 0 0; font-size: .74rem; color: var(--hee-muted); }
 .download-status:empty { display: none; }
+.download-progress { display: block; width: 100%; height: 8px; margin: .5rem 0 0; accent-color: var(--hee-accent); }
+.download-progress[hidden] { display: none; }
 
 .chart-toolbar { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: .6rem; align-items: flex-end; }
 .chart-toolbar .tb-field { display: flex; flex-direction: column; gap: .25rem; }
@@ -1562,4 +1576,5 @@ table.dataTable thead th.num { text-align: right; }
 /* Keep the options list above card shadows and headers, below the modals (z 2000). */
 .ts-dropdown { z-index: 1500; }
 
-.study-publication-link { display: inline-block; margin: 0 0 .4rem; font-size: .8rem; text-decoration: underline; }
+.study-publication-link { margin: 0 0 .4rem; font-size: .8rem; color: var(--hee-muted); overflow-wrap: anywhere; }
+.study-publication-link a { text-decoration: underline; }

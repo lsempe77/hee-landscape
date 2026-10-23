@@ -5,7 +5,7 @@ studies naming no country (about 11,000) had a blank title. This script writes
 the title and abstract of every study on the site, from the analysis master,
 in fixed-size chunks by site study index:
 
-  docs/data/text/index.json    {"n", "chunk", "files", "source"}
+  docs/data/text/index.json    {"n", "chunk", "files", "bytes", "source"}
   docs/data/text/NNN.json      {"start", "t": [titles], "a": [abstracts]}
 
 Whitespace is collapsed (the master keeps some non-breaking spaces the drill
@@ -49,13 +49,15 @@ def main():
     titles = [clean(master[rid]["title"]) for rid in ids]
     abstracts = [clean(master[rid]["abstract"]) for rid in ids]
     OUT.mkdir(parents=True, exist_ok=True)
-    files = []
+    files, sizes = [], []
     for start in range(0, len(ids), CHUNK):
         name = f"{start // CHUNK:03d}.json"
         payload = {"start": start, "t": titles[start:start + CHUNK], "a": abstracts[start:start + CHUNK]}
-        (OUT / name).write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+        (OUT / name).write_bytes(data)
         files.append(name)
-    index = {"n": len(ids), "chunk": CHUNK, "files": files, "source": master_path.name}
+        sizes.append(len(data))  # the download's progress bar uses these
+    index = {"n": len(ids), "chunk": CHUNK, "files": files, "bytes": sizes, "source": master_path.name}
     (OUT / "index.json").write_text(json.dumps(index, indent=1), encoding="utf-8")
     print(f"{len(ids)} studies in {len(files)} files; "
           f"{sum(1 for t in titles if not t)} without title, {sum(1 for a in abstracts if not a)} without abstract")

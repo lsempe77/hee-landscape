@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-22-income-pubyear-countries";
+const BUILD = "2026-10-23-study-links";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -81,6 +81,17 @@ export function publicationUrl(studies, index) {
   }
   const doi = studies.doi?.[index];
   return /^10\.\d{4,9}\/\S+$/i.test(doi || "") ? "https://doi.org/" + doi : null;
+}
+
+// What the study lists show under a title: the DOI when there is a valid one
+// (so it can be copied or cited), otherwise the publication's web address.
+export function studyReference(studies, index) {
+  const doi = studies.doi?.[index];
+  if (/^10\.\d{4,9}\/\S+$/i.test(doi || "")) {
+    return { label: "DOI", text: doi, href: "https://doi.org/" + doi };
+  }
+  const href = publicationUrl(studies, index);
+  return href ? { label: "Publication link", text: href, href } : null;
 }
 
 export function publicationAccessCounts(studies) {
@@ -1519,14 +1530,19 @@ if (typeof document !== "undefined") {
     }
   };
 
+  // Thematic analysis section each Overview card belongs to: the card links
+  // there, and the section page repeats the card above its figures.
+  const TILE_THEME = {
+    [ACCESS_CARD]: "Authorship & access",
+    [GEO_CARD]: "Geography",
+    [METRICS_CARD]: "Methods & metrics",
+    "Model-based": "Methods & metrics",
+    [MEASURE_CARD]: "Methods & metrics",
+    [FUNDERS_CARD]: "Research funding"
+  };
   const TILE_ACTIONS = {
     [STUDIES_CARD]: () => openModal("paper01.webp"),
-    [ACCESS_CARD]: () => openOverviewTheme("Authorship & access"),
-    [GEO_CARD]: () => openOverviewTheme("Geography"),
-    [METRICS_CARD]: () => openOverviewTheme("Methods & metrics"),
-    "Model-based": () => openOverviewTheme("Methods & metrics"),
-    [MEASURE_CARD]: () => openOverviewTheme("Methods & metrics"),
-    [FUNDERS_CARD]: () => openOverviewTheme("Research funding")
+    ...Object.fromEntries(Object.entries(TILE_THEME).map(([key, theme]) => [key, () => openOverviewTheme(theme)]))
   };
 
   function countLevel(col, label) {
@@ -2035,6 +2051,50 @@ if (typeof document !== "undefined") {
     });
   }
 
+  // One Overview card by key (null if content.json has no such tile).
+  function overviewTile(key, tileByLabel) {
+    let box;
+    if (key === STUDIES_CARD) box = studiesCard(tileByLabel);
+    else if (key === ACCESS_CARD) box = publicationAccessCard();
+    else if (key === GEO_CARD) box = geographyCard();
+    else if (key === METRICS_CARD) box = evalTypesCard();
+    else if (key === FUNDERS_CARD) box = fundersCard();
+    else if (key === MEASURE_CARD) box = outcomeMeasureCard();
+    else {
+      const tile = tileByLabel.get(key);
+      if (!tile) return null;
+      const copy = OVERVIEW_TILE_COPY[key] || {};
+      box = el("div", "value-box");
+      const title = el("div", "value-box-title");
+      title.textContent = copy.label || tile.label;
+      const value = el("div", "value-box-value");
+      value.textContent = copy.value ? copy.value() : tile.value;
+      box.append(title, value);
+      const subText = "sub" in copy ? copy.sub : tile.sub;
+      if (subText != null) {
+        const sub = el("div", "value-box-sub");
+        sub.textContent = subText;
+        box.appendChild(sub);
+      }
+    }
+    if (TILE_CLASS[key]) box.classList.add(TILE_CLASS[key]);
+    return box;
+  }
+
+  // The Overview cards that belong to a Thematic analysis section, shown at the
+  // top of its page (not clickable: they would link to the page itself).
+  function renderSectionTiles(title) {
+    const wrap = $("gal-sec-tiles");
+    wrap.textContent = "";
+    const tileByLabel = new Map(db.content.glance_tiles.map(tile => [tile.label, tile]));
+    for (const key of OVERVIEW_TILE_ORDER) {
+      if (TILE_THEME[key] !== title) continue;
+      const box = overviewTile(key, tileByLabel);
+      if (box) wrap.appendChild(box);
+    }
+    wrap.hidden = !wrap.children.length;
+  }
+
   function renderOverview() {
     const m = db.dict.meta;
     const built = $("nav-built");
@@ -2075,31 +2135,8 @@ if (typeof document !== "undefined") {
     wrap.textContent = "";
     const tileByLabel = new Map(db.content.glance_tiles.map(tile => [tile.label, tile]));
     for (const key of OVERVIEW_TILE_ORDER) {
-      let box;
-      if (key === STUDIES_CARD) box = studiesCard(tileByLabel);
-      else if (key === ACCESS_CARD) box = publicationAccessCard();
-      else if (key === GEO_CARD) box = geographyCard();
-      else if (key === METRICS_CARD) box = evalTypesCard();
-      else if (key === FUNDERS_CARD) box = fundersCard();
-      else if (key === MEASURE_CARD) box = outcomeMeasureCard();
-      else {
-        const tile = tileByLabel.get(key);
-        if (!tile) continue;
-        const copy = OVERVIEW_TILE_COPY[key] || {};
-        box = el("div", "value-box");
-        const title = el("div", "value-box-title");
-        title.textContent = copy.label || tile.label;
-        const value = el("div", "value-box-value");
-        value.textContent = copy.value ? copy.value() : tile.value;
-        box.append(title, value);
-        const subText = "sub" in copy ? copy.sub : tile.sub;
-        if (subText != null) {
-          const sub = el("div", "value-box-sub");
-          sub.textContent = subText;
-          box.appendChild(sub);
-        }
-      }
-      if (TILE_CLASS[key]) box.classList.add(TILE_CLASS[key]);
+      const box = overviewTile(key, tileByLabel);
+      if (!box) continue;
       makeOverviewCardInteractive(box, key);
       wrap.appendChild(box);
     }
@@ -2405,6 +2442,7 @@ if (typeof document !== "undefined") {
     $("gal-section").style.display = "block";
     $("gal-sec-title").textContent = view.title;
     setTextWithLinks($("gal-sec-blurb"), view.blurb.replace(/\s+/g, " ").trim());
+    renderSectionTiles(group ? null : sec.title);
     const topics = $("gal-subsections");
     topics.textContent = "";
     topics.hidden = !sec.groups || !!group;
@@ -2718,16 +2756,38 @@ if (typeof document !== "undefined") {
 
   // Titles and abstracts of every study, in fixed-size chunks by study index
   // (scripts/build_study_text.py); only the chunks the given studies need are fetched.
-  async function loadStudyText(studies) {
+  // onProgress(loaded, total) reports bytes received; total is null when the
+  // index has no file sizes.
+  async function loadStudyText(studies, onProgress = () => {}) {
     const r = await fetch("data/text/index.json?v=" + BUILD);
     if (!r.ok) throw new Error("Study text index unavailable");
     const index = await r.json();
     const need = [...new Set(studies.map(s => Math.floor(s / index.chunk)))];
+    const total = index.bytes ? need.reduce((sum, k) => sum + index.bytes[k], 0) : null;
+    let loaded = 0;
+    onProgress(0, total);
     const chunks = new Map();
     await Promise.all(need.map(async k => {
       const res = await fetch("data/text/" + index.files[k] + "?v=" + BUILD);
       if (!res.ok) throw new Error("Study text chunk unavailable");
-      chunks.set(k, await res.json());
+      if (!res.body) {
+        const json = await res.json();
+        loaded += index.bytes ? index.bytes[k] : 0;
+        onProgress(loaded, total);
+        chunks.set(k, json);
+        return;
+      }
+      // Read the body piece by piece so the download can show progress.
+      const reader = res.body.getReader();
+      const parts = [];
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        parts.push(value);
+        loaded += value.length;
+        onProgress(loaded, total);
+      }
+      chunks.set(k, JSON.parse(await new Blob(parts).text()));
     }));
     const get = (key, s) => {
       const c = chunks.get(Math.floor(s / index.chunk));
@@ -2742,6 +2802,7 @@ if (typeof document !== "undefined") {
   async function downloadFilteredStudies() {
     const button = $("x-download");
     const status = $("x-download-status");
+    const progress = $("x-download-progress");
     const { studies, mask } = state.result;
     if (!studies.length) {
       status.textContent = "No studies match the current filters.";
@@ -2774,7 +2835,27 @@ if (typeof document !== "undefined") {
         diseasesOf.get(s).push(db.disease_grps[d.g[i]]);
       }
       status.textContent = "Loading study titles and abstracts…";
-      const text = await loadStudyText(studies);
+      progress.hidden = false;
+      progress.removeAttribute("value");
+      const mb = bytes => (bytes / 1e6).toFixed(1);
+      let lastPaint = 0;
+      const text = await loadStudyText(studies, (loaded, total) => {
+        const now = performance.now();
+        if (now - lastPaint < 100 && loaded !== total) return;
+        lastPaint = now;
+        if (!total) {
+          status.textContent = "Loading study titles and abstracts: " + mb(loaded) + " MB…";
+          return;
+        }
+        const share = Math.min(1, loaded / total);
+        progress.value = share;
+        status.textContent = "Loading study titles and abstracts: " + mb(loaded) + " of " + mb(total) +
+          " MB (" + Math.round(100 * share) + "%)";
+      });
+      progress.value = 1;
+      status.textContent = "Building the CSV file…";
+      // Let the browser show the message before the (blocking) CSV build.
+      await new Promise(resolve => setTimeout(resolve, 30));
 
       const st = db.studies;
       const label = (col, s) => db.levels[col][st[col][s]] ?? "";
@@ -2819,6 +2900,7 @@ if (typeof document !== "undefined") {
     } catch (e) {
       status.textContent = "Download failed; please try again.";
     } finally {
+      progress.hidden = true;
       button.disabled = false;
     }
   }
@@ -3571,14 +3653,17 @@ if (typeof document !== "undefined") {
       }
       item.appendChild(title);
       item.appendChild(meta);
-      const publicationLink = publicationUrl(db.studies, r.s);
-      if (publicationLink) {
-        const link = el("a", "study-publication-link");
-        link.href = publicationLink;
+      const ref = studyReference(db.studies, r.s);
+      if (ref) {
+        const line = el("div", "study-publication-link");
+        line.textContent = ref.label + ": ";
+        const link = el("a");
+        link.href = ref.href;
         link.target = "_blank";
         link.rel = "noopener noreferrer";
-        link.textContent = "View publication";
-        item.appendChild(link);
+        link.textContent = ref.text;
+        line.appendChild(link);
+        item.appendChild(line);
       }
       item.appendChild(abs);
       list.appendChild(item);
