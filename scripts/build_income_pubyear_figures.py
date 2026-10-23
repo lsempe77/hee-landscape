@@ -185,13 +185,17 @@ def metric(rows):
     ax.legend(handles=[plt.Rectangle((0, 0), 1, 1, color=ORANGE), plt.Rectangle((0, 0), 1, 1, color=BLUE)],
               labels=["Reports a DALY", "Reports a QALY"], loc="lower center", bbox_to_anchor=(.5, 1.0), ncol=2,
               frameon=False, fontsize=11)
-    footer(fig, f"All {len(rows):,} studies; the income rows use studies of a single country. A study may report "
+    al = m["All studies"]
+    n_single = len(fd.single(rows, COL))
+    footer(fig, f"Of all {len(rows):,} studies, {pct(al[0], 1)} report a QALY and {pct(al[1], 1)} a DALY. Income rows: "
+                f"the {n_single:,} single-country studies with a known income group. A study may report "
                 f"neither measure, one or both. {RULE}")
-    save(fig, "fig_metric_pubyear.webp")
+    save(fig, "fig_metric_pubyear_v2.webp")
     return {"caption": f"Share of eligible studies reporting each comparable metric. The metric flips with income: "
                        f"high-income research reports QALYs ({pct(hi[0])}) and almost no DALYs ({pct(hi[1])}); "
                        f"low-income research does the reverse ({pct(lo[1])} DALYs, {pct(lo[0])} QALYs) — so rich and poor "
-                       f"settings are measured in different units. Base: {len(rows):,} eligible studies (income shown "
+                       f"settings are measured in different units. Of all {len(rows):,} eligible studies, {pct(al[0], 1)} report a QALY "
+                       f"and {pct(al[1], 1)} a DALY. Base: {len(rows):,} eligible studies (income shown "
                        "for single-country studies, by the World Bank group of the country studied on 1 January of the publication year); "
                        "a study may report neither, one, or both."}
 
@@ -387,7 +391,7 @@ def main():
     captions = json.load(open(CAPTIONS, encoding="utf-8")) if os.path.exists(CAPTIONS) else {}
     income_captions = {
         "fig_equity_time.webp": {"file": "fig_equity_time_pubyear.webp", **equity_time(rows)},
-        "fig_metric.webp": {"file": "fig_metric_pubyear.webp", **metric(rows)},
+        "fig_metric.webp": {"file": "fig_metric_pubyear_v2.webp", **metric(rows)},
         "fig_intervention_mix.webp": {"file": "fig_intervention_mix_pubyear.webp", **intervention_mix(rows)},
         "paper05.webp": {"file": "paper05_pubyear.webp", **paper05(rows, geo_groups)},
         "fig_theme_rank.webp": {"file": "fig_theme_rank_pubyear.webp", **theme_rank(rows, labels)},
