@@ -1,0 +1,59 @@
+descriptor,question,gbd_causes,gbd_status,icd10,note
+"Neoplasm Recurrence, Local",Q1,Neoplasms,cause,,"Q1 revised (B. Hutchinson 2026-10-14): enough to code at GBD level 2 (Neoplasms) but not level 3/4, no specific cancer named; consistent with Q3. Was 'cause unspecified' (2026-10-13)"
+Neoplasm Metastasis,Q1,Neoplasms,cause,,"Q1 revised (B. Hutchinson 2026-10-14): enough to code at GBD level 2 (Neoplasms) but not level 3/4, no specific cancer named; consistent with Q3. Was 'cause unspecified' (2026-10-13)"
+Lymphatic Metastasis,Q1,Neoplasms,cause,,"Q1 revised (B. Hutchinson 2026-10-14): enough to code at GBD level 2 (Neoplasms) but not level 3/4, no specific cancer named; consistent with Q3. Was 'cause unspecified' (2026-10-13)"
+Ischemia,Q1,Cardiovascular diseases,cause,,"Q1 revised (B. Hutchinson 2026-10-14): coded at GBD level 2, no specific disease named. Was 'cause unspecified' (2026-10-13)"
+Precancerous Conditions,Q1,Neoplasms,cause,,"Q1 revised (B. Hutchinson 2026-10-14): enough to code at GBD level 2 (Neoplasms) but not level 3/4, no specific cancer named; consistent with Q3. Was 'cause unspecified' (2026-10-13)"
+Postoperative Pain,Q2,,disease_unattributable,G89.18; G89.28,Q2 (B. Hutchinson 2026-10-14): postprocedural pain G89.18 (acute) / G89.28 (chronic) are level-1 GBD garbage codes. Was adverse effects of medical treatment (2026-10-13)
+Sepsis,Q2,,disease_unattributable,,Q2 option A
+Acute Kidney Injury,Q2,,disease_unattributable,,Q2 option A
+Renal Insufficiency,Q2,,disease_unattributable,,Q2 option A
+Hyperkalemia,Q2,,disease_unattributable,,Q2 option A
+Gastrointestinal Hemorrhage,Q2,Other digestive diseases,cause,,Q2 option A
+Radiation Injuries,Q2,Injuries,cause,,"Not listed in Q2 option A; injury ruling applied (injury named by nature, external cause not stated: level 1 Injuries)"
+Pneumococcal Infections,Q3,"Communicable, maternal, neonatal, and nutritional diseases",cause,,Q3 option B: pathogen heading at level 1
+Staphylococcal Infections,Q3,"Communicable, maternal, neonatal, and nutritional diseases",cause,,Q3 option B
+Respiratory Tract Infections,Q3,"Communicable, maternal, neonatal, and nutritional diseases",cause,,Q3 option B
+Bacterial Infections,Q3,"Communicable, maternal, neonatal, and nutritional diseases",cause,,Q3 option B
+Community-Acquired Infections,Q3,"Communicable, maternal, neonatal, and nutritional diseases",cause,,Q3 option B
+Streptococcal Infections,Q3,"Communicable, maternal, neonatal, and nutritional diseases",cause,,Q3 option B
+Gram-Positive Bacterial Infections,Q3,"Communicable, maternal, neonatal, and nutritional diseases",cause,,Q3 option B
+Haemophilus Infections,Q3,"Communicable, maternal, neonatal, and nutritional diseases",cause,,Q3 option B
+Helicobacter Infections,Q3,Upper digestive system diseases,cause,,Q3 option B exception: the pathogen names one disease group
+Chlamydia Infections,Q3,Sexually transmitted infections excluding HIV,cause,,Q3 option B exception: chlamydia as an STI
+Meningococcal Infections,Q3,Meningitis,cause,,Q3 option B exception: one disease
+"Sleep Apnea, Obstructive",Q4,Other chronic respiratory diseases,cause,G47.3,B. Hutchinson ICD-10 -> GBD table
+Uterine Cervical Dysplasia,Q4,Other neoplasms,cause,N87,B. Hutchinson ICD-10 -> GBD table
+Intracranial Aneurysm,Q4,Stroke,cause,I67.1,B. Hutchinson ICD-10 -> GBD table
+Cystic Fibrosis,Q4,"Endocrine, metabolic, blood, and immune disorders",cause,E84,B. Hutchinson ICD-10 -> GBD table
+Infertility,Q4,,disease_unattributable,N46; N97,B. Hutchinson: GBD garbage code
+Carotid Stenosis,Q4,Stroke,cause,I65,B. Hutchinson ICD-10 -> GBD table
+Aneuploidy,Q4,Congenital birth defects,cause,Q97; Q99.8,B. Hutchinson: Other chromosomal abnormalities (GBD level 4 under Congenital birth defects)
+Esophageal and Gastric Varices,Q4,Cirrhosis and other chronic liver diseases,cause,I85.0,B. Hutchinson ICD-10 -> GBD table
+Ocular Hypertension,Q4,,disease_unattributable,H40.05,B. Hutchinson: GBD garbage code (level 1)
+Carpal Tunnel Syndrome,Q4,,disease_unattributable,G56,B. Hutchinson: GBD garbage code (level 1)
+Metabolic Syndrome,Q4,"Endocrine, metabolic, blood, and immune disorders",cause,E88,B. Hutchinson ICD-10 -> GBD table
+"Arthritis, Infectious",Q4,Other musculoskeletal disorders,cause,M01,B. Hutchinson ICD-10 -> GBD table
+Opiate Overdose,Q4,Drug use disorders,cause,T40.0-T40.2; X42,"Q4 revised (B. Hutchinson 2026-10-14): opioid use disorders (GBD level 4 under Drug use disorders), consistent with GBD methods (supplement pp. 33-35). Was disease unattributable"
+Esophageal Achalasia,Q4,Other digestive diseases,cause,K22.0,B. Hutchinson ICD-10 -> GBD table
+Hemophilia B,Q4,"Endocrine, metabolic, blood, and immune disorders",cause,D67,"Q4; ICD corrected D68.3 -> D67, confirmed (B. Hutchinson 2026-10-14): D67 = Endocrine, metabolic, blood, and immune disorders in GBD"
+Peritoneal Neoplasms,Q4,Other malignant neoplasms,cause,C48,"Q4 revised (B. Hutchinson 2026-10-14): malignant topic -> Other malignant neoplasms; all 12 included studies are peritoneal cancer (HIPEC, metastases, staging). Was disease unattributable"
+Heart Failure,Q5,,disease_unattributable,I50,Q5 option A; GBD garbage code
+Carotid Artery Diseases,Q4-analogy,Stroke,cause,I65; I67.2,Same as the Q4 ruling on Carotid Stenosis (I65 -> Stroke); applied by analogy; CONFIRMED by the team 2026-10-14
+Sleep Apnea Syndromes,Q4-analogy,Other chronic respiratory diseases,cause,G47.3,"Same as the Q4 ruling on Sleep Apnea, Obstructive (G47.3); applied by analogy; CONFIRMED by the team 2026-10-14"
+Acinetobacter Infections,Q3,"Communicable, maternal, neonatal, and nutritional diseases",cause,,"Q3 option B (pathogen heading at level 1), applied 2026-10-14 to a heading the models disputed"
+Leiomyoma,round2,Gynecological diseases,cause,D25,"CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); uterine fibroids, GBD level 4 under Gynecological diseases; high confidence"
+Peripheral Vascular Diseases,round2,Lower extremity peripheral arterial disease,cause,I73.9,CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); high confidence
+Colonic Diseases,round2,Digestive diseases,cause,K63.9,CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); general heading at level 2 (Q1 logic); high confidence
+Child Behavior Disorders,round2,Mental disorders,cause,F91; F90,CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); general heading at level 2 (Q1 logic); high confidence
+Fetal Diseases,round2,Maternal and neonatal disorders,cause,,"CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); general heading at level 2 (Q1 logic); studies on CMV, aneuploidy, fetal shunts; medium"
+"Cystadenocarcinoma, Serous",round2,Neoplasms,cause,C56; C54,CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); heading spans ovarian and uterine serous cancers: level 2 (Q1 logic); medium
+Endometritis,round2,Maternal disorders,cause,O85; O86,CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); all included studies postpartum / post-caesarean (maternal sepsis and other maternal infections); high
+"Pregnancy Complications, Parasitic",round2,Maternal disorders,cause,O98.6,"CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); malaria in pregnancy, congenital Chagas; medium"
+Foreign-Body Migration,round2,Adverse effects of medical treatment,cause,T82-T85,"CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); migrated stents, filters, catheters: complications of devices (Brian's AEMT definition); medium-high"
+Cerebrospinal Fluid Leak,round2,Adverse effects of medical treatment,cause,G97.0,CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); all included studies are post-surgical leaks; medium
+Pelvic Inflammatory Disease,round2,Sexually transmitted infections excluding HIV,cause,N70-N73,"CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); mostly chlamydia screening; infections and sequelae to the infectious cause; medium, check N70-N73 in the GBD table"
+Obsessive-Compulsive Disorder,round2,Anxiety disorders,cause,F42,"CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); medium, check F42 in the GBD table"
+Keratoconus,round2,Blindness and vision loss,cause,H18.6,"CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); other vision loss; low, check: may be a garbage code"
+Retinal Perforations,round2,Blindness and vision loss,cause,H33.3; H35.3,"CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); macular hole; low, check: may be a garbage code"
+Short Bowel Syndrome,round2,Other digestive diseases,cause,K91.2,"CONFIRMED by the team 2026-10-14 (proposed by L. Sempe by B. Hutchinson's ICD-10 method); teduglutide studies; low, check: may be a garbage code"

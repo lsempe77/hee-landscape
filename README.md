@@ -8,6 +8,27 @@ Static site for the health economic evaluation (HEE) evidence map, published at
 
 Newest first; add a line here when you push something colleagues should know about.
 
+- **23 Oct 2026: Explorer HALY filter opens on All again.** Since 21 Oct the HALY type filter had no "All"
+  option, so the Explorer opened (and reset) on No HALY: 22,095 studies, 0% using a QALY, and the CSV
+  download held only those. "All" is back as the default (41,610 studies, 44% QALY).
+- **23 Oct 2026: DOIs in the Countries study lists.** Clicking a cell in a country profile lists its studies;
+  each now shows "DOI: …" linked to doi.org, or "Publication link: …" when there is no DOI (39,173 DOIs and
+  2,270 web links; 99.6% of studies). Helper: `studyReference` in `docs/app.js`.
+- **23 Oct 2026: Progress bar for "Download filtered studies (CSV)".** Shows MB loaded and percent while the
+  titles and abstracts load (about 90 MB for all studies), then "Building the CSV file…".
+  `docs/data/text/index.json` now lists each chunk's size; `scripts/build_study_text.py` writes them.
+- **23 Oct 2026: Overview cards on Thematic analysis pages.** Authorship & access, Geography, Methods & metrics
+  and Research funding open with their Overview card(s) above the figures. One map (`TILE_THEME` in
+  `docs/app.js`) drives both the Overview card links and these cards.
+- **23 Oct 2026: Overall QALY and DALY shares in "How health benefits are measured differs by country
+  income".** Footer and caption now say 43.6% of all 41,610 studies report a QALY and 3.4% a DALY (income rows:
+  27,897 single-country studies). Same all-records base as the manuscript (46.9% QALY or DALY), reviews
+  included; keep the two in step if the manuscript changes. Figure: `fig_metric_pubyear_v2.webp`.
+- **23 Oct 2026: Methods folder and Wellcome review files added to Git.** `methods/README.md` (where each
+  analysis's code and outputs live; GBD coding record and reference tables), `scripts/export_wellcome_audit.py`
+  and `scripts/export_wellcome_standalone.py`, and their outputs in `exports/` (Wellcome audit workbook,
+  standalone Wellcome page, Infectious Diseases scope candidates for review).
+
 - **22 Oct 2026: Income and region groupings made consistent.** Country-level views and figures (one dot or bar
   per country, all years pooled) now give each country the World Bank group most of its studies were published
   under, matching the publication-year rule used for studies (zero-study countries: the group held in most years

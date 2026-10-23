@@ -1,0 +1,54 @@
+risk_l3_id,risk_l3_name,risk_l2_name,risk_l1_name,is_l2_leaf,sort_order
+83,Unsafe water source,"Unsafe water, sanitation, and handwashing",Environmental/occupational risks,False,4
+84,Unsafe sanitation,"Unsafe water, sanitation, and handwashing",Environmental/occupational risks,False,5
+238,No access to handwashing facility,"Unsafe water, sanitation, and handwashing",Environmental/occupational risks,False,6
+380,Particulate matter pollution,Air pollution,Environmental/occupational risks,False,8
+88,Ambient ozone pollution,Air pollution,Environmental/occupational risks,False,11
+404,Nitrogen dioxide pollution,Air pollution,Environmental/occupational risks,False,12
+337,High temperature,Non-optimal temperature,Environmental/occupational risks,False,14
+338,Low temperature,Non-optimal temperature,Environmental/occupational risks,False,15
+90,Residential radon,Other environmental risks,Environmental/occupational risks,False,17
+91,Lead exposure,Other environmental risks,Environmental/occupational risks,False,18
+127,Occupational carcinogens,Occupational risks,Environmental/occupational risks,False,20
+128,Occupational asthmagens,Occupational risks,Environmental/occupational risks,False,34
+129,"Occupational particulate matter, gases, and fumes",Occupational risks,Environmental/occupational risks,False,35
+130,Occupational noise,Occupational risks,Environmental/occupational risks,False,36
+131,Occupational injuries,Occupational risks,Environmental/occupational risks,False,37
+132,Occupational ergonomic factors,Occupational risks,Environmental/occupational risks,False,38
+93,Suboptimal breastfeeding,Child and maternal malnutrition,Behavioral risks,False,41
+239,Child growth failure,Child and maternal malnutrition,Behavioral risks,False,44
+339,Low birth weight and short gestation,Child and maternal malnutrition,Behavioral risks,False,48
+95,Iron deficiency,Child and maternal malnutrition,Behavioral risks,False,51
+96,Vitamin A deficiency,Child and maternal malnutrition,Behavioral risks,False,52
+97,Zinc deficiency,Child and maternal malnutrition,Behavioral risks,False,53
+99,Smoking,Tobacco,Behavioral risks,False,55
+332,Chewing tobacco,Tobacco,Behavioral risks,False,56
+100,Secondhand smoke,Tobacco,Behavioral risks,False,57
+102,High alcohol use,High alcohol use,Behavioral risks,True,58
+103,Drug use,Drug use,Behavioral risks,True,59
+111,Diet low in fruits,Dietary risks,Behavioral risks,False,61
+112,Diet low in vegetables,Dietary risks,Behavioral risks,False,62
+333,Diet low in legumes,Dietary risks,Behavioral risks,False,63
+113,Diet low in whole grains,Dietary risks,Behavioral risks,False,64
+114,Diet low in nuts and seeds,Dietary risks,Behavioral risks,False,65
+115,Diet low in milk,Dietary risks,Behavioral risks,False,66
+116,Diet high in red meat,Dietary risks,Behavioral risks,False,67
+117,Diet high in processed meat,Dietary risks,Behavioral risks,False,68
+118,Diet high in sugar-sweetened beverages,Dietary risks,Behavioral risks,False,69
+119,Diet low in fiber,Dietary risks,Behavioral risks,False,70
+147,Diet low in calcium,Dietary risks,Behavioral risks,False,71
+121,Diet low in seafood omega-3 fatty acids,Dietary risks,Behavioral risks,False,72
+122,Diet low in omega-6 polyunsaturated fatty acids,Dietary risks,Behavioral risks,False,73
+123,Diet high in trans fatty acids,Dietary risks,Behavioral risks,False,74
+124,Diet high in sodium,Dietary risks,Behavioral risks,False,75
+135,Intimate partner violence,Intimate partner violence,Behavioral risks,True,76
+134,Sexual violence against children,Sexual violence against children and bullying,Behavioral risks,False,78
+363,Bullying victimization,Sexual violence against children and bullying,Behavioral risks,False,79
+170,Unsafe sex,Unsafe sex,Behavioral risks,True,80
+125,Low physical activity,Low physical activity,Behavioral risks,True,81
+105,High fasting plasma glucose,High fasting plasma glucose,Metabolic risks,True,83
+367,High LDL cholesterol,High LDL cholesterol,Metabolic risks,True,84
+107,High systolic blood pressure,High systolic blood pressure,Metabolic risks,True,85
+108,High body-mass index,High body-mass index,Metabolic risks,True,86
+109,Low bone mineral density,Low bone mineral density,Metabolic risks,True,87
+341,Kidney dysfunction,Kidney dysfunction,Metabolic risks,True,88

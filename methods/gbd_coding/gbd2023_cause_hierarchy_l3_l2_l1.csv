@@ -1,0 +1,177 @@
+l3_id,l3_name,outline,sort_order,l2_id,l2_name,l1_id,l1_name
+298,HIV/AIDS,A.1.1,4,955,HIV/AIDS and sexually transmitted infections,295,"Communicable, maternal, neonatal, and nutritional diseases"
+393,Sexually transmitted infections excluding HIV,A.1.2,9,955,HIV/AIDS and sexually transmitted infections,295,"Communicable, maternal, neonatal, and nutritional diseases"
+297,Tuberculosis,A.2.1,17,956,Respiratory infections and tuberculosis,295,"Communicable, maternal, neonatal, and nutritional diseases"
+322,Lower respiratory infections,A.2.2,22,956,Respiratory infections and tuberculosis,295,"Communicable, maternal, neonatal, and nutritional diseases"
+328,Upper respiratory infections,A.2.3,23,956,Respiratory infections and tuberculosis,295,"Communicable, maternal, neonatal, and nutritional diseases"
+329,Otitis media,A.2.4,24,956,Respiratory infections and tuberculosis,295,"Communicable, maternal, neonatal, and nutritional diseases"
+1048,COVID-19,A.2.5,25,956,Respiratory infections and tuberculosis,295,"Communicable, maternal, neonatal, and nutritional diseases"
+302,Diarrheal diseases,A.3.1,27,957,Enteric infections,295,"Communicable, maternal, neonatal, and nutritional diseases"
+958,Typhoid and paratyphoid,A.3.2,28,957,Enteric infections,295,"Communicable, maternal, neonatal, and nutritional diseases"
+959,Invasive Non-typhoidal Salmonella (iNTS),A.3.3,31,957,Enteric infections,295,"Communicable, maternal, neonatal, and nutritional diseases"
+321,Other intestinal infectious diseases,A.3.5,32,957,Enteric infections,295,"Communicable, maternal, neonatal, and nutritional diseases"
+345,Malaria,A.4.1,34,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+346,Chagas disease,A.4.2,35,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+347,Leishmaniasis,A.4.3,36,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+350,African trypanosomiasis,A.4.4,39,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+351,Schistosomiasis,A.4.5,40,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+352,Cysticercosis,A.4.6,41,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+353,Cystic echinococcosis,A.4.7,42,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+354,Lymphatic filariasis,A.4.8,43,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+355,Onchocerciasis,A.4.9,44,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+356,Trachoma,A.4.10,45,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+357,Dengue,A.4.11,46,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+358,Yellow fever,A.4.12,47,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+359,Rabies,A.4.13,48,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+360,Intestinal nematode infections,A.4.14,49,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+364,Food-borne trematodiases,A.4.15,53,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+405,Leprosy,A.4.16,54,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+843,Ebola,A.4.17,55,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+935,Zika virus,A.4.18,56,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+936,Guinea worm disease,A.4.19,57,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+365,Other neglected tropical diseases,A.4.20,58,344,Neglected tropical diseases and malaria,295,"Communicable, maternal, neonatal, and nutritional diseases"
+332,Meningitis,A.5.1,60,961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases"
+337,Encephalitis,A.5.2,61,961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases"
+338,Diphtheria,A.5.3,62,961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases"
+339,Pertussis,A.5.4,63,961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases"
+340,Tetanus,A.5.5,64,961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases"
+341,Measles,A.5.6,65,961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases"
+342,Varicella and herpes zoster,A.5.7,66,961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases"
+400,Acute hepatitis,A.5.8,67,961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases"
+408,Other unspecified infectious diseases,A.5.9,72,961,Other infectious diseases,295,"Communicable, maternal, neonatal, and nutritional diseases"
+366,Maternal disorders,A.6.1,74,962,Maternal and neonatal disorders,295,"Communicable, maternal, neonatal, and nutritional diseases"
+380,Neonatal disorders,A.6.2,85,962,Maternal and neonatal disorders,295,"Communicable, maternal, neonatal, and nutritional diseases"
+387,Protein-energy malnutrition,A.7.1,92,386,Nutritional deficiencies,295,"Communicable, maternal, neonatal, and nutritional diseases"
+388,Iodine deficiency,A.7.2,93,386,Nutritional deficiencies,295,"Communicable, maternal, neonatal, and nutritional diseases"
+389,Vitamin A deficiency,A.7.3,94,386,Nutritional deficiencies,295,"Communicable, maternal, neonatal, and nutritional diseases"
+390,Dietary iron deficiency,A.7.4,95,386,Nutritional deficiencies,295,"Communicable, maternal, neonatal, and nutritional diseases"
+391,Other nutritional deficiencies,A.7.5,96,386,Nutritional deficiencies,295,"Communicable, maternal, neonatal, and nutritional diseases"
+444,Lip and oral cavity cancer,B.1.1,99,410,Neoplasms,409,Non-communicable diseases
+447,Nasopharynx cancer,B.1.2,100,410,Neoplasms,409,Non-communicable diseases
+450,Other pharynx cancer,B.1.3,101,410,Neoplasms,409,Non-communicable diseases
+411,Esophageal cancer,B.1.4,102,410,Neoplasms,409,Non-communicable diseases
+414,Stomach cancer,B.1.5,103,410,Neoplasms,409,Non-communicable diseases
+441,Colon and rectum cancer,B.1.6,104,410,Neoplasms,409,Non-communicable diseases
+417,Liver cancer,B.1.7,105,410,Neoplasms,409,Non-communicable diseases
+453,Gallbladder and biliary tract cancer,B.1.8,112,410,Neoplasms,409,Non-communicable diseases
+456,Pancreatic cancer,B.1.9,113,410,Neoplasms,409,Non-communicable diseases
+423,Larynx cancer,B.1.10,114,410,Neoplasms,409,Non-communicable diseases
+426,"Tracheal, bronchus, and lung cancer",B.1.11,115,410,Neoplasms,409,Non-communicable diseases
+459,Malignant skin melanoma,B.1.12,116,410,Neoplasms,409,Non-communicable diseases
+462,Non-melanoma skin cancer,B.1.13,117,410,Neoplasms,409,Non-communicable diseases
+1011,Soft tissue and other extraosseous sarcomas,B.1.14,120,410,Neoplasms,409,Non-communicable diseases
+1012,Malignant neoplasm of bone and articular cartilage,B.1.15,121,410,Neoplasms,409,Non-communicable diseases
+429,Breast cancer,B.1.16,122,410,Neoplasms,409,Non-communicable diseases
+432,Cervical cancer,B.1.17,123,410,Neoplasms,409,Non-communicable diseases
+435,Uterine cancer,B.1.18,124,410,Neoplasms,409,Non-communicable diseases
+465,Ovarian cancer,B.1.19,125,410,Neoplasms,409,Non-communicable diseases
+438,Prostate cancer,B.1.20,126,410,Neoplasms,409,Non-communicable diseases
+468,Testicular cancer,B.1.21,127,410,Neoplasms,409,Non-communicable diseases
+471,Kidney cancer,B.1.22,128,410,Neoplasms,409,Non-communicable diseases
+474,Bladder cancer,B.1.23,129,410,Neoplasms,409,Non-communicable diseases
+477,Brain and central nervous system cancer,B.1.24,130,410,Neoplasms,409,Non-communicable diseases
+1008,Eye cancer,B.1.25,131,410,Neoplasms,409,Non-communicable diseases
+1013,Neuroblastoma and other peripheral nervous cell tumors,B.1.26,134,410,Neoplasms,409,Non-communicable diseases
+480,Thyroid cancer,B.1.27,135,410,Neoplasms,409,Non-communicable diseases
+483,Mesothelioma,B.1.28,136,410,Neoplasms,409,Non-communicable diseases
+484,Hodgkin lymphoma,B.1.29,137,410,Neoplasms,409,Non-communicable diseases
+485,Non-Hodgkin lymphoma,B.1.30,138,410,Neoplasms,409,Non-communicable diseases
+486,Multiple myeloma,B.1.31,141,410,Neoplasms,409,Non-communicable diseases
+487,Leukemia,B.1.32,142,410,Neoplasms,409,Non-communicable diseases
+489,Other malignant neoplasms,B.1.33,148,410,Neoplasms,409,Non-communicable diseases
+490,Other neoplasms,B.1.34,149,410,Neoplasms,409,Non-communicable diseases
+492,Rheumatic heart disease,B.2.1,155,491,Cardiovascular diseases,409,Non-communicable diseases
+493,Ischemic heart disease,B.2.2,156,491,Cardiovascular diseases,409,Non-communicable diseases
+494,Stroke,B.2.3,157,491,Cardiovascular diseases,409,Non-communicable diseases
+498,Hypertensive heart disease,B.2.4,161,491,Cardiovascular diseases,409,Non-communicable diseases
+504,Non-rheumatic valvular heart disease,B.2.5,162,491,Cardiovascular diseases,409,Non-communicable diseases
+499,Cardiomyopathy and myocarditis,B.2.6,166,491,Cardiovascular diseases,409,Non-communicable diseases
+1004,Pulmonary Arterial Hypertension,B.2.7,170,491,Cardiovascular diseases,409,Non-communicable diseases
+500,Atrial fibrillation and flutter,B.2.8,171,491,Cardiovascular diseases,409,Non-communicable diseases
+501,Aortic aneurysm,B.2.9,172,491,Cardiovascular diseases,409,Non-communicable diseases
+502,Lower extremity peripheral arterial disease,B.2.10,173,491,Cardiovascular diseases,409,Non-communicable diseases
+503,Endocarditis,B.2.11,174,491,Cardiovascular diseases,409,Non-communicable diseases
+507,Other cardiovascular and circulatory diseases,B.2.12,175,491,Cardiovascular diseases,409,Non-communicable diseases
+509,Chronic obstructive pulmonary disease,B.3.1,177,508,Chronic respiratory diseases,409,Non-communicable diseases
+510,Pneumoconiosis,B.3.2,178,508,Chronic respiratory diseases,409,Non-communicable diseases
+515,Asthma,B.3.3,183,508,Chronic respiratory diseases,409,Non-communicable diseases
+516,Interstitial lung disease and pulmonary sarcoidosis,B.3.4,184,508,Chronic respiratory diseases,409,Non-communicable diseases
+520,Other chronic respiratory diseases,B.3.5,185,508,Chronic respiratory diseases,409,Non-communicable diseases
+521,Cirrhosis and other chronic liver diseases,B.4.1,187,526,Digestive diseases,409,Non-communicable diseases
+992,Upper digestive system diseases,B.4.2,193,526,Digestive diseases,409,Non-communicable diseases
+529,Appendicitis,B.4.3,197,526,Digestive diseases,409,Non-communicable diseases
+530,Paralytic ileus and intestinal obstruction,B.4.4,198,526,Digestive diseases,409,Non-communicable diseases
+531,"Inguinal, femoral, and abdominal hernia",B.4.5,199,526,Digestive diseases,409,Non-communicable diseases
+532,Inflammatory bowel disease,B.4.6,200,526,Digestive diseases,409,Non-communicable diseases
+533,Vascular intestinal disorders,B.4.7,203,526,Digestive diseases,409,Non-communicable diseases
+534,Gallbladder and biliary diseases,B.4.8,204,526,Digestive diseases,409,Non-communicable diseases
+535,Pancreatitis,B.4.9,205,526,Digestive diseases,409,Non-communicable diseases
+1161,Other digestive diseases,B.4.11,206,526,Digestive diseases,409,Non-communicable diseases
+543,Alzheimer's disease and other dementias,B.5.1,208,542,Neurological disorders,409,Non-communicable diseases
+544,Parkinson's disease,B.5.2,209,542,Neurological disorders,409,Non-communicable diseases
+545,Idiopathic epilepsy,B.5.3,210,542,Neurological disorders,409,Non-communicable diseases
+546,Multiple sclerosis,B.5.4,211,542,Neurological disorders,409,Non-communicable diseases
+554,Motor neuron disease,B.5.5,212,542,Neurological disorders,409,Non-communicable diseases
+972,Headache disorders,B.5.6,213,542,Neurological disorders,409,Non-communicable diseases
+557,Other neurological disorders,B.5.7,216,542,Neurological disorders,409,Non-communicable diseases
+559,Schizophrenia,B.6.1,218,558,Mental disorders,409,Non-communicable diseases
+567,Depressive disorders,B.6.2,219,558,Mental disorders,409,Non-communicable diseases
+570,Bipolar disorder,B.6.3,222,558,Mental disorders,409,Non-communicable diseases
+571,Anxiety disorders,B.6.4,223,558,Mental disorders,409,Non-communicable diseases
+572,Eating disorders,B.6.5,224,558,Mental disorders,409,Non-communicable diseases
+575,Autism spectrum disorders,B.6.6,227,558,Mental disorders,409,Non-communicable diseases
+578,Attention-deficit/hyperactivity disorder,B.6.7,228,558,Mental disorders,409,Non-communicable diseases
+579,Conduct disorder,B.6.8,229,558,Mental disorders,409,Non-communicable diseases
+582,Idiopathic developmental intellectual disability,B.6.9,230,558,Mental disorders,409,Non-communicable diseases
+585,Other mental disorders,B.6.10,231,558,Mental disorders,409,Non-communicable diseases
+560,Alcohol use disorders,B.7.1,233,973,Substance use disorders,409,Non-communicable diseases
+561,Drug use disorders,B.7.2,234,973,Substance use disorders,409,Non-communicable diseases
+587,Diabetes mellitus,B.8.1,241,974,Diabetes and kidney diseases,409,Non-communicable diseases
+589,Chronic kidney disease,B.8.2,244,974,Diabetes and kidney diseases,409,Non-communicable diseases
+588,Acute glomerulonephritis,B.8.3,250,974,Diabetes and kidney diseases,409,Non-communicable diseases
+654,Dermatitis,B.9.1,252,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+655,Psoriasis,B.9.2,256,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+980,Bacterial skin diseases,B.9.3,257,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+658,Scabies,B.9.4,260,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+659,Fungal skin diseases,B.9.5,261,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+660,Viral skin diseases,B.9.6,262,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+661,Acne vulgaris,B.9.7,263,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+662,Alopecia areata,B.9.8,264,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+663,Pruritus,B.9.9,265,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+664,Urticaria,B.9.10,266,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+665,Decubitus ulcer,B.9.11,267,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+668,Other skin and subcutaneous diseases,B.9.12,268,653,Skin and subcutaneous diseases,409,Non-communicable diseases
+981,Blindness and vision loss,B.10.1,270,669,Sense organ diseases,409,Non-communicable diseases
+674,Age-related and other hearing loss,B.10.2,277,669,Sense organ diseases,409,Non-communicable diseases
+679,Other sense organ diseases,B.10.3,278,669,Sense organ diseases,409,Non-communicable diseases
+627,Rheumatoid arthritis,B.11.1,280,626,Musculoskeletal disorders,409,Non-communicable diseases
+628,Osteoarthritis,B.11.2,281,626,Musculoskeletal disorders,409,Non-communicable diseases
+630,Low back pain,B.11.3,286,626,Musculoskeletal disorders,409,Non-communicable diseases
+631,Neck pain,B.11.4,287,626,Musculoskeletal disorders,409,Non-communicable diseases
+632,Gout,B.11.5,288,626,Musculoskeletal disorders,409,Non-communicable diseases
+639,Other musculoskeletal disorders,B.11.6,289,626,Musculoskeletal disorders,409,Non-communicable diseases
+641,Congenital birth defects,B.12.1,291,640,Other non-communicable diseases,409,Non-communicable diseases
+594,Urinary diseases and male infertility,B.12.2,303,640,Other non-communicable diseases,409,Non-communicable diseases
+603,Gynecological diseases,B.12.3,309,640,Other non-communicable diseases,409,Non-communicable diseases
+613,Hemoglobinopathies and hemolytic anemias,B.12.4,317,640,Other non-communicable diseases,409,Non-communicable diseases
+619,"Endocrine, metabolic, blood, and immune disorders",B.12.5,325,640,Other non-communicable diseases,409,Non-communicable diseases
+680,Oral disorders,B.12.6,328,640,Other non-communicable diseases,409,Non-communicable diseases
+686,Sudden infant death syndrome,B.12.7,334,640,Other non-communicable diseases,409,Non-communicable diseases
+689,Road injuries,C.1.1,337,688,Transport injuries,687,Injuries
+695,Other transport injuries,C.1.2,343,688,Transport injuries,687,Injuries
+697,Falls,C.2.1,345,696,Unintentional injuries,687,Injuries
+698,Drowning,C.2.2,346,696,Unintentional injuries,687,Injuries
+699,"Fire, heat, and hot substances",C.2.3,347,696,Unintentional injuries,687,Injuries
+700,Poisonings,C.2.4,348,696,Unintentional injuries,687,Injuries
+704,Exposure to mechanical forces,C.2.5,351,696,Unintentional injuries,687,Injuries
+708,Adverse effects of medical treatment,C.2.6,354,696,Unintentional injuries,687,Injuries
+709,Animal contact,C.2.7,355,696,Unintentional injuries,687,Injuries
+712,Foreign body,C.2.8,358,696,Unintentional injuries,687,Injuries
+940,Electrocution,C.2.9,362,696,Unintentional injuries,687,Injuries
+842,Environmental heat and cold exposure,C.2.10,363,696,Unintentional injuries,687,Injuries
+729,Exposure to forces of nature,C.2.11,364,696,Unintentional injuries,687,Injuries
+716,Other unintentional injuries,C.2.12,365,696,Unintentional injuries,687,Injuries
+718,Self-harm,C.3.1,367,717,Self-harm and interpersonal violence,687,Injuries
+724,Interpersonal violence,C.3.2,370,717,Self-harm and interpersonal violence,687,Injuries
+945,Conflict and terrorism,C.3.3,375,717,Self-harm and interpersonal violence,687,Injuries
+854,Police conflict and executions,C.3.4,376,717,Self-harm and interpersonal violence,687,Injuries
