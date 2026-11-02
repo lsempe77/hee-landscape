@@ -1,7 +1,7 @@
 // Cache-busting build token. Locally the literal "2026-10-08" is a harmless
 // query string; at publish time webapp/publish-stamp.mjs rewrites every
 // occurrence in index.html and app.js to the bundle build value.
-const BUILD = "2026-10-23-haly-all";
+const BUILD = "2026-11-02-studies-trend";
 
 const CODED_COLS = ["econ_eval_type", "design_basis", "model_label", "qaly_label",
   "oa_label", "geo_scope", "era", "topic_domain"];
@@ -1541,7 +1541,11 @@ if (typeof document !== "undefined") {
     [FUNDERS_CARD]: "Research funding"
   };
   const TILE_ACTIONS = {
-    [STUDIES_CARD]: () => openModal("paper01.webp"),
+    [STUDIES_CARD]: () => {
+      const card = document.querySelector(".overview-trend-card");
+      card.querySelector('[data-trend-mode="cumulative"]').click();
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    },
     ...Object.fromEntries(Object.entries(TILE_THEME).map(([key, theme]) => [key, () => openOverviewTheme(theme)]))
   };
 
@@ -2038,10 +2042,10 @@ if (typeof document !== "undefined") {
     const label = box.querySelector(".value-box-title").textContent;
     box.classList.add("overview-nav-card");
     box.tabIndex = 0;
-    const opensSelection = key === STUDIES_CARD;
-    box.setAttribute("role", opensSelection ? "button" : "link");
-    box.setAttribute("aria-label", label + (opensSelection
-      ? ": open study selection figure" : ": open related analysis"));
+    const scrollsToTrend = key === STUDIES_CARD;
+    box.setAttribute("role", scrollsToTrend ? "button" : "link");
+    box.setAttribute("aria-label", label + (scrollsToTrend
+      ? ": go to cumulative publication trend" : ": open related analysis"));
     box.addEventListener("click", action);
     box.addEventListener("keydown", event => {
       if (event.key === "Enter" || event.key === " ") {
