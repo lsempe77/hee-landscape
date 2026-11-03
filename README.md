@@ -4,6 +4,21 @@ Static site for the health economic evaluation (HEE) evidence map, published at
 <https://3ieimpact.pages.dev/hee/>. Plain HTML/JS served from `docs/`: no server, no build step.
 **Anything pushed to `main` goes live.**
 
+## Before you push
+
+Several people push here, so it is easy to undo someone's recent design work (for example the
+Overview cards' links) by editing an old copy of `docs/app.js`. To guard against that:
+
+- **Once per clone**, turn on the shared git hook: `git config core.hooksPath .githooks`.
+  Every push to `main` then runs `scripts/check_site_features.py` on what you are pushing and
+  stops the push if a protected feature has gone missing, or if it would force-push over
+  commits already on GitHub. A GitHub Action runs the same check after each push.
+- `git pull` before you edit and before you push; edit `docs/app.js` and `docs/index.html` in
+  place rather than pasting in a copy.
+- Shipping a design feature others should keep? Add it to `FEATURES` in
+  `scripts/check_site_features.py`. Removing one on purpose? Edit its entry in the same commit.
+- AI agents (Claude Code, Kilo, etc.) follow [CLAUDE.md](CLAUDE.md) / [AGENTS.md](AGENTS.md).
+
 ## Latest updates
 
 Newest first; add a line here when you push something colleagues should know about.
