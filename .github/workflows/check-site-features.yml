@@ -1,7 +1,10 @@
 # Backstop for people who have not turned on the local pre-push hook.
-# Fails (and GitHub emails the pusher) when a push or pull request to main
-# removes a protected design feature. See scripts/check_site_features.py.
-name: Check protected site features
+# Fails (and GitHub emails the pusher) when a push or pull request:
+#   - removes a protected design feature (scripts/check_site_features.py), or
+#   - contains something that looks like an API key, token, password or
+#     private key (scripts/check_secrets.py). By then it is public: revoke
+#     the key with its provider first, then remove it.
+name: Check protected site features and secrets
 
 on:
   push:
@@ -10,7 +13,7 @@ on:
     branches: [main]
 
 jobs:
-  check:
+  features:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,3 +21,23 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/check_site_features.py
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scan the pushed commits
+        env:
+          BEFORE: ${{ github.event.before || github.event.pull_request.base.sha }}
+          AFTER: ${{ github.event.after || github.event.pull_request.head.sha }}
+        run: |
+          if [ -n "$BEFORE" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
+            python scripts/check_secrets.py --commits "$BEFORE..$AFTER"
+          else
+            python scripts/check_secrets.py
+          fi

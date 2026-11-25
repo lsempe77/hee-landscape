@@ -6,6 +6,12 @@ Read this before editing anything under `docs/`. AGENTS.md says the same for oth
 (and their AI agents) push to this repo, so the main risk is undoing someone else's recent
 design work without noticing.
 
+**Working on the Wellcome priority themes page?** Read README "Read first: Wellcome priority themes
+page" before anything else. It lists the visual and wording changes already made (17 studies added
+on review and marked ◆, rewritten Technical details), which must not be redone or reverted.
+Build the page with `scripts/build_wellcome_analysis_gbd_v6.py`, and never edit the exported HTML
+by hand.
+
 ## Do not overwrite recent design features
 
 1. **Pull first.** Run `git pull` before you start editing, and again before you push.
@@ -28,6 +34,18 @@ design work without noticing.
 7. **Never force-push `main`**, and never use `git push --no-verify` unless the user asks.
 8. When a merge conflict touches `docs/app.js` or `docs/index.html`, keep both sides' features;
    do not resolve it by taking one whole side.
+
+## Never commit secrets
+
+The repo, the fork and the site are public, and git history keeps everything ever pushed.
+
+- Read API keys (OpenRouter etc.) from environment variables, e.g.
+  `os.environ["OPENROUTER_API_KEY"]`; never write a key, token or password into a script,
+  notebook, log, output file or commit message. Local `.env` / `.Renviron` files are gitignored.
+- Run `python scripts/check_secrets.py` before committing new scripts or outputs; it must print OK.
+  (The pre-push hook runs it on every push to every remote.)
+- If a real key is ever found in a commit, tell the user to revoke it with the provider first;
+  deleting it from the repo afterwards does not make it safe.
 
 ## Other house rules
 

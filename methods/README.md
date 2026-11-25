@@ -29,6 +29,7 @@ Reference tables used by the coding (no study records):
 | Wellcome-funded | Recorded funders name the Wellcome Trust; Burroughs Wellcome Fund excluded |
 | Outputs | `docs/figures/wellcome_analysis.html` (full page), `wellcome_analysis.json` (all counts), `wellcome_theme_funders.csv`, `fig_wellcome_priorities.svg` |
 | By-year chart | [`scripts/create_wellcome_by_year_oct20.py`](../scripts/create_wellcome_by_year_oct20.py) → `exports/wellcome_by_year_2026-10-20/` |
+| Standalone export (current, Nov 2026) | [`scripts/build_wellcome_analysis_gbd_v6.py`](../scripts/build_wellcome_analysis_gbd_v6.py) (17 Wellcome-funded studies added on review, marked ◆; list in `REVIEW_ADDED`), then [`scripts/export_wellcome_standalone_v2.py`](../scripts/export_wellcome_standalone_v2.py) → `exports/wellcome_themes_standalone_2026-11-25_v3/`. Does not change `docs/`. See README "Read first" |
 
 The Wellcome section is currently hidden on the live map; open `docs/figures/wellcome_analysis.html` directly to read it.
 

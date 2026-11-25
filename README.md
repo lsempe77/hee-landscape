@@ -17,11 +17,56 @@ Overview cards' links) by editing an old copy of `docs/app.js`. To guard against
   place rather than pasting in a copy.
 - Shipping a design feature others should keep? Add it to `FEATURES` in
   `scripts/check_site_features.py`. Removing one on purpose? Edit its entry in the same commit.
+- **No keys in the repo.** Everything here is public, history included. Keep API keys (e.g.
+  OpenRouter) in environment variables or a local `.env` (gitignored). The same hook runs
+  `scripts/check_secrets.py` on every push, to any branch or remote, and stops it if something
+  looks like a key, token, password or private key. `python scripts/check_secrets.py --history`
+  scans every version ever committed (clean as of 3 Nov 2026). If a real key ever gets pushed,
+  revoke it with the provider first; removing it from the repo does not undo the exposure.
 - AI agents (Claude Code, Kilo, etc.) follow [CLAUDE.md](CLAUDE.md) / [AGENTS.md](AGENTS.md).
+
+## Read first: Wellcome priority themes page (standalone export)
+
+The current version is `exports/wellcome_themes_standalone_2026-11-25_v3/wellcome_priority_themes.html`.
+These visual and wording choices were made on purpose (Nov 2026). **Keep them; do not undo or redo them.**
+
+- **Build it from the scripts, never by hand.** Run `python scripts/build_wellcome_analysis_gbd_v6.py`, then
+  `python scripts/export_wellcome_standalone_v2.py`. v6 writes only to `exports/wellcome_themes_v6_build/`
+  (git-ignored), and the export goes to a new dated folder; neither touches `docs/`. Do not rebuild the
+  standalone with v5 or `export_wellcome_standalone.py`: that brings back the old wording and drops the
+  additions below.
+- **17 studies added on review are counted in the themes.** These are Wellcome-funded publications that GBD
+  codes to another condition, judged from title and abstract to fit a theme: 13 Infectious Diseases
+  (antimicrobial stewardship, 4 HPV vaccine, 5 hepatitis C, 2 Group B strep vaccine, AIMS antibiotic
+  prophylaxis), 1 Mental Health (MENISCUS), and 3 Climate & Health (palm-oil tax, red-meat tax, walking to
+  work; sub-area "Mitigation with health co-benefits"). They are listed by record ID, with a reason for
+  each, in `REVIEW_ADDED` in the v6 script. Totals: Infectious 6,346, Mental Health 1,913, Climate 105.
+  129 Wellcome-funded publications are in the themes and 45 are beyond them (previously 112 and 62).
+- **One integrated view, no toggle.** The ◆ marker appears only beside those 17 titles in each theme's
+  "What the N publications cover" lists, with a hover note giving their GBD code and the reason. In
+  Infectious Diseases and Mental Health they form an "Added on review (GBD codes another condition)" group.
+  There is no ◆ note on the theme cards. A toggle version exists (`--toggle`) but was not chosen.
+- **Technical details and sources** uses the wording agreed on 25 Nov 2026:
+  - the funding share sentence ("Funding is recorded for X% of the current evidence base");
+  - a shorter World Bank income sentence;
+  - "Theme mapping." as its own heading, then one paragraph each for Infectious Diseases, Mental Health,
+    HPV/hepatitis C classification and Climate & Health;
+  - one ◆ "Added on review" line, which notes that other funders' publications were not reviewed this way.
+
+  The old "Source: …" paragraph and the paragraph on how themes were defined were removed on purpose.
+- Only Wellcome-funded publications were reviewed for additions, so Wellcome's theme counts are not
+  directly comparable with other funders'. Keep that caveat if the page changes.
+- **The live map is unchanged.** `docs/figures/wellcome_analysis.html` is still the v5, GBD-only page, which
+  matches the manuscript. Changing the live page is a separate decision.
 
 ## Latest updates
 
 Newest first; add a line here when you push something colleagues should know about.
+
+- **25 Nov 2026: Wellcome standalone page, v6.** The 17 studies added on review are now counted in their
+  themes and marked ◆ in the theme lists, and the Technical details have been rewritten. See "Read first"
+  above. New scripts: `build_wellcome_analysis_gbd_v6.py` and `export_wellcome_standalone_v2.py`. The
+  2026-10-21 standalone export was removed, and the live map is unchanged.
 
 - **23 Oct 2026: Explorer HALY filter opens on All again.** Since 21 Oct the HALY type filter had no "All"
   option, so the Explorer opened (and reset) on No HALY: 22,095 studies, 0% using a QALY, and the CSV

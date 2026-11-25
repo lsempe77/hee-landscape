@@ -48,6 +48,8 @@ These write into `docs/`, which is the published site. Pushing their output chan
 | `build_funder_scorecard_absolute_v2.py` | Absolute evidence-shortfall scorecard (current). Country groups: `income_pub` (most studies' publication-year group). v1 kept |
 | `build_wellcome_analysis.py` | Supplies `funders_of` to the funder filter. Its own global funder figures use current income: do not rerun them for the site; `fig_funder_funders.svg` is built by `build_wellcome_analysis_gbd_v5.py` on publication-year income |
 | `build_wellcome_analysis_gbd_v5.py` | Wellcome priority-themes view (current): Mental Health covers all mental health, with Wellcome's stated focus (GBD depression, anxiety, schizophrenia, bipolar) as a sourced subset; cards link to how each theme was matched |
+| `build_wellcome_analysis_gbd_v6.py` | Standalone Wellcome page (current export): v5 plus 17 Wellcome-funded studies added on review (`REVIEW_ADDED`), counted in their themes and marked ◆ in the theme lists; writes only to `exports/wellcome_themes_v6_build/`, never `docs/`. Pack with `export_wellcome_standalone_v2.py`. See README "Read first" |
+| `export_wellcome_standalone_v2.py` | Packs the v6 build into one self-contained HTML file in a new `exports/wellcome_themes_standalone_<date>[_vN]/` folder; never overwrites an earlier export |
 | `build_wellcome_analysis_gbd_v4.py` | Previous version of the redesigned page |
 | `build_wellcome_analysis_gbd_v3.py` | Previous version of the page (same data); imported by `build_overview_figure.py` |
 | `build_funder_filter.py` | Data for the Explorer's funder filter |

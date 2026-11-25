@@ -2,10 +2,13 @@
 # Runs before every `git push`. Turn on once per clone with:
 #     git config core.hooksPath .githooks
 #
-# For pushes to main (which go live):
-#   1. Refuse a force-push that would drop commits already on the remote.
-#   2. Run scripts/check_site_features.py on the commit being pushed, so a
-#      push cannot quietly undo a protected design feature.
+# Every push, to any branch or remote (all of them are public):
+#   - Run scripts/check_secrets.py on the commits being pushed, so API keys,
+#     tokens, passwords and private keys never leave this computer.
+# Pushes to main (which go live), in addition:
+#   - Refuse a force-push that would drop commits already on the remote.
+#   - Run scripts/check_site_features.py on the commit being pushed, so a
+#     push cannot quietly undo a protected design feature.
 # Emergency bypass (say why in the commit message): git push --no-verify
 
 remote="$1"
@@ -17,9 +20,21 @@ command -v "$PY" >/dev/null 2>&1 || PY=py
 
 status=0
 while read -r local_ref local_sha remote_ref remote_sha; do
-  [ "$remote_ref" = "refs/heads/main" ] || continue
-  [ "$local_sha" = "$zero" ] && continue   # deleting a branch: not ours to judge
+  [ "$local_sha" = "$zero" ] && continue   # deleting a branch: nothing is sent
 
+  # --- secrets: only the commits the remote does not have yet
+  if [ "$remote_sha" != "$zero" ] && git cat-file -e "$remote_sha" 2>/dev/null; then
+    set -- "$remote_sha..$local_sha"
+  else
+    set -- "$local_sha" --not "--remotes=$remote"
+  fi
+  if [ -f scripts/check_secrets.py ]; then
+    "$PY" scripts/check_secrets.py --commits "$@" || status=1
+  fi
+
+  [ "$remote_ref" = "refs/heads/main" ] || continue
+
+  # --- main only: no force-push
   if [ "$remote_sha" != "$zero" ]; then
     if ! git cat-file -e "$remote_sha" 2>/dev/null; then
       echo "pre-push: $remote/main has commits you do not have. Run 'git pull' first." >&2
@@ -32,6 +47,7 @@ while read -r local_ref local_sha remote_ref remote_sha; do
     fi
   fi
 
+  # --- main only: protected design features
   tmp=$(mktemp -d 2>/dev/null || mktemp -d -t hee)
   git show "$local_sha:docs/app.js" > "$tmp/app.js" 2>/dev/null
   git show "$local_sha:docs/index.html" > "$tmp/index.html" 2>/dev/null
@@ -45,6 +61,6 @@ done
 
 if [ "$status" -ne 0 ]; then
   echo "" >&2
-  echo "pre-push: push to main stopped (see above). Nothing was sent." >&2
+  echo "pre-push: push stopped (see above). Nothing was sent." >&2
 fi
 exit $status

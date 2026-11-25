@@ -2,3 +2,17 @@ data/raw/
 
 .claude/settings.local.json
 __pycache__/
+
+# Credentials: never commit (keys go in environment variables or a local .env)
+.env
+.env.*
+!.env.example
+.Renviron
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+
+# Intermediate build for the standalone Wellcome page (rebuild with build_wellcome_analysis_gbd_v6.py)
+exports/wellcome_themes_v6_build/
