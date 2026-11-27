@@ -27,8 +27,93 @@ Overview cards' links) by editing an old copy of `docs/app.js`. To guard against
 
 ## Read first: Wellcome priority themes page (standalone export)
 
-The current version is `exports/wellcome_themes_standalone_2026-11-25_v3/wellcome_priority_themes.html`.
-These visual and wording choices were made on purpose (Nov 2026). **Keep them; do not undo or redo them.**
+**Current version: v3.10 (27 Nov 2026).**
+`exports/wellcome_themes_standalone_2026-11-25_v3/wellcome_priority_themes-v3.10.html`. Older versions (v2, v3–v3.9) are
+in the `Archive/` subfolder there.
+It follows `wellcome_dashboard_v3_spec.md` in the same folder. The full record of what was decided and why is in
+`wellcome_dashboard_v3_report.md` in that folder. Read its "Start here" section before changing anything; it
+includes a step-by-step checklist for making the next version.
+The live map (`docs/`) is not affected: `docs/figures/wellcome_analysis.html` is still the v5 page.
+
+**Rebuild (never edit the HTML by hand):**
+
+```
+python scripts/build_wellcome_analysis_gbd_v15.py
+python scripts/export_wellcome_standalone_v3.py --build exports/wellcome_themes_v15_build --out <new file name>
+```
+
+The export refuses to overwrite an existing file. To change the page, copy the latest builder to the next version
+(`_v16.py`), change the copy and export to a new file name. Each earlier page has its own builder (v3.1 → v7, v3.2 → v8, v3.3 → v9, v3.4 → v10, v3.5 → v11, v3.6 → v12, v3.8 → v13 (v3.7 was an intermediate draft), v3.9 → v14, v3.10 → v15;
+v7 was edited after building v3, so v3 itself cannot be rebuilt exactly).
+
+**Decisions already made. Do not undo them without agreement:**
+
+- **One rule for every funder: GBD codes only.** No title or abstract screening adds publications to a theme.
+  - The 17 Wellcome-funded studies "added on review" in v2 are excluded on purpose. Only Wellcome-funded studies
+    were screened, so other funders' studies were not identified the same way.
+  - Do not bring back `REVIEW_ADDED`, the ◆ markers or the toggle.
+- **Climate & Health is excluded** from every displayed figure. It was identified by keywords, not GBD codes.
+- **Infectious Diseases = the four focus areas on Wellcome's Infectious Disease page** (https://wellcome.org/our-priorities/infectious-disease):
+  - Tuberculosis → GBD Tuberculosis.
+  - Cholera → GBD Diarrheal diseases. This is a deliberately kept broad proxy: GBD has no cholera cause.
+  - Vector-borne diseases → read as the whole category, not only the named examples. The GBD causes are malaria,
+    dengue, leishmaniasis, schistosomiasis, Chagas disease, lymphatic filariasis, onchocerciasis, Zika, yellow fever
+    and African trypanosomiasis. All ten are in the WHO "Vector-borne diseases" fact sheet table
+    (https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases).
+  - Drug-resistant infections → no GBD code; stated as not representable.
+  - Mixed GBD codes stay excluded even though they contain some vector-borne diseases: encephalitis, other
+    neglected tropical diseases, other unspecified infectious diseases.
+  - Other infectious causes (HIV/AIDS, lower respiratory infections, COVID-19 etc.) are not in the theme.
+- **Mental Health = Wellcome's focus on anxiety, depression and psychosis** (https://wellcome.org/our-priorities/mental-health; Mental Health
+  Award call text):
+  - GBD causes: anxiety disorders, depressive disorders, schizophrenia, bipolar disorder.
+  - Not included: other mental disorders, substance use disorders, or "Mental disorders" with no specific condition.
+  - **PTSD/OCD:** some are coded to "Other mental disorders", so they are not captured. The user decided
+    (27 Nov 2026) **not** to add "Other mental disorders". The inconsistency is only noted on the page. A recode
+    would have to happen in the shared GBD coding, for all funders, with team approval.
+  - All ages are included. Do not add wording about young people.
+- **Page wording required by the spec:** the introductory text and the interpretive note under the coverage bar.
+  Use neutral terms ("captured / not captured by the thematic mapping"). Never say "outside Wellcome's priority
+  themes" or "non-priority".
+- **Trend chart:** line charts only. The annual view has a fixed 0–100 axis with ticks at 0/30/60/90; the
+  cumulative view has its own axis; 2026 is drawn as a partial year.
+- **The builder refuses to finish** if a count check fails, if the crosswalk table's GBD codes differ from the
+  codes that define the themes, or if "Climate", "◆" or "added on review" appears outside the technical note.
+- **No list of uncaptured Wellcome-funded publications on the page (v3.6, user decision).** The old
+  "Other Wellcome-funded HEE publications" list grouped them by title keywords. That suggested they belonged in
+  the themes and hid the comparability reasons for not mapping them. Do not bring it back, and do not add any
+  other topic grouping of uncaptured publications. The coverage bar gives the count; the CSV lists them
+  ungrouped, with their GBD codes.
+- **Tone (v3.8, user decision).** The technical note, the crosswalk and the theme criteria present the mapping
+  as the closest match possible with GBD codes, with known limitations stated openly. Do not reintroduce wording
+  that implies the team mapped wrongly, such as "overly broad proxy", "partial fit", "flagged for a coding fix",
+  "not reviewed publication by publication" or "may miss relevant publications". The badges read "Direct match",
+  "Closest code", "Full category" and "Not a GBD category".
+- **Visual design (v3.9).** Cool page background, each section on a white card, a violet gradient header band,
+  headline figures as tinted tiles, violet accents on section headings, cool greys (not identified #E3E4EC;
+  multi-country/unavailable #CDD3DD) and a light fill under the trend line. Theme tabs open with a two-line
+  summary; the detail stays in "Definition and matching criteria". Keep this look unless the owner asks to
+  change it. The top banner has no "About the thematic mapping" link (removed in v3.10 at the owner's request).
+- **Look and downloads (v3.5):**
+  - Colours were checked with a palette validator: Wellcome #5530C8, other funders #B9A6F2, not identified
+    #E2DFE8; high-income #0B7FA3, low- and middle-income #E5793A, other #D8D2C6. Re-validate if you change them.
+  - Downloads: Wellcome-funded publications (CSV, all 174, with DOI links), funder counts by theme (CSV),
+    all figures (JSON) and the page as an image (PNG).
+  - Titles link to their DOI, because the master's `url` field is empty for these records.
+  - The technical note is deliberately short; keep it that way.
+
+**Still open** (listed in the report):
+- Optional: save a local copy of the Mental Health Award call page (not for git). Its scope text is in the folder
+  as a .txt file, and its URL is in the report.
+- The PTSD/OCD coding fix in the shared GBD coding, which needs team approval.
+
+### History: v2 page (superseded by v3; kept for reference)
+
+The notes below describe `Archive/wellcome_priority_themes-v2.html` (built with v6), which is kept unchanged. **v3 reversed
+several of these choices on purpose** (the 17 review additions, Climate & Health and broad Mental Health). Do not
+restore them from these notes.
+
+v2 page: `Archive/wellcome_priority_themes-v2.html` (renamed from `wellcome_priority_themes.html`).
 
 - **Build it from the scripts, never by hand.** Run `python scripts/build_wellcome_analysis_gbd_v6.py`, then
   `python scripts/export_wellcome_standalone_v2.py`. v6 writes only to `exports/wellcome_themes_v6_build/`

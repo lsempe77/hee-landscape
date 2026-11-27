@@ -7,10 +7,17 @@ Read this before editing anything under `docs/`. AGENTS.md says the same for oth
 design work without noticing.
 
 **Working on the Wellcome priority themes page?** Read README "Read first: Wellcome priority themes
-page" before anything else. It lists the visual and wording changes already made (17 studies added
-on review and marked ◆, rewritten Technical details), which must not be redone or reverted.
-Build the page with `scripts/build_wellcome_analysis_gbd_v6.py`, and never edit the exported HTML
-by hand.
+page" before anything else, then "Start here" in
+`exports/wellcome_themes_standalone_2026-11-25_v3/wellcome_dashboard_v3_report.md`. The current page is
+v3.10, built with `scripts/build_wellcome_analysis_gbd_v15.py` and `export_wellcome_standalone_v3.py`.
+Its scope decisions are settled and must not be reverted:
+- GBD codes only, the same rule for every funder;
+- no Climate & Health;
+- no studies "added on review" (◆);
+- Wellcome's four Infectious Disease focus areas and its Mental Health focus.
+
+Do not rebuild with v6 or older builders, which bring back the superseded v2 design. Never edit the
+exported HTML by hand.
 
 ## Do not overwrite recent design features
 

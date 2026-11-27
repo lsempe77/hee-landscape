@@ -16,3 +16,15 @@ credentials*.json
 
 # Intermediate build for the standalone Wellcome page (rebuild with build_wellcome_analysis_gbd_v6.py)
 exports/wellcome_themes_v6_build/
+exports/wellcome_themes_v7_build/
+exports/wellcome_themes_v8_build/
+exports/wellcome_themes_v9_build/
+exports/wellcome_themes_v10_build/
+exports/wellcome_themes_v11_build/
+exports/wellcome_themes_v12_build/
+exports/wellcome_themes_v13_build/
+exports/wellcome_themes_v14_build/
+exports/wellcome_themes_v15_build/
+
+# Saved copies of Wellcome/WHO web pages (third-party content; kept locally as evidence, cited by URL in the v3 report)
+exports/wellcome_themes_standalone_2026-11-25_v3/*.pdf
